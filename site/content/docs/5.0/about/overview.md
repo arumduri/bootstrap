@@ -10,7 +10,7 @@ aliases:
 
 ## 팀
 
-Bootstrap은 GitHub에서 [개발자로 이루어진 소규모 팀](https://github.com/orgs/twbs/people)에 의해 관리됩니다. We're actively looking to grow this team and would love to hear from you if you're excited about CSS at scale, writing and maintaining vanilla JavaScript plugins, and improving build tooling processes for frontend code.
+Bootstrap은 GitHub에서 [개발자로 이루어진 소규모 팀](https://github.com/orgs/twbs/people)에 의해 관리됩니다. 우리는 이 팀을 성장시키기 위해 적극적으로 노력하고 있으며, CSS에 대한 커다란 관심, 바닐라 JavaScript 플러그인 작성 및 유지관리, 프런트엔드 코드의 빌드 툴링 프로세스 개선에 관한 여러분의 의견을 듣고 싶습니다.
 
 ## 역사
 
