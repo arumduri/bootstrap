@@ -46,7 +46,7 @@
     - v: "4.5"
 
 - group: v5.x
-  baseurl: "https://v5.getbootstrap.kr/docs"
+  baseurl: "https://getbootstrap.kr/docs"
   description: "Current major release. Last update was v5.0.0-alpha3."
   versions:
     - v: "5.0"

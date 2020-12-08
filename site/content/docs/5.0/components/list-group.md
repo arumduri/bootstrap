@@ -205,23 +205,23 @@ Place Bootstrap's checkboxes and radios within list group items and customize as
 {{< example >}}
 <ul class="list-group">
   <li class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="" aria-label="...">
+    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
     Cras justo odio
   </li>
   <li class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="" aria-label="...">
+    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
     Dapibus ac facilisis in
   </li>
   <li class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="" aria-label="...">
+    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
     Morbi leo risus
   </li>
   <li class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="" aria-label="...">
+    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
     Porta ac consectetur ac
   </li>
   <li class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="" aria-label="...">
+    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
     Vestibulum at eros
   </li>
 </ul>
@@ -232,23 +232,23 @@ And if you want `<label>`s as the `.list-group-item` for large hit areas, you ca
 {{< example >}}
 <div class="list-group">
   <label class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="">
+    <input class="form-check-input me-1" type="checkbox" value="">
     Cras justo odio
   </label>
   <label class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="">
+    <input class="form-check-input me-1" type="checkbox" value="">
     Dapibus ac facilisis in
   </label>
   <label class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="">
+    <input class="form-check-input me-1" type="checkbox" value="">
     Morbi leo risus
   </label>
   <label class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="">
+    <input class="form-check-input me-1" type="checkbox" value="">
     Porta ac consectetur ac
   </label>
   <label class="list-group-item">
-    <input class="form-check-input mr-1" type="checkbox" value="">
+    <input class="form-check-input me-1" type="checkbox" value="">
     Vestibulum at eros
   </label>
 </div>
@@ -263,10 +263,10 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
   <div class="row">
     <div class="col-4">
       <div class="list-group" id="list-tab" role="tablist">
-        <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Home</a>
-        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
-        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
-        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
+        <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="tab" href="#list-home" role="tab" aria-controls="list-home">Home</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="tab" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="tab" href="#list-messages" role="tab" aria-controls="list-messages">Messages</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="tab" href="#list-settings" role="tab" aria-controls="list-settings">Settings</a>
       </div>
     </div>
     <div class="col-8">
@@ -292,10 +292,10 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+      <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
     </div>
   </div>
   <div class="col-8">
@@ -311,16 +311,16 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 
 ### Using data attributes
 
-You can activate a list group navigation without writing any JavaScript by simply specifying `data-toggle="list"` or on an element. Use these data attributes on `.list-group-item`.
+You can activate a list group navigation without writing any JavaScript by simply specifying `data-bs-toggle="list"` or on an element. Use these data attributes on `.list-group-item`.
 
 ```html
 <div role="tabpanel">
   <!-- List group -->
   <div class="list-group" id="myList" role="tablist">
-    <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
-    <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
-    <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
-    <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
+    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
+    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
+    <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
   </div>
 
   <!-- Tab panes -->
@@ -342,8 +342,8 @@ var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
 triggerTabList.forEach(function (triggerEl) {
   var tabTrigger = new bootstrap.Tab(triggerEl)
 
-  triggerEl.addEventListener('click', function (e) {
-    e.preventDefault()
+  triggerEl.addEventListener('click', function (event) {
+    event.preventDefault()
     tabTrigger.show()
   })
 })
@@ -376,14 +376,14 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 
 #### constructor
 
-Activates a list item element and content container. Tab should have either a `data-target` or an `href` targeting a container node in the DOM.
+Activates a list item element and content container. Tab should have either a `data-bs-target` or an `href` targeting a container node in the DOM.
 
 ```html
 <div class="list-group" id="myList" role="tablist">
-  <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
-  <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+  <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Home</a>
+  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Profile</a>
+  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#messages" role="tab">Messages</a>
+  <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#settings" role="tab">Settings</a>
 </div>
 
 <div class="tab-content">
@@ -464,9 +464,9 @@ If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will 
 </table>
 
 ```js
-var tabEl = document.querySelector('a[data-toggle="list"]')
-tabEl.addEventListener('shown.bs.tab', function (e) {
-  e.target // newly activated tab
-  e.relatedTarget // previous active tab
+var tabEl = document.querySelector('a[data-bs-toggle="list"]')
+tabEl.addEventListener('shown.bs.tab', function (event) {
+  event.target // newly activated tab
+  event.relatedTarget // previous active tab
 })
 ```

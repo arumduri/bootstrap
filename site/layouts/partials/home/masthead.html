@@ -4,14 +4,14 @@
       <div class="col-8 mx-auto col-md-4 order-md-2 col-lg-5">
         {{ partial "icons/homepage-hero.svg" (dict "class" "img-fluid mb-3 mb-md-0" "width" "600" "height" "533") }}
       </div>
-      <div class="col-md-8 order-md-1 col-lg-7 text-center text-md-left">
+      <div class="col-md-8 order-md-1 col-lg-7 text-center text-md-start">
         <h1 class="mb-3">Bootstrap으로 빠르고 반응형인 사이트를 만들어보세요</h1>
         <p class="lead mb-4">
           세계에서 가장 인기 있는 프론트엔드 오픈 소스 툴킷이며 Sass 변수와 믹신, 반응형 그리드 시스템, 광범위한 사전 제작된 컴포넌트, 그리고 강력한 JavaScript 플러그인이 있는 Bootstrap으로 반응형 모바일 우선 사이트를 디자인하고 커스터마이징하세요.
         </p>
 
         <div class="d-flex flex-column flex-md-row">
-          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg btn-bd-primary mb-3 mr-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">시작하기</a>
+          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg btn-bd-primary mb-3 me-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">시작하기</a>
           <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="btn btn-lg btn-outline-secondary mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download {{ .Site.Params.current_version }}');">다운로드</a>
         </div>
         <p class="text-muted mb-0">
