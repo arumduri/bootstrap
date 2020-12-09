@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Badges
-description: Documentation and examples for badges, our small count and labeling component.
+title: Badges(배지)
+description: 배지에 대한 개요와 사용법의 예시입니다.
 group: components
 toc: true
 ---
 
 ## Example
 
-Badges scale to match the size of the immediate parent element by using relative font sizing and `em` units. As of v5, badges no longer have focus or hover styles for links.
+부모 요소의 사이즈에 일치하도록 상대적인 폰트 사이즈 `em` 을 사용하고 있습니다. v5 이후, 배지에는 더이상 링크에 대한 포커스나 호버 스타일은 없습니다.
 
 {{< example >}}
 <h1>Example heading <span class="badge bg-secondary">New</span></h1>
@@ -19,7 +19,7 @@ Badges scale to match the size of the immediate parent element by using relative
 <h6>Example heading <span class="badge bg-secondary">New</span></h6>
 {{< /example >}}
 
-Badges can be used as part of links or buttons to provide a counter.
+배지는, 카운터를 제공하기 위해 링크나 버튼의 일부로 사용될 수 있습니다.
 
 {{< example >}}
 <button type="button" class="btn btn-primary">
@@ -27,9 +27,9 @@ Badges can be used as part of links or buttons to provide a counter.
 </button>
 {{< /example >}}
 
-Note that depending on how they are used, badges may be confusing for users of screen readers and similar assistive technologies. While the styling of badges provides a visual cue as to their purpose, these users will simply be presented with the content of the badge. Depending on the specific situation, these badges may seem like random additional words or numbers at the end of a sentence, link, or button.
+배지를 사용하는 방법에 따라서는, 스크린 리너나 동일한 지원기술을 사용하는 사용자에게 있어서는 혼란을 줄 수 있으므로 주의하십시오. 배지의 스타일은 그 목적을 시각적으로 보여주는 것이지만, 이러한 사용자들에게는 단지 배지의 내용만이 제시될 뿐입니다. 특정 상황에 따라 이 배지들은 문장의 끝, 링크 혹은 버튼에 임의로 추가된 단어나 숫자로 보일수 있습니다.
 
-Unless the context is clear (as with the "Notifications" example, where it is understood that the "4" is the number of notifications), consider including additional context with a visually hidden piece of additional text.
+문맥이 명확하지 않는 경우("Notifications" 의 예처럼, "4" 가 알림 숫자라고 이해되는 경우), 시각적으로 숨겨진 추가 텍스트 부분에 추가 문맥을 포함시키는 것을 검토해 주세요.
 
 {{< example >}}
 <button type="button" class="btn btn-primary">
@@ -40,7 +40,7 @@ Unless the context is clear (as with the "Notifications" example, where it is un
 
 ## Background colors
 
-Use our background utility classes to quickly change the appearance of a badge. Please note that when using Bootstrap's default `.bg-light`, you'll likely need a text color utility like `.text-dark` for proper styling. This is because background utilities do not set anything but `background-color`.
+background 유틸리티 클래스를 사용해, 배지의 겉모습을 변경할 수 있습니다. Bootstrap의 기본의 `.bg-light`를 사용할 경우, 적절한 스타일링을 위해 `.text-dark` 와 같은 글자 색을 변경하는 유틸리티가 필요할 수도 있으니 유의하십시오. background 유틸리티 클래스는 `background-color` 외에는 아무것도 설정하지 않기 때문입니다.
 
 {{< example >}}
 {{< badge.inline >}}
@@ -55,7 +55,7 @@ Use our background utility classes to quickly change the appearance of a badge. 
 
 ## Pill badges
 
-Use the `.rounded-pill` utility class to make badges more rounded with a larger `border-radius`.
+`.rounded-pill` 를 사용하면 더 둥그러진 `border-radius`로 배지를 만들 수 있습니다.
 
 {{< example >}}
 {{< badge.inline >}}
