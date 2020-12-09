@@ -30,7 +30,7 @@ Bootstrap에서는 미리 정의된 버튼 스타일이 포함되어 있으며, 
 
 ## Button tags
 
-`.btn` 클래스는 `<button>` 요소로 사용되도록 설계되어 있습니다. 그러나 이런 클래스를 `<a>` 나 `<input>` 요소로 사용할 수도 있습니다 (브라우저에 따라 약간 다른 랜더링이 적용되는 경우가 있습니다).
+`.btn` 클래스는 `<button>` 요소로 사용되도록 설계되어 있습니다. 그러나 이런 클래스를 `<a>` 혹은 `<input>` 요소로 사용할 수도 있습니다 (브라우저에 따라 약간 다른 랜더링이 적용되는 경우가 있습니다).
 
 현재 페이지 내의 새로운 페이지나 섹션에 대한 링크가 아닌, 페이지 내 기능(컨텐츠 접기 등)의 트리커로 사용되는 `<a>` 요소에 버튼 클래스를 사용할 경우, 이런 링크에는 `role="button"` 이라는 역활을 주어, 스크린 리더 등의 지원 기술에 그 목적을 적절히 전달해야 합니다.
 
@@ -60,7 +60,7 @@ Some of the button styles use a relatively light foreground color, and should on
 
 ## Sizes
 
-버튼의 사이즈를`.btn-lg` 나 `.btn-sm` 을 적용해 변경할 수 있습니다.
+버튼의 크기를 `.btn-lg` 나 `.btn-sm` 을 적용해 변경할 수 있습니다.
 
 {{< example >}}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
@@ -74,7 +74,7 @@ Some of the button styles use a relatively light foreground color, and should on
 
 ## Disabled state
 
-버튼을 비활성화 시키기 위해 `<button>` 요소에 `disabled` 속성을 추가합니다. 비활성화 된 버튼은 `pointer-events: none`을 가집니다. 아무것도 적용되지 않고 호버나 활성화된 상태로 눌려지는것을 방지합니다.
+버튼을 비활성화 시키기 위해 `<button>` 요소에 `disabled` 속성을 추가합니다. 비활성화 된 버튼은 `pointer-events: none`을 가집니다. 아무것도 적용되지 않고 호버나 활성화된 상태로 눌려지는것을 막습니다.
 
 {{< example >}}
 <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
@@ -85,7 +85,7 @@ Some of the button styles use a relatively light foreground color, and should on
 
 - `<a>`는 `disabled` 속성을 지원하지 않으므로 시각적으로 비활성화처럼 보이게 하기 위해 `.disabled` 클래스를 추가해야 합니다.
 - 앵커 버튼의 모든 `pointer-events`를 비활성화 시키기 위해 장래적으로 사용하기 쉬운 스타일이 포함되어 있습니다.
-- 비활성화 버튼은 보조기술에 대한 요소의 상태를 나타내는 `aria-disabled="true"` 속성이 포함되어야 합니다.
+- 비활성화 버튼은 보조 기술에 대한 요소의 상태를 나타내는 `aria-disabled="true"` 속성이 포함되어야 합니다.
 
 {{< example >}}
 <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
@@ -100,7 +100,7 @@ The `.disabled` class uses `pointer-events: none` to try to disable the link fun
 
 ## Block buttons
 
-display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에 걸친 "블럭 버튼"을 만듭니다. 버튼 고유의 클래스 대신 유틸리티를 사용하여, 간격, 정렬, 또는 반응적인 동작을 훨씬 크게 제어할 수 있습니다.
+display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에 걸친 "블럭 버튼"을 만듭니다. 버튼 고유의 클래스 대신 유틸리티를 사용하여, 간격, 정렬, 또는 반응형 동작을 훨씬 크게 제어할 수 있습니다.
 
 {{< example >}}
 <div class="d-grid gap-2">
@@ -127,7 +127,7 @@ display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 </div>
 {{< /example >}}
 
-추가의 유틸리티를 사용하여, 수평방향 버튼의 배치를 조정할 수 있습니다. 여기서는, 이전 반응형의 예시를 참고해 버튼에 flex 유틸리티와 margin 유틸리티를 추가해 버튼이 더이상 쌓아지지 않을 때 버튼들은 오른쪽 정렬을 하고 있습니다.
+추가의 유틸리티를 사용하여, 수평방향 버튼의 배치를 조정할 수 있습니다. 여기서는, 이전 반응형의 예시를 참고해 버튼이 더 이상 쌓이지 않을때, 버튼의 오른쪽 정렬을 위해 flex 유틸리티와 margin 유틸리티를 추가했습니다.
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -138,7 +138,7 @@ display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 
 ## Button plugin
 
-버튼의 플러그인에서는, 간단한 on/off 토글 버튼을 생성할 수 있습니다.
+버튼 plugin에서는, 간단한 on/off 토글 버튼을 생성할 수 있습니다.
 
 {{< callout info >}}
 Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
