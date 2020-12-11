@@ -1,19 +1,19 @@
 ---
 layout: docs
-title: Toasts
-description: Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.
+title: Toasts(토스트)
+description: 가볍고 쉽게 커스터마이즈할 수 있는 경고창을 푸시 공지합니다.
 group: components
 toc: true
 ---
 
-Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They're built with flexbox, so they're easy to align and position.
+Toasts는 모바일 및 데스크톱 운영 체제에서 보급된 푸시 알림을 모방하여 설계된 가벼운 알림입니다. flexbox로 만들어져 있어 위치 조정 및 배치가 간단합니다.
 
 ## Overview
 
-Things to know when using the toast plugin:
+Toast plugin을 사용할 때 알아두어야 할 사항:
 
-- Toasts are opt-in for performance reasons, so **you must initialize them yourself**.
-- Toasts will automatically hide if you do not specify `autohide: false`.
+- Toasts는 퍼포먼스상의 이유로 opt-in 방식으로 되어 있기 때문에 **스스로 초기화**해야 합니다.
+- Toasts는 `autohide: false`를 지정하지 않으면 자동으로 숨겨집니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -23,9 +23,9 @@ Things to know when using the toast plugin:
 
 ### Basic
 
-To encourage extensible and predictable toasts, we recommend a header and body. Toast headers use `display: flex`, allowing easy alignment of content thanks to our margin and flexbox utilities.
+Toasts의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. Toasts header는 `display: flex`를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 컨텐츠를 쉽게 정렬시킬 수 있습니다.
 
-Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your "toasted" content and strongly encourage a dismiss button.
+Toasts는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. Toasts 컨텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.
 
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -43,7 +43,7 @@ Toasts are as flexible as you need and have very little required markup. At a mi
 
 ### Translucent
 
-Toasts are slightly translucent, too, so they blend over whatever they might appear over. For browsers that support the `backdrop-filter` CSS property, we'll also attempt to blur the elements under a toast.
+Toasts는 약간 반투명해서 상단에 표시되는 것은 무엇이든 녹여져 보여집니다.  CSS 속성 `backdrop-filter`를 지원하는 브라우저에서는 Toasts 하단에 있는 요소를 흐려 보이게 하겠습니다.
 
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -61,7 +61,7 @@ Toasts are slightly translucent, too, so they blend over whatever they might app
 
 ### Stacking
 
-You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.
+Toasts를 `toast container`로 감싸면 여러개 사용할 수 있습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast-container">
@@ -93,7 +93,7 @@ You can stack toasts by wrapping them in a toast container, which will verticall
 
 ### Custom content
 
-Customize your toasts by removing sub-components, tweaking with [utilities]({{< docsref "/utilities/api" >}}), or adding your own markup. Here we've created a simpler toast by removing the default `.toast-header`, adding a custom hide icon from [Bootstrap Icons]({{< param icons >}}), and using some [flexbox utilities]({{< docsref "/utilities/flex" >}}) to adjust the layout.
+Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" >}})를 통한 미세한 수정, 마크업을 추가 수정해서 Toasts를 새롭게 만들수 있습니다. 여기에서는, `.toast-header`를 삭제하고, [Bootstrap Icons]({{< param icons >}})에 있는 닫기 아이콘을 추가하고, 레이아웃을 조정하기 위해 [flexbox utilities]({{< docsref "/utilities/flex" >}})을 몇가지 사용해서 보다 간단한 Toasts를 만들어 보았습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast d-flex align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
@@ -104,7 +104,7 @@ Customize your toasts by removing sub-components, tweaking with [utilities]({{< 
 </div>
 {{< /example >}}
 
-Alternatively, you can also add additional controls and components to toasts.
+또는 Toasts에 추가적인 컨트롤이나 컨포넌트를 추가할 수도 있습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -120,7 +120,7 @@ Alternatively, you can also add additional controls and components to toasts.
 
 ### Color schemes
 
-Building on the above example, you can create different toast color schemes with our [color utilities]({{< docsref "/utilities/colors" >}}). Here we've added `.bg-primary` and `.text-white` to the `.toast`, and then added `.text-white` to our close button. For a crisp edge, we remove the default border with `.border-0`.
+위의 예시를 바탕으로, [color utilities]({{< docsref "/utilities/colors" >}})를 사용해 다른 컬러의 Toasts를 만들수 있습니다. 여기에서는, Toasts에 `.bg-primary` 와 `.text-white` 를 추가하고, 닫기 버튼에 `.text-white`를 추가했습니다. 모서리를 선명하게 하기 위해 기본 border를 `.border-0`.으로 삭제했습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast d-flex align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
@@ -133,7 +133,7 @@ Building on the above example, you can create different toast color schemes with
 
 ## Placement
 
-Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the `.toast`.
+필요에 따라 사용자 지정 CSS로 Toasts를 배치합니다. 우측 상단은 알림용으로 사용되는 경우가 많으며, 상단 중앙도 마찬가지입니다. 한번에 하나의 Toasts 밖에 표시하지 않는다면, 배치 스타일을 `.toast`의 오른쪽에 넣어주세요.
 
 {{< example >}}
 <form>
@@ -169,7 +169,7 @@ Place toasts with custom CSS as you need them. The top right is often used for n
 </div>
 {{< /example >}}
 
-For systems that generate more notifications, consider using a wrapping element so they can easily stack.
+더 많은 알림을 만드는 시스템에서는 쉽게 쌓이게 하도록 wrapping 요소의 사용을 검토하십시오.
 
 {{< example class="bg-dark bd-example-toasts p-0" >}}
 <div aria-live="polite" aria-atomic="true" class="position-relative">
@@ -207,7 +207,7 @@ For systems that generate more notifications, consider using a wrapping element 
 </div>
 {{< /example >}}
 
-You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.
+또한 flexbox 유틸리티를 사용해서 Toasts를 수평방향이나 수직방향으로 정렬시킬 수도 있습니다.
 
 {{< example class="bg-dark bd-example-toasts d-flex" >}}
 <!-- Flexbox container for aligning the toasts -->
@@ -230,13 +230,13 @@ You can also get fancy with flexbox utilities to align toasts horizontally and/o
 
 ## Accessibility
 
-Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user's focus or otherwise interrupt the user. Additionally, include `aria-atomic="true"` to ensure that the entire toast is always announced as a single (atomic) unit, rather than announcing what was changed (which could lead to problems if you only update part of the toast's content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the [alert component]({{< docsref "/components/alerts" >}}) instead of toast.
+Toasts는 방문자나 사용자에게 작은 중단을 의도하므로 스크린 리더나 비슷한 지원 기술을 가진 사용자를 지원하기 위해 Toasts를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)으로 감싸야 합니다. 라이브 리전으로의 업데이트(Toasts 컨포넌트 주입/업데이트 등)는 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더가 자동으로 안내합니다. 그리고 변경된 내용을 안내하지 말고 Toasts 전체가 항상 싱글(원자적인) 단위로 안내하도록 `aria-atomic="true"`를 포함시켜 주십시오(만약 Toasts의 콘텐츠 중 일부만 업데이트 한다면 문제가 발생할 가능성이 있습니다). 필요한 정보가 예를 들어 폼의 오류 목록 같이 프로세스에 중요한 경우, Toasts 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용하십시오.
 
-Note that the live region needs to be present in the markup *before* the toast is generated or updated. If you dynamically generate both at the same time and inject them into the page, they will generally not be announced by assistive technologies.
+Toasts가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
 
-You also need to adapt the `role` and `aria-live` level depending on the content. If it's an important message like an error, use `role="alert" aria-live="assertive"`, otherwise use `role="status" aria-live="polite"` attributes.
+그리고, 내용에 따라 `role` 과 `aria-live` 레벨을 적응시킬 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
 
-As the content you're displaying changes, be sure to update the [`delay` timeout](#options) to ensure people have enough time to read the toast.
+표시하는 내용이 변경될 경우, 사람들이 Toasts를 읽을 충분한 시간을 갖도록 [`delay` timeout](#options) 를 업데이트 하십시오.
 
 ```html
 <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-bs-delay="10000">
@@ -244,7 +244,7 @@ As the content you're displaying changes, be sure to update the [`delay` timeout
 </div>
 ```
 
-When using `autohide: false`, you must add a close button to allow users to dismiss the toast.
+`autohide: false`를 사용할 때에는, 사용자가 Toast를 해제할 수 있도록 닫기 버튼을 추가해야 합니다.
 
 {{< example class="bg-light" >}}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
@@ -264,7 +264,7 @@ When using `autohide: false`, you must add a close button to allow users to dism
 
 ### Usage
 
-Initialize toasts via JavaScript:
+JavaScript를 통해 Toast 초기화:
 
 ```js
 var toastElList = [].slice.call(document.querySelectorAll('.toast'))
@@ -275,7 +275,7 @@ var toastList = toastElList.map(function (toastEl) {
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`.
+옵션은 데이터 속성이나 JavaScript를 통해 전달될 수 있습니다. 데이터 속성의 경우 `data-bs-animation=""`와 같이 옵션 이름에 `data-bs-`를 추가하십시오.
 
 <table class="table">
   <thead>

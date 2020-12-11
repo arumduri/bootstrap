@@ -55,35 +55,35 @@ Breakpoints specific variants are consequently renamed too (eg. `.text-md-start`
 
 ### JavaScript
 
-- Data attributes for all JavaScript plugins are now namespaced to help distinguish Bootstrap functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
-- Updated Popper to v2.x:
+- 모든 JavaScript plugin의 데이터 속성은 자체 코드와 Bootstrap 기능을 구분 되도록 기존의 `data-toggle`의 이름이 `data-bs-toggle` 로 변경되었습니다.
+- 업데이트 Popper v2.x:
   - Removed `offset` option from our Tooltip/Popover and Dropdown plugins; this can still be achieved using the `popperConfig` parameter.
   - The `fallbackPlacement` option has become `fallbackPlacements`.
 
 ### Sass
 
-- Renamed `scale-color()` function to `shift-color()` to avoid collision with Sass's own color scaling function.
+- Sass의 독자적인 스케일링 기능과 충돌을 피하기 위해 `scale-color()` function 명이  `shift-color()` 으로 변경 되었습니다.
 
 ### Utilities
 
-- Added new `.translate-middle-x` & `.translate-middle-y` utilities to horizontally or vertically center absolute/fixed positioned elements.
+- absolute/fixed 위치에 있는 요소를 수평 또는 수직의 가운데 배치 시키기 위해 `.translate-middle-x` 과 `.translate-middle-y` 의 새로운 유틸리티가 추가 되었습니다.
 
 ### Components
 
 #### Breadcrumbs
 
-- Simplified the default appearance of breadcrumbs by removing `padding`, `background-color`, and `border-radius`.
-- Added new CSS custom property `--bs-breadcrumb-divider` for easy customization without needing to recompile CSS.
+- 기본적으로 가지고 있던 `padding`, `background-color`, `border-radius` 의 스타일을 삭제해 심플 해 졌습니다.
+- CSS를 컴파일하지 않고 쉽게 사용자가 지정할 수 있도록 `--bs-breadcrumb-divider` 가 추가 되었습니다.
 
 #### Toasts
 
-- Toasts can now be [positioned]({{< docsref "/components/toasts#placement" >}}) in a `.toast-container` with the help of [positioning utilities]({{< docsref "/utilities/position" >}}).
+- [positioning utilities]({{< docsref "/utilities/position" >}})를 이용해 Toasts를  `.toast-container` 에 배치 시킬수 있게 되었습니다.
 
 ## v5.0.0-alpha3
 
 ### Browser support
 
-- Dropped support for Microsoft Edge Legacy. See [here](#browser-support-1) for the previous browser support changes.
+- Microsoft Edge Legacy 지원을 하지 않습니다. 이전 브라우저 지원의 변경 내용을 확인하려면 [여기](#browser-support-1) 를 참조해 주십시오.
 
 ### Sass
 
@@ -100,34 +100,34 @@ Breakpoints specific variants are consequently renamed too (eg. `.text-md-start`
 
 ### Forms
 
-- The longstanding [Missing border radius on input group with validation feedback bug](https://github.com/twbs/bootstrap/issues/25110) is finally fixed by adding an additional `.has-validation` class to input groups with validation.
-- Promoted the Floating labels example to fully supported form component. [See the new Floating labels page.]({{< docsref "/forms/floating-labels" >}})
-- File inputs now use the `.form-control` class and don't require JavaScript, additional HTML, or additional classes. [See #31955](https://github.com/twbs/bootstrap/pull/31955).
-- Added `cursor:pointer` to `.form-control-color` color inputs.
+- 오래된 버그였던 [Missing border radius on input group with validation feedback bug](https://github.com/twbs/bootstrap/issues/25110) 이슈는  `.has-validation` 클래스를 추가하는 것으로 최종적으로 수정되었습니다.
+- Floating labels를 완전히 지원할 수 있도록 form component에 추가시켰습니다. [See the new Floating labels page.]({{< docsref "/forms/floating-labels" >}})
+- File input은 앞으로 `.form-control` 클래스를 사용하며, JavaScript, 추가 HTML, 또는 추가 클래스가 필요하지 않습니다. [See #31955](https://github.com/twbs/bootstrap/pull/31955).
+- Color input의 `.form-control-color` 클래스 안에 `cursor:pointer` 를 추가 했습니다.
 
 ### Utilities
 
 - **Text utilities:**
   - Added `.fs-*` utilities for `font-size` utilities (with RFS enabled). These use the same scale as HTML's default headings (1-6, large to small), and can be modified via Sass map.
-  - Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
-  - Renamed `.font-style-*` utilities as `.fst-*` for brevity and consistency.
-- Added `.d-grid` to display utilities
-- Added new `gap` utilities (`.gap`) for CSS Grid layouts
+  - 기존 `.font-weight-*` 유틸리티의 이름이 `.fw-*` 으로 변경 되었습니다.
+  - 기존 `.font-style-*` 유틸리티의 이름이 `.fst-*` 으로 변경 되었습니다.
+- display 유틸리티에 `.d-grid` 가 추가 되었습니다.
+- Grid layout용으로 새로운 `gap` 유틸리티 (`.gap`) 가 추가 되었습니다.
 
 ## v5.0.0-alpha2
 
 ### Sass
 
-- Added default parameters to each `border-radius` mixin. [See #31571](https://github.com/twbs/bootstrap/pull/31571).
-- Updated the next breakpoint when targeting only the `xs` breakpoint. [See #31500](https://github.com/twbs/bootstrap/pull/31500).
-- `box-shadow` mixins now allow `null` values and drop `none` from multiple arguments. [See #30394](https://github.com/twbs/bootstrap/pull/30394).
+- `border-radius` 에 기본 매개 변수가 추가 - [See #31571](https://github.com/twbs/bootstrap/pull/31571).
+- `xs` breakpoint만을 타겟으로 했을 경우의 다음의 브레이크 포인트를 업데이트 했습니다. [See #31500](https://github.com/twbs/bootstrap/pull/31500).
+- `box-shadow` mixin에서 `null` 값을 허용하게 하여, 복수의 인수에서 `none` 을 삭제하게 되었습니다. - [See #30394](https://github.com/twbs/bootstrap/pull/30394).
 
 ### Docs
 
-- Renamed "Navs" page to "Navs & Tabs"
-- Renamed "Screen readers" helper page to "Visually hidden", and filename to `visually-hidden`
-- Renamed "Checks" page to "Checks & radios", and filename to `checks-radios`
-- Improved documentation of check/radio powered button groups
+- "Navs" 메뉴가 "Navs & Tabs"으로 변경 되었습니다.
+- "Screen readers" 메뉴가 helper 페이지로 이동되어 "Visually hidden" 으로 변경되었으며, 파일이름과 클래스 이름도 함께  `visually-hidden` 으로 변경 되었습니다.
+- "Checks" 페이지가 "Checks & radios" 으로 변경되며 함께 파일 이름도 `checks-radios`으로 변경 되었습니다.
+- check/radio 문서가 업데이트 되었습니다. (Checks에 있던 버튼관련 내용은 button groups로 이동)
 - Improved skip links in our docs.
 - Redesigned docs navigation for larger tap targets on mobile and a streamlined subnav.
 - [#31114](https://github.com/twbs/bootstrap/pull/31114): Improved form documentation with regards to accessibility.
@@ -222,14 +222,14 @@ Breakpoints specific variants are consequently renamed too (eg. `.text-md-start`
 
 ### Utilities
 
-- [#31280](https://github.com/twbs/bootstrap/pull/31280): Added new [position utilities]({{< docsref "/utilities/position#arrange-elements" >}}) for `top`, `right`, `bottom`, and `left`. Values include `0`, `50%`, and `100%` for each property.
-  - We also added new `translate` utilities to accompany those position utilities for centering elements when they're being positioned.
-  - Some great examples have been added to the docs to show these off.
-- [#31484](https://github.com/twbs/bootstrap/pull/31484): Added new [`border-width` utility]({{< docsref "/utilities/borders#border-width" >}}).
-- [#31473](https://github.com/twbs/bootstrap/pull/31473): The `.d-none` utility was moved in our CSS to give it more weight over other display utilities.
-- Renamed `.text-monospace` to `.font-monospace`.
-- Removed `.text-hide` as it's an antiquated method for hiding text that shouldn't be used anymore.
-- New `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]({{< docsref "/utilities/text#line-height" >}}).
+- [#31280](https://github.com/twbs/bootstrap/pull/31280): [position utilities]({{< docsref "/utilities/position#arrange-elements" >}}) 의 새로운 유틸리티 `top`, `right`, `bottom`, `left` 가 추가 되었습니다. 각각의 속성으로는 `0`, `50%`, `100%` 가 있습니다.
+  - 또한 요소가 배치되어 있을때 센터링을 주기 위한 `translate` 유틸리티가 새롭게 추가 되었습니다.
+  - 이를 보여주기 위해 몇가자의 예시가 문서에 추가 되었습니다.
+- [#31484](https://github.com/twbs/bootstrap/pull/31484): 새로운 [`border-width` utility]({{< docsref "/utilities/borders#border-width" >}}) 유틸리티 추가 .
+- [#31473](https://github.com/twbs/bootstrap/pull/31473): `.d-none` 유틸리티의 순서가 CSS 내에서 변경 되었습니다.
+- `.text-monospace` 클래스명이 `.font-monospace`으로 변경 되었습니다.
+- `.text-hide` 클래스명이 삭제 되었습니다. 이것은 더이상  사용하지 않는 텍스트를 숨기기 위해 사용되었던 오래전 방법입니다.
+- 새로운 `line-height` 유틸리티: `.lh-1`, `.lh-sm`, `.lh-base`, `.lh-lg`. 자세히 보기 [here]({{< docsref "/utilities/text#line-height" >}}).
 
 ---
 
