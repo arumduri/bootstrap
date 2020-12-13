@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Migrating to v5
-description: Track and review changes to the Bootstrap source files, documentation, and components to help you migrate from v4 to v5.
+description: Bootstrap의 소스파일, 문서 및 컨포넌트의 변경 내용을 확인 리뷰함으로써 v4에서 v5로의 변경을 지원합니다.
 group: migration
 aliases: "/migration/"
 toc: true
@@ -11,54 +11,54 @@ toc: true
 
 ### RTL
 
-**The RTL feature is still experimental and will probably evolve according to user feedback.** Spotted something or have an improvement to suggest? [Open an issue]({{< param repo >}}/issues/new), we'd love to get your insights.
+**RTL 기능은 여전히 실험적이며 사용자 피드백에 따라 진화할 것이다.** 뭔가 발견했거나 개선 할 점이 있다면 [이슈]({{< param repo >}}/issues/new)에 등록해 주세요.
 
 #### Sass
 
-Horizontal direction sensitive variables, utilities and mixins are renamed with more logical names — `start` and `end` in lieu of `left` and `right`.
+수평 방항의 예민한 변수명, 유틸리티와 믹스인 이름이 보다 논리적인 이름으로 변경 되었습니다. — `left` 와 `right`을 `start` 와 `end` 로.
 
 ##### Components
 
-- Renamed `.dropleft` and `.dropright` to `.dropstart` and `dropend`.
-- Renamed `.dropdown-menu-*-left` and `.dropdown-menu-*-right` to `.dropdown-menu-*-start` and `.dropdown-menu-*-end`.
-- Renamed `.bs-popover-left` and `.bs-popover-right` to `.bs-popover-start` and `.bs-popover-end`.
-- Renamed `.bs-tooltip-left` and `.bs-tooltip-right` to `.bs-tooltip-start` and `.bs-tooltip-end`.
-- Renamed `.carousel-item-left` and `.carousel-item-right` to `.carousel-item-start` and `.carousel-item-end`.
+- `.dropleft` 와 `.dropright` 를 `.dropstart` 와 `dropend`로 변경.
+- `.dropdown-menu-*-left` 와 `.dropdown-menu-*-right` 를 `.dropdown-menu-*-start` 와 `.dropdown-menu-*-end` 로 변경.
+- `.bs-popover-left` 와 `.bs-popover-right` 를 `.bs-popover-start` 와 `.bs-popover-end` 로 변경.
+- `.bs-tooltip-left` 와 `.bs-tooltip-right` 를 `.bs-tooltip-start` 와 `.bs-tooltip-end` 로 변경.
+- `.carousel-item-left` 와 `.carousel-item-right` 를 `.carousel-item-start` 와 `.carousel-item-end` 로 변경.
 
 ##### Utilities
 
-- Renamed `.left-*` and `.right-*` to `.start-*` and `.end-*`.
-- Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`.
-- Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`.
-- Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`.
-- Renamed `.ml-*` and `.mr-*` to `.ms-*` and `.me-*`.
-- Renamed `.pl-*` and `.pr-*` to `.ps-*` and `.pe-*`.
-- Renamed `.text-left` and `.text-right` to `.text-start` and `.text-end`.
+- `.left-*` 와 `.right-*` 를 `.start-*` 와 `.end-*` 로 변경.
+- `.float-left` 와 `.float-right` 를 `.float-start` 와 `.float-end` 로 변경.
+- `.border-left` 와 `.border-right` 를 `.border-start` 와 `.border-end` 로 변경.
+- `.rounded-left` 와 `.rounded-right` 를 `.rounded-start` 와 `.rounded-end` 로 변경.
+- `.ml-*` 와 `.mr-*` 를 `.ms-*` 와 `.me-*` 로 변경.
+- `.pl-*` 와 `.pr-*` 를 `.ps-*` 와 `.pe-*` 로 변경.
+- `.text-left` 와 `.text-right` to `.text-start` 와 `.text-end` 로 변경.
 
-Breakpoints specific variants are consequently renamed too (eg. `.text-md-start` replaces `.text-md-left`).
+따라서 Breakpoint variant의 이름도 변경 되었습니다. (eg. `.text-md-left`가 `.text-md-start` 로 변경).
 
 ##### Mixins
 
-- Renamed `border-left-radius()` and `border-right-radius()` to `border-start-radius()` and `border-end-radius()` — as well as their corner relative variants (eg. `.border-bottom-left-radius` became `.border-bottom-start-radius`).
-- Renamed `caret-left()` and `caret-right()` to `caret-start()` and `caret-end()` — subsequently, the `caret()` mixin now takes `start` and `end` as arguments instead of `left` and `right`.
+- `border-left-radius()` 와 `border-right-radius()` 이 `border-start-radius()` 와 `border-end-radius()` 으로 변경 — 과 함께 그들의 코너 variant들도 (eg. `.border-bottom-left-radius` 이 `.border-bottom-start-radius` 으로 변경 되었습니다).
+- `caret-left()` 과 `caret-right()` 이 `caret-start()` 과 `caret-end()` 으로 변경 — 그 후, `caret()` 의 믹스인은 `left` 과 `right` 대신 `start` 과 `end` 을 인수로 받게 되었습니다.
 
 ##### Variables
 
-- New `$breadcrumb-divider-flipped` if a different breadcrumb separator is needed in RTL.
-- Renamed `$navbar-brand-margin-right` to `$navbar-brand-margin-end`.
-- Renamed `$pagination-margin-left` to `$pagination-margin-start`.
-- Renamed `$form-check-padding-left` to `$form-check-padding-start`.
-- Renamed `$form-switch-padding-left` to `$form-switch-padding-start`.
-- Renamed `$form-check-inline-margin-right` to `$form-check-inline-margin-end`.
-- Renamed `$form-select-feedback-icon-padding-right` to `$form-select-feedback-icon-padding-end`.
+- RTL로 다른 breadcrumb(브레드크럼)의 분리기호 필요한 경우를 위해, 새로운 `$breadcrumb-divider-flipped`을 추가했습니다.
+- `$navbar-brand-margin-right` 가 `$navbar-brand-margin-end` 으로 변경.
+- `$pagination-margin-left` 가 `$pagination-margin-start` 으로 변경.
+- `$form-check-padding-left` 가 `$form-check-padding-start` 으로 변경.
+- `$form-switch-padding-left` 가 `$form-switch-padding-start` 으로 변경.
+- `$form-check-inline-margin-right` 가 `$form-check-inline-margin-end` 으로 변경.
+- `$form-select-feedback-icon-padding-right` 가 `$form-select-feedback-icon-padding-end` 으로 변경.
 
 
 ### JavaScript
 
 - 모든 JavaScript plugin의 데이터 속성은 자체 코드와 Bootstrap 기능을 구분 되도록 기존의 `data-toggle`의 이름이 `data-bs-toggle` 로 변경되었습니다.
 - 업데이트 Popper v2.x:
-  - Removed `offset` option from our Tooltip/Popover and Dropdown plugins; this can still be achieved using the `popperConfig` parameter.
-  - The `fallbackPlacement` option has become `fallbackPlacements`.
+  - Tooltip/Popover과 Dropdown plugin에서 `offset` 옵션을 삭제했습니다.
+  - `fallbackPlacement` 옵션명이 `fallbackPlacements`이 되었습니다.
 
 ### Sass
 
@@ -87,8 +87,8 @@ Breakpoints specific variants are consequently renamed too (eg. `.text-md-start`
 
 ### Sass
 
-- The color system which worked with `color-level()` and `$theme-color-interval` was removed in favor of a new color system. All `lighten()` and `darken()` functions in our codebase are replaced by `tint-color()` and `shade-color()`. These functions will mix the color with either white or black instead of changing its lightness by a fixed amount. The `scale-color()` (changed to `shift-color()` in Beta 1) will either tint or shade a color depending on whether its weight parameter is positive or negative. [See #30622](https://github.com/twbs/bootstrap/pull/30622) for more details.
-- Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [See #31882](https://github.com/twbs/bootstrap/pull/31882).
+- `color-level()` 과 `$theme-color-interval`으로 작동하던 컬러 시스템은 삭제되고, 새로운 컬러 시스템이 적용되었습니다. 코드의 기본인 `lighten()` 과 `darken()` 의 함수는 모두 `tint-color()` 과 `shade-color()`으로 바뀝니다. 이들의 함수는, 색의 명도를 일정량만 변화시키는 것이 아니라, 흰색 또는 검은색 중 한쪽을 섞습니다. `scale-color()` (Beta 1에서는 `shift-color()` 로 변경)는,  그것의 중요한 파라미터 값이 양수인지 음수인지에 따라 색상을 바꿀지 색을 진하게 할지를 결정합니다. [자세히 보기 #30622](https://github.com/twbs/bootstrap/pull/30622).
+- Spinner들은 이제 애니메이션을 느리게 함으로써 `prefers-reduced-motion: reduce`를 존중하게 되었습니다. [자세히 보기 #31882](https://github.com/twbs/bootstrap/pull/31882).
 
 ### Reboot
 
