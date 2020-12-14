@@ -11,11 +11,11 @@ toc: true
 
 ### RTL
 
-**RTL 기능은 여전히 실험적이며 사용자 피드백에 따라 진화할 것이다.** 뭔가 발견했거나 개선 할 점이 있다면 [이슈]({{< param repo >}}/issues/new)에 등록해 주세요.
+**RTL 기능은 여전히 실험적이며 사용자 피드백에 따라 진화할 것입니다.** 무언가를 발견했거나 개선 할 점이 있다면 [이슈]({{< param repo >}}/issues/new)에 등록해 주세요.
 
 #### Sass
 
-수평 방항의 예민한 변수명, 유틸리티와 믹스인 이름이 보다 논리적인 이름으로 변경 되었습니다. — `left` 와 `right`을 `start` 와 `end` 로.
+수평 방항의 변수명, 유틸리티와 믹스인 이름이 보다 논리적인 이름으로 변경 되었습니다. — `left` 와 `right`을 `start` 와 `end` 로.
 
 ##### Components
 
@@ -62,7 +62,7 @@ toc: true
 
 ### Sass
 
-- Sass의 독자적인 스케일링 기능과 충돌을 피하기 위해 `scale-color()` function 명이  `shift-color()` 으로 변경 되었습니다.
+- Sass의 독자적인 스케일링 함수와 충돌을 피하기 위해 `scale-color()` 함수명이  `shift-color()` 으로 변경 되었습니다.
 
 ### Utilities
 
@@ -72,7 +72,7 @@ toc: true
 
 #### Breadcrumbs
 
-- 기본적으로 가지고 있던 `padding`, `background-color`, `border-radius` 의 스타일을 삭제해 심플 해 졌습니다.
+- 기본적으로 가지고 있던 `padding`, `background-color`, `border-radius` 의 스타일을 삭제해 보다 심플해 졌습니다.
 - CSS를 컴파일하지 않고 쉽게 사용자가 지정할 수 있도록 `--bs-breadcrumb-divider` 가 추가 되었습니다.
 
 #### Toasts
@@ -88,27 +88,27 @@ toc: true
 ### Sass
 
 - `color-level()` 과 `$theme-color-interval`으로 작동하던 컬러 시스템은 삭제되고, 새로운 컬러 시스템이 적용되었습니다. 코드의 기본인 `lighten()` 과 `darken()` 의 함수는 모두 `tint-color()` 과 `shade-color()`으로 바뀝니다. 이들의 함수는, 색의 명도를 일정량만 변화시키는 것이 아니라, 흰색 또는 검은색 중 한쪽을 섞습니다. `scale-color()` (Beta 1에서는 `shift-color()` 로 변경)는,  그것의 중요한 파라미터 값이 양수인지 음수인지에 따라 색상을 바꿀지 색을 진하게 할지를 결정합니다. [자세히 보기 #30622](https://github.com/twbs/bootstrap/pull/30622).
-- Spinner들은 이제 애니메이션을 느리게 함으로써 `prefers-reduced-motion: reduce`를 존중하게 되었습니다. [자세히 보기 #31882](https://github.com/twbs/bootstrap/pull/31882).
+- Spinner는 이제 애니메이션을 느리게 함으로써 `prefers-reduced-motion: reduce` 를 받아들이게 되었습니다. [자세히 보기 #31882](https://github.com/twbs/bootstrap/pull/31882).
 
 ### Reboot
 
-- Introduce `$enable-smooth-scroll`, which applies `scroll-behavior: smooth` globally—except for users asking for reduced motion through `prefers-reduced-motion` media query. [See #31877](https://github.com/twbs/bootstrap/pull/31877)
+- `$enable-smooth-scroll` 를 도입해, `prefers-reduced-motion` 미디어 쿼리를 사용해 움직임의 축소를 원하는 사용자를 제외하고는 `scroll-behavior: smooth` 를 전체적으로 적용하도록 하였습니다. [자세히 보기 #31877](https://github.com/twbs/bootstrap/pull/31877)
 
 ### Buttons
 
-- [Dropped `.btn-block` in favor of CSS grid utility classes.]({{< docsref "/components/buttons#block-buttons" >}}) Instead of applying `.btn-block` to individual buttons, a group of buttons now get wrapped in a parent `.d-grid` class and can use `.gap-*` utilities for spacing. For individual "block buttons", add `.w-100`.
+- [`.btn-block` 클래스를 삭제하고, grid 유틸리티 클래스를 사용하도록 하였습니다.]({{< docsref "/components/buttons#block-buttons" >}}) 각 버튼에 `.btn-block` 을 적용하는 대신에, 버튼 그룹의 부모를 `.d-grid` 클래스로 감싸주고, 간격으로는 `.gap-*` 유틸리티틑 사용할 수 있게 되었습니다. 각각의 "block buttons" 에는 `.w-100` 을 추가해 주십시오.
 
 ### Forms
 
-- 오래된 버그였던 [Missing border radius on input group with validation feedback bug](https://github.com/twbs/bootstrap/issues/25110) 이슈는  `.has-validation` 클래스를 추가하는 것으로 최종적으로 수정되었습니다.
-- Floating labels를 완전히 지원할 수 있도록 form component에 추가시켰습니다. [See the new Floating labels page.]({{< docsref "/forms/floating-labels" >}})
-- File input은 앞으로 `.form-control` 클래스를 사용하며, JavaScript, 추가 HTML, 또는 추가 클래스가 필요하지 않습니다. [See #31955](https://github.com/twbs/bootstrap/pull/31955).
+- 오래된 버그였던 [input group과 함께 사용한 유효성 검사 input의 반지름이 사라진](https://github.com/twbs/bootstrap/issues/25110) 이슈는  `.has-validation` 클래스를 추가하는 것으로 최종적으로 수정되었습니다.
+- Floating labels를 완전히 지원할 수 있도록 form component에 추가시켰습니다. [페이지 확인하러 가기]({{< docsref "/forms/floating-labels" >}})
+- File input은 앞으로 `.form-control` 클래스를 사용하며, JavaScript, 추가 HTML, 또는 추가 클래스가 필요하지 않습니다. [자세히 보기 #31955](https://github.com/twbs/bootstrap/pull/31955).
 - Color input의 `.form-control-color` 클래스 안에 `cursor:pointer` 를 추가 했습니다.
 
 ### Utilities
 
 - **Text utilities:**
-  - Added `.fs-*` utilities for `font-size` utilities (with RFS enabled). These use the same scale as HTML's default headings (1-6, large to small), and can be modified via Sass map.
+  - `font-size` 유틸리티 (RFS 활성화 한 상태)용으로 `.fs-*` 유틸리티를 추가했습니다. 이들은 HTML의 기본 타이틀과 같은 축척(h1-h6, large, small)을 사용하고 Sass map을 통해 변경할 수 있습니다.
   - 기존 `.font-weight-*` 유틸리티의 이름이 `.fw-*` 으로 변경 되었습니다.
   - 기존 `.font-style-*` 유틸리티의 이름이 `.fst-*` 으로 변경 되었습니다.
 - display 유틸리티에 `.d-grid` 가 추가 되었습니다.
@@ -119,8 +119,8 @@ toc: true
 ### Sass
 
 - `border-radius` 에 기본 매개 변수가 추가 - [See #31571](https://github.com/twbs/bootstrap/pull/31571).
-- `xs` breakpoint만을 타겟으로 했을 경우의 다음의 브레이크 포인트를 업데이트 했습니다. [See #31500](https://github.com/twbs/bootstrap/pull/31500).
-- `box-shadow` mixin에서 `null` 값을 허용하게 하여, 복수의 인수에서 `none` 을 삭제하게 되었습니다. - [See #30394](https://github.com/twbs/bootstrap/pull/30394).
+- `xs` breakpoint 만을 타겟으로 했을 경우, 다음의 브레이크 포인트가 업데이트 되도록. [자세히 보기 #31500](https://github.com/twbs/bootstrap/pull/31500).
+- `box-shadow` 믹스인에서 `null` 값을 허용하게 하여, 복수의 인수에서 `none` 을 삭제하지 않습니다. - [자세히 보기 #30394](https://github.com/twbs/bootstrap/pull/30394).
 
 ### Docs
 
@@ -128,74 +128,73 @@ toc: true
 - "Screen readers" 메뉴가 helper 페이지로 이동되어 "Visually hidden" 으로 변경되었으며, 파일이름과 클래스 이름도 함께  `visually-hidden` 으로 변경 되었습니다.
 - "Checks" 페이지가 "Checks & radios" 으로 변경되며 함께 파일 이름도 `checks-radios`으로 변경 되었습니다.
 - check/radio 문서가 업데이트 되었습니다. (Checks에 있던 버튼관련 내용은 button groups로 이동)
-- Improved skip links in our docs.
-- Redesigned docs navigation for larger tap targets on mobile and a streamlined subnav.
-- [#31114](https://github.com/twbs/bootstrap/pull/31114): Improved form documentation with regards to accessibility.
+- skip links의 문서가 개선되었습니다.
+- 모바일에서 더 큰 탭 대상을 위해 docs navigation의 재설계 및 간소화 된 subnav.
+- [#31114](https://github.com/twbs/bootstrap/pull/31114): 접근성과 관련된 양식 문서가 개선 되었습니다.
 
 ### Layout
 
-- Container horizontal padding updated to match the gutter size of `.row`s.
-- [#31439](https://github.com/twbs/bootstrap/pull/31439): Removed `flex: 1 0 100%` from rows due to regressions in grid behavior.
+- Container의 수평 패딩이 `.row`의 gutter 사이즈에 맞게 업데이트 되었습니다.
+- [#31439](https://github.com/twbs/bootstrap/pull/31439): grid 동작의 퇴보로 인해 행에서 `flex: 1 0 100%` 가 삭제 되었습니다.
 
 ### Reboot
 
-- Updated `th` styling to use a default `null` value for `font-weight` and inherit `text-align` instead of setting explicitly.
+- `font-weight`의 기본 값 `null`을 사용하여 명시적으로 설정하는게 아니라 `text-align`을 이어 받도록 `th` 업데이트.
 
 ### Colors
 
-- Bumped color contrast ratio from 3:1 to 4.5:1.
-- Set `$black` as color contrast color instead of `$gray-900`.
-- Improved `$green` (and its theme alias `$success`) color to reach a new minimum color contrast (moving from `#28a745` to `#198754`).
-- Improved `$cyan` (and its theme alias `$info`) color to be more vibrant (moving from `#17a2b8` to `#0dcaf0`).
+- 색 대비 비율을 3:1 에서 4.5:1로 변경 했습니다.
+- 색 대비에서 사용하던 `$gray-900`을 `$black`으로 바꿨습니다.
+- `$green` (혹은 테마명으로는 `$success`) 색을 개선해, 색 대비가 적어지도록 했습니다. (`#28a745` 에서 `#198754`으로 변경).
+- `$cyan` (혹은 테마명으로는 `$info`) 색을 보다 선명한 색으로 개선했습니다. (`#17a2b8` 에서 `#0dcaf0`으로 변경).
 
 ### Forms
 
-- [#31383](https://github.com/twbs/bootstrap/pull/31383): Resized checks and radios to be `1em` instead of `1.25em` in an effort to make them scale better with custom `$font-size-base` values and more.
+- [#31383](https://github.com/twbs/bootstrap/pull/31383): 체크버튼과 라디오 버튼의 크기를 `1.25em`에서 `1em`으로 변경하고, `$font-size-base` 을 사용해 확장성을 높히게 하였습니다.
 
 ### Components
 
 #### Badges
 
-- [#31132](https://github.com/twbs/bootstrap/pull/31132): Increased default padding for badges from `.25em`/`.5em` to `.35em`/`.65em`.
+- [#31132](https://github.com/twbs/bootstrap/pull/31132): Badge(배지)의 기본 패딩을 `.25em`/`.5em` 에서 `.35em`/`.65em`.으로 변경 하였습니다.
 
 #### Buttons
 
-- [#30639](https://github.com/twbs/bootstrap/pull/30639): Disabled states of buttons are easier to customize thanks to additional arguments in the `button-variant()` mixin.
-- [#30989](https://github.com/twbs/bootstrap/pull/30989): Updated buttons to ensure increased contrast on hover and active states.
+- [#30639](https://github.com/twbs/bootstrap/pull/30639): 버튼의 비활성화(Disabled) 상태는 `button-variant()` 믹스인의 인수를 추가함으로써 사용자 지정이 쉬워졌습니다.
+- [#30989](https://github.com/twbs/bootstrap/pull/30989): 버튼을 업데이트해, 호버와 활성화 된 생태의 색 대비를 향상시켰습니다.
 
 #### Carousel
 
-- Replaced chevron icons for carousel controls with new SVGs from [Bootstrap Icons]({{< param "icons" >}}).
-- Added new [`.carousel-dark` variant]({{< docsref "/components/carousel#dark-variant" >}}) for dark text, controls, and indicators (great for lighter backgrounds).
+- Carousel(캐러셀)에 사용하는 chevron 아이콘을 [Bootstrap Icons]({{< param "icons" >}})의 새로운 SVG로 업데이트 했습니다.
+- 어두운 텍스트, 컨트롤, 표시 위한 새로운 [`.carousel-dark`]({{< docsref "/components/carousel#dark-variant" >}})을 추가하였습니다. (밝은 배경에 최적).
 
 #### Close button
 
-- Renamed `.close` to `.btn-close` for a less generic name.
-- Close buttons now use a `background-image` (embedded SVG) instead of a `&times;` in the HTML, allowing for easier customization without the need to touch your markup.
-- Added new variables to better control the customization.
-- Added new `.btn-close-white` variant that uses `filter: invert(1)` to enable higher contrast dismiss icons against darker backgrounds.
+- `.close` 가 `.btn-close` 로 바뀌어 보다 일반적인 이름이 되었습니다.
+- 닫기 버튼은 HTML안에서 기존의 `&times;` 대신 `background-image` (내장 SVG)를 사용하게 되어, 마크업을 수정없이 쉽게 커스터마이즈 할 수 있게 되었습니다.
+- `.btn-close-white`를 새롭게 추가하여 `filter: invert(1)`을 사용해, 어두운 배경에서도 보다 높은 대비로 아이콘을 없앨수 있게 되었습니다.
 
 #### Collapse
 
-- [#31346](https://github.com/twbs/bootstrap/pull/31346): Removed scroll anchoring for accordions.
+- [#31346](https://github.com/twbs/bootstrap/pull/31346): accordion(아코디언)의 scroll anchoring(스크롤 앵커링)을 삭제 했습니다.
 
 #### Dropdowns
 
-- Added new `.dropdown-menu-dark` variant and associated variables for on-demand dark dropdowns.
-- Added new variable for `$dropdown-padding-x`.
-- Darkened the dropdown divider for improved contrast.
+- 새로운`.dropdown-menu-dark` 를 추가하고 on-demand의 dark dropdown의 관련 변수를 추가하였습니다.
+- `$dropdown-padding-x`를 새롭게 추가하였습니다.
+- contrast 개선을 하기 위해, dropdown(드롭다운)의 divider(구분선)을 어둡게 했습니다.
 
 #### Navs
 
-- [#31035](https://github.com/twbs/bootstrap/pull/31035): Added new `null` variables for `font-size`, `font-weight`, `color`, and `:hover` `color` to the `.nav-link` class.
+- [#31035](https://github.com/twbs/bootstrap/pull/31035): `.nav-link` 클래스에 `font-size`, `font-weight`, `color`, `:hover` `color` 의 새로운 변수 `null`을 추가하였습니다.
 
 #### Pagination
 
-- Added `transition`s to pagination links. [See #31396](https://github.com/twbs/bootstrap/pull/31396).
+- pagination 링크에 `transition`을 추가했습니다. [자세히 보기 #31396](https://github.com/twbs/bootstrap/pull/31396).
 
 #### Popovers
 
-- Renamed `whiteList` option to `allowList`.
+- `whiteList` 의 옵션명을 `allowList`으로 변경했습니다.
 
 #### Toasts
 
@@ -206,19 +205,19 @@ toc: true
 
 #### Tooltips
 
-- Renamed `whiteList` option to `allowList`.
+- `whiteList` 의 옵션명을 `allowList`으로 변경했습니다.
 
 ### Helpers
 
-- Responsive embed helpers have been renamed to [ratio helpers]({{< docsref "/helpers/ratio" >}}) with new class names and improved behaviors, as well as a helpful CSS variable.
-  - Classes have been renamed to change `by` to `x` in the aspect ratio. For example, `.ratio-16by9` is now `.ratio-16x9`.
-  - We've dropped the `.embed-responsive-item` and element group selector in favor of a simpler `.ratio > *` selector. No more class is needed, and the ratio helper now works with any HTML element.
-  - The `$embed-responsive-aspect-ratios` Sass map has been renamed to `$aspect-ratios` and its values have been simplified to include the class name and the percentage as the `key: value` pair.
-  - CSS variables are now generated and included for each value in the Sass map. Modify the `--aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]({{< docsref "/helpers/ratio#custom-ratios" >}}).
-- "Screen reader" classes are now ["visually hidden" classes]({{< docsref "/helpers/visually-hidden" >}}).
-  - Changed the Sass file from `scss/helpers/_screenreaders.scss` to `scss/helpers/_visually-hidden.scss`
-  - Renamed `.sr-only` and `.sr-only-focusable` to `.visually-hidden` and `.visually-hidden-focusable`
-  - Renamed `sr-only()` and `sr-only-focusable()` mixins to `visually-hidden()` and `visually-hidden-focusable()`.
+- Responsive embed 이름이 [ratio]({{< docsref "/helpers/ratio" >}}) 로 변경되어, 새로운 클래스명과 동작으로 개선되었습니다.
+  - 가로세로의 비의 의미로 클래스명에 함께 사용된 `by` 가 `x` 로 변경되었습니다. 예를 들어, `.ratio-16by9` 는`.ratio-16x9`으로.
+  - `.embed-responsive-item` 과 요소의 그룹 셀렉터를 삭제하고, 보다 심플한 `.ratio > *` 의 셀렉터로 변경되었습니다. 이 이상의 클래스는 필요 없으며, ratio helper는 어떤 HTML 요소에서도 동작하도록 되었습니다.
+  - `$embed-responsive-aspect-ratios` 가 `$aspect-ratios` 로 이름이 변경되어, 그 값이 단순화되고, 클래스명과 백분율이 `key: value`의 짝으로 포함되었습니다.
+  - CSS 변수가 생성되어, Sass map의 각 값에 포함되게 되었습니다. `.ratio`의 변수 `--aspect-ratio`을 변경하여, 임의의 [custom aspect ratio]({{< docsref "/helpers/ratio#custom-ratios" >}})을 작성할 수 있게 하였습니다.
+- "Screen reader" 클래스를 ["visually hidden" 클래스로]({{< docsref "/helpers/visually-hidden" >}}) 변경하였습니다.
+  - Sass 파일을 `scss/helpers/_screenreaders.scss` 에서 `scss/helpers/_visually-hidden.scss`으로 변경.
+  - `.sr-only`와 `.sr-only-focusable` 의 이름을 `.visually-hidden` 과 `.visually-hidden-focusable`으로 변경.
+  - `sr-only()`와 `sr-only-focusable()`의 믹스인 이름에서 `visually-hidden()` 과 `visually-hidden-focusable()`으로 변경.
 
 ### Utilities
 
