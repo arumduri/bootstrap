@@ -1,20 +1,19 @@
 ---
 layout: docs
-title: Cards
-description: Bootstrap's cards provide a flexible and extensible content container with multiple variants and options.
+title: Cards(카드)
+description: 여러 가지 종류와 옵션을 가진 유연하고 확장 가능한 컨텐츠를 제공합니다.
 group: components
 toc: true
 ---
 
 ## About
-
-A **card** is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
+**card** 는 유연하고 확장이 가능한 컨테이너입니다. headers 나 footers 의 옵션, 다양한 컨텐츠, 문맥에 따른 배경 색상, 강력한 표시 옵션이 포함뙤어 있습니다.  Bootstrap3 의 panels、wells、thumbnails 는 카드로 바꿉니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
 
 ## Example
 
-Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no `margin` by default, so use [spacing utilities]({{< docsref "/utilities/spacing" >}}) as needed.
+카드는 적은 마크업과 스타일로 되어 있습니다만, 많은 커스터마이즈가 가능합니다. Flexbox 로 만들어져 있어 쉽게 배치가 가능하고, 다른 컴포넌트와 조합이 가능합니다. 기본값에는 `margin` 설정이 없기 때문에 필요에 따라 [spacing utilities]({{< docsref "/utilities/spacing" >}}) 를 사용합니다.
 
-Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they'll naturally fill the full width of its parent element. This is easily customized with our various [sizing options](#sizing).
+아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [sizing options](#sizing) 을 통해서 간단하게 커스터마이즈 할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -29,11 +28,11 @@ Below is an example of a basic card with mixed content and a fixed width. Cards 
 
 ## Content types
 
-Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what's supported.
+이미지나 텍스트, 목록, 링크등의 카드는 다양한 컨텐츠를 지원하고 있습니다. 아래와 같습니다.
 
 ### Body
 
-The building block of a card is the `.card-body`. Use it whenever you need a padded section within a card.
+카드를 구축하는 클래스는 `.card-body` 입니다. 카드 내에 여백에 필요할때 사용합니다.
 
 {{< example >}}
 <div class="card">
@@ -45,9 +44,9 @@ The building block of a card is the `.card-body`. Use it whenever you need a pad
 
 ### Titles, text, and links
 
-Card titles are used by adding `.card-title` to a `<h*>` tag. In the same way, links are added and placed next to each other by adding `.card-link` to an `<a>` tag.
+카드 타이틀은 `<h*>` 태그에 `.card-title` 을 적용합니다. `<a>` 태그에 `.card-link` 를 적용하면 링크가 추가됩니다. 서브 타이틀은, `<h*>` 태크에 `.card-subtitle` 를 적용합니다.
 
-Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-title` and the `.card-subtitle` items are placed in a `.card-body` item, the card title and subtitle are aligned nicely.
+`.card-title` 과 `.card-subtitle` 를 `.card-body` 안에 배치하면 카드 제목과 서브 타이틀이 깔끔하게 적용됩니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -63,7 +62,7 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 
 ### Images
 
-`.card-img-top` places an image to the top of the card. With `.card-text`, text can be added to the card. Text within `.card-text` can also be styled with the standard HTML tags.
+`.card-img-top` 은 이미지를 위로 가지고 옵니다. `.card-text` 는 텍스트를 카드에 추가할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -76,7 +75,7 @@ Subtitles are used by adding a `.card-subtitle` to a `<h*>` tag. If the `.card-t
 
 ### List groups
 
-Create lists of content in a card with a flush list group.
+flush list group 을 사용하여 카드안에 목록을 만듭니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -116,6 +115,7 @@ Create lists of content in a card with a flush list group.
 
 ### Kitchen sink
 
+복수의 컨텐츠 타입을 조합하고, 필요한 카드를 작성하거나 모든 것을 거기에 집어 넣을수 있습니다. 아래는 이미지 스타일, 블럭, 텍스트 스타일, 리스트 그룹으로, 모든것이 고정폭의 카드안에 싸여 있습니다.
 Mix and match multiple content types to create the card you need, or throw everything in there. Shown below are image styles, blocks, text styles, and a list group—all wrapped in a fixed-width card.
 
 {{< example >}}
@@ -139,7 +139,7 @@ Mix and match multiple content types to create the card you need, or throw every
 
 ### Header and footer
 
-Add an optional header and/or footer within a card.
+header 와/혹은 footer 를 넣는 카드의 옵션이 있습니다.
 
 {{< example >}}
 <div class="card">
@@ -154,7 +154,7 @@ Add an optional header and/or footer within a card.
 </div>
 {{< /example >}}
 
-Card headers can be styled by adding `.card-header` to `<h*>` elements.
+`<h*>` 요소에 `.card-header` 를 적용합니다.
 
 {{< example >}}
 <div class="card">
@@ -199,11 +199,11 @@ Card headers can be styled by adding `.card-header` to `<h*>` elements.
 
 ## Sizing
 
-Cards assume no specific `width` to start, so they'll be 100% wide unless otherwise stated. You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities.
+카드는 특별히 지정하지 않는 한, `width` 는 100% 의 가로 폭을 가지게 됩니다. 필요에 따라, 커스텀 CSS, grid 클래스, grid Sass 믹스인, 혹은 유틸리티를 사용해 변경할 수 있습니다.
 
 ### Using grid markup
 
-Using the grid, wrap cards in columns and rows as needed.
+grid 를 사용해, 필요에 따라 카드를 columns 과 rows 안에 넣어서 사용합니다.
 
 {{< example >}}
 <div class="row">
@@ -230,7 +230,7 @@ Using the grid, wrap cards in columns and rows as needed.
 
 ### Using utilities
 
-Use our handful of [available sizing utilities]({{< docsref "/utilities/sizing" >}}) to quickly set a card's width.
+이용 가능한 [available sizing utilities]({{< docsref "/utilities/sizing" >}}) 을 사용해 카드의 폭을 빠르게 설정합니다.
 
 {{< example >}}
 <div class="card w-75">
@@ -252,7 +252,7 @@ Use our handful of [available sizing utilities]({{< docsref "/utilities/sizing" 
 
 ### Using custom CSS
 
-Use custom CSS in your stylesheets or as inline styles to set a width.
+스타일 시트나 인라인 스타일로 가로 폭을 적용할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -266,7 +266,7 @@ Use custom CSS in your stylesheets or as inline styles to set a width.
 
 ## Text alignment
 
-You can quickly change the text alignment of any card—in its entirety or specific parts—with our [text align classes]({{< docsref "/utilities/text#text-alignment" >}}).
+텍스트의 배치는 [text align classes]({{< docsref "/utilities/text#text-alignment" >}}) 을 사용해 변경할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -296,7 +296,7 @@ You can quickly change the text alignment of any card—in its entirety or speci
 
 ## Navigation
 
-Add some navigation to a card's header (or block) with Bootstrap's [nav components]({{< docsref "/components/navs-tabs" >}}).
+[nav components]({{< docsref "/components/navs-tabs" >}}) 을 사용해 카드의 header (혹은 block)에 내비게이션을 적용할 수 있습니다.
 
 {{< example >}}
 <div class="card text-center">
@@ -346,11 +346,11 @@ Add some navigation to a card's header (or block) with Bootstrap's [nav componen
 
 ## Images
 
-Cards include a few options for working with images. Choose from appending "image caps" at either end of a card, overlaying images with card content, or simply embedding the image in a card.
+카드에는, 이미지를 다루기 위한 몇개의 옵션이 있습니다. 카드의 양끝에 "image caps" 을 추가하거나, 카드의 내용에 이미지를 겹쳐 맞추거나 또는 그저 이미지를 카드에 삽입할 수 있습니다.
 
 ### Image caps
 
-Similar to headers and footers, cards can include top and bottom "image caps"—images at the top or bottom of a card.
+헤더나 푸터와 같이, 카드에는 카드의 상부와 하부의 "image caps"(카드의 상부 또는 하부의 이미지) 을 포함할 수 있습니다.
 
 {{< example >}}
 <div class="card mb-3">
