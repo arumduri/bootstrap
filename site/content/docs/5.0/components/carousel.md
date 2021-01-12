@@ -1,32 +1,31 @@
 ---
 layout: docs
-title: Carousel
-description: A slideshow component for cycling through elements—images or slides of text—like a carousel.
-group: components
+title: Carousel(캐러셀)
+description: 캐러셀은 이미지나 텍스트의 슬라이드를 가로로 슬라이드시켜 여러개를 표시하는 컨포넌트입니다.
 toc: true
 ---
 
 ## How it works
 
-The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.
+캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript로 만들어진, 일련의 컨텐츠를 순환시키기 위한 슬라이드쇼 입니다. 일련의 이미지, 텍스트, 혹은 커스텀 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
 
-In browsers where the [Page Visibility API](https://www.w3.org/TR/page-visibility/) is supported, the carousel will avoid sliding when the webpage is not visible to the user (such as when the browser tab is inactive, the browser window is minimized, etc.).
+[Page Visibility API](https://www.w3.org/TR/page-visibility/) 가 지원되고 있는 브라우저에서는, 웹 페이지가 사용자에게 보이지 않을 때(브라우저 탭이 활성화 되지 않았거나, 브라우저 윈도우 사이즈가 최소화되어 있을때 등등), 캐러셀은 동작하지 않습니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-Please be aware that nested carousels are not supported, and carousels are generally not compliant with accessibility standards.
+중첩된 캐러셀은 지원되고 있지 않고, 캐러셀은 일반적으로 접근성(accessibility) 기준에 준거하고 있지 않다는 것에 주의해 주세요.
 
 ## Example
 
-Carousels don't automatically normalize slide dimensions. As such, you may need to use additional utilities or custom styles to appropriately size content. While carousels support previous/next controls and indicators, they're not explicitly required. Add and customize as you see fit.
+캐러셀은, 슬라이드의 치수를 자동적으로 정규화하지 않습니다. 그 때문에, 컨텐츠의 사이즈를 적절하게 조정하기 위해, 추가의 유틸리티나 커스텀 스타일을 사용할 필요가 있는 경우가 있습니다. 캐러셀은 이전/다음의 컨트롤과 위치 표시(인디게이터, indicator)를 지원하고 있지만, 명시적으로 필수는 아닙니다. 자유롭게 추가하여 커스터마이즈 해 주세요.
 
-**The `.active` class needs to be added to one of the slides** otherwise the carousel will not be visible. Also be sure to set a unique id on the `.carousel` for optional controls, especially if you're using multiple carousels on a single page. Control and indicator elements must have a `data-bs-target` attribute (or `href` for links) that matches the id of the `.carousel` element.
+**`.active` 클래스는, 슬라이드의 하나에는 추가할 필요가 있습니다.** 그렇게 하지 않으면 캐러셀은 표시되지 않습니다. 그리고, 한 페이지에 복수의 캐러셀을 사용하고 있는 경우에는 특히 옵션의 컨트롤을 위한 `.carousel` 에 하나의 id 를 설정해야 합니다. 컨트롤과 위치 표시(인디게이터, indicator)의 요소는, `.carousel` 요소의 id 와 일치하는 `data-bs-target` 속성(링크의 경우에는 `href`)을 가져야 합니다.
 
 ### Slides only
 
-Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-100` on carousel images to prevent browser default image alignment.
+슬라이드만 사용하는 캐러셀입니다. 캐러셀 이미지에 `.d-block` 과 `.w-100` 이 있는 것을 주의해 주세요.
 
 {{< example >}}
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -46,7 +45,7 @@ Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-
 
 ### With controls
 
-Adding in the previous and next controls:
+이전/다음의 컨트롤을 추가합니다.
 
 {{< example >}}
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -74,7 +73,7 @@ Adding in the previous and next controls:
 
 ### With indicators
 
-You can also add the indicators to the carousel, alongside the controls, too.
+그리고, 캐러셀에는 컨트롤과 함께 위치 표시(인디게이터, indicator)를 추가할 수도 있습니다.
 
 {{< example >}}
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -107,7 +106,7 @@ You can also add the indicators to the carousel, alongside the controls, too.
 
 ### With captions
 
-Add captions to your slides easily with the `.carousel-caption` element within any `.carousel-item`. They can be easily hidden on smaller viewports, as shown below, with optional [display utilities]({{< docsref "/utilities/display" >}}). We hide them initially with `.d-none` and bring them back on medium-sized devices with `.d-md-block`.
+`.carousel-item` 안의 `.carousel-caption` 요소를 사용해, 슬라이드에 설명문(캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 [display utilities]({{< docsref "/utilities/display" >}}) 를 사용함으로써, 보다 작은 뷰포터에서 간단히 설명문(캡션, caption)을 감추는것도 가능합니다. 처음에는 `.d-none` 로 비표시하고, 중형 디바이스에서는 `.d-md-block` 로 다시 표시합니다.
 
 {{< example >}}
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -152,7 +151,7 @@ Add captions to your slides easily with the `.carousel-caption` element within a
 
 ### Crossfade
 
-Add `.carousel-fade` to your carousel to animate slides with a fade transition instead of a slide.
+`.carousel-fade` 를 캐러셀에 추가하면, 슬라이드 대신에 페이드 트랜지션으로 슬라이드를 애니메이션 시킬 수 있습니다.
 
 {{< example >}}
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -180,7 +179,7 @@ Add `.carousel-fade` to your carousel to animate slides with a fade transition i
 
 ### Individual `.carousel-item` interval
 
-Add `data-bs-interval=""` to a `.carousel-item` to change the amount of time to delay between automatically cycling to the next item.
+다음 항목으로 자동적으로 바뀔 때까지의 지연 시간을 변경하려면 `.carousel-item` 에 `data-bs-interval=""` 을 추가합니다.
 
 {{< example >}}
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -208,7 +207,7 @@ Add `data-bs-interval=""` to a `.carousel-item` to change the amount of time to 
 
 ## Dark variant
 
-Add `.carousel-dark` to the `.carousel` for darker controls, indicators, and captions. Controls have been inverted from their default white fill with the `filter` CSS property. Captions and controls have additional Sass variables that customize the `color` and `background-color`.
+컨트롤, 위치 표시(인디게이터, indicator) 혹은 설명문(캡션, caption) 을 어둡게 하기 위해서 `.carousel-dark` 을 `.carousel` 에 추가했습니다. 컨트롤은 `filter` CSS 속성으로 기본 흰색으로 칠해 진 것이 반전됩니다. 설명문(캡션, caption)과 컨트롤에는 `color` 와 `background-color` 를 커스터마이즈하는 Sass 변수가 추가되었습니다.
 
 {{< example >}}
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -255,13 +254,13 @@ Add `.carousel-dark` to the `.carousel` for darker controls, indicators, and cap
 
 ### Via data attributes
 
-Use data attributes to easily control the position of the carousel. `data-bs-slide` accepts the keywords `prev` or `next`, which alters the slide position relative to its current position. Alternatively, use `data-bs-slide-to` to pass a raw slide index to the carousel `data-bs-slide-to="2"`, which shifts the slide position to a particular index beginning with `0`.
+캐러셀의 위치를 간단히 제어하려면, 데이타 속성을 사용합니다. `data-bs-slide` 는 키워드 `prev` 나 `next` 을 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 `data-bs-slide-to` 를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 `data-bs-slide-to="2"` 가 되어, 슬라이디의 위치를 `0` 에서 시작하는 특정의 인덱스로 이동시킵니다.
 
-The `data-bs-ride="carousel"` attribute is used to mark a carousel as animating starting at page load. If you don't use `data-bs-ride="carousel"` to initialize your carousel, you have to initialize it yourself. **It cannot be used in combination with (redundant and unnecessary) explicit JavaScript initialization of the same carousel.**
+`data-bs-ride="carousel"` 속성은, 페이지 로드시 캐러셀을 애니메이션 시키는데 사용됩니다. 캐러셀의 초기화에 `data-bs-ride="carousel"` 를 사용하지 않는 경우에는, 스스로 초기화 할 필요가 있습니다. **같은 캐러셀의 명시적인 JavaScript의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.**
 
 ### Via JavaScript
 
-Call carousel manually with:
+캐러셀을 수동으로 부르는 경우 :
 
 ```js
 var myCarousel = document.querySelector('#myCarousel')
@@ -270,7 +269,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-interval=""`.
+옵션은, 데이타 속은 혹은 JavaScript 으로 줄 수 있습니다. 데이타 속성의 경우, `data-bs-interval=""` 과 같이, 옵션명을 `data-bs-`에 추가합니다.
 
 <table class="table">
   <thead>
@@ -286,38 +285,37 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td><code>interval</code></td>
       <td>number</td>
       <td><code>5000</code></td>
-      <td>The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.</td>
+      <td>아이템이 자동적으로 순환하기까지의 시간을 지정합니다. false 의 경우, 캐러셀은 자동적으로 순환하지 않습니다.</td>
     </tr>
     <tr>
       <td><code>keyboard</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Whether the carousel should react to keyboard events.</td>
+      <td>캐러셀이 키보드 이벤트에 반응해야 하는지 여부.</td>
     </tr>
     <tr>
       <td><code>pause</code></td>
       <td>string | boolean</td>
       <td><code>"hover"</code></td>
-      <td><p>If set to <code>"hover"</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>false</code>, hovering over the carousel won't pause it.</p>
-      <p>On touch-enabled devices, when set to <code>"hover"</code>, cycling will pause on <code>touchend</code> (once the user finished interacting with the carousel) for two intervals, before automatically resuming. Note that this is in addition to the above mouse behavior.</p></td>
+      <td><p><code>"hover"</code> 으로 설정하면 <code>mouseenter</code> 로 캐러셀의 순환을 일시정지하고, <code>mouseleave</code> 로 캐러셀의 순환을 재개합니다. <code>false</code> 로 설정하면, 캐러셀 위에 커서를 올려 놓아도 캐러셀은 일시정지 하지 않습니다.</p></td>
     </tr>
     <tr>
       <td><code>slide</code></td>
       <td>string | boolean</td>
       <td><code>false</code></td>
-      <td>Autoplays the carousel after the user manually cycles the first item. If "carousel", autoplays the carousel on load.</td>
+      <td>사용자가 첫번째 아이템을 수동으로 순환시킨 후, 캐러셀을 자동 재생합니다. "carousel" 의 경우, 로드시 캐러셀을 자동 재생 합니다.</td>
     </tr>
     <tr>
       <td><code>wrap</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Whether the carousel should cycle continuously or have hard stops.</td>
+      <td>캐러셀을 연속적으로 순환시킬지 혹은 강제로 멈추게 할지 여부.</td>
     </tr>
     <tr>
       <td><code>touch</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Whether the carousel should support left/right swipe interactions on touchscreen devices.</td>
+      <td>터치 스크린 디바이스에서 캐러셀이 좌우 스와이프 인터렉션을 지원할지 여부.</td>
     </tr>
   </tbody>
 </table>
@@ -328,7 +326,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-You can create a carousel instance with the carousel constructor, for example, to initialize with additional options and start cycling through items:
+예를 들어, 캐러셀의 컨스트럭터에서 캐러셀의 인스턴스를 만들어, 추가 옵션으로 초기화 하거나, 아이템의 순환을 시작하거나 할 수 있습니다.
 
 ```js
 var myCarousel = document.querySelector('#myCarousel')
