@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: List group
-description: List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
+title: List group(리스트 그룹)
+description: 리스트 그룹은 일련의 컨텐츠를 보여주기 위한 유연하고 강력한 컴포넌트입니다. 그룹을 변경하거나 확장하여 모든 컨텐츠를 지원합니다.
 group: components
 toc: true
 ---
 
 ## Basic example
 
-The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+가장 기본적인 리스트 그룹은 리스트 항목과 적절한 클래스를 가진 순서없는 리스트입니다. 이하의 옵션을 사용해, 혹은 필요에 따라서 독자적인 CSS 를 사용해 만듭니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -22,7 +22,7 @@ The most basic list group is an unordered list with list items and the proper cl
 
 ## Active items
 
-Add `.active` to a `.list-group-item` to indicate the current active selection.
+현재 활성화 된 선택범위를 나타내기 위해 `.list-group-item` 에 `.active` 를 추가합니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -36,7 +36,7 @@ Add `.active` to a `.list-group-item` to indicate the current active selection.
 
 ## Disabled items
 
-Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that some elements with `.disabled` will also require custom JavaScript to fully disable their click events (e.g., links).
+`.list-group-item` 에 `.disabled` 를 추가하면, 비활성화 되어 있는 것처럼 보입니다. `.disabled` 를 가진 요소 중에는 클릭 이벤트(링크 등)를 완전히 비활성화 하기 위해 커스텀 JavaScript 를 사용해야 합니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -50,9 +50,9 @@ Add `.disabled` to a `.list-group-item` to make it _appear_ disabled. Note that 
 
 ## Links and buttons
 
-Use `<a>`s or `<button>`s to create _actionable_ list group items with hover, disabled, and active states by adding `.list-group-item-action`. We separate these pseudo-classes to ensure list groups made of non-interactive elements (like `<li>`s or `<div>`s) don't provide a click or tap affordance.
+_actionable_ 한 리스트 그룹 항목을 작성하려면 `<a>` 나 `<button>` 를 사용하고, `.list-group-item-action` 을 추가합니다. 비인터랙티브한 요소(`<li>` 혹은 `<div>` 와 같은)로 만들어진 리스트 그룹이 클릭이나 탭 어포던스를 제공하지 않도록, 이러한 가상 클래스를 분리하고 있습니다.
 
-Be sure to **not use the standard `.btn` classes here**.
+여기에서는 **표준의 `.btn` 클래스를 사용하지 않도록 주의해 주세요**.
 
 {{< example >}}
 <div class="list-group">
@@ -66,7 +66,7 @@ Be sure to **not use the standard `.btn` classes here**.
 </div>
 {{< /example >}}
 
-With `<button>`s, you can also make use of the `disabled` attribute instead of the `.disabled` class. Sadly, `<a>`s don't support the disabled attribute.
+`<button>` 에서는 `.disabled` 클래스 대신에 `disabled` 속성을 사용할 수도 있습니다. 유감스럽게도, `<a>` 는 disabled 속성을 지원하지 않습니다.
 
 {{< example >}}
 <div class="list-group">
@@ -82,7 +82,7 @@ With `<button>`s, you can also make use of the `disabled` attribute instead of t
 
 ## Flush
 
-Add `.list-group-flush` to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
+`.list-group-flush` 를 추가하고, 부모 컨테이너(카드 등) 내의 리스트 그룹의 항목을 끝에서 끝까지 표시하기 위해 몇개의 라인과 둥근 모서리를 제거하도록 합니다.
 
 {{< example >}}
 <ul class="list-group list-group-flush">
@@ -96,9 +96,9 @@ Add `.list-group-flush` to remove some borders and rounded corners to render lis
 
 ## Horizontal
 
-Add `.list-group-horizontal` to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant `.list-group-horizontal-{sm|md|lg|xl|xxl}` to make a list group horizontal starting at that breakpoint's `min-width`. Currently **horizontal list groups cannot be combined with flush list groups.**
+리스트 그룹의 항목 레이아웃을 모든 브레이크 포인트에서 수직에서 수평으로 변경하려면 `.list-group-horizontal` 을 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}` 를 선택하고 브레이크 포인트의 `min-width` 로 시작하는 리스트 그룹을 수평으로 합니다. 현재 **수평 리스트 그룹을 flush 리스트 그룹과 조합할 수 없습니다.**
 
-**ProTip:** Want equal-width list group items when horizontal? Add `.flex-fill` to each list group item.
+**ProTip:** 리스트 그룹의 항목을 수평 방향으로 동일한 너비로 하고 싶을 경우, 리스트 그룹의 각 항목에 `.flex-fill` 을 추가합니다.
 
 {{< example >}}
 {{< list-group.inline >}}
@@ -114,7 +114,7 @@ Add `.list-group-horizontal` to change the layout of list group items from verti
 
 ## Contextual classes
 
-Use contextual classes to style list items with a stateful background and color.
+상황별 클래스를 사용하여, 스테이트풀(stateful)한 배경색과 글자색으로 리스트 항목을 꾸밉니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -127,7 +127,7 @@ Use contextual classes to style list items with a stateful background and color.
 </ul>
 {{< /example >}}
 
-Contextual classes also work with `.list-group-item-action`. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
+상황별 클래스는 `.list-group-item-action` 에도 동작합니다. 앞의 예시에서도 볼 수 없었던 호버 스타일이 추가 되었음을 주의하십시오. 또 `.active` 상태도 지원되고 있습니다. 이것을 적용해 상황별 리스트 그룹 항목에서 활성화 된 선택을 나타낼수 있습니다.
 
 {{< example >}}
 <div class="list-group">
@@ -146,7 +146,7 @@ Contextual classes also work with `.list-group-item-action`. Note the addition o
 
 ## With badges
 
-Add badges to any list group item to show unread counts, activity, and more with the help of some [utilities]({{< docsref "/utilities/flex" >}}).
+[utilities]({{< docsref "/utilities/flex" >}}) 를 사용해, 아직 읽지 않은 수나 액티비티 등을 표시하기 위한 배지를 리스트 그룹의 항목에 추가합니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -167,7 +167,7 @@ Add badges to any list group item to show unread counts, activity, and more with
 
 ## Custom content
 
-Add nearly any HTML within, even for linked list groups like the one below, with the help of [flexbox utilities]({{< docsref "/utilities/flex" >}}).
+[flexbox utilities]({{< docsref "/utilities/flex" >}}) 의 도움을 받아 아래와 같은 링크된 리스트 그룹에서도 거의 모든 HTML 를 추가할 수 있습니다.
 
 {{< example >}}
 <div class="list-group">
@@ -200,7 +200,7 @@ Add nearly any HTML within, even for linked list groups like the one below, with
 
 ## Checkboxes and radios
 
-Place Bootstrap's checkboxes and radios within list group items and customize as needed. You can use them without `<label>`s, but please remember to include an `aria-label` attribute and value for accessibility.
+리스트 그룹 항목 내에 Bootstrap 체크박스와 라디오를 배치하고 필요에 따라 커스터마이즈 합니다. `<label>` 없이도 사용이 가능하지만 접근성을 위해 `aria-label` 속성과 값을 포함시켜 주십시오.
 
 {{< example >}}
 <ul class="list-group">
@@ -227,7 +227,7 @@ Place Bootstrap's checkboxes and radios within list group items and customize as
 </ul>
 {{< /example >}}
 
-And if you want `<label>`s as the `.list-group-item` for large hit areas, you can do that, too.
+그리고 넓은 선택 영역을 위해 `<label>` 을 `.list-group-item` 으로 사용하고 싶은 경우, 아래와 같이 사용 가능합니다.
 
 {{< example >}}
 <div class="list-group">
@@ -257,7 +257,7 @@ And if you want `<label>`s as the `.list-group-item` for large hit areas, you ca
 
 ## JavaScript behavior
 
-Use the tab JavaScript plugin—include it individually or through the compiled `bootstrap.js` file—to extend our list group to create tabbable panes of local content.
+탭 JavaScript 플러그인—개별적으로 혹은 컴파일된 `bootstrap.js`—을 사용해 리스트 그룹을 확장하고 로컬 컨텐츠의 탭 가능한 판넬을 작성합니다.
 
 <div class="bd-example" role="tabpanel">
   <div class="row">
@@ -311,7 +311,7 @@ Use the tab JavaScript plugin—include it individually or through the compiled 
 
 ### Using data attributes
 
-You can activate a list group navigation without writing any JavaScript by simply specifying `data-bs-toggle="list"` or on an element. Use these data attributes on `.list-group-item`.
+JavaScript 를 쓰지 않아도, `data-bs-toggle="list"` 를 지정하거나 요소로 지정만 해도 리스트 그룹 네비게이션을 활성화 시킬 수 있습니다. 이들의 data 속성을 `.list-group-item` 에 이용합니다.
 
 ```html
 <div role="tabpanel">
@@ -335,7 +335,7 @@ You can activate a list group navigation without writing any JavaScript by simpl
 
 ### Via JavaScript
 
-Enable tabbable list item via JavaScript (each list item needs to be activated individually):
+JavaScript 로 탭 가능한 리스트 항목을 유효하게 합니다.(각 리스트 항목을 개별적으로 유효하게 할 필요가 있습니다):
 
 ```js
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
@@ -349,7 +349,7 @@ triggerTabList.forEach(function (triggerEl) {
 })
 ```
 
-You can activate individual list item in several ways:
+각각의 리스트 항목을 여러가지 방법으로 활성화 할 수 있습니다:
 
 ```js
 var triggerEl = document.querySelector('#myTab a[href="#profile"]')
@@ -361,7 +361,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Fade effect
 
-To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane must also have `.show` to make the initial content visible.
+탭 판넬을 페이드인 시키려면 `.tab-pane` 에 `.fade` 를 추가합니다. 첫번째 탭 판넬에는 첫번째 컨텐츠를 표시하기 위해서 `.show` 를 추가 할 필요가 있습니다.
 
 ```html
 <div class="tab-content">
@@ -376,7 +376,7 @@ To make tabs panel fade in, add `.fade` to each `.tab-pane`. The first tab pane 
 
 #### constructor
 
-Activates a list item element and content container. Tab should have either a `data-bs-target` or an `href` targeting a container node in the DOM.
+리스트 항목 요소와 컨텐츠 컨테이너를 활성화 시킵니다. 탭에는 DOM 내의 컨테이너 노드를 타겟으로 하는 `data-bs-target` 또는 `href` 가 필요합니다.
 
 ```html
 <div class="list-group" id="myList" role="tablist">
@@ -403,7 +403,7 @@ Activates a list item element and content container. Tab should have either a `d
 
 #### show
 
-Selects the given list item and shows its associated pane. Any other list item that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (for example, before the `shown.bs.tab` event occurs).
+지정된 리스트 항목을 선택하고 관련 판넬을 표시합니다. 이전에 선택되었던 다른 리스트 항목은 선택되지 않은 상태로 돌아가고, 관련된 판넬은 숨김이 됩니다. 탭 판넬이 실제로 표시되기 전에 호출한 곳으로 돌아갑니다(예를 들어, `shown.bs.tab` 이벤트가 발생하기 전 등)
 
 ```js
   var someListItemEl = document.querySelector('#someListItem')
@@ -414,11 +414,11 @@ Selects the given list item and shows its associated pane. Any other list item t
 
 #### dispose
 
-Destroys an element's tab.
+요소의 탭을 없앱니다.
 
 #### getInstance
 
-*Static* method which allows you to get the tab instance associated with a DOM element
+DOM 요소와 연관된 탭의 인스턴스를 가져오는 *Static* 메소드입니다.
 
 ```js
 var triggerEl = document.querySelector('#trigger')
@@ -427,14 +427,14 @@ var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instan
 
 ### Events
 
-When showing a new tab, the events fire in the following order:
+새로운 탭을 표시하면, 아래의 순서대로 이벤트가 발생합니다:
 
-1. `hide.bs.tab` (on the current active tab)
-2. `show.bs.tab` (on the to-be-shown tab)
-3. `hidden.bs.tab` (on the previous active tab, the same one as for the `hide.bs.tab` event)
-4. `shown.bs.tab` (on the newly-active just-shown tab, the same one as for the `show.bs.tab` event)
+1. `hide.bs.tab` (현재 활성 탭)
+2. `show.bs.tab` (표시되는 탭)
+3. `hidden.bs.tab` (이전 활성화 탭에서 `hide.bs.tab` 이벤트 동일)
+4. `shown.bs.tab` (새로 활성화 된 지 얼마 안 된 탭으로 `show.bs.tab` 이벤트와 동일)
 
-If no tab was already active, the `hide.bs.tab` and `hidden.bs.tab` events will not be fired.
+이미 활성화 된 탭이 없는 경우, `hide.bs.tab` 와 `hidden.bs.tab` 이벤트는 발생하지 않습니다.
 
 <table class="table">
   <thead>
