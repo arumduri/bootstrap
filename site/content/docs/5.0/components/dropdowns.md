@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Dropdowns(드롭다운)
-description: Bootstrap 의 드롭다운 플러그인으로 링크 목록 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.
+description: Bootstrap 의 드롭다운 플러그인으로 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.
 group: components
 toc: true
 ---
 
 ## Overview
 
-드롭다운은 토글이 가능하며 링크 목록 등을 표시하기 위한 컨텍스트 오버레이입니다. 이들은 포함되어 있는 Bootstrap 의 드롭다운 JavaScript 플러그인으로 상호작용이 됩니다. 드롭다운 전환은 호버링이 아닌 클릭을 통해 이루워집니다. 참고 [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
+드롭다운은 토글이 가능하며 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이입니다. 이들은 포함되어 있는 Bootstrap 의 드롭다운 JavaScript 플러그인으로 상호작용이 됩니다. 드롭다운 전환은 호버링이 아닌 클릭을 통해 이루워집니다. 참고 [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
 
 드롭다운은 동적인 포지셔닝과 뷰포트 검출을 제공하는 서드파티의 라이브러리인 [Popper](https://popper.js.org/) 로 구축되어 있습니다. 반드시 Bootstrap 의 JavaScript 전에 [popper.min.js]({{< param "cdn.popper" >}}) 을 넣거나 Popper 를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해 주십시오. Popper 는 동적인 배치가 필요하지 않기 때문에, navbars 의 드롭다운 배치에는 사용하지 않습니다.
 
@@ -17,7 +17,7 @@ toc: true
 
 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 에서는, 실제의 [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu) 가 정의되어 있습니다만, 이것은 액션이나 기능을 트리거로 하는 application-like 메뉴에 특화한 것입니다. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴는 메뉴 아이템, 체크박스 메뉴 아이템, 라디오 버튼 메뉴 아이템, 라디오 버튼 그룹, 서브메뉴만을 포함할 수 있습니다.
 
-한편 Bootstrap 의 드롭다운은 범용적으로 설계되어 다양한 상황이나 마크업 구조게 적용할 수 있습니다. 예를 들어 검색 필드나 로그인 폼 등의 추가 입력이나 폼 컨트롤을 포함한 드롭다운을 작성할 수 있습니다. 이 때문에 Bootstrap 는, 진정한 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴에 필요한 `role` 과 `aria-` 속성을 모두 기대하고 있지 않습니다(자동으로 추가도 하고 있지 않습니다). 저자는 이러한 보다 구체적인 속성들을 스스로 포함해야 합니다.
+한편 Bootstrap 의 드롭다운은 범용적으로 설계되어 다양한 상황이나 마크업 구조게 적용할 수 있습니다. 예를 들어 검색 필드나 로그인 폼 등의 추가 입력이나 폼 컨트롤을 포함한 드롭다운을 작성할 수 있습니다. 이 때문에 Bootstrap 는, 진정한 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴에 필요한 `role` 과 `aria-` 속성을 모두 기대하고 있지 않습니다(자동으로 추가도 하고 있지 않습니다). 이러한 보다 구체적인 속성들을 스스로 포함해야 합니다.
 
 그러나, Bootstrap 는 커서 키를 이용하여 각각의 `.dropdown-item` 요소를 이동하거나 <kbd>ESC</kbd> 키로 메뉴를 닫는 기능과 대부분의 표준 키보드 메뉴의 상호작용을 위한 built-in 지원을 추가하고 있습니다.
 
