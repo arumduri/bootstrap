@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Navbar(내비게이션바)
-description: Bootstrap 의 파워풀하고 반응형적인 내비게이션 헤더, 내비게이션바의 문서와 예, collapse 플러그인 지원 포함, 브랜딩, 내비게이션 등의 지원잉 포함되어 있습니다. 내비게이션바에는, 반응형에 적합한 헤더등의 문서와 예가 나와있습니다.
+description: Bootstrap 의 파워풀하고 반응형적인 내비게이션 헤더, 내비게이션바의 문서와 예, collapse 플러그인 지원 포함, 브랜딩, 내비게이션 등의 지원이 포함되어 있습니다. 내비게이션바에는, 반응형에 적합한 헤더등의 문서와 예가 나와있습니다.
 group: components
 toc: true
 ---

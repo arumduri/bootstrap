@@ -28,7 +28,7 @@ toc: true
 
 ## Content types
 
-이미지나 텍스트, 목록, 링크등의 카드는 다양한 컨텐츠를 지원하고 있습니다. 아래와 같습니다.
+이미지나 텍스트, 리스트, 링크등의 카드는 다양한 컨텐츠를 지원하고 있습니다. 아래와 같습니다.
 
 ### Body
 
@@ -75,7 +75,7 @@ toc: true
 
 ### List groups
 
-flush list group 을 사용하여 카드안에 목록을 만듭니다.
+flush list group 을 사용하여 카드안에 리스트를 만듭니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">

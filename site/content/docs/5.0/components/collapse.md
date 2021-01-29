@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Collapse(콜랩스)
-description: 몇몇의 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체의 컨텐츠의 표시를 바꿉니다.
+description: 몇 가지의 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체의 컨텐츠의 표시를 바꿉니다.
 group: components
 toc: true
 ---
