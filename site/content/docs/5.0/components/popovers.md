@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Popovers(팝오버)
-description: Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
+description: iOS 에서 볼수 있는 Bootstrap 핍오버를 사이트의 임의의 요소에 추가하기 위한 문서와 예시입니다.
 group: components
 toc: true
 ---

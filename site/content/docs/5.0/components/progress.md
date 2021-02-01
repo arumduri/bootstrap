@@ -1,21 +1,21 @@
 ---
 layout: docs
-title: Progress
-description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
+title: Progress(프로그레스)
+description: Stacked bars, animated backgrounds, text labels 의 지원을 특징으로 하는 Bootstrap 커스텀 프로그레스바를 사용하기 위한 문서와 예시입니다. .
 group: components
 toc: true
 ---
 
 ## How it works
 
-Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), ensuring you can stack progress bars, animate them, and place text labels over them.
+프로그레스 컴포넌트는 2개의 HTML 요소와ㅗ 너비를 설정하기 위한 몇 가지 CSS와  몇가지의 속성으로 구축됩니다. [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress) 는 사용하지 않으므로, 프로그레스바를 쌓아 올리거나 애니메이션 시키거나 텍스트 라벨을 배치할 수 있습니다.
 
-- We use the `.progress` as a wrapper to indicate the max value of the progress bar.
-- We use the inner `.progress-bar` to indicate the progress so far.
-- The `.progress-bar` requires an inline style, utility class, or custom CSS to set their width.
-- The `.progress-bar` also requires some `role` and `aria` attributes to make it accessible.
+- 프로그레서바의 최대 너비를 나타내기 위해 `.progress` 을 사용합니다.
+- 진척 상황을 나타내기 위해 안쪽에 `.progress-bar` 을 사용합니다.
+- `.progress-bar` 는 폭을 설정하기 위해 인라인 스타일, 유틸리티 클래스 또는 커스텀 CSS 를 필요로 합니다.
+- `.progress-bar` 는 액세스 할 수 있도록 몇개의 `role` 과 `aria` 속성을 필요로 합니다.
 
-Put that all together, and you have the following examples.
+이를 정리하면 다음과 같은 예가 됩니다.
 
 {{< example >}}
 <div class="progress">
@@ -35,7 +35,7 @@ Put that all together, and you have the following examples.
 </div>
 {{< /example >}}
 
-Bootstrap provides a handful of [utilities for setting width]({{< docsref "/utilities/sizing" >}}). Depending on your needs, these may help with quickly configuring progress.
+Bootstrap [utilities for setting width]({{< docsref "/utilities/sizing" >}}) 을 사용해, 필요에 따라서 진척 상황을 신속하겍 설정하는데 도움이 될지도 모릅니다.
 
 {{< example >}}
 <div class="progress">
@@ -45,7 +45,7 @@ Bootstrap provides a handful of [utilities for setting width]({{< docsref "/util
 
 ## Labels
 
-Add labels to your progress bars by placing text within the `.progress-bar`.
+`.progress-bar` 안에 텍스트를 배치하고 프로그레스바에 라벨을 추가합니다.
 
 {{< example >}}
 <div class="progress">
@@ -55,7 +55,7 @@ Add labels to your progress bars by placing text within the `.progress-bar`.
 
 ## Height
 
-We only set a `height` value on the `.progress`, so if you change that value the inner `.progress-bar` will automatically resize accordingly.
+`.progress` 에는 `height` 값 밖에 설정되어 있지 않기 때문에, 이 값을 변경하면 내부의 `.progress-bar` 는 그에 따라 자동적으로 크기가 변경됩니다.
 
 {{< example >}}
 <div class="progress" style="height: 1px;">
@@ -68,7 +68,7 @@ We only set a `height` value on the `.progress`, so if you change that value the
 
 ## Backgrounds
 
-Use background utility classes to change the appearance of individual progress bars.
+Background 유틸리티 클래스를 사용해 각각의 프로그레스바의 외형을 변경합니다.
 
 {{< example >}}
 <div class="progress">
@@ -87,7 +87,7 @@ Use background utility classes to change the appearance of individual progress b
 
 ## Multiple bars
 
-Include multiple progress bars in a progress component if you need.
+필요에 따라 프로그레스 컴포넌트에 여러 개의 프로그레스바를 포함할 수 있습니다.
 
 {{< example >}}
 <div class="progress">
@@ -99,7 +99,7 @@ Include multiple progress bars in a progress component if you need.
 
 ## Striped
 
-Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
+임의의 `.progress-bar` 에 `.progress-bar-striped` 를 추가해 프로그레스바의 배경 색상에 CSS 그라데이션으로 스트라이프를 적용합니다.
 
 {{< example >}}
 <div class="progress">
@@ -121,7 +121,7 @@ Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gra
 
 ## Animated stripes
 
-The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
+스트라이프 형태의 그라데이션을 애니메이션화할 수도 있습니다. `.progress-bar` 에 `.progress-bar-animated` 를 추가하면 CSS3 애니메이션으로 줄무늬를 오른쪽에서 왼쪽으로 애니메이션 시킬 수 있습니다.
 
 <div class="bd-example">
   <div class="progress">
