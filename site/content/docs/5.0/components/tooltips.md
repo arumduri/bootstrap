@@ -1,24 +1,24 @@
 ---
 layout: docs
-title: Tooltips
-description: Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage.
+title: Tooltips(툴팁)
+description: CSS3 를 사용한 애니메이션이나 로컬 타이틀 저장용 data-bs-attributes 를 사용한 CSS 와 JavaScript 로 커스텀 Bootstrap 의 툴팁을 추가하기 위한 문서와 예시입니다.
 group: components
 toc: true
 ---
 
 ## Overview
 
-Things to know when using the tooltip plugin:
+툴팁 플러그인을 사용할 때 알아두어야 할 점:
 
-- Tooltips rely on the 3rd party library [Popper](https://popper.js.org/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper in order for tooltips to work!
-- Tooltips are opt-in for performance reasons, so **you must initialize them yourself**.
-- Tooltips with zero-length titles are never displayed.
-- Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).
-- Triggering tooltips on hidden elements will not work.
-- Tooltips for `.disabled` or `disabled` elements must be triggered on a wrapper element.
-- When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use `white-space: nowrap;` on your `<a>`s to avoid this behavior.
-- Tooltips must be hidden before their corresponding elements have been removed from the DOM.
-- Tooltips can be triggered thanks to an element inside a shadow DOM.
+- 툴팁은 3rd party 라이브러리 [Popper](https://popper.js.org/)  에 의존하고 있습니다. bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 을 적거나, 툴팁을 동작시키기 위해 팝오버를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해야 합니다!
+- 툴팁은 퍼포먼스를 위해 opt-in 되어 있기 때문에 **스스로 초기화를 헤야 합니다.**.
+- 길이가 0 의 타이틀을 가진 툴팁은 표시되지 않습니다.
+- 더 복잡한 컴포넌트(input group, button groups 등)의 랜더링 문제를 피하기 위해 `container: 'body'` 를 지정해 주십시오.
+- 숨겨진 요소로 툴팁을 트리거해도 작동하지 않습니다.
+- `.disabled` 나 `disabled` 요소의 툴팁은 wrapper 요소에서 트리거해야 합니다.
+- 여러 라인에 걸쳐 있는 하이퍼링크에서 트리거된 툴팁은 중앙에 정렬됩니다. 이 동작을 피하기 위해서는 `<a>` 에 `white-space: nowrap;` 을 사용해 주십시오.
+- 툴팁은 해당하는 요소가 DOM 에서 삭제되기 전에 숨겨야 합니다..
+- 툴팁은 shadow DOM 내의 요소 덕분에 부팅이 가능합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
