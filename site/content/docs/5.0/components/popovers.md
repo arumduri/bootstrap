@@ -8,24 +8,24 @@ toc: true
 
 ## Overview
 
-팝오버 플러그인을 사용할 때 알아두면 좋은 점:
+팝오버 플러그인을 사용할 때 알아두어야 할 점:
 
-- 팝오버는 서드파티의 라이브러리 [Popper](https://popper.js.org/) 에 의존하고 있습니다. 팝오버를 동작시키기 위해서는 bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 를 쓰거나 Popper 를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해야 합니다.
+- 팝오버는 [Popper](https://popper.js.org/) 에 의존하고 있습니다. 팝오버를 동작시키기 위해서는 bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 를 쓰거나 Popper 를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해야 합니다.
 - 팝오버는, 의존관계로 [tooltip plugin]({{< docsref "/components/tooltips" >}}) 이 필요합니다.
-- 팝오버는 퍼포먼스상 이유로 opt-in 되어야 하기 때문에, **스스로 초기화 할 필요가 있습니다.**.
-- 길이가 제로인 `title` 과 `content` 값은 팝오버를 표시하지 않습니다.
-- 더 복잡한 컴포넌트(입력 그룹이나 버튼 그룹등)의 렌더링 문제를 피하기 위해서 `container: 'body'` 를 지정해 주세요.
-- 숨겨진 요소에서 팝오버를 트리거하면 동작하지 않습니다.
-- `.disabled` 나 `disabled` 요소의 팝오버는 wrapper 요소에서 트리거해야 합니다.
-- 여러 라인에 걸쳐 있는 앵커로부터 트리거 된 경우, 팝오버는 앵커의 전체 폭을 중심으로 표시됩니다. 이 동작을 피하기 위해서는 `<a>` 에 `.text-nowrap` 를 사용해 주세요.
+- 팝오버는 퍼포먼스를 위해 opt-in 되어 있기 때문에, **스스로 초기화를 해야 합니다.**
+- 길이가 0 인 `title` 과 `content` 값은 팝오버를 표시하지 않습니다.
+- 더 복잡한 컴포넌트(input group, button groups 등)의 렌더링 문제를 피하기 위해 `container: 'body'` 를 지정해 주십시오.
+- 숨겨진 요소에서 팝오버를 트리거해도 제 기능을 하지 않습니다.
+- `.disabled` 나 `disabled` 요소의 팝오버는 그 위(바깥) 요소에서 트리거해야 합니다.
+- 여러 라인에 걸쳐 있는 앵커로부터 트리거 된 경우, 팝오버는 앵커의 전체 폭을 중심으로 표시됩니다. 이 동작을 피하기 위해서는 `<a>` 에 `.text-nowrap` 을 사용해 주십시오.
 - 팝오버는 대응 요소가 DOM 에서 삭제되기 전에 숨겨야 합니다.
-- 팝오버는 shadow DOM 내부에 있는 요소 덕분에 트리거 할 수 있습니다.
+- 팝오버는 shadow DOM 내의 요소 덕분에 트리거 할 수 있습니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-팝오버가 어떤 기능을 하는지 몇 가지 예를 보면서 읽어 주세요.
+팝오버가 어떤 기능을 하는지 몇 가지 예를 들어보겠습니다.
 
 ## Example: Enable popovers everywhere
 
@@ -56,7 +56,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 
 ### Four directions
 
-4가지 옵션이 있습니다: top, right, bottom, left. RTL 에서 Bootstrap 를 사용하는 경우 방향성은 반대가 됩니다.
+4가지 옵션이 있습니다: top, right, bottom, left. RTL 에서 Bootstrap 를 사용하는 경우 방향은 반대가 됩니다.
 
 <div class="bd-example popover-demo">
   <div class="bd-example-popovers">
@@ -115,7 +115,7 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 
 ### Disabled elements
 
-`disabled` 속성을 갖는 요소는 인터랙티브하지 않습니다. 즉, 사용자가 팝오버(또는 툴팁)를 트리거하기 위해 커서를 호버하거나 클릭할 수 없음을 의미합니다. 해결책으로는 `<div>` 나 `<span>` 에서 팝오버를 트리거하여 비활성화된 요소의 `pointer-events` 를 오버라이드 해야 합니다.
+`disabled` 속성을 갖는 요소는 인터랙티브하지 않습니다. 즉, 사용자가 팝오버(또는 툴팁)를 트리거하기 위해 커서를 호버하거나 클릭할 수 없음을 의미합니다. 해결책으로는 `<div>` 나 `<span>` 에서 팝오버를 트리거하여 disabled 요소인 `pointer-events` 를 오버라이드 해야 합니다.
 
 팝오버를 무효화하려면 `data-bs-trigger="hover"` 를 사용하면 좋습니다. 이를 통해 사용자는 비활성화된 요소를 _click_ 되기를 기대하지 않기 때문에 팝오버가 바로 시각적 피드백으로 사용자에게 표시됩니다.
 
@@ -149,7 +149,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 옵션은 data 속성이나 JavaScript 로 줄 수 있습니다. data 속성의 경우는 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
 
 {{< callout warning >}}
-보안상의 이유로 `sanitize`, `sanitizeFn`, `allowList` 옵션은 data 속성을 이용해 지정할 수 없다는 것에 주의해 주십시오.
+보안상의 이유로 `sanitize`, `sanitizeFn`, `allowList` 옵션을 data 속성으로 지정할 수 없다는 것에 주의해 주세요.
 {{< /callout >}}
 
 <table class="table">
@@ -225,7 +225,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
         <p>팝오버의 <code>title</code> 은 <code>.popover-header</code> 에 주입됩니다.</p>
         <p>팝오버의 <code>content</code> 는 <code>.popover-body</code> 에 주입됩니다.</p>
         <p><code>.popover-arrow</code> 가 팝오버의 화살표가 됩니다.</p>
-        <p>가장 밖에 있는 wrapper 요소는 <code>.popover</code> 클래스를 가지고 있어야 합니다.</p>
+        <p>가장 밖에 있는 요소는 <code>.popover</code> 클래스를 가지고 있어야 합니다.</p>
       </td>
     </tr>
     <tr>
