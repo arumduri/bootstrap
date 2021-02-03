@@ -7,11 +7,11 @@ toc: true
 ---
 
 ## About
-**Card(카드)** 는 유연하고 확장이 가능한 컨테이너입니다. headers 나 footers 의 옵션, 다양한 컨텐츠, 문맥에 따른 배경 색상, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap3 의 panels、wells、thumbnails 는 카드로 바꿉니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
+**카드**는 유연하고 확장이 가능한 컨테이너입니다. headers 나 footers 의 옵션, 다양한 컨텐츠, 문맥에 따른 배경 색상, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap3 의 panels、wells、thumbnails 는 카드로 바꿉니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
 
 ## Example
 
-카드는 적은 마크업과 스타일로 되어 있습니다만, 많은 커스터마이즈가 가능합니다. Flexbox 로 만들어져 있어 쉽게 배치가 가능하고, 다른 컴포넌트와 조합이 가능합니다. 기본값에는 `margin` 설정이 없기 때문에 필요에 따라 [spacing utilities]({{< docsref "/utilities/spacing" >}}) 를 사용합니다.
+카드는 적은 마크업과 스타일로 되어 있습니다만, 많은 커스터마이즈가 가능합니다. Flexbox 로 만들어져 있어 쉽게 배치가 가능하고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 `margin` 설정이 없기 때문에 필요에 따라 [spacing utilities]({{< docsref "/utilities/spacing" >}}) 를 사용합니다.
 
 아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [sizing options](#sizing) 을 통해서 간단하게 커스터마이즈 할 수 있습니다.
 
@@ -28,11 +28,11 @@ toc: true
 
 ## Content types
 
-이미지나 텍스트, 리스트, 링크등의 카드는 다양한 컨텐츠를 지원하고 있습니다. 아래와 같습니다.
+이미지나 텍스트, 리스트, 링크 등의 카드는 다양한 컨텐츠를 지원하고 있습니다. 아래와 같습니다.
 
 ### Body
 
-카드를 구축하는 클래스는 `.card-body` 입니다. 카드 내에 여백에 필요할때 사용합니다.
+카드를 구축하는 클래스는 `.card-body` 입니다. 카드 내에 여백에 필요할 때 사용합니다.
 
 {{< example >}}
 <div class="card">
@@ -202,7 +202,7 @@ Header 와/혹은 footer 를 넣는 카드의 옵션이 있습니다.
 
 ### Using grid markup
 
-grid 를 사용해, 필요에 따라 카드를 columns 과 rows 안에 넣어서 사용합니다.
+Grid 를 사용해, 필요에 따라 카드를 columns 과 rows 안에 넣어서 사용합니다.
 
 {{< example >}}
 <div class="row">
@@ -229,7 +229,7 @@ grid 를 사용해, 필요에 따라 카드를 columns 과 rows 안에 넣어서
 
 ### Using utilities
 
-[available sizing utilities]({{< docsref "/utilities/sizing" >}}) 을 사용해 카드의 가로 폭을 빠르게 설정합니다.
+[Available sizing utilities]({{< docsref "/utilities/sizing" >}}) 을 사용해 카드의 가로 폭을 빠르게 설정합니다.
 
 {{< example >}}
 <div class="card w-75">
@@ -295,7 +295,7 @@ grid 를 사용해, 필요에 따라 카드를 columns 과 rows 안에 넣어서
 
 ## Navigation
 
-[nav components]({{< docsref "/components/navs-tabs" >}}) 을 사용해 카드의 header (혹은 block)에 내비게이션을 적용할 수 있습니다.
+[Nav components]({{< docsref "/components/navs-tabs" >}}) 을 사용해 카드의 header (혹은 block)에 내비게이션을 적용할 수 있습니다.
 
 {{< example >}}
 <div class="card text-center">
@@ -345,7 +345,7 @@ grid 를 사용해, 필요에 따라 카드를 columns 과 rows 안에 넣어서
 
 ## Images
 
-카드에는, 이미지를 다루기 위한 몇개의 옵션이 있습니다. 카드의 양끝에 "image caps" 을 추가하거나, 카드의 내용에 이미지를 겹쳐 맞추거나 또는 그저 이미지를 카드에 삽입할 수 있습니다.
+카드에는, 이미지를 다루기 위한 몇 가지의 옵션이 있습니다. 카드의 양끝에 "image caps" 을 추가하거나, 카드의 내용에 이미지를 겹쳐 맞추거나 또는 그저 이미지를 카드에 삽입할 수 있습니다.
 
 ### Image caps
 
@@ -386,7 +386,7 @@ Header 나 footer 와 같이, 카드에는 카드의 상부와 하부의 "image 
 {{< /example >}}
 
 {{< callout info >}}
-Note that content should not be larger than the height of the image. If content is larger than the image the content will be displayed outside the image.
+컨텐츠는 이미지의 높이보다 커지지 않게 주의해 주세요. 컨텐츠가 이미지보다 큰 경우, 컨텐츠는 이미지의 외부에 표시됩니다.
 {{< /callout >}}
 
 ## Horizontal
@@ -416,7 +416,7 @@ Note that content should not be larger than the height of the image. If content 
 
 ### Background and color
 
-[text and background utilities]({{< docsref "/utilities/colors" >}}) 을 사용해, 카드의 외형을 변경할 수 있습니다.
+[Text and background utilities]({{< docsref "/utilities/colors" >}}) 을 사용해, 카드의 외형을 변경할 수 있습니다.
 
 {{< example >}}
 {{< card.inline >}}
@@ -475,7 +475,7 @@ Note that content should not be larger than the height of the image. If content 
 
 ### Card groups
 
-카드 그룹을 사용해, 폭과 높이의 열이 같은 하나의 요소로 카드를 렌더링합니다. 카드 그룹은 쌓여진 상태로부터 시작하고, `display: flex;` 를 사용해 `sm` 브레이크 포인트부터 같은 사이즈의 상태로 넣어집니다.
+카드 그룹을 사용해, 폭과 높이의 열이 같은 하나의 요소로 카드를 렌더링합니다. 카드 그룹은 쌓여진 상태로부터 시작하고, `display: flex;` 를 사용해 `sm` 브레이크 포인트부터 같은 크기의 상태로 넣어집니다.
 
 {{< example >}}
 <div class="card-group">
@@ -506,7 +506,7 @@ Note that content should not be larger than the height of the image. If content 
 </div>
 {{< /example >}}
 
-footer가 있는 카드 그룹을 사용하면, 그 내용이 자동으로 정렬됩니다.
+Footer가 있는 카드 그룹을 사용하면, 그 내용이 자동으로 정렬됩니다.
 
 {{< example >}}
 <div class="card-group">
@@ -545,7 +545,7 @@ footer가 있는 카드 그룹을 사용하면, 그 내용이 자동으로 정�
 
 ### Grid cards
 
-Bootstrap grid 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/grid#row-columns" >}}) 를 사용해, 행마다 표시하는 그리드 열의 개수(카드 주변을 감싼)를 제어합니다. 예를 들어, 여기에서는 `.row-cols-1` 은 한 줄로 카드를 배치하고, `.row-cols-md-2` 은 4개의 카드를 해당 브레이크 포인트에서 그 다음 줄로 넘겨 동일의 가로 폭으로 나눠주고 있습니다.
+Bootstrap grid 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/grid#row-columns" >}})를 사용해, 행마다 표시하는 그리드 열의 개수(카드 주변을 감싼)를 제어합니다. 예를 들어, 여기에서는 `.row-cols-1` 은 한 줄로 카드를 배치하고, `.row-cols-md-2` 은 4개의 카드를 해당 브레이크 포인트에서 그 다음 줄로 넘겨 동일의 가로 폭으로 나눠주고 있습니다.
 
 {{< example >}}
 <div class="row row-cols-1 row-cols-md-2 g-4">

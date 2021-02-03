@@ -21,9 +21,9 @@ toc: true
 {{< callout warning >}}
 ##### Ensure correct `role` and provide a label
 
-In order for assistive technologies (such as screen readers) to convey that a series of buttons is grouped, an appropriate `role` attribute needs to be provided. For button groups, this would be `role="group"`, while toolbars should have a `role="toolbar"`.
+스크린 리더에게 일련의 버튼이 그룹화 되어 있음을 전달하기 위해서는 적절한 `role` 을 지정해야 합니다. 버튼 그룹의 경우, `role="group"` 이 되고, 툴바의 경우는 `role="toolbar"` 가 됩니다.
 
-In addition, groups and toolbars should be given an explicit label, as most assistive technologies will otherwise not announce them, despite the presence of the correct role attribute. In the examples provided here, we use `aria-label`, but alternatives such as `aria-labelledby` can also be used.
+또한 그룹이나 툴바에는 명시적인 라벨을 붙일 필요가 있습니다. 그 말은, 올바른 롤 속성이 있어도 대부분의 스크린 리더는 그것을 안내하지 않기 때문입니다. 여기에서는　`aria-label` 을 사용하고 있지만, `aria-labelledby` 같은 대체품을 사용하는 것도 가능합니다.
 {{< /callout >}}
 
 이 클래스는 [`.nav` navigation components]({{< docsref "/components/navs-tabs" >}}) 를 대체하여 링크 그룹에 추가할 수도 있습니다.
@@ -192,7 +192,7 @@ In addition, groups and toolbars should be given an explicit label, as most assi
 
 ## Vertical variation
 
-버튼 세트를 수평방향이 아닌 수직방향으로 표시합니다. **Split button dropdown은 여기에서는 지원되지 않습니다**
+버튼 세트를 수평방향이 아닌 수직방향으로 표시합니다. **Split button dropdown 은 여기에서는 지원되지 않습니다**
 
 <div class="bd-example">
   <div class="btn-group-vertical" role="group" aria-label="Vertical button group">

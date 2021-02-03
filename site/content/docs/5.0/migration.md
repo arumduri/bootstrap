@@ -134,7 +134,7 @@ toc: true
 
 ### Layout
 
-- Container의 수평 패딩이 `.row`의 gutter 사이즈에 맞게 업데이트 되었습니다.
+- Container의 수평 패딩이 `.row`의 gutter 크기에 맞게 업데이트 되었습니다.
 - [#31439](https://github.com/twbs/bootstrap/pull/31439): grid 동작의 퇴보로 인해 행에서 `flex: 1 0 100%` 가 삭제 되었습니다.
 
 ### Reboot

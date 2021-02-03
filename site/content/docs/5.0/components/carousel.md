@@ -9,7 +9,7 @@ toc: true
 
 캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript로 만들어진, 일련의 컨텐츠를 순환시키기 위한 슬라이드쇼 입니다. 일련의 이미지, 텍스트, 혹은 커스텀 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
 
-[Page Visibility API](https://www.w3.org/TR/page-visibility/) 가 지원되고 있는 브라우저에서는, 웹 페이지가 사용자에게 보이지 않을 때(브라우저 탭이 활성화 되지 않았거나, 브라우저 윈도우 사이즈가 최소화되어 있을때 등등), 캐러셀은 동작하지 않습니다.
+[Page Visibility API](https://www.w3.org/TR/page-visibility/) 가 지원되고 있는 브라우저에서는, 웹 페이지가 사용자에게 보이지 않을 때(브라우저 탭이 활성화 되지 않았거나, 브라우저 윈도우 크기가 최소화되어 있을때 등등), 캐러셀은 동작하지 않습니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -19,9 +19,9 @@ toc: true
 
 ## Example
 
-캐러셀은, 슬라이드의 치수를 자동적으로 정규화하지 않습니다. 그 때문에, 컨텐츠의 사이즈를 적절하게 조정하기 위해, 추가의 유틸리티나 커스텀 스타일을 사용할 필요가 있는 경우가 있습니다. 캐러셀은 이전/다음의 컨트롤과 위치 표시(인디게이터, indicator)를 지원하고 있지만, 명시적으로 필수는 아닙니다. 자유롭게 추가하여 커스터마이즈 해 주세요.
+캐러셀은, 슬라이드의 치수를 자동적으로 정규화하지 않습니다. 그 때문에, 컨텐츠의 크기를 적절하게 조정하기 위해, 추가의 유틸리티나 커스텀 스타일을 사용할 필요가 있는 경우가 있습니다. 캐러셀은 이전/다음의 컨트롤과 위치 표시(인디게이터, indicator)를 지원하고 있지만, 명시적으로 필수는 아닙니다. 자유롭게 추가하여 커스터마이즈 해 주세요.
 
-**`.active` 클래스는, 슬라이드의 하나에는 추가할 필요가 있습니다.** 그렇게 하지 않으면 캐러셀은 표시되지 않습니다. 그리고, 한 페이지에 복수의 캐러셀을 사용하고 있는 경우에는 특히 옵션의 컨트롤을 위한 `.carousel` 에 하나의 id 를 설정해야 합니다. 컨트롤과 위치 표시(인디게이터, indicator)의 요소는, `.carousel` 요소의 id 와 일치하는 `data-bs-target` 속성(링크의 경우에는 `href`)을 가져야 합니다.
+**`.active` 클래스는, 슬라이드 하나에는 추가할 필요가 있습니다.** 그렇게 하지 않으면 캐러셀은 표시되지 않습니다. 그리고, 한 페이지에 복수의 캐러셀을 사용하고 있는 경우에는 특히 옵션의 컨트롤을 위한 `.carousel` 에 하나의 id 를 설정해야 합니다. 컨트롤과 위치 표시(인디게이터, indicator)의 요소는, `.carousel` 요소의 id 와 일치하는 `data-bs-target` 속성(링크의 경우에는 `href`)을 가져야 합니다.
 
 ### Slides only
 
@@ -151,7 +151,7 @@ toc: true
 
 ### Crossfade
 
-`.carousel-fade` 를 캐러셀에 추가하면, 슬라이드 대신에 페이드 트랜지션으로 슬라이드를 애니메이션 시킬 수 있습니다.
+`.carousel-fade` 를 캐러셀에 추가하면, 슬라이드 대신에 fade 트랜지션으로 슬라이드를 애니메이션 시킬 수 있습니다.
 
 {{< example >}}
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -254,9 +254,9 @@ toc: true
 
 ### Via data attributes
 
-캐러셀의 위치를 간단히 제어하려면, 데이타 속성을 사용합니다. `data-bs-slide` 는 키워드 `prev` 나 `next` 을 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 `data-bs-slide-to` 를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 `data-bs-slide-to="2"` 가 되어, 슬라이디의 위치를 `0` 에서 시작하는 특정의 인덱스로 이동시킵니다.
+캐러셀의 위치를 간단히 제어하려면, data 속성을 사용합니다. `data-bs-slide` 는 키워드 `prev` 나 `next` 을 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 `data-bs-slide-to` 를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 `data-bs-slide-to="2"` 가 되어, 슬라이디의 위치를 `0` 에서 시작하는 특정의 인덱스로 이동시킵니다.
 
-`data-bs-ride="carousel"` 속성은, 페이지 로드시 캐러셀을 애니메이션 시키는데 사용됩니다. 캐러셀의 초기화에 `data-bs-ride="carousel"` 를 사용하지 않는 경우에는, 스스로 초기화 할 필요가 있습니다. **같은 캐러셀의 명시적인 JavaScript의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.**
+`data-bs-ride="carousel"` 속성은, 페이지 로드시 캐러셀을 애니메이션 시키는데 사용됩니다. 캐러셀의 초기화에 `data-bs-ride="carousel"` 를 사용하지 않는 경우에는, 스스로 초기화 할 필요가 있습니다. **같은 캐러셀의 명시적인 JavaScript 의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.**
 
 ### Via JavaScript
 
@@ -269,7 +269,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
 
 ### Options
 
-옵션은, 데이타 속은 혹은 JavaScript 으로 줄 수 있습니다. 데이타 속성의 경우, `data-bs-interval=""` 과 같이, 옵션명을 `data-bs-`에 추가합니다.
+옵션은, data 속성 혹은 JavaScript 으로 줄 수 있습니다. data 속성의 경우, `data-bs-interval=""` 과 같이, `data-bs-` 에 옵션명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -297,7 +297,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
       <td><code>pause</code></td>
       <td>string | boolean</td>
       <td><code>"hover"</code></td>
-      <td><p><code>"hover"</code> 으로 설정하면 <code>mouseenter</code> 로 캐러셀의 순환을 일시정지하고, <code>mouseleave</code> 로 캐러셀의 순환을 재개합니다. <code>false</code> 로 설정하면, 캐러셀 위에 커서를 올려 놓아도 캐러셀은 일시정지 하지 않습니다.</p></td>
+      <td><p><code>"hover"</code> 로 설정하면 <code>mouseenter</code> 로 캐러셀의 순환을 일시정지하고, <code>mouseleave</code> 로 캐러셀의 순환을 재개합니다. <code>false</code> 로 설정하면, 캐러셀 위에 커서를 올려 놓아도 캐러셀은 일시정지 하지 않습니다.</p></td>
     </tr>
     <tr>
       <td><code>slide</code></td>

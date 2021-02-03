@@ -64,7 +64,7 @@ toc: true
 
 ### Flush
 
-`.accordion-flush` 을 추가하여, 기본 `background-color` 와 몇몇 외곽선, 그리고 몇몇의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge 로 랜더링합니다.
+`.accordion-flush` 을 추가하여, 기본 `background-color` 와 몇 개의 외곽선, 그리고 몇 개의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge 로 랜더링합니다.
 
 {{< example class="bg-light" >}}
 <div class="accordion accordion-flush" id="accordionFlushExample">

@@ -8,7 +8,7 @@ toc: true
 
 ## Example
 
-부모 요소의 사이즈에 일치하도록 상대적인 폰트 사이즈 `em` 을 사용하고 있습니다. v5 이후, 배지에는 더이상 링크에 대한 포커스나 호버 스타일은 없습니다.
+부모 요소의 크기에 일치하도록 상대적인 폰트 크기 `em` 을 사용하고 있습니다. v5 이후, 배지에는 더이상 링크에 대한 포커스나 호버 스타일은 없습니다.
 
 {{< example >}}
 <h1>Example heading <span class="badge bg-secondary">New</span></h1>
@@ -40,7 +40,7 @@ toc: true
 
 ## Background colors
 
-background 유틸리티 클래스를 사용해, 배지의 겉모습을 변경할 수 있습니다. Bootstrap의 기본의 `.bg-light`를 사용할 경우, 적절한 스타일링을 위해 `.text-dark` 와 같은 글자 색을 변경하는 유틸리티가 필요할 수도 있으니 유의하십시오. background 유틸리티 클래스는 `background-color` 외에는 아무것도 설정하지 않기 때문입니다.
+background 유틸리티 클래스를 사용해, 배지의 겉모습을 변경할 수 있습니다. Bootstrap 의 기본의 `.bg-light` 를 사용할 경우, 적절한 스타일링을 위해 `.text-dark` 와 같은 글자 색을 변경하는 유틸리티가 필요할 수도 있으니 유의하십시오. background 유틸리티 클래스는 `background-color` 외에는 아무것도 설정하지 않기 때문입니다.
 
 {{< example >}}
 {{< badge.inline >}}
@@ -55,7 +55,7 @@ background 유틸리티 클래스를 사용해, 배지의 겉모습을 변경할
 
 ## Pill badges
 
-`.rounded-pill` 를 사용하면 더 둥그러진 `border-radius`로 배지를 만들 수 있습니다.
+`.rounded-pill` 를 사용하면 더 둥그러진 `border-radius` 로 배지를 만들 수 있습니다.
 
 {{< example >}}
 {{< badge.inline >}}

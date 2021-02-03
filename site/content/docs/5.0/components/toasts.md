@@ -6,14 +6,14 @@ group: components
 toc: true
 ---
 
-Toasts는 모바일 및 데스크톱 운영 체제에서 보급된 푸시 알림을 모방하여 설계된 가벼운 알림입니다. flexbox로 만들어져 있어 위치 조정 및 배치가 간단합니다.
+토스트는 모바일 및 데스크톱 운영 체제에서 보급된 푸시 알림을 모방하여 설계된 가벼운 알림창 입니다. flexbox로 만들어져 있어 위치 조정 및 배치가 간단합니다.
 
 ## Overview
 
-Toast plugin을 사용할 때 알아두어야 할 사항:
+토스트 플러그인을 사용할 때 알아두어야 할 사항:
 
-- Toasts는 퍼포먼스상의 이유로 opt-in 방식으로 되어 있기 때문에 **스스로 초기화**해야 합니다.
-- Toasts는 `autohide: false`를 지정하지 않으면 자동으로 숨겨집니다.
+- 토스트는 퍼포먼스상의 이유로 opt-in 방식으로 되어 있기 때문에 **스스로 초기화**해야 합니다.
+- 토스트는 `autohide: false`를 지정하지 않으면 자동으로 숨겨집니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -23,7 +23,7 @@ Toast plugin을 사용할 때 알아두어야 할 사항:
 
 ### Basic
 
-Toasts의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. Toasts header는 `display: flex`를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 컨텐츠를 쉽게 정렬시킬 수 있습니다.
+토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 `display: flex`를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 컨텐츠를 쉽게 정렬시킬 수 있습니다.
 
 Toasts는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. Toasts 컨텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.
 
@@ -230,13 +230,13 @@ Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" 
 
 ## Accessibility
 
-Toasts는 방문자나 사용자에게 작은 중단을 의도하므로 스크린 리더나 비슷한 지원 기술을 가진 사용자를 지원하기 위해 Toasts를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)으로 감싸야 합니다. 라이브 리전으로의 업데이트(Toasts 컨포넌트 주입/업데이트 등)는 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더가 자동으로 안내합니다. 그리고 변경된 내용을 안내하지 말고 Toasts 전체가 항상 싱글(원자적인) 단위로 안내하도록 `aria-atomic="true"`를 포함시켜 주십시오(만약 Toasts의 컨텐츠 중 일부만 업데이트 한다면 문제가 발생할 가능성이 있습니다). 필요한 정보가 예를 들어 폼의 오류 리스트 같이 프로세스에 중요한 경우, Toasts 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용하십시오.
+토스트는 방문자나 사용자에게 작은 중단을 의도하므로 스크린 리더나 비슷한 지원 기술을 가진 사용자를 지원하기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)으로 감싸야 합니다. 라이브 리전으로의 업데이트(토스트 컨포넌트 주입/업데이트 등)는 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더가 자동으로 안내합니다. 그리고 변경된 내용을 안내하지 말고 토스트 전체가 항상 싱글(원자적인) 단위로 안내하도록 `aria-atomic="true"`를 포함시켜 주십시오(만약 토스트의 내용 중 일부만 업데이트 한다면 문제가 발생할 가능성이 있습니다). 필요한 정보가 예를 들어 폼의 오류 리스트 같이 프로세스에 중요한 경우, 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용하십시오.
 
-Toasts가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
+토스트가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
 
 그리고, 내용에 따라 `role` 과 `aria-live` 레벨을 적응시킬 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
 
-표시하는 내용이 변경될 경우, 사람들이 Toasts를 읽을 충분한 시간을 갖도록 [`delay` timeout](#options) 를 업데이트 하십시오.
+표시하는 내용이 변경될 경우, 사람들이 토스트를 읽을 충분한 시간을 갖도록 [`delay` timeout](#options) 를 업데이트 하십시오.
 
 ```html
 <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-bs-delay="10000">
@@ -244,7 +244,7 @@ Toasts가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크
 </div>
 ```
 
-`autohide: false`를 사용할 때에는, 사용자가 Toast를 해제할 수 있도록 닫기 버튼을 추가해야 합니다.
+`autohide: false`를 사용할 때에는, 사용자가 토스트를 해제할 수 있도록 닫기 버튼을 추가해야 합니다.
 
 {{< example class="bg-light" >}}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
@@ -264,7 +264,7 @@ Toasts가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크
 
 ### Usage
 
-JavaScript를 통해 Toast 초기화:
+JavaScript를 통해 초기화:
 
 ```js
 var toastElList = [].slice.call(document.querySelectorAll('.toast'))
@@ -275,7 +275,7 @@ var toastList = toastElList.map(function (toastEl) {
 
 ### Options
 
-옵션은 데이터 속성이나 JavaScript를 통해 전달될 수 있습니다. 데이터 속성의 경우 `data-bs-animation=""`와 같이 옵션 이름에 `data-bs-`를 추가하십시오.
+옵션은 data 속성이나 JavaScript를 통해 전달될 수 있습니다. 데이터 속성의 경우 `data-bs-animation=""`와 같이 옵션 이름에 `data-bs-`를 추가하십시오.
 
 <table class="table">
   <thead>

@@ -22,7 +22,7 @@ toc: true
 
 ## Active items
 
-현재 활성화 된 선택범위를 나타내기 위해 `.list-group-item` 에 `.active` 를 추가합니다.
+현재 활성화 된 선택 범위를 나타내기 위해 `.list-group-item` 에 `.active` 를 추가합니다.
 
 {{< example >}}
 <ul class="list-group">
