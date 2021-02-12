@@ -15,7 +15,7 @@ toc: true
 - 내비게이션에서 간격이나 배치를 제어하려면 [spacing]({{< docsref "/utilities/spacing" >}}) 와 [flex]({{< docsref "/utilities/flex" >}}) 유틸리티 클래스를 사용합니다.
 - 내비게이션은 기본 반응형인데, 그것을 간단히 변경할 수 있습니다. 반응형 동작은 Collapse JavaScript 플러그인에 의존합니다.
 - 접근성을 확보하려면 `<nav>` 요소를 사용하거나, 혹은 `<div>` 와 같이 보다 범용적인 요소를 사용하는 경우에는 `role="navigation"` 을 추가하여 스크린 리더 사용자를 위해 랜드마크가 되는 곳임을 명시적으로 알려주어야 합니다.
-- 현재 페이지에는 `aria-current="page"` 를, 세트 안에서의 현재 항목에는 `aria-current="true"` 를 사용하여, 현재 항목을 표시합니다.
+- 현재 페이지에는 `aria-current="page"` 를, 세트 안에서의 현재 아이템에는 `aria-current="true"` 를 사용하여, 현재 아이템을 표시합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}

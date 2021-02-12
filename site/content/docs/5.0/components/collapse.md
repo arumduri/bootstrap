@@ -122,7 +122,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
       <td><code>parent</code></td>
       <td>selector | jQuery object | DOM element </td>
       <td><code>false</code></td>
-      <td>parent 가 지정된 경우, 이 접을 수 있는 항목이 표시될때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다(기존 accordion(아코디언) 동작과 비슷합니다. - 이것은 <code>card</code> 클래스에 의존합니다). 속성은 접을 수 있는 타겟 영역으로 설정해야 합니다.</td>
+      <td>parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다(기존 accordion(아코디언) 동작과 비슷합니다. - 이것은 <code>card</code> 클래스에 의존합니다). 속성은 접을 수 있는 타겟 영역으로 설정해야 합니다.</td>
     </tr>
     <tr>
       <td><code>toggle</code></td>

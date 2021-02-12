@@ -179,7 +179,7 @@ toc: true
 
 ### Individual `.carousel-item` interval
 
-다음 항목으로 자동적으로 바뀔 때까지의 지연 시간을 변경하려면 `.carousel-item` 에 `data-bs-interval=""` 을 추가합니다.
+다음 아이템으로 자동적으로 바뀔 때까지의 지연 시간을 변경하려면 `.carousel-item` 에 `data-bs-interval=""` 을 추가합니다.
 
 {{< example >}}
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
