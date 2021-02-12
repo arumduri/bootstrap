@@ -442,7 +442,7 @@ Input group 도 사용 가능합니다. 내비게이션바가 폼 전체 혹은 
 
 ## Placement
 
-[Position utilities]({{< docsref "/utilities/position" >}}) 를 사용하여 네비게이션바를 정적이지 않은 위치에 배치할 수 있습니다. 상단고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단고정을 할지 선택할 수 있습니다. 고정 내비게이션바는 `position: fixed` 를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 커스텀 CSS(예를 들어, `<body>` 의 `padding-top` 등)가 필요할 수 있습니다.
+[Position utilities]({{< docsref "/utilities/position" >}}) 를 사용하여 내비게이션바를 정적이지 않은 위치에 배치할 수 있습니다. 상단고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단고정을 할지 선택할 수 있습니다. 고정 내비게이션바는 `position: fixed` 를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 커스텀 CSS(예를 들어, `<body>` 의 `padding-top` 등)가 필요할 수 있습니다.
 
 또한, **`.sticky-top`은 `position: sticky`를 사용하고 있는데 [모든 브라우저에서 완전이 지원되는 것은 아닙니다](https://caniuse.com/css-sticky)**
 

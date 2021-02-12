@@ -311,7 +311,7 @@ _actionable_ 한 리스트 그룹 항목을 작성하려면 `<a>` 나 `<button>`
 
 ### Using data attributes
 
-JavaScript 를 쓰지 않아도, `data-bs-toggle="list"` 를 지정하거나 요소로 지정만 해도 리스트 그룹 네비게이션을 활성화 시킬 수 있습니다. 이들의 data 속성을 `.list-group-item` 에 이용합니다.
+JavaScript 를 쓰지 않아도, `data-bs-toggle="list"` 를 지정하거나 요소로 지정만 해도 리스트 그룹 내비게이션을 활성화 시킬 수 있습니다. 이들의 data 속성을 `.list-group-item` 에 이용합니다.
 
 ```html
 <div role="tabpanel">

@@ -351,7 +351,7 @@ toc: true
 
 ## Dark dropdowns
 
-기존의 `.dropdown-menu` 에 `.dropdown-menu-dark` 를 추가해 어두운 네비게이션바나 커스텀 스타일에 맞추어 어두운 드롭다운을 만들 수 있습니다. 드롭다운 항목을 변경을 할 필요는 없습니다.
+기존의 `.dropdown-menu` 에 `.dropdown-menu-dark` 를 추가해 어두운 내비게이션바나 커스텀 스타일에 맞추어 어두운 드롭다운을 만들 수 있습니다. 드롭다운 항목을 변경을 할 필요는 없습니다.
 
 {{< example >}}
 <div class="dropdown">
@@ -922,19 +922,19 @@ JavaScript 로 드롭다운을 호출하느냐 data-api 를 사용하느냐에 �
     <tr>
       <td><code>toggle</code></td>
       <td>
-        지정된 navbar 또는 탭 네비게이션의 드롭다운 메뉴를 바꿉니다.
+        지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 바꿉니다.
       </td>
     </tr>
     <tr>
       <td><code>show</code></td>
       <td>
-        지정된 navbar 또는 탭 네비게이션의 드롭다운 메뉴를 표시합니다.
+        지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 표시합니다.
       </td>
     </tr>
     <tr>
       <td><code>hide</code></td>
       <td>
-        지정된 navbar 또는 탭 네비게이션의 드롭다운 메뉴를 숨깁니다.
+        지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 숨깁니다.
       </td>
     </tr>
     <tr>
