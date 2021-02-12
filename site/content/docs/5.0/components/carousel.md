@@ -7,7 +7,7 @@ toc: true
 
 ## How it works
 
-캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript로 만들어진, 일련의 컨텐츠를 순환시키기 위한 슬라이드쇼 입니다. 일련의 이미지, 텍스트, 혹은 커스텀 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
+캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript 로 만들어진, 일련의 컨텐츠를 순환시키기 위한 슬라이드쇼 입니다. 일련의 이미지, 텍스트, 혹은 커스텀 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
 
 [Page Visibility API](https://www.w3.org/TR/page-visibility/) 가 지원되고 있는 브라우저에서는, 웹 페이지가 사용자에게 보이지 않을 때(브라우저 탭이 활성화 되지 않았거나, 브라우저 윈도우 크기가 최소화되어 있을때 등등), 캐러셀은 동작하지 않습니다.
 
@@ -346,49 +346,49 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   <tbody>
     <tr>
       <td><code>cycle</code></td>
-      <td>Cycles through the carousel items from left to right.</td>
+      <td>캐러셀의 아이템을 왼쪽에서 오른쪽으로 순환시킵니다.</td>
     </tr>
     <tr>
       <td><code>pause</code></td>
-      <td>Stops the carousel from cycling through items.</td>
+      <td>캐러셀의 아이템 순환을 중지 시킵니다.</td>
     </tr>
     <tr>
       <td><code>prev</code></td>
-      <td>Cycles to the previous item. <strong>Returns to the caller before the previous item has been shown</strong> (e.g., before the <code>slid.bs.carousel</code> event occurs).</td>
+      <td>이전 아이템으로 순환합니다. <strong>이전 아이템이 표시되기 전</strong> (예를 들어, <code>slid.bs.carousel</code> 이벤트가 발생하기 전)에 호출된 곳으로 돌아갑니다.</td>
     </tr>
     <tr>
       <td><code>next</code></td>
-      <td>Cycles to the next item. <strong>Returns to the caller before the next item has been shown</strong> (e.g., before the <code>slid.bs.carousel</code> event occurs).</td>
+      <td>다음 아이템으로 순환합니다. <strong>다음 아이템이 표시되기 전</strong> (예를 들어, <code>slid.bs.carousel</code> 이벤트가 발생하기 전)에 호출된 곳으로 돌아갑니다.</td>
     </tr>
     <tr>
       <td><code>nextWhenVisible</code></td>
-      <td>Don't cycle carousel to next when the page isn't visible or the carousel or its parent isn't visible. <strong>Returns to the caller before the target item has been shown</strong>
+      <td>페이지가 표시되어 있지 않은 경우나 캐러셀이나 그 부모가 표시되어 있지 않는 경우는 캐러셀을 다음 페이지로 순환시키지 않도록 합니다. <strong>대상이 되는 아이템이 표시되기 전에 호출된 곳으로 돌아갑니다.</strong>
     </tr>
     <tr>
       <td><code>to</code></td>
-      <td>Cycles the carousel to a particular frame (0 based, similar to an array). <strong>Returns to the caller before the target item has been shown</strong> (e.g., before the <code>slid.bs.carousel</code> event occurs).</td>
+      <td>캐러셀을 특정 프레임에 순환시킵니다 (0 베이스, 배열과 비슷합니다). <strong>대상 아이템이 나타나기 전</strong> (예를 들어, <code>slid.bs.carousel</code> 이벤트 발생 이전)에 호출된 곳으로 돌아갑니다.</td>
     </tr>
     <tr>
       <td><code>dispose</code></td>
-      <td>Destroys an element's carousel. (Removes stored data on the DOM element)</td>
+      <td>요소의 캐러셀을 없앱니다. (DOM 요소에 저장되어 있는 데이타를 삭제)</td>
     </tr>
     <tr>
       <td><code>getInstance</code></td>
-      <td>Static method which allows you to get the carousel instance associated with a DOM element.</td>
+      <td>DOM 요소에 관련지어진 캐러셀의 인스턴스를 취득하는 정적 메소드.</td>
     </tr>
   </tbody>
 </table>
 
 ### Events
 
-Bootstrap's carousel class exposes two events for hooking into carousel functionality. Both events have the following additional properties:
+Bootstrap 의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 2 가지 이벤트를 공개하고 있습니다. 두가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:
 
-- `direction`: The direction in which the carousel is sliding (either `"left"` or `"right"`).
-- `relatedTarget`: The DOM element that is being slid into place as the active item.
-- `from`: The index of the current item
-- `to`: The index of the next item
+- `direction`: 캐러셀이 슬라이딩 하는 방향 (`"left"` 혹은 `"right"`).
+- `relatedTarget`: 액티브한 아이템으로 슬라이드 시키고 있는 DOM 요소.
+- `from`: 현재 아이템의 인덱스.
+- `to`: 다음 아이템의 인덱스.
 
-All carousel events are fired at the carousel itself (i.e. at the `<div class="carousel">`).
+모든 캐러셀 이벤트는 캐러셀 자체 (즉, `<div class="carousel">`)에서 발생합니다.
 
 <table class="table">
   <thead>
@@ -400,11 +400,11 @@ All carousel events are fired at the carousel itself (i.e. at the `<div class="c
   <tbody>
     <tr>
       <td><code>slide.bs.carousel</code></td>
-      <td>Fires immediately when the <code>slide</code> instance method is invoked.</td>
+      <td><code>slide</code> 인스턴스 메소드가 호출되었을 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>slid.bs.carousel</code></td>
-      <td>Fired when the carousel has completed its slide transition.</td>
+      <td>캐러셀의 슬라이드 이동이 완료했을 때 발생합니다.</td>
     </tr>
   </tbody>
 </table>
@@ -419,4 +419,4 @@ myCarousel.addEventListener('slide.bs.carousel', function () {
 
 ### Change transition duration
 
-The transition duration of `.carousel-item` can be changed with the `$carousel-transition` Sass variable before compiling or custom styles if you're using the compiled CSS. If multiple transitions are applied, make sure the transform transition is defined first (eg. `transition: transform 2s ease, opacity .5s ease-out`).
+`.carousel-item` 의 이동 시간은 CSS 컴파일 전의 Sass 변수 `$carousel-transition` 에서 변경할 수 있습니다. 복수의 이동이 적용되고 있는 경우는, 처음 transform 이동이 정의되고 있는 것을 확인해 주세요(eg. `transition: transform 2s ease, opacity .5s ease-out`).

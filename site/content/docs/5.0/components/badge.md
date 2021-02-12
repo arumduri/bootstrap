@@ -40,7 +40,7 @@ toc: true
 
 ## Background colors
 
-background 유틸리티 클래스를 사용해, 배지의 겉모습을 변경할 수 있습니다. Bootstrap 의 기본의 `.bg-light` 를 사용할 경우, 적절한 스타일링을 위해 `.text-dark` 와 같은 글자 색을 변경하는 유틸리티가 필요할 수도 있으니 유의하십시오. background 유틸리티 클래스는 `background-color` 외에는 아무것도 설정하지 않기 때문입니다.
+Background 유틸리티 클래스를 사용해, 배지의 외형을 변경할 수 있습니다. Bootstrap 의 기본의 `.bg-light` 를 사용할 경우, 적절한 스타일링을 위해 `.text-dark` 와 같은 글자 색을 변경하는 유틸리티가 필요할 수도 있으니 유의하십시오. Background 유틸리티 클래스는 `background-color` 외에는 아무것도 설정하지 않기 때문입니다.
 
 {{< example >}}
 {{< badge.inline >}}

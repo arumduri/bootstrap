@@ -8,7 +8,7 @@ toc: true
 
 ## Examples
 
-Bootstrap 에서는 미리 정의된 버튼 스타일이 포함되어 있으며, 각각은 고유의 의미적인 목적을 위해 사용되며, 보다 많은 컨트롤을 위해 몇 개의 여분의 것들이 던져지고 있습니다.
+Bootstrap 에서는 미리 정의된 버튼 스타일이 포함되어 있으며, 각각은 고유의 의미적인 목적을 위해 사용되며, 보다 많은 컨트롤을 위해 몇 개의 여분의 것들이 더 제공되고 있습니다.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -26,7 +26,7 @@ Bootstrap 에서는 미리 정의된 버튼 스타일이 포함되어 있으며,
 
 ## Disable text wrapping
 
-버튼의 텍스트를 감싸고 싶지 않다면 `.text-nowrap` 클래스를 버튼에 추가할 수 있습니다. Sass 에서 `$btn-white-space: nowrap` 을 설정하여 각 버튼에 대해 텍스트를 감싸지 않도록 할 수 있습니다.
+버튼의 텍스트를 감싸고 싶지 않다면 `.text-nowrap` 클래스를 버튼에 추가할 수 있습니다. Sass 로 `$btn-white-space: nowrap` 을 설정하여 버튼별로 텍스트를 감싸지 않도록 할 수 있습니다.
 
 ## Button tags
 
@@ -83,7 +83,7 @@ Bootstrap 에서는 미리 정의된 버튼 스타일이 포함되어 있으며,
 
 `<a>` 요소에 대해서 버튼을 비활성화 하는 경우는 조금 다릅니다.
 
-- `<a>`는 `disabled` 속성을 지원하지 않으므로 시각적으로 비활성화처럼 보이게 하기 위해 `.disabled` 클래스를 추가해야 합니다.
+- `<a>` 는 `disabled` 속성을 지원하지 않으므로 시각적으로 비활성화처럼 보이게 하기 위해 `.disabled` 클래스를 추가해야 합니다.
 - 앵커 버튼의 모든 `pointer-events` 를 비활성화 시키기 위해 장래적으로 사용하기 쉬운 스타일이 포함되어 있습니다.
 - 비활성화 버튼은 보조 기술에 대한 요소의 상태를 나타내는 `aria-disabled="true"` 속성이 포함되어야 합니다.
 
@@ -100,7 +100,7 @@ Bootstrap 에서는 미리 정의된 버튼 스타일이 포함되어 있으며,
 
 ## Block buttons
 
-display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에 걸친 "블럭 버튼"을 만듭니다. 버튼 고유의 클래스 대신 유틸리티를 사용하여, 간격, 정렬, 또는 반응형 동작을 훨씬 크게 제어할 수 있습니다.
+Display 와 gap 유틸리티를 조합해, Bootstrap 4 와 같은 전체 너비에 걸친 "블럭 버튼"을 만듭니다. 버튼 고유의 클래스 대신 유틸리티를 사용하여, 간격, 정렬, 또는 반응형 동작을 훨씬 크게 제어할 수 있습니다.
 
 {{< example >}}
 <div class="d-grid gap-2">
@@ -109,7 +109,7 @@ display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 </div>
 {{< /example >}}
 
-여기서는 `.d-md-block`가 `.d-grid` 클래스로 대체되어 `gap-2` 유틸리티를 무효화 할 때까지, 버튼을 수직으로 쌓은 상태로 시작한 반응형 변형를 만들고 있습니다. 브라우저 크기를 조절해 가며 차이를 확인 해 보세요.
+여기서는 `.d-md-block` 가 `.d-grid` 클래스로 대체되어 `gap-2` 유틸리티를 무효화 할 때까지, 버튼을 수직으로 쌓은 상태로 시작한 반응형 변형를 만들고 있습니다. 브라우저 크기를 조절해 가며 차이를 확인 해 보세요.
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-block">
@@ -118,7 +118,7 @@ display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 </div>
 {{< /example >}}
 
-블럭 버튼의 가로 폭은, 그리드의 컬럼 가로 폭 클래스로 조정할 수 있습니다. 예를 들어, 50%의 가로 폭의 "블럭 버튼"에는 `.col-6` 을 사용합니다. 수평으로 중앙에 배치하고 싶을 때는 `.mx-auto`을 사용합니다.
+블럭 버튼의 가로 폭은, 그리드의 컬럼 가로 폭 클래스로 조정할 수 있습니다. 예를 들어, 50%의 가로 폭의 "블럭 버튼"에는 `.col-6` 을 사용합니다. 수평으로 중앙에 배치하고 싶을 때는 `.mx-auto` 을 사용합니다.
 
 {{< example >}}
 <div class="d-grid gap-2 col-6 mx-auto">
@@ -141,7 +141,7 @@ display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 버튼 plugin에서는, 간단한 on/off 토글 버튼을 생성할 수 있습니다.
 
 {{< callout info >}}
-시각적으로, 이 토글 버튼은 [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}) 과 같습니다. 하지만, 이런 것들은 지원 기술에 따라 다르게 전달됩니다. 체크박스는 스크린 리더에 의해, "checked"/"not checked" 로 안내되며(보이는 것과 상관없이 기본적으로는 체크박스이기 때문에), 토글 버튼은 "button"/"button pressed" 로 안내됩니다. 이 두가지 접근방식 중 어느 쪽을 선택할지는 작성하는 토글의 타입과 체크박스 또는 실제 버튼으로 안내되었을때 토글이 사용자에게 의미가 있느지 여부에 따라 다릅니다.
+시각적으로, 이 토글 버튼은 [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}) 과 같습니다. 하지만, 이런 것들은 지원 기술에 따라 다르게 전달됩니다. 체크박스는 스크린 리더에 의해, "checked"/"not checked" 로 안내되며(보이는 것과 상관없이 기본적으로는 체크박스이기 때문에), 토글 버튼은 "button"/"button pressed" 로 안내됩니다. 이 두가지 접근방식 중 어느 쪽을 선택할지는 작성하는 토글의 타입과 체크박스 또는 실제 버튼으로 안내 되었을때 토글이 사용자에게 의미가 있느지 여부에 따라 다릅니다.
 {{< /callout >}}
 
 ### Toggle states
@@ -190,7 +190,7 @@ var bsButton = new bootstrap.Button(button)
         <code>dispose</code>
       </td>
       <td>
-        버튼 요소를 파기합니다. (DOM 요소에 저장되어 있는 데이타를 삭제합니다)
+        버튼 요소를 없앱니다. (DOM 요소에 저장되어 있는 데이타를 삭제)
       </td>
     </tr>
   </tbody>

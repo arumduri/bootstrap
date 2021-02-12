@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Accordion(아코디언)
-description: Collapse JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언을 만듭니다.
+description: Collapse(콜랩스) JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언을 만듭니다.
 group: components
 aliases:
   - "/components/"
@@ -11,7 +11,7 @@ toc: true
 
 ## How it works
 
-아코디언은 내부적으로 [collapse]({{< docsref "/components/collapse" >}})을 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 렌더링을 하려면, `.accordion` 에 `.open` 클래스를 추가합니다.
+아코디언은 내부적으로 [collapse]({{< docsref "/components/collapse" >}}) 을 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 랜더링을 하려면, `.accordion` 에 `.open` 클래스를 추가합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}

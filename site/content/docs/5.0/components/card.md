@@ -7,7 +7,7 @@ toc: true
 ---
 
 ## About
-**카드**는 유연하고 확장이 가능한 컨테이너입니다. headers 나 footers 의 옵션, 다양한 컨텐츠, 문맥에 따른 배경 색상, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap3 의 panels、wells、thumbnails 는 카드로 바꿉니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
+**카드**는 유연하고 확장이 가능한 컨테이너입니다. Headers 나 footers 의 옵션, 다양한 컨텐츠, 문맥에 따른 배경 색상, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap3 의 panels、wells、thumbnails 는 카드로 바꿉니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
 
 ## Example
 
@@ -75,7 +75,7 @@ toc: true
 
 ### List groups
 
-flush list group 을 사용하여 카드안에 리스트를 만듭니다.
+Flush list group 을 사용하여 카드안에 리스트를 만듭니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">

@@ -7,7 +7,7 @@ toc: true
 ---
 
 ## Examples
-텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(e.g., `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing)을 사용합니다.
+텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(e.g., `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing) 을 사용합니다.
 
 {{< example >}}
 {{< alerts.inline >}}
@@ -24,7 +24,7 @@ toc: true
 
 ### Link color
 
-`.alert-link` 클래스를 사용하면, 경고창에 어울리는 색상의 링크를 사용할 수 있습니다.
+`.alert-link` 클래스를 사용하면, 경고창에 어울리는 색의 링크를 사용할 수 있습니다.
 
 {{< example >}}
 {{< alerts.inline >}}
@@ -141,7 +141,7 @@ alert.close()
 ```
 
 ### Events
-Bootstrap 경고창 플러그인은, 경고창 기능에 연결하기 위한 몇 개의 이벤트를 제공합니다.
+Bootstrap 경고창 플러그인은, 경고창 기능에 연결하기 위한 몇 가지의 이벤트를 제공합니다.
 
 <table class="table">
   <thead>
