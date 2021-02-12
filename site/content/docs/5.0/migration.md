@@ -55,9 +55,9 @@ toc: true
 
 ### JavaScript
 
-- 모든 JavaScript plugin의 데이터 속성은 자체 코드와 Bootstrap 기능을 구분 되도록 기존의 `data-toggle`의 이름이 `data-bs-toggle` 로 변경되었습니다.
+- 모든 JavaScript 플러그인의 data 속성은 자체 코드와 Bootstrap 기능을 구분 되도록 기존의 `data-toggle`의 이름이 `data-bs-toggle` 로 변경되었습니다.
 - 업데이트 Popper v2.x:
-  - Tooltip/Popover과 Dropdown plugin에서 `offset` 옵션을 삭제했습니다.
+  - Tooltip/Popover과 Dropdown 플러그인에서 `offset` 옵션을 삭제했습니다.
   - `fallbackPlacement` 옵션명이 `fallbackPlacements`이 되었습니다.
 
 ### Sass

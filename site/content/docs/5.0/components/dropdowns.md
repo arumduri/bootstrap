@@ -658,7 +658,7 @@ RTL 에서 Bootstrap 을 사용할 경우, 방향성은 반대가 되어 `.drops
 
 ### Responsive alignment
 
-반응형 배치를 사용하고 싶을 경우, `data-bs-display="static"` 속성을 추가하여 동적 배치를 비활성화하고 반응형 variation 클래스를 사용합니다.
+반응형 배치를 사용하고 싶을 경우, `data-bs-display="static"` 속성을 추가하여 동적 배치를 비활성화하고 반응형 변형 클래스를 사용합니다.
 
 드롭다운 메뉴를 지정된 브레이크 포인트 혹은 그 이상일 경우 **오른쪽**에 배치하려면 `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end` 를 추가합니다.
 
@@ -696,7 +696,7 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 
 ### Headers
 
-임의의 드롭다운 메뉴 액션 섹션 라벨에 Header 를 추가합니다.
+임의의 드롭다운 메뉴 액션 섹션 라벨에 header 를 추가합니다.
 
 {{< example >}}
 <ul class="dropdown-menu">

@@ -307,7 +307,7 @@ dropdown(드롭다운)에 HTML을 조금 추가하고, [dropdowns JavaScript plu
 
 ## JavaScript behavior
 
-`bootstrap.js` 파일을 통해 탭의 JavaScript plugin 을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.
+`bootstrap.js` 파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.
 
 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서는, 지원 기술(스크린 리더 등)의 사용자에게 구조, 기능, 현재의 상태를 전달하기 위해 `role="tablist"`, `role="tab"`, `role="tabpanel"` 및 추가의 `aria-` 속성을 지원합니다.
 
@@ -395,7 +395,7 @@ dropdown(드롭다운)에 HTML을 조금 추가하고, [dropdowns JavaScript plu
 </div>
 ```
 
-탭의 plugin 은 pills 에서도 동작합니다.
+탭의 플러그인은 pills 에서도 동작합니다.
 
 <div class="bd-example">
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
