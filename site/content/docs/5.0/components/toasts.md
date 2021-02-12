@@ -104,7 +104,7 @@ Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" 
 </div>
 {{< /example >}}
 
-또는 Toasts에 추가적인 컨트롤이나 컨포넌트를 추가할 수도 있습니다.
+또는 Toasts에 추가적인 컨트롤이나 컴포넌트를 추가할 수도 있습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -230,7 +230,7 @@ Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" 
 
 ## Accessibility
 
-토스트는 방문자나 사용자에게 작은 중단을 의도하므로 스크린 리더나 비슷한 지원 기술을 가진 사용자를 지원하기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)으로 감싸야 합니다. 라이브 리전으로의 업데이트(토스트 컨포넌트 주입/업데이트 등)는 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더가 자동으로 안내합니다. 그리고 변경된 내용을 안내하지 말고 토스트 전체가 항상 싱글(원자적인) 단위로 안내하도록 `aria-atomic="true"`를 포함시켜 주십시오(만약 토스트의 내용 중 일부만 업데이트 한다면 문제가 발생할 가능성이 있습니다). 필요한 정보가 예를 들어 폼의 오류 리스트 같이 프로세스에 중요한 경우, 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용하십시오.
+토스트는 방문자나 사용자에게 작은 중단을 의도하므로 스크린 리더나 비슷한 지원 기술을 가진 사용자를 지원하기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)으로 감싸야 합니다. 라이브 리전으로의 업데이트(토스트 컴포넌트 주입/업데이트 등)는 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더가 자동으로 안내합니다. 그리고 변경된 내용을 안내하지 말고 토스트 전체가 항상 싱글(원자적인) 단위로 안내하도록 `aria-atomic="true"`를 포함시켜 주십시오(만약 토스트의 내용 중 일부만 업데이트 한다면 문제가 발생할 가능성이 있습니다). 필요한 정보가 예를 들어 폼의 오류 리스트 같이 프로세스에 중요한 경우, 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용하십시오.
 
 토스트가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
 

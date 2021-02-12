@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Modal(모달)
-description: Bootstrap JavaScript modal 플러그인을 사용하여 라이트박스, 사용자 알림 또는 커스텀 컨텐츠를 만들 수 있습니다.
+description: Bootstrap JavaScript 모달 플러그인을 사용하여 라이트박스, 사용자 알림 또는 커스텀 컨텐츠를 만들 수 있습니다.
 group: components
 toc: true
 ---
