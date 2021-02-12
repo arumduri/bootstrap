@@ -80,7 +80,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 ### Live demo
 
-아래 버튼을 눌러 보세요. 모달 화면이 위에서 아래로 fade in 합니다.
+아래 버튼을 눌러 보세요. 모달 화면이 위에서 아래로 페이드인 합니다.
 
 <div class="modal fade" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -539,7 +539,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 ### Remove animation
 
-화면에 fade in 하는 것이 아니라 단순히 표시만 하는 경우에는, 마크업에서 `.fade` 클래스를 삭제합니다.
+화면에 페이드인 하는 것이 아니라 단순히 표시만 하는 경우에는, 마크업에서 `.fade` 클래스를 삭제합니다.
 
 ```html
 <div class="modal" tabindex="-1" aria-labelledby="..." aria-hidden="true">

@@ -120,7 +120,7 @@ var bsAlert = new bootstrap.Alert(myAlert)
         <code>dispose</code>
       </td>
       <td>
-        경고창을 없앱니다. (DOM 요소에 저장된 데이타 제거)
+        경고창을 없앱니다. (DOM 요소에 저장되어 있는 데이타를 삭제)
       </td>
     </tr>
     <tr>
@@ -160,7 +160,7 @@ Bootstrap 경고창 플러그인은, 경고창 기능에 연결하기 위한 몇
     <tr>
       <td><code>closed.bs.alert</code></td>
       <td>
-        경고창이 닫히고, CSS 전환이 완료되면 발생합니다.
+        경고창이 닫히고, CSS 트렌지션이 완료되면 발생합니다.
       </td>
     </tr>
   </tbody>

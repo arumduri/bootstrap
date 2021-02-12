@@ -49,7 +49,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 
 ## Available styles
 
-`.nav` 컴포넌트 스타일을 수식자와 유티리티로 변경할 수 있습니다. 필요에 따라서 조합해 사용하는 거도 가능하며, 독자적인 스타일을 만드는것도 가능합니다.
+`.nav` 컴포넌트 스타일을 수식자와 유틸리티로 변경할 수 있습니다. 필요에 따라서 조합해 사용하는 거도 가능하며, 독자적인 스타일을 만드는것도 가능합니다.
 
 ### Horizontal alignment
 
@@ -231,7 +231,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 {{< /example >}}
 ## Working with flex utilities
 
-반응형 내비의 변화가 필요한 경우에는 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 을 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 브레이크 포인트 간에 더 큰 커스터마이즈가 가능합니다. 아래의 예시에서 내비게이션은 가장 낮은 브레이크 포인트의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
+반응형 내비의 변화가 필요한 경우에는 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 을 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 브레이크 포인트 간에 더 큰 커스터마이즈가 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
 
 {{< example >}}
 <nav class="nav nav-pills flex-column flex-sm-row">
@@ -244,13 +244,13 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 
 ## Regarding accessibility
 
-내비게이션 바를 제공하기 위해 내비게이션을 사용하고 있는 경우, `<ul>` 의 부모 컨테이너에 `role="navigation"` 을 추가하거나, `<nav>` 요소를 내비게이션 전체에 감싸주세요. role을 `<ul>` 자체에 추가하지 마십시오.
+내비게이션바를 제공하기 위해 내비게이션을 사용하고 있는 경우, `<ul>` 의 부모 컨테이너에 `role="navigation"` 을 추가하거나, `<nav>` 요소를 내비게이션 전체에 감싸주세요. role을 `<ul>` 자체에 추가하지 마십시오.
 
-내비게이션 바는, `.nav-tabs` 에서 시각적으로 탭으로 보여지게 되어 있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior) 를 참조해 주십시오. JavaScript는 활성화된 탭에 `aria-selected="true"` 를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하기 않습니다.
+내비게이션바는, `.nav-tabs` 에서 시각적으로 탭으로 보여지게 되어 있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior) 를 참조해 주십시오. JavaScript 는 활성화된 탭에 `aria-selected="true"` 를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하기 않습니다.
 
 ## Using dropdowns
 
-dropdown(드롭다운)에 HTML을 조금 추가하고, [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}) 으로 드롭다운 메뉴를 추가합니다.
+dropdown(드롭다운) 에 HTML 을 조금 추가하고, [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}) 으로 드롭다운 메뉴를 추가합니다.
 
 
 ### Tabs with dropdowns
@@ -307,7 +307,7 @@ dropdown(드롭다운)에 HTML을 조금 추가하고, [dropdowns JavaScript plu
 
 ## JavaScript behavior
 
-`bootstrap.js` 파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.
+`bootstrap.js` 파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill 을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.
 
 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서는, 지원 기술(스크린 리더 등)의 사용자에게 구조, 기능, 현재의 상태를 전달하기 위해 `role="tablist"`, `role="tab"`, `role="tabpanel"` 및 추가의 `aria-` 속성을 지원합니다.
 
@@ -357,7 +357,7 @@ dropdown(드롭다운)에 HTML을 조금 추가하고, [dropdowns JavaScript plu
 </div>
 ```
 
-요구에 맞춰, 이것은 위에 나온 것과 같은 `<ul>` 베이스의 마크업에서도, 임의의 마크업에서도 동작합니다. `<nav>` 를 사용하는 경우 `role="tablist"` 를 직접 추가하지 않습니다. 대신에 다른 요소(아래의 예시에서는 단순한 `<div>`)로 전환해 `<nav>` 로 감싸습니다.
+요구에 맞춰, 이것은 위에 나온 것과 같은 `<ul>` 베이스의 마크업에서도, 임의의 마크업에서도 동작합니다. `<nav>` 를 사용하는 경우 `role="tablist"` 를 직접 추가하지 않습니다. 대신에 다른 요소(아래의 예시에서는 단순한 `<div>`)로 전환해 `<nav>` 로 감쌌습니다.
 
 <div class="bd-example">
   <nav>
@@ -487,7 +487,7 @@ dropdown(드롭다운)에 HTML을 조금 추가하고, [dropdowns JavaScript plu
 
 ### Using data attributes
 
-요소에 `data-bs-toggle="tab"` 혹은 `data-bs-toggle="pill"` 를 지정하는것 만으로, JavaScript 를 쓰지 않고도 탭이나 필의 내비게이션을 활성화 시킬 수 있습니다. 이러한 데이타 속성은 `.nav-tabs` 나 `.nav-pills` 로 사용합니다.
+요소에 `data-bs-toggle="tab"` 혹은 `data-bs-toggle="pill"` 를 지정하는것 만으로, JavaScript 를 쓰지 않고도 탭이나 필의 내비게이션을 활성화 시킬 수 있습니다. 이러한 data 속성은 `.nav-tabs` 나 `.nav-pills` 로 사용합니다.
 
 ```html
 <!-- Nav tabs -->

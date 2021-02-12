@@ -8,7 +8,7 @@ toc: true
 
 ## About
 
-Bootstrap "스피너"는 프로젝트의 로딩 상태를 표시하기 위해 사용할 수 있습니다. 이것은 HTML 과 CSS 로 만들어져 있기 때문에 JavaScript 를 필요로 하지 않습니다. 그러나 가시성을 바꾸기 위해 몇 가지의 커스텀 JavaScript 가 필요합니다. 이러한 외관, 배치, 크기는 유틸리티 클래스를 통해 간단하게 커스터마이즈 할 수 있습니다.
+Bootstrap "스피너"는 프로젝트의 로딩 상태를 표시하기 위해 사용할 수 있습니다. 이것은 HTML 과 CSS 로 만들어져 있기 때문에 JavaScript 를 필요로 하지 않습니다. 그러나 가시성을 바꾸기 위해 몇 가지의 커스텀 JavaScript 가 필요합니다. 이러한 외형, 배치, 크기는 유틸리티 클래스를 통해 간단하게 커스터마이즈 할 수 있습니다.
 
 접근성을 위해, 여기에서의 각 loader 는 `role="status"` 과 `<span class="visually-hidden">Loading...</span>` 을 포함하고 있습니다.
 
@@ -18,7 +18,7 @@ Bootstrap "스피너"는 프로젝트의 로딩 상태를 표시하기 위해 �
 
 ## Border spinner
 
-border 스피너를 사용해 가벼운 로딩 인디게이터를 실현합니다.
+Border 스피너를 사용해 가벼운 로딩 인디게이터를 실현합니다.
 
 {{< example >}}
 <div class="spinner-border" role="status">
@@ -28,7 +28,7 @@ border 스피너를 사용해 가벼운 로딩 인디게이터를 실현합니�
 
 ### Colors
 
-border 스피너는 `border-color` 에 `currentColor` 을 사용합니다. 표준 스피너에서는 [text color utilities][color] 를 사용할 수 있습니다.
+Border 스피너는 `border-color` 에 `currentColor` 을 사용합니다. 표준 스피너에서는 [text color utilities][color] 를 사용할 수 있습니다.
 
 {{< example >}}
 {{< spinner.inline >}}
@@ -46,7 +46,7 @@ border 스피너는 `border-color` 에 `currentColor` 을 사용합니다. 표�
 
 ## Growing spinner
 
-border 스피너를 싫어하는 분은, grow 스피너를 사용하십시오. 기술적으로는 회전하지 않지만 grow 를 반복시키고 있습니다.
+Border 스피너를 싫어하는 분은, grow 스피너를 사용하십시오. 기술적으로는 회전하지 않지만 grow 를 반복시키고 있습니다.
 
 {{< example >}}
 <div class="spinner-grow" role="status">
@@ -82,7 +82,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 
 ### Placement
 
-[flexbox utilities][flex], [float utilities][float], 혹은 [text alignment][text] 유틸리티를 사용하여 어떤 상황에서도 스피너를 원하는 위치에 정확히 배치시킬 수 있습니다.
+[Flexbox utilities][flex], [float utilities][float], 혹은 [text alignment][text] 유틸리티를 사용하여 어떤 상황에서도 스피너를 원하는 위치에 정확히 배치시킬 수 있습니다.
 
 #### Flex
 

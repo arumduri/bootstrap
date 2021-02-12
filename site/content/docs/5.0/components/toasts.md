@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-토스트는 모바일 및 데스크톱 운영 체제에서 보급된 푸시 알림을 모방하여 설계된 가벼운 알림창 입니다. flexbox로 만들어져 있어 위치 조정 및 배치가 간단합니다.
+토스트는 모바일 및 데스크톱 운영 체제에서 보급된 푸시 알림을 모방하여 설계된 가벼운 알림창 입니다. Flexbox로 만들어져 있어 위치 조정 및 배치가 간단합니다.
 
 ## Overview
 
@@ -25,7 +25,7 @@ toc: true
 
 토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 `display: flex`를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 컨텐츠를 쉽게 정렬시킬 수 있습니다.
 
-Toasts는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. Toasts 컨텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.
+토스트는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. 토스트 컨텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.
 
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -43,7 +43,7 @@ Toasts는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크
 
 ### Translucent
 
-Toasts는 약간 반투명해서 상단에 표시되는 것은 무엇이든 녹여져 보여집니다.  CSS 속성 `backdrop-filter`를 지원하는 브라우저에서는 Toasts 하단에 있는 요소를 흐려 보이게 하겠습니다.
+토스트는 약간 반투명해서 상단에 표시되는 것은 무엇이든 녹여져 보여집니다.  CSS 속성 `backdrop-filter` 를 지원하는 브라우저에서는 토스트 하단에 있는 요소를 흐려 보이게 합니다.
 
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -61,7 +61,7 @@ Toasts는 약간 반투명해서 상단에 표시되는 것은 무엇이든 녹�
 
 ### Stacking
 
-Toasts를 `toast container`로 감싸면 여러개 사용할 수 있습니다.
+토스트를 `toast container` 로 감싸면 여러개 사용할 수 있습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast-container">
@@ -93,7 +93,7 @@ Toasts를 `toast container`로 감싸면 여러개 사용할 수 있습니다.
 
 ### Custom content
 
-Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" >}})를 통한 미세한 수정, 마크업을 추가 수정해서 Toasts를 새롭게 만들수 있습니다. 여기에서는, `.toast-header`를 삭제하고, [Bootstrap Icons]({{< param icons >}})에 있는 닫기 아이콘을 추가하고, 레이아웃을 조정하기 위해 [flexbox utilities]({{< docsref "/utilities/flex" >}})을 몇가지 사용해서 보다 간단한 Toasts를 만들어 보았습니다.
+토스트 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" >}})를 통한 미세한 수정, 마크업을 추가 수정해서 토스트를 새롭게 만들수 있습니다. 여기에서는, `.toast-header`를 삭제하고, [Bootstrap Icons]({{< param icons >}})에 있는 닫기 아이콘을 추가하고, 레이아웃을 조정하기 위해 [flexbox utilities]({{< docsref "/utilities/flex" >}})을 몇가지 사용해서 보다 간단한 토스트를 만들어 보았습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast d-flex align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
@@ -104,7 +104,7 @@ Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" 
 </div>
 {{< /example >}}
 
-또는 Toasts에 추가적인 컨트롤이나 컴포넌트를 추가할 수도 있습니다.
+또는 토스트에 추가적인 컨트롤이나 컴포넌트를 추가할 수도 있습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -120,7 +120,7 @@ Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" 
 
 ### Color schemes
 
-위의 예시를 바탕으로, [color utilities]({{< docsref "/utilities/colors" >}})를 사용해 다른 컬러의 Toasts를 만들수 있습니다. 여기에서는, Toasts에 `.bg-primary` 와 `.text-white` 를 추가하고, 닫기 버튼에 `.text-white`를 추가했습니다. 모서리를 선명하게 하기 위해 기본 border를 `.border-0`.으로 삭제했습니다.
+위의 예시를 바탕으로, [color utilities]({{< docsref "/utilities/colors" >}}) 를 사용해 다른 컬러의 토스트를 만들수 있습니다. 여기에서는, 토스트에 `.bg-primary` 와 `.text-white` 를 추가하고, 닫기 버튼에 `.text-white` 를 추가했습니다. 모서리를 선명하게 하기 위해 기본 border를 `.border-0` 으로 삭제했습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast d-flex align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
@@ -133,7 +133,7 @@ Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" 
 
 ## Placement
 
-필요에 따라 사용자 지정 CSS로 Toasts를 배치합니다. 우측 상단은 알림용으로 사용되는 경우가 많으며, 상단 중앙도 마찬가지입니다. 한번에 하나의 Toasts 밖에 표시하지 않는다면, 배치 스타일을 `.toast`의 오른쪽에 넣어주세요.
+필요에 따라 사용자 지정 CSS로 토스트를 배치시킵니다. 우측 상단은 알림용으로 사용되는 경우가 많으며, 상단 중앙도 마찬가지입니다. 한번에 하나의 토스트 밖에 표시하지 않는다면, 배치 스타일을 `.toast` 의 오른쪽에 넣어주세요.
 
 {{< example >}}
 <form>
@@ -207,7 +207,7 @@ Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" 
 </div>
 {{< /example >}}
 
-또한 flexbox 유틸리티를 사용해서 Toasts를 수평방향이나 수직방향으로 정렬시킬 수도 있습니다.
+또한 flexbox 유틸리티를 사용해서 토스트를 수평방향이나 수직방향으로 정렬시킬 수도 있습니다.
 
 {{< example class="bg-dark bd-example-toasts d-flex" >}}
 <!-- Flexbox container for aligning the toasts -->
@@ -230,11 +230,11 @@ Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" 
 
 ## Accessibility
 
-토스트는 방문자나 사용자에게 작은 중단을 의도하므로 스크린 리더나 비슷한 지원 기술을 가진 사용자를 지원하기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)으로 감싸야 합니다. 라이브 리전으로의 업데이트(토스트 컴포넌트 주입/업데이트 등)는 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더가 자동으로 안내합니다. 그리고 변경된 내용을 안내하지 말고 토스트 전체가 항상 싱글(원자적인) 단위로 안내하도록 `aria-atomic="true"`를 포함시켜 주십시오(만약 토스트의 내용 중 일부만 업데이트 한다면 문제가 발생할 가능성이 있습니다). 필요한 정보가 예를 들어 폼의 오류 리스트 같이 프로세스에 중요한 경우, 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용하십시오.
+토스트는 방문자나 사용자에게 작은 중단을 의도하므로 스크린 리더나 비슷한 지원 기술을 가진 사용자를 지원하기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 으로 감싸야 합니다. 라이브 리전으로의 업데이트(토스트 컴포넌트 주입/업데이트 등)는 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더가 자동으로 안내합니다. 그리고 변경된 내용을 안내하지 말고 토스트 전체가 항상 싱글(원자적인) 단위로 안내하도록 `aria-atomic="true"` 를 포함시켜 주십시오(만약 토스트의 내용 중 일부만 업데이트 한다면 문제가 발생할 가능성이 있습니다). 필요한 정보가 예를 들어 폼의 오류 리스트 같이 프로세스에 중요한 경우, 토스트 대신 [alert component]({{< docsref "/components/alerts" >}}) 를 사용하십시오.
 
 토스트가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
 
-그리고, 내용에 따라 `role` 과 `aria-live` 레벨을 적응시킬 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
+그리고, 내용에 따라 `role` 과 `aria-live` 의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
 
 표시하는 내용이 변경될 경우, 사람들이 토스트를 읽을 충분한 시간을 갖도록 [`delay` timeout](#options) 를 업데이트 하십시오.
 
@@ -244,7 +244,7 @@ Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" 
 </div>
 ```
 
-`autohide: false`를 사용할 때에는, 사용자가 토스트를 해제할 수 있도록 닫기 버튼을 추가해야 합니다.
+`autohide: false` 를 사용할 때에는, 사용자가 토스트를 해제할 수 있도록 닫기 버튼을 추가해야 합니다.
 
 {{< example class="bg-light" >}}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
@@ -264,7 +264,7 @@ Toasts 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" 
 
 ### Usage
 
-JavaScript를 통해 초기화:
+JavaScript 를 통해 초기화:
 
 ```js
 var toastElList = [].slice.call(document.querySelectorAll('.toast'))
@@ -275,7 +275,7 @@ var toastList = toastElList.map(function (toastEl) {
 
 ### Options
 
-옵션은 data 속성이나 JavaScript를 통해 전달될 수 있습니다. 데이터 속성의 경우 `data-bs-animation=""`와 같이 옵션 이름에 `data-bs-`를 추가하십시오.
+옵션은 data 속성이나 JavaScript 를 통해 전달될 수 있습니다. data 속성의 경우 `data-bs-animation=""` 와 같이 옵션 이름에 `data-bs-` 를 추가하십시오.
 
 <table class="table">
   <thead>
@@ -291,13 +291,13 @@ var toastList = toastElList.map(function (toastEl) {
       <td><code>animation</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Apply a CSS fade transition to the toast</td>
+      <td>토스트에 CSS fade 트랜지션을 적용합니다.</td>
     </tr>
     <tr>
       <td><code>autohide</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Auto hide the toast</td>
+      <td>토스트를 자동으로 숨깁니다.</td>
     </tr>
     <tr>
       <td><code>delay</code></td>
@@ -305,7 +305,7 @@ var toastList = toastElList.map(function (toastEl) {
       <td>
         <code>5000</code>
       </td>
-      <td>Delay hiding the toast (ms)</td>
+      <td>토스트를 숨길 시간을 지정합니다.(ms)</td>
     </tr>
   </tbody>
 </table>
@@ -318,8 +318,8 @@ var toastList = toastElList.map(function (toastEl) {
 
 #### show
 
-Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs).
-You have to manually call this method, instead your toast won't show.
+요소의 토스트를 표시합니다. **토스트가 실제로 표시되기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.toast` 이벤트가 발생하기 전).
+이 메소드를 수동으로 호출해야 합니다.
 
 ```js
 toast.show()
@@ -327,7 +327,7 @@ toast.show()
 
 #### hide
 
-Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`.
+요소인 토스트를 숨깁니다. **토스트가 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.toast` 이벤트가 발생하기 전). `autohide` 를 `false` 로 했을 경우, 이 메소드를 수동으로 호출할 필요가 있습니다.
 
 ```js
 toast.hide()
@@ -335,7 +335,7 @@ toast.hide()
 
 #### dispose
 
-Hides an element's toast. Your toast will remain on the DOM but won't show anymore.
+요소의 토스트를 숨깁니다. 토스트는 DOM 상에 남습니다만, 표시되지 않게 됩니다.
 
 ```js
 toast.dispose()
@@ -353,19 +353,19 @@ toast.dispose()
   <tbody>
     <tr>
       <td><code>show.bs.toast</code></td>
-      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+      <td>이 이벤트는 <code>show</code> 인스턴스 메소드가 호출되었을 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>shown.bs.toast</code></td>
-      <td>This event is fired when the toast has been made visible to the user.</td>
+      <td>이 이벤트는 토스트가 사용자에게 표시되었을 때 발생합니다.</td>
     </tr>
     <tr>
       <td><code>hide.bs.toast</code></td>
-      <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+      <td>이 이벤트는 <code>hide</code> 인스턴스 메소드가 호출되었을 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.toast</code></td>
-      <td>This event is fired when the toast has finished being hidden from the user.</td>
+      <td>이 이벤트는 토스트 숨김이 종료되었을 때 발생합니다.</td>
     </tr>
   </tbody>
 </table>

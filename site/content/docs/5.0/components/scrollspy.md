@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Scrollspy(스크롤스파이)
+title: Scrollspy(스크롤 스파이)
 description: 스크롤 위치에 따라 Bootstrap 내비게이션 또는 리스트 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.
 group: components
 toc: true
@@ -8,22 +8,22 @@ toc: true
 
 ## How it works
 
-스크롤스파이가 제대로 동작하기 위해서는 몇 가지 요건이 있습니다:
+스크롤 스파이가 제대로 동작하기 위해서는 몇 가지 요건이 있습니다:
 
 - Bootstrap [nav component]({{< docsref "/components/navs-tabs" >}}) 혹은 [list group]({{< docsref "/components/list-group" >}}) 에서 사용해야 합니다.
-- 스크롤스파이는 감시 대상의 요소, 보통은 `<body>` 의 `position: relative;` 를 필요로 합니다.
+- 스크롤 스파이는 감시 대상의 요소, 보통은 `<body>` 의 `position: relative;` 를 필요로 합니다.
 - 앵커 (`<a>`) 가 필요하고, 그 요소를 가르키는 `id` 가 필요합니다.
 
 정상적으로 구현되면 내비게이션이나 리스트 그룹은 그에 따라 갱신되며, `.active` 클래스는 관련 타겟에 따라 한 개의 아이템에서 다음 아이템으로 이동합니다.
 
 {{< callout >}}
 ### Scrollable containers and keyboard access
-스크롤 가능한 컨테이너(`<body>` 이외의 )를 작성할 경우에는 반드시 `height` 를 설정하고 키보드로부터의 접근을 확실히 하기 위해서 `tabindex="0"`와 함께 `overflow-y: scroll;` 을 적용하십시오.
+스크롤 가능한 컨테이너(`<body>` 이외의 )를 작성할 경우에는 반드시 `height` 를 설정하고 키보드로부터의 접근을 확실히 하기 위해서 `tabindex="0"` 와 함께 `overflow-y: scroll;` 을 적용하십시오.
 {{< /callout >}}
 
 ## Example in navbar
 
-내비바 아래 영역을 스크롤하여 활성화된 클래스의 변화를 살펴보세요. 드롭 다운 아이템도 같이 강조 표시됩니다.
+내비바 아래 영역을 스크롤하여 활성화된 클래스의 변화를 살펴보세요. 드롭다운 아이템도 같이 강조 표시됩니다.
 
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
@@ -99,7 +99,7 @@ toc: true
 
 ## Example with nested nav
 
-스크롤스파이는 중첩된 `.nav` 에서도 동작합니다. 중첩 된 `.nav` 가 `.active` 인 경우, 그 부모도 `.active` 가 됩니다. 내비바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.
+스크롤 스파이는 중첩된 `.nav` 에서도 동작합니다. 중첩 된 `.nav` 가 `.active` 인 경우, 그 부모도 `.active` 가 됩니다. 내비바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.
 
 <div class="bd-example">
   <div class="row">
@@ -180,7 +180,7 @@ toc: true
 
 ## Example with list-group
 
-스크롤스파이는 `.list-group` 에서도 동작합니다. 리스트 그룹 옆의 영역을 스크롤해서 활성화 된 클래스가 변화하는 것을 보겠습니다.
+스크롤 스파이는 `.list-group` 에서도 동작합니다. 리스트 그룹 옆의 영역을 스크롤해서 활성화 된 클래스가 변화하는 것을 보겠습니다.
 
 <div class="bd-example">
   <div class="row">
@@ -231,7 +231,7 @@ toc: true
 
 ### Via data attributes
 
-topbar 내비게이션에 스크롤스파이 동작을 간단하게 추가하려면, 스파이 하고 싶은 요소에 `data-bs-spy="scroll"` 를 추가합니다(가장 전형적으로는 `<body>` 입니다). 그 다음에 `data-bs-target` 속성에 임의의 Bootstrap `.nav` 컴포넌트의 부모요소의 ID 또는 클래스를 추가합니다.
+topbar 내비게이션에 스크롤 스파이 동작을 간단하게 추가하려면, 스파이 하고 싶은 요소에 `data-bs-spy="scroll"` 를 추가합니다(가장 전형적으로는 `<body>` 입니다). 그 다음에 `data-bs-target` 속성에 임의의 Bootstrap `.nav` 컴포넌트의 부모요소의 ID 또는 클래스를 추가합니다.
 
 ```css
 body {
@@ -253,7 +253,7 @@ body {
 
 ### Via JavaScript
 
-CSS 에 `position: relative;` 를 추가한 뒤, JavaScript 로 스크롤스파이를 호출합니다:
+CSS 에 `position: relative;` 를 추가한 뒤, JavaScript 로 스크롤 스파이를 호출합니다:
 
 ```js
 var scrollSpy = new bootstrap.ScrollSpy(document.body, {
@@ -277,7 +277,7 @@ Navbar 링크는 해결 가능한 id 타겟을 가져야 합니다. 예를 들�
 
 #### refresh
 
-DOM 에서 요소의 추가나 삭제와 동시에 스크롤스파이를 사용할 경우는 다음과 같이 refresh 메소드를 호출해야 합니다:
+DOM 에서 요소의 추가나 삭제와 동시에 스크롤 스파이를 사용할 경우는 다음과 같이 refresh 메소드를 호출해야 합니다:
 
 ```js
 var dataSpyList = [].slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
@@ -289,11 +289,11 @@ dataSpyList.forEach(function (dataSpyEl) {
 
 #### dispose
 
-요소의 스크롤스파이를 없앱니다.(DOM 요소에 저장되어 있는 데이타를 삭제합니다.)
+요소의 스크롤 스파이를 없앱니다.(DOM 요소에 저장되어 있는 데이타를 삭제)
 
 #### getInstance
 
-DOM 요소와 관련된 스크롤스파이 인스턴스를 취득할 수 있도록 하는 *Static* 메소드.
+DOM 요소와 관련된 스크롤 스파이 인스턴스를 취득할 수 있도록 하는 *Static* 메소드.
 
 ```js
 var scrollSpyContentEl = document.getElementById('content')
@@ -330,7 +330,7 @@ var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a
       <td><code>target</code></td>
       <td>string | jQuery object | DOM element</td>
       <td></td>
-      <td>스크롤스파이 플러그인을 적용할 요소를 지정합니다.</td>
+      <td>스크롤 스파이 플러그인을 적용할 요소를 지정합니다.</td>
     </tr>
   </tbody>
 </table>
@@ -347,7 +347,7 @@ var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a
   <tbody>
     <tr>
       <td><code>activate.bs.scrollspy</code></td>
-      <td>이 이벤트는 새로운 아이템이 스크롤스파이에 의해 활성화 될 때마다 스크롤 요소에서 발생합니다.</td>
+      <td>이 이벤트는 새로운 아이템이 스크롤 스파이에 의해 활성화 될 때마다 스크롤 요소에서 발생합니다.</td>
     </tr>
   </tbody>
 </table>

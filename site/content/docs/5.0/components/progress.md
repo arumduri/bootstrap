@@ -35,7 +35,7 @@ toc: true
 </div>
 {{< /example >}}
 
-Bootstrap [utilities for setting width]({{< docsref "/utilities/sizing" >}}) 을 사용해, 필요에 따라서 진척 상황을 신속하겍 설정하는데 도움이 될지도 모릅니다.
+Bootstrap [utilities for setting width]({{< docsref "/utilities/sizing" >}}) 를 사용하면, 필요에 따라서 진척 상황을 신속하게 설정하는데 도움이 될지도 모릅니다.
 
 {{< example >}}
 <div class="progress">

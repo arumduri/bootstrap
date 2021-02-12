@@ -122,7 +122,7 @@ toc: true
 
 ## Alignment
 
-[flexbox utilities]({{< docsref "/utilities/flex" >}}) 를 사용해 페이지네이션의 위치를 변경합니다.
+[Flexbox utilities]({{< docsref "/utilities/flex" >}}) 를 사용해 페이지네이션의 위치를 변경합니다.
 
 {{< example >}}
 <nav aria-label="Page navigation example">

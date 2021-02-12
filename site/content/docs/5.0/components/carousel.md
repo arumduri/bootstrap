@@ -404,7 +404,7 @@ Bootstrap 의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 2 �
     </tr>
     <tr>
       <td><code>slid.bs.carousel</code></td>
-      <td>캐러셀의 슬라이드 이동이 완료했을 때 발생합니다.</td>
+      <td>캐러셀의 슬라이드 트렌지션이 완료했을 때 발생합니다.</td>
     </tr>
   </tbody>
 </table>
@@ -419,4 +419,4 @@ myCarousel.addEventListener('slide.bs.carousel', function () {
 
 ### Change transition duration
 
-`.carousel-item` 의 이동 시간은 CSS 컴파일 전의 Sass 변수 `$carousel-transition` 에서 변경할 수 있습니다. 복수의 이동이 적용되고 있는 경우는, 처음 transform 이동이 정의되고 있는 것을 확인해 주세요(eg. `transition: transform 2s ease, opacity .5s ease-out`).
+`.carousel-item` 의 트렌지션 시간은 CSS 컴파일 전의 Sass 변수 `$carousel-transition` 에서 변경할 수 있습니다. 복수의 트렌지션이 적용되고 있는 경우는, 처음 transform 트렌지션이 정의되고 있는 곳을 확인해 주세요(eg. `transition: transform 2s ease, opacity .5s ease-out`).
