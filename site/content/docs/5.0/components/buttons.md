@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Buttons
-description: Use Bootstrap's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
+title: Buttons(버튼)
+description: 다양한 크기와 상태를 지원하고 폼, 다이얼로그 등의 액션으로 Bootstrap 의 사용자 버튼 스타일을 사용합니다.
 group: components
 toc: true
 ---
 
 ## Examples
 
-Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
+Bootstrap 에서는 미리 정의된 버튼 스타일이 포함되어 있으며, 각각은 고유의 의미적인 목적을 위해 사용되며, 보다 많은 컨트롤을 위해 몇 개의 여분의 것들이 더 제공되고 있습니다.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -26,13 +26,13 @@ Bootstrap includes several predefined button styles, each serving its own semant
 
 ## Disable text wrapping
 
-If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
+버튼의 텍스트를 감싸고 싶지 않다면 `.text-nowrap` 클래스를 버튼에 추가할 수 있습니다. Sass 로 `$btn-white-space: nowrap` 을 설정하여 버튼별로 텍스트를 감싸지 않도록 할 수 있습니다.
 
 ## Button tags
 
-The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
+`.btn` 클래스는 `<button>` 요소로 사용되도록 설계되어 있습니다. 그러나 이런 클래스를 `<a>` 혹은 `<input>` 요소로 사용할 수도 있습니다 (브라우저에 따라 약간 다른 랜더링이 적용되는 경우가 있습니다).
 
-When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
+현재 페이지 내의 새로운 페이지나 섹션에 대한 링크가 아닌, 페이지 내 기능(컨텐츠 접기 등)의 트리커로 사용되는 `<a>` 요소에 버튼 클래스를 사용할 경우, 이런 링크에는 `role="button"` 이라는 역활을 주어, 스크린 리더 등의 지원 기술에 그 목적을 적절히 전달해야 합니다.
 
 {{< example >}}
 <a class="btn btn-primary" href="#" role="button">Link</a>
@@ -44,7 +44,7 @@ When using button classes on `<a>` elements that are used to trigger in-page fun
 
 ## Outline buttons
 
-In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
+버튼은 필요한데 무거운 배경색이 필요하지 않은가요? 기본 변경 클래스를 `.btn-outline-*` 으로 변경해서 버튼에 있는 배경색을 지울수 있습니다.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -55,12 +55,12 @@ In need of a button, but not the hefty background colors they bring? Replace the
 {{< /example >}}
 
 {{< callout info >}}
-Some of the button styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
+버튼 스타일 안에는 비교적 밝은 전경색 사용하고 있어 충분한 차이를 나타내기 위해서는 어두운 배경에서만 사용할 필요가 있습니다.
 {{< /callout >}}
 
 ## Sizes
 
-Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
+버튼의 크기를 `.btn-lg` 나 `.btn-sm` 을 적용해 변경할 수 있습니다.
 
 {{< example >}}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
@@ -74,18 +74,18 @@ Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes
 
 ## Disabled state
 
-Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
+버튼을 비활성화 시키기 위해 `<button>` 요소에 `disabled` 속성을 추가합니다. 비활성화 된 버튼은 `pointer-events: none` 을 가집니다. 아무것도 적용되지 않고 호버나 활성화된 상태로 눌려지는것을 막습니다.
 
 {{< example >}}
 <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
 <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
 {{< /example >}}
 
-Disabled buttons using the `<a>` element behave a bit different:
+`<a>` 요소에 대해서 버튼을 비활성화 하는 경우는 조금 다릅니다.
 
-- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear disabled.
-- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
-- Disabled buttons should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
+- `<a>` 는 `disabled` 속성을 지원하지 않으므로 시각적으로 비활성화처럼 보이게 하기 위해 `.disabled` 클래스를 추가해야 합니다.
+- 앵커 버튼의 모든 `pointer-events` 를 비활성화 시키기 위해 장래적으로 사용하기 쉬운 스타일이 포함되어 있습니다.
+- 비활성화 버튼은 보조 기술에 대한 요소의 상태를 나타내는 `aria-disabled="true"` 속성이 포함되어야 합니다.
 
 {{< example >}}
 <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
@@ -95,12 +95,12 @@ Disabled buttons using the `<a>` element behave a bit different:
 {{< callout warning >}}
 ##### Link functionality caveat
 
-The `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s, but that CSS property is not yet standardized. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
+`.disabled` 클래스는 `<a>` 의 링크 기능을 무효화하기 위해서 `pointer-events: none` 을 사용합니다만, 이 CSS 속성은 아직 표준화되어 있지 않습니다. 게다가 `pointer-events: none` 를 지원하고 있는 브라우저에서도 키보드 내비게이션은 영향을 받지 않습니다. 그렇기 때문에 안전을 위해 `aria-disabled="true"` 에 더해 `tabindex="-1"` 속성을 링크로 설정하고 키보드 포커스를 받지 않도록 하며, 커스텀 JavaScript 를 사용하여 기능을 완전히 무효화 하도록 합니다.
 {{< /callout >}}
 
 ## Block buttons
 
-Create responsive stacks of full-width, "block buttons" like those in Bootstrap 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
+Display 와 gap 유틸리티를 조합해, Bootstrap 4 와 같은 전체 너비에 걸친 "블럭 버튼"을 만듭니다. 버튼 고유의 클래스 대신 유틸리티를 사용하여, 간격, 정렬, 또는 반응형 동작을 훨씬 크게 제어할 수 있습니다.
 
 {{< example >}}
 <div class="d-grid gap-2">
@@ -109,7 +109,7 @@ Create responsive stacks of full-width, "block buttons" like those in Bootstrap 
 </div>
 {{< /example >}}
 
-Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-2` utility. Resize your browser to see them change.
+여기서는 `.d-md-block` 가 `.d-grid` 클래스로 대체되어 `gap-2` 유틸리티를 무효화 할 때까지, 버튼을 수직으로 쌓은 상태로 시작한 반응형 변형를 만들고 있습니다. 브라우저 크기를 조절해 가며 차이를 확인 해 보세요.
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-block">
@@ -118,7 +118,7 @@ Here we create a responsive variation, starting with vertically stacked buttons 
 </div>
 {{< /example >}}
 
-You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
+블럭 버튼의 가로 폭은, 그리드의 컬럼 가로 폭 클래스로 조정할 수 있습니다. 예를 들어, 50%의 가로 폭의 "블럭 버튼"에는 `.col-6` 을 사용합니다. 수평으로 중앙에 배치하고 싶을 때는 `.mx-auto` 을 사용합니다.
 
 {{< example >}}
 <div class="d-grid gap-2 col-6 mx-auto">
@@ -127,7 +127,7 @@ You can adjust the width of your block buttons with grid column width classes. F
 </div>
 {{< /example >}}
 
-Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right align the buttons when they're no longer stacked.
+추가의 유틸리티를 사용하여, 수평방향 버튼의 배치를 조정할 수 있습니다. 여기서는, 이전 반응형의 예시를 참고해 버튼이 더 이상 쌓이지 않을때, 버튼의 오른쪽 정렬을 위해 flex 유틸리티와 margin 유틸리티를 추가했습니다.
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -138,15 +138,15 @@ Additional utilities can be used to adjust the alignment of buttons when horizon
 
 ## Button plugin
 
-The button plugin allows you to create simple on/off toggle buttons.
+버튼 플러그인에서는, 간단한 on/off 토글 버튼을 생성할 수 있습니다.
 
 {{< callout info >}}
-Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
+시각적으로, 이 토글 버튼은 [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}) 과 같습니다. 하지만, 이런 것들은 지원 기술에 따라 다르게 전달됩니다. 체크박스는 스크린 리더에 의해, "checked"/"not checked" 로 안내되며(보이는 것과 상관없이 기본적으로는 체크박스이기 때문에), 토글 버튼은 "button"/"button pressed" 로 안내됩니다. 이 두가지 접근방식 중 어느 쪽을 선택할지는 작성하는 토글의 타입과 체크박스 또는 실제 버튼으로 안내 되었을때 토글이 사용자에게 의미가 있느지 여부에 따라 다릅니다.
 {{< /callout >}}
 
 ### Toggle states
 
-Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
+버튼의 `active` 상태를 토글하기 위해, `data-bs-toggle="button"` 을 추가합니다. 버튼을 미리 토글하고 있는 경우, 지원 기술에 적절하게 전달될수 있도록 `.active` 클래스와 `aria-pressed="true"` 을 수동으로 버튼에 추가해야 합니다.
 
 {{< example >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off">Toggle button</button>
@@ -162,7 +162,7 @@ Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre
 
 ### Methods
 
-You can create a button instance with the button constructor, for example:
+버튼 인스턴스는, 예를 들어 버튼의 생성자를 사용해 작성할 수 있습니다.
 
 ```js
 var button = document.getElementById('myButton')
@@ -182,7 +182,7 @@ var bsButton = new bootstrap.Button(button)
         <code>toggle</code>
       </td>
       <td>
-        Toggles push state. Gives the button the appearance that it has been activated.
+        누른 상태를 바꿔줍니다. 버튼이 활성화 된 것처럼 보이게 합니다.
       </td>
     </tr>
     <tr>
@@ -190,13 +190,13 @@ var bsButton = new bootstrap.Button(button)
         <code>dispose</code>
       </td>
       <td>
-        Destroys an element's button. (Removes stored data on the DOM element)
+        버튼 요소를 없앱니다. (DOM 요소에 저장되어 있는 데이타를 삭제)
       </td>
     </tr>
   </tbody>
 </table>
 
-For example, to toggle all buttons
+예를 들어, 모든 버튼을 토글하려면:
 
 ```js
 var buttons = document.querySelectorAll('.btn')

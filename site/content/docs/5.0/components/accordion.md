@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Accordion
-description: Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
+title: Accordion(아코디언)
+description: Collapse(콜랩스) JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언을 만듭니다.
 group: components
 aliases:
   - "/components/"
@@ -11,7 +11,7 @@ toc: true
 
 ## How it works
 
-The accordion uses [collapse]({{< docsref "/components/collapse" >}}) internally to make it collapsible. To render an accordion that's expanded, add the `.open` class on the `.accordion`.
+아코디언은 내부적으로 [collapse]({{< docsref "/components/collapse" >}}) 을 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 랜더링을 하려면, `.accordion` 에 `.open` 클래스를 추가합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -19,7 +19,7 @@ The accordion uses [collapse]({{< docsref "/components/collapse" >}}) internally
 
 ## Example
 
-Click the accordions below to expand/collapse the accordion content.
+아래의 아코디언을 클릭하면, 아코디언의 내용을 접기/펼치기가 가능합니다.
 
 {{< example >}}
 <div class="accordion" id="accordionExample">
@@ -64,7 +64,7 @@ Click the accordions below to expand/collapse the accordion content.
 
 ### Flush
 
-Add `.accordion-flush` to remove the default `background-color`, some borders, and some rounded corners to render accordions edge-to-edge with their parent container.
+`.accordion-flush` 을 추가하여, 기본 `background-color` 와 몇 개의 외곽선, 그리고 몇 개의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge 로 랜더링합니다.
 
 {{< example class="bg-light" >}}
 <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -103,4 +103,4 @@ Add `.accordion-flush` to remove the default `background-color`, some borders, a
 
 ## Accessibility
 
-Please read the [collapse accessibility section]({{< docsref "/components/collapse#accessibility" >}}) for more information.
+자세한 내용은 [collapse accessibility section]({{< docsref "/components/collapse#accessibility" >}}) 을 참고해 주세요.

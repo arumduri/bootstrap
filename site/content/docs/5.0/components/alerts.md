@@ -1,14 +1,13 @@
 ---
 layout: docs
-title: Alerts
-description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+title: Alerts(경고창)
+description: 유연한 경고창으로, 일반적인 사용자 액션에 대해 상황에 맞는 피드백 메세지를 제공합니다.
 group: components
 toc: true
 ---
 
 ## Examples
-
-Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the eight **required** contextual classes (e.g., `.alert-success`). For inline dismissal, use the [alerts JavaScript plugin](#dismissing).
+텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(e.g., `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing) 을 사용합니다.
 
 {{< example >}}
 {{< alerts.inline >}}
@@ -25,7 +24,7 @@ Alerts are available for any length of text, as well as an optional close button
 
 ### Link color
 
-Use the `.alert-link` utility class to quickly provide matching colored links within any alert.
+`.alert-link` 클래스를 사용하면, 경고창에 어울리는 색의 링크를 사용할 수 있습니다.
 
 {{< example >}}
 {{< alerts.inline >}}
@@ -37,8 +36,7 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 {{< /example >}}
 
 ### Additional content
-
-Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+경고창에는 제목, 단락 및 구분선 등과 같은 HTML 요소를 포함할 수도 있습니다.
 
 {{< example >}}
 <div class="alert alert-success" role="alert">
@@ -50,15 +48,14 @@ Alerts can also contain additional HTML elements like headings, paragraphs and d
 {{< /example >}}
 
 ### Dismissing
+경고창의 JavaScript 플러그인을 사용하면, 경고창을 인라인으로 닫을 수 있습니다.
 
-Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
+- JavaScript 플러그인 또는 Bootstrap JavaScript를 가지고 옵니다.
+- [close button]({{< docsref "/components/close-button" >}}) 에 `.alert-dismissible` 의 클래스를 추가하면 경고창의 오른쪽에 여백이 추가되고, 닫기 버튼의 위치가 결정됩니다.
+- 닫기 버튼에 `data-bs-dismiss="alert"` 속성을 추가합니다. 그러면 JavaScript 기능이 트리커 됩니다. 모든 디바이스에서 올바르게 동작시키려면 반드시 `<button>` 요소를 사용해 주세요.
+- 경고창을 닫을 때 애니메이션을 적용하려면, 반드시 `.fade` 와 `.show` 의 클래스를 추가해 주세요.
 
-- Be sure you've loaded the alert plugin, or the compiled Bootstrap JavaScript.
-- Add a [close button]({{< docsref "/components/close-button" >}}) and the `.alert-dismissible` class, which adds extra padding to the right of the alert and positions the close button.
-- On the close button, add the `data-bs-dismiss="alert"` attribute, which triggers the JavaScript functionality. Be sure to use the `<button>` element with it for proper behavior across all devices.
-- To animate alerts when dismissing them, be sure to add the `.fade` and `.show` classes.
-
-You can see this in action with a live demo:
+실시간 데모로 확인할 수 있습니다:
 
 {{< example >}}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -68,14 +65,13 @@ You can see this in action with a live demo:
 {{< /example >}}
 
 {{< callout warning >}}
-When an alert is dismissed, the element is completely removed from the page structure. If a keyboard user dismisses the alert using the close button, their focus will suddenly be lost and, depending on the browser, reset to the start of the page/document. For this reason, we recommend including additional JavaScript that listens for the `closed.bs.alert` event and programmatically sets `focus()` to the most appropriate location in the page. If you're planning to move focus to a non-interactive element that normally does not receive focus, make sure to add `tabindex="-1"` to the element.
+경고창이 해제되면 해당 요소는 페이지 구조에서 완전히 제거됩니다. 키보드 사용자가 닫기 버튼을 통해 경고창을 해제하면 포커스가 갑자기 사라지고 브라우저에 따라서는 페이지나 문서의 선두에 리셋됩니다. 그래서 `closed.bs.alert` 이벤트를 리슨하고 `focus()` 를 페이지 내의 가장 적절한 위치에 프로그램적으로 설정하는 JavaScript 를 추가할 것을 권장합니다. 보통은 포커스를 받지 않는 비인터랙티브한 요소에 포커스를 이동시키는 경우는, 그 요소에 `tabindex="-1"` 을 추가하도록 해 주세요.
 {{< /callout >}}
 
 ## JavaScript behavior
 
 ### Triggers
-
-Enable dismissal of an alert via JavaScript:
+JavaScript 를 통해 경고창을 닫습니다.
 
 ```js
 var alertList = document.querySelectorAll('.alert')
@@ -84,24 +80,24 @@ alertList.forEach(function (alert) {
 })
 ```
 
-Or with `data` attributes on a button **within the alert**, as demonstrated above:
+혹은, 위에 설명한대로 **경고창 안의** 닫기 버튼에 `data` 속성을:
 
 ```html
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 ```
 
-Note that closing an alert will remove it from the DOM.
+경고창을 닫으면 DOM 에서 제거되는 점을 주의하세요.
 
 ### Methods
 
-You can create an alert instance with the alert constructor, for example:
+경고창의 생성자를 사용해 경고창의 인스턴스를 만들 수 있습니다. 예를 들어:
 
 ```js
 var myAlert = document.getElementById('myAlert')
 var bsAlert = new bootstrap.Alert(myAlert)
 ```
 
-This makes an alert listen for click events on descendant elements which have the `data-bs-dismiss="alert"` attribute. (Not necessary when using the data-api's auto-initialization.)
+이렇게 하면 `data-bs-dismiss="alert"` 의 속성이 있는 하위 요소에서 클릭 이벤트를 상위의 경고창에서 알수 있습니다. (data-api 의 자동 초기화를 사용할 때에는 필요 없습니다.)
 
 <table class="table">
   <thead>
@@ -116,7 +112,7 @@ This makes an alert listen for click events on descendant elements which have th
         <code>close</code>
       </td>
       <td>
-        Closes an alert by removing it from the DOM. If the <code>.fade</code> and <code>.show</code> classes are present on the element, the alert will fade out before it is removed.
+        DOM 에서 제거되고 경고창을 닫습니다. <code>.fade</code> 와 <code>.show</code> 클래스가 요소에 있으면, 경고창은 제거 되기전에 사라집니다.
       </td>
     </tr>
     <tr>
@@ -124,7 +120,7 @@ This makes an alert listen for click events on descendant elements which have th
         <code>dispose</code>
       </td>
       <td>
-        Destroys an element's alert. (Removes stored data on the DOM element)
+        경고창을 없앱니다. (DOM 요소에 저장되어 있는 데이타를 삭제)
       </td>
     </tr>
     <tr>
@@ -132,7 +128,7 @@ This makes an alert listen for click events on descendant elements which have th
         <code>getInstance</code>
       </td>
       <td>
-        Static method which allows you to get the alert instance associated to a DOM element, you can use it like this: <code>bootstrap.Alert.getInstance(alert)</code>
+        DOM 요소와 관련된 경고창의 인스턴스를 가져오는 Static 메소드입니다. <br />사용법 : <code>bootstrap.Alert.getInstance(alert)</code>
       </td>
     </tr>
   </tbody>
@@ -145,8 +141,7 @@ alert.close()
 ```
 
 ### Events
-
-Bootstrap's alert plugin exposes a few events for hooking into alert functionality.
+Bootstrap 경고창 플러그인은, 경고창 기능에 연결하기 위한 몇 가지의 이벤트를 제공합니다.
 
 <table class="table">
   <thead>
@@ -159,13 +154,13 @@ Bootstrap's alert plugin exposes a few events for hooking into alert functionali
     <tr>
       <td><code>close.bs.alert</code></td>
       <td>
-        Fires immediately when the <code>close</code> instance method is called.
+        <code>close</code> 인스턴스 메소드가 호출되면 바로 발생합니다.
       </td>
     </tr>
     <tr>
       <td><code>closed.bs.alert</code></td>
       <td>
-        Fired when the alert has been closed and CSS transitions have completed.
+        경고창이 닫히고, CSS 트렌지션이 완료되면 발생합니다.
       </td>
     </tr>
   </tbody>

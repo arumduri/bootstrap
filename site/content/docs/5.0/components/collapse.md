@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Collapse
-description: Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
+title: Collapse(콜랩스)
+description: 몇 가지의 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체의 컨텐츠의 표시를 바꿉니다.
 group: components
 toc: true
 ---
 
 ## How it works
 
-The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the `height` from its current value to `0`. Given how CSS handles animations, you cannot use `padding` on a `.collapse` element. Instead, use the class as an independent wrapping element.
+Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에 사용됩니다. 버튼 및 앵커는, 토글 하는 특정의 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 `height` 가 현재의 값에서 `0` 으로 애니메이션 합니다. CSS 가 애니메이션을 어떻게 다룰지 감안하면, `.collapse` 요소에 `padding` 을 사용할 수 없습니다. 대신, 이 클래스를 독립된 래핑 요소로 사용합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -16,13 +16,13 @@ The collapse JavaScript plugin is used to show and hide content. Buttons or anch
 
 ## Example
 
-Click the buttons below to show and hide another element via class changes:
+아래의 버튼을 클릭하면, 클래스 변경에 따라 다른 요소의 표시 맟 숨김을 전환할 수 있습니다.
 
-- `.collapse` hides content
-- `.collapsing` is applied during transitions
-- `.collapse.show` shows content
+- `.collapse` 컨텐츠를 숨깁니다.
+- `.collapsing` 이동중에 적용됩니다.
+- `.collapse.show` 컨텐츠를 표시합니다.
 
-You can use a link with the `href` attribute, or a button with the `data-bs-target` attribute. In both cases, the `data-bs-toggle="collapse"` is required.
+`href` 속성을 가진 링크, 혹은 `data-bs-target` 속성을 가진 버튼을 사용할 수 있습니다. 양쪽 다, `data-bs-toggle="collapse"` 가 필요합니다.
 
 {{< example >}}
 <p>
@@ -42,8 +42,8 @@ You can use a link with the `href` attribute, or a button with the `data-bs-targ
 
 ## Multiple targets
 
-A `<button>` or `<a>` can show and hide multiple elements by referencing them with a selector in its `href` or `data-bs-target` attribute.
-Multiple `<button>` or `<a>` can show and hide an element if they each reference it with their `href` or `data-bs-target` attribute
+`<button>` 이나 `<a>` 는, 그 `href` 나 `data-bs-target` 속성의 셀렉터로 여러 요소를 참조 하는 것으로, 여러 개의 요소를 표시하거나 숨기거나 할 수 있습니다.
+여러 개의 `<button>` 이나 `<a>` 는, 각각의 `href` 나 `data-bs-target` 속성으로 요소를 참조하고 있는 경우, 어느 요소를 표시하거나 숨기거나 할 수 있습니다.
 
 {{< example >}}
 <p>
@@ -71,31 +71,31 @@ Multiple `<button>` or `<a>` can show and hide an element if they each reference
 
 ## Accessibility
 
-Be sure to add `aria-expanded` to the control element. This attribute explicitly conveys the current state of the collapsible element tied to the control to screen readers and similar assistive technologies. If the collapsible element is closed by default, the attribute on the control element should have a value of `aria-expanded="false"`. If you've set the collapsible element to be open by default using the `show` class, set `aria-expanded="true"` on the control instead. The plugin will automatically toggle this attribute on the control based on whether or not the collapsible element has been opened or closed (via JavaScript, or because the user triggered another control element also tied to the same collapsible element). If the control element's HTML element is not a button (e.g., an `<a>` or `<div>`), the attribute `role="button"` should be added to the element.
+컨트롤 요소에 `aria-expanded` 를 반드시 추가해 주세요. 이 속성은 컨트롤에 연결된 접을 수 있는 요소의 현재 상태를 스크린 리더나 동일한 지원 기술에 명시적으로 전달합니다. 접을 수 있는 요소가 기본적으로 닫혀있는 경우, 컨트롤 요소의 속성 값은 `aria-expanded="false"` 이어야 합니다. `show` 클래스를 사용해 접을 수 있는 요소를 기본으로 열도록 설정한 경우에는, 대신 컨트롤에 `aria-expanded="true"` 를 설정해 주십시오. 플러그인은 접을 수 있는 요소가 열려 있는지 닫혀 있는 지에 따라(JavaScript 를 통해 사용자가 같은 접을 수 있는 요소와 관련된 별도의 요소를 트리거했기 때문에) 컨트롤 상에서 이 속성을 자동으로 바꿉니다. 컨트롤 요소의 HTML 요소가 버튼이 아닌 경우(예를 들어 `<a>` 나 `<div>` 등) 요소에 `role="button"` 속성을 추가해야 합니다.
 
-If your control element is targeting a single collapsible element – i.e. the `data-bs-target` attribute is pointing to an `id` selector – you should add the `aria-controls` attribute to the control element, containing the `id` of the collapsible element. Modern screen readers and similar assistive technologies make use of this attribute to provide users with additional shortcuts to navigate directly to the collapsible element itself.
+컨트롤 요소가 하나의 접을 수 있는 요소를 타겟으로 하고 있는 경우, 즉 `data-bs-target` 속성이 `id` 셀렉터를 가르키는 경우, 접을 수 있는  요소의 `id` 를 한 `aria-controls` 속성을 컨트롤 요소에 추가하지 않으면 안됩니다. 최근 스크린 리더 및 지원 기술에서는 이 속성을 이용하여 접을 수 있는 요소 자체로 직접 이동하기 위한 단축키를 사용자에게 제공하고 있습니다.
 
-Note that Bootstrap's current implementation does not cover the various *optional* keyboard interactions described in the [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) - you will need to include these yourself with custom JavaScript.
+Bootstrap 의 현재 구현은, [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) 에 설명되어 있는 여러가지 *optional* 키보드 인터랙션을 커버하고 있지 않음을 주의해 주십시오. - 커스텀 JavaScript 로 이것들을 직접 포함시켜야 합니다.
 
 ## Usage
 
-The collapse plugin utilizes a few classes to handle the heavy lifting:
+collapse 플러그인은, 여러 클래스를 이용하여 중요한 작업을 처리합니다.
 
-- `.collapse` hides the content
-- `.collapse.show` shows the content
-- `.collapsing` is added when the transition starts, and removed when it finishes
+- `.collapse` 컨텐츠를 숨김
+- `.collapse.show` 컨텐츠를 표시
+- `.collapsing` 은 트랜지션이 시작시 추가되어, 종료시 삭제 됨
 
-These classes can be found in `_transitions.scss`.
+이들의 클래스는 `_transitions.scss` 에 있습니다.
 
 ### Via data attributes
 
-Just add `data-bs-toggle="collapse"` and a `data-bs-target` to the element to automatically assign control of one or more collapsible elements. The `data-bs-target` attribute accepts a CSS selector to apply the collapse to. Be sure to add the class `collapse` to the collapsible element. If you'd like it to default open, add the additional class `show`.
+요소에 `data-bs-toggle="collapse"` 와 `data-bs-target` 만 추가하면 접을 수 있는 요소의 제어를 자동으로 할당할 수 있습니다. `data-bs-target` 속성은 접을 수 있는 CSS 셀렉터를 지정합니다. 접을 수 있는 요소에는 반드시 `collapse` 클래스를 추가해야 합니다. 기본적으로 열린 상태를 만드려면 `show` 클래스를 추가합니다.
 
-To add accordion-like group management to a collapsible area, add the data attribute `data-bs-parent="#selector"`. Refer to the demo to see this in action.
+접을 수 있는 영역에 accordion(아코디언) 같은 그룹 관리를 추가하려면, 데이터 속성 `data-bs-parent="#selector"` 를 추가합니다. 데모를 참조해 주세요.
 
 ### Via JavaScript
 
-Enable manually with:
+수동으로 유효하게 하는 경우:
 
 ```js
 var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
@@ -106,7 +106,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-parent=""`.
+옵션은 JavaScript 나 데이터 속성으로 줄 수 있습니다. 데이터 속성의 경우는 `data-bs-parent=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -122,13 +122,13 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td><code>parent</code></td>
       <td>selector | jQuery object | DOM element </td>
       <td><code>false</code></td>
-      <td>If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the <code>card</code> class). The attribute has to be set on the target collapsible area.</td>
+      <td>parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다(기존 accordion(아코디언) 동작과 비슷합니다. - 이것은 <code>card</code> 클래스에 의존합니다). 속성은 접을 수 있는 타겟 영역으로 설정해야 합니다.</td>
     </tr>
     <tr>
       <td><code>toggle</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Toggles the collapsible element on invocation</td>
+      <td>호출 시에 접을 수 있는 요소를 토글합니다.</td>
     </tr>
   </tbody>
 </table>
@@ -139,9 +139,9 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-Activates your content as a collapsible element. Accepts an optional options `object`.
+접을 수 있는 요소로서 컨텐츠를 활성화합니다. 옵션의 `object` 를 받습니다.
 
-You can create a collapse instance with the constructor, for example:
+컨스트럭터를 사용해, collapse 인스턴스를 작성할 수 있습니다:
 
 ```js
 var myCollapse = document.getElementById('myCollapse')
@@ -160,30 +160,30 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
   <tbody>
     <tr>
       <td><code>toggle</code></td>
-      <td>Toggles a collapsible element to shown or hidden. <strong>Returns to the caller before the collapsible element has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.collapse</code> or <code>hidden.bs.collapse</code> event occurs).</td>
+      <td>접을 수 있는 요소의 표시/숨김을 바꿉니다. <strong>접을 수 있는 요소가 실제로 표시 혹은 숨겨지기 전에 호출되어 원래대로 돌아갑니다.</strong> (i.e. before the <code>shown.bs.collapse</code> or <code>hidden.bs.collapse</code> event occurs).</td>
     </tr>
     <tr>
       <td><code>show</code></td>
-      <td>Shows a collapsible element. <strong>Returns to the caller before the collapsible element has actually been shown</strong> (e.g., before the <code>shown.bs.collapse</code> event occurs). </td>
+      <td>접을 수 있는 요소를 표시합니다. <strong>접을 수 있는 요소가 나타나기 전에 호출하여 원래대로 돌아갑니다</strong> (e.g., before the <code>shown.bs.collapse</code> event occurs). </td>
     </tr>
     <tr>
       <td><code>hide</code></td>
-      <td>Hides a collapsible element. <strong>Returns to the caller before the collapsible element has actually been hidden</strong> (e.g., before the <code>hidden.bs.collapse</code> event occurs).</td>
+      <td>접을 수 있는 요소를 숨깁니다. <strong>접을 수 있는 요소가 실제로 숨겨지기 전에 호출하여 원래 위치로 돌아갑니다</strong> (e.g., before the <code>hidden.bs.collapse</code> event occurs).</td>
     </tr>
     <tr>
       <td><code>dispose</code></td>
-      <td>Destroys an element's collapse. (Removes stored data on the DOM element)</td>
+      <td>요소의 collapse 을 처리합니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다)</td>
     </tr>
     <tr>
       <td><code>getInstance</code></td>
-      <td>Static method which allows you to get the collapse instance associated with a DOM element.</td>
+      <td>DOM 요소와 관련된 collapse 인스턴스를 가져오는 Static 메소드입니다.</td>
     </tr>
   </tbody>
 </table>
 
 ### Events
 
-Bootstrap's collapse class exposes a few events for hooking into collapse functionality.
+Bootstrap 의 collapse 클래스는, collapse 기능을 후킹하기 위한 몇 가지 이벤트를 공개하고 있습니다.
 
 <table class="table">
   <thead>
@@ -195,19 +195,19 @@ Bootstrap's collapse class exposes a few events for hooking into collapse functi
   <tbody>
     <tr>
       <td><code>show.bs.collapse</code></td>
-      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+      <td>이 이벤트는 <code>show</code> 인스턴스 메소드가 호출될 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>shown.bs.collapse</code></td>
-      <td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
+      <td>이 이벤트는 collapse 요소가 사용자에게 보여질 때 발생합니다(CSS 트랜지션이 완료되는 것을 기다립니다).</td>
     </tr>
     <tr>
       <td><code>hide.bs.collapse</code></td>
-      <td>This event is fired immediately when the <code>hide</code> method has been called.</td>
+      <td>이 이벤트는 <code>hide</code> 메소드가 호출될 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.collapse</code></td>
-      <td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
+      <td>이 이벤트는 collapse 요소가 사용자에게 숨겨졌을 때 발생합니다(CSS 트랜지션이 완료될 때까지 기다립니다).</td>
     </tr>
   </tbody>
 </table>

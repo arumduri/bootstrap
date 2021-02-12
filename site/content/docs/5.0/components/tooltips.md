@@ -1,34 +1,34 @@
 ---
 layout: docs
-title: Tooltips
-description: Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage.
+title: Tooltips(툴팁)
+description: CSS3 를 사용한 애니메이션이나 data-bs-attributes 를 사용한 CSS 와 JavaScript 로 커스텀 Bootstrap 의 툴팁을 추가하기 위한 문서와 예시입니다.
 group: components
 toc: true
 ---
 
 ## Overview
 
-Things to know when using the tooltip plugin:
+툴팁 플러그인을 사용할 때 알아두어야 할 점:
 
-- Tooltips rely on the 3rd party library [Popper](https://popper.js.org/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before bootstrap.js or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper in order for tooltips to work!
-- Tooltips are opt-in for performance reasons, so **you must initialize them yourself**.
-- Tooltips with zero-length titles are never displayed.
-- Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).
-- Triggering tooltips on hidden elements will not work.
-- Tooltips for `.disabled` or `disabled` elements must be triggered on a wrapper element.
-- When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use `white-space: nowrap;` on your `<a>`s to avoid this behavior.
-- Tooltips must be hidden before their corresponding elements have been removed from the DOM.
-- Tooltips can be triggered thanks to an element inside a shadow DOM.
+- 툴팁의 배치는 [Popper](https://popper.js.org/)  에 의존하고 있습니다. bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 을 쓰거나, 툴팁을 동작시키기 위해 팝오버를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해야 합니다.
+- 툴팁은 퍼포먼스를 위해 opt-in 되어 있기 때문에 **스스로 초기화를 해야 합니다.**
+- 길이가 0 의 타이틀을 가진 툴팁은 표시되지 않습니다.
+- 더 복잡한 컴포넌트(input group, button groups 등)의 랜더링 문제를 피하기 위해 `container: 'body'` 를 지정해 주십시오.
+- 숨겨진 요소에서 툴팁을 트리거해도 제 기능을 하지 않습니다.
+- `.disabled` 나 `disabled` 요소의 툴팁은 그 위(바깥) 요소에서 트리거해야 합니다.
+- 여러 라인에 걸쳐 있는 하이퍼링크에서 트리거된 툴팁은 중앙에 배치됩니다. 이 동작을 피하기 위해서는 `<a>` 에 `white-space: nowrap;` 을 사용해 주십시오.
+- 툴팁은 대응 요소가 DOM 에서 삭제되기 전에 숨겨야 합니다.
+- 툴팁은 shadow DOM 내의 요소 덕분에 트리거할 수 있습니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-Got all that? Great, let's see how they work with some examples.
+몇 가지 예를 들어보겠습니다.
 
 ## Example: Enable tooltips everywhere
 
-One way to initialize all tooltips on a page would be to select them by their `data-bs-toggle` attribute:
+페이지 상의 모든 툴팁을 초기화 하는 방법 중 하나는 `data-bs-toggle` 속성으로 선택하는 것입니다:
 
 ```js
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -39,14 +39,14 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 ## Examples
 
-Hover over the links below to see tooltips:
+아래 링크에 커서를 맞추면 툴팁이 나타납니다:
 
 <div class="bd-example tooltip-demo">
   <p class="muted">Tight pants next level keffiyeh <a href="#" data-bs-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-bs-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-bs-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-bs-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
   </p>
 </div>
 
-Hover over the buttons below to see the four tooltips directions: top, right, bottom, and left. Directions are mirrored when using Bootstrap in RTL.
+아래 버튼에 커서를 맞추면 top, right, bottom, left의 4개 툴팁이 나타납니다: RTL 에서 Bootstrap 를 사용하는 경우 방향은 반대가 됩니다.
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
@@ -73,7 +73,7 @@ Hover over the buttons below to see the four tooltips directions: top, right, bo
 </button>
 ```
 
-And with custom HTML added:
+그리고 커스텀 HTML 을 추가할 수 있습니다:
 
 ```html
 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
@@ -81,7 +81,7 @@ And with custom HTML added:
 </button>
 ```
 
-With an SVG:
+SVG 와 함께:
 
 <div class="bd-example tooltip-demo">
   <a href="#" data-bs-toggle="tooltip" title="Default tooltip">
@@ -94,9 +94,9 @@ With an SVG:
 
 ## Usage
 
-The tooltip plugin generates content and markup on demand, and by default places tooltips after their trigger element.
+툴팁 플러그인은 필요에 따라 컨텐츠와 마크업을 생성하고 기본 값으로는 트리거 요소 뒤에 툴팁을 배치합니다.
 
-Trigger the tooltip via JavaScript:
+JavaScript 를 사용해 툴팁을 트리거 합니다:
 
 ```js
 var exampleEl = document.getElementById('example')
@@ -106,7 +106,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, options)
 {{< callout warning >}}
 ##### Overflow `auto` and `scroll`
 
-Tooltip position attempts to automatically change when a parent container has `overflow: auto` or `overflow: scroll` like our `.table-responsive`, but still keeps the original placement's positioning. To resolve, set the `boundary` option to anything other than default value, `'scrollParent'`, such as `'window'`:
+툴팁의 위치는 부모 컨테이너에 `.table-responsive` 처럼 `overflow: auto` 나 `overflow: scroll` 이 있는 경우 자동으로 변경되지만, 원래 배치 위치는 유지됩니다. 이를 해결하려면 `boundary` 옵션을 기본 값 `'scrollParent'` 이외의 값, 예를 들어 `'window'` 같은 것을 설정합니다:
 
 ```js
 var exampleEl = document.getElementById('example')
@@ -118,12 +118,12 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 ### Markup
 
-The required markup for a tooltip is only a `data` attribute and `title` on the HTML element you wish to have a tooltip. The generated markup of a tooltip is rather simple, though it does require a position (by default, set to `top` by the plugin).
+툴팁에 필요한 마크업은 툴팁을 작성하고자 하는 HTML 요소의 `data` 속성과 `title` 뿐입니다. 툴팁 마크업은 단순하지만 위치를 지정해야 합니다 (플러그인에 의해 기본 `top` 이 설정되어 있습니다).
 
 {{< callout warning >}}
 ##### Making tooltips work for keyboard and assistive technology users
 
-You should only add tooltips to HTML elements that are traditionally keyboard-focusable and interactive (such as links or form controls). Although arbitrary HTML elements (such as `<span>`s) can be made focusable by adding the `tabindex="0"` attribute, this will add potentially annoying and confusing tab stops on non-interactive elements for keyboard users, and most assistive technologies currently do not announce the tooltip in this situation. Additionally, do not rely solely on `hover` as the trigger for your tooltip, as this will make your tooltips impossible to trigger for keyboard users.
+툴팁을 추가해야 하는 것은 키보드 포커스가 가능하고 인터랙티브한 HTML 요소(링크나 폼 컨트롤 등)뿐 입니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가하여 포커스 가능하게 할 수 있지만 이는 키보드 사용자에게는 비인터랙티브적인 요소의 탭 멈춤이 추가되어 버리기 때문에 키보드 사용자를 곤란하게 하거나 혼란스럽게 할 수 있으며 현재 대부분의 스크린 리더는 이러한 상황에서 툴팁을 제공하지 않습니다. 게다가 툴팁의 트리거로서 `hover` 에만 의지해서는 안됩니다. 이것은 키보드 사용자가 툴팁을 트리거 할 수 없게 되기 때문입니다.
 {{< /callout >}}
 
 ```html
@@ -141,7 +141,7 @@ You should only add tooltips to HTML elements that are traditionally keyboard-fo
 
 ### Disabled elements
 
-Elements with the `disabled` attribute aren't interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you'll want to trigger the tooltip from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`, and override the `pointer-events` on the disabled element.
+`Disabled` 속성을 갖는 요소는 인터랙티브 하지 않습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁(혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 `<div>` 나 `<span>` 으로 툴팁을 트리거하여, 이상적으로 `tabindex="0"` 으로 키보드 포커스 가능하게 하고, disabled 요소인 `pointer-events` 를 오버라이드 해야 합니다.
 
 <div class="tooltip-demo">
 {{< example >}}
@@ -153,10 +153,10 @@ Elements with the `disabled` attribute aren't interactive, meaning users cannot 
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`.
+옵션은 data 속성 또는 JavaScript 로 줄 수 있습니다. data 속성의 경우는 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
 
 {{< callout warning >}}
-Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` options cannot be supplied using data attributes.
+보안상의 이유로, `sanitize`, `sanitizeFn`, `allowList` 옵션을 data 속성으로 지정할 수 없다는 것에 주의해 주세요.
 {{< /callout >}}
 
 <table class="table">
@@ -173,14 +173,14 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
       <td><code>animation</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Apply a CSS fade transition to the tooltip</td>
+      <td>툴팁에 CSS fade 트렌지션을 적용합니다.</td>
     </tr>
     <tr>
       <td><code>container</code></td>
       <td>string | element | false</td>
       <td><code>false</code></td>
       <td>
-        <p>Appends the tooltip to a specific element. Example: <code>container: 'body'</code>. This option is particularly useful in that it allows you to position the tooltip in the flow of the document near the triggering element - which will prevent the tooltip from floating away from the triggering element during a window resize.</p>
+        <p>특정 요소에 툴팁을 추가합니다. 예를 들어: <code>container: 'body'</code>. 이 옵션은 문서 흐름 안에서 툴팁을 트리거 요소 근처에 배치할 수 있어 특히 편리합니다.</p>
       </td>
     </tr>
     <tr>
@@ -188,9 +188,9 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
       <td>number | object</td>
       <td><code>0</code></td>
       <td>
-        <p>Delay showing and hiding the tooltip (ms) - does not apply to manual trigger type</p>
-        <p>If a number is supplied, delay is applied to both hide/show</p>
-        <p>Object structure is: <code>delay: { "show": 500, "hide": 100 }</code></p>
+        <p>툴팁 표시/숨김 지연시간(ms) - 수동 트리거 타입에는 적용되지 않습니다.</p>
+        <p>수치를 지정한 경우는 숨김/표시 모두 지연이 적용됩니다.</p>
+        <p>Object 구조는: <code>delay: { "show": 500, "hide": 100 }</code></p>
       </td>
     </tr>
     <tr>
@@ -198,9 +198,9 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
       <td>boolean</td>
       <td><code>false</code></td>
       <td>
-        <p>Allow HTML in the tooltip.</p>
-        <p>If true, HTML tags in the tooltip's <code>title</code> will be rendered in the tooltip. If false, <code>innerText</code> property will be used to insert content into the DOM.</p>
-        <p>Use text if you're worried about XSS attacks.</p>
+        <p>툴팁내의 HTML 을 허용합니다.</p>
+        <p>true 의 경우, 툴팁의 <code>title</code> 에 있는 HTML 태그가 툴팁에 나타납니다. false 의 경우는, <code>innerText</code> 속성이 DOM 에 컨텐츠를 삽입하기 위해 사용됩니다.</p>
+        <p>XSS 공격이 걱정된다면 텍스트를 사용하세요.</p>
       </td>
     </tr>
     <tr>
@@ -208,25 +208,25 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
       <td>string | function</td>
       <td><code>'top'</code></td>
       <td>
-        <p>How to position the tooltip - auto | top | bottom | left | right.<br>When <code>auto</code> is specified, it will dynamically reorient the tooltip.</p>
-        <p>When a function is used to determine the placement, it is called with the tooltip DOM node as its first argument and the triggering element DOM node as its second. The <code>this</code> context is set to the tooltip instance.</p>
+        <p>툴팁 배치 방법 - auto | top | bottom | left | right.<br><code>auto</code> 를 지정하면 동적으로 툴팁의 방향을 바꿉니다.</p>
+        <p>배치를 결정하기 위해 함수를 사용할 경우 툴팁 DOM 노드를 제 1인수로, 트리거 요소 DOM 노드를 제2인수로 하여 호출됩니다. <code>this</code> 콘텍스트에는 툴팁의 인스턴스가 설정됩니다.</p>
       </td>
     </tr>
     <tr>
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>If a selector is provided, tooltip objects will be delegated to the specified targets. In practice, this is used to also apply tooltips to dynamically added DOM elements (<code>jQuery.on</code> support). See <a href="{{< param repo >}}/issues/4215">this</a> and <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a>.</td>
+      <td>셀렉터가 제공되는 경우 툴팁 오브젝트는 지정된 타겟으로 이양됩니다. 실제로는 동적으로 추가된 DOM 요소에 툴팁을 적용하기 위해서도 사용됩니다.(<code>jQuery.on</code> 지원). <a href="{{< param repo >}}/issues/4215">this</a> 와 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>template</code></td>
       <td>string</td>
       <td><code>'&lt;div class="tooltip" role="tooltip"&gt;&lt;div class="tooltip-arrow"&gt;&lt;/div&gt;&lt;div class="tooltip-inner"&gt;&lt;/div&gt;&lt;/div&gt;'</code></td>
       <td>
-        <p>Base HTML to use when creating the tooltip.</p>
-        <p>The tooltip's <code>title</code> will be injected into the <code>.tooltip-inner</code>.</p>
-        <p><code>.tooltip-arrow</code> will become the tooltip's arrow.</p>
-        <p>The outermost wrapper element should have the <code>.tooltip</code> class and <code>role="tooltip"</code>.</p>
+        <p>툴팁을 작성할때 사용하는 기본.</p>
+        <p>툴팁의 <code>title</code> 은 <code>.tooltip-inner</code> 로 주입됩니다.</p>
+        <p><code>.tooltip-arrow</code> 가 툴팁의 화살표가 됩니다.</p>
+        <p>가장 바깥쪽 요소는 <code>.tooltip</code> 과 <code>role="tooltip"</code> 를 가지고 있어야 합니다.</p>
       </td>
     </tr>
     <tr>
@@ -234,8 +234,8 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
       <td>string | element | function</td>
       <td><code>''</code></td>
       <td>
-        <p>Default title value if <code>title</code> attribute isn't present.</p>
-        <p>If a function is given, it will be called with its <code>this</code> reference set to the element that the tooltip is attached to.</p>
+        <p><code>title</code> 속성이 존재하지 않는 경우 기본 타이틀 값.</p>
+        <p>함수가 주어졌을 경우 그 <code>this</code> 참조가 툴팁이 첨부되어 있는 요소로 설정된 상태로 호출됩니다.</p>
       </td>
     </tr>
     <tr>
@@ -243,56 +243,55 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
       <td>string</td>
       <td><code>'hover focus'</code></td>
       <td>
-        <p>How tooltip is triggered - click | hover | focus | manual. You may pass multiple triggers; separate them with a space.</p>
-        <p><code>'manual'</code> indicates that the tooltip will be triggered programmatically via the <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> and <code>.tooltip('toggle')</code> methods; this value cannot be combined with any other trigger.</p>
-        <p><code>'hover'</code> on its own will result in tooltips that cannot be triggered via the keyboard, and should only be used if alternative methods for conveying the same information for keyboard users is present.</p>
+        <p>툴팁의 트리거 방법 - click | hover | focus | manual. 여러 트리거를 전달할 수 있습니다.</p>
+        <p><code>'manual'</code> 은 <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> 그리고 <code>.tooltip('toggle')</code> 메소드를 통해 프로그램으로 트리거 되는 것을 나타냅니다. 이 값은 다른 트리거와 조합할 수 없습니다.</p>
+        <p><code>'hover'</code> 를 단독으로 사용하면, 키보드를 통해 트리거 할 수 없는 툴팁이 되며, 키보드 사용자에게 동일한 정보를 전달하기 위한 대체수단이 존재할 경우에만 사용해야 합니다.</p>
       </td>
     </tr>
     <tr>
       <td><code>fallbackPlacement</code></td>
       <td>null | array</td>
       <td><code>null</code></td>
-      <td>Allow to specify which position Popper will use on fallback. For more information refer to
-      Popper's <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a></td>
+      <td>Fallback 시 팝오버가 어떤 위치를 사용하는지 지정할 수 있습니다. 자체한 것은 팝오버의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a> 를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>Overflow constraint boundary of the tooltip. By default it's <code>'clippingParents'</code> and can accept an HTMLElement reference (JavaScript only). For more information refer to Popper's <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">preventOverflow docs</a>.</td>
+      <td>툴팁의 Overflow 제약경계. 기본 값은 <code>'clippingParents'</code> 로 HTMLElement 참조를 받을 수 있습니다.(JavaScript only). 자세한 것은 팝오버의 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">preventOverflow docs</a> 를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>customClass</code></td>
       <td>string | function</td>
       <td><code>''</code></td>
       <td>
-        <p>Add classes to the tooltip when it is shown. Note that these classes will be added in addition to any classes specified in the template. To add multiple classes, separate them with spaces: <code>'class-1 class-2'</code>.</p>
-        <p>You can also pass a function that should return a single string containing additional class names.</p>
+        <p>툴팁이 표시될 때 클래스를 추가합니다. 이 클래스는 템플릿에서 지정뙨 클래스에 추가되어 추가되므로 주의해 주십시오. 여러 개의 클래스를 추가하려면 공백으로 구분해 주세요: <code>'class-1 class-2'</code></p>
+        <p>추가 클래스 이름을 포함한 단일 문자열을 반환하는 함수를 줄 수도 있습니다.</p>
       </td>
     </tr>
     <tr>
       <td><code>sanitize</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Enable or disable the sanitization. If activated <code>'template'</code> and <code>'title'</code> options will be sanitized.</td>
+      <td>sanitization 을 유효화 하거나 무효화합니다. 유효로 했을 경우 <code>'template'</code> 와  <code>'title'</code> 옵션은 sanitize 됩니다.</td>
     </tr>
     <tr>
       <td><code>allowList</code></td>
       <td>object</td>
       <td><a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">Default value</a></td>
-      <td>Object which contains allowed attributes and tags</td>
+      <td>허용된 속성과 태그를 포함하는 Object</td>
     </tr>
     <tr>
       <td><code>sanitizeFn</code></td>
       <td>null | function</td>
       <td><code>null</code></td>
-      <td>Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization.</td>
+      <td>여기세어는 독자적인 sanitize 함수를 지정할 수 있습니다. 이것은 sanitize 를 실행하기 위해 전용 라이브러리를 사용하고 싶은 경우에 편리합니다.</td>
     </tr>
     <tr>
       <td><code>popperConfig</code></td>
       <td>null | object</td>
       <td><code>null</code></td>
-      <td>To change Bootstrap's default Popper config, see <a href="https://popper.js.org/docs/v1/#Popper.Defaults">Popper's configuration</a></td>
+      <td>Bootstrap 기본 팝오버의 설정을 변경하려면 <a href="https://popper.js.org/docs/v1/#Popper.Defaults">Popper's configuration</a> 를 참조해 주세요.</td>
     </tr>
   </tbody>
 </table>
@@ -300,7 +299,7 @@ Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` opt
 {{< callout info >}}
 #### Data attributes for individual tooltips
 
-Options for individual tooltips can alternatively be specified through the use of data attributes, as explained above.
+개별 툴팁 옵션은 위에서 설명한 것처럼 data 속성을 사용해 지정할 수도 있습니다.
 {{< /callout >}}
 
 ### Methods
@@ -311,7 +310,7 @@ Options for individual tooltips can alternatively be specified through the use o
 
 #### show
 
-Reveals an element's tooltip. **Returns to the caller before the tooltip has actually been shown** (i.e. before the `shown.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. Tooltips with zero-length titles are never displayed.
+요소의 툴팁을 표시합니다. **툴팁이 실제로 나타나기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 "수동" 트리거로 간주합니다. 길이가 0 을 가진 타이틀은 절대 표시되지 않습니다.
 
 ```js
 tooltip.show()
@@ -319,7 +318,7 @@ tooltip.show()
 
 #### hide
 
-Hides an element's tooltip. **Returns to the caller before the tooltip has actually been hidden** (i.e. before the `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip.
+요소의 툴팁을 숨깁니다. **툴팁이 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 "수동" 트리거로 간주됩니다.
 
 ```js
 tooltip.hide()
@@ -327,7 +326,7 @@ tooltip.hide()
 
 #### toggle
 
-Toggles an element's tooltip. **Returns to the caller before the tooltip has actually been shown or hidden** (i.e. before the `shown.bs.tooltip` or `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip.
+요소의 툴팁을 토글합니다. **툴팁이 실제로 표시되거나 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.tooltip` 혹은 `hidden.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 "수동" 트리거로 간주됩니다.
 
 ```js
 tooltip.toggle()
@@ -335,7 +334,7 @@ tooltip.toggle()
 
 #### dispose
 
-Hides and destroys an element's tooltip (Removes stored data on the DOM element). Tooltips that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements.
+요소의 툴팁을 숨기고 업앱니다(DOM 요소에 보존되어 있는 데이타를 삭제). 위임을 사용하는 툴팁([the `selector` option](#options) 을 사용하여 작성된 것)은 후손의 트리거 요소상에서 개별적으로 없앨수 없습니다.
 
 ```js
 tooltip.dispose()
@@ -343,7 +342,7 @@ tooltip.dispose()
 
 #### enable
 
-Gives an element's tooltip the ability to be shown. **Tooltips are enabled by default.**
+요소의 툴팁을 표시하는 기능을 부여합니다. **툴팁은 기본적으로 활성화되어 있습니다.**
 
 ```js
 tooltip.enable()
@@ -351,7 +350,7 @@ tooltip.enable()
 
 #### disable
 
-Removes the ability for an element's tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled.
+요소의 툴팁을 표시하는 기능을 삭제합니다. 툴팁은 재활성화 된 경우에만 표시합니다.
 
 ```js
 tooltip.disable()
@@ -359,7 +358,7 @@ tooltip.disable()
 
 #### toggleEnabled
 
-Toggles the ability for an element's tooltip to be shown or hidden.
+요소의 툴팁 표시 및 숨김을 변경합니다.
 
 ```js
 tooltip.toggleEnabled()
@@ -367,7 +366,7 @@ tooltip.toggleEnabled()
 
 #### update
 
-Updates the position of an element's tooltip.
+요소의 툴팁 위치를 갱신합니다.
 
 ```js
 tooltip.update()
@@ -375,7 +374,7 @@ tooltip.update()
 
 #### getInstance
 
-*Static* method which allows you to get the tooltip instance associated with a DOM element
+DOM 요소와 연관된 툴팁의 인스턴스를 취득하는 *Static* 메소드
 
 ```js
 var exampleTriggerEl = document.getElementById('example')
@@ -394,23 +393,23 @@ var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Boots
   <tbody>
     <tr>
       <td><code>show.bs.tooltip</code></td>
-      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+      <td>이 이벤트는 <code>show</code> 인스턴스 메소드가 호출되었을 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>shown.bs.tooltip</code></td>
-      <td>This event is fired when the tooltip has been made visible to the user (will wait for CSS transitions to complete).</td>
+      <td>이 이벤트는 툴팁이 사용자에게 보일 때 발생합니다(CSS 트렌지션이 완료되기를 기다립니다).</td>
     </tr>
     <tr>
       <td><code>hide.bs.tooltip</code></td>
-      <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+      <td>이 이벤트는 <code>hide</code> 인스턴스 메소드가 호출되었을 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.tooltip</code></td>
-      <td>This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+      <td>이 이벤트는 툴팁이 사용자로부터 숨김 상태가 되었을 때 발생합니다.(CSS 트렌지션이 완료되기를 기다립니다).</td>
     </tr>
     <tr>
       <td><code>inserted.bs.tooltip</code></td>
-      <td>This event is fired after the <code>show.bs.tooltip</code> event when the tooltip template has been added to the DOM.</td>
+      <td>이 이벤트는 <code>show.bs.tooltip</code> 이벤트 후 툴팁 템플릿이 DOM에 추가되었을 때 발생합니다.</td>
     </tr>
   </tbody>
 </table>
