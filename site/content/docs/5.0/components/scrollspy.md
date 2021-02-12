@@ -302,7 +302,7 @@ var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a
 
 ### Options
 
-옵션은 data 속성이나 JavaScript 로 줄 수 있습니다. data 속성인 경우는 `data-bs-offset=""` 처럼, `data-bs-` 에 옵션명을 추가합니다.
+옵션은 data 속성 또는 JavaScript 로 줄 수 있습니다. data 속성인 경우는 `data-bs-offset=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
 
 <table class="table">
   <thead>

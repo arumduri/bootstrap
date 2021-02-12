@@ -146,7 +146,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 
 ### Options
 
-옵션은 data 속성이나 JavaScript 로 줄 수 있습니다. data 속성의 경우는 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
+옵션은 data 속성 또는 JavaScript 로 줄 수 있습니다. data 속성의 경우는 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
 
 {{< callout warning >}}
 보안상의 이유로 `sanitize`, `sanitizeFn`, `allowList` 옵션을 data 속성으로 지정할 수 없다는 것에 주의해 주세요.
@@ -253,7 +253,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>fallbackPlacement</code></td>
       <td>string | array</td>
       <td><code>'flip'</code></td>
-      <td>fallback 시 팝오버가 어떤 위치를 사용하는지 지정할 수 있습니다. 자세한 내용은 팝오버의 <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">behavior docs</a> 를 참조해 주세요.</td>
+      <td>Fallback 시 팝오버가 어떤 위치를 사용하는지 지정할 수 있습니다. 자세한 내용은 팝오버의 <a href="https://popper.js.org/docs/v1/#modifiers..flip.behavior">behavior docs</a> 를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>

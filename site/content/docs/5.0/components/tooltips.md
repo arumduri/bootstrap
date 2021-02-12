@@ -141,7 +141,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 ### Disabled elements
 
-`disabled` 속성을 갖는 요소는 인터랙티브하지 않습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁(혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 `<div>` 나 `<span>` 으로 툴팁을 트리거하여, 이상적으로 `tabindex="0"` 으로 키보드 포커스 가능하게 하고, disabled 요소인 `pointer-events` 를 오버라이드 오버라이드 해야 합니다.
+`Disabled` 속성을 갖는 요소는 인터랙티브 하지 않습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁(혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 `<div>` 나 `<span>` 으로 툴팁을 트리거하여, 이상적으로 `tabindex="0"` 으로 키보드 포커스 가능하게 하고, disabled 요소인 `pointer-events` 를 오버라이드 해야 합니다.
 
 <div class="tooltip-demo">
 {{< example >}}
@@ -252,7 +252,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>fallbackPlacement</code></td>
       <td>null | array</td>
       <td><code>null</code></td>
-      <td>fallback 시 팝오버가 어떤 위치를 사용하는지 지정할 수 있습니다. 자체한 것은 팝오버의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a> 를 참조해 주세요.</td>
+      <td>Fallback 시 팝오버가 어떤 위치를 사용하는지 지정할 수 있습니다. 자체한 것은 팝오버의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a> 를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
@@ -299,7 +299,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 {{< callout info >}}
 #### Data attributes for individual tooltips
 
-Options for individual tooltips can alternatively be specified through the use of data attributes, as explained above.
+개별 툴팁 옵션은 위에서 설명한 것처럼 data 속성을 사용해 지정할 수도 있습니다.
 {{< /callout >}}
 
 ### Methods
@@ -310,7 +310,7 @@ Options for individual tooltips can alternatively be specified through the use o
 
 #### show
 
-Reveals an element's tooltip. **Returns to the caller before the tooltip has actually been shown** (i.e. before the `shown.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. Tooltips with zero-length titles are never displayed.
+요소의 툴팁을 표시합니다. **툴팁이 실제로 나타나기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 "수동" 트리거로 간주합니다. 길이가 0 을 가진 타이틀은 절대 표시되지 않습니다.
 
 ```js
 tooltip.show()
@@ -318,7 +318,7 @@ tooltip.show()
 
 #### hide
 
-Hides an element's tooltip. **Returns to the caller before the tooltip has actually been hidden** (i.e. before the `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip.
+요소의 툴팁을 숨깁니다. **툴팁이 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 "수동" 트리거로 간주됩니다.
 
 ```js
 tooltip.hide()
@@ -326,7 +326,7 @@ tooltip.hide()
 
 #### toggle
 
-Toggles an element's tooltip. **Returns to the caller before the tooltip has actually been shown or hidden** (i.e. before the `shown.bs.tooltip` or `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip.
+요소의 툴팁을 토글합니다. **툴팁이 실제로 표시되거나 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.tooltip` 혹은 `hidden.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 "수동" 트리거로 간주됩니다.
 
 ```js
 tooltip.toggle()
@@ -334,7 +334,7 @@ tooltip.toggle()
 
 #### dispose
 
-Hides and destroys an element's tooltip (Removes stored data on the DOM element). Tooltips that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements.
+요소의 툴팁을 숨기고 업앱니다(DOM 요소에 보존되어 있는 데이타를 삭제). 위임을 사용하는 툴팁([the `selector` option](#options) 을 사용하여 작성된 것)은 후손의 트리거 요소상에서 개별적으로 없앨수 없습니다.
 
 ```js
 tooltip.dispose()
@@ -342,7 +342,7 @@ tooltip.dispose()
 
 #### enable
 
-Gives an element's tooltip the ability to be shown. **Tooltips are enabled by default.**
+요소의 툴팁을 표시하는 기능을 부여합니다. **툴팁은 기본적으로 활성화되어 있습니다.**
 
 ```js
 tooltip.enable()
@@ -350,7 +350,7 @@ tooltip.enable()
 
 #### disable
 
-Removes the ability for an element's tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled.
+요소의 툴팁을 표시하는 기능을 삭제합니다. 툴팁은 재활성화 된 경우에만 표시합니다.
 
 ```js
 tooltip.disable()
@@ -358,7 +358,7 @@ tooltip.disable()
 
 #### toggleEnabled
 
-Toggles the ability for an element's tooltip to be shown or hidden.
+요소의 툴팁 표시 및 숨김을 변경합니다.
 
 ```js
 tooltip.toggleEnabled()
@@ -366,7 +366,7 @@ tooltip.toggleEnabled()
 
 #### update
 
-Updates the position of an element's tooltip.
+요소의 툴팁 위치를 갱신합니다.
 
 ```js
 tooltip.update()
@@ -374,7 +374,7 @@ tooltip.update()
 
 #### getInstance
 
-*Static* method which allows you to get the tooltip instance associated with a DOM element
+DOM 요소와 연관된 툴팁의 인스턴스를 취득하는 *Static* 메소드
 
 ```js
 var exampleTriggerEl = document.getElementById('example')
@@ -393,23 +393,23 @@ var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Boots
   <tbody>
     <tr>
       <td><code>show.bs.tooltip</code></td>
-      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+      <td>이 이벤트는 <code>show</code> 인스턴스 메소드가 호출되었을 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>shown.bs.tooltip</code></td>
-      <td>This event is fired when the tooltip has been made visible to the user (will wait for CSS transitions to complete).</td>
+      <td>이 이벤트는 툴팁이 사용자에게 보일 때 발생합니다(CSS 트렌지션이 완료되기를 기다립니다).</td>
     </tr>
     <tr>
       <td><code>hide.bs.tooltip</code></td>
-      <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+      <td>이 이벤트는 <code>hide</code> 인스턴스 메소드가 호출되었을 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.tooltip</code></td>
-      <td>This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+      <td>이 이벤트는 툴팁이 사용자로부터 숨김 상태가 되었을 때 발생합니다.(CSS 트렌지션이 완료되기를 기다립니다).</td>
     </tr>
     <tr>
       <td><code>inserted.bs.tooltip</code></td>
-      <td>This event is fired after the <code>show.bs.tooltip</code> event when the tooltip template has been added to the DOM.</td>
+      <td>이 이벤트는 <code>show.bs.tooltip</code> 이벤트 후 툴팁 템플릿이 DOM에 추가되었을 때 발생합니다.</td>
     </tr>
   </tbody>
 </table>

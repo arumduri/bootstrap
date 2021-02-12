@@ -128,7 +128,7 @@ var bsAlert = new bootstrap.Alert(myAlert)
         <code>getInstance</code>
       </td>
       <td>
-        DOM 요소와 관련된 경고창의 인스턴스를 가져오는 정적 메소드입니다. <br />사용법 : <code>bootstrap.Alert.getInstance(alert)</code>
+        DOM 요소와 관련된 경고창의 인스턴스를 가져오는 Static 메소드입니다. <br />사용법 : <code>bootstrap.Alert.getInstance(alert)</code>
       </td>
     </tr>
   </tbody>

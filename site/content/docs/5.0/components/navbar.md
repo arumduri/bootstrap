@@ -418,7 +418,7 @@ Input group 도 사용 가능합니다. 내비게이션바가 폼 전체 혹은 
 
 ## Containers
 
-필수는 아니지만, 내비게이션바를 `.container` 로 감싸 페이지 중앙에 배치할 수도 있지만 내부의 컨테이너가 필요하게 된다는 점을 주의해 주세요. 혹은, `.navbar` 의 내부에 컨테이너를 추가하고 [fixed 혹은 static top navbar](#placement) 의 내용만을 중앙에 배치할 수도 있습니다. 
+필수는 아니지만, 내비게이션바를 `.container` 로 감싸 페이지 중앙에 배치할 수도 있지만 내부의 컨테이너가 필요하게 된다는 점을 주의해 주세요. 혹은, `.navbar` 의 내부에 컨테이너를 추가하고 [fixed 혹은 static top navbar](#placement) 의 내용만을 중앙에 배치할 수도 있습니다.
 
 {{< example >}}
 <div class="container">

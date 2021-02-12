@@ -952,7 +952,7 @@ JavaScript 로 드롭다운을 호출하느냐 data-api 를 사용하느냐에 �
     <tr>
       <td><code>getInstance</code></td>
       <td>
-        DOM 요소에 관련 지어진 드롭다운의 인스턴스를 취득하는 정적 메소드.
+        DOM 요소에 관련 지어진 드롭다운의 인스턴스를 취득하는 Static 메소드.
       </td>
     </tr>
   </tbody>

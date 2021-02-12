@@ -374,7 +374,7 @@ var carousel = new bootstrap.Carousel(myCarousel, {
     </tr>
     <tr>
       <td><code>getInstance</code></td>
-      <td>DOM 요소에 관련지어진 캐러셀의 인스턴스를 취득하는 정적 메소드.</td>
+      <td>DOM 요소에 관련지어진 캐러셀의 인스턴스를 취득하는 Static 메소드.</td>
     </tr>
   </tbody>
 </table>

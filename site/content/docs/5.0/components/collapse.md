@@ -176,7 +176,7 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
     </tr>
     <tr>
       <td><code>getInstance</code></td>
-      <td>DOM 요소와 관련된 collapse 인스턴스를 가져오는 정적 메소드입니다.</td>
+      <td>DOM 요소와 관련된 collapse 인스턴스를 가져오는 Static 메소드입니다.</td>
     </tr>
   </tbody>
 </table>
