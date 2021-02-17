@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.">
+<meta name="description" content="가볍고 쉽게 커스터마이즈할 수 있는 경고창을 푸시 공지합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.79.0">
+<meta name="generator" content="Hugo 0.79.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Toasts · Bootstrap v5.0</title>
+<title>Toasts(토스트) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/components/toasts/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Toasts">
-<meta name="twitter:description" content="Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.">
+<meta name="twitter:title" content="Toasts(토스트)">
+<meta name="twitter:description" content="가볍고 쉽게 커스터마이즈할 수 있는 경고창을 푸시 공지합니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/toasts/">
-<meta property="og:title" content="Toasts">
-<meta property="og:description" content="Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.">
+<meta property="og:title" content="Toasts(토스트)">
+<meta property="og:description" content="가볍고 쉽게 커스터마이즈할 수 있는 경고창을 푸시 공지합니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -91,7 +91,7 @@
           <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
+          <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">테마</a>
@@ -383,9 +383,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/toasts.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Toasts</h1>
+          <h1 class="bd-title" id="content">Toasts(토스트)</h1>
         </div>
-        <p class="bd-lead">Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.</p>
+        <p class="bd-lead">가볍고 쉽게 커스터마이즈할 수 있는 경고창을 푸시 공지합니다.</p>
         
 
       </div>
@@ -429,12 +429,12 @@
       <div class="bd-content ps-lg-4">
         
 
-        <p>Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They&rsquo;re built with flexbox, so they&rsquo;re easy to align and position.</p>
+        <p>토스트는 모바일 및 데스크톱 운영 체제에서 보급된 푸시 알림을 모방하여 설계된 가벼운 알림창 입니다. Flexbox로 만들어져 있어 위치 조정 및 배치가 간단합니다.</p>
 <h2 id="overview">Overview</h2>
-<p>Things to know when using the toast plugin:</p>
+<p>토스트 플러그인을 사용할 때 알아두어야 할 사항:</p>
 <ul>
-<li>Toasts are opt-in for performance reasons, so <strong>you must initialize them yourself</strong>.</li>
-<li>Toasts will automatically hide if you do not specify <code>autohide: false</code>.</li>
+<li>토스트는 퍼포먼스상의 이유로 opt-in 방식으로 되어 있기 때문에 <strong>스스로 초기화</strong>해야 합니다.</li>
+<li>토스트는 <code>autohide: false</code>를 지정하지 않으면 자동으로 숨겨집니다.</li>
 </ul>
 <div class="bd-callout bd-callout-info">
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
@@ -442,8 +442,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 
 <h2 id="examples">Examples</h2>
 <h3 id="basic">Basic</h3>
-<p>To encourage extensible and predictable toasts, we recommend a header and body. Toast headers use <code>display: flex</code>, allowing easy alignment of content thanks to our margin and flexbox utilities.</p>
-<p>Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your &ldquo;toasted&rdquo; content and strongly encourage a dismiss button.</p>
+<p>토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 <code>display: flex</code>를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 컨텐츠를 쉽게 정렬시킬 수 있습니다.</p>
+<p>토스트는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. 토스트 컨텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.</p>
 <div class="bd-example bg-light">
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
@@ -469,7 +469,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="translucent">Translucent</h3>
-<p>Toasts are slightly translucent, too, so they blend over whatever they might appear over. For browsers that support the <code>backdrop-filter</code> CSS property, we&rsquo;ll also attempt to blur the elements under a toast.</p>
+<p>토스트는 약간 반투명해서 상단에 표시되는 것은 무엇이든 녹여져 보여집니다.  CSS 속성 <code>backdrop-filter</code> 를 지원하는 브라우저에서는 토스트 하단에 있는 요소를 흐려 보이게 합니다.</p>
 <div class="bd-example bg-dark">
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
@@ -495,7 +495,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="stacking">Stacking</h3>
-<p>You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.</p>
+<p>토스트를 <code>toast container</code> 로 감싸면 여러개 사용할 수 있습니다.</p>
 <div class="bd-example bg-light">
 <div class="toast-container">
   <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -550,7 +550,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="custom-content">Custom content</h3>
-<p>Customize your toasts by removing sub-components, tweaking with <a href="/docs/5.0/utilities/api/">utilities</a>, or adding your own markup. Here we&rsquo;ve created a simpler toast by removing the default <code>.toast-header</code>, adding a custom hide icon from <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>, and using some <a href="/docs/5.0/utilities/flex/">flexbox utilities</a> to adjust the layout.</p>
+<p>토스트 안의 일부 요소를 삭제, <a href="/docs/5.0/utilities/api/">utilities</a>를 통한 미세한 수정, 마크업을 추가 수정해서 토스트를 새롭게 만들수 있습니다. 여기에서는, <code>.toast-header</code>를 삭제하고, <a href="https://icons.getbootstrap.kr/">Bootstrap Icons</a>에 있는 닫기 아이콘을 추가하고, 레이아웃을 조정하기 위해 <a href="/docs/5.0/utilities/flex/">flexbox utilities</a>을 몇가지 사용해서 보다 간단한 토스트를 만들어 보았습니다.</p>
 <div class="bd-example bg-light">
 <div class="toast d-flex align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-body">
@@ -564,7 +564,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close ms-auto me-2&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;toast&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Alternatively, you can also add additional controls and components to toasts.</p>
+<p>또는 토스트에 추가적인 컨트롤이나 컴포넌트를 추가할 수도 있습니다.</p>
 <div class="bd-example bg-light">
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-body">
@@ -585,7 +585,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="color-schemes">Color schemes</h3>
-<p>Building on the above example, you can create different toast color schemes with our <a href="/docs/5.0/utilities/colors/">color utilities</a>. Here we&rsquo;ve added <code>.bg-primary</code> and <code>.text-white</code> to the <code>.toast</code>, and then added <code>.text-white</code> to our close button. For a crisp edge, we remove the default border with <code>.border-0</code>.</p>
+<p>위의 예시를 바탕으로, <a href="/docs/5.0/utilities/colors/">color utilities</a> 를 사용해 다른 컬러의 토스트를 만들수 있습니다. 여기에서는, 토스트에 <code>.bg-primary</code> 와 <code>.text-white</code> 를 추가하고, 닫기 버튼에 <code>.text-white</code> 를 추가했습니다. 모서리를 선명하게 하기 위해 기본 border를 <code>.border-0</code> 으로 삭제했습니다.</p>
 <div class="bd-example bg-light">
 <div class="toast d-flex align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-body">
@@ -600,7 +600,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close btn-close-white ms-auto me-2&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;toast&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="placement">Placement</h2>
-<p>Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you&rsquo;re only ever going to show one toast at a time, put the positioning styles right on the <code>.toast</code>.</p>
+<p>필요에 따라 사용자 지정 CSS로 토스트를 배치시킵니다. 우측 상단은 알림용으로 사용되는 경우가 많으며, 상단 중앙도 마찬가지입니다. 한번에 하나의 토스트 밖에 표시하지 않는다면, 배치 스타일을 <code>.toast</code> 의 오른쪽에 넣어주세요.</p>
 <div class="bd-example">
 <form>
   <div class="form-group mb-3">
@@ -665,7 +665,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>For systems that generate more notifications, consider using a wrapping element so they can easily stack.</p>
+<p>더 많은 알림을 만드는 시스템에서는 쉽게 쌓이게 하도록 wrapping 요소의 사용을 검토하십시오.</p>
 <div class="bd-example bg-dark bd-example-toasts p-0">
 <div aria-live="polite" aria-atomic="true" class="position-relative">
   <!-- Position it: -->
@@ -735,7 +735,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.</p>
+<p>또한 flexbox 유틸리티를 사용해서 토스트를 수평방향이나 수직방향으로 정렬시킬 수도 있습니다.</p>
 <div class="bd-example bg-dark bd-example-toasts d-flex">
 <!-- Flexbox container for aligning the toasts -->
 <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
@@ -771,14 +771,14 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="accessibility">Accessibility</h2>
-<p>Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code> region</a>. Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user&rsquo;s focus or otherwise interrupt the user. Additionally, include <code>aria-atomic=&quot;true&quot;</code> to ensure that the entire toast is always announced as a single (atomic) unit, rather than announcing what was changed (which could lead to problems if you only update part of the toast&rsquo;s content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the <a href="/docs/5.0/components/alerts/">alert component</a> instead of toast.</p>
-<p>Note that the live region needs to be present in the markup <em>before</em> the toast is generated or updated. If you dynamically generate both at the same time and inject them into the page, they will generally not be announced by assistive technologies.</p>
-<p>You also need to adapt the <code>role</code> and <code>aria-live</code> level depending on the content. If it&rsquo;s an important message like an error, use <code>role=&quot;alert&quot; aria-live=&quot;assertive&quot;</code>, otherwise use <code>role=&quot;status&quot; aria-live=&quot;polite&quot;</code> attributes.</p>
-<p>As the content you&rsquo;re displaying changes, be sure to update the <a href="#options"><code>delay</code> timeout</a> to ensure people have enough time to read the toast.</p>
+<p>토스트는 방문자나 사용자에게 작은 중단을 의도하므로 스크린 리더나 비슷한 지원 기술을 가진 사용자를 지원하기 위해 토스트를 <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code> region</a> 으로 감싸야 합니다. 라이브 리전으로의 업데이트(토스트 컴포넌트 주입/업데이트 등)는 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더가 자동으로 안내합니다. 그리고 변경된 내용을 안내하지 말고 토스트 전체가 항상 싱글(원자적인) 단위로 안내하도록 <code>aria-atomic=&quot;true&quot;</code> 를 포함시켜 주십시오(만약 토스트의 내용 중 일부만 업데이트 한다면 문제가 발생할 가능성이 있습니다). 필요한 정보가 예를 들어 폼의 오류 리스트 같이 프로세스에 중요한 경우, 토스트 대신 <a href="/docs/5.0/components/alerts/">alert component</a> 를 사용하십시오.</p>
+<p>토스트가 생성되거나 업데이트 되기 <em>전</em>에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.</p>
+<p>그리고, 내용에 따라 <code>role</code> 과 <code>aria-live</code> 의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 <code>role=&quot;alert&quot; aria-live=&quot;assertive&quot;</code> 속성을 사용하고, 그렇지 않으면 <code>role=&quot;status&quot; aria-live=&quot;polite&quot;</code> 속성을 사용합니다.</p>
+<p>표시하는 내용이 변경될 경우, 사람들이 토스트를 읽을 충분한 시간을 갖도록 <a href="#options"><code>delay</code> timeout</a> 를 업데이트 하십시오.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toast&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">&#34;polite&#34;</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">data-bs-delay</span><span class="o">=</span><span class="s">&#34;10000&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">&#34;assertive&#34;</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>When using <code>autohide: false</code>, you must add a close button to allow users to dismiss the toast.</p>
+</code></pre></div><p><code>autohide: false</code> 를 사용할 때에는, 사용자가 토스트를 해제할 수 있도록 닫기 버튼을 추가해야 합니다.</p>
 <div class="bd-example bg-light">
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
   <div class="toast-header">
@@ -805,13 +805,13 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="javascript-behavior">JavaScript behavior</h2>
 <h3 id="usage">Usage</h3>
-<p>Initialize toasts via JavaScript:</p>
+<p>JavaScript 를 통해 초기화:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">toastElList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.toast&#39;</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">toastList</span> <span class="o">=</span> <span class="nx">toastElList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">toastEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Toast</span><span class="p">(</span><span class="nx">toastEl</span><span class="p">,</span> <span class="nx">option</span><span class="p">)</span>
 <span class="p">})</span>
 </code></pre></div><h3 id="options">Options</h3>
-<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-bs-</code>, as in <code>data-bs-animation=&quot;&quot;</code>.</p>
+<p>옵션은 data 속성 또는 JavaScript 로 줄 수 있습니다. data 속성의 경우 <code>data-bs-animation=&quot;&quot;</code> 처럼 <code>data-bs-</code> 에 옵션명을 추가합니다.</p>
 <table class="table">
   <thead>
     <tr>
@@ -826,13 +826,13 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td><code>animation</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Apply a CSS fade transition to the toast</td>
+      <td>토스트에 CSS fade 트랜지션을 적용합니다.</td>
     </tr>
     <tr>
       <td><code>autohide</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Auto hide the toast</td>
+      <td>토스트를 자동으로 숨깁니다.</td>
     </tr>
     <tr>
       <td><code>delay</code></td>
@@ -840,7 +840,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td>
         <code>5000</code>
       </td>
-      <td>Delay hiding the toast (ms)</td>
+      <td>토스트를 숨길 시간을 지정합니다.(ms)</td>
     </tr>
   </tbody>
 </table>
@@ -853,14 +853,14 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </div>
 
 <h4 id="show">show</h4>
-<p>Reveals an element&rsquo;s toast. <strong>Returns to the caller before the toast has actually been shown</strong> (i.e. before the <code>shown.bs.toast</code> event occurs).
-You have to manually call this method, instead your toast won&rsquo;t show.</p>
+<p>요소의 토스트를 표시합니다. <strong>토스트가 실제로 표시되기 전에 호출한 곳으로 돌아갑니다</strong> (즉, <code>shown.bs.toast</code> 이벤트가 발생하기 전).
+이 메소드를 수동으로 호출해야 합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">toast</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
 </code></pre></div><h4 id="hide">hide</h4>
-<p>Hides an element&rsquo;s toast. <strong>Returns to the caller before the toast has actually been hidden</strong> (i.e. before the <code>hidden.bs.toast</code> event occurs). You have to manually call this method if you made <code>autohide</code> to <code>false</code>.</p>
+<p>요소인 토스트를 숨깁니다. <strong>토스트가 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다</strong> (즉, <code>hidden.bs.toast</code> 이벤트가 발생하기 전). <code>autohide</code> 를 <code>false</code> 로 했을 경우, 이 메소드를 수동으로 호출할 필요가 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">toast</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
 </code></pre></div><h4 id="dispose">dispose</h4>
-<p>Hides an element&rsquo;s toast. Your toast will remain on the DOM but won&rsquo;t show anymore.</p>
+<p>요소의 토스트를 숨깁니다. 토스트는 DOM 상에 남습니다만, 표시되지 않게 됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">toast</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
 </code></pre></div><h3 id="events">Events</h3>
 <table class="table">
@@ -873,19 +873,19 @@ You have to manually call this method, instead your toast won&rsquo;t show.</p>
   <tbody>
     <tr>
       <td><code>show.bs.toast</code></td>
-      <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+      <td>이 이벤트는 <code>show</code> 인스턴스 메소드가 호출되었을 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>shown.bs.toast</code></td>
-      <td>This event is fired when the toast has been made visible to the user.</td>
+      <td>이 이벤트는 토스트가 사용자에게 표시되었을 때 발생합니다.</td>
     </tr>
     <tr>
       <td><code>hide.bs.toast</code></td>
-      <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+      <td>이 이벤트는 <code>hide</code> 인스턴스 메소드가 호출되었을 때 바로 발생합니다.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.toast</code></td>
-      <td>This event is fired when the toast has finished being hidden from the user.</td>
+      <td>이 이벤트는 토스트 숨김이 종료되었을 때 발생합니다.</td>
     </tr>
   </tbody>
 </table>

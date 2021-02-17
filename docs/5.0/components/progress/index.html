@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.">
+<meta name="description" content="Stacked bars, animated backgrounds, text labels 의 지원을 특징으로 하는 Bootstrap 커스텀 프로그레스바를 사용하기 위한 문서와 예시입니다. .">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.79.0">
+<meta name="generator" content="Hugo 0.79.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Progress · Bootstrap v5.0</title>
+<title>Progress(프로그레스) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/components/progress/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Progress">
-<meta name="twitter:description" content="Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.">
+<meta name="twitter:title" content="Progress(프로그레스)">
+<meta name="twitter:description" content="Stacked bars, animated backgrounds, text labels 의 지원을 특징으로 하는 Bootstrap 커스텀 프로그레스바를 사용하기 위한 문서와 예시입니다. .">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/progress/">
-<meta property="og:title" content="Progress">
-<meta property="og:description" content="Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.">
+<meta property="og:title" content="Progress(프로그레스)">
+<meta property="og:description" content="Stacked bars, animated backgrounds, text labels 의 지원을 특징으로 하는 Bootstrap 커스텀 프로그레스바를 사용하기 위한 문서와 예시입니다. .">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -91,7 +91,7 @@
           <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
+          <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">테마</a>
@@ -383,9 +383,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/progress.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Progress</h1>
+          <h1 class="bd-title" id="content">Progress(프로그레스)</h1>
         </div>
-        <p class="bd-lead">Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.</p>
+        <p class="bd-lead">Stacked bars, animated backgrounds, text labels 의 지원을 특징으로 하는 Bootstrap 커스텀 프로그레스바를 사용하기 위한 문서와 예시입니다. .</p>
         
 
       </div>
@@ -411,14 +411,14 @@
         
 
         <h2 id="how-it-works">How it works</h2>
-<p>Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don&rsquo;t use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress">the HTML5 <code>&lt;progress&gt;</code> element</a>, ensuring you can stack progress bars, animate them, and place text labels over them.</p>
+<p>프로그레스 컴포넌트는 2개의 HTML 요소와ㅗ 너비를 설정하기 위한 몇 가지 CSS와  몇가지의 속성으로 구축됩니다. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress">the HTML5 <code>&lt;progress&gt;</code> element</a> 는 사용하지 않으므로, 프로그레스바를 쌓아 올리거나 애니메이션 시키거나 텍스트 라벨을 배치할 수 있습니다.</p>
 <ul>
-<li>We use the <code>.progress</code> as a wrapper to indicate the max value of the progress bar.</li>
-<li>We use the inner <code>.progress-bar</code> to indicate the progress so far.</li>
-<li>The <code>.progress-bar</code> requires an inline style, utility class, or custom CSS to set their width.</li>
-<li>The <code>.progress-bar</code> also requires some <code>role</code> and <code>aria</code> attributes to make it accessible.</li>
+<li>프로그레서바의 최대 너비를 나타내기 위해 <code>.progress</code> 을 사용합니다.</li>
+<li>진척 상황을 나타내기 위해 안쪽에 <code>.progress-bar</code> 을 사용합니다.</li>
+<li><code>.progress-bar</code> 는 폭을 설정하기 위해 인라인 스타일, 유틸리티 클래스 또는 커스텀 CSS 를 필요로 합니다.</li>
+<li><code>.progress-bar</code> 는 액세스 할 수 있도록 몇개의 <code>role</code> 과 <code>aria</code> 속성을 필요로 합니다.</li>
 </ul>
-<p>Put that all together, and you have the following examples.</p>
+<p>이를 정리하면 다음과 같은 예가 됩니다.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -450,7 +450,7 @@
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 100%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Bootstrap provides a handful of <a href="/docs/5.0/utilities/sizing/">utilities for setting width</a>. Depending on your needs, these may help with quickly configuring progress.</p>
+<p>Bootstrap <a href="/docs/5.0/utilities/sizing/">utilities for setting width</a> 를 사용하면, 필요에 따라서 진척 상황을 신속하게 설정하는데 도움이 될지도 모릅니다.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
@@ -459,7 +459,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar w-75&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;75&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="labels">Labels</h2>
-<p>Add labels to your progress bars by placing text within the <code>.progress-bar</code>.</p>
+<p><code>.progress-bar</code> 안에 텍스트를 배치하고 프로그레스바에 라벨을 추가합니다.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
@@ -468,7 +468,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 25%;&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;</span>25%<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="height">Height</h2>
-<p>We only set a <code>height</code> value on the <code>.progress</code>, so if you change that value the inner <code>.progress-bar</code> will automatically resize accordingly.</p>
+<p><code>.progress</code> 에는 <code>height</code> 값 밖에 설정되어 있지 않기 때문에, 이 값을 변경하면 내부의 <code>.progress-bar</code> 는 그에 따라 자동적으로 크기가 변경됩니다.</p>
 <div class="bd-example">
 <div class="progress" style="height: 1px;">
   <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -483,7 +483,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 25%;&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="backgrounds">Backgrounds</h2>
-<p>Use background utility classes to change the appearance of individual progress bars.</p>
+<p>Background 유틸리티 클래스를 사용해 각각의 프로그레스바의 외형을 변경합니다.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
@@ -510,7 +510,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-danger&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 100%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="multiple-bars">Multiple bars</h2>
-<p>Include multiple progress bars in a progress component if you need.</p>
+<p>필요에 따라 프로그레스 컴포넌트에 여러 개의 프로그레스바를 포함할 수 있습니다.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
@@ -523,7 +523,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-info&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 20%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;20&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="striped">Striped</h2>
-<p>Add <code>.progress-bar-striped</code> to any <code>.progress-bar</code> to apply a stripe via CSS gradient over the progress bar&rsquo;s background color.</p>
+<p>임의의 <code>.progress-bar</code> 에 <code>.progress-bar-striped</code> 를 추가해 프로그레스바의 배경 색상에 CSS 그라데이션으로 스트라이프를 적용합니다.</p>
 <div class="bd-example">
 <div class="progress">
   <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
@@ -556,7 +556,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar progress-bar-striped bg-danger&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 100%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="animated-stripes">Animated stripes</h2>
-<p>The striped gradient can also be animated. Add <code>.progress-bar-animated</code> to <code>.progress-bar</code> to animate the stripes right to left via CSS3 animations.</p>
+<p>스트라이프 형태의 그라데이션을 애니메이션화할 수도 있습니다. <code>.progress-bar</code> 에 <code>.progress-bar-animated</code> 를 추가하면 CSS3 애니메이션으로 줄무늬를 오른쪽에서 왼쪽으로 애니메이션 시킬 수 있습니다.</p>
 <div class="bd-example">
   <div class="progress">
     <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>

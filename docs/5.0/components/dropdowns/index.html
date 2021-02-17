@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.">
+<meta name="description" content="Bootstrap 의 드롭다운 플러그인으로 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.79.0">
+<meta name="generator" content="Hugo 0.79.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Dropdowns · Bootstrap v5.0</title>
+<title>Dropdowns(드롭다운) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/components/dropdowns/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Dropdowns">
-<meta name="twitter:description" content="Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.">
+<meta name="twitter:title" content="Dropdowns(드롭다운)">
+<meta name="twitter:description" content="Bootstrap 의 드롭다운 플러그인으로 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/dropdowns/">
-<meta property="og:title" content="Dropdowns">
-<meta property="og:description" content="Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.">
+<meta property="og:title" content="Dropdowns(드롭다운)">
+<meta property="og:description" content="Bootstrap 의 드롭다운 플러그인으로 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -91,7 +91,7 @@
           <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
+          <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">테마</a>
@@ -383,9 +383,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/dropdowns.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Dropdowns</h1>
+          <h1 class="bd-title" id="content">Dropdowns(드롭다운)</h1>
         </div>
-        <p class="bd-lead">Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.</p>
+        <p class="bd-lead">Bootstrap 의 드롭다운 플러그인으로 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.</p>
         
 
       </div>
@@ -450,16 +450,16 @@
         
 
         <h2 id="overview">Overview</h2>
-<p>Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They&rsquo;re made interactive with the included Bootstrap dropdown JavaScript plugin. They&rsquo;re toggled by clicking, not by hovering; this is <a href="https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/">an intentional design decision</a>.</p>
-<p>Dropdowns are built on a third party library, <a href="https://popper.js.org/">Popper</a>, which provides dynamic positioning and viewport detection. Be sure to include <a href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">popper.min.js</a> before Bootstrap&rsquo;s JavaScript or use <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> which contains Popper. Popper isn&rsquo;t used to position dropdowns in navbars though as dynamic positioning isn&rsquo;t required.</p>
+<p>드롭다운은 토글이 가능하며 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이입니다. 이들은 포함되어 있는 Bootstrap 의 드롭다운 JavaScript 플러그인으로 상호작용이 됩니다. 토글은 호버링이 아닌 클릭을 통해 이루워집니다. 참고 <a href="https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/">an intentional design decision</a>.</p>
+<p>드롭다운은 동적인 포지셔닝과 뷰포트 검출을 제공하는 서드파티의 라이브러리인 <a href="https://popper.js.org/">Popper</a> 로 구축되어 있습니다. 반드시 Bootstrap 의 JavaScript 전에 <a href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">popper.min.js</a> 을 넣거나 Popper 를 포함한 <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> 를 사용해 주십시오. Popper 는 동적인 배치가 필요하지 않기 때문에, navbars 의 드롭다운 배치에는 사용하지 않습니다.</p>
 <h2 id="accessibility">Accessibility</h2>
-<p>The <a href="https://www.w3.org/TR/wai-aria/"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr></a> standard defines an actual <a href="https://www.w3.org/WAI/PF/aria/roles#menu"><code>role=&quot;menu&quot;</code> widget</a>, but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.</p>
-<p>Bootstrap&rsquo;s dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Bootstrap does not expect (nor automatically add) any of the <code>role</code> and <code>aria-</code> attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.</p>
-<p>However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual <code>.dropdown-item</code> elements using the cursor keys and close the menu with the <kbd>ESC</kbd> key.</p>
+<p><a href="https://www.w3.org/TR/wai-aria/"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr></a> 에서는, 실제의 <a href="https://www.w3.org/WAI/PF/aria/roles#menu"><code>role=&quot;menu&quot;</code> widget</a> 가 정의되어 있습니다만, 이것은 액션이나 기능을 트리거로 하는 application-like 메뉴에 특화한 것입니다. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴는 메뉴 아이템, 체크박스 메뉴 아이템, 라디오 버튼 메뉴 아이템, 라디오 버튼 그룹, 서브메뉴만을 포함할 수 있습니다.</p>
+<p>한편 Bootstrap 의 드롭다운은 범용적으로 설계되어 다양한 상황이나 마크업 구조게 적용할 수 있습니다. 예를 들어 검색 필드나 로그인 폼 등의 추가 입력이나 폼 컨트롤을 포함한 드롭다운을 작성할 수 있습니다. 이 때문에 Bootstrap 는, 진정한 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴에 필요한 <code>role</code> 과 <code>aria-</code> 속성을 모두 기대하고 있지 않습니다(자동으로 추가도 하고 있지 않습니다). 이러한 보다 구체적인 속성들을 스스로 포함해야 합니다.</p>
+<p>그러나, Bootstrap 는 커서 키를 이용하여 각각의 <code>.dropdown-item</code> 요소를 이동하거나 <kbd>ESC</kbd> 키로 메뉴를 닫는 기능과 대부분의 표준 키보드 메뉴의 상호작용을 위한 built-in 지원을 추가하고 있습니다.</p>
 <h2 id="examples">Examples</h2>
-<p>Wrap the dropdown&rsquo;s toggle (your button or link) and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Dropdowns can be triggered from <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements to better fit your potential needs. The examples shown here use semantic <code>&lt;ul&gt;</code> elements where appropriate, but custom markup is supported.</p>
+<p>드롭다운의 토글(버튼이나 링크)과 드롭다운 메뉴를 <code>.dropdown</code> 이나 <code>position: relative;</code> 를 가진 다른 요소로 감쌉니다. 드롭다운은 <code>&lt;a&gt;</code> 나 <code>&lt;button&gt;</code> 요소로부터 트리거 할 수 있습니다. 여기서 보여주는 예에서는, 필요에 따라서 시멘틱적인 <code>&lt;ul&gt;</code> 요소를 사용하고 있습니다만, 커스텀 마크업도 지원하고 있습니다.</p>
 <h3 id="single-button">Single button</h3>
-<p>Any single <code>.btn</code> can be turned into a dropdown toggle with some markup changes. Here&rsquo;s how you can put them to work with either <code>&lt;button&gt;</code> elements:</p>
+<p>마크업을 변경하는 것만으로, 임의의 단일 <code>.btn</code> 을 드롭다운 토글로 바꿀 수 있습니다. 여기에서는, <code>&lt;button&gt;</code> 요소의 어느 쪽인가로 동작하도록 하는 방법을 설명합니다.</p>
 <div class="bd-example">
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -481,7 +481,7 @@
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Something else here<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>And with <code>&lt;a&gt;</code> elements:</p>
+<p>그리고 <code>&lt;a&gt;</code> 요소를 사용해:</p>
 <div class="bd-example">
 <div class="dropdown">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
@@ -505,7 +505,7 @@
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Something else here<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>The best part is you can do this with any button variant, too:</p>
+<p>가장 좋은 것은 버튼의 종류를 불문하고 전부 가능하다는 것입니다:</p>
 <div class="bd-example">
   <div class="btn-group">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Primary</button>
@@ -582,8 +582,8 @@
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="split-button">Split button</h3>
-<p>Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of <code>.dropdown-toggle-split</code> for proper spacing around the dropdown caret.</p>
-<p>We use this extra class to reduce the horizontal <code>padding</code> on either side of the caret by 25% and remove the <code>margin-left</code> that&rsquo;s added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.</p>
+<p>마찬가지로, 단일 버튼의 드롭다운과 실질적으로 같은 마크업으로 분활된 버튼의 드롭다운을 만드는데, 드롭다운의 화살표 주위의 적절한 간격을 확보하기 위해서 <code>.dropdown-toggle-split</code> 을 추가합니다.</p>
+<p>이 추가 클래스를 사용하여, 화살표 양쪽의 좌우 <code>padding</code> 을 25% 줄이고, 일반적인 버튼 트롭다운을 위해 추가 되었던 <code>margin-left</code> 를 삭제합니다. 이러한 추가 변경으로 인해 화살표는 분활된 버튼의 중앙에 오게 되고 메인 버튼 옆에서의 클릭 영역의 크기가 더욱 적절해집니다.</p>
 <div class="bd-example">
   <div class="btn-group">
     <button type="button" class="btn btn-primary">Primary</button>
@@ -679,7 +679,7 @@
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="sizing">Sizing</h2>
-<p>Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.</p>
+<p>버튼의 드롭다운은 기본적인 드롭다운 버튼이나 분활된 드롭다운 버튼 등 모든 크기의 버튼으로 동작합니다.</p>
 <div class="bd-example">
   <div class="btn-group">
     <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -774,7 +774,7 @@
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="dark-dropdowns">Dark dropdowns</h2>
-<p>Opt into darker dropdowns to match a dark navbar or custom style by adding <code>.dropdown-menu-dark</code> onto an existing <code>.dropdown-menu</code>. No changes are required to the dropdown items.</p>
+<p>기존의 <code>.dropdown-menu</code> 에 <code>.dropdown-menu-dark</code> 를 추가해 어두운 내비게이션바나 커스텀 스타일에 맞추어 어두운 드롭다운을 만들 수 있습니다. 드롭다운 아이템을 변경을 할 필요는 없습니다.</p>
 <div class="bd-example">
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -800,7 +800,7 @@
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Separated link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>And putting it to use in a navbar:</p>
+<p>그리고, 이걸 navbar 에 넣어 사용:</p>
 <div class="bd-example">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -849,11 +849,11 @@
 <h2 id="directions">Directions</h2>
 <div class="bd-callout bd-callout-info">
 <h4 id="rtl">RTL</h4>
-<p>Directions are mirrored when using Bootstrap in RTL, meaning <code>.dropstart</code> will appear on the right side.
+<p>RTL 에서 Bootstrap 을 사용할 경우, 방향성은 반대가 되어 <code>.dropstart</code> 는 오른쪽에 표시됩니다.
 </div>
 
 <h3 id="dropup">Dropup</h3>
-<p>Trigger dropdown menus above elements by adding <code>.dropup</code> to the parent element.</p>
+<p>부모 요소에 <code>.dropup</code> 을 추가하여 요소의 위쪽으로 표시할 수 있습니다.</p>
 <div class="bd-example">
   <div class="btn-group dropup">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -906,7 +906,7 @@
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="dropright">Dropright</h3>
-<p>Trigger dropdown menus at the right of the elements by adding <code>.dropend</code> to the parent element.</p>
+<p>부모 요소에 <code>.dropend</code> 을 추가하여 요소의 오른쪽에 표시할 수 있습니다.</p>
 <div class="bd-example">
   <div class="btn-group dropend">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -959,7 +959,7 @@
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="dropleft">Dropleft</h3>
-<p>Trigger dropdown menus at the left of the elements by adding <code>.dropstart</code> to the parent element.</p>
+<p>부모 요소에 <code>.dropstart</code> 를 추가하여 요소의 왼쪽에 표시할 수 있습니다.</p>
 <div class="bd-example">
   <div class="btn-group dropstart">
     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -1016,7 +1016,7 @@
   <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="menu-items">Menu items</h2>
-<p>Historically dropdown menu contents <em>had</em> to be links, but that&rsquo;s no longer the case with v4. Now you can optionally use <code>&lt;button&gt;</code> elements in your dropdowns instead of just <code>&lt;a&gt;</code>s.</p>
+<p>역사적으로 드롭다운 메뉴의 내용은 링크가 되어야 했는데, v4 에서는 그렇지 않았습니다. 드롭다운에서는 <code>&lt;a&gt;</code> 대신에 <code>&lt;button&gt;</code> 요소를 사용할 수 있게 되었습니다.</p>
 <div class="bd-example">
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
@@ -1038,7 +1038,7 @@
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Something else here<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>You can also create non-interactive dropdown items with <code>.dropdown-item-text</code>. Feel free to style further with custom CSS or text utilities.</p>
+<p>또한, <code>.dropdown-item-text</code> 으로 non-interactive 드롭다운 아이템을 만들 수 있습니다. 커스텀 CSS 나 text 유틸리티를 사용하여 자유롭게 스타일을 설정해 주십시오.</p>
 <div class="bd-example">
 <ul class="dropdown-menu">
   <li><span class="dropdown-item-text">Dropdown item text</span></li>
@@ -1053,7 +1053,7 @@
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Something else here<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="active">Active</h3>
-<p>Add <code>.active</code> to items in the dropdown to <strong>style them as active</strong>. To convey the active state to assistive technologies, use the <code>aria-current</code> attribute — using the <code>page</code> value for the current page, or <code>true</code> for the current item in a set.</p>
+<p>드롭다운 아이템에 <code>.active</code> 를 추가하여 <strong>활성화</strong> 스타일을 만듭니다. 활성화된 상태를 스크린 리더에 전달하기 위해 <code>aria-current</code> 속성을 사용합니다. 현재 페이지에는 <code>page</code> 값을, 세트 내 현재 아이템에는 <code>true</code> 를 사용합니다.</p>
 <div class="bd-example">
 <ul class="dropdown-menu">
   <li><a class="dropdown-item" href="#">Regular link</a></li>
@@ -1066,7 +1066,7 @@
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Another link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="disabled">Disabled</h3>
-<p>Add <code>.disabled</code> to items in the dropdown to <strong>style them as disabled</strong>.</p>
+<p>드롭다운 아이템에 <code>.disabled</code> 를 추가해 <strong>disabled</strong> 의 스타일을 만듭니다.</p>
 <div class="bd-example">
 <ul class="dropdown-menu">
   <li><a class="dropdown-item" href="#">Regular link</a></li>
@@ -1079,9 +1079,9 @@
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Another link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="menu-alignment">Menu alignment</h2>
-<p>By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. Add <code>.dropdown-menu-end</code> to a <code>.dropdown-menu</code> to right align the dropdown menu. Directions are mirrored when using Bootstrap in RTL, meaning <code>.dropdown-menu-end</code> will appear on the left side.</p>
+<p>기본적으로, 드롭다운 메뉴는 자동으로 위에서 100% 위치와 부모의 왼쪽에 따라 배치됩니다. 드롭다운 메뉴를 오른쪽으로 배치시키려면 <code>.dropdown-menu</code> 에 <code>.dropdown-menu-end</code> 를 추가합니다. RTL 로 사용할 경우, 방향성은 반대가 되어, <code>.dropdown-menu-end</code> 는 왼쪽에 표시됩니다.</p>
 <div class="bd-callout bd-callout-info">
-<strong>Heads up!</strong> Dropdowns are positioned thanks to Popper (except when they are contained in a navbar).
+<strong>주의!</strong> 드롭다운은 Popper 에 의해 배치되어 있습니다(navbar 에 포함되어 있는 경우 제외).
 </div>
 
 <div class="bd-example">
@@ -1106,8 +1106,8 @@
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="responsive-alignment">Responsive alignment</h3>
-<p>If you want to use responsive alignment, disable dynamic positioning by adding the <code>data-bs-display=&quot;static&quot;</code> attribute and use the responsive variation classes.</p>
-<p>To align <strong>right</strong> the dropdown menu with the given breakpoint or larger, add <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end</code>.</p>
+<p>반응형 배치를 사용하고 싶을 경우, <code>data-bs-display=&quot;static&quot;</code> 속성을 추가하여 동적 배치를 비활성화하고 반응형 변형 클래스를 사용합니다.</p>
+<p>드롭다운 메뉴를 지정된 브레이크 포인트 혹은 그 이상일 경우 <strong>오른쪽</strong>에 배치하려면 <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end</code> 를 추가합니다.</p>
 <div class="bd-example">
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
@@ -1129,7 +1129,7 @@
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Something else here<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>To align <strong>left</strong> the dropdown menu with the given breakpoint or larger, add <code>.dropdown-menu-end</code> and <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start</code>.</p>
+<p><strong>왼쪽</strong>의 드롭다운 메뉴를 지정된 브레이크 포인트 이상의 크기에 배치하려면, <code>.dropdown-menu-end</code> 와 <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start</code> 를 추가합니다.</p>
 <div class="bd-example">
 <div class="btn-group">
   <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
@@ -1151,10 +1151,10 @@
     <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Something else here<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Note that you don&rsquo;t need to add a <code>data-bs-display=&quot;static&quot;</code> attribute to dropdown buttons in navbars, since Popper isn&rsquo;t used in navbars.</p>
+<p>navbars 의 드롭다운 버튼에 <code>data-bs-display=&quot;static&quot;</code> 속성을 추가할 필요가 없다는 점에 주의하십시오.</p>
 <h2 id="menu-content">Menu content</h2>
 <h3 id="headers">Headers</h3>
-<p>Add a header to label sections of actions in any dropdown menu.</p>
+<p>임의의 드롭다운 메뉴 액션 섹션 라벨에 header 를 추가합니다.</p>
 <div class="bd-example">
 <ul class="dropdown-menu">
   <li><h6 class="dropdown-header">Dropdown header</h6></li>
@@ -1167,7 +1167,7 @@
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Another action<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="dividers">Dividers</h3>
-<p>Separate groups of related menu items with a divider.</p>
+<p>관련 메뉴 아이템을 구분선으로 나눕니다.</p>
 <div class="bd-example">
 <ul class="dropdown-menu">
   <li><a class="dropdown-item" href="#">Action</a></li>
@@ -1184,7 +1184,7 @@
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown-item&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Separated link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="text">Text</h3>
-<p>Place any freeform text within a dropdown menu with text and use <a href="/docs/5.0/utilities/spacing/">spacing utilities</a>. Note that you&rsquo;ll likely need additional sizing styles to constrain the menu width.</p>
+<p>자유롭게 드롭다운 메뉴 내에 텍스트로 배치하고 <a href="/docs/5.0/utilities/spacing/">spacing utilities</a> 를 사용합니다. 메뉴의 너비를 제한하기 위해 추가 사이징 스타일이 필요할 가능성이 높다는 점에 유의하십시오.</p>
 <div class="bd-example">
 <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
   <p>
@@ -1203,7 +1203,7 @@
   <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="forms">Forms</h3>
-<p>Put a form within a dropdown menu, or make it into a dropdown menu, and use <a href="/docs/5.0/utilities/spacing/">margin or padding utilities</a> to give it the negative space you require.</p>
+<p>드롭다운 메뉴 안에 form 을 넣거나 드롭다운 메뉴로 해서 <a href="/docs/5.0/utilities/spacing/">margin 혹은 padding utilities</a> 를 사용하여 여백을 제공합니다.</p>
 <div class="bd-example">
 <div class="dropdown-menu">
   <form class="px-4 py-3">
@@ -1293,7 +1293,7 @@
   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span><span class="p">&gt;</span>Sign in<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="dropdown-options">Dropdown options</h2>
-<p>Use <code>data-bs-offset</code> or <code>data-bs-reference</code> to change the location of the dropdown.</p>
+<p>드롭다운의 위치를 변경하려면 <code>data-bs-offset</code> 나 <code>data-bs-reference</code> 를 사용합니다.</p>
 <div class="bd-example">
 <div class="d-flex">
   <div class="dropdown me-1">
@@ -1346,13 +1346,13 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="usage">Usage</h2>
-<p>Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the <code>.show</code> class on the parent <code>.dropdown-menu</code>. The <code>data-bs-toggle=&quot;dropdown&quot;</code> attribute is relied on for closing dropdown menus at an application level, so it&rsquo;s a good idea to always use it.</p>
+<p>data 속성이나 JavaScript 를 사용해, 드롭다운 플러그인은 부모의 <code>.dropdown-menu</code> 의 <code>.show</code> 클래스를 토글 하는 것으로 숨기는 컨텐츠(드롭다운 메뉴)를 토글합니다. <code>data-bs-toggle=&quot;dropdown&quot;</code> 속성은 어플리케이션 레벨에서 드롭다운 메뉴를 닫기 위해 이용됩니다.</p>
 <div class="bd-callout bd-callout-info">
-On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> handlers to the immediate children of the <code>&lt;body&gt;</code> element. This admittedly ugly hack is necessary to work around a <a href="https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html">quirk in iOS' event delegation</a>, which would otherwise prevent a tap anywhere outside of the dropdown from triggering the code that closes the dropdown. Once the dropdown is closed, these additional empty <code>mouseover</code> handlers are removed.
+touch 대응 디바이서에서는, 드롭다운을 열면 빈 <code>mouseover</code> 핸들러가 <code>&lt;body&gt;</code> 요소의 바로 아래 자식 요소에 추가됩니다. 이렇게 보기 싫은 hack 은  <a href="https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html">iOS' event delegation</a> 을 피하기 위해서 필요한 것으로, 그렇지 않으면 드롭다운 바깥쪽의 임의의 곳을 탭해도 드롭다운을 닫는 코드를 트리거 할 수 없습니다. 드롭다운이 닫히면, 이렇게 추가된 빈 <code>mouseover</code> 핸들러는 삭제됩니다.
 </div>
 
 <h3 id="via-data-attributes">Via data attributes</h3>
-<p>Add <code>data-bs-toggle=&quot;dropdown&quot;</code> to a link or button to toggle a dropdown.</p>
+<p>링크나 버튼에 <code>data-bs-toggle=&quot;dropdown&quot;</code> 을 추가하고, 드롭다운을 바꾸도록 합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;dLabel&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;dropdown&#34;</span> <span class="na">aria-expanded</span><span class="o">=</span><span class="s">&#34;false&#34;</span><span class="p">&gt;</span>
     Dropdown trigger
@@ -1362,18 +1362,18 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="via-javascript">Via JavaScript</h3>
-<p>Call the dropdowns via JavaScript:</p>
+<p>JavaScript 로 드롭다운을 호출합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">dropdownElementList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.dropdown-toggle&#39;</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">dropdownList</span> <span class="o">=</span> <span class="nx">dropdownElementList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">dropdownToggleEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Dropdown</span><span class="p">(</span><span class="nx">dropdownToggleEl</span><span class="p">)</span>
 <span class="p">})</span>
 </code></pre></div><div class="bd-callout bd-callout-info">
-<h5 id="data-bs-toggledropdown-still-required"><code>data-bs-toggle=&quot;dropdown&quot;</code> still required</h5>
-<p>Regardless of whether you call your dropdown via JavaScript or instead use the data-api, <code>data-bs-toggle=&quot;dropdown&quot;</code> is always required to be present on the dropdown&rsquo;s trigger element.
+<h5 id="data-bs-toggledropdown-여전히-필요하다"><code>data-bs-toggle=&quot;dropdown&quot;</code> 여전히 필요하다</h5>
+<p>JavaScript 로 드롭다운을 호출하느냐 data-api 를 사용하느냐에 상관없이 <code>data-bs-toggle=&quot;dropdown&quot;</code> 은 항상 드롭다운의 트리거 요소에 존재해야 합니다.
 </div>
 
 <h3 id="options">Options</h3>
-<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-bs-</code>, as in <code>data-bs-offset=&quot;&quot;</code>.</p>
+<p>옵션은 data 속성 또는 JavaScript 로 줄 수 있습니다. data 속성의 경우는 <code>data-bs-offset=&quot;&quot;</code> 처럼 <code>data-bs-</code> 에 옵션명을 추가합니다.</p>
 <table class="table">
   <thead>
     <tr>
@@ -1388,35 +1388,35 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
       <td><code>flip</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Allow Dropdown to flip in case of an overlapping on the reference element. For more information refer to Popper's <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip docs</a>.</td>
+      <td>참조 요소와 겹쳤을 경우에, 드롭다운이 반전되도록 허용합니다. 자세한 내용은 Popper <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip docs</a> 를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'scrollParent'</code></td>
-      <td>Overflow constraint boundary of the dropdown menu. By default it's <code>'clippingParents'</code> and can accept an HTMLElement reference (JavaScript only). For more information refer to Popper's <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">preventOverflow docs</a>.</td>
+      <td>드롭다운 메뉴의 오버플로 제약 경계. 기본적으로는 <code>'clippingParents'</code> 로 HTMLElement 의 참조를 받을 수 있습니다(JavaScript 만). 자세한 내용은 Popper <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">preventOverflow docs</a> 를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>reference</code></td>
       <td>string | element</td>
       <td><code>'toggle'</code></td>
-      <td>Reference element of the dropdown menu. Accepts the values of <code>'toggle'</code>, <code>'parent'</code>, or an HTMLElement reference. For more information refer to Popper's <a href="https://popper.js.org/docs/v2/constructors/#createpopper">constructor docs</a>.</td>
+      <td>드롭다운 메뉴의 참조 요소. <code>'toggle'</code>, <code>'parent'</code> 혹은 HTMLElement 레퍼런스의 값을 받습니다. 자세한 내용은 Popper <a href="https://popper.js.org/docs/v2/constructors/#createpopper">constructor docs</a> 를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>display</code></td>
       <td>string</td>
       <td><code>'dynamic'</code></td>
-      <td>By default, we use Popper for dynamic positioning. Disable this with <code>static</code>.</td>
+      <td>기본적으로는, 동적인 위치 맞추기로 Popper 를 사용하고 있습니다. 이것을 비활성화 시키려면, <code>static</code> 으로 지정해 주세요.</td>
     </tr>
     <tr>
       <td><code>popperConfig</code></td>
       <td>null | object</td>
       <td><code>null</code></td>
-      <td>To change Bootstrap's default Popper config, see <a href="https://popper.js.org/docs/v1/#Popper.Defaults">Popper's configuration</a></td>
+      <td>Bootstrap 의 기본 Popper 설정을 변경하려면 <a href="https://popper.js.org/docs/v1/#Popper.Defaults">Popper's configuration</a> 을 참조하십시오.</td>
     </tr>
   </tbody>
 </table>
-<p>Note when <code>boundary</code> is set to any value other than <code>'scrollParent'</code>, the style <code>position: static</code> is applied to the <code>.dropdown</code> container.</p>
+<p><code>boundary</code> 가 <code>'scrollParent'</code> 이외의 값으로 설정되어 있는 경우, 스타일 <code>position: static</code> 이 <code>.dropdown</code> 컨테이너에 적용된다는 점에 주의하십시오.</p>
 <h3 id="methods">Methods</h3>
 <table class="table">
   <thead>
@@ -1429,44 +1429,44 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
     <tr>
       <td><code>toggle</code></td>
       <td>
-        Toggles the dropdown menu of a given navbar or tabbed navigation.
+        지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 바꿉니다.
       </td>
     </tr>
     <tr>
       <td><code>show</code></td>
       <td>
-        Shows the dropdown menu of a given navbar or tabbed navigation.
+        지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 표시합니다.
       </td>
     </tr>
     <tr>
       <td><code>hide</code></td>
       <td>
-        Hides the dropdown menu of a given navbar or tabbed navigation.
+        지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 숨깁니다.
       </td>
     </tr>
     <tr>
       <td><code>update</code></td>
       <td>
-        Updates the position of an element's dropdown.
+        요소의 드롭다운 위치를 업데이트 합니다.
       </td>
     </tr>
     <tr>
       <td><code>dispose</code></td>
       <td>
-        Destroys an element's dropdown. (Removes stored data on the DOM element)
+        요소의 드롭다운을 없앱니다.(DOM 요소에 지정되어 있는 데이터를 삭제합니다)
       </td>
     </tr>
     <tr>
       <td><code>getInstance</code></td>
       <td>
-        Static method which allows you to get the dropdown instance associated with a DOM element.
+        DOM 요소에 관련 지어진 드롭다운의 인스턴스를 취득하는 Static 메소드.
       </td>
     </tr>
   </tbody>
 </table>
 <h3 id="events">Events</h3>
-<p>All dropdown events are fired at the <code>.dropdown-menu</code>&rsquo;s parent element and have a <code>relatedTarget</code> property, whose value is the toggling anchor element.
-<code>hide.bs.dropdown</code> and <code>hidden.bs.dropdown</code> events have a <code>clickEvent</code> property (only when the original Event type is <code>click</code>) that contains an Event Object for the click event.</p>
+<p>모든 드롭다운 이벤트는 <code>.dropdown-menu</code> 의 부모 요소에서 발생하며, <code>relatedTarget</code> 속성을 가지며, 그 값은 토글 앵커 요소입니다.
+<code>hide.bs.dropdown</code> 과 <code>hidden.bs.dropdown</code> 이벤트는 <code>clickEvent</code> 속성을 가지고 있습니다(원래의 이벤트 타입이 <code>click</code> 인 경우만).</p>
 <table class="table">
   <thead>
     <tr>
@@ -1480,7 +1480,7 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
         <code>show.bs.dropdown</code>
       </td>
       <td>
-        Fires immediately when the show instance method is called.
+        이 이벤트는 show 인스턴스 메소드가 호출되지마자 발생합니다.
       </td>
     </tr>
     <tr>
@@ -1488,7 +1488,7 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
         <code>shown.bs.dropdown</code>
       </td>
       <td>
-        Fired when the dropdown has been made visible to the user and CSS transitions have completed.
+        이 이벤트는 드롭다운 메뉴가 표시되어 CSS 트랜지션이 완료되었을 때 발생합니다.
       </td>
     </tr>
     <tr>
@@ -1496,7 +1496,7 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
         <code>hide.bs.dropdown</code>
       </td>
       <td>
-        Fires immediately when the hide instance method has been called.
+        이 이벤트는 hide 인스턴스 메소드가 호출되자마자 발생합니다.
       </td>
     </tr>
     <tr>
@@ -1504,7 +1504,7 @@ On touch-enabled devices, opening a dropdown adds empty <code>mouseover</code> h
         <code>hidden.bs.dropdown</code>
       </td>
       <td>
-        Fired when the dropdown has finished being hidden from the user and CSS transitions have completed.
+        이 이벤트는 드롭다운 메뉴가 비표시되어 CSS 트랜지션이 완료되었을 때 발생합니다.
       </td>
     </tr>
   </tbody>

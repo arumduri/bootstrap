@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Documentation and examples for Bootstrap&rsquo;s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
+<meta name="description" content="Bootstrap 의 파워풀하고 반응형적인 내비게이션 헤더, 내비바의 문서와 예. 콜랩스(collapse) 플러그인 지원을 포함한 브랜딩, 내비게이션 등의 지원이 포함되어 있습니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.79.0">
+<meta name="generator" content="Hugo 0.79.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Navbar · Bootstrap v5.0</title>
+<title>Navbar(내비게이션바) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/components/navbar/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Navbar">
-<meta name="twitter:description" content="Documentation and examples for Bootstrap&rsquo;s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
+<meta name="twitter:title" content="Navbar(내비게이션바)">
+<meta name="twitter:description" content="Bootstrap 의 파워풀하고 반응형적인 내비게이션 헤더, 내비바의 문서와 예. 콜랩스(collapse) 플러그인 지원을 포함한 브랜딩, 내비게이션 등의 지원이 포함되어 있습니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/navbar/">
-<meta property="og:title" content="Navbar">
-<meta property="og:description" content="Documentation and examples for Bootstrap&rsquo;s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.">
+<meta property="og:title" content="Navbar(내비게이션바)">
+<meta property="og:description" content="Bootstrap 의 파워풀하고 반응형적인 내비게이션 헤더, 내비바의 문서와 예. 콜랩스(collapse) 플러그인 지원을 포함한 브랜딩, 내비게이션 등의 지원이 포함되어 있습니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -91,7 +91,7 @@
           <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
+          <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">테마</a>
@@ -383,9 +383,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/navbar.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Navbar</h1>
+          <h1 class="bd-title" id="content">Navbar(내비게이션바)</h1>
         </div>
-        <p class="bd-lead">Documentation and examples for Bootstrap&rsquo;s powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.</p>
+        <p class="bd-lead">Bootstrap 의 파워풀하고 반응형적인 내비게이션 헤더, 내비바의 문서와 예. 콜랩스(collapse) 플러그인 지원을 포함한 브랜딩, 내비게이션 등의 지원이 포함되어 있습니다.</p>
         
 
       </div>
@@ -422,30 +422,30 @@
         
 
         <h2 id="how-it-works">How it works</h2>
-<p>Here&rsquo;s what you need to know before getting started with the navbar:</p>
+<p>내비게이션바를 시작하기 전에 알아야 할 것들을 설명하겠습니다:</p>
 <ul>
-<li>Navbars require a wrapping <code>.navbar</code> with <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> for responsive collapsing and <a href="#color-schemes">color scheme</a> classes.</li>
-<li>Navbars and their contents are fluid by default. Change the <a href="#containers">container</a> to limit their horizontal width in different ways.</li>
-<li>Use our <a href="/docs/5.0/utilities/spacing/">spacing</a> and <a href="/docs/5.0/utilities/flex/">flex</a> utility classes for controlling spacing and alignment within navbars.</li>
-<li>Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.</li>
-<li>Ensure accessibility by using a <code>&lt;nav&gt;</code> element or, if using a more generic element such as a <code>&lt;div&gt;</code>, add a <code>role=&quot;navigation&quot;</code> to every navbar to explicitly identify it as a landmark region for users of assistive technologies.</li>
-<li>Indicate the current item by using <code>aria-current=&quot;page&quot;</code> for the current page or <code>aria-current=&quot;true&quot;</code> for the current item in a set.</li>
+<li>내비게이션바는 <code>.navbar</code> 를 <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> 로 감싸야 하며, <a href="#color-schemes">color scheme</a> 클래스가 필요합니다.</li>
+<li>내비게이션과 그 컨텐츠는 기본 유동적입니다. <a href="#containers">container</a> 를 변경하여 다양한 방법으로 가로폭을 제한할 수 있습니다.</li>
+<li>내비게이션에서 간격이나 배치를 제어하려면 <a href="/docs/5.0/utilities/spacing/">spacing</a> 와 <a href="/docs/5.0/utilities/flex/">flex</a> 유틸리티 클래스를 사용합니다.</li>
+<li>내비게이션은 기본 반응형인데, 그것을 간단히 변경할 수 있습니다. 반응형 동작은 Collapse JavaScript 플러그인에 의존합니다.</li>
+<li>접근성을 확보하려면 <code>&lt;nav&gt;</code> 요소를 사용하거나, 혹은 <code>&lt;div&gt;</code> 와 같이 보다 범용적인 요소를 사용하는 경우에는 <code>role=&quot;navigation&quot;</code> 을 추가하여 스크린 리더 사용자를 위해 랜드마크가 되는 곳임을 명시적으로 알려주어야 합니다.</li>
+<li>현재 페이지에는 <code>aria-current=&quot;page&quot;</code> 를, 세트 안에서의 현재 아이템에는 <code>aria-current=&quot;true&quot;</code> 를 사용하여, 현재 아이템을 표시합니다.</li>
 </ul>
 <div class="bd-callout bd-callout-info">
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
 </div>
 
 <h2 id="supported-content">Supported content</h2>
-<p>Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:</p>
+<p>내비게이션에는 몇 가지의 서브 컴퍼넌트의 지원이 포함되어 있습니다. 필요에 따라, 아래에서 선택해 주세요.:</p>
 <ul>
-<li><code>.navbar-brand</code> for your company, product, or project name.</li>
-<li><code>.navbar-nav</code> for a full-height and lightweight navigation (including support for dropdowns).</li>
-<li><code>.navbar-toggler</code> for use with our collapse plugin and other <a href="#responsive-behaviors">navigation toggling</a> behaviors.</li>
-<li>Flex and spacing utilities for any form controls and actions.</li>
-<li><code>.navbar-text</code> for adding vertically centered strings of text.</li>
-<li><code>.collapse.navbar-collapse</code> for grouping and hiding navbar contents by a parent breakpoint.</li>
+<li>회사명, 제품명, 프로젝트명의 <code>.navbar-brand</code>.</li>
+<li>full-height 와 가벼운 내비게이션의 <code>.navbar-nav</code>(드롭다운 포함).</li>
+<li>collapse 플러그인이나 기타 <a href="#responsive-behaviors">navigation toggling</a> 동작을 사용하기 위한 <code>.navbar-toggler</code>.</li>
+<li>폼 컨트롤과 액션을 위한 Flex 와 spacing 유틸리티.</li>
+<li>수직 방향의 중앙에 텍스트를 추가하기 위한 <code>.navbar-text</code>.</li>
+<li>내비게이션바의 내용을 부모 브레이크 포인트로 그룹화 하거나 숨기기 위한 <code>.collapse.navbar-collapse</code>.</li>
 </ul>
-<p>Here&rsquo;s an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the <code>lg</code> (large) breakpoint.</p>
+<p>여기에서는 <code>lg</code> (large) 브레이크 포인트에서 자동으로 접히는 &lsquo;light&rsquo;의 테마를 사용한 반응형 내비게이션바에 포함된 서브 컴포넌트의 예를 보여주고 있습니다.</p>
 <div class="bd-example">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -519,9 +519,9 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>This example uses <a href="/docs/5.0/utilities/colors/">color</a> (<code>bg-light</code>) and <a href="/docs/5.0/utilities/spacing/">spacing</a> (<code>my-2</code>, <code>my-lg-0</code>, <code>me-sm-0</code>, <code>my-sm-0</code>) utility classes.</p>
+<p>이 예에서는, <a href="/docs/5.0/utilities/colors/">color</a> (<code>bg-light</code>) 와 <a href="/docs/5.0/utilities/spacing/">spacing</a> (<code>my-2</code>, <code>my-lg-0</code>, <code>me-sm-0</code>, <code>my-sm-0</code>) 유틸리티 클래스를 사용하고 있습니다.</p>
 <h3 id="brand">Brand</h3>
-<p>The <code>.navbar-brand</code> can be applied to most elements, but an anchor works best, as some elements might require utility classes or custom styles.</p>
+<p><code>.navbar-brand</code> 는 대부분의 요소에 적용이 가능하지만, 요소에 따라서 유틸리티 클래스나 커스텀 스타일을 필요로 하는 경우가 있기 때문에 앵커가 최적입니다.</p>
 <div class="bd-example">
 <!-- As a link -->
 <nav class="navbar navbar-light bg-light">
@@ -549,7 +549,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;navbar-brand mb-0 h1&#34;</span><span class="p">&gt;</span>Navbar<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>Adding images to the <code>.navbar-brand</code> will likely always require custom styles or utilities to properly size. Here are some examples to demonstrate.</p>
+<p><code>.navbar-brand</code> 에 이미지를 추가하는 경우, 적절한 크기로 하기 위해서 커스텀 스타일이나 유틸리티가 필요하게 됩니다. 아래의 예를 참고해 주십시오.</p>
 <div class="bd-example">
 <!-- Just an image -->
 <nav class="navbar navbar-light bg-light">
@@ -587,9 +587,9 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="nav">Nav</h3>
-<p>Navbar navigation links build on our <code>.nav</code> options with their own modifier class and require the use of <a href="#toggler">toggler classes</a> for proper responsive styling. <strong>Navigation in navbars will also grow to occupy as much horizontal space as possible</strong> to keep your navbar contents securely aligned.</p>
-<p>Active states—with <code>.active</code>—to indicate the current page can be applied directly to <code>.nav-link</code>s or their immediate parent <code>.nav-item</code>s.</p>
-<p>Please note that you should also add the <code>aria-current</code> attribute on the <code>.nav-link</code> itself.</p>
+<p>내비게이션바의 내비게이션 링크는 <code>.nav</code> 옵션에 독자적인 변경 클래스를 추가하여 구축되며, 적절한 반응형 스타일링을 위해 <a href="#toggler">toggler classes</a> 사용을 필요로 합니다. 내비게이션바 안에서의 내비게이션 링크는 <strong>수평 방향으로 펼쳐져 깔끔하게 정렬</strong>합니다.</p>
+<p>현재 페이지를 <code>.nav-link</code> 나 그 바로 위의 부모 <code>.nav-item</code> 에 <code>.active</code> 를 사용하여 활성화 상태를 나타냅니다.</p>
+<p>그리고 <code>.nav-link</code> 자체에 <code>aria-current</code> 속성을 추가해야 할 필요가 있다는 점에 주의해 주세요.</p>
 <div class="bd-example">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -639,7 +639,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>And because we use classes for our navs, you can avoid the list-based approach entirely if you like.</p>
+<p>또한, 내비게이션 링크에 클래스를 사용하고 있기 때문에 리스트 기반 접근법을 완전히 피할수 있습니다.</p>
 <div class="bd-example">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -673,7 +673,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>You can also use dropdowns in your navbar. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for <code>.nav-item</code> and <code>.nav-link</code> as shown below.</p>
+<p>내비게이션바에서 드롭다운을 사용할 수도 있습니다.
+드롭다운 메뉴는 배치를 위한 랩핑된 요소가 필요하기 때문에 아래와 같이 <code>.nav-item</code> 와 <code>.nav-link</code> 과는 다른 중첩 된 요소로 분리해 사용해 주세요.</p>
 <div class="bd-example">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -738,7 +739,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="forms">Forms</h3>
-<p>Place various form controls and components within a navbar:</p>
+<p>내비게이션바 내에 다양한 폼 컨트롤 및 컴포넌트를 배치합니다:</p>
 <div class="bd-example">
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
@@ -756,7 +757,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>Immediate child elements of <code>.navbar</code> use flex layout and will default to <code>justify-content: space-between</code>. Use additional <a href="/docs/5.0/utilities/flex/">flex utilities</a> as needed to adjust this behavior.</p>
+<p><code>.navbar</code> 의 바로 다음 자식 요소는 flex 레이아웃을 사용하며 기본값은 <code>justify-content: space-between</code> 입니다. 이 동작을 조정하려면 필요에 따라 추가적인 <a href="/docs/5.0/utilities/flex/">flex utilities</a>를 사용하십시오.</p>
 <div class="bd-example">
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
@@ -776,7 +777,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>Input groups work, too. If your navbar is an entire form, or mostly a form, you can use the <code>&lt;form&gt;</code> element as the container and save some HTML.</p>
+<p>Input group 도 사용 가능합니다. 내비게이션바가 폼 전체 혹은 대부분이 폼인 경우라면, <code>&lt;form&gt;</code> 요소를 컨테이너로 사용하여 HTML 을 저장할 수 있습니다.</p>
 <div class="bd-example">
 <nav class="navbar navbar-light bg-light">
   <form class="container-fluid">
@@ -794,7 +795,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>Various buttons are supported as part of these navbar forms, too. This is also a great reminder that vertical alignment utilities can be used to align different sized elements.</p>
+<p>다양한 버튼도 이러한 내비게이션 폼의 일부로서 지원되고 있습니다. 이것은 또한 세로 정렬 유틸리티를 사용하여 서로 다른 크기의 요소들을 정렬시킬 수 있습니다.</p>
 <div class="bd-example">
 <nav class="navbar navbar-light bg-light">
   <form class="container-fluid justify-content-start">
@@ -809,7 +810,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="text">Text</h3>
-<p>Navbars may contain bits of text with the help of <code>.navbar-text</code>. This class adjusts vertical alignment and horizontal spacing for strings of text.</p>
+<p>텍스트의 문자열의 수직 방향과 수평 간격을 조정하는 <code>.navbar-text</code> 를 포함할 수 있습니다.</p>
 <div class="bd-example">
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
@@ -825,7 +826,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>Mix and match with other components and utilities as needed.</p>
+<p>필요 시 다른 컴포넌트 및 유틸리티와 혼합하여 사용할 수 있습니다.</p>
 <div class="bd-example">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -876,7 +877,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="color-schemes">Color schemes</h2>
-<p>Theming the navbar has never been easier thanks to the combination of theming classes and <code>background-color</code> utilities. Choose from <code>.navbar-light</code> for use with light background colors, or <code>.navbar-dark</code> for dark background colors. Then, customize with <code>.bg-*</code> utilities.</p>
+<p>테마 설정 클래스와 <code>background-color</code> 유틸리티의 조합으로 내비게이션바의 테마 설정이 그 어느때보다 간단해졌습니다. 밝은 배경색에는 <code>.navbar-light</code>, 어두운 배경색에는 <code>.navbar-dark</code> 를 선택합니다. 그 다음, <code>.bg-*</code> 유틸리티를 사용하여 커스터마이즈합니다.</p>
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -975,7 +976,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="c">&lt;!-- Navbar content --&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="containers">Containers</h2>
-<p>Although it&rsquo;s not required, you can wrap a navbar in a <code>.container</code> to center it on a page–though note that an inner container is still required. Or you can add a container inside the <code>.navbar</code> to only center the contents of a <a href="#placement">fixed or static top navbar</a>.</p>
+<p>필수는 아니지만, 내비게이션바를 <code>.container</code> 로 감싸 페이지 중앙에 배치할 수도 있지만 내부의 컨테이너가 필요하게 된다는 점을 주의해 주세요. 혹은, <code>.navbar</code> 의 내부에 컨테이너를 추가하고 <a href="#placement">fixed 혹은 static top navbar</a> 의 내용만을 중앙에 배치할 수도 있습니다.</p>
 <div class="bd-example">
 <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -991,7 +992,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Use any of the responsive containers to change how wide the content in your navbar is presented.</p>
+<p>반응형 컨테이너 중 하나를 사용하여 내비게이션바의 컨텐츠 표시 폭을 변경할 수 있습니다.</p>
 <div class="bd-example">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-md">
@@ -1004,8 +1005,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="placement">Placement</h2>
-<p>Use our <a href="/docs/5.0/utilities/position/">position utilities</a> to place navbars in non-static positions. Choose from fixed to the top, fixed to the bottom, or stickied to the top (scrolls with the page until it reaches the top, then stays there). Fixed navbars use <code>position: fixed</code>, meaning they&rsquo;re pulled from the normal flow of the DOM and may require custom CSS (e.g., <code>padding-top</code> on the <code>&lt;body&gt;</code>) to prevent overlap with other elements.</p>
-<p>Also note that <strong><code>.sticky-top</code> uses <code>position: sticky</code>, which <a href="https://caniuse.com/css-sticky">isn&rsquo;t fully supported in every browser</a></strong>.</p>
+<p><a href="/docs/5.0/utilities/position/">Position utilities</a> 를 사용하여 내비게이션바를 정적이지 않은 위치에 배치할 수 있습니다. 상단고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단고정을 할지 선택할 수 있습니다. 고정 내비게이션바는 <code>position: fixed</code> 를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 커스텀 CSS(예를 들어, <code>&lt;body&gt;</code> 의 <code>padding-top</code> 등)가 필요할 수 있습니다.</p>
+<p>또한, <strong><code>.sticky-top</code>은 <code>position: sticky</code>를 사용하고 있는데 <a href="https://caniuse.com/css-sticky">모든 브라우저에서 완전이 지원되는 것은 아닙니다</a></strong></p>
 <div class="bd-example">
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
@@ -1051,11 +1052,11 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="responsive-behaviors">Responsive behaviors</h2>
-<p>Navbars can use <code>.navbar-toggler</code>, <code>.navbar-collapse</code>, and <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> classes to determine when their content collapses behind a button. In combination with other utilities, you can easily choose when to show or hide particular elements.</p>
-<p>For navbars that never collapse, add the <code>.navbar-expand</code> class on the navbar. For navbars that always collapse, don&rsquo;t add any <code>.navbar-expand</code> class.</p>
+<p><code>.navbar-toggler</code>, <code>.navbar-collapse</code>, 및 <code>.navbar-expand{-sm|-md|-lg|-xl|-xxl}</code> 클래스를 사용하여 컨텐츠가 버튼 뒤쪽에서 접히는 시점을 결정합니다. 다른 유틸리티와 결합하여 특정 요소를 언제 표시하고 감출지 손쉽게 선택할 수 있습니다.</p>
+<p>접히지 않는 내비게이션바의 경우, <code>.navbar-expand</code> 클래스를 내비바에 추가합니다. 항상 접히는 내비게이션바의 경우 <code>.navbar-expand</code> 클래스를 추가하지 마십시오.</p>
 <h3 id="toggler">Toggler</h3>
-<p>Navbar togglers are left-aligned by default, but should they follow a sibling element like a <code>.navbar-brand</code>, they&rsquo;ll automatically be aligned to the far right. Reversing your markup will reverse the placement of the toggler. Below are examples of different toggle styles.</p>
-<p>With no <code>.navbar-brand</code> shown at the smallest breakpoint:</p>
+<p>내비게이션바의 토글은 기본적으로 왼쪽 정렬입니다만, <code>.navbar-brand</code> 와 같은 형제 요소에 이어지는 경우는 자동적으로 오른쪽 정렬이 됩니다. 마크업을 거꾸로 하면 토글의 배치도 거꾸로 바뀝니다. 아래는 색다른 토글 스타일의 예입니다.</p>
+<p>최소의 브레이크 포인트에서 <code>.navbar-brand</code> 가 표시되지 않습니다:</p>
 <div class="bd-example">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -1107,7 +1108,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>With a brand name shown on the left and toggler on the right:</p>
+<p>왼쪽에 브랜드명이 표시되고 오른쪽에 토글이 표시되고 있습니다:</p>
 <div class="bd-example">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -1159,7 +1160,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>With a toggler on the left and brand name on the right:</p>
+<p>왼쪽에 토글이, 오른쪽에 브랜드명이 들어가 있습니다:</p>
 <div class="bd-example">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -1212,7 +1213,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="external-content">External content</h3>
-<p>Sometimes you want to use the collapse plugin to trigger a container element for content that structurally sits outside of the <code>.navbar</code> . Because our plugin works on the <code>id</code> and <code>data-bs-target</code> matching, that&rsquo;s easily done!</p>
+<p>구조적으로 <code>.navbar</code> 바깥쪽에 있는 컨텐츠를 위해 collapse 플러그인을 사용해 컨테이너 요소를 트리거하고 싶을 수도 있습니다. 이 플러그인은 <code>id</code> 와 <code>data-bs-target</code> 의 매칭으로 동작하기 때문에 실행이 간단합니다.</p>
 <div class="bd-example">
 <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
@@ -1240,7 +1241,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>When you do this, we recommend including additional JavaScript to move the focus programmatically to the container when it is opened. Otherwise, keyboard users and users of assistive technologies will likely have a hard time finding the newly revealed content - particularly if the container that was opened comes <em>before</em> the toggler in the document&rsquo;s structure. We also recommend making sure that the toggler has the <code>aria-controls</code> attribute, pointing to the <code>id</code> of the content container. In theory, this allows assistive technology users to jump directly from the toggler to the container it controls–but support for this is currently quite patchy.</p>
+<p>이러한 경우는, 컨테이너가 열렸을 때에 프로그램적으로 포커스를 컨테이너로 이동시키기 위해 추가의 JavaScript 를 포함하는 것을 권장합니다. 그렇지 않으면 키보드 사용자나 스크린 리더 사용자는 새로 표시된 컨텐츠를 찾는데 어려움을 겪을 것입니다. 특히 열린 컨테이너가 문서 구조의 토글 <em>앞</em>에 있는 경우가 그렇습니다. 또한 토글이 <code>aria-controls</code> 속성을 가지고 있으며 <code>id</code> 를 가리키도록 하는 것을 권장합니다. 이론적으로는 이를 통해 스크린 리더 사용자가 토글에서 토글이 컨트롤하는 컨테이너로 직접 뛰어오를 수 있게 되는데, 현재까지 이 지원은 상당 부분 패치가 잘 되어 있습니다.</p>
 
       </div>
     </main>

@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.">
+<meta name="description" content="Collapse(콜랩스) JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언을 만듭니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.79.0">
+<meta name="generator" content="Hugo 0.79.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Accordion · Bootstrap v5.0</title>
+<title>Accordion(아코디언) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/components/accordion/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Accordion">
-<meta name="twitter:description" content="Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.">
+<meta name="twitter:title" content="Accordion(아코디언)">
+<meta name="twitter:description" content="Collapse(콜랩스) JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언을 만듭니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/accordion/">
-<meta property="og:title" content="Accordion">
-<meta property="og:description" content="Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.">
+<meta property="og:title" content="Accordion(아코디언)">
+<meta property="og:description" content="Collapse(콜랩스) JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언을 만듭니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -91,7 +91,7 @@
           <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
+          <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">테마</a>
@@ -383,9 +383,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/accordion.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Accordion</h1>
+          <h1 class="bd-title" id="content">Accordion(아코디언)</h1>
         </div>
-        <p class="bd-lead">Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.</p>
+        <p class="bd-lead">Collapse(콜랩스) JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언을 만듭니다.</p>
         
 
       </div>
@@ -411,13 +411,13 @@
         
 
         <h2 id="how-it-works">How it works</h2>
-<p>The accordion uses <a href="/docs/5.0/components/collapse/">collapse</a> internally to make it collapsible. To render an accordion that&rsquo;s expanded, add the <code>.open</code> class on the <code>.accordion</code>.</p>
+<p>아코디언은 내부적으로 <a href="/docs/5.0/components/collapse/">collapse</a> 을 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 랜더링을 하려면, <code>.accordion</code> 에 <code>.open</code> 클래스를 추가합니다.</p>
 <div class="bd-callout bd-callout-info">
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
 </div>
 
 <h2 id="example">Example</h2>
-<p>Click the accordions below to expand/collapse the accordion content.</p>
+<p>아래의 아코디언을 클릭하면, 아코디언의 내용을 접기/펼치기가 가능합니다.</p>
 <div class="bd-example">
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
@@ -496,7 +496,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="flush">Flush</h3>
-<p>Add <code>.accordion-flush</code> to remove the default <code>background-color</code>, some borders, and some rounded corners to render accordions edge-to-edge with their parent container.</p>
+<p><code>.accordion-flush</code> 을 추가하여, 기본 <code>background-color</code> 와 몇 개의 외곽선, 그리고 몇 개의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge 로 랜더링합니다.</p>
 <div class="bd-example bg-light">
 <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
@@ -563,7 +563,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="accessibility">Accessibility</h2>
-<p>Please read the <a href="/docs/5.0/components/collapse/#accessibility">collapse accessibility section</a> for more information.</p>
+<p>자세한 내용은 <a href="/docs/5.0/components/collapse/#accessibility">collapse accessibility section</a> 을 참고해 주세요.</p>
 
       </div>
     </main>

@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Documentation and examples for how to use Bootstrap&rsquo;s included navigation components.">
+<meta name="description" content="Bootstrap에 포함된 내비게이션 컴포넌트를 어떻게 사용하는지 문서와 예시입니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.79.0">
+<meta name="generator" content="Hugo 0.79.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Navs and tabs · Bootstrap v5.0</title>
+<title>Navs and tabs(내비와 탭) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/components/navs-tabs/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Navs and tabs">
-<meta name="twitter:description" content="Documentation and examples for how to use Bootstrap&rsquo;s included navigation components.">
+<meta name="twitter:title" content="Navs and tabs(내비와 탭)">
+<meta name="twitter:description" content="Bootstrap에 포함된 내비게이션 컴포넌트를 어떻게 사용하는지 문서와 예시입니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/navs-tabs/">
-<meta property="og:title" content="Navs and tabs">
-<meta property="og:description" content="Documentation and examples for how to use Bootstrap&rsquo;s included navigation components.">
+<meta property="og:title" content="Navs and tabs(내비와 탭)">
+<meta property="og:description" content="Bootstrap에 포함된 내비게이션 컴포넌트를 어떻게 사용하는지 문서와 예시입니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -91,7 +91,7 @@
           <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="https://icons.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
+          <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://themes.getbootstrap.com/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank" rel="noopener">테마</a>
@@ -383,9 +383,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/navs-tabs.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Navs and tabs</h1>
+          <h1 class="bd-title" id="content">Navs and tabs(내비와 탭)</h1>
         </div>
-        <p class="bd-lead">Documentation and examples for how to use Bootstrap&rsquo;s included navigation components.</p>
+        <p class="bd-lead">Bootstrap에 포함된 내비게이션 컴포넌트를 어떻게 사용하는지 문서와 예시입니다.</p>
         
 
       </div>
@@ -438,11 +438,11 @@
         
 
         <h2 id="base-nav">Base nav</h2>
-<p>Navigation available in Bootstrap share general markup and styles, from the base <code>.nav</code> class to the active and disabled states. Swap modifier classes to switch between each style.</p>
-<p>The base <code>.nav</code> component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.</p>
+<p>Bootstrap 에서 이용할 수 있는 내비게이션은 기본 <code>.nav</code> 클래스부터 활성화 상태와 비활성화 상태까지 일반적인 마크업과 스타일을 공유합니다. 각각의 스타일을 바꾸기 위해서 수식자 클래스를 교체합니다.</p>
+<p>기본 <code>.nav</code> 콘포넌트는 flexbox 로 구축되어 있으며, 모든 타입의 내비게이션 컴포넌트를 구축하기 위한 강력한 구조를 제공하고 있습니다. 여기에는 몇몇의 스타일 오버라이드(리스트를 다루기 위한), 보다 넓은 클릭 영역을 위한 여백, 기본적인 비활성화된 스타일이 포함되어 있습니다.</p>
 <div class="bd-callout bd-callout-info">
-<p>The base <code>.nav</code> component does not include any <code>.active</code> state. The following examples include the class, mainly to demonstrate that this particular class does not trigger any special styling.</p>
-<p>To convey the active state to assistive technologies, use the <code>aria-current</code> attribute — using the <code>page</code> value for current page, or <code>true</code> for the current item in a set.</p>
+<p>베이스의 <code>.nav</code> 컴포넌트에는 <code>.active</code> 상태는 포함되지 않습니다. 아래의 예에서는 주로 이 특정 클래스가 특별한 스타일링을 하지 않는 것을 나타내기 위해 이 클래스를 포함합니다.</p>
+<p>활성화된 상태를 스크린 리더에 전달하기 위해서는 현재 페이지라면 <code>page</code> 속성을, 세트내의 현재 아이템이라면 <code>true</code> 를 사용합니다.</p>
 
 </div>
 
@@ -475,7 +475,7 @@
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
-<p>Classes are used throughout, so your markup can be super flexible. Use <code>&lt;ul&gt;</code>s like above, <code>&lt;ol&gt;</code> if the order of your items is important, or roll your own with a <code>&lt;nav&gt;</code> element. Because the <code>.nav</code> uses <code>display: flex</code>, the nav links behave the same as nav items would, but without the extra markup.</p>
+<p>클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 <code>&lt;ul&gt;</code> 을 사용하거나, 아이템의 순서가 중요한 경우에는 <code>&lt;ol&gt;</code> 를 사용하거나, <code>&lt;nav&gt;</code> 요소를 사용해 독자적인 롤을 만들거나 할 수 있습니다. <code>.nav</code> 는 <code>display: flex</code> 을 사용하고 있기 때문에, nav-link 는 따로 추가적인 마크업 없이, nav-item 과 동일하게 동작합니다.</p>
 <div class="bd-example">
 <nav class="nav">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -490,10 +490,10 @@
   <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="available-styles">Available styles</h2>
-<p>Change the style of <code>.nav</code>s component with modifiers and utilities. Mix and match as needed, or build your own.</p>
+<p><code>.nav</code> 컴포넌트 스타일을 수식자와 유틸리티로 변경할 수 있습니다. 필요에 따라서 조합해 사용하는 거도 가능하며, 독자적인 스타일을 만드는것도 가능합니다.</p>
 <h3 id="horizontal-alignment">Horizontal alignment</h3>
-<p>Change the horizontal alignment of your nav with <a href="/docs/5.0/layout/grid/#horizontal-alignment">flexbox utilities</a>. By default, navs are left-aligned, but you can easily change them to center or right aligned.</p>
-<p>Centered with <code>.justify-content-center</code>:</p>
+<p><a href="/docs/5.0/layout/grid/#horizontal-alignment">flexbox utilities</a> 을 사용해, 내비게이션의 수평방향의 배치를 변경합니다. 내비게이션의 기본은 왼쪽 정렬이지만, 쉽게 가운데 혹은 오른쪽 정렬로 변경 가능합니다.</p>
+<p><code>.justify-content-center</code> 을 사용해 가운데 정렬이 가능합니다.</p>
 <div class="bd-example">
 <ul class="nav justify-content-center">
   <li class="nav-item">
@@ -523,7 +523,7 @@
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
-<p>Right-aligned with <code>.justify-content-end</code>:</p>
+<p><code>.justify-content-end</code> 을 사용해, 오른쪽 정렬:</p>
 <div class="bd-example">
 <ul class="nav justify-content-end">
   <li class="nav-item">
@@ -554,7 +554,7 @@
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="vertical">Vertical</h3>
-<p>Stack your navigation by changing the flex item direction with the <code>.flex-column</code> utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., <code>.flex-sm-column</code>).</p>
+<p><code>.flex-column</code> 유틸리티를 사용해 flex item(플렉스 아이템) 의 방향을 변경해 내비게이션을 세로로 만들수 있습니다. 일부 뷰포트에서는 세로로, 다른 뷰포트에서는 세로로 하고 싶지 않을 경우는, <code>.flex-sm-column</code> 을 사용해 주세요.</p>
 <div class="bd-example">
 <ul class="nav flex-column">
   <li class="nav-item">
@@ -584,7 +584,7 @@
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
-<p>As always, vertical navigation is possible without <code>&lt;ul&gt;</code>s, too.</p>
+<p>언제나 그렇듯, 세로 내비게이션도 <code>&lt;ul&gt;</code> 없이 가능합니다.</p>
 <div class="bd-example">
 <nav class="nav flex-column">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -599,7 +599,7 @@
   <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="tabs">Tabs</h3>
-<p>Takes the basic nav from above and adds the <code>.nav-tabs</code> class to generate a tabbed interface. Use them to create tabbable regions with our <a href="#javascript-behavior">tab JavaScript plugin</a>.</p>
+<p><code>.nav-tabs</code> 클래스를 추가해 탭이 있는 인터페이스를 만들수 있습니다. <a href="#javascript-behavior">tab JavaScript plugin</a> 으로 탭 가능한 영역을 만듭니다。</p>
 <div class="bd-example">
 <ul class="nav nav-tabs">
   <li class="nav-item">
@@ -630,7 +630,7 @@
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="pills">Pills</h3>
-<p>Take that same HTML, but use <code>.nav-pills</code> instead:</p>
+<p>동일한 HTML 로, <code>.nav-pills</code> 도 사용할 수 있습니다.</p>
 <div class="bd-example">
 <ul class="nav nav-pills">
   <li class="nav-item">
@@ -661,7 +661,7 @@
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="fill-and-justify">Fill and justify</h3>
-<p>Force your <code>.nav</code>&rsquo;s contents to extend the full available width one of two modifier classes. To proportionately fill all available space with your <code>.nav-item</code>s, use <code>.nav-fill</code>. Notice that all horizontal space is occupied, but not every nav item has the same width.</p>
+<p><code>.nav</code> 가로폭을 100% 사용하게 합니다. <code>.nav-item</code> 에서 사용 가능한 모든 여백을 비교하고 채우기 위해 <code>.nav-fill</code> 을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것은 아니므로 주의해 주세요.</p>
 <div class="bd-example">
 <ul class="nav nav-pills nav-fill">
   <li class="nav-item">
@@ -691,7 +691,7 @@
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
-<p>When using a <code>&lt;nav&gt;</code>-based navigation, you can safely omit <code>.nav-item</code> as only <code>.nav-link</code> is required for styling <code>&lt;a&gt;</code> elements.</p>
+<p><code>&lt;nav&gt;</code> 베이스의 내비게이션을 사용할 경우, <code>&lt;a&gt;</code> 요소의 스타일 설정에 필요한 것은 <code>.nav-link</code> 뿐이므로, <code>.nav-item</code> 을 생략할 수 있습니다.</p>
 <div class="bd-example">
 <nav class="nav nav-pills nav-fill">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -705,7 +705,7 @@
   <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>For equal-width elements, use <code>.nav-justified</code>. All horizontal space will be occupied by nav links, but unlike the <code>.nav-fill</code> above, every nav item will be the same width.</p>
+<p>동일한 가로 폭의 아이템을 사용하고 싶은 경우에는, <code>.nav-justified</code> 을 사용합니다. 모든 수평 방향의 여백은 nav-links 가 갖고 있지만, 위의 <code>.nav-fill</code> 과는 다르게, 모든 내비게이션 아이템은 동일한 가로폭을 가지게 됩니다.</p>
 <div class="bd-example">
 <ul class="nav nav-pills nav-justified">
   <li class="nav-item">
@@ -735,7 +735,7 @@
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
-<p>Similar to the <code>.nav-fill</code> example using a <code>&lt;nav&gt;</code>-based navigation.</p>
+<p><code>&lt;nav&gt;</code> 에 <code>.nav-fill</code> 을 적용한 경우는</p>
 <div class="bd-example">
 <nav class="nav nav-pills nav-justified">
   <a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -751,7 +751,7 @@
   <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link disabled&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="working-with-flex-utilities">Working with flex utilities</h2>
-<p>If you need responsive nav variations, consider using a series of <a href="/docs/5.0/utilities/flex/">flexbox utilities</a>. While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.</p>
+<p>반응형 내비의 변화가 필요한 경우에는 <a href="/docs/5.0/utilities/flex/">flexbox utilities</a> 을 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 브레이크 포인트 간에 더 큰 커스터마이즈가 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.</p>
 <div class="bd-example">
 <nav class="nav nav-pills flex-column flex-sm-row">
   <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Active</a>
@@ -766,10 +766,10 @@
   <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;flex-sm-fill text-sm-center nav-link disabled&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;-1&#34;</span> <span class="na">aria-disabled</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Disabled<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="regarding-accessibility">Regarding accessibility</h2>
-<p>If you&rsquo;re using navs to provide a navigation bar, be sure to add a <code>role=&quot;navigation&quot;</code> to the most logical parent container of the <code>&lt;ul&gt;</code>, or wrap a <code>&lt;nav&gt;</code> element around the whole navigation. Do not add the role to the <code>&lt;ul&gt;</code> itself, as this would prevent it from being announced as an actual list by assistive technologies.</p>
-<p>Note that navigation bars, even if visually styled as tabs with the <code>.nav-tabs</code> class, should <strong>not</strong> be given <code>role=&quot;tablist&quot;</code>, <code>role=&quot;tab&quot;</code> or <code>role=&quot;tabpanel&quot;</code> attributes. These are only appropriate for dynamic tabbed interfaces, as described in the <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices</a>. See <a href="#javascript-behavior">JavaScript behavior</a> for dynamic tabbed interfaces in this section for an example. The <code>aria-current</code> attribute is not necessary on dynamic tabbed interfaces since our JavaScript handles the selected state by adding <code>aria-selected=&quot;true&quot;</code> on the active tab.</p>
+<p>내비게이션바를 제공하기 위해 내비게이션을 사용하고 있는 경우, <code>&lt;ul&gt;</code> 의 부모 컨테이너에 <code>role=&quot;navigation&quot;</code> 을 추가하거나, <code>&lt;nav&gt;</code> 요소를 내비게이션 전체에 감싸주세요. role을 <code>&lt;ul&gt;</code> 자체에 추가하지 마십시오.</p>
+<p>내비게이션바는, <code>.nav-tabs</code> 에서 시각적으로 탭으로 보여지게 되어 있지만, <code>role=&quot;tablist&quot;</code>, <code>role=&quot;tab&quot;</code>, <code>role=&quot;tabpanel&quot;</code> 속성을 부여하지 <strong>말아</strong> 주십시오. 이들은 <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices</a> 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. <a href="#javascript-behavior">JavaScript behavior</a> 를 참조해 주십시오. JavaScript 는 활성화된 탭에 <code>aria-selected=&quot;true&quot;</code> 를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 <code>aria-current</code> 속성이 필요하기 않습니다.</p>
 <h2 id="using-dropdowns">Using dropdowns</h2>
-<p>Add dropdown menus with a little extra HTML and the <a href="/docs/5.0/components/dropdowns/#usage">dropdowns JavaScript plugin</a>.</p>
+<p>dropdown(드롭다운) 에 HTML 을 조금 추가하고, <a href="/docs/5.0/components/dropdowns/#usage">dropdowns JavaScript plugin</a> 으로 드롭다운 메뉴를 추가합니다.</p>
 <h3 id="tabs-with-dropdowns">Tabs with dropdowns</h3>
 <div class="bd-example">
 <ul class="nav nav-tabs">
@@ -859,9 +859,9 @@
   <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="javascript-behavior">JavaScript behavior</h2>
-<p>Use the tab JavaScript plugin—include it individually or through the compiled <code>bootstrap.js</code> file—to extend our navigational tabs and pills to create tabbable panes of local content, even via dropdown menus.</p>
-<p>Dynamic tabbed interfaces, as described in the <a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices</a>, require <code>role=&quot;tablist&quot;</code>, <code>role=&quot;tab&quot;</code>, <code>role=&quot;tabpanel&quot;</code>, and additional <code>aria-</code> attributes in order to convey their structure, functionality and current state to users of assistive technologies (such as screen readers).</p>
-<p>Note that dynamic tabbed interfaces should <em>not</em> contain dropdown menus, as this causes both usability and accessibility issues. From a usability perspective, the fact that the currently displayed tab&rsquo;s trigger element is not immediately visible (as it&rsquo;s inside the closed dropdown menu) can cause confusion. From an accessibility point of view, there is currently no sensible way to map this sort of construct to a standard WAI ARIA pattern, meaning that it cannot be easily made understandable to users of assistive technologies.</p>
+<p><code>bootstrap.js</code> 파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill 을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.</p>
+<p><a href="https://www.w3.org/TR/wai-aria-practices/#tabpanel"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices</a> 에서는, 지원 기술(스크린 리더 등)의 사용자에게 구조, 기능, 현재의 상태를 전달하기 위해 <code>role=&quot;tablist&quot;</code>, <code>role=&quot;tab&quot;</code>, <code>role=&quot;tabpanel&quot;</code> 및 추가의 <code>aria-</code> 속성을 지원합니다.</p>
+<p>동적인 탭이 있는 인터페이스는 드롭다운 메뉴를 포함해서는 <em>안됩니다</em>. 사용성 관점에서는 현재 표시되고 있는 탭의 트리커 요소가 곧바로 표시되지 않는다(닫힌 드롭다운 메뉴 안에 있기 때문에)는 사실은 혼란을 일으킬 가능성이 있습니다. 접급성 관점에서 이러한 종류의 구조를 표준적인 WAI ARIA 패턴에 매핑하기 위한 현명한 방법은 현재로선 없습니다.</p>
 <div class="bd-example">
   <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -902,7 +902,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;profile&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;profile-tab&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;contact&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;contact-tab&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>To help fit your needs, this works with <code>&lt;ul&gt;</code>-based markup, as shown above, or with any arbitrary &ldquo;roll your own&rdquo; markup. Note that if you&rsquo;re using <code>&lt;nav&gt;</code>, you shouldn&rsquo;t add <code>role=&quot;tablist&quot;</code> directly to it, as this would override the element&rsquo;s native role as a navigation landmark. Instead, switch to an alternative element (in the example below, a simple <code>&lt;div&gt;</code>) and wrap the <code>&lt;nav&gt;</code> around it.</p>
+</code></pre></div><p>요구에 맞춰, 이것은 위에 나온 것과 같은 <code>&lt;ul&gt;</code> 베이스의 마크업에서도, 임의의 마크업에서도 동작합니다. <code>&lt;nav&gt;</code> 를 사용하는 경우 <code>role=&quot;tablist&quot;</code> 를 직접 추가하지 않습니다. 대신에 다른 요소(아래의 예시에서는 단순한 <code>&lt;div&gt;</code>)로 전환해 <code>&lt;nav&gt;</code> 로 감쌌습니다.</p>
 <div class="bd-example">
   <nav>
     <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
@@ -935,7 +935,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-profile&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;nav-profile-tab&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-contact&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;nav-contact-tab&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>The tabs plugin also works with pills.</p>
+</code></pre></div><p>탭의 플러그인은 pills 에서도 동작합니다.</p>
 <div class="bd-example">
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -976,7 +976,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pills-profile&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;pills-profile-tab&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pills-contact&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;pills-contact-tab&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><p>And with vertical pills.</p>
+</code></pre></div><p> 세로 pills 에서도 같습니다.</p>
 <div class="bd-example">
   <div class="d-flex align-items-start">
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -1016,7 +1016,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="using-data-attributes">Using data attributes</h3>
-<p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-bs-toggle=&quot;tab&quot;</code> or <code>data-bs-toggle=&quot;pill&quot;</code> on an element. Use these data attributes on <code>.nav-tabs</code> or <code>.nav-pills</code>.</p>
+<p>요소에 <code>data-bs-toggle=&quot;tab&quot;</code> 혹은 <code>data-bs-toggle=&quot;pill&quot;</code> 를 지정하는것 만으로, JavaScript 를 쓰지 않고도 탭이나 필의 내비게이션을 활성화 시킬 수 있습니다. 이러한 data 속성은 <code>.nav-tabs</code> 나 <code>.nav-pills</code> 로 사용합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Nav tabs --&gt;</span>
 <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;myTab&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
@@ -1041,7 +1041,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;settings&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;settings-tab&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="via-javascript">Via JavaScript</h3>
-<p>Enable tabbable tabs via JavaScript (each tab needs to be activated individually):</p>
+<p>JavaScript 으로 탭이 가능한 탭을 유효하게 합니다(각 탭을 개별적으로 유효하게 할 필요가 있습니다).</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerTabList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;#myTab a&#39;</span><span class="p">))</span>
 <span class="nx">triggerTabList</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">tabTrigger</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span>
@@ -1051,14 +1051,14 @@
     <span class="nx">tabTrigger</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
   <span class="p">})</span>
 <span class="p">})</span>
-</code></pre></div><p>You can activate individual tabs in several ways:</p>
+</code></pre></div><p>각각의 탭은 여러 가지 방법으로 활성화 할 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myTab a[href=&#34;#profile&#34;]&#39;</span><span class="p">)</span>
 <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">).</span><span class="nx">show</span><span class="p">()</span> <span class="c1">// Select tab by name
 </span><span class="c1"></span>
 <span class="kd">var</span> <span class="nx">triggerFirstTabEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myTab li:first-child a&#39;</span><span class="p">)</span>
 <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">triggerFirstTabEl</span><span class="p">).</span><span class="nx">show</span><span class="p">()</span> <span class="c1">// Select first tab
 </span></code></pre></div><h3 id="fade-effect">Fade effect</h3>
-<p>To make tabs fade in, add <code>.fade</code> to each <code>.tab-pane</code>. The first tab pane must also have <code>.show</code> to make the initial content visible.</p>
+<p>탭을 페이드인 시키려면, <code>.tab-pane</code> 에 <code>.fade</code> 을 추가합니다. 첫 번째 탭에는 컨텐츠를 표시하기 위해 <code>.show</code> 을 추가할 필요가 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-content&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade show active&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;home&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;home-tab&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;profile&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;profile-tab&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1074,7 +1074,7 @@
 </div>
 
 <h4 id="constructor">constructor</h4>
-<p>Activates a tab element and content container. Tab should have either a <code>data-bs-target</code> or an <code>href</code> targeting a container node in the DOM.</p>
+<p>탭 요소와 컨텐츠 컨테이너를 액티브하게 합니다. 탭은 DOM 안의 컨테이너 노드를 타겟으로 하는 <code>data-bs-target</code> 또는 <code>href</code> 중 하나가 있어야 합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav nav-tabs&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;myTab&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tablist&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-item&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;presentation&#34;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;nav-link active&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;home-tab&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#home&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tab&#34;</span> <span class="na">aria-controls</span><span class="o">=</span><span class="s">&#34;home&#34;</span> <span class="na">aria-selected</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -1104,26 +1104,26 @@
   <span class="nx">firstTab</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div><h4 id="show">show</h4>
-<p>Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. <strong>Returns to the caller before the tab pane has actually been shown</strong> (i.e. before the <code>shown.bs.tab</code> event occurs).</p>
+<p>지정된 탭을 선택해 관련 창을 표시합니다. 이전에 선택되어 있던 다른 탭은 선택되지 않은 상태로 되고 관련된 창도 비표시 됩니다. <strong>탭 창이 실제로 표시되기 전에 호출된 곳으로 돌아옵니다</strong>(<code>shown.bs.tab</code> 이벤트가 발생하기 전).</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js">  <span class="kd">var</span> <span class="nx">someTabTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#someTabTrigger&#39;</span><span class="p">)</span>
   <span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">(</span><span class="nx">someTabTriggerEl</span><span class="p">)</span>
 
   <span class="nx">tab</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
 </code></pre></div><h4 id="dispose">dispose</h4>
-<p>Destroys an element&rsquo;s tab.</p>
+<p>탭 요소를 없앱니다.</p>
 <h4 id="getinstance">getInstance</h4>
-<p><em>Static</em> method which allows you to get the tab instance associated with a DOM element</p>
+<p>DOM 요소에 연관된 탭의 인스턴스를 가져오는 <em>Static</em> 메소드</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">triggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#trigger&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">tab</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">triggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tab instance
 </span></code></pre></div><h3 id="events">Events</h3>
-<p>When showing a new tab, the events fire in the following order:</p>
+<p>새로운 탭을 표시할 때, 아래의 순서대로 이벤트가 발생합니다.</p>
 <ol>
-<li><code>hide.bs.tab</code> (on the current active tab)</li>
-<li><code>show.bs.tab</code> (on the to-be-shown tab)</li>
-<li><code>hidden.bs.tab</code> (on the previous active tab, the same one as for the <code>hide.bs.tab</code> event)</li>
-<li><code>shown.bs.tab</code> (on the newly-active just-shown tab, the same one as for the <code>show.bs.tab</code> event)</li>
+<li><code>hide.bs.tab</code> (현재의 활성탭)</li>
+<li><code>show.bs.tab</code> (표시되는 탭)</li>
+<li><code>hidden.bs.tab</code> (<code>hide.bs.tab</code> 이벤트와 동일)</li>
+<li><code>shown.bs.tab</code> (<code>show.bs.tab</code> 이벤트와 동일)</li>
 </ol>
-<p>If no tab was already active, then the <code>hide.bs.tab</code> and <code>hidden.bs.tab</code> events will not be fired.</p>
+<p>이미 활성화된 탭이 없는 경우, <code>hide.bs.tab</code> 및 <code>hidden.bs.tab</code> 이벤트는 발생하지 않습니다.</p>
 <table class="table">
   <thead>
     <tr>
@@ -1134,19 +1134,19 @@
   <tbody>
     <tr>
       <td><code>show.bs.tab</code></td>
-      <td>This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+      <td>이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타겟으로 합니다.</td>
     </tr>
     <tr>
       <td><code>shown.bs.tab</code></td>
-      <td>This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+      <td>이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타겟으로 합니다.</td>
     </tr>
     <tr>
       <td><code>hide.bs.tab</code></td>
-      <td>This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the current active tab and the new soon-to-be-active tab, respectively.</td>
+      <td>이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타겟으로 합니다.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.tab</code></td>
-      <td>This event fires after a new tab is shown (and thus the previous active tab is hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the previous active tab and the new active tab, respectively.</td>
+      <td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타겟으로 합니다.</td>
     </tr>
   </tbody>
 </table>
