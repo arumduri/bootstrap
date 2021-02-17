@@ -256,15 +256,15 @@ Sass 파일과 컴파일된 CSS 를 변경하였습니다.
   - `form-control-mixin()`
   - `nav-divider()`
   - `retina-img()`
-  - `text-hide()` (그리고, 관련 유틸리티 `.text-hide` 클래스를 삭제하였습니다)
+  - `text-hide()` (또한, 관련 유틸리티 `.text-hide` 클래스도 삭제했습니다)
   - `visibility()`
   - `form-control-focus()`
-- Rearranged forms source files under `scss/forms/`. [See Forms section for more details.](#forms)
-- Removed print styles and `$enable-print-styles` variable. Print display classes, however, have remained intact. [See #28339](https://github.com/twbs/bootstrap/pull/28339).
-- Dropped `color()`, `theme-color()` & `gray()` functions in favor of variables. [See #29083](https://github.com/twbs/bootstrap/pull/29083)
-- The `theme-color-level()` function is renamed to `color-level()` and now accepts any color you want instead of only `$theme-color` colors. [See #29083](https://github.com/twbs/bootstrap/pull/29083) **Watch out:** `color-level()` was later on dropped in `v5.0.0-alpha3`.
-- `$enable-grid-classes` doesn't disable the generation of container classes anymore [See #29146](https://github.com/twbs/bootstrap/pull/29146)
-- Renamed `$enable-prefers-reduced-motion-media-query` and `$enable-pointer-cursor-for-buttons` to `$enable-reduced-motion` and `$enable-button-pointers` for brevity.
+- Forms 소스 파일을 `scss/forms/` 아래로 재배치. [자세한 내용은 폼 섹션을 참조해 주십시오.](#forms)
+- 인쇄 스타일과 `$enable-print-styles` 변수를 삭제. 그러나 인쇄 표시 클래스는 그대로 남아있습니다. [#28339](https://github.com/twbs/bootstrap/pull/28339).
+- `color()`, `theme-color()`, `gray()` 함수를 변수로 변경. [#29083](https://github.com/twbs/bootstrap/pull/29083)
+- `theme-color-level()` 함수 이름이 `color-level()` 로 변경되며, `$theme-color` 의 색만이 아니라 임의의 색을 받게 되었습니다. [#29083](https://github.com/twbs/bootstrap/pull/29083) **주의:** `color-level()` 은 `v5.0.0-alpha3` 이후에 삭제되었습니다.
+- `$enable-grid-classes` 는 컨테이너 클래스 생성을 해제하지 않습니다. [#29146](https://github.com/twbs/bootstrap/pull/29146)
+- 간결하게 하기 위해 `$enable-prefers-reduced-motion-media-query` 와 `$enable-pointer-cursor-for-buttons` 의 이름을 `$enable-reduced-motion` 와 `$enable-button-pointers` 으로 변경.
 - Line heights are dropped from several components to simplify our codebase. The `button-size()` and `pagination-size()` do not accept line height parameters anymore. [See #29271](https://github.com/twbs/bootstrap/pull/29271)
 - The `button-variant()` mixin now accepts 3 optional color parameters, for each button state, to override the color provided by `color-contrast()`. By default, these parameters will find which color provides more contrast against the button state's background color with `color-contrast()`.
 - The `button-outline-variant()` mixin now accepts an additional argument, `$active-color`, for setting the button's active state text color. By default, this parameter will find which color provides more contrast against the button's active background color with `color-contrast()`.
