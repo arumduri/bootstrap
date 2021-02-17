@@ -236,27 +236,27 @@ toc: true
 
 ### Browser support
 
-See the browser and devices page for details on what is currently supported in Bootstrap 5. Since v4, here's what's changed to our browser support:
+현재 Bootstrap 5 에서 지원하는 브라우저의 상세 내용은 브라우저와 디바이스 페이지를 참조해 주십시오. V4 이후, 브라우저 지원에 대한 변경은 아래와 같습니다:
 
-- Dropped support for Internet Explorer 10 and 11
-- Dropped support for Microsoft Edge < 16
-- Dropped support for Firefox < 60
-- Dropped support for Safari < 10
-- Dropped support for iOS Safari < 10
-- Dropped support for Chrome < 60
-- Dropped support for Android < 6
+- Internet Explorer 10 과 11 의 지원을 하지 않습니다.
+- Microsoft Edge < 16 의 지원을 삭제.
+- Firefox < 60 의 지원을 삭제.
+- Safari < 10 의 지원을 삭제.
+- iOS Safari < 10 의 지원을 삭제.
+- Chrome < 60 의 지원을 삭제.
+- Android < 6 의 지원을 삭제.
 
 ### Sass
 
-Changes to our source Sass files and compiled CSS.
+Sass 파일과 컴파일된 CSS 를 변경하였습니다.
 
-- Removed `hover`, `hover-focus`, `plain-hover-focus`, and `hover-focus-active` mixins. Use regular CSS syntax for these moving forward. [See #28267](https://github.com/twbs/bootstrap/pull/28267).
-- Remove previously deprecated mixins
+- `hover`, `hover-focus`, `plain-hover-focus`, `hover-focus-active` 믹스인을 삭제했습니다. 앞으로는 일반 CSS 구문을 사용하시기 바랍니다. [#28267](https://github.com/twbs/bootstrap/pull/28267).
+- 이전에 비권장했던 믹스인 삭제
   - `float()`
   - `form-control-mixin()`
   - `nav-divider()`
   - `retina-img()`
-  - `text-hide()` (also dropped the associated utility class, `.text-hide`)
+  - `text-hide()` (그리고, 관련 유틸리티 `.text-hide` 클래스를 삭제하였습니다)
   - `visibility()`
   - `form-control-focus()`
 - Rearranged forms source files under `scss/forms/`. [See Forms section for more details.](#forms)
