@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: Contents
+title: Contents(구성 요소)
 description: 사전 컴파일 및 소스 코드 버전을 포함해서 Bootstrap에 무엇이 포함되어 있는지 알아보세요.
 group: getting-started
 toc: true
 ---
 
-## 사전 컴파일된 Bootstrap
+## Precompiled Bootstrap
 
 다운로드 한 후 압축을 해제하면 다음과 같은 것들을 확인하실 수 있습니다:
 
@@ -64,7 +64,7 @@ bootstrap/
 
 이것은 어떤 웹 프로젝트에든 빠르게 사용할 수 있는 Bootstrap의 가장 기본적인 형태인 프리 컴파일된 파일입니다. 우리는 컴파일된 CSS와 JS (`bootstrap.*`), 그리고 컴파일 및 경량화된 primevideoCSS와 JS (`bootstrap.min.*`)도 제공합니다. [소스 맵](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`)은 몇몇 브라우저의 개발자 도구에서 사용할 수 있습니다. 번들된 JS 파일 (`bootstrap.bundle.js` 및 경량화된 `bootstrap.bundle.min.js`)에는 [Popper](https://popper.js.org/)가 포함되어 있습니다.
 
-## CSS 파일
+## CSS files
 
 Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 몇 가지 선택지가 포함되어 있습니다.
 
@@ -130,7 +130,7 @@ Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 
   </tbody>
 </table>
 
-## JS 파일
+## JS files
 
 마찬가지로 컴파일된 JavaScript의 일부 또는 전체를 포함할 수 있는 선택지가 있습니다.
 
@@ -159,7 +159,7 @@ Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 
   </tbody>
 </table>
 
-## Bootstrap 소스 코드
+## Bootstrap source code
 
 Bootstrap 소스 코드 다운로드에는 사전 컴파일된 CSS 및 JavaScript 에셋, Sass 소스, JavaScript 및 문서가 포함되어 있습니다. 구체적으로는 다음에 나와있는 것 외에도 추가적인 것들이 포함되어 있습니다:
 

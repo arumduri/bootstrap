@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Introduction (시작하기)
+title: Introduction(시작하기)
 description: 세계에서 가장 인기 있는 프레임워크인 Bootstrap으로 반응형, 모바일 우선 사이트를 jsDelivr와 스타터 페이지 템플릿을 통해 시작해보세요.
 group: getting-started
 aliases:
@@ -10,7 +10,7 @@ aliases:
 toc: true
 ---
 
-## 빠른 시작
+## Quick start
 
 프로젝트에 빠르게 Bootstrap을 추가하고 싶으신가요? 무료 오픈 소스 CDN인 jsDelivr를 사용해보세요. 패키지 관리자나 소스 파일을 다운로드할 필요가 있으신가요? [다운로드 페이지를 확인해보세요]({{< docsref "/getting-started/download" >}}).
 
@@ -26,7 +26,7 @@ toc: true
 
 많은 우리 컴포넌트들은 작동에 JavaScript를 필요로 합니다. 정확히 말하자면 우리의 JavaScript 플러그인과 [Popper](https://popper.js.org/) 가 필요합니다. **다음 중 하나의`<script>`**를 `/body>` 태그가 닫히기 전에 페이지 끝부분에 넣어서 활성화시켜주세요.
 
-#### 번들
+#### Bundle
 
 두가지의 번들을 통해서 모든 Bootstrap JavaScript 플러그인과 의존성을 한 번에 포함시키세요. `bootstrap.bundle.js`와 `bootstrap.bundle.min.js` 모두 툴팁과 팝오버를 위해서 [Popper](https://popper.js.org/)가 포함되어 있습니다. Bootstrap에 무엇이 포함되어 있는지 자세히 알고 싶으시다면 [컨텐츠]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}) 부분을 확인해주세요.
 
@@ -34,7 +34,7 @@ toc: true
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-#### 분리
+#### Separate
 
 분리된 스크립트 솔루션을 사용하기로 결정했을 경우, Popper가 맨 앞에 와야 하며 (툴팁 또는 팝오버를 사용하는 경우), 그 다음에 우리 JavaScript 플러그인을 넣어주세요.
 
@@ -43,11 +43,11 @@ toc: true
 <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-#### 모듈
+#### Modules
 
 `<script type="module">`를 사용하신다면, [Bootstrap을 모듈로 사용하기]({{< docsref "/getting-started/javascript#using-bootstrap-as-a-module" >}}) 섹션을 확인해주세요.
 
-#### 컴포넌트
+#### Components
 
 어떤 컴포넌트가 JavaScript나 Popper를 요구하는지 궁금하신가요? 아래 컴포넌트 링크를 눌러서 확인해보세요. 일반적인 페이지 구조에 대해 전혀 확신하지 못하신다면 예제 페이지 템플릿을 계속 읽어보세요.
 
@@ -67,7 +67,7 @@ toc: true
 {{< /markdown >}}
 </details>
 
-## 스타터 템플릿
+## Starter template
 
 페이지가 최신 디자인 및 개발 표준을 준수하고 있는지 확인해보세요. 즉 HTML5 doctype과 적절한 반응형 동작을 위한 뷰포트 메타 태그를 사용하고 있는 지를 말합니다. 이 모든 부분을 넣으면 페이지는 다음과 같아야 합니다:
 
@@ -103,7 +103,7 @@ toc: true
 
 이것이 페이지 전반에 관한 요구사항입니다. [레이아웃 문서]({{< docsref "/layout/grid" >}}) 또는 [공식 예제]({{< docsref "/examples" >}})를 통해 사이트의 콘텐츠와 구성요소를 배치하기 시작해보세요.
 
-## 중요한 전역
+## Important globals
 
 Bootstrap은 사용할 때 알아야 할 몇 가지 중요한 전역 스타일과 설정을 사용하고 있으며, 이 모든 기능은 거의 크로스 브라우저 스타일의 *정규화*에 맞추어져 있습니다. 한 번 알아봅시다.
 
@@ -118,7 +118,7 @@ Bootstrap은 HTML5 doctype의 사용을 필요로 합니다. 이것이 없다면
 </html>
 ```
 
-### 반응형 메타 태그
+### Responsive meta tag
 
 Bootstrap은 *모바일 우선*으로 개발되기 떄문에 먼저 모바일 기기에 코드를 최적화한 다음 CSS 미디어 쿼리를 사용해서 필요에 따라 구성 요소를 확장하고 있습니다. 모든 장치에서 올바를 렌더링 및 터치 확대 조절을 보장하려면 `<head>`에  **반응형 뷰포트 메타 태그를 추가해주세요**.
 
@@ -148,7 +148,7 @@ CSS에서의 보다 간단한 크기 조절을 위해서 우리는 `content-box`
 
 개선된 크로스 브라우저 렌더링을 위해서 우리는 [Reboot]({{< docsref "/content/reboot" >}})을 사용해 일반적인 HTML 요소에 대해 약간 더 의견이 수렴된 초기화 기능을 제공을 제공하면서 브라우저 및 기기 간의 일관적이지 못한 부분을 수정하고 있습니다.
 
-## 커뮤니티
+## Community
 
 최신 Bootstrap 개발 상황을 계속 알아보고 여기 있는 도움이 될 만한 리소스들을 통해 커뮤니티에 참가하세요.
 

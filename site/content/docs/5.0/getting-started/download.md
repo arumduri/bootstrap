@@ -6,7 +6,7 @@ group: getting-started
 toc: true
 ---
 
-## 컴파일된 CSS와 JS
+## Compiled CSS and JS
 
 바로 사용할 수 있는 컴파일된 **Bootstrap v{{< param current_version >}}** 코드를 다운로드해서 프로젝트에 포함시킬 수 있습니다. 다음이 포함되어 있습니다:
 
@@ -17,7 +17,7 @@ toc: true
 
 <a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">다운로드</a>
 
-## 소스 파일
+## Source files
 Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 파이프라인을 사용해서 BootStrap를 컴파일할 수 있습니다. 이를 위해서는 다음 도구들이 필요합니다:
 
 - CSS 컴파일을 위한 Sass 컴파일러 (Libsass 또는 Ruby Sass도 지원함).
@@ -27,13 +27,13 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 
 <a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">소스 다운로드</a>
 
-## 예제
+## Examples
 
 [예제]({{< docsref "/examples" >}})를 다운로드하고 확인하고 싶다면 이미 만들어진 예제를 사용해 볼 수도 있습니다:
 
 <a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">예제 다운로드</a>
 
-## jsDelivr를 통한 CDN
+## CDN via jsDelivr
 
 [jsDelivr](https://www.jsdelivr.com/)를 사용해서 다운로드하지 않고 Bootstrap의 컴파일된 CSS와 JS의 캐시 버전을 프로젝트에 전달하세요.
 
@@ -49,7 +49,7 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-## 패키지 관리자
+## Package managers
 
 Bootstrap의 **소스 파일**을 유명한 패키지 관리자들을 사용해서 거의 모든 프로젝트에 BootStrap을 사용할 수 있습니다. 패키지 관리자와 상관없이 Bootstrap은 공식 컴파일된 버전과 일치하는 구성을 위해 **Sass 컴파일러와 [Autoprefixer](https://github.com/postcss/autoprefixer)를 필요로 합니다**.
 

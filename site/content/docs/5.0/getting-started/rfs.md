@@ -8,7 +8,7 @@ toc: true
 
 ## What is RFS?
 
-Bootstrap's side project [RFS](https://github.com/twbs/rfs/tree/v{{< param "rfs_version" >}}) is a unit resizing engine which was initially developed to resize font sizes (hence its abbreviation for Responsive Font Sizes). Nowadays RFS is capable of rescaling most CSS properties with unit values like `margin`, `padding`, `border-radius`, or even `box-shadow`.
+Bootstrap의 사이드 프로젝트인 [RFS](https://github.com/twbs/rfs/tree/v{{< param "rfs_version" >}})는 글꼴 크기를 조절하기 위해 만들어졌던 (즉 반응형 글꼴 크기 (Responsive Font Sizes)의 약자) 유닛 크기 조절 엔진입니다. Nowadays RFS is capable of rescaling most CSS properties with unit values like `margin`, `padding`, `border-radius`, or even `box-shadow`.
 
 The mechanism automatically calculates the appropriate values based on the dimensions of the browser viewport. It will be compiled into `calc()` functions with a mix of `rem` and viewport units to enable the responsive scaling behavior.
 
