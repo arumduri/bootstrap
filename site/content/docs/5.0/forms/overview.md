@@ -1,27 +1,27 @@
 ---
 layout: docs
 title: Forms
-description: Examples and usage guidelines for form control styles, layout options, and custom components for creating a wide variety of forms.
+description: 다양한 폼 생성을 위한 폼컨트롤 스타일, 레이아웃 옵션, 커스텀 컴포넌트의 예시와 사용 가이드 라인입니다.
 group: forms
 toc: true
 aliases: "/docs/5.0/forms/"
 sections:
   - title: Form control
-    description: Style textual inputs and textareas with support for multiple states.
+    description: 여러 상태를 지원하는 텍스트 입력이나 텍스트 영역의 스타일을 설정할 수 있습니다.
   - title: Select
-    description: Improve browser default select elements with a custom initial appearance.
+    description: 브라우저의 기본 셀렉트 요소의 초기 표시를 커스터마이징 할 수 있게 개선하였습니다.
   - title: Checks & radios
-    description: Use our custom radio buttons and checkboxes in forms for selecting input options.
+    description: 커스텀 라이오 버튼과 체크박스를 폼으로 사용하여, 입력 옵션을 선택할 수 있습니다.
   - title: Range
-    description: Replace browser default range inputs with our custom version.
+    description: 브라우저의 기본 범위 선택 폼을 우리의 커스텀 버전으로 바꿉니다.
   - title: Input group
-    description: Attach labels and buttons to your inputs for increased semantic value.
+    description: 입력 폼에 라벨과 버튼을 함께 사용하여 시멘틱한 마크업을 할 수 있습니다.
   - title: Floating labels
-    description: Create beautifully simple form labels that float over your input fields.
+    description: 입력 필드 위로 떠오르는 동적인 폼라벨을 심플하게 할 수 있습니다.
   - title: Layout
-    description: Create inline, horizontal, or complex grid-based layouts with your forms.
+    description: 인라인, 수평 또는 복잡한 그리드 레이아웃을 폼으로 만들 수 있습니다.
   - title: Validation
-    description: Validate your forms with custom or native validation behaviors and styles.
+    description: 커스텀 또는 네이티브 동작과 스타일을 폼으로 검증 할 수 있습니다.
 ---
 
 ## Overview
