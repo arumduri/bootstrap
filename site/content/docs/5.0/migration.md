@@ -35,16 +35,16 @@ toc: true
 - `.pl-*` 와 `.pr-*` 를 `.ps-*` 와 `.pe-*` 로 변경.
 - `.text-left` 와 `.text-right` to `.text-start` 와 `.text-end` 로 변경.
 
-따라서 브레이크 포인트 변형의 이름도 변경 되었습니다. (eg. `.text-md-left`가 `.text-md-start` 로 변경).
+따라서 브레이크 포인트 변형의 이름도 변경되었습니다. (eg. `.text-md-left`가 `.text-md-start` 로 변경).
 
 ##### Mixins
 
-- `border-left-radius()` 와 `border-right-radius()` 이 `border-start-radius()` 와 `border-end-radius()` 으로 변경 — 과 함께 그들의 모서리 변형들도 (eg. `.border-bottom-left-radius` 이 `.border-bottom-start-radius` 으로 변경 되었습니다).
+- `border-left-radius()` 와 `border-right-radius()` 이 `border-start-radius()` 와 `border-end-radius()` 으로 변경 — 과 함께 그들의 모서리 변형들도 (eg. `.border-bottom-left-radius` 이 `.border-bottom-start-radius` 으로 변경되었습니다).
 - `caret-left()` 과 `caret-right()` 이 `caret-start()` 과 `caret-end()` 으로 변경 — 그 후, `caret()` 의 믹스인은 `left` 과 `right` 대신 `start` 과 `end` 을 인수로 받게 되었습니다.
 
 ##### Variables
 
-- RTL 로 다른 breadcrumb(브레드크럼)의 분리기호가 필요한 경우를 위해, 새로운 `$breadcrumb-divider-flipped` 을 추가했습니다.
+- RTL 로 다른 브레드크럼(breadcrumb)의 분리 기호가 필요한 경우를 위해, 새로운 `$breadcrumb-divider-flipped` 를 추가했습니다.
 - `$navbar-brand-margin-right` 가 `$navbar-brand-margin-end` 으로 변경.
 - `$pagination-margin-left` 가 `$pagination-margin-start` 으로 변경.
 - `$form-check-padding-left` 가 `$form-check-padding-start` 으로 변경.
@@ -55,25 +55,25 @@ toc: true
 
 ### JavaScript
 
-- 모든 JavaScript 플러그인의 data 속성은 자체 코드와 Bootstrap 기능이 구분되도록 기존의 `data-toggle`의 이름이 `data-bs-toggle` 로 변경 되었습니다.
+- 모든 JavaScript 플러그인의 data 속성은 자체 코드와 Bootstrap 기능이 구분되도록 기존의 `data-toggle` 의 이름이 `data-bs-toggle` 로 변경.
 - 업데이트 Popper v2.x:
-  - Tooltip/Popover 과 Dropdown 플러그인에서 `offset` 옵션을 삭제했습니다.
-  - `fallbackPlacement` 옵션명이 `fallbackPlacements` 으로 변경 되었습니다.
+  - Tooltip/Popover 과 Dropdown 플러그인에서 `offset` 옵션을 삭제.
+  - `fallbackPlacement` 옵션명이 `fallbackPlacements` 으로 변경.
 
 ### Sass
 
-- Sass 의 독자적인 스케일링 함수와 충돌을 피하기 위해 `scale-color()` 함수명이  `shift-color()` 으로 변경 되었습니다.
+- Sass 의 독자적인 스케일링 함수와 충돌을 피하기 위해 `scale-color()` 함수명이  `shift-color()` 으로 변경.
 
 ### Utilities
 
-- absolute/fixed 위치에 있는 요소를 수평 또는 수직의 가운데 배치 시키기 위해 `.translate-middle-x` 과 `.translate-middle-y` 의 새로운 유틸리티가 추가 되었습니다.
+- absolute/fixed 위치에 있는 요소를 수평 또는 수직의 가운데 배치를 위해 `.translate-middle-x` 과 `.translate-middle-y` 의 새로운 유틸리티가 추가.
 
 ### Components
 
 #### Breadcrumbs
 
 - 기본적으로 가지고 있던 `padding`, `background-color`, `border-radius` 의 스타일을 삭제해 보다 심플해 졌습니다.
-- CSS 를 컴파일하지 않고 쉽게 사용자가 지정할 수 있도록 `--bs-breadcrumb-divider` 가 추가 되었습니다.
+- CSS 를 컴파일하지 않고 쉽게 사용자가 지정할 수 있도록 `--bs-breadcrumb-divider` 가 추가되었습니다.
 
 #### Toasts
 
@@ -83,11 +83,11 @@ toc: true
 
 ### Browser support
 
-- Microsoft Edge Legacy 지원을 하지 않습니다. 이전 브라우저 지원의 변경 내용을 확인하려면 [여기](#browser-support-1)를 참조 해 주십시오.
+- Microsoft Edge Legacy 지원을 하지 않습니다. 이전 브라우저 지원의 변경 내용을 확인하려면 [여기](#browser-support-1)를 참조해 주십시오.
 
 ### Sass
 
-- `color-level()` 과 `$theme-color-interval` 으로 작동하던 컬러 시스템은 삭제되고, 새로운 컬러 시스템이 적용 되었습니다. 코드의 기본인 `lighten()` 과 `darken()` 의 함수는 모두 `tint-color()` 과 `shade-color()` 으로 바뀝니다. 이들의 함수는, 색의 명도를 일정량만 변화시키는 것이 아니라, 흰색 또는 검은색 중 한쪽을 섞습니다. `scale-color()` (Beta 1에서는 `shift-color()` 로 변경)는,  그것의 중요한 파라미터 값이 양수인지 음수인지에 따라 색상을 바꿀지 색을 진하게 할지를 결정합니다. [#30622](https://github.com/twbs/bootstrap/pull/30622).
+- `color-level()` 과 `$theme-color-interval` 으로 작동하던 컬러 시스템은 삭제되고, 새로운 컬러 시스템이 적용되었습니다. 코드의 기본인 `lighten()` 과 `darken()` 의 함수는 모두 `tint-color()` 과 `shade-color()` 으로 바뀝니다. 이들의 함수는, 색의 명도를 일정량만 변화시키는 것이 아니라, 흰색 또는 검은색 중 한쪽을 섞습니다. `scale-color()` (Beta 1에서는 `shift-color()` 로 변경)는,  그것의 중요한 파라미터 값이 양수인지 음수인지에 따라 색상을 바꿀지 색을 진하게 할지를 결정합니다. [#30622](https://github.com/twbs/bootstrap/pull/30622).
 - 스피너는 이제 애니메이션을 느리게 함으로써 `prefers-reduced-motion: reduce` 를 받아들이게 되었습니다. [#31882](https://github.com/twbs/bootstrap/pull/31882).
 
 ### Reboot
@@ -101,7 +101,7 @@ toc: true
 ### Forms
 
 - 오래된 버그였던 [input group 과 함께 사용한 유효성 검사 input 의 반지름이 일부 표시되지 않았던](https://github.com/twbs/bootstrap/issues/25110) 이슈는  `.has-validation` 클래스를 추가하는 것으로 최종적으로 수정 되었습니다.
-- Floating labels를 완전히 지원할 수 있도록 form component 에 추가시켰습니다. [페이지 확인하러 가기]({{< docsref "/forms/floating-labels" >}})
+- Floating labels를 완전히 지원할 수 있도록 폼 컴포넌트에 추가 시켰습니다. [페이지 확인하러 가기]({{< docsref "/forms/floating-labels" >}})
 - File input 은 앞으로 `.form-control` 클래스를 사용하며, JavaScript, 추가 HTML, 또는 추가 클래스가 필요하지 않습니다. [#31955](https://github.com/twbs/bootstrap/pull/31955).
 - Color input의 `.form-control-color` 클래스 안에 `cursor:pointer` 를 추가 했습니다.
 
@@ -109,10 +109,10 @@ toc: true
 
 - **Text 유틸리티:**
   - `font-size` 유틸리티 (RFS 활성화 한 상태)용으로 `.fs-*` 유틸리티를 추가 했습니다. 이들은 HTML 의 기본 타이틀과 같은 축척(h1-h6, large, small)을 사용하고 Sass map 을 통해 변경할 수 있습니다.
-  - 기존 `.font-weight-*` 유틸리티의 이름이 `.fw-*` 으로 변경 되었습니다.
-  - 기존 `.font-style-*` 유틸리티의 이름이 `.fst-*` 으로 변경 되었습니다.
-- Display 유틸리티에 `.d-grid` 가 추가 되었습니다.
-- Grid layout용으로 새로운 `gap` 유틸리티 (`.gap`) 가 추가 되었습니다.
+  - 기존 `.font-weight-*` 유틸리티의 이름이 `.fw-*` 으로 변경.
+  - 기존 `.font-style-*` 유틸리티의 이름이 `.fst-*` 으로 변경.
+- Display 유틸리티에 `.d-grid` 가 추가.
+- Grid layout용으로 새로운 `gap` 유틸리티 (`.gap`) 가 추가.
 
 ## v5.0.0-alpha2
 
@@ -124,18 +124,18 @@ toc: true
 
 ### Docs
 
-- "Navs" 메뉴가 "Navs & Tabs" 으로 변경 되었습니다.
-- "Screen readers" 메뉴가 helper 페이지로 이동되어 "Visually hidden" 으로 변경 되었으며, 파일이름과 클래스 이름도 함께  `visually-hidden` 으로 변경 되었습니다.
-- "Checks" 페이지가 "Checks & radios" 으로 변경되면서 파일 이름도 `checks-radios`으로 변경 되었습니다.
-- Check/radio 문서가 업데이트 되었습니다. (Checks 에 있던 버튼관련 내용은 button groups 로 이동)
-- Skip links 의 문서가 개선되었습니다.
+- "Navs" 메뉴가 "Navs & Tabs" 으로 변경.
+- "Screen readers" 메뉴가 helper 페이지로 이동되어 "Visually hidden" 으로 변경 되었으며, 파일이름과 클래스 이름도 함께  `visually-hidden` 으로 변경.
+- "Checks" 페이지가 "Checks & radios" 으로 변경되면서 파일 이름도 `checks-radios` 으로 변경.
+- Check/radio 문서가 업데이트. (Checks 에 있던 버튼관련 내용은 button groups 로 이동)
+- Skip links 의 문서가 개선.
 - 모바일에서 더 큰 탭 대상을 위해 docs navigation 의 재설계 및 간소화 된 subnav.
-- [#31114](https://github.com/twbs/bootstrap/pull/31114): 접근성과 관련된 양식 문서가 개선 되었습니다.
+- [#31114](https://github.com/twbs/bootstrap/pull/31114): 접근성과 관련된 양식 문서가 개선.
 
 ### Layout
 
-- Container 의 수평 패딩이 `.row` 의 gutter 크기에 맞게 업데이트 되었습니다.
-- [#31439](https://github.com/twbs/bootstrap/pull/31439): grid 동작의 퇴보로 인해 행에서 `flex: 1 0 100%` 가 삭제 되었습니다.
+- Container 의 수평 패딩이 `.row` 의 거터(gutter) 크기에 맞게 업데이트.
+- Grid 동작의 퇴보로 인해 행에서 `flex: 1 0 100%` 가 삭제. [#31439](https://github.com/twbs/bootstrap/pull/31439)
 
 ### Reboot
 
@@ -143,10 +143,10 @@ toc: true
 
 ### Colors
 
-- 색 대비 비율을 3:1 에서 4.5:1 로 변경 했습니다.
+- 색 대비 비율을 3:1 에서 4.5:1 로 변경.
 - 색 대비에서 사용하던 `$gray-900` 을 `$black` 으로 바꿨습니다.
 - `$green` (혹은 테마명으로는 `$success`) 색을 개선해, 색 대비가 적어지도록 했습니다. (`#28a745` 에서 `#198754` 으로 변경).
-- `$cyan` (혹은 테마명으로는 `$info`) 색을 보다 선명한 색으로 개선 했습니다. (`#17a2b8` 에서 `#0dcaf0` 으로 변경).
+- `$cyan` (혹은 테마명으로는 `$info`) 색을 보다 선명한 색으로 개선. (`#17a2b8` 에서 `#0dcaf0` 으로 변경).
 
 ### Forms
 
@@ -156,7 +156,7 @@ toc: true
 
 #### Badges
 
-- [#31132](https://github.com/twbs/bootstrap/pull/31132): Badge(배지)의 기본 패딩을 `.25em`/`.5em` 에서 `.35em`/`.65em` 으로 변경 하였습니다.
+- [#31132](https://github.com/twbs/bootstrap/pull/31132): Badge(배지)의 기본 패딩을 `.25em`/`.5em` 에서 `.35em`/`.65em` 으로 변경.
 
 #### Buttons
 
@@ -165,47 +165,47 @@ toc: true
 
 #### Carousel
 
-- Carousel(캐러셀)에 사용하는 chevron 아이콘을 [Bootstrap Icons]({{< param "icons" >}}) 의 새로운 SVG 로 업데이트 했습니다.
-- 어두운 텍스트, 컨트롤, 표시 위한 새로운 [`.carousel-dark`]({{< docsref "/components/carousel#dark-variant" >}}) 을 추가하였습니다. (밝은 배경에 최적).
+- 캐러셀에 사용하는 chevron 아이콘을 [Bootstrap Icons]({{< param "icons" >}}) 의 새로운 SVG 로 업데이트 했습니다.
+- 어두운 텍스트, 컨트롤, 표시 위한 새로운 [`.carousel-dark`]({{< docsref "/components/carousel#dark-variant" >}}) 을 추가 하였습니다. (밝은 배경에 최적).
 
 #### Close button
 
 - `.close` 가 `.btn-close` 로 바꿔 보다 일반적인 이름이 되었습니다.
 - 닫기 버튼은 HTML 안에서 기존의 `&times;` 대신 `background-image` (내장 SVG)를 사용하게 되어, 마크업을 수정없이 쉽게 커스터마이즈 할 수 있게 되었습니다.
-- `.btn-close-white` 를 새롭게 추가하여 `filter: invert(1)` 을 사용해, 어두운 배경에서도 보다 높은 대비로 아이콘을 없앨수 있게 되었습니다.
+- `.btn-close-white` 를 새롭게 추가하여 `filter: invert(1)` 을 사용해, 어두운 배경에서도 보다 높은 대비의 아이콘을 사용할 수 있습니다.
 
 #### Collapse
 
-- [#31346](https://github.com/twbs/bootstrap/pull/31346): 아코디언(accordion)의 스크롤 앵커링(scroll anchoring)을 삭제 했습니다.
+- [#31346](https://github.com/twbs/bootstrap/pull/31346): 아코디언(accordion)의 스크롤 앵커링(scroll anchoring)을 삭제.
 
 #### Dropdowns
 
-- 다크모드에 사용할 수 있는 새로운`.dropdown-menu-dark` 를 추가 하였습니다.
-- `$dropdown-padding-x` 를 새롭게 추가 하였습니다.
+- 다크모드에 사용할 수 있는 새로운`.dropdown-menu-dark` 를 추가.
+- `$dropdown-padding-x` 를 새롭게 추가.
 - 색 대비 개선을 하기 위해, 드롭다운의 구분선을 어둡게 했습니다.
 
 #### Navs
 
-- [#31035](https://github.com/twbs/bootstrap/pull/31035): `.nav-link` 클래스에 `font-size`, `font-weight`, `color`, `:hover` `color` 의 새로운 변수 `null` 을 추가 하였습니다.
+- [#31035](https://github.com/twbs/bootstrap/pull/31035): `.nav-link` 클래스에 `font-size`, `font-weight`, `color`, `:hover` `color` 의 새로운 변수 `null` 을 추가.
 
 #### Pagination
 
-- Pagination 링크에 `transition` 을 추가 하였습니다. [#31396](https://github.com/twbs/bootstrap/pull/31396).
+- 페이지네이션 링크에 `transition` 을 추가. [#31396](https://github.com/twbs/bootstrap/pull/31396).
 
 #### Popovers
 
-- `whiteList` 의 옵션명을 `allowList` 으로 변경 하였습니다.
+- `whiteList` 의 옵션명을 `allowList` 으로 변경.
 
 #### Toasts
 
 - [#31109](https://github.com/twbs/bootstrap/pull/31109): 토스트의 기본 시간을 5 초로.
-- [#31155](https://github.com/twbs/bootstrap/pull/31155): 토스트를 표시하기 전에 `timeout` 을 지운다.
-- [#31381](https://github.com/twbs/bootstrap/pull/31381): 토스트에서 `overflow: hidden` 을 삭제하고 적절한 `border-radius` 를 `calc()` 함수로 대채하도록 하였습니다.
+- [#31155](https://github.com/twbs/bootstrap/pull/31155): 토스트를 표시하기 전에 `timeout` 을 지웁니다.
+- [#31381](https://github.com/twbs/bootstrap/pull/31381): 토스트에서 `overflow: hidden` 을 삭제하고 적절한 `border-radius` 를 `calc()` 함수로 대체하도록 하였습니다.
 - 토스트 사용자 정의 및 테마 지정 방법을 위한 추가 예제를 포함하도록 문서를 업데이트.
 
 #### Tooltips
 
-- `whiteList` 의 옵션명을 `allowList` 으로 변경 하였습니다.
+- `whiteList` 의 옵션명을 `allowList` 으로 변경.
 
 ### Helpers
 
@@ -256,7 +256,7 @@ Sass 파일과 컴파일된 CSS 를 변경 하였습니다.
   - `form-control-mixin()`
   - `nav-divider()`
   - `retina-img()`
-  - `text-hide()` (또한, 관련 유틸리티 `.text-hide` 클래스도 삭제했습니다)
+  - `text-hide()` (또한, 관련 유틸리티 `.text-hide` 클래스도 삭제)
   - `visibility()`
   - `form-control-focus()`
 - Forms 소스 파일을 `scss/forms/` 아래로 재배치. [자세한 내용은 폼 섹션을 참조해 주십시오.](#forms)
@@ -270,21 +270,21 @@ Sass 파일과 컴파일된 CSS 를 변경 하였습니다.
 - 믹스인 `button-outline-variant()` 는, 버튼의 액티브한 상태의 텍스트 컬러를 설정하기 위해 추가의 인수 `$active-color` 를 받습니다. 자연스럽게 이 파라미터는 `color-contrast()` 으로 버튼의 액티브한 배경색에 대해 어느 색상이 보다 색대비가 좋은지를 찾아냅니다.
 - Sass map Merge 를 없애, 장황한 값을 간단히 삭제할 수 있게 되었습니다. 단, `$theme-colors` 와 같이 Sass map 에서 모든 값을 정의해야 하는 것에 주의해 주십시오. [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}}) 의 취급 방법에 대해서는 여기를 참조해 주세요.
 - `color-yiq()` 함수와 관련된 변수는 YIQ 색공간과는 관계가 없어져 `color-contrast()` 로 이름을 변경 하였습니다. [#30168.](https://github.com/twbs/bootstrap/pull/30168/)
-  - `$yiq-contrasted-threshold` 가 `$min-contrast-ratio` 으로 명칭이 변경 되었습니다.
-  - `$yiq-text-dark` 과 `$yiq-text-light` 는 각각 `$color-contrast-dark` 과 `$color-contrast-light` 으로 변경 되었습니다.
+  - `$yiq-contrasted-threshold` 가 `$min-contrast-ratio` 으로 명칭이 변경.
+  - `$yiq-text-dark` 과 `$yiq-text-light` 는 각각 `$color-contrast-dark` 과 `$color-contrast-light` 으로 변경.
 - 그라데이션 사용을 한다면, 선형 그라데이션은 간략화 되었기 때문에, `gradient-bg()` 에서는 옵션의 `$color` 파라미터만 받습니다.
 - `.bg-gradient-*` 클래스 대신, `.bg-gradient` 클래스를 사용하여 요소에 그라데이션을 추가할 수 있게 되었으므로 `bg-gradient-variant()` 믹스인은 삭제 되었습니다.
 -  `media-breakpoint-down()` 는 다음의 브레이크 포인트 대신에 그 브레이크 포인트 자체를 사용합니다. 브레이크 포인트 `lg` 보다 작은 뷰포트를 타겟으로 하려면, `media-breakpoint-down(md)` 대신에 `media-breakpoint-down(lg)` 를 사용하십시오.
 - 또한 `media-breakpoint-between()` 믹스인의 두번째 파라미터는 다음의 브레이크 포인트 대신 브레이크 포인트 자체를 사용합니다. 브레이크 포인트 `sm` 과 `lg` 사이의 뷰포트를 대상으로 하려면 `media-breakpoint-between(sm, md)` 대신에 `media-between(sm, lg)` 를 사용하십시오.
 - `box-shadow()` 믹스인은 `none` 과 `null` 를 복수의 인수로 지원하게 되었습니다. 이로 인해, 복수의 인수에 어느쪽 값을 줘도 동일한 결과를 얻을 수 있습니다. [#30394](https://github.com/twbs/bootstrap/pull/30394).
-- 각 `border-radius()` 믹스인에는 기본값이 설정되게 되었습니다.  Border radius 값을 지정하지 않고 믹스인을 사용하면 `$border-radius` 변수가 사용되어 집니다.[#31571](https://github.com/twbs/bootstrap/pull/31571)
+- 각 `border-radius()` 믹스인에는 기본값이 설정되게 되었습니다.  Border radius 값을 지정하지 않고 믹스인을 사용하면 `$border-radius` 변수가 사용되어 집니다. [#31571](https://github.com/twbs/bootstrap/pull/31571)
 
 ### JavaScript
 
 소스와 컴파일된 자바스크립트 파일의 변경.
 
 - jQuery 를 중단하고 플러그인을 일반 JavaScript 로.
-- `_getInstance()` → `getInstance()` 와 같이 public static method 에서 underscore 삭제.
+- `_getInstance()` → `getInstance()` 와 같이 public static method 에서 언더스코어 삭제.
 
 ### Color system
 
@@ -298,7 +298,7 @@ Sass 파일과 컴파일된 CSS 를 변경 하였습니다.
 
 레이아웃과 그리드 시스템의 변경.
 
-- 유틸리티 클래스로 적절히 섞어 사용할 수 있기 때문에 `.media` 컴포넌트를 업앴습니다.[#28265](https://github.com/twbs/bootstrap/pull/28265).
+- 유틸리티 클래스로 적절히 섞어 사용할 수 있기 때문에 `.media` 컴포넌트를 업앴습니다. [#28265](https://github.com/twbs/bootstrap/pull/28265).
 - 그리드 컬럼에서 `position: relative` 를 삭제했습니다.
 - 수평 패딩은 열 자체가 아닌 행 안의 자식 요소들에게 직접 주게 됩니다.
   - 이로써 코드는 심플해 집니다.
@@ -309,7 +309,7 @@ Sass 파일과 컴파일된 CSS 를 변경 하였습니다.
 
 ### Content, Reboot, etc
 
-Reboot, 타이포그래피, 테이블 등과 같은 변경사항.
+Reboot, 타이포그래피, 테이블 등의 변경사항.
 
 - 자동 글꼴 사이즈 변경을 위한 [RFS]({{< docsref "/getting-started/rfs" >}}) 가 활성화 되었습니다. [#29152](https://github.com/twbs/bootstrap/pull/29152)
 - `<ul>` 과 `<ol>` 요소의 기본 `padding-left` 를, 브라우저의 기본값 `40px` 에서 `2rem` 으로 리셋.
@@ -326,7 +326,7 @@ Reboot, 타이포그래피, 테이블 등과 같은 변경사항.
 
 - 새 `$display-font-sizes` Sass map 을 위해 `$display-*` 변수를 삭제.
 - 단일의 `$display-font-weight` 때문에 각각의 `$display-*-weight` 변수를 삭제.
-- 두개의 새로운 `.display-*` 제목 스타일의 `.display-5` 과 `.display-6` 를 추가.
+- 두 개의 새로운 `.display-*` 제목 스타일의 `.display-5` 과 `.display-6` 를 추가.
 - 기존 디스플레이 타이틀의 사이즈를 변경하여 보다 일관성 있는 `font-size` 세트로.
 - 링크는 특정 컴포넌트의 일부가 아닌 한, 기본값으로 밑줄이 그어집니다.(hover 뿐만이 아닙니다)
 
@@ -347,7 +347,7 @@ Reboot, 타이포그래피, 테이블 등과 같은 변경사항.
 - File input 컴포넌트가 업데이트되어 전체적인 디자인은 동일하나 HTML 이 개선.
   - `.form-file` 마크업을 리팩터링을 하여 몇 가지 시각적 버그를 수정하였으며 번역이나 버튼의 텍스트를 CSS 가 아닌 HTML 로 변경할 수 있도록 하였습니다.
   - 네이티브의 `.form-control-file` 과 `.form-control-range` 컴포넌트를 완전히 삭제하였습니다.
-  - `.custom-file` 이 `.form-file` (변수 포함)로 이름 변경. **주의점:** `.form-file` 은 `v5.0.0-alpha3` 이후 폐지되어, `.form-control` 을 사용할 수 있게 되었습니다.
+  - `.custom-file` 이 `.form-file` (변수 포함)로 이름 변경. **주의:** `.form-file` 은 `v5.0.0-alpha3` 이후 폐지되어, `.form-control` 을 사용할 수 있게 되었습니다.
   - `:focus` 와 `:disabled` 스타일 지원 추가.
 - `.custom-range` 이 `.form-range` (변수 포함)으로 이름 변경.
 - 마진 유틸리티를 위해 `.form-group` 를 삭제. (문서 예제에는 `.mb-3` 을 사용).
@@ -363,7 +363,7 @@ Reboot, 타이포그래피, 테이블 등과 같은 변경사항.
 
 #### Disabled states
 
-- 버튼, 닫기 버튼, 페이지 네이션 링크, 폼 레인지의 비활성화 상태에는 `pointer-events: none` 이 추가 되었습니다. 이로써 코드 베이스가 간소화되었고, CSS 에서 액티브한 상태를 쉽게 오버라이드 할 수 있게 되었습니다. [#29296](https://github.com/twbs/bootstrap/pull/29296).
+- 버튼, 닫기 버튼, 페이지네이션 링크, 폼 레인지의 비활성화 상태에는 `pointer-events: none` 이 추가 되었습니다. 이로써 코드 베이스가 간소화 되었고, CSS 에서 액티브한 상태를 쉽게 오버라이드 할 수 있게 되었습니다. [#29296](https://github.com/twbs/bootstrap/pull/29296).
 
 #### Alerts
 
@@ -392,7 +392,7 @@ Reboot, 타이포그래피, 테이블 등과 같은 변경사항.
 
 #### Navbars
 
-- 모든 내비바는 내부에 컨테이너가 필요해 졌습니다. 이에 따라 spacing 요건이 대폭 간소화 되었으며 v4 에서 반응형 컨테이너를 위해 추가한 대규모 CSS 오버라이드가 불필요해 졌습니다.
+- 모든 내비바는 내부에 컨테이너가 필요해 졌습니다. 이에 따라 간격 요건이 대폭 간소화 되었으며 v4 에서 반응형 컨테이너를 위해 추가한 대규모 CSS 오버라이드가 불필요해 졌습니다.
 
 #### Pagination
 
