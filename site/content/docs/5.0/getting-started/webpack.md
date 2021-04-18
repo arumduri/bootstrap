@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Webpack and bundlers (웹팩과 번들러)
-description: 웹팩이나 다른 번들러를 사용하여 프로젝트에 Bootstrap을 포함하는 방법을 알아봅니다.
+description: 웹팩이나 다른 번들러를 사용하여 프로젝트에 Bootstrap을 포함하는 방법을 알아보세요.
 group: getting-started
 toc: true
 ---
