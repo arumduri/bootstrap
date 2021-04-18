@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: RTL
-description: Learn how to enable support for right-to-left text in Bootstrap across our layout, components, and utilities.
+description: 레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 텍스트의 지원을 활성화하는 방법을 알아보십시오.
 group: getting-started
 toc: true
 ---
