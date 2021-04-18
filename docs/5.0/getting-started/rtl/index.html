@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -426,23 +426,23 @@
         
 
         <h2 id="get-familiar">Get familiar</h2>
-<p>We recommend getting familiar with Bootstrap first by reading through our <a href="/docs/5.0/getting-started/introduction/">Getting Started Introduction page</a>. Once you&rsquo;ve run through it, continue reading here for how to enable RTL.</p>
-<p>You may also want to read up on <a href="https://rtlcss.com/">the RTLCSS project</a>, as it powers our approach to RTL.</p>
+<p>먼저 [시작하기 페이지]를 읽고 Bootstrap에 익숙해지는 것이 좋습니다. 어느정도 읽어보았다면 RTL을 활성화하는 방법에 대해 계속 읽어보세요.</p>
+<p>우리가 RTL에 접근하는 방식을 강화하는 [RTLCSS 프로젝트]에 대해서 읽어볼 수도 있습니다.</p>
 <div class="bd-callout bd-callout-warning">
-<h3 id="experimental-feature">Experimental feature</h3>
-<p>The RTL feature is still <strong>experimental</strong> and will probably evolve according to user feedback. Spotted something or have an improvement to suggest? <a href="https://github.com/twbs/bootstrap/issues/new">Open an issue</a>, we&rsquo;d love to get your insights.
+<h3 id="실험적-기능">실험적 기능</h3>
+<p>RTL 기능은 아직 <strong>실험적이며</strong> 사용자 피드백에 따라 발전할 것입니다. 무언가를 발견했거나 개선할 점이 있나요? <a href="https://github.com/twbs/bootstrap/issues/new">이슈를 열어서</a> 여러분들의 의견을 알려주세요.
 </div>
 
 <h2 id="required-html">Required HTML</h2>
-<p>There are two strict requirements for enabling RTL in Bootstrap-powered pages.</p>
+<p>현재 Bootstrap 기반 페이지에서 RTL을 활성화하기 위한 두가지 엄격한 요구 사항이 있습니다.</p>
 <ol>
-<li>Set <code>dir=&quot;rtl&quot;</code> on the <code>&lt;html&gt;</code> element.</li>
-<li>Add an appropriate <code>lang</code> attribute, like <code>lang=&quot;ar&quot;</code>, on the <code>&lt;html&gt;</code> element.</li>
+<li><code>&lt;html&gt;</code> 요소에 <code>dir=&quot;rtl&quot;</code>을 설정하세요.</li>
+<li><code>&lt;html&gt;</code> 요소에 <code>lang=&quot;ar&quot;</code>와 같은 적절한 <code>lang</code> 속성을 추가해주세요.</li>
 </ol>
-<p>From there, you&rsquo;ll need to include an RTL version of our CSS. For example, here&rsquo;s the stylesheet for our compiled and minified CSS with RTL enabled:</p>
+<p>여기서 CSS의 RTL 버전을 포함해야 합니다. 예를 들어, 다음은 RTL이 활성화된 컴파일 및 경량화된 CSS의 스타일시트입니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.rtl.min.css&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-mUkCBeyHPdg0tqB6JDd+65Gpw5h/l8DKcCTV2D2UpaMMFd7Jo8A+mDAosaWgFBPl&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="starter-template">Starter template</h3>
-<p>You can see the above requirements reflected in this modified RTL starter template.</p>
+<p>수정된 RTL 스타터 템플릿에 상기된 요구사항이 반영되어 있음을 알 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;ar&#34;</span> <span class="na">dir</span><span class="o">=</span><span class="s">&#34;rtl&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -471,25 +471,25 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="rtl-examples">RTL examples</h3>
-<p>Get started with one of our several <a href="/docs/5.0/examples/#rtl">RTL examples</a>.</p>
+<p>여러 <a href="/docs/5.0/examples/#rtl">RTL 예제</a> 중 하나로 시작하세요.</p>
 <h2 id="approach">Approach</h2>
-<p>Our approach to building RTL support into Bootstrap comes with two important decisions that impact how we write and use our CSS:</p>
+<p>RTL 지원을 Bootstrap에 구축하는 방법에는 CSS를 작성하고 사용하는 방법에 영향을 주는 두 가지 중요한 결정사항이 있습니다:</p>
 <ol>
 <li>
-<p><strong>First, we decided to build it with the <a href="https://rtlcss.com/">RTLCSS</a> project.</strong> This gives us some powerful features for managing changes and overrides when moving from LTR to RTL. It also allows us to build two versions of Bootstrap from one codebase.</p>
+<p><strong>먼저 우리는 <a href="https://rtlcss.com/">RTLCSS</a> 프로젝트로 빌드하기로 결정했습니다.</strong> 이를 통해 LTR에서 RTL로 이동할 때 변경 및 재정의를 관리하기 위한 몇 가지 강력한 기능이 제공됩니다. 또한 하나의 코드베이스에서 두 가지 버전의 Bootstrap을 빌드할 수 있습니다.</p>
 </li>
 <li>
-<p><strong>Second, we&rsquo;ve renamed a handful of directional classes to adopt a logical properties approach.</strong> Most of you have already interacted with logical properties thanks to our flex utilities—they replace direction properties like <code>left</code> and <code>right</code> in favor <code>start</code> and <code>end</code>. That makes the class names and values appropriate for LTR and RTL without any overhead.</p>
+<p><strong>두번째로 논리적 속성 접근 방식을 채택하기 위해 몇 가지 방향성 클래스의 이름을 변경했습니다.</strong> 대부분의 사용자는 flex 유틸리티 덕분에 이미 논리적 속성과 상호작용을 했습니다. 이것들은 <code>left</code>, <code>right</code>와 같은 방향 속성을 <code>start</code>와 <code>end</code>로 대체합니다. 이를 통해 오버헤드 없이 LTR 및 RTL에 적합한 클래스 이름과 값을 만듭니다.</p>
 </li>
 </ol>
-<p>For example, instead of <code>.ml-3</code> for <code>margin-left</code>, use <code>.ms-3</code>.</p>
-<p>Working with RTL, through our source Sass or compiled CSS, shouldn&rsquo;t be much different from our default LTR though.</p>
+<p>예를 들어 <code>margin-left</code>에서 <code>.ml-3</code> 대신에 <code>.ms-3</code>을 사용할 수 있습니다.</p>
+<p>Sass 소스 또는 컴파일된 CSS를 통한 RTL 작업은 기본 LTR과 크게 다르지 않습니다.</p>
 <h2 id="customize-from-source">Customize from source</h2>
-<p>When it comes to <a href="/docs/5.0/customize/sass/">customization</a>, the preferred way is to take advantage of variables, maps, and mixins. This approach works the same for RTL, even if it&rsquo;s post-processed from the compiled files, thanks to <a href="https://rtlcss.com/learn/getting-started/why-rtlcss/">how RTLCSS works</a>.</p>
+<p>커스터마이제이션과(/docs/5.0/customize/sass/) 관련하여 선호되는 방법은 변수, 맵 및 믹스인을 활용하는 것입니다. 이 접근 방식은 <a href="(https://rtlcss.com/learn/getting-started/why-rtlcss/)">RTLCSS가 작동하는 방식</a> 덕분에 컴파일된 파일에서 사후 처리 되더라도 RTL에 대해 동일하게 작동합니다.</p>
 <h3 id="custom-rtl-values">Custom RTL values</h3>
-<p>Using <a href="https://rtlcss.com/learn/usage-guide/value-directives/">RTLCSS value directives</a>, you can make a variable output a different value for RTL. For example, to decrease the weight for <code>$font-weight-bold</code> throughout the codebase, you may use the <code>/*rtl: {value}*/</code> syntax:</p>
+<p>RTLCSS 값 지시문을 사용하여 변수 출력을 RTL에 대해 다른 값으로 만들 수 있습니다. 예를 들어, 코드베이스 전체에서 <code>$font-weight-bold</code>의 가중치를 줄이려면 <code>/*rtl: {value}*/</code> 구문을 사용할 수 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$font-weight-bold</span><span class="o">:</span> <span class="mi">700</span> <span class="si">#{</span><span class="cm">/* rtl:600 </span><span class="c">*/</span><span class="si">}</span> <span class="nv">!default</span><span class="p">;</span>
-</code></pre></div><p>Which would ouput to the following for our default CSS and RTL CSS:</p>
+</code></pre></div><p>이렇게 하면 기본 CSS 및 RTL CSS에 대해 다음과 같이 출력됩니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="c">/* bootstrap.css */</span>
 <span class="nt">dt</span> <span class="p">{</span>
   <span class="k">font-weight</span><span class="p">:</span> <span class="mi">700</span> <span class="c">/* rtl:600 */</span><span class="p">;</span>
@@ -500,8 +500,8 @@
   <span class="k">font-weight</span><span class="p">:</span> <span class="mi">600</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="alternative-font-stack">Alternative font stack</h3>
-<p>In the case you&rsquo;re using a custom font, be aware that not all fonts support the non-Latin alphabet. To switch from Pan-European to Arabic family, you may need to use <code>/*rtl:insert: {value}*/</code> in your font stack to modify the names of font families.</p>
-<p>For example, to switch from <code>Helvetica Neue Webfont</code> for LTR to <code>Helvetica Neue Arabic</code> for RTL, your Sass code look like this:</p>
+<p>맞춤 글꼴을 사용하는 경우 모든 글꼴이 라틴어가 아닌 알파벳을 지원하는 것은 아닙니다. 범유럽 계열에서 아랍어 계열로 전환하려면 글꼴 스택에서 <code>/*rtl:insert: {value}*/</code>를 사용하여 글꼴 계열의 이름을 수정해야 할 수 있습니다.</p>
+<p>예를 들어 LTR용 <code>Helvetica Neue Webfont</code>에서 RTL용 &lsquo;Helvetica Neue Arabic`으로 전환하는 경우 Sass 코드는 다음과 같습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$font-family-sans-serif</span><span class="o">:</span>
   <span class="n">Helvetica</span> <span class="n">Neue</span> <span class="si">#{</span><span class="s2">&#34;/* rtl:insert:Arabic */&#34;</span><span class="si">}</span><span class="o">,</span>
   <span class="c1">// Safari for macOS and iOS (San Francisco)</span>
@@ -521,11 +521,11 @@
   <span class="c1">// Emoji fonts</span>
   <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="o">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span> <span class="nv">!default</span><span class="p">;</span>
 </code></pre></div><h2 id="the-breadcrumb-case">The breadcrumb case</h2>
-<p>The <a href="/docs/5.0/components/breadcrumb//#changing-the-separator">breadcrumb separator</a> is the only case requiring its own brand new variable— namely <code>$breadcrumb-divider-flipped</code> —defaulting to <code>$breadcrumb-divider</code>.</p>
+<p>브레드크럼 구분자는 <code>$breadcrumb-divider-flipped</code>라는 고유한 새로운 변수가 필요한 유일한 경우이며 기본값은 <code>$breadcrumb-divider</code>입니다.</p>
 <h2 id="additional-resources">Additional resources</h2>
 <ul>
 <li><a href="https://rtlcss.com/">RTLCSS</a></li>
-<li><a href="https://rtlstyling.com/posts/rtl-styling">RTL Styling 101</a></li>
+<li><a href="https://rtlstyling.com/posts/rtl-styling">RTL 스타일링 기초 과정</a></li>
 </ul>
 
       </div>
