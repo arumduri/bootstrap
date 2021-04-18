@@ -1,32 +1,32 @@
 ---
 layout: docs
-title: Build tools
-description: Learn how to use Bootstrap's included npm scripts to build our documentation, compile source code, run tests, and more.
+title: Build tools(빌드 도구)
+description: 문서 빌드, 소스 코드 컴파일, 테스트 실행 등을 할 수 있는 Bootstrap에 포함된 npm 스크립트를 사용하는 방법에 대해서 알아보세요. 
 group: getting-started
 toc: true
 ---
 
 ## Tooling setup
 
-Bootstrap uses [npm scripts](https://docs.npmjs.com/misc/scripts/) for its build system. Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) includes convenient methods for working with the framework, including compiling code, running tests, and more.
+Bootstrap은 빌드 시스템으로 [npm 스크립트](https://docs.npmjs.com/misc/scripts/)를 사용합니다. [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json)에는 코드 컴파일, 테스트 실행 등을 포함한 프레임워크 작업을 위한 편리한 수단들이 이습니다.
 
-To use our build system and run our documentation locally, you'll need a copy of Bootstrap's source files and Node. Follow these steps and you should be ready to rock:
+빌드 시스템을 사용하고 로컬에서 문서를 실행하려면 Bootstrap의 소스 파일과 Node의 복사본이 필요합니다. 이 단계를 따르면 작업할 준비가 될겁니다:
 
-1. [Download and install Node.js](https://nodejs.org/en/download/), which we use to manage our dependencies.
-2. Either [download Bootstrap's sources]({{< param "download.source" >}}) or fork [Bootstrap's repository]({{< param repo >}}).
-3. Navigate to the root `/bootstrap` directory and run `npm install` to install our local dependencies listed in [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json).
+1. 의존성 관리를 위해 사용하는 [Node.js를 다운로드하고 설치해주세요](https://nodejs.org/en/download/).
+2. [Bootstrap의 소스]({{< param "download.source" >}})를 다운로드하거나 [Bootstrap의 리포지토리]({{< param repo >}})를 포크해주세요.
+3. 최상위 `/bootstrap` 폴더로 이동한 다음 `npm install`을 실행해서 [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json)에 있는 로컬 의존성을 설치해주세요.
 
-When completed, you'll be able to run the various commands provided from the command line.
+모두 완료했다면 명령줄을 통해서 여려 명령어를 실행할 수 있습니다.
 
 ## Using npm scripts
 
-Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json) includes numerous tasks for developing the project. Run `npm run` to see all the npm scripts in your terminal. **Primary tasks include:**
+[package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json)에는 프로젝트 개발에 사용되는 다수의 작업이 있습니다. 터미널에서 `npm run`을 실행해서 모든 npm 스크립트를 확인해보세요. **최우선 작업에는 다음이 포함됩니다:**
 
 <table class="table">
   <thead>
     <tr>
-      <th>Task</th>
-      <th>Description</th>
+      <th>작업</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>
@@ -35,7 +35,7 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
         <code>npm start</code>
       </td>
       <td>
-        Compiles CSS and JavaScript, builds the documentation, and starts a local server.
+        CSS와 JavaScript를 컴파일하고 문서를 빌드한 다음 로컬 서버를 시작합니다.
       </td>
     </tr>
     <tr>
@@ -43,7 +43,7 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
         <code>npm run dist</code>
       </td>
       <td>
-       Creates the <code>dist/</code> directory with compiled files. Requires <a href="https://sass-lang.com/">Sass</a>, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, and <a href="https://github.com/terser/terser">terser</a>.
+       컴파일된 파일과 함께 <code>dist/</code> 폴더를 생성합니다. <a href="https://sass-lang.com/">Sass</a>, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, 그리고 <a href="https://github.com/terser/terser">terser</a>가 필요합니다.
       </td>
     </tr>
     <tr>
@@ -51,7 +51,7 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
         <code>npm test</code>
       </td>
       <td>
-        Runs tests locally after running <code>npm run dist</code>
+        <code>npm run dist</code>를 실행한 다음 로컬에서 테스트를 실행합니다
       </td>
     </tr>
     <tr>
@@ -59,7 +59,7 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
         <code>npm run docs-serve</code>
       </td>
       <td>
-        Builds and runs the documentation locally.
+        빌드하고 로컬에서 문서를 실행합니다.
       </td>
     </tr>
   </tbody>
@@ -67,26 +67,26 @@ Our [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/packag
 
 ## Autoprefixer
 
-Bootstrap uses [Autoprefixer][autoprefixer] (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.
+Bootstrap은 빌드할 때 CSS 속성에 자동으로 벤더 접두사를 추가하기 위해 [Autoprefixer][autoprefixer] (빌드 과정에 포함됨)를 사용합니다. 이것을 통해서 시간과 코드를 아낄 수 있고 v3에서 볼 수 있는 것과 같은 벤더 믹스인의 필요성을 제거하면서 CSS의 핵심 부분을 한 번에 작성할 수 있습니다.
 
-We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See [.browserslistrc]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc) for details.
+우리는 Autoprefixer를 통해서 지원하는 브라우저의 목록을 GitHub repository내의 개별 파일에서 관리하고 있습니다. 자세한 부분은 [.browserslistrc]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc)를 확인해주세요.
 
 ## RTLCSS
 
-Bootstrap uses [RTLCSS](https://rtlcss.com/) to process compiled CSS and convert them to RTL – basically replacing horizontal direction aware properties (eg. `padding-left`) with their opposite. It allows us only write our CSS a single time and make minor tweaks using RTLCSS [control](https://rtlcss.com/learn/usage-guide/control-directives/) and [value](https://rtlcss.com/learn/usage-guide/value-directives/) directives.
+Bootstrap은 컴파일된 CSS를 처리하고 RTL로 변환하기 위해서 [RTLCSS](https://rtlcss.com/)를 사용합니다 – 기본적으로 수평 방향이 정의된 속성 (예 `padding-left`)을 반대로 바꿉니다. 이를 통해서 한 번만 CSS를 작성할 수 있게 해주고 RTLCSS [컨트롤](https://rtlcss.com/learn/usage-guide/control-directives/)과 [값](https://rtlcss.com/learn/usage-guide/value-directives/) 지침을 사용해서 마이너한 트윅들을 만들어줍니다.
 
 ## Local documentation
 
-Running our documentation locally requires the use of Hugo, which gets installed via the [hugo-bin](https://www.npmjs.com/package/hugo-bin) npm package. Hugo is a blazingly fast and quite extensible static site generator that provides us: basic includes, Markdown-based files, templates, and more. Here's how to get it started:
+로컬에서 문서를 실행하려면 Hugo가 필요하며, [hugo-bin](https://www.npmjs.com/package/hugo-bin) npm 패키지를 통해서 설치할 수 있습니다. Hugo은 기본 포함, 마크다운 기반 파일, 템플릿 등을 제공하는 아주 빠르면서 상당한 수준으로 확장할 수 있는 정적 사이트 생성기입니다 다음은 시작하는 방법입니다:
 
-1. Run through the [tooling setup](#tooling-setup) above to install all dependencies.
-2. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
-3. Open `http://localhost:9001/` in your browser, and voilà.
+1. [도구 구성](#도구-구성)의 내용을 통해서 모든 의존성을 설치해주세요.
+2. 최상위 `/bootstrap` 폴더에서 명령줄 도구를 통해 `npm run docs-serve`를 실행해주세요.
+3. 브라우저에서 `http://localhost:9001/`를 열면, 짜잔.
 
-Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
+Hugo를 사용하는 방법에 대해 자세히 알아보고 싶다면 자체 [문서](https://gohugo.io/documentation/)를 확인해주세요.
 
 ## Troubleshooting
 
-Should you encounter problems with installing dependencies, uninstall all previous dependency versions (global and local). Then, rerun `npm install`.
+의존성을 설치하면서 문제가 발생한다면 모든 이전 의존성 버전 (전역 및 로컬)을 제거해주세요. 그리고 `npm install`을 다시 실행해주세요.
 
 [autoprefixer]: https://github.com/postcss/autoprefixer

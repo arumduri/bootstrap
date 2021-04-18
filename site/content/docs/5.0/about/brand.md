@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Brand guidelines
+title: Brand guidelines(브랜드 가이드라인)
 description: Bootstrap의 로고와 브랜드 사용 가이드라인에 관한 문서와 예제입니다.
 group: about
 toc: true
@@ -8,7 +8,7 @@ toc: true
 
 Bootstrap의 브랜드 자료가 필요하신가요? 좋습니다! 우리는 몇 가지 지침만을 따르고 있으며, 여러분도 따라주셔야 합니다.
 
-## 로고
+## Logo
 
 Bootstrap을 언급할 때에는 우리의 로고 상표를 사용해주세요. 어떤 방식으로든 로고를 수정하지 마세요. Bootstrap의 브랜딩을 자신의 오픈 또는 클로즈드 소스 프로젝트에 사용하지 마세요. **Twitter의 이름이나 로고를 Bootstrap과 연관지어 사용하지 마세요.**
 
@@ -27,7 +27,7 @@ Bootstrap을 언급할 때에는 우리의 로고 상표를 사용해주세요. 
   </div>
 </div>
 
-## 명칭
+## Name
 
 Bootstrap은 그냥 **Bootstrap**으로만 언급되어야 합니다. 앞에 Twitter를 붙이거나 _s_를 대문자로 바꾸지 마세요.
 
