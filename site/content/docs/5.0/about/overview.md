@@ -14,7 +14,7 @@ Bootstrap은 GitHub에서 [개발자로 이루어진 소규모 팀](https://gith
 
 ## History
 
-원래 Twitter의 디자이너와 개발자에 의해 만들어졌으며, Bootstrap은 세계에서 가장 인기 있는 프론트 엔드 프레임워크 및 오픈 소스 프로젝트 중 하나가 되었습니다.
+원래 Twitter의 디자이너와 개발자에 의해 만들어졌으며, Bootstrap은 세계에서 가장 인기있는 프론트 엔드 프레임워크 및 오픈 소스 프로젝트 중 하나가 되었습니다.
 
 Bootstrap은 2010년 중반에 Twitter의 [@mdo](https://twitter.com/mdo)와 [@fat](https://twitter.com/fat)에 의해 만들어졌습니다. Bootstrap 프레임워크가 오픈 소스가 되기 전에는 _Twitter Blueprint_로 알려져 있었습니다. 개발에 들어간 지 몇 달 후, Twitter는 [첫 해킹 주간](https://blog.twitter.com/engineering/en_us/a/2010/hack-week.html)을 열었으며 프로젝트는 외부 지침 없이 모든 스킬 레벨의 개발자들이 뛰어들면서 폭발적으로 증가했습니다. 공개적으로 배포되기 전부터 1년 넘게 회사 내부 도구 개발을 위한 스타일 가이드 역할로 사용되었으며 지금도 계속 유지되고 있습니다.
 

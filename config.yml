@@ -42,7 +42,7 @@ module:
       target:           static/favicon.ico
 
 params:
-  description:          "세계에서 가장 인기 있는 HTML, CSS, JS 라이브러리."
+  description:          "세계에서 가장 인기있는 HTML, CSS, JS 라이브러리."
   authors:              "Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들"
   social_image_path:    /docs/5.0/assets/brand/bootstrap-social.png
   social_logo_path:     /docs/5.0/assets/brand/bootstrap-social-logo.png
