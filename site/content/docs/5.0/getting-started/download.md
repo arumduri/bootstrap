@@ -10,10 +10,10 @@ toc: true
 
 바로 사용할 수 있는 컴파일된 **Bootstrap v{{< param current_version >}}** 코드를 다운로드해서 프로젝트에 포함시킬 수 있습니다. 다음이 포함되어 있습니다:
 
-- 컴파일 및 경량화된 CSS 번들 ([CSS 파일 비교]({{< docsref "/getting-started/contents#css-files" >}}) 보기)
-- 컴파일 및 경량화된 JavaScript 플러그인 ([JS 파일 비교]({{< docsref "/getting-started/contents#js-files" >}}) 보기)
+- 컴파일 및 경량화 된 CSS 번들 ([CSS 파일 비교]({{< docsref "/getting-started/contents#css-files" >}}) 보기)
+- 컴파일 및 경량화 된 JavaScript 플러그인 ([JS 파일 비교]({{< docsref "/getting-started/contents#js-files" >}}) 보기)
 
-여기에는 문서, 소스 파일, 그리고 Popper같ㅇ느 선택적인 JavaScript 의존성이 포함되어 있지 않습니다.
+여기에는 문서, 소스 파일, 그리고 Popper같은 선택적 JavaScript 의존성이 포함되어 있지 않습니다.
 
 <a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">다운로드</a>
 
