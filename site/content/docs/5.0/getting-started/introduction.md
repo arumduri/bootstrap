@@ -12,11 +12,12 @@ toc: true
 
 ## Quick start
 
-프로젝트에 빠르게 Bootstrap을 추가하고 싶으신가요? 무료 오픈 소스 CDN인 jsDelivr를 사용해보세요. 패키지 관리자나 소스 파일을 다운로드할 필요가 있으신가요? [다운로드 페이지를 확인해보세요]({{< docsref "/getting-started/download" >}}).
+프로젝트에 빠르게 Bootstrap을 추가하고 싶으신가요? 무료 오픈소스 CDN인 jsDelivr를 사용해보세요. 패키지 관리자나 소스 파일을 다운로드할 필요가 있으신가요? [다운로드 페이지를 확인해보세요]({{< docsref "/getting-started/download" >}}).
 
 ### CSS
 
-모든 스타일이 시작하기 전에 우리 CSS를 불러오기 위해 `<head>` 맨 위에 우리 `<link>` 스타일시트를 복사해서 붙여넣어주세요.
+
+`<head>` 맨 위에 우리 `<link>` 스타일시트를 복사한 뒤 붙여넣어 우리의 CSS를 가장먼저 불러와 주세요.
 
 ```html
 <link href="{{< param "cdn.css" >}}" rel="stylesheet" integrity="{{< param "cdn.css_hash" >}}" crossorigin="anonymous">
@@ -24,7 +25,7 @@ toc: true
 
 ### JS
 
-많은 우리 컴포넌트들은 작동에 JavaScript를 필요로 합니다. 정확히 말하자면 우리의 JavaScript 플러그인과 [Popper](https://popper.js.org/) 가 필요합니다. **다음 중 하나의`<script>`**를 `/body>` 태그가 닫히기 전에 페이지 끝부분에 넣어서 활성화시켜주세요.
+우리의 많은 컴포넌트들은 작동에 JavaScript를 필요로 합니다. 정확히 말하면 우리의 JavaScript 플러그인과 [Popper](https://popper.js.org/) 가 필요합니다. **다음 중 하나의`<script>`**를 `/body>` 태그가 닫히기 전에 페이지 끝 부분에 넣어 활성화 시켜주세요.
 
 #### Bundle
 
@@ -60,7 +61,7 @@ toc: true
 - 콘텐츠 가시성 접기 전환
 - 드롭다운에서의 표시 및 위치 ([Popper](https://popper.js.org/)도 필요)
 - 모달에서의 표시, 위치, 스크롤 행동
-- 네비바에서의 반응형 동작 구현을 위한 접기 플러그인 확장
+- 네비게이션 바에서의 반응형 동작 구현을 위한 접기 플러그인 확장
 - 토스트 표시 및 닫기
 - 툴팁과 팝오버에서의 표시 및 위치 ([Popper](https://popper.js.org/)도 필요)
 - 스크롤스파이에서의 스크롤 동작과 내비게이션 갱신
@@ -69,7 +70,7 @@ toc: true
 
 ## Starter template
 
-페이지가 최신 디자인 및 개발 표준을 준수하고 있는지 확인해보세요. 즉 HTML5 doctype과 적절한 반응형 동작을 위한 뷰포트 메타 태그를 사용하고 있는 지를 말합니다. 이 모든 부분을 넣으면 페이지는 다음과 같아야 합니다:
+페이지가 최신 디자인 및 개발 표준을 준수하고 있는지 확인해보세요. 즉, HTML5 doctype과 적절한 반응형 동작을 위해 뷰포트 메타 태그를 사용해야 합니다. 이 모든 부분을 합친 페이지는 다음과 같습니다.
 
 ```html
 <!doctype html>
@@ -105,11 +106,11 @@ toc: true
 
 ## Important globals
 
-Bootstrap은 사용할 때 알아야 할 몇 가지 중요한 전역 스타일과 설정을 사용하고 있으며, 이 모든 기능은 거의 크로스 브라우저 스타일의 *정규화*에 맞추어져 있습니다. 한 번 알아봅시다.
+Bootstrap을 사용할 때 알아야 할 몇 가지 중요한 전역 스타일과 설정을 사용하고 있으며, 이 모든 기능은 거의 크로스 브라우저 스타일의 *정규화*에 맞추어져 있습니다. 한 번 알아봅시다.
 
 ### HTML5 doctype
 
-Bootstrap은 HTML5 doctype의 사용을 필요로 합니다. 이것이 없다면 약간 맛이 간 불완전한 스타일을 볼 수 있습니다. 이걸 포함한다고 문제가 생기지는 않습니다.
+Bootstrap은 HTML5 doctype의 사용을 필요로 합니다. 이것이 없다면 약간 맛이 간 불완전한 스타일을 볼 수 있습니다. 이것을 포함한다고 문제가 생기지는 않습니다.
 
 ```html
 <!doctype html>
@@ -120,7 +121,7 @@ Bootstrap은 HTML5 doctype의 사용을 필요로 합니다. 이것이 없다면
 
 ### Responsive meta tag
 
-Bootstrap은 *모바일 우선*으로 개발되기 떄문에 먼저 모바일 기기에 코드를 최적화한 다음 CSS 미디어 쿼리를 사용해서 필요에 따라 구성 요소를 확장하고 있습니다. 모든 장치에서 올바를 렌더링 및 터치 확대 조절을 보장하려면 `<head>`에  **반응형 뷰포트 메타 태그를 추가해주세요**.
+Bootstrap은 *모바일 우선*으로 개발되기 때문에 모바일 기기에 먼저 코드를 최적화한 다음 CSS 미디어 쿼리를 사용해서 필요에 따라 구성 요소를 확장하고 있습니다. 모든 장치에서 올바를 렌더링 및 터치 확대 조절을 보장하려면 `<head>`에  **반응형 뷰포트 메타 태그를 추가해주세요**.
 
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -130,9 +131,9 @@ Bootstrap은 *모바일 우선*으로 개발되기 떄문에 먼저 모바일 �
 
 ### Box-sizing
 
-CSS에서의 보다 간단한 크기 조절을 위해서 우리는 `content-box`에서 `border-box`까지 전역 `box-sizing` 값을 사용하고 잇습니다. 이렇게 하면 `padding`이 요소의 최종 계산된 너비에 영향을 미치지는 않지만 Google Maps나 Google Custom Search Engine같은 서드 파티 소프트웨어에서 문제가 발생할 수도 있습니다.
+CSS에서 보다 간단한 크기 조절을 위해서 우리는 `content-box`에서 `border-box`까지 전역 `box-sizing` 값을 사용하고 있습니다. 이렇게 하면 `padding`이 요소의 최종 계산된 너비에 영향을 미치지는 않지만 Google Maps나 Google Custom Search Engine같은 서드파티 소프트웨어에서 문제가 발생할 수 있습니다.
 
-드물지만 재정의를 해야 할 필요가 있다면 다음과 같은 식으로 사용할 수 있습니다:
+드물지만 재정의를 해야 한다면 다음과 같이 사용할 수 있습니다.
 
 ```css
 .selector-for-some-widget {
@@ -140,7 +141,7 @@ CSS에서의 보다 간단한 크기 조절을 위해서 우리는 `content-box`
 }
 ```
 
-위 스니펫을 사용한다면 `::before`와 `::after`를 통해서 생성된 콘텐츠와 같은 중첩된 요소는 모두 `.selector-for-some-widget`에 대해서 지정된 `box-sizing`를 상속합니다.
+위 스니펫을 사용하면 `::before`와 `::after`를 통해서 생성된 콘텐츠와 같은 중첩된 요소는 모두 `.selector-for-some-widget`에 대해서 지정된 `box-sizing`를 상속합니다.
 
 [box model and sizing at CSS Tricks에서 박스 모델과 크기 조절](https://css-tricks.com/box-sizing/)에 대해서 자세히 알아보세요.
 
@@ -150,12 +151,12 @@ CSS에서의 보다 간단한 크기 조절을 위해서 우리는 `content-box`
 
 ## Community
 
-최신 Bootstrap 개발 상황을 계속 알아보고 여기 있는 도움이 될 만한 리소스들을 통해 커뮤니티에 참가하세요.
+최신 Bootstrap 개발 상황을 계속 알아보고 여기 있는 도움이 될 만한 리소스들을 통해 커뮤니티에 참가해 보세요.
 
 - [Twitter에서 @getbootstrap을 팔로우하세요](https://twitter.com/{{< param twitter >}}).
-- [공식 Bootstrap 블로그]({{< param blog >}})를 읽고 구독하세요.
-- [공식 Slack 방]({{< param slack >}})에 참가하세요.
-- 다른 Bootstrap 유저들과 IRC에서 대화하세요. `irc.freenode.net` 서버의 `##bootstrap` 채널에서 만나실 수 있습니다.
+- [공식 Bootstrap 블로그]({{< param blog >}})를 읽고 구독해 보세요.
+- [공식 Slack 방]({{< param slack >}})에 참가해 보세요.
+- 다른 Bootstrap 유저들과 IRC에서 대화해 보세요. `irc.freenode.net` 서버의 `##bootstrap` 채널에서 만나실 수 있습니다.
 - 구현 방법에 대한 도움을 Stack Overflow (태그는 [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5))에서 받으실 수 있습니다.
 - 개발자 분들은 [npm](https://www.npmjs.com/search?q=keywords:bootstrap) 또는 비슷한 전송 매커니즘에서 Bootstrap 수정 패키지 또는 기능 추가 패키지에서 `bootstrap` 단어를 사용해서 찾기 쉽도록 해주셔야 합니다.
 

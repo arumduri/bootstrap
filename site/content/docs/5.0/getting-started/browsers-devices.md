@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Browsers and devices(브라우저 및 기기)
-description: 옛날 것부터 요즘 것까지, Bootstrap을 지원하는 브라우저에 대해 각각의 알려진 특성과 버그에 대해서 알아보세요.
+description: 각각의 알려진 특성과 버그를 포함하여 Bootstrap에서 지원하는 구버전부터 최신버전까지의 브라우저와 장치들에 대해 알아 봅시다.
 group: getting-started
 toc: true
 ---
@@ -10,7 +10,7 @@ toc: true
 
 Bootstrap은 모든 주요 브라우저 및 플랫폼의 **최신 및 안정 버전**을 지원합니다.
 
-최신 버전의 WebKit, Blink, Gecko 등을 직접적으로 또는 플랫폼의 웹 뷰 API를 통해 기반으로 하는 대체제 브라우저를 사용하는 경우에는 명시적으로 지원하지 않습니다. 하지만 Bootstrap은 이러한 브라우저에서도 (대부분의 경우에는) 정상적으로 출력 및 작동합니다. 더 구체적인 지원 정보는 아래에 설명되어 있습니다.
+최신 버전의 WebKit, Blink, Gecko 등을 직접적으로 또는 플랫폼의 웹 뷰 API를 기반으로 하는 브라우저를 사용하는 경우에는 명시적으로 지원하지 않습니다. 하지만 Bootstrap은 이러한 브라우저에서도 (대부분의 경우) 정상적으로 출력 및 작동합니다. 더 구체적인 지원 정보는 아래에 설명되어 있습니다.
 
 [`.browserslistrc 파일`]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc)에서 지원되는 브라우저의 범위와 버전에 대해서 확인하실 수 있습니다:
 
@@ -101,7 +101,7 @@ Internet Explorer는 지원되지 않습니다. **Internet Explorer 지원이 �
 
 ### Overflow and scrolling
 
-`<body>` 요소에서의 `overflow: hidden;` 지원은 iOS와 Android에서 제한되어 있습니다. 이를 위해 장치의 브라우저에서 모달 상단 또는 하단을 스크롤하면 `<body>` 콘텐츠가 스크롤되기 시작합니다. [Chrome 버그 #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (Chrome v40에서 수정됨)과 [WebKit 버그 #153852](https://bugs.webkit.org/show_bug.cgi?id=153852)를 확인해주세요.
+`<body>` 요소에서 `overflow: hidden;` 지원은 iOS와 Android에서 제한되어 있습니다. 이를 위해 장치의 브라우저에서 모달 상단 또는 하단을 스크롤하면 `<body>` 콘텐츠가 스크롤되기 시작합니다. [Chrome 버그 #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (Chrome v40에서 수정됨)과 [WebKit 버그 #153852](https://bugs.webkit.org/show_bug.cgi?id=153852)를 확인해주세요.
 
 ### iOS text fields and scrolling
 
@@ -109,7 +109,7 @@ iOS 9.2부터 모달이 열려있을 때 `<input>` 또는 `<textarea>`의 경계
 
 ### Navbar Dropdowns
 
-`.dropdown-backdrop` 요소는 z-index의 복잡성 때문에 iOS의 nav에서 사용되지 않습니다. 따라서 네비바에서 드롭다운을 닫으려면 드롭다운 요소를 직접 클릭 (또는 [iOS에서 클릭 이벤트를 발생시키는 기타 요소](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event#Safari_Mobile)를 사용) 해야 합니다.
+`.dropdown-backdrop` 요소는 z-index의 복잡성 때문에 iOS의 nav에서 사용되지 않습니다. 따라서 네비게이션 바에서 드롭다운을 닫으려면 드롭다운 요소를 직접 클릭 (또는 [iOS에서 클릭 이벤트를 발생시키는 기타 요소](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event#Safari_Mobile)를 사용) 해야 합니다.
 
 ## Browser zooming
 

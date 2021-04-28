@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: Colored links
-description: Colored links with hover states
+title: Colored links (컬러 링크)
+description: 호버상태가 있는 컬러 링크
 group: helpers
 toc: false
 ---
 
-You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` classes]({{< docsref "/utilities/colors#colors" >}}), these classes have a `:hover` and `:focus` state.
+`.link-*` 클래스를 사용하여 링크를 색상화할 수 있습니다. [`.text-*` classes]({{< docsref "/utilities/colors#colors" >}})와 다르게, 이 클래스들에는 `:hover`와 `:focus` 상태가 있습니다.
 
 {{< example >}}
 {{< colored-links.inline >}}
@@ -17,5 +17,5 @@ You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` class
 {{< /example >}}
 
 {{< callout info >}}
-Some of the link styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
+일부 링크 스타일은 상대적으로 밝은 색상을 사용하기 때문에 충분한 대비를 얻으려면 어두운 배경에서 사용해야 합니다.
 {{< /callout >}}
