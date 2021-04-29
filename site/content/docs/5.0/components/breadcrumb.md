@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Breadcrumb(브래드크럼)
-description: CSS를 통해 자동적으로 구분자를 추가해 내비게이션 계층내에서 현재 페이지의 위치를 나타냅니다.
+title: Breadcrumb(브레드크럼)
+description: CSS로 구분자를 자동적으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.
 group: components
 toc: true
 ---
 
 ## Example
 
-순서를 가진 리스트 또는 순서를 가지지 않은 리스트를 사용해, 최소 스타일의 브래드크럼을 작성합니다. 유틸리티를 사용해, 원하는 스타일을 추가할 수 있습니다.
+순서를 가진 리스트 또는 순서를 가지지 않은 리스트를 사용해, 최소 스타일의 브래드크럼을 작성합니다. 유틸리티를 사용해 원하는 스타일을 추가할 수 있습니다.
 
 {{< example >}}
 <nav aria-label="breadcrumb">
