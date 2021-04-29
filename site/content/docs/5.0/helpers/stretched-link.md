@@ -1,15 +1,16 @@
 ---
 layout: docs
-title: Stretched link
-description: Make any HTML element or Bootstrap component clickable by "stretching" a nested link via CSS.
+title: Stretched link (링크 확장)
+description: CSS를 통해 중첩 된 링크를 "확장"하여 HTML 요소 또는 Bootstrap 구성 요소를 클릭 할 수 있도록 만듭니다.
 group: helpers
 ---
 
-Add `.stretched-link` to a link to make its [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block) clickable via a `::after` pseudo element. In most cases, this means that an element with `position: relative;` that contains a link with the `.stretched-link` class is clickable.
 
-Cards have `position: relative` by default in Bootstrap, so in this case you can safely add the `.stretched-link` class to a link in the card without any other HTML changes.
+a link에 `.stretched-link`를 추가하여 [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block)을 가상요소인 `::after` 를 통해 클릭할수 있도록 만듭니다. 대부분의 경우 이는, a link에 `.stretched-link` 클래스가 붙어있고 a link를 감싸고 있는 상위의 `position : relative;`상태의 요소는 클릭 할 수 있음을 의미합니다.
 
-Multiple links and tap targets are not recommended with stretched links. However, some `position` and `z-index` styles can help should this be required.
+부트스트랩에서 card는 기본적으로 `position: relative` 상태를 갖고 있습니다, 그렇기 때문에 이 경우 사용자가 별도의 HTML 변경없이 `.stretched-link`클래스를 안전하게 카드의 a링크 부분에 추가 할 수 있습니다.
+
+확장링크에 탭 대상 및 다중링크 사용은 권장하지 않습니다. 그러나, 사용이 필요한 경우 `position` 그리고 `z-index` 스타일이 도움이 될 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -22,7 +23,7 @@ Multiple links and tap targets are not recommended with stretched links. However
 </div>
 {{< /example >}}
 
-Most custom components do not have `position: relative` by default, so we need to add the `.position-relative` here to prevent the link from stretching outside the parent element.
+대부분의 사용자 지정 컴포넌트는 `position: relative` 를 기본적으로 포함하고 있지 않습니다. 따라서 a링크가 상위요소 바깥으로 무한정 확장하는 것을 방지하려면 상위 요소에`.position-relative`클래스를 추가해야합니다.
 
 {{< example >}}
 <div class="d-flex position-relative">
