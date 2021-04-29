@@ -52,12 +52,12 @@ a link에 `.stretched-link`를 추가하여 [containing block](https://developer
 
 ## Identifying the containing block
 
-만약 확장형 링크가 작동하지 않는다면, [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block) 이 원인 일 수 있습니다. 다음 CSS 속성은 요소를 포함하는 블록형태로 만듭니다.
+만약 확장형 링크가 작동하지 않는다면, [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block)이 원인 일 수 있습니다. 다음 CSS 속성은 요소를 포함하는 블록형태로 만듭니다.
 
-- A `position` value other than `static`
-- A `transform` or `perspective` value other than `none`
-- A `will-change` value of `transform` or `perspective`
-- A `filter` value other than `none` or a `will-change` value of `filter` (only works on Firefox)
+- `static` 이외의 `position` 값
+- `none` 이외의 `transform` 또는 `perspective` 값
+- `transform` 또는 `perspective`의 `will-change` 값
+- `none` 이외의 `filter` 값 또는 `filter`의  `will-change` 값 (Firefox에서만 작동)
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
