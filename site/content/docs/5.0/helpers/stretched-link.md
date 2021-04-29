@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Stretched link (링크 확장)
+title: Stretched link (확장형 링크)
 description: CSS를 통해 중첩 된 링크를 "확장"하여 HTML 요소 또는 Bootstrap 구성 요소를 클릭 할 수 있도록 만듭니다.
 group: helpers
 ---
@@ -10,7 +10,7 @@ a link에 `.stretched-link`를 추가하여 [containing block](https://developer
 
 부트스트랩에서 card는 기본적으로 `position: relative` 상태를 갖고 있습니다, 그렇기 때문에 이 경우 사용자가 별도의 HTML 변경없이 `.stretched-link`클래스를 안전하게 카드의 a링크 부분에 추가 할 수 있습니다.
 
-확장링크에 탭 대상 및 다중링크 사용은 권장하지 않습니다. 그러나, 사용이 필요한 경우 `position` 그리고 `z-index` 스타일이 도움이 될 수 있습니다.
+확장형 링크에 탭 대상 및 다중링크 사용은 권장하지 않습니다. 그러나, 사용이 필요한 경우 `position` 그리고 `z-index` 스타일이 도움이 될 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -52,7 +52,7 @@ a link에 `.stretched-link`를 추가하여 [containing block](https://developer
 
 ## Identifying the containing block
 
-If the stretched link doesn't seem to work, the [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block) will probably be the cause. The following CSS properties will make an element the containing block:
+만약 확장형 링크가 작동하지 않는다면, [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block) 이 원인 일 수 있습니다. 다음 CSS 속성은 요소를 포함하는 블록형태로 만듭니다.
 
 - A `position` value other than `static`
 - A `transform` or `perspective` value other than `none`
