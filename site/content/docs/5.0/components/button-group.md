@@ -8,7 +8,7 @@ toc: true
 
 ## Basic example
 
-`.btn` 의 버튼을 `.btn-group` 으로 감쌉니다.
+`.btn-group` 으로 `.btn` 요소를 포장합니다.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic example">
@@ -109,7 +109,7 @@ toc: true
 </div>
 {{< /example >}}
 
-입력그룹과 버튼그룹을 자유롭게 조합해 주십시오. 위의 예시와 같이, 적절한 여백을 갖기 위해서는 몇몇의 유틸리티가 필요합니다.
+입력그룹과 버튼그룹을 자유롭게 조합해 주세요. 위의 예시와 같이, 적절한 여백을 갖기 위해서는 몇개의 유틸리티가 필요합니다.
 
 {{< example >}}
 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
