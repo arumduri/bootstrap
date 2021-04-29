@@ -52,7 +52,7 @@ toc: true
 
 - JavaScript 플러그인 또는 Bootstrap JavaScript를 가지고 옵니다.
 - [close button]({{< docsref "/components/close-button" >}}) 에 `.alert-dismissible` 의 클래스를 추가하면 경고창의 오른쪽에 여백이 추가되고, 닫기 버튼의 위치가 결정됩니다.
-- 닫기 버튼에 `data-bs-dismiss="alert"` 속성을 추가합니다. 그러면 JavaScript 기능이 트리커 됩니다. 모든 디바이스에서 올바르게 동작시키려면 반드시 `<button>` 요소를 사용해 주세요.
+- 닫기 버튼에 `data-bs-dismiss="alert"` 속성을 추가합니다. 그러면 JavaScript 기능이 트리거 됩니다. 모든 디바이스에서 올바르게 동작시키려면 반드시 `<button>` 요소를 사용해 주세요.
 - 경고창을 닫을 때 애니메이션을 적용하려면, 반드시 `.fade` 와 `.show` 의 클래스를 추가해 주세요.
 
 실시간 데모로 확인할 수 있습니다:
