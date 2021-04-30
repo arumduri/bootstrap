@@ -10,7 +10,7 @@ toc: true
 
 툴팁 플러그인을 사용할 때 알아두어야 할 점:
 
-- 툴팁의 배치는 [Popper](https://popper.js.org/)  에 의존하고 있습니다. bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 을 쓰거나, 툴팁을 동작시키기 위해 팝오버를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해야 합니다.
+- 툴팁의 배치는 [Popper](https://popper.js.org/) 에 의존하고 있습니다. bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 을 쓰거나, 툴팁을 동작시키기 위해 팝오버를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해야 합니다.
 - 툴팁은 퍼포먼스를 위해 opt-in 되어 있기 때문에 **스스로 초기화를 해야 합니다.**
 - 길이가 0 의 타이틀을 가진 툴팁은 표시되지 않습니다.
 - 더 복잡한 컴포넌트(input group, button groups 등)의 랜더링 문제를 피하기 위해 `container: 'body'` 를 지정해 주십시오.
