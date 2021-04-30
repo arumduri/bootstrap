@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Navs and tabs(내비와 탭)
+title: Navs and tabs(네비와 탭)
 description: Bootstrap에 포함된 내비게이션 컴포넌트를 어떻게 사용하는지 문서와 예시입니다.
 group: components
 aliases: "/docs/5.0/components/navs/"
@@ -11,7 +11,7 @@ toc: true
 
 Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스부터 활성화 상태와 비활성화 상태까지 일반적인 마크업과 스타일을 공유합니다. 각각의 스타일을 바꾸기 위해서 수식자 클래스를 교체합니다.
 
-기본 `.nav` 콘포넌트는 flexbox 로 구축되어 있으며, 모든 타입의 내비게이션 컴포넌트를 구축하기 위한 강력한 구조를 제공하고 있습니다. 여기에는 몇몇의 스타일 오버라이드(리스트를 다루기 위한), 보다 넓은 클릭 영역을 위한 여백, 기본적인 비활성화된 스타일이 포함되어 있습니다.
+기본 `.nav` 컴포넌트는 flexbox 로 구축되어 있으며, 모든 타입의 내비게이션 컴포넌트를 구축하기 위한 강력한 구조를 제공하고 있습니다. 여기에는 몇몇의 스타일 오버라이드(리스트를 다루기 위한), 보다 넓은 클릭 영역을 위한 여백, 기본적인 비활성화된 스타일이 포함되어 있습니다.
 
 {{< callout info >}}
 베이스의 `.nav` 컴포넌트에는 `.active` 상태는 포함되지 않습니다. 아래의 예에서는 주로 이 특정 클래스가 특별한 스타일링을 하지 않는 것을 나타내기 위해 이 클래스를 포함합니다.
@@ -36,7 +36,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 </ul>
 {{< /example >}}
 
-클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 `<ul>` 을 사용하거나, 아이템의 순서가 중요한 경우에는 `<ol>` 를 사용하거나, `<nav>` 요소를 사용해 독자적인 롤을 만들거나 할 수 있습니다. `.nav` 는 `display: flex` 을 사용하고 있기 때문에, nav-link 는 따로 추가적인 마크업 없이, nav-item 과 동일하게 동작합니다.
+클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 `<ul>` 을 사용하거나, 아이템의 순서가 중요한 경우에는 `<ol>` 를 사용하거나, `<nav>` 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. `.nav` 는 `display: flex` 을 사용하고 있기 때문에, nav-link 는 따로 추가적인 마크업 없이, nav-item 과 동일하게 동작합니다.
 
 {{< example >}}
 <nav class="nav">
@@ -49,7 +49,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 
 ## Available styles
 
-`.nav` 컴포넌트 스타일을 수식자와 유틸리티로 변경할 수 있습니다. 필요에 따라서 조합해 사용하는 거도 가능하며, 독자적인 스타일을 만드는것도 가능합니다.
+`.nav` 컴포넌트 스타일을 수식자와 유틸리티로 변경할 수 있습니다. 필요에 따라서 조합해 사용하는 것도 가능하며, 독자적인 스타일을 만드는것도 가능합니다.
 
 ### Horizontal alignment
 
@@ -74,7 +74,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 </ul>
 {{< /example >}}
 
-`.justify-content-end` 을 사용해, 오른쪽 정렬:
+`.justify-content-end` 를 사용해, 오른쪽 정렬:
 
 {{< example >}}
 <ul class="nav justify-content-end">
@@ -95,7 +95,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 
 ### Vertical
 
-`.flex-column` 유틸리티를 사용해 flex item(플렉스 아이템) 의 방향을 변경해 내비게이션을 세로로 만들수 있습니다. 일부 뷰포트에서는 세로로, 다른 뷰포트에서는 세로로 하고 싶지 않을 경우는, `.flex-sm-column` 을 사용해 주세요.
+`.flex-column` 유틸리티를 사용해 flex item(플렉스 아이템) 의 방향을 변경해 내비게이션을 세로로 만들수 있습니다. 일부 뷰포트에서는 세로로, 또 다른 뷰포트에서는 세로로 하고 싶지 않을 경우, `.flex-sm-column` 을 사용해 주세요.
 
 {{< example >}}
 <ul class="nav flex-column">
@@ -169,7 +169,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 
 ### Fill and justify
 
-`.nav` 가로폭을 100% 사용하게 합니다. `.nav-item` 에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill` 을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것은 아니므로 주의해 주세요.
+`.nav` 가로폭을 100% 사용하게 합니다. `.nav-item` 에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill` 을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.
 
 {{< example >}}
 <ul class="nav nav-pills nav-fill">
@@ -231,7 +231,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 {{< /example >}}
 ## Working with flex utilities
 
-반응형 내비의 변화가 필요한 경우에는 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 을 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 브레이크 포인트 간에 더 큰 커스터마이즈가 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
+반응형 네비게이션의 변화가 필요한 경우에는 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 를 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 브레이크 포인트 간에 더 많은 커스터마이징이 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
 
 {{< example >}}
 <nav class="nav nav-pills flex-column flex-sm-row">
@@ -246,7 +246,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 
 내비게이션바를 제공하기 위해 내비게이션을 사용하고 있는 경우, `<ul>` 의 부모 컨테이너에 `role="navigation"` 을 추가하거나, `<nav>` 요소를 내비게이션 전체에 감싸주세요. role을 `<ul>` 자체에 추가하지 마십시오.
 
-내비게이션바는, `.nav-tabs` 에서 시각적으로 탭으로 보여지게 되어 있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior) 를 참조해 주십시오. JavaScript 는 활성화된 탭에 `aria-selected="true"` 를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하기 않습니다.
+내비게이션바는, `.nav-tabs` 에서 시각적으로는 탭으로 보여지게 되있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior) 를 참조해 주십시오. JavaScript 는 활성화된 탭에 `aria-selected="true"` 를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하기 않습니다.
 
 ## Using dropdowns
 
@@ -307,11 +307,11 @@ dropdown(드롭다운) 에 HTML 을 조금 추가하고, [dropdowns JavaScript p
 
 ## JavaScript behavior
 
-`bootstrap.js` 파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill 을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.
+`bootstrap.js` 파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.
 
 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서는, 지원 기술(스크린 리더 등)의 사용자에게 구조, 기능, 현재의 상태를 전달하기 위해 `role="tablist"`, `role="tab"`, `role="tabpanel"` 및 추가의 `aria-` 속성을 지원합니다.
 
-동적인 탭이 있는 인터페이스는 드롭다운 메뉴를 포함해서는 <em>안됩니다</em>. 사용성 관점에서는 현재 표시되고 있는 탭의 트리커 요소가 곧바로 표시되지 않는다(닫힌 드롭다운 메뉴 안에 있기 때문에)는 사실은 혼란을 일으킬 가능성이 있습니다. 접급성 관점에서 이러한 종류의 구조를 표준적인 WAI ARIA 패턴에 매핑하기 위한 현명한 방법은 현재로선 없습니다.
+동적인 탭이 있는 인터페이스는 드롭다운 메뉴를 포함해서는 <em>안됩니다</em>. 사용성 관점에서 현재 표시되고 있는 탭의 트리커 요소가 곧바로 표시되지 않는다는(닫힌 드롭다운 메뉴 안에 있기 때문에) 사실은 혼란을 일으킬 가능성이 있습니다. 접급성 관점에서 이러한 종류의 구조를 표준적인 WAI ARIA 패턴에 매핑하기 위한 현명한 방법은 현재로선 없습니다.
 
 <div class="bd-example">
   <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
@@ -487,7 +487,7 @@ dropdown(드롭다운) 에 HTML 을 조금 추가하고, [dropdowns JavaScript p
 
 ### Using data attributes
 
-요소에 `data-bs-toggle="tab"` 혹은 `data-bs-toggle="pill"` 를 지정하는것 만으로, JavaScript 를 쓰지 않고도 탭이나 필의 내비게이션을 활성화 시킬 수 있습니다. 이러한 data 속성은 `.nav-tabs` 나 `.nav-pills` 로 사용합니다.
+요소에 `data-bs-toggle="tab"` 혹은 `data-bs-toggle="pill"` 를 지정하는것 만으로, JavaScript 를 쓰지 않고도 탭이나 pill의 내비게이션을 활성화 시킬 수 있습니다. 이러한 data 속성은 `.nav-tabs` 나 `.nav-pills` 로 사용합니다.
 
 ```html
 <!-- Nav tabs -->
@@ -517,7 +517,7 @@ dropdown(드롭다운) 에 HTML 을 조금 추가하고, [dropdowns JavaScript p
 
 ### Via JavaScript
 
-JavaScript 으로 탭이 가능한 탭을 유효하게 합니다(각 탭을 개별적으로 유효하게 할 필요가 있습니다).
+JavaScript로 탭 가능한 탭을 유효하게 합니다(각 탭을 개별적으로 유효하게 할 필요가 있습니다).
 
 ```js
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
@@ -543,7 +543,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Fade effect
 
-탭을 페이드인 시키려면, `.tab-pane` 에 `.fade` 을 추가합니다. 첫 번째 탭에는 컨텐츠를 표시하기 위해 `.show` 을 추가할 필요가 있습니다.
+탭을 페이드인 시키려면, `.tab-pane` 에 `.fade` 를 추가합니다. 첫 번째 탭에는 컨텐츠를 표시하기 위해 `.show` 을 추가할 필요가 있습니다.
 
 ```html
 <div class="tab-content">
@@ -597,7 +597,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### show
 
-지정된 탭을 선택해 관련 창을 표시합니다. 이전에 선택되어 있던 다른 탭은 선택되지 않은 상태로 되고 관련된 창도 비표시 됩니다. **탭 창이 실제로 표시되기 전에 호출된 곳으로 돌아옵니다**(`shown.bs.tab` 이벤트가 발생하기 전).
+지정된 탭을 선택해 관련 창을 표시합니다. 이전에 선택되어 있던 다른 탭은 선택되지 않은 상태가 되고 관련된 창도 비표시 됩니다. **탭 창이 실제로 표시되기 전에 호출된 곳으로 돌아옵니다**(`shown.bs.tab` 이벤트가 발생하기 전).
 
 ```js
   var someTabTriggerEl = document.querySelector('#someTabTrigger')
