@@ -1,24 +1,24 @@
 ---
 layout: docs
-title: Clearfix
-description: Quickly and easily clear floated content within a container by adding a clearfix utility.
+title: Clearfix (클리어픽스)
+description: clearfix 유틸리티를 추가하여 컨테이너 내에서 floating 된 컨텐츠를 빠르고 쉽게 정렬합니다.
 group: helpers
 aliases: "/docs/5.0/helpers/"
 ---
 
-Easily clear `float`s by adding `.clearfix` **to the parent element**. Can also be used as a mixin.
+부모 요소에 `.clearfix`를 추가하여 `floats`를 쉽게 정렬합니다. 믹스 인으로도 사용할 수 있습니다.
 
-Use in HTML:
+HTML에서 사용시:
 
 ```html
 <div class="clearfix">...</div>
 ```
 
-The mixin source code:
+믹스 인 소스코드:
 
 {{< scss-docs name="clearfix" file="scss/mixins/_clearfix.scss" >}}
 
-Use the mixin in SCSS:
+SCSS에서 믹스 인 사용시:
 
 ```scss
 .element {
@@ -26,7 +26,7 @@ Use the mixin in SCSS:
 }
 ```
 
-The following example shows how the clearfix can be used. Without the clearfix the wrapping div would not span around the buttons which would cause a broken layout.
+다음 예시는 클리어픽스 사용 방법을 보여줍니다. clearfix가 없으면 div가 버튼요소를 감싸지 않아 레이아웃이 깨질 수 있습니다.
 
 {{< example >}}
 <div class="bg-info clearfix">

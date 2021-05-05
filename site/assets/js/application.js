@@ -103,7 +103,7 @@
   }
 
   // Insert copy to clipboard button before .highlight
-  var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="Copy to clipboard">Copy</button></div>'
+  var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="클립보드에 복사">복사</button></div>'
   document.querySelectorAll('div.highlight')
     .forEach(function (element) {
       element.insertAdjacentHTML('beforebegin', btnHtml)
@@ -130,10 +130,10 @@
   clipboard.on('success', function (e) {
     var tooltipBtn = bootstrap.Tooltip.getInstance(e.trigger)
 
-    e.trigger.setAttribute('data-bs-original-title', 'Copied!')
+    e.trigger.setAttribute('data-bs-original-title', '복사되었습니다!')
     tooltipBtn.show()
 
-    e.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
+    e.trigger.setAttribute('data-bs-original-title', '클립보드에 복사')
     e.clearSelection()
   })
 
@@ -145,7 +145,7 @@
     e.trigger.setAttribute('data-bs-original-title', fallbackMsg)
     tooltipBtn.show()
 
-    e.trigger.setAttribute('data-bs-original-title', 'Copy to clipboard')
+    e.trigger.setAttribute('data-bs-original-title', '클립보드에 복사')
   })
 
   anchors.options = {
