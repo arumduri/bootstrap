@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Navs and tabs(네비와 탭)
+title: Navs and tabs(내비와 탭)
 description: Bootstrap에 포함된 내비게이션 컴포넌트를 어떻게 사용하는지 문서와 예시입니다.
 group: components
 aliases: "/docs/5.0/components/navs/"
@@ -9,9 +9,9 @@ toc: true
 
 ## Base nav
 
-Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스부터 활성화 상태와 비활성화 상태까지 일반적인 마크업과 스타일을 공유합니다. 각각의 스타일을 바꾸기 위해서 수식자 클래스를 교체합니다.
+Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스부터 활성화 상태와 비활성화 상태까지 일반적인 마크업과 스타일을 공유합니다. 각각의 스타일을 바꾸기 위해서 수식자 클래스를 교체합니다.
 
-기본 `.nav` 컴포넌트는 flexbox 로 구축되어 있으며, 모든 타입의 내비게이션 컴포넌트를 구축하기 위한 강력한 구조를 제공하고 있습니다. 여기에는 몇몇의 스타일 오버라이드(리스트를 다루기 위한), 보다 넓은 클릭 영역을 위한 여백, 기본적인 비활성화된 스타일이 포함되어 있습니다.
+기본 `.nav` 컴포넌트는 flexbox로 구축되어 있으며, 모든 타입의 내비게이션 컴포넌트를 구축하기 위한 강력한 구조를 제공하고 있습니다. 여기에는 몇몇의 스타일 오버라이드(리스트를 다루기 위한), 보다 넓은 클릭 영역을 위한 여백, 기본적인 비활성화된 스타일이 포함되어 있습니다.
 
 {{< callout info >}}
 베이스의 `.nav` 컴포넌트에는 `.active` 상태는 포함되지 않습니다. 아래의 예에서는 주로 이 특정 클래스가 특별한 스타일링을 하지 않는 것을 나타내기 위해 이 클래스를 포함합니다.
@@ -53,7 +53,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 
 ### Horizontal alignment
 
-[flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}}) 을 사용해, 내비게이션의 수평방향의 배치를 변경합니다. 내비게이션의 기본은 왼쪽 정렬이지만, 쉽게 가운데 혹은 오른쪽 정렬로 변경 가능합니다.
+[flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}}) 를 사용해, 내비게이션의 수평방향의 배치를 변경합니다. 내비게이션의 기본은 왼쪽 정렬이지만, 쉽게 가운데 혹은 오른쪽 정렬로 변경 가능합니다.
 
 `.justify-content-center` 을 사용해 가운데 정렬이 가능합니다.
 
@@ -148,7 +148,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 
 ### Pills
 
-동일한 HTML 로, `.nav-pills` 도 사용할 수 있습니다.
+동일한 HTML로, `.nav-pills` 도 사용할 수 있습니다.
 
 {{< example >}}
 <ul class="nav nav-pills">
@@ -231,7 +231,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 {{< /example >}}
 ## Working with flex utilities
 
-반응형 네비게이션의 변화가 필요한 경우에는 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 를 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 브레이크 포인트 간에 더 많은 커스터마이징이 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
+반응형 내비게이션의 변화가 필요한 경우에는 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 를 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 브레이크 포인트 간에 더 많은 커스터마이징이 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
 
 {{< example >}}
 <nav class="nav nav-pills flex-column flex-sm-row">
@@ -250,7 +250,7 @@ Bootstrap 에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스
 
 ## Using dropdowns
 
-dropdown(드롭다운) 에 HTML 을 조금 추가하고, [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}) 으로 드롭다운 메뉴를 추가합니다.
+dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}) 으로 드롭다운 메뉴를 추가합니다.
 
 
 ### Tabs with dropdowns
@@ -543,7 +543,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Fade effect
 
-탭을 페이드인 시키려면, `.tab-pane` 에 `.fade` 를 추가합니다. 첫 번째 탭에는 컨텐츠를 표시하기 위해 `.show` 을 추가할 필요가 있습니다.
+탭을 페이드인 시키려면, `.tab-pane` 에 `.fade` 를 추가합니다. 첫 번째 탭에는 컨텐츠를 표시하기 위해 `.show` 를 추가할 필요가 있습니다.
 
 ```html
 <div class="tab-content">
