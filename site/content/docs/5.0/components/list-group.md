@@ -257,7 +257,7 @@ _actionable_ 한 리스트 그룹 아이템을 작성하려면 `<a>` 나 `<butto
 
 ## JavaScript behavior
 
-탭 JavaScript 플러그인—개별적으로 혹은 컴파일된 `bootstrap.js`—을 사용해 리스트 그룹을 확장하고 로컬 컨텐츠의 탭 가능한 판넬을 작성합니다.
+탭 JavaScript 플러그인—개별적으로 혹은 컴파일된 `bootstrap.js` 를 사용해 리스트 그룹을 확장하고 로컬 컨텐츠의 탭 가능한 판넬을 작성합니다.
 
 <div class="bd-example" role="tabpanel">
   <div class="row">
@@ -335,7 +335,7 @@ JavaScript 를 쓰지 않아도, `data-bs-toggle="list"` 를 지정하거나 요
 
 ### Via JavaScript
 
-JavaScript 로 탭 가능한 리스트 아이템을 유효하게 합니다.(각 리스트 아이템을 개별적으로 유효하게 할 필요가 있습니다):
+JavaScript로 탭 가능한 리스트 아이템을 유효하게 합니다.(각 리스트 아이템을 개별적으로 유효하게 할 필요가 있습니다):
 
 ```js
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
