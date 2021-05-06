@@ -1,25 +1,24 @@
 ---
 layout: docs
 title: Ratios (비율)
-description: 생성 된 가상요소를 사용하여 요소가 선택한 가로 세로 비율을 유지하도록 합니다. 부모의 너비에 따라 비디오 또는 슬라이드 쇼 내용물을 반응 형으로 처리하는 데 적합합니다.
+description: 생성 된 가상요소를 사용하여 요소가 선택한 가로세로 비율을 유지하도록 합니다. 부모의 너비에 따라 비디오 또는 슬라이드 쇼 내용물을 반응 형으로 처리하는 데 적합합니다.
 group: helpers
 toc: true
 ---
 
 ## About
 
-비율 도우미를 사용하여`<iframe>`s, `<embed>`s, `<video>`s, and `<object>`s 와 같은 외부 콘텐츠의 가로 세로 비율을 관리 할 수 있습니다. 이 도우미는 모든 표준 HTML 하위 요소에도 사용 할 수 있습니다 (e.g., a `<div>` 또는 `<img>`). 스타일은 부모 `.ratio` 클래스에서 하위요소로 직접 적용 됩니다.
+비율 도우미를 사용하여`<iframe>`, `<embed>`, `<video>`, 그리고 `<object>` 와 같은 외부 콘텐츠의 가로세로 비율을 관리할 수 있습니다. 이 도우미는 모든 표준 HTML 하위요소에도 사용 할 수 있습니다 (예를 들어, `<div>` 또는 `<img>`). 스타일은 부모 `.ratio` 클래스에서 하위요소로 직접 적용 됩니다.
 
-종횡비는 Sass 맵에서 선언되고 CSS 변수를 통해 각 클래스에 적용되므로 [사용자 정의 종횡비](#custom-ratios) 도 사용 할 수 있습니다.
+가로세로 비율은 Sass 맵에서 선언되고 CSS 변수를 통해 각 클래스에 적용되므로 [사용자 정의 가로세로 비율](#custom-ratios) 도 사용 할 수 있습니다.
 
 {{< callout info >}}
-**꿀팁!** [Reboot]({{< docsref "/content/reboot" >}})에서 자동으로 재정의하기 때문에 `<iframe>`에서 `frameborder="0"` 은 사용하지 않으셔도 됩니다! .
+**꿀팁!** [Reboot]({{< docsref "/content/reboot" >}})에서 자동으로 재정의하기 때문에 `<iframe>`에서 `frameborder="0"` 은 사용하지 않아도 됩니다.
 {{< /callout >}}
 
 ## Example
-
-`.ratio`를 이용해 아무 요소나 감싸봅시다. 예를 들면 `<iframe>` 같은 요소를요. 직계 하위 요소는 범용 선택기 `.ratio > *` 덕분에 사이즈가 자동으로 조정 됩니다.
-
+부모요소에 `.ratio`와 가로세로비율 클래스를 사용해 `<iframe>` 같은 요소를 감싸보세요. 범용 선택기 `.ratio > *` 덕분에 직계 하위 요소는 사이즈가 자동으로 조정 됩니다.
+  
 {{< example >}}
 <div class="ratio ratio-16x9">
   <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
@@ -28,7 +27,7 @@ toc: true
 
 ## Aspect ratios
 
-가로 세로 비율은 수정자 클래스로 사용자가 직접 정의 할 수 있습니다. 기본적으로 제공되는 비율 클래스는 다음과 같습니다.
+가로세로 비율은 수정자 클래스로 사용자가 직접 정의 할 수 있습니다. 기본적으로 제공되는 비율 클래스는 다음과 같습니다.
 
 {{< example class="bd-example-ratios" >}}
 <div class="ratio ratio-1x1">
