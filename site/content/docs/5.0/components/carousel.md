@@ -381,9 +381,9 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 
 ### Events
 
-Bootstrap 의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 2가지 이벤트를 제공하고 있습니다. 두가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:
+Bootstrap의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 두가지 이벤트를 제공하고 있습니다. 두가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:
 
-- `direction`: 캐러셀이 슬라이딩 하는 방향 (`"left"` 혹은 `"right"`).
+- `direction`: 캐러셀이 슬라이딩 하는 방향 (`"left"` 혹은 `"right"`). 
 - `relatedTarget`: 액티브한 아이템으로 슬라이드 시키고 있는 DOM 요소.
 - `from`: 현재 아이템의 인덱스.
 - `to`: 다음 아이템의 인덱스.
@@ -419,4 +419,4 @@ myCarousel.addEventListener('slide.bs.carousel', function () {
 
 ### Change transition duration
 
-`.carousel-item` 의 트렌지션 시간은 CSS 컴파일 전의 Sass 변수 `$carousel-transition` 에서 변경할 수 있습니다. 복수의 트렌지션이 적용되고 있는 경우는, 처음 transform 트렌지션이 정의되고 있는 곳을 확인해 주세요(eg. `transition: transform 2s ease, opacity .5s ease-out`).
+`.carousel-item` 의 트렌지션 시간은 CSS 컴파일 전의 Sass 변수 `$carousel-transition` 에서 변경할 수 있습니다. 복수의 트렌지션이 적용되고 있는 경우는, 처음 transform 트렌지션이 정의되고 있는 곳을 확인해 주세요(예를들어, `transition: transform 2s ease, opacity .5s ease-out`).
