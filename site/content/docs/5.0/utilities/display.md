@@ -1,14 +1,15 @@
 ---
 layout: docs
-title: Display property
-description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
+title: Display property (디스플레이 속성)
+description: 디스플레이 유틸리티를 사용하여 구성 요소의 표시여부 등을 빠르고 신속하게 전환 할 수 있습니다. 인쇄시 표시를 제어하기 위한 일부 추가 기능뿐만 아니라 더 일반적인 값에 대한 지원도 포함 됩니다.
+
 group: utilities
 toc: true
 ---
 
 ## How it works
 
-Change the value of the [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) with our responsive display utility classes. We purposely support only a subset of all possible values for `display`. Classes can be combined for various effects as you need.
+반응형 디스플레이 유틸리티 클래스를 사용하여 [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)의 값을 변경합니다. 의도적으로 '디스플레이'에 대해 가능한 모든 값의 하위 집합만 지원합니다. 클래스는 다양한 효과를 위해 필요에 따라 결합 시킬 수 있습니다.
 
 ## Notation
 
