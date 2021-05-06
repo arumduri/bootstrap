@@ -17,7 +17,7 @@ toc: true
 {{< /callout >}}
 
 ## Example
-부모요소에 `.ratio` 와 가로세로비율 클래스를 사용해 `<iframe>` 같은 요소를 감싸보세요. 범용 선택기 `.ratio > *` 덕분에 직계 하위 요소는 사이즈가 자동으로 조정 됩니다.
+부모요소에 `.ratio` 와 가로세로 비율 클래스를 사용해 `<iframe>` 같은 요소를 감싸보세요. 범용 선택기 `.ratio > *` 덕분에 직계 하위 요소는 사이즈가 자동으로 조정 됩니다.
   
 {{< example >}}
 <div class="ratio ratio-16x9">
