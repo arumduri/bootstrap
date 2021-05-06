@@ -253,7 +253,7 @@ body {
 
 ### Via JavaScript
 
-CSS 에 `position: relative;` 를 추가한 뒤, JavaScript 로 스크롤 스파이를 호출합니다:
+CSS에 `position: relative;` 를 추가한 뒤, JavaScript 로 스크롤 스파이를 호출합니다:
 
 ```js
 var scrollSpy = new bootstrap.ScrollSpy(document.body, {
@@ -277,7 +277,7 @@ Navbar 링크는 해결 가능한 id 타겟을 가져야 합니다. 예를 들�
 
 #### refresh
 
-DOM 에서 요소의 추가나 삭제와 동시에 스크롤 스파이를 사용할 경우 다음과 같이 refresh 메소드를 호출해야 합니다:
+DOM에서 요소의 추가나 삭제와 동시에 스크롤 스파이를 사용할 경우 다음과 같이 refresh 메소드를 호출해야 합니다:
 
 ```js
 var dataSpyList = [].slice.call(document.querySelectorAll('[data-bs-spy="scroll"]'))
