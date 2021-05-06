@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Collapse(콜랩스)
-description: 몇 가지 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체 컨텐츠의 표시방식을 전환합니다.
+description: 몇 가지 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체 컨텐츠의 표시 방식을 전환합니다.
 group: components
 toc: true
 ---
 
 ## How it works
 
-Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에 사용됩니다. 버튼 및 앵커는, 토글 하는 특정의 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 `height` 가 기존 값에서 `0` 으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 감안하면, `.collapse` 요소에 `padding` 을 사용할 수 없습니다. 대신, 이 클래스를 독립된 래핑 요소로 사용합니다.
+Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에 사용됩니다. 버튼 및 앵커는, 토글 하는 특정 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 `height` 가 기존 값에서 `0` 으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 감안하면, `.collapse` 요소에 `padding` 을 사용할 수 없습니다. 대신, 이 클래스를 독립된 래핑 요소로 사용합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -19,7 +19,7 @@ Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에
 아래의 버튼을 클릭하면, 클래스 변경에 따라 다른 요소의 표시 및 숨김을 전환할 수 있습니다.
 
 - `.collapse` 컨텐츠를 숨깁니다.
-- `.collapsing` 전환중에 적용됩니다.
+- `.collapsing` 전환 중에 적용됩니다.
 - `.collapse.show` 컨텐츠를 표시합니다.
 
 `href` 속성을 가진 링크, 혹은 `data-bs-target` 속성을 가진 버튼을 사용할 수 있습니다. 양쪽 다, `data-bs-toggle="collapse"` 가 필요합니다.
@@ -83,7 +83,7 @@ collapse 플러그인은, 여러 클래스를 이용하여 중요한 작업을 �
 
 - `.collapse` 컨텐츠를 숨김
 - `.collapse.show` 컨텐츠를 표시
-- `.collapsing` 은 트랜지션 시작시 추가되어, 종료시에 삭제 됨
+- `.collapsing` 은 트랜지션 시작시 추가되어, 종료시 삭제 됨
 
 이들의 클래스는 `_transitions.scss` 에 있습니다.
 
