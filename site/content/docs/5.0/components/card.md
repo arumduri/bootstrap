@@ -7,7 +7,7 @@ toc: true
 ---
 
 ## About
-**카드**는 유연하고 확장이 가능한 컨테이너입니다. Headers 나 footers 의 옵션, 다양한 컨텐츠, 문맥에 따른 배경 색상, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap3 의 panels、wells、thumbnails 는 카드로 바꿉니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
+**카드**는 유연하고 확장이 가능한 컨테이너입니다. Headers 나 footers 의 옵션, 다양한 컨텐츠, 문맥에 따른 배경 색상, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap3 의 panels、wells、thumbnails는 카드로 바뀝니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
 
 ## Example
 
@@ -719,4 +719,4 @@ Bootstrap grid 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/grid#ro
 
 ### Masonry
 
-`v4` 에서는 [Masonry](https://masonry.desandro.com/) 식의 컬럼을 따라했습니다만, 이 기법은 많은 [side effects](https://github.com/twbs/bootstrap/pull/28922)가 있었습니다. 만일 `v5`에서도 이런 레이아웃으로 하고 싶다면, Masonry 플러그인을 이용하십시오. **Masonry 는 Bootstrap에 포함되어 있지 않지만**, 당신이 시작하는데 도움이 되도록 [demo example]({{< docsref "/examples/masonry" >}}) 을 만들어 보았습니다.
+`v4` 에서는 [Masonry](https://masonry.desandro.com/) 식의 컬럼을 따라했습니다만, 이 기법은 많은 [side effects](https://github.com/twbs/bootstrap/pull/28922)가 있었습니다. 만일 `v5` 에서도 이런 레이아웃으로 하고 싶다면, Masonry 플러그인을 이용하십시오. **Masonry 는 Bootstrap에 포함되어 있지 않지만**, 당신이 시작하는데 도움이 되도록 [demo example]({{< docsref "/examples/masonry" >}}) 을 만들어 보았습니다.
