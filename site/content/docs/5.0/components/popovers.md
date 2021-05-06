@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Popovers(팝오버)
-description: iOS 에서 볼수 있는 Bootstrap 팝오버를 사이트 임의의 요소에 추가하기 위한 문서와 예시입니다.
+description: iOS에서 볼수 있는 Bootstrap 팝오버를 사이트 임의의 요소에 추가하기 위한 문서와 예시입니다.
 group: components
 toc: true
 ---
@@ -40,7 +40,7 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 
 ## Example: Using the `container` option
 
-부모 요소에 팝오버를 방해하는 몇 가지 스타일이 있다면, 대신 커스텀 `container` 를 지정하여 팝오버의 HTML 이 해당 요소 내에 표시되도록 합니다.
+부모 요소에 팝오버를 방해하는 몇 가지 스타일이 있다면, 대신 커스텀 `container` 를 지정하여 팝오버의 HTML을 해당 요소 내에 표시되도록 합니다.
 
 ```js
 var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
@@ -56,7 +56,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 
 ### Four directions
 
-4가지 옵션이 있습니다: top, right, bottom, left. RTL 에서 Bootstrap 를 사용하는 경우 방향은 반대가 됩니다.
+4가지 옵션이 있습니다: top, right, bottom, left. RTL에서 Bootstrap을 사용하는 경우 방향은 반대가 됩니다.
 
 <div class="bd-example popover-demo">
   <div class="bd-example-popovers">
@@ -115,7 +115,7 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 
 ### Disabled elements
 
-`disabled` 속성을 갖는 요소는 인터랙티브하지 않습니다. 즉, 사용자가 팝오버(또는 툴팁)를 트리거하기 위해 커서를 호버하거나 클릭할 수 없음을 의미합니다. 해결책으로는 `<div>` 나 `<span>` 에서 팝오버를 트리거하여 disabled 요소인 `pointer-events` 를 오버라이드 해야 합니다.
+`disabled` 속성을 갖는 요소는 상호작용할 수 없습니다. 즉, 사용자가 팝오버(또는 툴팁)를 트리거하기 위해 커서를 호버하거나 클릭할 수 없음을 의미합니다. 해결책으로는 `<div>` 나 `<span>` 에서 팝오버를 트리거하여 disabled 요소인 `pointer-events` 를 오버라이드 해야 합니다.
 
 팝오버를 무효화하려면 `data-bs-trigger="hover"` 를 사용하면 좋습니다. 이를 통해 사용자는 비활성화된 요소가 _click_ 되기를 기대하지 않기 때문에 팝오버가 바로 시각적 피드백으로 사용자에게 표시됩니다.
 
@@ -127,7 +127,7 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 
 ## Usage
 
-JavaScript 로 팝오버를 유효화 합니다:
+JavaScript로 팝오버를 유효화 합니다:
 
 ```js
 var exampleEl = document.getElementById('example')
@@ -137,11 +137,11 @@ var popover = new bootstrap.Popover(exampleEl, options)
 {{< callout warning >}}
 ### Making popovers work for keyboard and assistive technology users
 
-키보드 사용자가 팝오버를 활성화 하려면, 키보드 포커스가 가능하며 인터랙티브한 HTML 요소(링크나 폼 컨트톨 등)에만 추가해야 합니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가함으로써 포커스가 가능한데, 이는 키보드 사용자에게는 비 인터랙티브적인 요소의 탭 멈춤이 추가되어 혼란을 초래할 수 있습니다. 게다가 키보드 사용자가 팝오버를 트리거 할수 없게 되므로 팝오버의 트리거를 `hover` 에만 의지해서는 안됩니다.
+키보드 사용자가 팝오버를 활성화 하려면, 키보드 포커스가 가능하며 상호작용이 가능한 HTML 요소(링크나 폼 컨트톨 등)에만 추가해야 합니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가함으로써 포커스가 가능한데, 이는 키보드 사용자에게는 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 혼란을 초래할 수 있습니다. 게다가 키보드 사용자가 팝오버를 트리거 할수 없게 되므로 팝오버의 트리거를 `hover` 에만 의지해서는 안됩니다.
 
-`html` 옵션에서 리치로 구조화된 HTML 을 팝오버에 넣을 수 있지만 과도한 양의 컨텐츠를 추가하는 것은 피하는 것이 좋습니다. 팝오버가 현재 기능을 하는 방법은 한 번 표시되면 해당 컨텐츠는 `aria-describedby` 속성을 갖는 트리거 요소에 연결됩니다. 그 결과 팝오버 컨텐츠 전체가 스크린 리더 사용자에게 길고 끊기지 않는 스트림으로 알릴 것입니다.
+`html` 옵션에서 리치로 구조화된 HTML을 팝오버에 넣을 수 있지만 과도한 양의 컨텐츠를 추가하는 것은 피하는 것이 좋습니다. 팝오버가 현재 기능을 하는 방법은 한 번 표시되면 해당 컨텐츠는 `aria-describedby` 속성을 갖는 트리거 요소에 연결됩니다. 그 결과 팝오버 컨텐츠 전체가 스크린 리더 사용자에게 길고 끊기지 않는 스트림으로 알릴 것입니다.
 
-또한, 인터랙티브한 컨트롤(폼 요소나 링크 등)들을 팝오버에 포함시킬 수도 있지만 (허락된 속성이나 태그의 `allowList` 에 이러한 요소를 추가하여), 현재 팝오버는 키보드 포커스 순서를 관리하지 않는다는 점에 유의하십시오. 키보드 사용자가 팝오버를 열면 포커스는 트리거가 되는 요소에 머무르고, 팝오버는 보통 문서 구조의 트리거를 쉽게 따라가지 않기 때문에 <kbd>TAB</kbd> 을 앞으로 이동/눌러도 키보드 사용자가 팝오버 자체로 이동하리라는 보장은 없습니다. 요컨대 단순히 팝오버에 인터랙티브한 컨트롤을 추가하는 것만으로도 키보드 사용자나 스크린 리더 사용자들이 이들 컨트롤에 접근할 수 없거나 적어도 전체적으로 비논리적인 포커스 순서가 될 수 있습니다. 이러한 경우는, 대신에 modal(모달) 사용을 검토해 주십시오.
+또한, 인터랙티브한 컨트롤(폼 요소나 링크 등)들을 팝오버에 포함시킬 수도 있지만 (허락된 속성이나 태그의 `allowList` 에 이러한 요소를 추가하여), 현재 팝오버는 키보드 포커스 순서를 관리하지 않는다는 점에 유의하십시오. 키보드 사용자가 팝오버를 열면 포커스는 트리거가 되는 요소에 머무르고, 팝오버는 보통 문서 구조의 트리거를 쉽게 따라가지 않기 때문에 <kbd>TAB</kbd> 을 앞으로 이동/눌러도 키보드 사용자가 팝오버 자체로 이동하리라는 보장은 없습니다. 요컨대 단순히 팝오버에 상호작용할 수 있는 컨트롤을 추가하는 것만으로도 키보드 사용자나 스크린 리더 사용자들이 이들 컨트롤에 접근할 수 없거나 적어도 전체적으로 비논리적인 포커스 순서가 될 수 있습니다. 이러한 경우는, modal(모달) 사용을 검토해 주십시오.
 {{< /callout >}}
 
 ### Options
