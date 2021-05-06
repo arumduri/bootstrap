@@ -7,7 +7,7 @@ toc: true
 ---
 
 ## Examples
-텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(e.g., `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing) 을 사용합니다.
+텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing) 을 사용합니다.
 
 {{< example >}}
 {{< alerts.inline >}}
@@ -65,7 +65,7 @@ toc: true
 {{< /example >}}
 
 {{< callout warning >}}
-경고창이 해제되면 해당 요소는 페이지 구조에서 완전히 제거됩니다. 키보드 사용자가 닫기 버튼을 통해 경고창을 해제하면 포커스가 갑자기 사라지고 브라우저에 따라서는 페이지나 문서의 선두에 리셋됩니다. 그래서 `closed.bs.alert` 이벤트를 리슨하고 `focus()` 를 페이지 내의 가장 적절한 위치에 프로그램적으로 설정하는 JavaScript 를 추가할 것을 권장합니다. 보통은 포커스를 받지 않는 비인터랙티브한 요소에 포커스를 이동시키는 경우는, 그 요소에 `tabindex="-1"` 을 추가하도록 해 주세요.
+경고창이 해제되면 해당 요소는 페이지 구조에서 완전히 제거됩니다. 키보드 사용자가 닫기 버튼을 통해 경고창을 해제하면 포커스가 갑자기 사라지고 브라우저에 따라서는 페이지나 문서의 선두에 리셋됩니다. 그래서 `closed.bs.alert` 이벤트를 리슨하고 `focus()` 를 페이지 내의 가장 적절한 위치에 프로그램적으로 설정하는 JavaScript 를 추가할 것을 권장합니다. 보통은 포커스를 받지 않는 상호 작용할 수 없는 요소에 포커스를 이동시키는 경우는, 그 요소에 `tabindex="-1"` 을 추가하도록 해 주세요.
 {{< /callout >}}
 
 ## JavaScript behavior
@@ -86,7 +86,7 @@ alertList.forEach(function (alert) {
 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 ```
 
-경고창을 닫으면 DOM 에서 제거되는 점을 주의하세요.
+경고창을 닫으면 DOM에서 제거되는 점을 주의하세요.
 
 ### Methods
 
@@ -112,7 +112,7 @@ var bsAlert = new bootstrap.Alert(myAlert)
         <code>close</code>
       </td>
       <td>
-        DOM 에서 제거되고 경고창을 닫습니다. <code>.fade</code> 와 <code>.show</code> 클래스가 요소에 있으면, 경고창은 제거 되기전에 사라집니다.
+        DOM에서 제거되고 경고창을 닫습니다. <code>.fade</code> 와 <code>.show</code> 클래스가 요소에 있으면, 경고창은 제거 되기전에 사라집니다.
       </td>
     </tr>
     <tr>
