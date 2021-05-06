@@ -23,7 +23,7 @@ toc: true
 
 ### Basic
 
-토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 `display: flex`를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 컨텐츠를 쉽게 정렬시킬 수 있습니다.
+토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 `display: flex` 를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 컨텐츠를 쉽게 정렬시킬 수 있습니다.
 
 토스트는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. 토스트 컨텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.
 
@@ -43,7 +43,7 @@ toc: true
 
 ### Translucent
 
-토스트는 약간 반투명해서 상단에 표시되는 것은 무엇이든 잘 섞여보입니다.  CSS 속성 `backdrop-filter` 를 지원하는 브라우저에서는 토스트 하단에 있는 요소를 흐려 보이게 합니다.
+토스트는 약간 반투명해서 상단에 표시되는 것은 무엇이든 잘 섞여보입니다. CSS 속성 `backdrop-filter` 를 지원하는 브라우저에서는 토스트 하단에 있는 요소를 흐려 보이게 합니다.
 
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -93,7 +93,7 @@ toc: true
 
 ### Custom content
 
-토스트 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" >}})를 통한 미세한 수정, 마크업을 추가 수정해서 토스트를 새롭게 만들수 있습니다. 여기에서는, `.toast-header`를 삭제하고, [Bootstrap Icons]({{< param icons >}})에 있는 닫기 아이콘을 추가하고, 레이아웃을 조정하기 위해 [flexbox utilities]({{< docsref "/utilities/flex" >}})를 몇가지 사용해서 보다 간단한 토스트를 만들어 보았습니다.
+토스트 안의 일부 요소를 삭제, [utilities]({{< docsref "/utilities/api" >}})를 통한 미세한 수정, 마크업을 추가 수정해서 토스트를 새롭게 만들수 있습니다. 여기에서는, `.toast-header` 를 삭제하고, [Bootstrap Icons]({{< param icons >}})에 있는 닫기 아이콘을 추가하고, 레이아웃을 조정하기 위해 [flexbox utilities]({{< docsref "/utilities/flex" >}})를 몇가지 사용해서 보다 간단한 토스트를 만들어 보았습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast d-flex align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
