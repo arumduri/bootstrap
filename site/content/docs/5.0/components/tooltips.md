@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tooltips(툴팁)
-description: CSS3 를 사용한 애니메이션이나 data-bs-attributes 를 사용한 CSS 와 JavaScript 로 커스텀 Bootstrap 의 툴팁을 추가하기 위한 문서와 예시입니다.
+description: CSS3 를 사용한 애니메이션이나 data-bs-attributes를 사용한 CSS와 JavaScript로 커스텀 Bootstrap의 툴팁을 추가하기 위한 문서와 예시입니다.
 group: components
 toc: true
 ---
@@ -17,7 +17,7 @@ toc: true
 - 숨겨진 요소에서 툴팁을 트리거해도 제 기능을 하지 않습니다.
 - `.disabled` 나 `disabled` 요소의 툴팁은 그 위(바깥) 요소에서 트리거해야 합니다.
 - 여러 라인에 걸쳐 있는 하이퍼링크에서 트리거된 툴팁은 중앙에 배치됩니다. 이 동작을 피하기 위해서는 `<a>` 에 `white-space: nowrap;` 을 사용해 주십시오.
-- 툴팁은 대응 요소가 DOM 에서 삭제되기 전에 숨겨야 합니다.
+- 툴팁은 대응 요소가 DOM에서 삭제되기 전에 숨겨야 합니다.
 - 툴팁은 shadow DOM 내의 요소 덕분에 트리거할 수 있습니다.
 
 {{< callout info >}}
@@ -46,7 +46,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   </p>
 </div>
 
-아래 버튼에 커서를 맞추면 top, right, bottom, left의 4개 툴팁이 나타납니다: RTL 에서 Bootstrap 를 사용하는 경우 방향은 반대가 됩니다.
+아래 버튼에 커서를 맞추면 top, right, bottom, left의 4개 툴팁이 나타납니다: RTL에서 Bootstrap을 사용하는 경우 방향은 반대가 됩니다.
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
@@ -73,7 +73,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 </button>
 ```
 
-그리고 커스텀 HTML 을 추가할 수 있습니다:
+그리고 커스텀 HTML을 추가할 수 있습니다:
 
 ```html
 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
@@ -96,7 +96,7 @@ SVG 와 함께:
 
 툴팁 플러그인은 필요에 따라 컨텐츠와 마크업을 생성하고 기본 값으로는 트리거 요소 뒤에 툴팁을 배치합니다.
 
-JavaScript 를 사용해 툴팁을 트리거 합니다:
+JavaScript를 사용해 툴팁을 트리거 합니다:
 
 ```js
 var exampleEl = document.getElementById('example')
@@ -123,7 +123,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 {{< callout warning >}}
 ##### Making tooltips work for keyboard and assistive technology users
 
-툴팁을 추가해야 하는 것은 키보드 포커스가 가능하고 인터랙티브한 HTML 요소(링크나 폼 컨트롤 등)뿐 입니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가하여 포커스 가능하게 할 수 있지만 이는 키보드 사용자에게는 비인터랙티브적인 요소의 탭 멈춤이 추가되어 버리기 때문에 키보드 사용자를 곤란하게 하거나 혼란스럽게 할 수 있으며 현재 대부분의 스크린 리더는 이러한 상황에서 툴팁을 제공하지 않습니다. 게다가 툴팁의 트리거로서 `hover` 에만 의지해서는 안됩니다. 이것은 키보드 사용자가 툴팁을 트리거 할 수 없게 되기 때문입니다.
+툴팁을 추가해야 하는 부분은 키보드로 포커스가 가능하고 상호작용이 가능한 HTML 요소(링크나 폼 컨트롤 등)뿐 입니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가하여 포커스가 가능하게 할 수 있지만 이는 키보드 사용자에게 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 키보드 사용자를 곤란하게 하거나 혼란스럽게 할 수 있으며 현재 대부분의 스크린 리더는 이러한 상황에서 툴팁을 제공하지 않습니다. 게다가 툴팁의 트리거로서 `hover` 에만 의지해서는 안됩니다. 이것은 키보드 사용자가 툴팁을 트리거 할 수 없게 되기 때문입니다.
 {{< /callout >}}
 
 ```html
@@ -141,7 +141,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 ### Disabled elements
 
-`Disabled` 속성을 갖는 요소는 인터랙티브 하지 않습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁(혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 `<div>` 나 `<span>` 으로 툴팁을 트리거하여, 이상적으로 `tabindex="0"` 으로 키보드 포커스 가능하게 하고, disabled 요소인 `pointer-events` 를 오버라이드 해야 합니다.
+`Disabled` 속성을 갖는 요소는 상호작용할 수 없습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁(혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 `<div>` 나 `<span>` 으로 툴팁을 트리거하여, 이상적으로 `tabindex="0"` 으로 키보드 포커스 가능하게 하고, disabled 요소인 `pointer-events` 를 오버라이드 해야 합니다.
 
 <div class="tooltip-demo">
 {{< example >}}
@@ -153,7 +153,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 ### Options
 
-옵션은 data 속성 또는 JavaScript 로 줄 수 있습니다. data 속성의 경우는 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
+옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우는 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
 
 {{< callout warning >}}
 보안상의 이유로, `sanitize`, `sanitizeFn`, `allowList` 옵션을 data 속성으로 지정할 수 없다는 것에 주의해 주세요.
