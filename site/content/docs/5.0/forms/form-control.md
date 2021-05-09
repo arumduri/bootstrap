@@ -31,7 +31,7 @@ toc: true
 
 ## Disabled
 
-입력에 `disabled` 불리언 속성을 추가하면 그레이아웃 된 듯한 스타일이 되어 포인터 이벤트가 없어집니다.
+입력에 `disabled` 불리언 속성을 추가하면 비활성화 외형이 되어 포인터 이벤트가 삭제됩니다.
 
 {{< example >}}
 <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
@@ -40,7 +40,7 @@ toc: true
 
 ## Readonly
 
-입력에 `readonly` 불리언 속성을 추가함으로써 입력값의 변경을 막을 수 있습니다. 읽기전용 입력은 비활성화 입력과 마찬가지로 그레이아웃된 스타일로 보여지지만 표준 커서는 유지됩니다.
+입력에 `readonly` 불리언 속성을 추가함으로써 입력값의 변경을 막을 수 있습니다. 읽기전용 입력은 비활성화 입력과 동일한 외형으로 표시되지만 표준 커서는 유지됩니다.
 
 {{< example >}}
 <input class="form-control" type="text" placeholder="Readonly input here..." aria-label="readonly input example" readonly>
@@ -115,7 +115,7 @@ toc: true
 
 ## Datalists
 
-데이터 리스트를 사용하면 `<input>` 안에서 액세스(및 자동 보완) 할 수 있는 `<option>` 의 그룹을 작성할 수 있습니다. 이들은 `<select>` 요소와 비슷하지만 메뉴 표시에는 많은 제한과 차이가 있습니다. 대부분의 브라우저나 운영 체계는 `<datalist>` 요소를 어느 정도 지원하고 있지만, 그 표시에는 일관성이 없습니다.
+데이터 목록을 사용하면 `<input>` 안에서 액세스(및 자동 보완) 할 수 있는 `<option>` 그룹을 작성할 수 있습니다. 이들은 `<select>` 요소와 비슷하지만 메뉴 표시에는 많은 제한과 차이가 있습니다. 대부분의 브라우저나 운영 체계는 `<datalist>` 요소를 어느 정도 지원하고 있지만, 그 표시에는 일관성이 없습니다.
 
 자세한 내용은 [datalist 요소의 서포트](https://caniuse.com/datalist)를 참고해 주세요.
 
