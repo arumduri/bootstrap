@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Colors
-description: Convey meaning through color with a handful of color utility classes. Includes support for styling links with hover states, too.
+title: Colors(색상)
+description: 색상 유틸리티 클래스를 사용하여 색상을 통해 의미를 전달합니다. 호버 상태의 링크 스타일링에 대한 지원도 포함 합니다.
 group: utilities
 toc: true
 ---
@@ -9,7 +9,7 @@ toc: true
 {{< callout info >}}
 ##### Dealing with specificity
 
-Sometimes contextual classes cannot be applied due to the specificity of another selector. In some cases, a sufficient workaround is to wrap your element's content in a `<div>` with the class.
+다른 선택자의 특수성으로 인해 클래스를 적용 할 수 없는 경우도 있습니다. 이럴경우 충분한 해결 방법은 클래스와 함께`<div>`에 요소의 콘텐츠를 래핑하는 것입니다.
 {{< /callout >}}
 
 {{< callout info >}}
@@ -18,7 +18,7 @@ Sometimes contextual classes cannot be applied due to the specificity of another
 
 ## Color
 
-Colorize text with color utilities. If you want to colorize links, you can use the [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}}) which have `:hover` and `:focus` states.
+색상 유틸리티를 사용하여 텍스트를 색상화 합니다. 링크에 색을 입히려면`: hover` 및`: focus` 상태가 있는 [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}})를 사용할 수 있습니다.
 
 {{< example >}}
 {{< colors.inline >}}
@@ -35,7 +35,7 @@ Colorize text with color utilities. If you want to colorize links, you can use t
 
 ## Background color
 
-Similar to the contextual text color classes, easily set the background of an element to any contextual class. Background utilities **do not set `color`**, so in some cases you'll want to use `.text-*` utilities.
+상황별 텍스트 색상 클래스와 유사하게 요소의 배경을 상황별 클래스로 쉽게 설정합니다. 백그라운드 유틸리티는 **`color`을 설정하지 않습니다 **. 따라서 경우에 따라`.text- *`유틸리티를 사용하는 것이 좋습니다.
 
 {{< example >}}
 {{< colors.inline >}}
@@ -49,7 +49,7 @@ Similar to the contextual text color classes, easily set the background of an el
 
 ## Background gradient
 
-By adding a `.bg-gradient` class, a linear gradient is added as background image to the backgrounds. This gradient starts with a semi-transparent white which fades out to the bottom.
+`.bg-gradient` 클래스를 추가하면 선형 그래디언트가 배경 이미지로 추가됩니다. 이 그라데이션은 아래쪽으로 희미 해지는 반투명 흰색으로 시작됩니다.
 
 Do you need a gradient in your custom CSS? Just add `background-image: var(--bs-gradient);`.
 

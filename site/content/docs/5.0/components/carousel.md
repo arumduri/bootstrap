@@ -15,7 +15,7 @@ toc: true
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-중첩된 캐러셀은 지원되고 있지 않고, 캐러셀은 일반적으로 접근성(accessibility) 기준에 준거하고 있지 않다는 것에 주의해 주세요.
+중첩된 캐러셀은 지원되고 있지 않고, 캐러셀은 일반적으로 접근성(accessibility) 기준에 의거하고 있지 않다는 것에 주의해 주세요.
 
 ## Example
 
@@ -106,7 +106,7 @@ toc: true
 
 ### With captions
 
-`.carousel-item` 안의 `.carousel-caption` 요소를 사용해, 슬라이드에 설명문(캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 [display utilities]({{< docsref "/utilities/display" >}}) 를 사용함으로써, 보다 작은 뷰포터에서 간단히 설명문(캡션, caption)을 감추는것도 가능합니다. 처음에는 `.d-none` 로 비표시하고, 중형 디바이스에서는 `.d-md-block` 로 다시 표시합니다.
+`.carousel-item` 안의 `.carousel-caption` 요소를 사용해, 슬라이드에 설명문(캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 [display utilities]({{< docsref "/utilities/display" >}}) 를 사용함으로써, 보다 작은 뷰포트에서 간단하게 설명문(캡션, caption)을 감추는것도 가능합니다. 처음에는 `.d-none` 로 비표시하고, 중형 디바이스에서는 `.d-md-block` 로 다시 표시합니다.
 
 {{< example >}}
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -151,7 +151,7 @@ toc: true
 
 ### Crossfade
 
-`.carousel-fade` 를 캐러셀에 추가하면, 슬라이드 대신에 fade 트랜지션으로 슬라이드를 애니메이션 시킬 수 있습니다.
+`.carousel-fade` 를 캐러셀에 추가하면, 슬라이드 대신에 fade 트랜지션으로 슬라이드를 애니메이션화 시킬 수 있습니다.
 
 {{< example >}}
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -254,9 +254,9 @@ toc: true
 
 ### Via data attributes
 
-캐러셀의 위치를 간단히 제어하려면, data 속성을 사용합니다. `data-bs-slide` 는 키워드 `prev` 나 `next` 을 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 `data-bs-slide-to` 를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 `data-bs-slide-to="2"` 가 되어, 슬라이디의 위치를 `0` 에서 시작하는 특정의 인덱스로 이동시킵니다.
+캐러셀의 위치를 간단히 제어하려면, data 속성을 사용합니다. `data-bs-slide` 는 키워드 `prev` 나 `next` 을 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 `data-bs-slide-to` 를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 `data-bs-slide-to="2"` 가 되어, 슬라이드의 위치를 `0` 에서 시작하는 특정의 인덱스로 이동시킵니다.
 
-`data-bs-ride="carousel"` 속성은, 페이지 로드시 캐러셀을 애니메이션 시키는데 사용됩니다. 캐러셀의 초기화에 `data-bs-ride="carousel"` 를 사용하지 않는 경우에는, 스스로 초기화 할 필요가 있습니다. **같은 캐러셀의 명시적인 JavaScript 의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.**
+`data-bs-ride="carousel"` 속성은, 페이지 로드시 캐러셀을 애니메이션화 시키는데 사용됩니다. 캐러셀의 초기화에 `data-bs-ride="carousel"` 를 사용하지 않는 경우에는, 스스로 초기화 할 필요가 있습니다. **같은 캐러셀의 명시적인 JavaScript 의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.**
 
 ### Via JavaScript
 
@@ -381,9 +381,9 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 
 ### Events
 
-Bootstrap 의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 2 가지 이벤트를 공개하고 있습니다. 두가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:
+Bootstrap의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 두가지 이벤트를 제공하고 있습니다. 두가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:
 
-- `direction`: 캐러셀이 슬라이딩 하는 방향 (`"left"` 혹은 `"right"`).
+- `direction`: 캐러셀이 슬라이딩 하는 방향 (`"left"` 혹은 `"right"`). 
 - `relatedTarget`: 액티브한 아이템으로 슬라이드 시키고 있는 DOM 요소.
 - `from`: 현재 아이템의 인덱스.
 - `to`: 다음 아이템의 인덱스.
@@ -419,4 +419,4 @@ myCarousel.addEventListener('slide.bs.carousel', function () {
 
 ### Change transition duration
 
-`.carousel-item` 의 트렌지션 시간은 CSS 컴파일 전의 Sass 변수 `$carousel-transition` 에서 변경할 수 있습니다. 복수의 트렌지션이 적용되고 있는 경우는, 처음 transform 트렌지션이 정의되고 있는 곳을 확인해 주세요(eg. `transition: transform 2s ease, opacity .5s ease-out`).
+`.carousel-item` 의 트렌지션 시간은 CSS 컴파일 전의 Sass 변수 `$carousel-transition` 에서 변경할 수 있습니다. 복수의 트렌지션이 적용되고 있는 경우는, 처음 transform 트렌지션이 정의되고 있는 곳을 확인해 주세요(예를들어, `transition: transform 2s ease, opacity .5s ease-out`).
