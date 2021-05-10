@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Select
+title: Select(셀렉트)
 description: 네이티브 `<select>`를 커스텀 CSS로 커스텀마이징하여 요소의 초기 표시를 변경할 수 있습니다.
 group: forms
 toc: true
