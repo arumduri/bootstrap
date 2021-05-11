@@ -289,7 +289,7 @@ flexbox 항목에서`align-self` 유틸리티를 사용하여 교차 축 (시작
 </div>
 {{< /example >}}
 
-Responsive variations also exist for `flex-grow` and `flex-shrink`.
+`flex-grow` 와 `flex-shrink` 에 대한 반응형 변형도 존재합니다.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -302,7 +302,7 @@ Responsive variations also exist for `flex-grow` and `flex-shrink`.
 
 ## Auto margins
 
-Flexbox는 flex 정렬과 자동여백을 혼합 할 때 꽤 멋진 일을 할 수 있습니다. 아래는 자동 여백을 통해 flex 아이템을 제어하는 세 가지 예시입니다. 기본값 (자동 여백 없음), 두 항목을 오른쪽으로 밀기 (`.me-auto`), 두 항목을 왼쪽으로 밀기 (`.ms-auto`) .
+Flexbox는 flex 정렬과 자동여백을 혼합 할 때 꽤 멋진 일을 할 수 있습니다. 아래는 자동 여백을 통해 flex 아이템을 제어하는 세 가지 예시입니다. 기본값 (자동 여백 없음), 두 항목을 오른쪽으로 밀기 (`.me-auto`), 두 항목을 왼쪽으로 밀기 (`.ms-auto`).
 
 {{< example >}}
 <div class="d-flex bd-highlight mb-3">
@@ -326,7 +326,7 @@ Flexbox는 flex 정렬과 자동여백을 혼합 할 때 꽤 멋진 일을 할 �
 
 ### With align-items
 
-Vertically move one flex item to the top or bottom of a container by mixing `align-items`, `flex-direction: column`, and `margin-top: auto` or `margin-bottom: auto`.
+`align-items` , `flex-direction : column` , `margin-top : auto` 또는 `margin-bottom : auto` 를 혼합하여 하나의 flex 아이템을 컨테이너의 상단 또는 하단으로 수직 이동 시킵니다.
 
 {{< example >}}
 <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
@@ -344,7 +344,7 @@ Vertically move one flex item to the top or bottom of a container by mixing `ali
 
 ## Wrap
 
-Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with `.flex-nowrap`, wrapping with `.flex-wrap`, or reverse wrapping with `.flex-wrap-reverse`.
+flex 컨테이너에서 flex 아이템이 래핑되는 방식을 변경합니다. `.flex-nowrap` 으로 랩핑을 없애거나 (브라우저 기본값), `.flex-wrap` 으로 랩핑 또는`.flex-wrap-reverse` 로 역방향으로 랩핑 중에서 선택하십시오.
 
 <div class="bd-example">
   <div class="d-flex flex-nowrap bd-highlight" style="width: 8rem;">
@@ -415,7 +415,7 @@ Change how flex items wrap in a flex container. Choose from no wrapping at all (
 ```
 
 
-Responsive variations also exist for `flex-wrap`.
+`flex-wrap` 에 대한 반응형 변형도 존재합니다.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -429,7 +429,7 @@ Responsive variations also exist for `flex-wrap`.
 
 ## Order
 
-Change the _visual_ order of specific flex items with a handful of `order` utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As `order` takes any integer value from 0 to 5, add custom CSS for any additional values needed.
+몇 가지 `order` 유틸리티로 특정 flex 아이템의 _보이는_ 순서를 변경합니다. flex 아이템 순서를 처음 또는 마지막으로 만드는 옵션과 DOM 순서를 사용하기 위한 재설정 만 제공합니다. `order` 는 0에서 5 사이의 값을 취하므로 필요한 추가 값은 사용자 정의 CSS에 추가하십시오.
 
 {{< example >}}
 <div class="d-flex flex-nowrap bd-highlight">
@@ -439,7 +439,7 @@ Change the _visual_ order of specific flex items with a handful of `order` utili
 </div>
 {{< /example >}}
 
-Responsive variations also exist for `order`.
+`order` 에 대한 반응형 변형도 존재합니다.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -451,7 +451,7 @@ Responsive variations also exist for `order`.
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-Additionally there are also responsive `.order-first` and `.order-last` classes that change the `order` of an element by applying `order: -1` and `order: 6`, respectively.
+또한 각각`order : -1` 및 `order : 6` 을 적용하여 요소의 `순서` 를 변경하는 반응형 `.order-first` 및 `.order-last` 클래스도 있습니다.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -465,9 +465,9 @@ Additionally there are also responsive `.order-first` and `.order-last` classes 
 
 ## Align content
 
-Use `align-content` utilities on flexbox containers to align flex items *together* on the cross axis. Choose from `start` (browser default), `end`, `center`, `between`, `around`, or `stretch`. To demonstrate these utilities, we've enforced `flex-wrap: wrap` and increased the number of flex items.
+flexbox 컨테이너에서 `align-content` 유틸리티를 사용하여 flex 아이템을 교차 축에서 *함께* 정렬합니다. `start` (브라우저 기본값), `end` , `center` , `between` , `around` 또는 `stretch` 중에서 선택합니다. 이러한 유틸리티를 시연하기 위해 `flex-wrap : wrap` 을 시행하고 flex 아이템의 수를 늘렸습니다.
 
-**Heads up!** This property has no effect on single rows of flex items.
+**주의!** 이 속성은 플렉스 항목의 단일 행에서는 영향을 주지 않습니다.
 
 <div class="bd-example">
   <div class="d-flex align-content-start flex-wrap bd-highlight mb-3" style="height: 200px">
@@ -615,7 +615,7 @@ Use `align-content` utilities on flexbox containers to align flex items *togethe
 <div class="d-flex align-content-stretch flex-wrap">...</div>
 ```
 
-Responsive variations also exist for `align-content`.
+`align-content` 에 대한 반응형 변형도 존재합니다.
 
 {{< markdown >}}
 {{< flex.inline >}}
