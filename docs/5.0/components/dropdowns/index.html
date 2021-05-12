@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bootstrap 의 드롭다운 플러그인으로 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.">
+<meta name="description" content="Bootstrap의 드롭다운 플러그인으로 링크 목록 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.79.0">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Dropdowns(드롭다운)">
-<meta name="twitter:description" content="Bootstrap 의 드롭다운 플러그인으로 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.">
+<meta name="twitter:description" content="Bootstrap의 드롭다운 플러그인으로 링크 목록 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/dropdowns/">
 <meta property="og:title" content="Dropdowns(드롭다운)">
-<meta property="og:description" content="Bootstrap 의 드롭다운 플러그인으로 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.">
+<meta property="og:description" content="Bootstrap의 드롭다운 플러그인으로 링크 목록 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -155,10 +155,6 @@
   </button>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">최신 (5.0.x)</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.kr/docs/4.5/">v4.5.x</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">모든 버전</a></li>
   </ul>
@@ -391,7 +387,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/dropdowns.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">Dropdowns(드롭다운)</h1>
         </div>
-        <p class="bd-lead">Bootstrap 의 드롭다운 플러그인으로 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.</p>
+        <p class="bd-lead">Bootstrap의 드롭다운 플러그인으로 링크 목록 등을 표시하기 위한 컨텍스트 오버레이를 토글합니다.</p>
         
 
       </div>
@@ -456,16 +452,16 @@
         
 
         <h2 id="overview">Overview</h2>
-<p>드롭다운은 토글이 가능하며 링크 리스트 등을 표시하기 위한 컨텍스트 오버레이입니다. 이들은 포함되어 있는 Bootstrap 의 드롭다운 JavaScript 플러그인으로 상호작용이 됩니다. 토글은 호버링이 아닌 클릭을 통해 이루워집니다. 참고 <a href="https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/">an intentional design decision</a>.</p>
-<p>드롭다운은 동적인 포지셔닝과 뷰포트 검출을 제공하는 서드파티의 라이브러리인 <a href="https://popper.js.org/">Popper</a> 로 구축되어 있습니다. 반드시 Bootstrap 의 JavaScript 전에 <a href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">popper.min.js</a> 을 넣거나 Popper 를 포함한 <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> 를 사용해 주십시오. Popper 는 동적인 배치가 필요하지 않기 때문에, navbars 의 드롭다운 배치에는 사용하지 않습니다.</p>
+<p>드롭다운은 토글이 가능하며 링크 목록 등을 표시하기 위한 컨텍스트 오버레이입니다. 이들은  Bootstrap에 포함되어 있는 드롭다운 JavaScript 플러그인으로 작동합니다. 토글은 호버링이 아닌 클릭을 통해 작동합니다. 참고 <a href="https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/">an intentional design decision</a>.</p>
+<p>드롭다운은 동적인 포지셔닝과 뷰포트 검출을 제공하는 서드파티의 라이브러리인 <a href="https://popper.js.org/">Popper</a> 로 구축되어 있습니다. 반드시 Bootstrap 의 JavaScript 전에 <a href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js">popper.min.js</a> 을 넣거나 Popper 를 포함한 <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> 를 사용해 주십시오. Popper는 동적인 배치가 필요하지 않기 때문에, navbars의 드롭다운 배치에는 사용하지 않습니다.</p>
 <h2 id="accessibility">Accessibility</h2>
 <p><a href="https://www.w3.org/TR/wai-aria/"><abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr></a> 에서는, 실제의 <a href="https://www.w3.org/WAI/PF/aria/roles#menu"><code>role=&quot;menu&quot;</code> widget</a> 가 정의되어 있습니다만, 이것은 액션이나 기능을 트리거로 하는 application-like 메뉴에 특화한 것입니다. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴는 메뉴 아이템, 체크박스 메뉴 아이템, 라디오 버튼 메뉴 아이템, 라디오 버튼 그룹, 서브메뉴만을 포함할 수 있습니다.</p>
-<p>한편 Bootstrap 의 드롭다운은 범용적으로 설계되어 다양한 상황이나 마크업 구조게 적용할 수 있습니다. 예를 들어 검색 필드나 로그인 폼 등의 추가 입력이나 폼 컨트롤을 포함한 드롭다운을 작성할 수 있습니다. 이 때문에 Bootstrap 는, 진정한 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴에 필요한 <code>role</code> 과 <code>aria-</code> 속성을 모두 기대하고 있지 않습니다(자동으로 추가도 하고 있지 않습니다). 이러한 보다 구체적인 속성들을 스스로 포함해야 합니다.</p>
-<p>그러나, Bootstrap 는 커서 키를 이용하여 각각의 <code>.dropdown-item</code> 요소를 이동하거나 <kbd>ESC</kbd> 키로 메뉴를 닫는 기능과 대부분의 표준 키보드 메뉴의 상호작용을 위한 built-in 지원을 추가하고 있습니다.</p>
+<p>한편 Bootstrap 의 드롭다운은 범용적으로 설계되어 다양한 상황이나 마크업 구조에 적용할 수 있습니다. 예를 들어 검색 필드나 로그인 폼 등의 추가 입력이나 폼 컨트롤을 포함한 드롭다운을 작성할 수 있습니다. 이 때문에 Bootstrap은, 진정한 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴에 필요한 <code>role</code> 과 <code>aria-</code> 속성을 모두 기대하고 있지 않습니다(자동으로 추가도 하고 있지 않습니다). 이러한 보다 구체적인 속성들을 사용자가 추가로 작성해야 합니다.</p>
+<p>그러나, Bootstrap은 커서 키를 이용하여 각각의 <code>.dropdown-item</code> 요소를 이동하거나 <kbd>ESC</kbd> 키로 메뉴를 닫는 기능과 대부분의 표준 키보드 메뉴의 상호작용을 위한 built-in 지원을 추가하고 있습니다.</p>
 <h2 id="examples">Examples</h2>
-<p>드롭다운의 토글(버튼이나 링크)과 드롭다운 메뉴를 <code>.dropdown</code> 이나 <code>position: relative;</code> 를 가진 다른 요소로 감쌉니다. 드롭다운은 <code>&lt;a&gt;</code> 나 <code>&lt;button&gt;</code> 요소로부터 트리거 할 수 있습니다. 여기서 보여주는 예에서는, 필요에 따라서 시멘틱적인 <code>&lt;ul&gt;</code> 요소를 사용하고 있습니다만, 커스텀 마크업도 지원하고 있습니다.</p>
+<p>드롭다운의 토글(버튼이나 링크)과 드롭다운 메뉴를 <code>.dropdown</code> 이나 <code>position: relative;</code> 를 가진 다른 요소로 감쌉니다. 드롭다운은 <code>&lt;a&gt;</code> 나 <code>&lt;button&gt;</code> 요소로부터 트리거 할 수 있습니다. 여기서 보여주는 예시는, 필요에 따라서 시멘틱적인 <code>&lt;ul&gt;</code> 요소를 사용하고 있습니다만, 커스텀 마크업도 지원하고 있습니다.</p>
 <h3 id="single-button">Single button</h3>
-<p>마크업을 변경하는 것만으로, 임의의 단일 <code>.btn</code> 을 드롭다운 토글로 바꿀 수 있습니다. 여기에서는, <code>&lt;button&gt;</code> 요소의 어느 쪽인가로 동작하도록 하는 방법을 설명합니다.</p>
+<p>마크업을 변경하는 것만으로, 임의의 단일 <code>.btn</code> 을 드롭다운 토글로 바꿀 수 있습니다. 여기에서는, <code>&lt;button&gt;</code> 요소의 어느 쪽인가로 동작하는 방법을 설명합니다.</p>
 <div class="bd-example">
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -588,7 +584,7 @@
   <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="split-button">Split button</h3>
-<p>마찬가지로, 단일 버튼의 드롭다운과 실질적으로 같은 마크업으로 분활된 버튼의 드롭다운을 만드는데, 드롭다운의 화살표 주위의 적절한 간격을 확보하기 위해서 <code>.dropdown-toggle-split</code> 을 추가합니다.</p>
+<p>마찬가지로, 단일 버튼의 드롭다운과 실질적으로 같은 마크업으로 분할된 버튼의 드롭다운을 만드는데, 드롭다운의 화살표 주위의 적절한 간격을 확보하기 위해서 <code>.dropdown-toggle-split</code> 을 추가합니다.</p>
 <p>이 추가 클래스를 사용하여, 화살표 양쪽의 좌우 <code>padding</code> 을 25% 줄이고, 일반적인 버튼 트롭다운을 위해 추가 되었던 <code>margin-left</code> 를 삭제합니다. 이러한 추가 변경으로 인해 화살표는 분활된 버튼의 중앙에 오게 되고 메인 버튼 옆에서의 클릭 영역의 크기가 더욱 적절해집니다.</p>
 <div class="bd-example">
   <div class="btn-group">
@@ -1160,7 +1156,7 @@
 <p>navbars 의 드롭다운 버튼에 <code>data-bs-display=&quot;static&quot;</code> 속성을 추가할 필요가 없다는 점에 주의하십시오.</p>
 <h2 id="menu-content">Menu content</h2>
 <h3 id="headers">Headers</h3>
-<p>임의의 드롭다운 메뉴 액션 섹션 라벨에 header 를 추가합니다.</p>
+<p>임의의 드롭다운 메뉴 액션 섹션 라벨에 header를 추가합니다.</p>
 <div class="bd-example">
 <ul class="dropdown-menu">
   <li><h6 class="dropdown-header">Dropdown header</h6></li>

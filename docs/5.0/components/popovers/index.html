@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="iOS 에서 볼수 있는 Bootstrap 핍오버를 사이트의 임의의 요소에 추가하기 위한 문서와 예시입니다.">
+<meta name="description" content="iOS에서 볼수 있는 Bootstrap 팝오버를 사이트 임의의 요소에 추가하기 위한 문서와 예시입니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.79.0">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Popovers(팝오버)">
-<meta name="twitter:description" content="iOS 에서 볼수 있는 Bootstrap 핍오버를 사이트의 임의의 요소에 추가하기 위한 문서와 예시입니다.">
+<meta name="twitter:description" content="iOS에서 볼수 있는 Bootstrap 팝오버를 사이트 임의의 요소에 추가하기 위한 문서와 예시입니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/popovers/">
 <meta property="og:title" content="Popovers(팝오버)">
-<meta property="og:description" content="iOS 에서 볼수 있는 Bootstrap 핍오버를 사이트의 임의의 요소에 추가하기 위한 문서와 예시입니다.">
+<meta property="og:description" content="iOS에서 볼수 있는 Bootstrap 팝오버를 사이트 임의의 요소에 추가하기 위한 문서와 예시입니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -155,10 +155,6 @@
   </button>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">최신 (5.0.x)</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.kr/docs/4.5/">v4.5.x</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">모든 버전</a></li>
   </ul>
@@ -391,7 +387,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/popovers.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">Popovers(팝오버)</h1>
         </div>
-        <p class="bd-lead">iOS 에서 볼수 있는 Bootstrap 핍오버를 사이트의 임의의 요소에 추가하기 위한 문서와 예시입니다.</p>
+        <p class="bd-lead">iOS에서 볼수 있는 Bootstrap 팝오버를 사이트 임의의 요소에 추가하기 위한 문서와 예시입니다.</p>
         
 
       </div>
@@ -446,8 +442,8 @@
 <li>팝오버는 퍼포먼스를 위해 opt-in 되어 있기 때문에, <strong>스스로 초기화를 해야 합니다.</strong></li>
 <li>길이가 0 인 <code>title</code> 과 <code>content</code> 값은 팝오버를 표시하지 않습니다.</li>
 <li>더 복잡한 컴포넌트(input group, button groups 등)의 렌더링 문제를 피하기 위해 <code>container: 'body'</code> 를 지정해 주십시오.</li>
-<li>숨겨진 요소에서 팝오버를 트리거해도 제 기능을 하지 않습니다.</li>
-<li><code>.disabled</code> 나 <code>disabled</code> 요소의 팝오버는 그 위(바깥) 요소에서 트리거해야 합니다.</li>
+<li>숨겨진 요소에서 팝오버를 트리거해도 작동하지 않습니다.</li>
+<li><code>.disabled</code> 또는 <code>disabled</code> 요소의 팝오버는 그 위(바깥) 요소에서 트리거해야 합니다.</li>
 <li>여러 라인에 걸쳐 있는 앵커로부터 트리거 된 경우, 팝오버는 앵커의 전체 폭을 중심으로 표시됩니다. 이 동작을 피하기 위해서는 <code>&lt;a&gt;</code> 에 <code>.text-nowrap</code> 을 사용해 주십시오.</li>
 <li>팝오버는 대응 요소가 DOM 에서 삭제되기 전에 숨겨야 합니다.</li>
 <li>팝오버는 shadow DOM 내의 요소 덕분에 트리거 할 수 있습니다.</li>
@@ -464,7 +460,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">popoverTriggerEl</span><span class="p">)</span>
 <span class="p">})</span>
 </code></pre></div><h2 id="example-using-the-container-option">Example: Using the <code>container</code> option</h2>
-<p>부모 요소에 팝오버를 방해하는 몇 가지 스타일이 있다면, 대신 커스텀 <code>container</code> 를 지정하여 팝오버의 HTML 이 해당 요소 내에 표시되도록 합니다.</p>
+<p>부모 요소에 팝오버를 방해하는 몇 가지 스타일이 있다면, 대신 커스텀 <code>container</code> 를 지정하여 팝오버의 HTML을 해당 요소 내에 표시되도록 합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.example-popover&#39;</span><span class="p">),</span> <span class="p">{</span>
   <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;body&#39;</span>
 <span class="p">})</span>
@@ -473,7 +469,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-lg btn-danger&#34;</span> <span class="na">data-bs-toggle</span><span class="o">=</span><span class="s">&#34;popover&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Popover title&#34;</span> <span class="na">data-bs-content</span><span class="o">=</span><span class="s">&#34;And here&#39;s some amazing content. It&#39;s very engaging. Right?&#34;</span><span class="p">&gt;</span>Click to toggle popover<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="four-directions">Four directions</h3>
-<p>4가지 옵션이 있습니다: top, right, bottom, left. RTL 에서 Bootstrap 를 사용하는 경우 방향은 반대가 됩니다.</p>
+<p>4가지 옵션이 있습니다: top, right, bottom, left. RTL에서 Bootstrap을 사용하는 경우 방향은 반대가 됩니다.</p>
 <div class="bd-example popover-demo">
   <div class="bd-example-popovers">
     <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
@@ -509,7 +505,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p>사용자가 다음 토글 요소 이외의 요소를 클릭했을 때 팝오버를 닫으려면 <code>focus</code> 트리거를 사용합니다.</p>
 <div class="bd-callout bd-callout-danger">
 <h4 id="specific-markup-required-for-dismiss-on-next-click">Specific markup required for dismiss-on-next-click</h4>
-<p>브라우저나 플랫폼 관계없이 제대로 동작하기 위해서는 <code>&lt;button&gt;</code> 태그가 <em>아닌</em> <code>&lt;a&gt;</code> 태그를 사용해야 하며 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex"><code>tabindex</code></a> 속성을 포함해야 합니다.
+<p>브라우저나 플랫폼에 관계없이 제대로 동작하기 위해서는 <code>&lt;button&gt;</code> 태그가 <em>아닌</em> <code>&lt;a&gt;</code> 태그를 사용해야 하며 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex"><code>tabindex</code></a> 속성을 포함해야 합니다.
 </div>
 
 <div class="bd-example">
@@ -519,8 +515,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="nx">trigger</span><span class="o">:</span> <span class="s1">&#39;focus&#39;</span>
 <span class="p">})</span>
 </code></pre></div><h3 id="disabled-elements">Disabled elements</h3>
-<p><code>disabled</code> 속성을 갖는 요소는 인터랙티브하지 않습니다. 즉, 사용자가 팝오버(또는 툴팁)를 트리거하기 위해 커서를 호버하거나 클릭할 수 없음을 의미합니다. 해결책으로는 <code>&lt;div&gt;</code> 나 <code>&lt;span&gt;</code> 에서 팝오버를 트리거하여 disabled 요소인 <code>pointer-events</code> 를 오버라이드 해야 합니다.</p>
-<p>팝오버를 무효화하려면 <code>data-bs-trigger=&quot;hover&quot;</code> 를 사용하면 좋습니다. 이를 통해 사용자는 비활성화된 요소를 <em>click</em> 되기를 기대하지 않기 때문에 팝오버가 바로 시각적 피드백으로 사용자에게 표시됩니다.</p>
+<p><code>disabled</code> 속성을 갖는 요소는 상호작용할 수 없습니다. 즉, 사용자가 팝오버(또는 툴팁)를 트리거하기 위해 커서를 호버하거나 클릭할 수 없음을 의미합니다. 해결책으로는 <code>&lt;div&gt;</code> 나 <code>&lt;span&gt;</code> 에서 팝오버를 트리거하여 disabled 요소인 <code>pointer-events</code> 를 오버라이드 해야 합니다.</p>
+<p>팝오버를 무효화하려면 <code>data-bs-trigger=&quot;hover&quot;</code> 를 사용하면 좋습니다. 이를 통해 사용자는 비활성화된 요소가 <em>click</em> 되기를 기대하지 않기 때문에 팝오버가 바로 시각적 피드백으로 사용자에게 표시됩니다.</p>
 <div class="bd-example">
 <span class="d-inline-block" data-bs-toggle="popover" data-bs-content="Disabled popover">
   <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
@@ -529,19 +525,19 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;pointer-events: none;&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Disabled button<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="usage">Usage</h2>
-<p>JavaScript 로 팝오버를 유효화 합니다:</p>
+<p>JavaScript로 팝오버를 유효화 합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
 </code></pre></div><div class="bd-callout bd-callout-warning">
 <h3 id="making-popovers-work-for-keyboard-and-assistive-technology-users">Making popovers work for keyboard and assistive technology users</h3>
-<p>키보드 사용자가 팝오버를 활성화 하려면, 키보드 포커스가 가능하며 인터랙티브한 HTML 요소(링크나 폼 컨트톨 등)에만 추가해야 합니다. 임의의 HTML 요소(<code>&lt;span&gt;</code> 등)는 <code>tabindex=&quot;0&quot;</code> 속성을 추가함으로써 포커스가 가능한데, 이는 키보드 사용자에게는 비인터랙티브적인 요소의 탭 멈춤이 추가되어 혼란을 초래할 수 있습니다. 게다가 키보드 사용자가 팝오버를 트리거 할수 없게 되므로 팝오버의 트리거를 <code>hover</code> 에만 의지해서는 안됩니다.</p>
-<p><code>html</code> 옵션에서 리치로 구조화된 HTML 을 팝오버에 넣을 수 있지만 과도한 양의 컨텐츠를 추가하는 것은 피하는 것이 좋습니다. 팝오버가 현재 기능을 하는 방법은 한 번 표시되면 해당 컨텐츠는 <code>aria-describedby</code> 속성을 갖는 트리거 요소에 연결됩니다. 그 결과 팝오버 컨텐츠 전체가 스크린 리더 사용자에게 길고 끊기지 않는 스트림으로 알릴 것입니다.</p>
-<p>또한, 인터랙티브한 컨트롤(폼 요소나 링크 등)들을 팝오버에 포함시킬 수도 있지만 (허락된 속성이나 태그의 <code>allowList</code> 에 이러한 요소를 추가하여), 현재 팝오버는 키보드 포커스 순서를 관리하지 않는다는 점에 유의하십시오. 키보드 사용자가 팝오버를 열면 포커스는 트리거가 되는 요소에 머무르고, 팝오버는 보통 문서 구조의 트리거를 쉽게 따라가지 않기 때문에 <kbd>TAB</kbd> 를 앞으로 이동/눌러도 키보드 사용자가 팝오버 자체로 이동하리라는 보장은 없습니다. 요컨대 단순히 팝오버에 인터랙티브한 컨트롤을 추가하는 것만으로도 키보드 사용자나 스크린 리더 사용자들이 이들 컨트롤에 접근할 수 없거나 적어도 전체적으로 비논리적인 포커스 순서가 될 수 있습니다. 이러한 경우는, 대신에 modal(모달) 사용을 검토해 주십시오.</p>
+<p>키보드 사용자가 팝오버를 활성화 하려면, 키보드 포커스가 가능하며 상호작용이 가능한 HTML 요소(링크나 폼 컨트톨 등)에만 추가해야 합니다. 임의의 HTML 요소(<code>&lt;span&gt;</code> 등)는 <code>tabindex=&quot;0&quot;</code> 속성을 추가함으로써 포커스가 가능한데, 이는 키보드 사용자에게는 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 혼란을 초래할 수 있습니다. 게다가 키보드 사용자가 팝오버를 트리거 할수 없게 되므로 팝오버의 트리거를 <code>hover</code> 에만 의지해서는 안됩니다.</p>
+<p><code>html</code> 옵션에서 리치로 구조화된 HTML을 팝오버에 넣을 수 있지만 과도한 양의 컨텐츠를 추가하는 것은 피하는 것이 좋습니다. 팝오버가 현재 기능을 하는 방법은 한 번 표시되면 해당 컨텐츠는 <code>aria-describedby</code> 속성을 갖는 트리거 요소에 연결됩니다. 그 결과 팝오버 컨텐츠 전체가 스크린 리더 사용자에게 길고 끊기지 않는 스트림으로 알릴 것입니다.</p>
+<p>또한, 인터랙티브한 컨트롤(폼 요소나 링크 등)들을 팝오버에 포함시킬 수도 있지만 (허락된 속성이나 태그의 <code>allowList</code> 에 이러한 요소를 추가하여), 현재 팝오버는 키보드 포커스 순서를 관리하지 않는다는 점에 유의하십시오. 키보드 사용자가 팝오버를 열면 포커스는 트리거가 되는 요소에 머무르고, 팝오버는 보통 문서 구조의 트리거를 쉽게 따라가지 않기 때문에 <kbd>TAB</kbd> 을 앞으로 이동/눌러도 키보드 사용자가 팝오버 자체로 이동하리라는 보장은 없습니다. 요컨대 단순히 팝오버에 상호작용할 수 있는 컨트롤을 추가하는 것만으로도 키보드 사용자나 스크린 리더 사용자들이 이들 컨트롤에 접근할 수 없거나 적어도 전체적으로 비논리적인 포커스 순서가 될 수 있습니다. 이러한 경우는, modal(모달) 사용을 검토해 주십시오.</p>
 
 </div>
 
 <h3 id="options">Options</h3>
-<p>옵션은 data 속성 또는 JavaScript 로 줄 수 있습니다. data 속성의 경우는 <code>data-bs-animation=&quot;&quot;</code> 처럼 <code>data-bs-</code> 에 옵션명을 추가합니다.</p>
+<p>옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우는 <code>data-bs-animation=&quot;&quot;</code> 처럼 <code>data-bs-</code> 에 옵션명을 추가합니다.</p>
 <div class="bd-callout bd-callout-warning">
 보안상의 이유로 <code>sanitize</code>, <code>sanitizeFn</code>, <code>allowList</code> 옵션을 data 속성으로 지정할 수 없다는 것에 주의해 주세요.
 </div>
@@ -713,7 +709,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p>요소의 팝오버를 토글합니다. <strong>팝오버가 실제로 표시 또는 숨기기 전에 호출된 곳으로 돌아갑니다</strong> (즉, <code>shown.bs.popover</code> 혹은 <code>hidden.bs.popover</code> 이벤트가 발생하기 전). 이것은 팝오버의 &ldquo;manual&rdquo; 트리거로 간주됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
 </code></pre></div><h4 id="dispose">dispose</h4>
-<p>요소의 팝오버를 숨기고 업앱니다(DOM 요소에 저장된 데이터를 삭제합니다). 위임을 사용하는 팝오버(<a href="#options">the <code>selector</code> option</a> 를 사용하여 작성된 것) 는 자식의 트리거 요소로 인해 개벌젹으로 없앨수 없습니다.</p>
+<p>요소의 팝오버를 숨기고 없앱니다(DOM 요소에 저장된 데이터를 삭제합니다). 위임을 사용하는 팝오버(<a href="#options">the <code>selector</code> option</a> 를 사용하여 작성된 것) 는 자식의 트리거 요소로 인해 개벌젹으로 없앨수 없습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
 </code></pre></div><h4 id="enable">enable</h4>
 <p>요소의 팝오버를 표시하는 기능을 부여합니다. <strong>팝오버는 기본으로 활성화되어 있습니다.</strong></p>

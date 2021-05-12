@@ -156,10 +156,6 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">최신 (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.kr/docs/4.5/">v4.5.x</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
-    <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">모든 버전</a></li>
   </ul>
 </div>
@@ -429,7 +425,7 @@
         
 
         <h2 id="how-it-works">How it works</h2>
-<p>스크롤 스파이가 제대로 동작하기 위해서는 몇 가지 요건이 있습니다:</p>
+<p>스크롤 스파이가 제대로 동작하기 위해서는 몇 가지 조건이 있습니다:</p>
 <ul>
 <li>Bootstrap <a href="/docs/5.0/components/navs-tabs/">nav component</a> 혹은 <a href="/docs/5.0/components/list-group/">list group</a> 에서 사용해야 합니다.</li>
 <li>스크롤 스파이는 감시 대상의 요소, 보통은 <code>&lt;body&gt;</code> 의 <code>position: relative;</code> 를 필요로 합니다.</li>
@@ -442,7 +438,7 @@
 </div>
 
 <h2 id="example-in-navbar">Example in navbar</h2>
-<p>내비바 아래 영역을 스크롤하여 활성화된 클래스의 변화를 살펴보세요. 드롭다운 아이템도 같이 강조 표시됩니다.</p>
+<p>내비게이션 바 아래 영역을 스크롤하여 활성화된 클래스의 변화를 살펴보세요. 드롭다운 아이템도 같이 강조 표시됩니다.</p>
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -512,7 +508,7 @@
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="example-with-nested-nav">Example with nested nav</h2>
-<p>스크롤 스파이는 중첩된 <code>.nav</code> 에서도 동작합니다. 중첩 된 <code>.nav</code> 가 <code>.active</code> 인 경우, 그 부모도 <code>.active</code> 가 됩니다. 내비바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.</p>
+<p>스크롤 스파이는 중첩된 <code>.nav</code> 에서도 동작합니다. 중첩 된 <code>.nav</code> 가 <code>.active</code> 인 경우, 그 부모도 <code>.active</code> 가 됩니다. 내비게이션 바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.</p>
 <div class="bd-example">
   <div class="row">
     <div class="col-4">
@@ -630,7 +626,7 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="usage">Usage</h2>
 <h3 id="via-data-attributes">Via data attributes</h3>
-<p>topbar 내비게이션에 스크롤 스파이 동작을 간단하게 추가하려면, 스파이 하고 싶은 요소에 <code>data-bs-spy=&quot;scroll&quot;</code> 를 추가합니다(가장 전형적으로는 <code>&lt;body&gt;</code> 입니다). 그 다음에 <code>data-bs-target</code> 속성에 임의의 Bootstrap <code>.nav</code> 컴포넌트의 부모요소의 ID 또는 클래스를 추가합니다.</p>
+<p>topbar 내비게이션에 스크롤 스파이 동작을 간단하게 추가하려면, 스크롤스파이 하고 싶은 요소에 <code>data-bs-spy=&quot;scroll&quot;</code> 를 추가합니다(가장 전형적으로는 <code>&lt;body&gt;</code> 입니다). 그 다음에 <code>data-bs-target</code> 속성에 임의의 Bootstrap <code>.nav</code> 컴포넌트의 부모요소의 ID 또는 클래스를 추가합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
   <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
 <span class="p">}</span>
@@ -644,7 +640,7 @@
   ...
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="via-javascript">Via JavaScript</h3>
-<p>CSS 에 <code>position: relative;</code> 를 추가한 뒤, JavaScript 로 스크롤 스파이를 호출합니다:</p>
+<p>CSS에 <code>position: relative;</code> 를 추가한 뒤, JavaScript 로 스크롤 스파이를 호출합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;#navbar-example&#39;</span>
 <span class="p">})</span>
@@ -660,7 +656,7 @@
 
 <h3 id="methods">Methods</h3>
 <h4 id="refresh">refresh</h4>
-<p>DOM 에서 요소의 추가나 삭제와 동시에 스크롤 스파이를 사용할 경우는 다음과 같이 refresh 메소드를 호출해야 합니다:</p>
+<p>DOM에서 요소의 추가나 삭제와 동시에 스크롤 스파이를 사용할 경우 다음과 같이 refresh 메소드를 호출해야 합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">dataSpyList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-spy=&#34;scroll&#34;]&#39;</span><span class="p">))</span>
 <span class="nx">dataSpyList</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">dataSpyEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">dataSpyEl</span><span class="p">)</span>

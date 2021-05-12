@@ -156,10 +156,6 @@
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">최신 (5.0.x)</a></li>
     <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.kr/docs/4.5/">v4.5.x</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
-    <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">모든 버전</a></li>
   </ul>
 </div>
@@ -438,7 +434,7 @@
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
 </div>
 
-<p>중첩된 캐러셀은 지원되고 있지 않고, 캐러셀은 일반적으로 접근성(accessibility) 기준에 준거하고 있지 않다는 것에 주의해 주세요.</p>
+<p>중첩된 캐러셀은 지원되고 있지 않고, 캐러셀은 일반적으로 접근성(accessibility) 기준에 의거하고 있지 않다는 것에 주의해 주세요.</p>
 <h2 id="example">Example</h2>
 <p>캐러셀은, 슬라이드의 치수를 자동적으로 정규화하지 않습니다. 그 때문에, 컨텐츠의 크기를 적절하게 조정하기 위해, 추가의 유틸리티나 커스텀 스타일을 사용할 필요가 있는 경우가 있습니다. 캐러셀은 이전/다음의 컨트롤과 위치 표시(인디게이터, indicator)를 지원하고 있지만, 명시적으로 필수는 아닙니다. 자유롭게 추가하여 커스터마이즈 해 주세요.</p>
 <p><strong><code>.active</code> 클래스는, 슬라이드 하나에는 추가할 필요가 있습니다.</strong> 그렇게 하지 않으면 캐러셀은 표시되지 않습니다. 그리고, 한 페이지에 복수의 캐러셀을 사용하고 있는 경우에는 특히 옵션의 컨트롤을 위한 <code>.carousel</code> 에 하나의 id 를 설정해야 합니다. 컨트롤과 위치 표시(인디게이터, indicator)의 요소는, <code>.carousel</code> 요소의 id 와 일치하는 <code>data-bs-target</code> 속성(링크의 경우에는 <code>href</code>)을 가져야 합니다.</p>
@@ -581,7 +577,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="with-captions">With captions</h3>
-<p><code>.carousel-item</code> 안의 <code>.carousel-caption</code> 요소를 사용해, 슬라이드에 설명문(캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 <a href="/docs/5.0/utilities/display/">display utilities</a> 를 사용함으로써, 보다 작은 뷰포터에서 간단히 설명문(캡션, caption)을 감추는것도 가능합니다. 처음에는 <code>.d-none</code> 로 비표시하고, 중형 디바이스에서는 <code>.d-md-block</code> 로 다시 표시합니다.</p>
+<p><code>.carousel-item</code> 안의 <code>.carousel-caption</code> 요소를 사용해, 슬라이드에 설명문(캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 <a href="/docs/5.0/utilities/display/">display utilities</a> 를 사용함으로써, 보다 작은 뷰포트에서 간단하게 설명문(캡션, caption)을 감추는것도 가능합니다. 처음에는 <code>.d-none</code> 로 비표시하고, 중형 디바이스에서는 <code>.d-md-block</code> 로 다시 표시합니다.</p>
 <div class="bd-example">
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <ol class="carousel-indicators">
@@ -663,7 +659,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="crossfade">Crossfade</h3>
-<p><code>.carousel-fade</code> 를 캐러셀에 추가하면, 슬라이드 대신에 fade 트랜지션으로 슬라이드를 애니메이션 시킬 수 있습니다.</p>
+<p><code>.carousel-fade</code> 를 캐러셀에 추가하면, 슬라이드 대신에 fade 트랜지션으로 슬라이드를 애니메이션화 시킬 수 있습니다.</p>
 <div class="bd-example">
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -842,8 +838,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="usage">Usage</h2>
 <h3 id="via-data-attributes">Via data attributes</h3>
-<p>캐러셀의 위치를 간단히 제어하려면, data 속성을 사용합니다. <code>data-bs-slide</code> 는 키워드 <code>prev</code> 나 <code>next</code> 을 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 <code>data-bs-slide-to</code> 를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 <code>data-bs-slide-to=&quot;2&quot;</code> 가 되어, 슬라이디의 위치를 <code>0</code> 에서 시작하는 특정의 인덱스로 이동시킵니다.</p>
-<p><code>data-bs-ride=&quot;carousel&quot;</code> 속성은, 페이지 로드시 캐러셀을 애니메이션 시키는데 사용됩니다. 캐러셀의 초기화에 <code>data-bs-ride=&quot;carousel&quot;</code> 를 사용하지 않는 경우에는, 스스로 초기화 할 필요가 있습니다. <strong>같은 캐러셀의 명시적인 JavaScript 의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.</strong></p>
+<p>캐러셀의 위치를 간단히 제어하려면, data 속성을 사용합니다. <code>data-bs-slide</code> 는 키워드 <code>prev</code> 나 <code>next</code> 을 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 <code>data-bs-slide-to</code> 를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 <code>data-bs-slide-to=&quot;2&quot;</code> 가 되어, 슬라이드의 위치를 <code>0</code> 에서 시작하는 특정의 인덱스로 이동시킵니다.</p>
+<p><code>data-bs-ride=&quot;carousel&quot;</code> 속성은, 페이지 로드시 캐러셀을 애니메이션화 시키는데 사용됩니다. 캐러셀의 초기화에 <code>data-bs-ride=&quot;carousel&quot;</code> 를 사용하지 않는 경우에는, 스스로 초기화 할 필요가 있습니다. <strong>같은 캐러셀의 명시적인 JavaScript 의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.</strong></p>
 <h3 id="via-javascript">Via JavaScript</h3>
 <p>캐러셀을 수동으로 부르는 경우 :</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myCarousel</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">)</span>
@@ -955,7 +951,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   </tbody>
 </table>
 <h3 id="events">Events</h3>
-<p>Bootstrap 의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 2 가지 이벤트를 공개하고 있습니다. 두가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:</p>
+<p>Bootstrap의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 두가지 이벤트를 제공하고 있습니다. 두가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:</p>
 <ul>
 <li><code>direction</code>: 캐러셀이 슬라이딩 하는 방향 (<code>&quot;left&quot;</code> 혹은 <code>&quot;right&quot;</code>).</li>
 <li><code>relatedTarget</code>: 액티브한 아이템으로 슬라이드 시키고 있는 DOM 요소.</li>
@@ -987,7 +983,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="c1">// do something...
 </span><span class="c1"></span><span class="p">})</span>
 </code></pre></div><h3 id="change-transition-duration">Change transition duration</h3>
-<p><code>.carousel-item</code> 의 트렌지션 시간은 CSS 컴파일 전의 Sass 변수 <code>$carousel-transition</code> 에서 변경할 수 있습니다. 복수의 트렌지션이 적용되고 있는 경우는, 처음 transform 트렌지션이 정의되고 있는 곳을 확인해 주세요(eg. <code>transition: transform 2s ease, opacity .5s ease-out</code>).</p>
+<p><code>.carousel-item</code> 의 트렌지션 시간은 CSS 컴파일 전의 Sass 변수 <code>$carousel-transition</code> 에서 변경할 수 있습니다. 복수의 트렌지션이 적용되고 있는 경우는, 처음 transform 트렌지션이 정의되고 있는 곳을 확인해 주세요(예를들어, <code>transition: transform 2s ease, opacity .5s ease-out</code>).</p>
 
       </div>
     </main>

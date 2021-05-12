@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CSS를 통해 자동적으로 구분자를 추가해 내비게이션 계층내에서 현재 페이지의 위치를 나타냅니다.">
+<meta name="description" content="CSS로 구분자를 자동적으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.79.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Breadcrumb(브래드크럼) · Bootstrap v5.0</title>
+<title>Breadcrumb(브레드크럼) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/components/breadcrumb/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Breadcrumb(브래드크럼)">
-<meta name="twitter:description" content="CSS를 통해 자동적으로 구분자를 추가해 내비게이션 계층내에서 현재 페이지의 위치를 나타냅니다.">
+<meta name="twitter:title" content="Breadcrumb(브레드크럼)">
+<meta name="twitter:description" content="CSS로 구분자를 자동적으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/breadcrumb/">
-<meta property="og:title" content="Breadcrumb(브래드크럼)">
-<meta property="og:description" content="CSS를 통해 자동적으로 구분자를 추가해 내비게이션 계층내에서 현재 페이지의 위치를 나타냅니다.">
+<meta property="og:title" content="Breadcrumb(브레드크럼)">
+<meta property="og:description" content="CSS로 구분자를 자동적으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -155,10 +155,6 @@
   </button>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">최신 (5.0.x)</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.kr/docs/4.5/">v4.5.x</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">모든 버전</a></li>
   </ul>
@@ -389,9 +385,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/breadcrumb.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Breadcrumb(브래드크럼)</h1>
+          <h1 class="bd-title" id="content">Breadcrumb(브레드크럼)</h1>
         </div>
-        <p class="bd-lead">CSS를 통해 자동적으로 구분자를 추가해 내비게이션 계층내에서 현재 페이지의 위치를 나타냅니다.</p>
+        <p class="bd-lead">CSS로 구분자를 자동적으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.</p>
         
 
       </div>
@@ -413,7 +409,7 @@
         
 
         <h2 id="example">Example</h2>
-<p>순서를 가진 리스트 또는 순서를 가지지 않은 리스트를 사용해, 최소 스타일의 브래드크럼을 작성합니다. 유틸리티를 사용해, 원하는 스타일을 추가할 수 있습니다.</p>
+<p>순서를 가진 리스트 또는 순서를 가지지 않은 리스트를 사용해, 최소 스타일의 브레드크럼을 작성합니다. 유틸리티를 사용해 원하는 스타일을 추가할 수 있습니다.</p>
 <div class="bd-example">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -456,7 +452,7 @@
   <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="dividers">Dividers</h2>
-<p>구분자는 CSS 의 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before"><code>::before</code></a> 과 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"><code>content</code></a> 를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 <code>--bs-breadcrumb-divider</code> 를 변경하거나, <code>$breadcrumb-divider</code> Sass 변수 — 와 <code>$breadcrumb-divider-flipped</code> 을 사용해 RTL 에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS 를 다시 컴파일하지 않고 재정의 할 수 있는 글로벌한 구분자를 얻을 수 있습니다.</p>
+<p>구분자는 CSS의 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before"><code>::before</code></a> 과 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"><code>content</code></a> 를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 <code>--bs-breadcrumb-divider</code> 를 변경하거나, <code>$breadcrumb-divider</code> Sass 변수 — 와 <code>$breadcrumb-divider-flipped</code> 을 사용해 RTL에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS를 다시 컴파일하지 않고 재정의 할 수 있는 글로벌한 구분자를 얻을 수 있습니다.</p>
 <div class="bd-example">
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -487,7 +483,7 @@
   <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$breadcrumb-divider</span><span class="o">:</span> <span class="sx">url(&#34;data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;8&#39; height=&#39;8&#39;%3E%3Cpath d=&#39;M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z&#39; fill=&#39;currentColor&#39;/%3E%3C/svg%3E&#34;)</span><span class="p">;</span>
-</code></pre></div><p>또한 divider 설정인 <code>--bs-breadcrumb-divider: '';</code>을 빈 값으로 넣거나 (CSS 사용자 지정 속성의 빈 문자열은 값으로 카운터 됨), Sass 변수를 <code>$breadcrumb-divider: none;</code> 으로 설정할 수도 있습니다.</p>
+</code></pre></div><p>또한 divider 설정인 <code>--bs-breadcrumb-divider: '';</code> 을 빈 값으로 넣거나 (CSS 사용자 지정 속성의 빈 문자열은 값으로 카운터 됨), Sass 변수를 <code>$breadcrumb-divider: none;</code> 으로 설정할 수도 있습니다.</p>
 <div class="bd-example">
 <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -503,7 +499,7 @@
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$breadcrumb-divider</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span>
 </code></pre></div><h2 id="accessibility">Accessibility</h2>
-<p>브래드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 <code>&lt;nav&gt;</code> 요소에 <code>aria-label=&quot;breadcrumb&quot;</code> 과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 <code>aria-current=&quot;page&quot;</code> 를 추가하는게 좋습니다. 자세한 내용은 <a href="https://www.w3.org/TR/wai-aria-practices/#breadcrumb">WAI-ARIA Authoring Practices for the breadcrumb pattern</a>.</p>
+<p>브레드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 <code>&lt;nav&gt;</code> 요소에 <code>aria-label=&quot;breadcrumb&quot;</code> 과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 <code>aria-current=&quot;page&quot;</code> 를 추가하는게 좋습니다. 자세한 내용은 <a href="https://www.w3.org/TR/wai-aria-practices/#breadcrumb">WAI-ARIA Authoring Practices for the breadcrumb pattern</a>.</p>
 
       </div>
     </main>

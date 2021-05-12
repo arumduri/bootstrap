@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Make any HTML element or Bootstrap component clickable by &ldquo;stretching&rdquo; a nested link via CSS.">
+<meta name="description" content="CSS를 통해 중첩 된 링크를 &ldquo;확장&quot;하여 HTML 요소 또는 Bootstrap 구성 요소를 클릭 할 수 있도록 만듭니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.79.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Stretched link · Bootstrap v5.0</title>
+<title>Stretched link (확장형 링크) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/helpers/stretched-link/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Stretched link">
-<meta name="twitter:description" content="Make any HTML element or Bootstrap component clickable by &ldquo;stretching&rdquo; a nested link via CSS.">
+<meta name="twitter:title" content="Stretched link (확장형 링크)">
+<meta name="twitter:description" content="CSS를 통해 중첩 된 링크를 &ldquo;확장&quot;하여 HTML 요소 또는 Bootstrap 구성 요소를 클릭 할 수 있도록 만듭니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/helpers/stretched-link/">
-<meta property="og:title" content="Stretched link">
-<meta property="og:description" content="Make any HTML element or Bootstrap component clickable by &ldquo;stretching&rdquo; a nested link via CSS.">
+<meta property="og:title" content="Stretched link (확장형 링크)">
+<meta property="og:description" content="CSS를 통해 중첩 된 링크를 &ldquo;확장&quot;하여 HTML 요소 또는 Bootstrap 구성 요소를 클릭 할 수 있도록 만듭니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -155,10 +155,6 @@
   </button>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-versions">
     <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">최신 (5.0.x)</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.kr/docs/4.5/">v4.5.x</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
-    <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="/docs/versions/">모든 버전</a></li>
   </ul>
@@ -389,9 +385,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/helpers/stretched-link.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Stretched link</h1>
+          <h1 class="bd-title" id="content">Stretched link (확장형 링크)</h1>
         </div>
-        <p class="bd-lead">Make any HTML element or Bootstrap component clickable by &ldquo;stretching&rdquo; a nested link via CSS.</p>
+        <p class="bd-lead">CSS를 통해 중첩 된 링크를 &ldquo;확장&quot;하여 HTML 요소 또는 Bootstrap 구성 요소를 클릭 할 수 있도록 만듭니다.</p>
         
 
       </div>
@@ -401,9 +397,9 @@
       <div class="bd-content ps-lg-4">
         
 
-        <p>Add <code>.stretched-link</code> to a link to make its <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block">containing block</a> clickable via a <code>::after</code> pseudo element. In most cases, this means that an element with <code>position: relative;</code> that contains a link with the <code>.stretched-link</code> class is clickable.</p>
-<p>Cards have <code>position: relative</code> by default in Bootstrap, so in this case you can safely add the <code>.stretched-link</code> class to a link in the card without any other HTML changes.</p>
-<p>Multiple links and tap targets are not recommended with stretched links. However, some <code>position</code> and <code>z-index</code> styles can help should this be required.</p>
+        <p>a link에 <code>.stretched-link</code> 를 추가하여 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block">containing block</a>을 가상요소인 <code>::after</code>  를 통해 클릭할수 있도록 만듭니다. 대부분의 경우 이는, a link에 <code>.stretched-link</code> 클래스가 붙어있고 a link를 감싸고 있는 상위의 <code>position : relative;</code> 상태의 요소는 클릭 할 수 있음을 의미합니다.</p>
+<p>부트스트랩에서 card는 기본적으로 <code>position: relative</code> 상태를 갖고 있습니다, 그렇기 때문에 이 경우 사용자가 별도의 HTML 변경없이 <code>.stretched-link</code> 클래스를 안전하게 카드의 a링크 부분에 추가 할 수 있습니다.</p>
+<p>확장형 링크에 탭 대상 및 다중링크 사용은 권장하지 않습니다. 그러나, 사용이 필요한 경우 <code>position</code> 그리고 <code>z-index</code> 스타일이 도움이 될 수 있습니다.</p>
 <div class="bd-example">
 <div class="card" style="width: 18rem;">
   <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Card image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Card image cap</title><rect width="100%" height="100%" fill="#868e96"/></svg>
@@ -422,7 +418,7 @@
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary stretched-link&#34;</span><span class="p">&gt;</span>Go somewhere<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Most custom components do not have <code>position: relative</code> by default, so we need to add the <code>.position-relative</code> here to prevent the link from stretching outside the parent element.</p>
+<p>대부분의 사용자 지정 컴포넌트는 <code>position: relative</code> 를 기본적으로 포함하고 있지 않습니다. 따라서 a링크가 상위요소 바깥으로 무한정 확장하는 것을 방지하려면 상위 요소에 <code>.position-relative</code> 클래스를 추가해야합니다.</p>
 <div class="bd-example">
 <div class="d-flex position-relative">
   <svg class="bd-placeholder-img flex-shrink-0 me-3" width="144" height="144" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Generic placeholder image" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Generic placeholder image</title><rect width="100%" height="100%" fill="#868e96"/></svg>
@@ -464,12 +460,12 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="identifying-the-containing-block">Identifying the containing block</h2>
-<p>If the stretched link doesn&rsquo;t seem to work, the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block">containing block</a> will probably be the cause. The following CSS properties will make an element the containing block:</p>
+<p>만약 확장형 링크가 작동하지 않는다면, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block">containing block</a>이 원인 일 수 있습니다. 다음 CSS 속성은 요소를 포함하는 블록형태로 만듭니다.</p>
 <ul>
-<li>A <code>position</code> value other than <code>static</code></li>
-<li>A <code>transform</code> or <code>perspective</code> value other than <code>none</code></li>
-<li>A <code>will-change</code> value of <code>transform</code> or <code>perspective</code></li>
-<li>A <code>filter</code> value other than <code>none</code> or a <code>will-change</code> value of <code>filter</code> (only works on Firefox)</li>
+<li><code>static</code> 이외의 <code>position</code> 값</li>
+<li><code>none</code> 이외의 <code>transform</code> 또는 <code>perspective</code> 값</li>
+<li><code>transform</code> 또는 <code>perspective</code> 의 <code>will-change</code> 값</li>
+<li><code>none</code> 이외의 <code>filter</code> 값 또는 <code>filter</code> 의  <code>will-change</code> 값 (Firefox에서만 작동)</li>
 </ul>
 <div class="bd-example">
 <div class="card" style="width: 18rem;">
