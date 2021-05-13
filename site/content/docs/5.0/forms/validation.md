@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Validation
-description: Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.
+title: Validation(검증)
+description: HTML5 폼 검증에서는 브라우저의 기본 동작이나 사용자 스타일과 JavaScript를 이용해 사용자에게 가치있고 실용적인 피드백을 제공합니다.
 group: forms
 toc: true
 extra_js:
@@ -10,23 +10,23 @@ extra_js:
 ---
 
 {{< callout warning >}}
-We are aware that currently the client-side custom validation styles and tooltips are not accessible, since they are not exposed to assistive technologies. While we work on a solution, we'd recommend either using the server-side option or the default browser validation method.
+현재 클라이언트 측의 맞춤 검증 스타일과 툴팁은 지원 기술에 공개되지 않아 접근할 수 없다는 것을 알고 있습니다. 해결책을 검토하는 동안 서버사이드 옵션을 사용하거나 브라우저 기본 검증 방법을 사용하는 것이 좋습니다.
 {{< /callout >}}
 
 ## How it works
 
-Here's how form validation works with Bootstrap:
+Bootstrap에서의 폼 검증 구조를 소개합니다:
 
-- HTML form validation is applied via CSS's two pseudo-classes, `:invalid` and `:valid`. It applies to `<input>`, `<select>`, and `<textarea>` elements.
-- Bootstrap scopes the `:invalid` and `:valid` styles to parent `.was-validated` class, usually applied to the `<form>`. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).
-- To reset the appearance of the form (for instance, in the case of dynamic form submissions using AJAX), remove the `.was-validated` class from the `<form>` again after submission.
-- As a fallback, `.is-invalid` and `.is-valid` classes may be used instead of the pseudo-classes for [server-side validation](#server-side). They do not require a `.was-validated` parent class.
-- Due to constraints in how CSS works, we cannot (at present) apply styles to a `<label>` that comes before a form control in the DOM without the help of custom JavaScript.
-- All modern browsers support the [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api), a series of JavaScript methods for validating form controls.
-- Feedback messages may utilize the [browser defaults](#browser-defaults) (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.
-- You may provide custom validity messages with `setCustomValidity` in JavaScript.
+- HTML의 폼 검증은 CSS의 두개의 가상 클래스 `:invalid` 와 `:valid`를 사용해 `<input>`, `<select>`, `<textarea>` 요소에 적용됩니다.
+- Bootstrap는 `:invalid` 과 `:valid` 스타일을 상위 클래스 `.was-validated`에 범위를 지정하고 일반적으로 `<form>`에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 비활설화 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)
+- 폼의 외형을 새로 적용하려면(예를 들어, AJAX를 사용한 동적인 폼 송신의 경우), 송신 후에 `.was-validated` 클래스를 `<form>`으로부터 다시 삭제합니다.
+- 폴백으로서 [server-side validation](#server-side)의 가상 클래스 대신 `.is-invalid` 와 `.is-valid` 클래스를 사용할 수 있습니다. 이 클래스들은 상위 클래스인 `.was-validated`를 필요로 하지 않습니다.
+- (현시점에서는)CSS 동작에 제약이 있기 때문에 사용자 정의 JavaScript의 도움을 받지 않고 DOM 내에서 폼 컨트롤의 앞에 있는 `<label>`에 스타일을 적용할 수 없습니다.
+- 모든 모던 브라우저는 폼 컨트롤을 검증하기 위한 일련의 JavaScript 메소드인 [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api)를 지원합니다.
+- 피드백 메세지는 [browser defaults](#browser-defaults) (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다)나 HTML과 CSS를 추가한 사용자 피드백 스타일을 이용할 수 도 있습니다.
+- JavaScript의 `setCustomValidity`를 사용해 사용자 정의의 유효성 문구를 제공할 수도 있습니다.
 
-With that in mind, consider the following demos for our custom form validation styles, optional server-side classes, and browser defaults.
+이 점을 고려하여 사용자 정의 폼 검증 스타일, 옵션 서버 사이드 클래스 및 브라우저 기본값에 대해, 아래의 데모를 검토해 주세요.
 
 ## Custom styles
 

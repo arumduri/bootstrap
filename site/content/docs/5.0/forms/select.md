@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Select
-description: Customize the native `<select>`s with custom CSS that changes the element's initial appearance.
+title: Select(셀렉트)
+description: 네이티브 `<select>`를 사용자 정의 CSS로 만들어 요소의 초기 표시를 변경할 수 있습니다.
 group: forms
 toc: true
 ---
 
 ## Default
 
-Custom `<select>` menus need only a custom class, `.form-select` to trigger the custom styles. Custom styles are limited to the `<select>`'s initial appearance and cannot modify the `<option>`s due to browser limitations.
+사용자 `<select>`를 사용하기 위해 필요한 클래스는 `.form-select`입니다. 이 사용자 정의 스타일은 브러우저 제한으로 `<select>`의 처음 외형만 변경할 수 있고 그 안에 있는 `<option>` 들의 스타일 변경은 불가능합니다.
 
 {{< example >}}
 <select class="form-select" aria-label="Default select example">
@@ -21,7 +21,7 @@ Custom `<select>` menus need only a custom class, `.form-select` to trigger the 
 
 ## Sizing
 
-You may also choose from small and large custom selects to match our similarly sized text inputs.
+같은 크기의 텍스트 입력에 맞춰 크고 작은 사용자 정의 셀렉트를 선택해 사용할 수 있습니다.
 
 {{< example >}}
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -39,7 +39,7 @@ You may also choose from small and large custom selects to match our similarly s
 </select>
 {{< /example >}}
 
-The `multiple` attribute is also supported:
+그리고 `multiple` 속성도 지원됩니다:
 
 {{< example >}}
 <select class="form-select" multiple aria-label="multiple select example">
@@ -50,7 +50,7 @@ The `multiple` attribute is also supported:
 </select>
 {{< /example >}}
 
-As is the `size` attribute:
+또한 `size` 속성도 지원됩니다:
 
 {{< example >}}
 <select class="form-select" size="3" aria-label="size 3 select example">
@@ -63,7 +63,7 @@ As is the `size` attribute:
 
 ## Disabled
 
-Add the `disabled` boolean attribute on a select to give it a grayed out appearance and remove pointer events.
+불리언 속성인 `disabled`를 셀렉터에 추가하면 비활성화 된 외형으로 표시되며 포인터 이벤트가 삭제됩니다.
 
 {{< example >}}
 <select class="form-select" aria-label="Disabled select example" disabled>

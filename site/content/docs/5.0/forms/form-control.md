@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Form controls
-description: Give textual form controls like `<input>`s and `<textarea>`s an upgrade with custom styles, sizing, focus states, and more.
+title: Form controls(폼 컨트롤)
+description: 텍스트 형식의 폼 컨트롤에 스타일, 사이즈, 포커스 상태등을 업그레이드 조정합니다.
 group: forms
 toc: true
 ---
@@ -21,7 +21,7 @@ toc: true
 
 ## Sizing
 
-Set heights using classes like `.form-control-lg` and `.form-control-sm`.
+`.form-control-lg` 과 `.form-control-sm` 클래스를 사용해서 크기를 다르게 설정할 수 있습니다.
 
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
@@ -31,7 +31,7 @@ Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
 ## Disabled
 
-Add the `disabled` boolean attribute on an input to give it a grayed out appearance and remove pointer events.
+`disabled` 불리언 속성을 추가하면 비활성화 외형이 되어 포인터 이벤트가 삭제됩니다.
 
 {{< example >}}
 <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
@@ -40,7 +40,7 @@ Add the `disabled` boolean attribute on an input to give it a grayed out appeara
 
 ## Readonly
 
-Add the `readonly` boolean attribute on an input to prevent modification of the input's value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.
+`readonly` 불리언 속성을 추가함으로써 입력 값의 변경을 막을 수 있습니다. 읽기전용 입력은 비활성화 입력과 동일한 외형으로 표시되지만 표준 커서는 유지됩니다.
 
 {{< example >}}
 <input class="form-control" type="text" placeholder="Readonly input here..." aria-label="readonly input example" readonly>
@@ -48,7 +48,7 @@ Add the `readonly` boolean attribute on an input to prevent modification of the 
 
 ## Readonly plain text
 
-If you want to have `<input readonly>` elements in your form styled as plain text, use the `.form-control-plaintext` class to remove the default form field styling and preserve the correct margin and padding.
+폼 내의 `<input readonly>` 요소를 일반 텍스트로 표시하고 싶은 경우, `.form-control-plaintext` 클래스를 사용합니다. 기본 폼 필드의 스타일을 삭제하고 그에 맞는 마진과 패딩을 유지한 일반 텍스트로 보여집니다.
 
 {{< example >}}
   <div class="mb-3 row">
@@ -115,9 +115,9 @@ If you want to have `<input readonly>` elements in your form styled as plain tex
 
 ## Datalists
 
-Datalists allow you to create a group of `<option>`s that can be accessed (and autocompleted) from within an `<input>`. These are similar to `<select>` elements, but come with more menu styling limitations and differences. While most browsers and operating systems include some support for `<datalist>` elements, their styling is inconsistent at best.
+데이터 목록을 사용하면 `<input>` 안에서 액세스(및 자동 보완) 할 수 있는 `<option>` 그룹을 작성할 수 있습니다. 이들은 `<select>` 요소와 비슷하지만 메뉴 표시에는 많은 제한과 차이가 있습니다. 대부분의 브라우저나 운영 체계는 `<datalist>` 요소를 어느 정도 지원하고 있지만, 그 표시에는 일관성이 없습니다.
 
-Learn more about [support for datalist elements](https://caniuse.com/datalist).
+자세한 내용은 [datalist 요소의 서포트](https://caniuse.com/datalist)를 참고해 주세요.
 
 {{< example >}}
 <label for="exampleDataList" class="form-label">Datalist example</label>
