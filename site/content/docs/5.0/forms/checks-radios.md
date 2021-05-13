@@ -199,7 +199,7 @@ toc: true
 
 ## Without labels
 
-라벨 텍스트가 없는 체크박스나 라디오 버튼을 사용할 때에는 `.form-check`를 생략합니다. 지원 기술을 위해 어떤 형태로든 접근성에 맞는 이름을 제공해야 하는 것을 잊지 마세요.(예를 들어, `aria-label`을 사용한다든지 등). 자세한 내용은 [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}})을 참조해 주세요.
+라벨 텍스트가 없는 체크박스나 라디오 버튼을 사용할 때에는 `.form-check`를 생략합니다. 지원 기술을 위해 어떤 형태로든 접근성에 맞는 이름을 제공해야 하는 것을 잊지 마세요.(예를 들어, `aria-label`을 사용 한다든지 등). 자세한 내용은 [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}})을 참조해 주세요.
 
 {{< example >}}
 <div>
