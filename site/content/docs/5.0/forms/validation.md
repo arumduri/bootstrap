@@ -17,14 +17,14 @@ extra_js:
 
 Bootstrap에서의 폼 검증 구조를 소개합니다:
 
-- HTML의 폼 검증은 CSS의 두개의 가상 클래스 `:invalid` 와 `:valid`로 적용됩니다. 이는 `<input>`, `<select>`, `<textarea>` 요소에 적용됩니다.
-- Bootstrap는 `:invalid` 과 `:valid` 스타일을 부모의 `.was-validated` 클래스에 스코프해 보통은 `<form>`에 적용합니다. 그렇지 않으면 값이 없는 필수 필든는 페이지 로드 시 비활설화 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)
+- HTML의 폼 검증은 CSS의 두개의 가상 클래스 `:invalid` 와 `:valid`를 사용해 `<input>`, `<select>`, `<textarea>` 요소에 적용됩니다.
+- Bootstrap는 `:invalid` 과 `:valid` 스타일을 상위 클래스 `.was-validated`에 범위를 지정하고 일반적으로 `<form>`에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 비활설화 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)
 - 폼의 외형을 새로 적용하려면(예를 들어, AJAX를 사용한 동적인 폼 송신의 경우), 송신 후에 `.was-validated` 클래스를 `<form>`으로부터 다시 삭제합니다.
-- 폴백으로서 [server-side validation](#server-side)의 가상 클래스 대신 `.is-invalid` 와 `.is-valid` 클래스를 사용할 수 있습니다. 이 클래스들은 부모 클래스인 `.was-validated`를 필요로 하지 않습니다.
-- CSS 동작에 제약이 있기 때문에 (현시점에서는)사용자 정의 JavaScript의 도움을 받지 않고 DOM 내에서 폼 컨트롤릐 앞에 있는 `<label>`에 스타일을 적용할 수 없습니다.
-- 모든 모던 브라우저는ㄴ 폼 컨트롤을 검증하기 위한 일련의 JavaScript 메소드인 [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api)를 지원합니다.
-- 피드백 메세지는 [browser defaults](#browser-defaults) (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다) 나 HTML과 CSS를 추가한 사용자 피드백 스타일을 이용할 수 도 있습니다.
-- `setCustomValidity` in JavaScript의 `setCustomValidity`를 사용해 사용자 정의의 유효성 메세지를 제공할 수도 있습니다.
+- 폴백으로서 [server-side validation](#server-side)의 가상 클래스 대신 `.is-invalid` 와 `.is-valid` 클래스를 사용할 수 있습니다. 이 클래스들은 상위 클래스인 `.was-validated`를 필요로 하지 않습니다.
+- (현시점에서는)CSS 동작에 제약이 있기 때문에 사용자 정의 JavaScript의 도움을 받지 않고 DOM 내에서 폼 컨트롤의 앞에 있는 `<label>`에 스타일을 적용할 수 없습니다.
+- 모든 모던 브라우저는 폼 컨트롤을 검증하기 위한 일련의 JavaScript 메소드인 [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api)를 지원합니다.
+- 피드백 메세지는 [browser defaults](#browser-defaults) (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다)나 HTML과 CSS를 추가한 사용자 피드백 스타일을 이용할 수 도 있습니다.
+- JavaScript의 `setCustomValidity`를 사용해 사용자 정의의 유효성 문구를 제공할 수도 있습니다.
 
 이 점을 고려하여 사용자 정의 폼 검증 스타일, 옵션 서버 사이드 클래스 및 브라우저 기본값에 대해, 아래의 데모를 검토해 주세요.
 
