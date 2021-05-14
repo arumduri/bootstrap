@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Spinners(스피너)
-description: HTML, CSS, JavaScript 를 사용하지 않고 완전히 구축된 Bootstrap 스피너를 사용하여 컴포넌트나 페이지의 로딩 상태를 표시합니다.
+description: HTML, CSS, JavaScript를 사용하지 않고 완전히 구축된 Bootstrap 스피너를 사용하여 컴포넌트나 페이지의 로딩 상태를 표시합니다.
 group: components
 toc: true
 ---
 
 ## About
 
-Bootstrap "스피너"는 프로젝트의 로딩 상태를 표시하기 위해 사용할 수 있습니다. 이것은 HTML 과 CSS 로 만들어져 있기 때문에 JavaScript 를 필요로 하지 않습니다. 그러나 가시성을 바꾸기 위해 몇 가지의 커스텀 JavaScript 가 필요합니다. 이러한 외형, 배치, 크기는 유틸리티 클래스를 통해 간단하게 커스터마이즈 할 수 있습니다.
+Bootstrap "스피너"는 프로젝트의 로딩 상태를 표시하기 위해 사용할 수 있습니다. 이것은 HTML과 CSS로 만들어져 있기 때문에 JavaScript를 필요로 하지 않습니다. 그러나 가시성을 바꾸기 위해 몇 가지의 커스텀 JavaScript가 필요합니다. 이러한 외형, 배치, 크기는 유틸리티 클래스를 통해 간단하게 커스터마이즈 할 수 있습니다.
 
 접근성을 위해, 여기에서의 각 loader 는 `role="status"` 과 `<span class="visually-hidden">Loading...</span>` 을 포함하고 있습니다.
 
@@ -46,7 +46,7 @@ Border 스피너는 `border-color` 에 `currentColor` 을 사용합니다. 표�
 
 ## Growing spinner
 
-Border 스피너를 싫어하는 분은, grow 스피너를 사용하십시오. 기술적으로는 회전하지 않지만 grow 를 반복시키고 있습니다.
+Border 스피너를 싫어하는 분은, grow 스피너를 사용하십시오. 기술적으로는 회전하지 않지만 grow를 반복시키고 있습니다.
 
 {{< example >}}
 <div class="spinner-grow" role="status">
@@ -54,7 +54,7 @@ Border 스피너를 싫어하는 분은, grow 스피너를 사용하십시오. �
 </div>
 {{< /example >}}
 
-다시 한번 말씀드리지만, 이 스피너는 `currentColor` 로 만들어졌기 때문에 [text color utilities][color] 로 쉽게 외형을 바꿀 수 있습니다.
+다시 한번 말씀드리지만, 이 스피너는 `currentColor` 로 만들어졌기 때문에 [text color utilities][color]로 외형을 쉽게 바꿀 수 있습니다.
 
 {{< example >}}
 {{< spinner.inline >}}
@@ -134,7 +134,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 </div>
 {{< /example >}}
 
-혹은, 커스텀 CSS 나 인라인 스타일을 사용하여 필요에 따라서 치수를 변경할 수 있습니다.
+혹은, 커스텀 CSS나 인라인 스타일을 사용하여 필요에 따라서 치수를 변경할 수 있습니다.
 
 {{< example >}}
 <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
@@ -147,7 +147,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 
 ## Buttons
 
-버튼 중 스피너를 사용하여 액션이 현재 처리 중이거나 실행 중임을 나타냅니다. 또한 스피너 밖에 있는 텍스트를 교체하여 필요에 따라 버튼 텍스트를 이용할 수도 있습니다.
+버튼 중 스피너를 사용하여 액션이 현재 처리 중이거나 실행 중임을 나타냅니다. 또한 스피너 밖에 있는 텍스트를 교체하여 필요에 따라 버튼 텍스트를 이용할 수 있습니다.
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
@@ -170,6 +170,20 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
   Loading...
 </button>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="spinner-variables" file="scss/_variables.scss" >}}
+
+### Keyframes
+
+Used for creating the CSS animations for our spinners. Included in `scss/_spinners.scss`.
+
+{{< scss-docs name="spinner-border-keyframes" file="scss/_spinners.scss" >}}
+
+{{< scss-docs name="spinner-grow-keyframes" file="scss/_spinners.scss" >}}
 
 
 [color]:   {{< docsref "/utilities/colors" >}}

@@ -1,21 +1,21 @@
 ---
 layout: docs
 title: Progress(프로그레스)
-description: Stacked bars, animated backgrounds, text labels 의 지원을 특징으로 하는 Bootstrap 커스텀 프로그레스바를 사용하기 위한 문서와 예시입니다. .
+description: 스택형 막대, 애니메이션 배경 및 텍스트 레이블을 지원하는 Bootstrap 사용자정의의 프로그레스 바를 위한 문서 및 예제입니다.
 group: components
 toc: true
 ---
 
 ## How it works
 
-프로그레스 컴포넌트는 2개의 HTML 요소와ㅗ 너비를 설정하기 위한 몇 가지 CSS와  몇가지의 속성으로 구축됩니다. [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress) 는 사용하지 않으므로, 프로그레스바를 쌓아 올리거나 애니메이션 시키거나 텍스트 라벨을 배치할 수 있습니다.
+프로그레스 컴포넌트는 2개의 HTML 요소와 너비를 설정하기 위한 몇 가지 CSS와 속성들로 구축됩니다. [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress) 는 사용하지 않으므로, 프로그레스 바를 쌓아 올리거나 애니메이션화 하거나 텍스트 라벨을 배치할 수 있습니다.
 
-- 프로그레서바의 최대 너비를 나타내기 위해 `.progress` 을 사용합니다.
-- 진척 상황을 나타내기 위해 안쪽에 `.progress-bar` 을 사용합니다.
-- `.progress-bar` 는 폭을 설정하기 위해 인라인 스타일, 유틸리티 클래스 또는 커스텀 CSS 를 필요로 합니다.
+- 프로그레스 바의 최대 너비를 나타내기 위해 `.progress` 를 사용합니다.
+- 진행상황을 나타내기 위해 안쪽에 `.progress-bar` 를 사용합니다.
+- `.progress-bar` 는 폭을 설정하기 위해 인라인 스타일, 유틸리티 클래스 또는 커스텀 CSS를 필요로 합니다.
 - `.progress-bar` 는 액세스 할 수 있도록 몇개의 `role` 과 `aria` 속성을 필요로 합니다.
 
-이를 정리하면 다음과 같은 예가 됩니다.
+이를 정리하면 다음과 같습니다.
 
 {{< example >}}
 <div class="progress">
@@ -45,7 +45,7 @@ Bootstrap [utilities for setting width]({{< docsref "/utilities/sizing" >}}) 를
 
 ## Labels
 
-`.progress-bar` 안에 텍스트를 배치하고 프로그레스바에 라벨을 추가합니다.
+`.progress-bar` 안에 텍스트를 배치하고 프로그레스 바에 라벨을 추가합니다.
 
 {{< example >}}
 <div class="progress">
@@ -55,7 +55,7 @@ Bootstrap [utilities for setting width]({{< docsref "/utilities/sizing" >}}) 를
 
 ## Height
 
-`.progress` 에는 `height` 값 밖에 설정되어 있지 않기 때문에, 이 값을 변경하면 내부의 `.progress-bar` 는 그에 따라 자동적으로 크기가 변경됩니다.
+`.progress` 에는 `height` 값만 설정되어 있기 때문에, 이 값을 변경하면 내부 `.progress-bar` 는 그에 따라 자동적으로 크기가 변경됩니다.
 
 {{< example >}}
 <div class="progress" style="height: 1px;">
@@ -68,7 +68,7 @@ Bootstrap [utilities for setting width]({{< docsref "/utilities/sizing" >}}) 를
 
 ## Backgrounds
 
-Background 유틸리티 클래스를 사용해 각각의 프로그레스바의 외형을 변경합니다.
+Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 외형을 변경합니다.
 
 {{< example >}}
 <div class="progress">
@@ -87,7 +87,7 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스바의 �
 
 ## Multiple bars
 
-필요에 따라 프로그레스 컴포넌트에 여러 개의 프로그레스바를 포함할 수 있습니다.
+필요에 따라 프로그레스 컴포넌트에 여러 개의 프로그레스 바를 포함할 수 있습니다.
 
 {{< example >}}
 <div class="progress">
@@ -99,7 +99,7 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스바의 �
 
 ## Striped
 
-임의의 `.progress-bar` 에 `.progress-bar-striped` 를 추가해 프로그레스바의 배경 색상에 CSS 그라데이션으로 스트라이프를 적용합니다.
+임의의 `.progress-bar` 에 `.progress-bar-striped` 를 추가해 프로그레스 바의 배경 색상에 CSS 그라데이션으로 스트라이프를 적용합니다.
 
 {{< example >}}
 <div class="progress">
@@ -137,3 +137,15 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스바의 �
   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
 </div>
 ```
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="progress-variables" file="scss/_variables.scss" >}}
+
+### Keyframes
+
+Used for creating the CSS animations for `.progress-bar-animated`. Included in `scss/_progress-bar.scss`.
+
+{{< scss-docs name="progress-keyframes" file="scss/_progress.scss" >}}

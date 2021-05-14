@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Badges(배지)
-description: 배지에 대한 개요와 사용법의 예시입니다.
+description: 배지에 대한 개요와 사용법 예시입니다.
 group: components
 toc: true
 ---
@@ -27,7 +27,7 @@ toc: true
 </button>
 {{< /example >}}
 
-배지를 사용하는 방법에 따라서는, 스크린 리너나 동일한 지원기술을 사용하는 사용자에게 있어서는 혼란을 줄 수 있으므로 주의하십시오. 배지의 스타일은 그 목적을 시각적으로 보여주는 것이지만, 이러한 사용자들에게는 단지 배지의 내용만이 제시될 뿐입니다. 특정 상황에 따라 이 배지들은 문장의 끝, 링크 혹은 버튼에 임의로 추가된 단어나 숫자로 보일수 있습니다.
+배지를 사용하는 방법에 따라서, 스크린 리더나 동일한 지원기술을 사용하는 사용자에게 혼란을 줄 수 있으므로 주의하세요. 배지의 스타일은 그 목적을 시각적으로 보여주는 것이지만, 이러한 사용자들에게는 단지 배지의 내용만이 제시될 뿐입니다. 특정 상황에 따라 이 배지들은 문장의 끝, 링크 혹은 버튼에 임의로 추가된 단어나 숫자로 보일수 있습니다.
 
 문맥이 명확하지 않는 경우("Notifications" 의 예처럼, "4" 가 알림 숫자라고 이해되는 경우), 시각적으로 숨겨진 추가 텍스트 부분에 추가 문맥을 포함시키는 것을 검토해 주세요.
 
@@ -40,7 +40,7 @@ toc: true
 
 ## Background colors
 
-Background 유틸리티 클래스를 사용해, 배지의 외형을 변경할 수 있습니다. Bootstrap 의 기본의 `.bg-light` 를 사용할 경우, 적절한 스타일링을 위해 `.text-dark` 와 같은 글자 색을 변경하는 유틸리티가 필요할 수도 있으니 유의하십시오. Background 유틸리티 클래스는 `background-color` 외에는 아무것도 설정하지 않기 때문입니다.
+Background 유틸리티 클래스를 사용해, 배지의 외형을 변경할 수 있습니다. Bootstrap 의 기본의 `.bg-light` 를 사용할 경우, 적절한 스타일링을 위해 `.text-dark` 와 같은 글자 색을 변경하는 유틸리티가 필요할 수 있으니 주의하세요. Background 유틸리티 클래스는 `background-color` 외에는 아무것도 설정하지 않기 때문입니다.
 
 {{< example >}}
 {{< badge.inline >}}
@@ -55,7 +55,7 @@ Background 유틸리티 클래스를 사용해, 배지의 외형을 변경할 �
 
 ## Pill badges
 
-`.rounded-pill` 를 사용하면 더 둥그러진 `border-radius` 로 배지를 만들 수 있습니다.
+`.rounded-pill` 을 사용하면 `border-radius` 보다 더 동그란 배지를 만들 수 있습니다.
 
 {{< example >}}
 {{< badge.inline >}}
@@ -63,3 +63,9 @@ Background 유틸리티 클래스를 사용해, 배지의 외형을 변경할 �
 <span class="badge rounded-pill bg-{{ .name }}{{ with .contrast_color }} text-{{ . }}{{ end }}">{{ .name | title }}</span>{{- end -}}
 {{< /badge.inline >}}
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="badge-variables" file="scss/_variables.scss" >}}

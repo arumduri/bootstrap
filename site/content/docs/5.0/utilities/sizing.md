@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Sizing
-description: Easily make an element as wide or as tall with our width and height utilities.
+title: Sizing (사이징)
+description: 너비 및 높이 유틸리티를 사용하여 요소의 폭 또는 높이를 쉽게 조정 할 수 있습니다.
 group: utilities
 toc: true
 ---
 
 ## Relative to the parent
 
-Width and height utilities are generated from the utility API in `_utilities.scss`. Includes support for `25%`, `50%`, `75%`, `100%`, and `auto` by default. Modify those values as you need to generate different utilities here.
+너비 및 높이 유틸리티는 `_utilities.scss` 의 유틸리티 API에서 생성됩니다. 기본적으로 `25 %` , `50 %` , `75 %` , `100 %` 및 `auto` 에 대한 지원을 포함합니다. 여기에서 다른 유틸리티를 생성 해야하므로 해당 값을 수정하십시오.
 
 {{< example >}}
 <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
@@ -28,7 +28,7 @@ Width and height utilities are generated from the utility API in `_utilities.scs
 </div>
 {{< /example >}}
 
-You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
+필요에 따라 `max-width : 100 %;` 및 `max-height : 100 %;` 유틸리티를 사용할 수도 있습니다.
 
 {{< example >}}
 {{< placeholder width="100%" height="100" class="mw-100" text="Max-width 100%" >}}
@@ -42,7 +42,7 @@ You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
 
 ## Relative to the viewport
 
-You can also use utilities to set the width and height relative to the viewport.
+유틸리티를 사용하여 뷰포트에 상대적인 너비와 높이를 설정 할 수 있습니다.
 
 ```html
 <div class="min-vw-100">Min-width 100vw</div>
@@ -50,3 +50,11 @@ You can also use utilities to set the width and height relative to the viewport.
 <div class="vw-100">Width 100vw</div>
 <div class="vh-100">Height 100vh</div>
 ```
+
+## Sass
+
+### Utilities API
+
+Sizing utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-sizing" file="scss/_utilities.scss" >}}

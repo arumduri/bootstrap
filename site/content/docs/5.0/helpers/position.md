@@ -24,7 +24,7 @@ toc: true
 
 ## Sticky top
 
-요소가 스크롤링에 의해 뷰포트 최상단에 위치하게 된 후에도 스크롤링에 의해 지나가지 않고 가장자리부터 가장자리까지 상단에 고정됩니다. `.sticky-top` 유틸리는 CSS의 `position: sticky`를 사용하기 때문에 어떠한 브라우저에서는 완벽하게 작동하지 않을 수 있습니다.
+요소가 스크롤링에 의해 뷰포트 최상단에 위치하게 된 후에도 스크롤링에 의해 지나가지 않고 가장자리부터 가장자리까지 상단에 고정됩니다. `.sticky-top` 유틸리는 CSS의 `position: sticky` 를 사용하기 때문에 어떠한 브라우저에서는 완벽하게 작동하지 않을 수 있습니다.
 
 
 ```html
@@ -33,7 +33,7 @@ toc: true
 
 ## Responsive sticky top
 
-`.sticky-top`유틸리티는 반응형에 대한 변형도 존재합니다.
+`.sticky-top` 유틸리티는 반응형에 대한 변형도 존재합니다.
 
 ```html
 <div class="sticky-sm-top">Stick to the top on viewports sized SM (small) or wider</div>

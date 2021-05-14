@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Position
-description: Use these shorthand utilities for quickly configuring the position of an element.
+description: 요소의 위치를 빠르게 구성하려면 이러한 단축 유틸리티를 사용하십시오.
 group: utilities
 toc: true
 ---
 
 ## Position values
 
-Quick positioning classes are available, though they are not responsive.
+빠른 위치 지정 클래스를 사용할 수 있지만 반응형은 없습니다.
 
 ```html
 <div class="position-static">...</div>
@@ -20,9 +20,9 @@ Quick positioning classes are available, though they are not responsive.
 
 ## Arrange elements
 
-Arrange elements easily with the edge positioning utilities. The format is `{property}-{position}`.
+edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 형식은 `{property}-{position}` 입니다.
 
-Where *property* is one of:
+here *property* is one of:
 
 - `top` - for the vertical `top` position
 - `start` - for the horizontal `left` position (in LTR)
@@ -35,7 +35,7 @@ Where *position* is one of:
 - `50` - for `50%` edge position
 - `100` - for `100%` edge position
 
-(You can add more position values by adding entries to the `$position-values` Sass map variable.)
+(`$ position-values` Sass 맵 변수에 항목을 추가하면 더 많은 위치 값을 추가 할 수 있습니다.)
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -50,9 +50,9 @@ Where *position* is one of:
 
 ## Center elements
 
-In addition, you can also center the elements with the transform utility class `.translate-middle`.
+또한 변환 유틸리티 클래스 `.translate-middle` 을 사용하여 요소를 중앙에 배치 할 수도 있습니다.
 
-This class applies the transformations `translateX(-50%)` and `translateY(-50%)` to the element which, in combination with the edge positioning utilities, allows you to absolute center an element.
+이 클래스는 요소에 `translateX (-50 %)` 및 `translateY (-50 %)` 변환을 요소에 적용하여 edge positioning 유틸리티와 함께 요소를 absolute center 로 지정 할 수 있습니다.
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -68,7 +68,7 @@ This class applies the transformations `translateX(-50%)` and `translateY(-50%)`
 </div>
 {{< /example >}}
 
-By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can be positioned only in horizontal or vertical direction.
+`.translate-middle-x` 또는 `.translate-middle-y` 클래스를 추가하면 요소를 가로 또는 세로 방향으로만 배치 할 수 있습니다.
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -86,7 +86,7 @@ By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can b
 
 ## Examples
 
-Here are some real life examples of these classes:
+다음은 해당 클래스의 실제 예시입니다.
 
 {{< example class="bd-example-position-examples d-flex justify-content-around" >}}
 <button type="button" class="btn btn-primary position-relative">
@@ -102,12 +102,12 @@ Here are some real life examples of these classes:
 </button>
 {{< /example >}}
 
-You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the `$position-values` variable.
+해당 클래스를 기존 구성 요소와 함께 사용하여 새 구성 요소를 만들 수 있습니다. `$ position-values` 변수에 항목을 추가하여 기능을 확장 할 수 있습니다.
 
 {{< example class="bd-example-position-examples" >}}
 <div class="position-relative m-4">
   <div class="progress" style="height: 1px;">
-    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
   <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">1</button>
   <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">2</button>
@@ -115,3 +115,16 @@ You can use these classes with existing components to create new ones. Remember 
 </div>
 {{< /example >}}
 
+## Sass
+
+### Maps
+
+Default position utility values are declared in a Sass map, then used to generate our utilities.
+
+{{< scss-docs name="position-map" file="scss/_variables.scss" >}}
+
+### Utilities API
+
+Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-position" file="scss/_utilities.scss" >}}

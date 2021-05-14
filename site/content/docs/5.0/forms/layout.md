@@ -1,26 +1,26 @@
 ---
 layout: docs
-title: Layout
-description: Give your forms some structure—from inline to horizontal to custom grid implementations—with our form layout options.
+title: Layout(레이아웃)
+description: 인라인, 수평, 사용자 그리드 등의 구현 방법까지 폼에 구조를 갖게 하는 폼 레이아웃 옵션을 준비하고 있습니다.
 group: forms
 toc: true
 ---
 
 ## Forms
 
-Every group of form fields should reside in a `<form>` element. Bootstrap provides no default styling for the `<form>` element, but there are some powerful browser features that are provided by default.
+폼 필드의 모든 그룹은 `<form>` 요소 안에 존재해야 합니다. Bootstrap은 `<form>` 요소에 기본 스타일링은 제공하지 않지만 기본 제공되는 몇 가지 강력한 브라우저 기능이 있습니다.
 
-- New to browser forms? Consider reviewing [the MDN form docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) for an overview and complete list of available attributes.
-- `<button>`s within a `<form>` default to `type="submit"`, so strive to be specific and always include a `type`.
-- You can disable every form element within a form with the `disabled` attribute on the `<form>`.
+- 브라우저 폼은 처음이신가요? 사용 가능한 속성의 개요 및 전체 목록에 대해서는 [the MDN form docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)를 참조해 주세요.
+- `<form>` 내 `<button>`의 기본은 `type="submit"` 이므로, 구체적으로 항상 `type`을 사용해 주세요.
+- `<form>`의 `disabled` 속성을 사용하여 폼 내의 모든 폼 요소를 무효화 시킬수 있습니다.
 
-Since Bootstrap applies `display: block` and `width: 100%` to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를 적용하여 기본적으로 수직으로 쌓고 있습니다. 추가 클래스를 사용하여 폼 별로 이 레이아웃을 바꿀 수 있습니다.
 
 ## Utilities
 
-[Margin utilities]({{< docsref "/utilities/spacing" >}}) are the easiest way to add some structure to forms. They provide basic grouping of labels, controls, optional form text, and form validation messaging. We recommend sticking to `margin-bottom` utilities, and using a single direction throughout the form for consistency.
+[Margin utilities]({{< docsref "/utilities/spacing" >}})는 폼에 구조를 추가하는 가장 간단한 방법입니다. 이들은 라벨, 컨트롤, 옵션 폼 텍스트, 폼 검증 문구의 기본적인 그룹화를 제공합니다. 우리는 일관성을 유지하기 위해 `margin-bottom`유틸리티를 사용해 폼 전체에 하나의 방향성을 사용할 것을 권장합니다.
 
-Feel free to build your forms however you like, with `<fieldset>`s, `<div>`s, or nearly any other element.
+`<fieldset>`나 `<div>` 등의 거의 모든 요소를 사용하여 자유롭게 폼을 작성해 주세요.
 
 {{< example >}}
 <div class="mb-3">
@@ -35,7 +35,9 @@ Feel free to build your forms however you like, with `<fieldset>`s, `<div>`s, or
 
 ## Form grid
 
-More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options. **Requires the `$enable-grid-classes` Sass variable to be enabled** (on by default).
+보다 복잡한 폼은 그리드 클래스를 사용하여 만들 수 있습니다. 그리드 클래스를 사용해 여러 개의 컬럼, 다양한 너비, 추가 배치 옵션이 필요한 폼 레이아웃 표현이 가능합니다.
+
+**Sass변수 `$enable-grid-classes`가 활성화 되어 있어야 합니다** (기본이 활성화 상태임).
 
 {{< example >}}
 <div class="row">
@@ -50,7 +52,7 @@ More complex forms can be built using our grid classes. Use these for form layou
 
 ## Gutters
 
-By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), you can have control over the gutter width in as well the inline as block direction. **Also requires the `$enable-grid-classes` Sass variable to be enabled** (on by default).
+[gutter modifier classes]({{< docsref "/layout/gutters" >}})를 추가하는 것으로, 인라인이나 블록 방향으로 거터의 너비를 조정할 수 있습니다. **이또한 Sass 변수 `$enable-grid-classes`가 활성화 되어 있어야 합니다.** (기본값이 활성화 상태임).
 
 {{< example >}}
 <div class="row g-3">
@@ -63,7 +65,7 @@ By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), you can 
 </div>
 {{< /example >}}
 
-More complex layouts can also be created with the grid system.
+그리드 시스템을 사용하여 보다 복잡한 레이아웃을 만들 수도 있습니다.
 
 {{< example >}}
 <form class="row g-3">
@@ -114,9 +116,9 @@ More complex layouts can also be created with the grid system.
 
 ## Horizontal form
 
-Create horizontal forms with the grid by adding the `.row` class to form groups and using the `.col-*-*` classes to specify the width of your labels and controls. Be sure to add `.col-form-label` to your `<label>`s as well so they're vertically centered with their associated form controls.
+폼 그룹에 `.row` 클래스를 추가하고 `.col-*-*` 클래스를 사용해 라벨이나 컨트롤의 폭을 지정하는 것으로, 그리드를 사용한 수평 방향의 폼을 작성할 수 있습니다. `<label>`에는 반드시 `.col-form-label`을 추가하여 관련 폼 컨트롤과 함께 수직방향의 중앙에 배치하도록 합니다.
 
-At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the `padding-top` on our stacked radio inputs label to better align the text baseline.
+경우에 따라서는 완변한 배치를 위해 여백(마진이나 패딩) 유틸리티를 사용할 필요가 있을지도 모릅니다. 예를 들어 아래의 예시와 같이 오른쪽의 쌓여진 라디오 버튼의 라벨과의 정렬을 맞추기 위해 `padding-top`을 삭제하는 유틸리티를 추가합니다.
 
 {{< example >}}
 <form>
@@ -171,7 +173,7 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 
 ### Horizontal form label sizing
 
-Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s or `<legend>`s to correctly follow the size of `.form-control-lg` and `.form-control-sm`.
+`.form-control-lg` 와 `.form-control-sm`의 사용에 따라 `<label>`이나 `<legend>`에 `.col-form-label-sm` 이나 `.col-form-label-lg`를 사용해 주세요.
 
 {{< example >}}
 <div class="row mb-3">
@@ -196,7 +198,7 @@ Be sure to use `.col-form-label-sm` or `.col-form-label-lg` to your `<label>`s o
 
 ## Column sizing
 
-As shown in the previous examples, our grid system allows you to place any number of `.col`s within a `.row`. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining `.col`s equally split the rest, with specific column classes like `.col-sm-7`.
+지금까지의 예시에서 봐왔듯 그리드 시스템에는 `.row` 안에 `.col`을 몇 개라도 배치할 수 있습니다. 이 열들은 이용 가능한 너비를 균등하게 분할합니다. 또한 `.col-sm-7`와 같은 특정 컬럼 클래스를 사용하여 컬럼 서브셋을 선택하여 공간을 늘리거나 줄이거나 나머지 `.col`들을 균등 분할할 수도 있습니다.
 
 {{< example >}}
 <div class="row g-3">
@@ -214,7 +216,7 @@ As shown in the previous examples, our grid system allows you to place any numbe
 
 ## Auto-sizing
 
-The example below uses a flexbox utility to vertically center the contents and changes `.col` to `.col-auto` so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+아래 예시에서는 플렉스박스 유틸리티를 사용하여 컨텐츠를 수직 방향으로 중앙에 오게 하고 `.col`을 `.col-auto`로 변경함으로써 필요한 만큼 컬럼이 공간을 차지하도록 하고 있습니다. 컨텐츠에 따라 컬럼의 크기가 다르게 설정됩니다.
 
 {{< example >}}
 <form class="row gy-2 gx-3 align-items-center">
@@ -252,7 +254,7 @@ The example below uses a flexbox utility to vertically center the contents and c
 </form>
 {{< /example >}}
 
-You can then remix that once again with size-specific column classes.
+그리고 그것을 크기별 컬럼 클래스에서 다시 한번 조합할 수 있습니다.
 
 {{< example >}}
 <form class="row gx-3 gy-2 align-items-center">
@@ -292,7 +294,7 @@ You can then remix that once again with size-specific column classes.
 
 ## Inline forms
 
-Use the `.col-auto` class to create horizontal layouts. By adding [gutter modifier classes]({{< docsref "/layout/gutters" >}}), we'll have gutters in horizontal and vertical directions. The `.align-items-center` aligns the form elements to the middle, making the `.form-checkbox` align properly.
+`.row-cols-*` 클래스를 사용해, 수평 방향의 레이아웃을 만듭니다. [gutter modifier classes]({{< docsref "/layout/gutters" >}})를 추가함으로써 수평 방향과 수직 방향에 거터를 적절하게 줄 수 있습니다. 좁은 모바일 뷰포트에서 `.col-12` 는 양식 컨트롤 등을 쌓을 수 있도록 도와줍니다. `.align-items-center`를 사용해 폼 요소를 중앙에 오게 해 `.form-checkbox`의 위치가 예쁘게 적용되었습니다.
 
 {{< example >}}
 <form class="row row-cols-lg-auto g-3 align-items-center">

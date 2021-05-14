@@ -1,78 +1,87 @@
 ---
 layout: docs
-title: Approach
-description: Learn about the guiding principles, strategies, and techniques used to build and maintain Bootstrap so you can more easily customize and extend it yourself.
+title: Approach(접근)
+description: Bootstrap을 구축하고 유지 관리하는 데에 사용되는 기본 원칙, 전략 및 기술에 대해 알아본 다음 직접 커스터마이징하고 확장해보세요.
 group: extend
 aliases:
   - "/docs/5.0/extend/"
 ---
 
-While the getting started pages provide an introductory tour of the project and what it offers, this document focuses on _why_ we do the things we do in Bootstrap. It explains our philosophy to building on the web so that others can learn from us, contribute with us, and help us improve.
+시작하기 페이지는 프로젝트와 프로젝트에서 제공되는 것들에 대한 소개를 제공하지만 이 문서는 우리가 _왜_ Bootstrap을 이렇게 만들었는지에 초점을 맞춥니다. 여기에서는 다른 사람들이 우리에게 배우고, 우리와 함께 기여하고, 우리의 발전을 도울 수 있도록 웹을 구축하려는 우리의 철학을 설명합니다.
 
-See something that doesn't sound right, or perhaps could be done better? [Open an issue]({{< param repo >}}/issues/new)—we'd love to discuss it with you.
+올바르지 않거나 더 완벽하게 만들 필요가 있는 부분을 발견하셨나요? [이슈를 열어주세요]({{< param repo >}}/issues/new). 논의는 언제든지 환영합니다.
 
 ## Summary
 
-We'll dive into each of these more throughout, but at a high level, here's what guides our approach.
+각 부분에 대한 것은 아래에서 더 자세히 다룰 예정이지만 크게 보자면 우리의 접근은 다음과 같이 나타낼 수 있습니다.
 
-- Components should be responsive and mobile-first
-- Components should be built with a base class and extended via modifier classes
-- Component states should obey a common z-index scale
-- Whenever possible, prefer a HTML and CSS implementation over JavaScript
-- Whenever possible, use utilities over custom styles
-- Whenever possible, avoid enforcing strict HTML requirements (children selectors)
+- 컴포넌트는 반응형이여야 하며 모바일을 우선적으로 지원해야 함
+- 컴포넌트는 기본 클래스로 빌드되어야 하며 수정자 클래스로 확장되어야 함
+- 컴포넌트는 일반적인 z-index 크기를 따라야 함
+- 가능하다면 JavaScript보다는 HTML이나 CSS로 구현되여야 함
+- 가능하다면 커스텀 스타일보다는 유틸리티를 사용해야 함
+- 가능하다면 강제 HTML 요구 사항 (requirement)을 강제 (strict)하는 것을 피해야 함 (하위 선택자)
 
 ## Responsive
 
-Bootstrap's responsive styles are built to be responsive, an approach that's often referred to as _mobile-first_. We use this term in our docs and largely agree with it, but at times it can be too broad. While not every component _must_ be entirely responsive in Bootstrap, this responsive approach is about reducing CSS overrides by pushing you to add styles as the viewport becomes larger.
+Bootstrap의 반응형 스타일은 반응형으로 만들어졌으며, 이는 흔히 _모바일 우선_으로 불립니다. 우리는 이 용어를 우리의 문서에 사용하고 대부분 그렇게 부르는 것에 동의하지만, 때때로 이는 너무 광범위한 표현으로 느껴질 수도 있습니다. Bootstrap의 모든 컴포넌트가 _무조건_ 반응형이여야 하는 것은 아니지만 반응형 접근을 사용한다면 뷰포트가 커질 경우 스타일을 추가하도록 푸시하여 CSS 재정의를 줄일 수 있습니다.
 
-Across Bootstrap, you'll see this most clearly in our media queries. In most cases, we use `min-width` queries that begin to apply at a specific breakpoint and carry up through the higher breakpoints. For example, a `.d-none` applies from `min-width: 0` to infinity. On the other hand, a `.d-md-none` applies from the medium breakpoint and up.
+미디어 쿼리를 통해서 Bootstrap를 확인하면 이러한 사실을 가장 명확하게 확인할 수 있습니다. 대부분의 경우 우리는 `min-width` 쿼리를 사용해서 특정 중단점 (breakpoint)에 적용하며 더 높은 중단점을 통과하는 쿼리를 사용합니다. 예를 들어 `.d-none` 은 `min-width: 0`을 적용해서 무한대로 표시됩니다. `.d-md-none` 을 사용해서 중형 중단점 이상에서 표시되게 할 수도 있습니다.
 
-At times we'll use `max-width` when a component's inherent complexity requires it. At times, these overrides are functionally and mentally clearer to implement and support than rewriting core functionality from our components. We strive to limit this approach, but will use it from time to time.
+때때로 우리는 컴포넌트의 고유한 복잡성이 `max-width`를 요구하면 이를 사용합니다. 때때로 이러한 재정의는 컴포넌트에서 핵심 기능을 다시 작성하는 것보다 구현 및 지원하기에 기능적으로나 직관성에서 더 명확합니다. 우리는 이러한 접근을 제한하도록 노력하고 있지만 수시로 사용할 것입니다.
 
 ## Classes
 
-Aside from our Reboot, a cross-browser normalization stylesheet, all our styles aim to use classes as selectors. This means steering clear of type selectors (e.g., `input[type="text"]`) and extraneous parent classes (e.g., `.parent .child`) that make styles too specific to easily override.
+브라우저 간 정규화 스타일시트 인 Reboot를 제외하고 모든 스타일은 클래스를 선택자로 사용하는 것을 목표로 합니다. 이것은 스타일을 너무 구체적으로 만들어 쉽게 재정의할 수 없는 유형 선택자 (예: `input[type="text"]`)나 외부 상위 클래스 (예: `.parent .child`)를 피해야 한다는 것을 의미합니다.
 
-As such, components should be built with a base class that houses common, not-to-be overridden property-value pairs. For example, `.btn` and `.btn-primary`. We use `.btn` for all the common styles like `display`, `padding`, and `border-width`. We then use modifiers like `.btn-primary` to add the color, background-color, border-color, etc.
+따라서 컴포넌트는 `.btn` 이나 `.btn-primary` 처럼 재정의되지 않는 공통 속성값 쌍을 포함하는 기본 클래스로 빌드해야 합니다. 우리는 `display`, `padding`, `border-width` 와 같은 모든 일반적인 스타일에 `.btn` 을 사용합니다. 그런 다음 `.btn-primary` 와 같은 수정자를 사용하여 색상, 배경색, 테두리 색상 등을 추가합니다.
 
-Modifier classes should only be used when there are multiple properties or values to be changed across multiple variants. Modifiers are not always necessary, so be sure you're actually saving lines of code and preventing unnecessary overrides when creating them. Good examples of modifiers are our theme color classes and size variants.
+수정자 클래스는 여러 변형에서 변경할 속성이나 값이 여러 개인 경우에만 사용해야 합니다. 수정자가 항상 필요한 것은 아니므로 실제로 불필요한 코드를 줄이거나 불필요한 재정의를 방지할 수 있을 때에만 사용해야 합니다. 수정자의 좋은 예는 테마 색상 클래스와 크기 변형입니다.
 
 ## z-index scales
 
-There are two `z-index` scales in Bootstrap—elements within a component and overlay components.
+Bootstrap에는 두 가지 `z-index` 크기가 있습니다. 하나는 컴포넌트 내의 요소이고 나머지 하나는 오버레이 컴포넌트입니다.
 
 ### Component elements
 
-- Some components in Bootstrap are built with overlapping elements to prevent double borders without modifying the `border` property. For example, button groups, input groups, and pagination.
-- These components share a standard `z-index` scale of `0` through `3`.
-- `0` is default (initial), `1` is `:hover`, `2` is `:active`/`.active`, and `3` is `:focus`.
-- This approach matches our expectations of highest user priority. If an element is focused, it's in view and at the user's attention. Active elements are second highest because they indicate state. Hover is third highest because it indicates user intent, but nearly _anything_ can be hovered.
+- Bootstrap의 일부 구성 요소는 `border` 속성을 수정하지 않고 이중 테두리를 방지하기 위해 겹치는 요소로 빌드됩니다. 버튼 그룹, 입력 그룹 및 페이지 매김이 여기에 해당됩니다.
+- 이러한 컴포넌트들은  `z-index` 의  `0` 에서 `3` 까지의 크기를 표준으로 공유합니다.
+- `0`은 기본값 (초기값), `1` 은 `:hover`, `2` 는 `:active`/`.active`, `3` 은 `:focus` 입니다.
+- 이 접근은 가장 높은 사용자 우선 순위에 대한 우리의 기대와 일치합니다. 요소에 포커스가 맞춰지면 뷰에 표시되며 사용자의 주의를 끕니다. 활성 요소는 상태를 나타내기 때문에 두 번째로 높습니다. 호버는 사용자 의도를 나타내기 때문에 세 번째로 높지만 거의 _모든_ 항목은 호버할 수 있습니다.
 
 ### Overlay components
 
-Bootstrap includes several components that function as an overlay of some kind. This includes, in order of highest `z-index`, dropdowns, fixed and sticky navbars, modals, tooltips, and popovers. These components have their own `z-index` scale that begins at `1000`. This starting number was chosen arbitrarily and serves as a small buffer between our styles and your project's custom styles.
+Bootstrap에는 일종의 오버레이로 작동하는 여러 컴포넌트가 포함되어 있습니다. 여기에는 `z-index `, 드롭다운, 상단 네비바와 고정 네비바, 모달, 툴팁 및 팝오버가 포함됩니다. 이러한 컴포넌트에는 `1000` 부터 시작하는 자체적인 `z-index` 크기가 있습니다. 이 시작 번호는 임의로 선택되었으며 우리 스타일과 프로젝트의 커스텀 스타일 사이에 작은 버퍼 역할을 합니다.
 
-Each overlay component increases its `z-index` value slightly in such a way that common UI principles allow user focused or hovered elements to remain in view at all times. For example, a modal is document blocking (e.g., you cannot take any other action save for the modal's action), so we put that above our navbars.
+각 오버레이의 구성 요소는 공통 UI 원칙을 통해 사용자가 초점을 맞추거나 마우스를 올려놓은 요소가 항상 뷰에 유지되도록 허용하는 방식으로 `z-index` 값을 약간 증가시킵니다. 예를 들어, 모달은 문서 차단 (예: 모달 작업에 대해 다른 작업을 저장할 수 없음)하므로 네비바 위에 배치됩니다.
 
-Learn more about this in our [`z-index` layout page]({{< docsref "/layout/z-index" >}}).
+이에 대해서는 [`z-index` 레이아웃 페이지]({{< docsref "/layout/z-index" >}})에서 자세히 알아보세요.
 
 ## HTML and CSS over JS
 
-Whenever possible, we prefer to write HTML and CSS over JavaScript. In general, HTML and CSS are more prolific and accessible to more people of all different experience levels. HTML and CSS are also faster in your browser than JavaScript, and your browser generally provides a great deal of functionality for you.
+우리는 가능하면 JavaScript보다 HTML과 CSS로 작성하는 것을 선호합니다. 일반적으로 HTML과 CSS는 다양한 경험 수준을 가진 더 많은 사람들이 더 많이 사용할 수 있습니다. HTML과 CSS는 브라우저에서 JavaScript보다 빠르며 일반적으로 브라우저는 많은 기능을 제공합니다.
 
-This principle is our first-class JavaScript API using `data` attributes. You don't need to write nearly any JavaScript to use our JavaScript plugins; instead, write HTML. Read more about this in [our JavaScript overview page]({{< docsref "/getting-started/javascript#data-attributes" >}}).
+이 원칙은 `data` 속성을 사용하는 우리의 일급 JavaScript API입니다. JavaScript 플러그인을 사용하기 위해서 거의 모든 JavaScript를 작성하지 않아도 됩니다. 그 대신에 HTML을 작성할 수 있습니다. [JavaScript 개요 페이지]({{< docsref "/getting-started/javascript#data-attributes" >}})에 대해서 자세히 알아보세요.
 
-Lastly, our styles build on the fundamental behaviors of common web elements. Whenever possible, we prefer to use what the browser provides. For example, you can put a `.btn` class on nearly any element, but most elements don't provide any semantic value or browser functionality. So instead, we use `<button>`s and `<a>`s.
+마지막으로, 우리의 스타일은 일반적인 웹 요소의 기본 동작을 기반으로 합니다. 가능한 한 브라우저가 제공하는 것을 사용하는 것을 선호합니다. 예를 들어 거의 모든 요소에 `.btn` 클래스를 배치할 수 있지만 대부분의 요소는 시멘틱 값이나 브라우저 기능을 제공하지 않습니다. 그래서 대신 `<button>`과 `<a>`를 사용합니다.
 
-The same goes for more complex components. While we *could* write our own form validation plugin to add classes to a parent element based on an input's state, thereby allowing us to style the text say red, we prefer using the `:valid`/`:invalid` pseudo-elements every browser provides us.
+더 복잡한 컴포넌트도 마찬가지입니다. 입력 상태를 기반으로 상위 요소에 클래스를 추가하기 위해 자체 양식 유효성 검사 플러그인을 작성할 *수도 있고* 이를 통해 텍스트 스타일을 빨간색으로 지정할 수 있지만 우리는 모든 브라우저에서 제공하는 `:valid`/`:invalid` 의사 요소를 사용하는 것이 좋습니다.
 
 ## Utilities
 
-Utility classes—formerly helpers in Bootstrap 3—are a powerful ally in combatting CSS bloat and poor page performance. A utility class is typically a single, immutable property-value pairing expressed as a class (e.g., `.d-block` represents `display: block;`). Their primary appeal is speed of use while writing HTML and limiting the amount of custom CSS you have to write.
+Bootstrap 3의 도우미 (helpers)였던 유틸리티 클래스는 CSS 과점 (bloat) 및 페이지 성능 저하를 방지하는 데에 있어서 강력한 우군입니다. 유틸리티 클래스는 일반적으로 클래스 (예: `.d-block` 는 `display: block;` 을 나타냄)로 표현되는 변경 불가능한 단일 속성값 쌍입니다. 유틸리티의 주요 매력은 HTML을 작성하는 동안의 사용 속도와 작성해야 하는 커스텀 CSS의 양을 제한하는 것입니다.
 
-Specifically regarding custom CSS, utilities can help combat increasing file size by reducing your most commonly repeated property-value pairs into single classes. This can have a dramatic effect at scale in your projects.
+특히 커스텀 CSS와 관련하여 유틸리티는 가장 일반적으로 반복되는 속성값 쌍을 단일 클래스로 줄임으로써 파일 크기 증가를 방지할 수 있습니다. 이는 프로젝트에서 상당한 규모의 극적인 효과를 낼 수 있습니다.
 
 ## Flexible HTML
 
+항상 가능한 것은 아니지만 우리는 컴포넌트에 대한 HTML 요구 사항에서 지나치게 독단적이지 않도록 노력합니다. 따라서 CSS 선택자에서 단일 클래스에 초점을 맞추고 직접적인 하위 선택자 (`>`)를 피하려고 합니다. 이는 구현에 더 많은 유연성을 제공하고 CSS를 더 단순하고 덜 구체적으로 유지하는 데 도움이 됩니다.
 While not always possible, we strive to avoid being overly dogmatic in our HTML requirements for components. Thus, we focus on single classes in our CSS selectors and try to avoid immediate children selectors (`>`). This gives you more flexibility in your implementation and helps keep our CSS simpler and less specific.
+
+## Code conventions
+
+[Code Guide](https://codeguide.co/) (from Bootstrap co-creator, @mdo) documents how we write our HTML and CSS across Bootstrap. It specifices guidelines for general formatting, common sense defaults, property and attribute orders, and more.
+
+We use [Stylelint](https://stylelint.io/) to enforce these standards and more in our Sass/CSS. [Our custom Stylelint config](https://github.com/twbs/stylelint-config-twbs-bootstrap) is open source and available for others to use and extend.
+
+We use [vnu-jar](https://www.npmjs.com/package/vnu-jar) to enforce standard and semantic HTML, as well as detecting common errors.

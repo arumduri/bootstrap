@@ -10,7 +10,7 @@ Bootstrap은 개발자가 시각적으로 매력적이고 기능이 풍부하며
 
 ## Overview and limitations
 
-Bootstrap으로 개발한 프로젝트의 전반적인 접근성은 작성자가 추가한 마크업, 추가 스타일 및 스크립트에 큰 영향을 받습니다. 이 부분이 올바르게 구현되었다면 [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG21/) (A/AA/AAA), [Section 508](https://www.section508.gov/) 및 유사한 접근성 표준 및 요구사항을 충족하는 Bootstrap을 사용하여 웹사이트와 애플리케이션을 만드는 것이 완벽하게 가능해야 합니다.
+Bootstrap으로 개발한 프로젝트의 전반적인 접근성은 작성자가 추가한 마크업, 추가 스타일 및 스크립트에 큰 영향을 받습니다. 이 부분이 올바르게 구현되었다면 [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/) 및 유사한 접근성 표준 및 요구사항을 충족하는 Bootstrap을 사용하여 웹사이트와 애플리케이션을 만드는 것이 완벽하게 가능해야 합니다.
 
 ### Structural markup
 
@@ -24,7 +24,7 @@ Bootstrap의 구성요소는 상당히 보편적으로 설계되었으므로 작
 
 ### Color contrast
 
-현재 Bootstrap의 기본 팔레트를 구성하는 일부 색상조합은 (단추 변형, 경고 변형, 양식 유효성 검사 표시기 등을 위해 프레임워크 전체에서 사용됨) 색상 대비가 불충분 할 수 있습니다. ([WCAG 2.1 글꼴 색 대비 4.5:1](https://www.w3.org/TR/WCAG21/#contrast-minimum) 미만 및 [WCAG 2.1 글꼴 외 색 대비 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast) 미만이 권장됨). 이 부분은 밝은배경에서 더 강하게 발생하기 때문에 작성자는 특정 색상들을 테스트 한 뒤 필요할 경우 이러한 기본색상을 수동으로 수정/확장하여 적절한 색상 대비를 확인하는 것이 좋습니다.
+현재 Bootstrap의 단추 변형, 경고 변형, 양식 유효성 검사 표시기 등을 위해 프레임워크 전체에서 사용되는 기본 팔레트를 구성하는 일부 색상조합은 색상 대비가 *불충분*할 수 있습니다. ([WCAG 2.1 글꼴 색 대비 4.5:1](https://www.w3.org/TR/WCAG21/#contrast-minimum) 미만 및 [WCAG 2.1 글꼴 외 색 대비 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast) 미만이 권장됨). 이 부분은 밝은배경에서 더 강하게 발생하기 때문에 작성자는 특정 색상들을 테스트 한 뒤 필요할 경우 이러한 기본색상을 수동으로 수정/확장하여 적절한 색상 대비를 확인하는 것이 좋습니다.
 
 ### Visually hidden content
 
@@ -45,13 +45,13 @@ Bootstrap의 구성요소는 상당히 보편적으로 설계되었으므로 작
 
 ### Reduced motion
 
-Bootstrap에는 [`prefers-reduced-motion` 미디어 기능](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion) 지원이 포함되어 있습니다. 사용자가 감소된 모션에 대한 기본 설정을 지정할 수 있는 브라우저/환경에서 Bootstrap의 대부분의 CSS 전환 효과 (예: 모달 다이얼로그 상자가 열리거나 닫힐 때 또는 캐러셀의 슬라이딩 애니메이션)가 비활성화되고 의미 있는 애니메이션 (예: 스피너)의 속도가 느려집니다.
+Bootstrap에는 [`prefers-reduced-motion` 미디어 기능](https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion) 지원이 포함되어 있습니다. 사용자가 감소된 모션에 대한 기본 설정을 지정할 수 있는 브라우저/환경에서 Bootstrap의 대부분의 CSS 전환 효과 (예: 모달 다이얼로그 상자가 열리거나 닫힐 때 또는 캐러셀의 슬라이딩 애니메이션)가 비활성화되고 의미 있는 애니메이션 (예: 스피너)의 속도가 느려집니다.
 
 `prefers-reduced-motion`을 지원하는 브라우저와 사용자가 감소된 모션을 선호한다고 명시적으로 신호를 보내지 *않은* 경우 (예: `prefers-reduced-motion: no-preference`) Bootstrap은 `scroll-behavior` 속성을 사용하여 부드러운 스크롤을 가능하게 합니다.
 
 ## Additional resources
 
-- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
+- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/)
 - [The A11Y Project](https://www.a11yproject.com/)
 - [MDN 접근성 문서](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [Tenon.io Accessibility Checker](https://tenon.io/)
@@ -59,3 +59,4 @@ Bootstrap에는 [`prefers-reduced-motion` 미디어 기능](https://drafts.csswg
 - [접근성 문제를 식별하기 위한 "HTML Codesniffer" 북마크릿](https://github.com/squizlabs/HTML_CodeSniffer)
 - [Microsoft Accessibility Insights](https://accessibilityinsights.io/)
 - [Deque Axe 테스트 도구](https://www.deque.com/axe/)
+- [웹 접근성에 대해 알아보기](https://www.w3.org/WAI/fundamentals/accessibility-intro/)

@@ -1,18 +1,19 @@
 ---
 layout: docs
-title: Utility API
-description: The utility API is a Sass-based tool to generate utility classes.
+title: Utility API (유틸리티 API)
+description: 유틸리티 API는 유틸리티 클래스를 생성하기 위한 Sass 기반 도구입니다.
 group: utilities
 aliases: "/docs/5.0/utilities/"
 toc: true
 ---
 
-Bootstrap utilities are generated with our utility API and can be used to modify or extend our default set of utility classes via Sass. Our utility API is based on a series of Sass maps and functions for generating families of classes with various options. If you're unfamiliar with Sass maps, read up on the [official Sass docs](https://sass-lang.com/documentation/values/maps) to get started.
+부트 스트랩 유틸리티는 유틸리티 API로 생성되며 Sass를 통해 기본 유틸리티 클래스 세트를 수정하거나 확장하는 데 사용할 수 있습니다. 저희 유틸리티 API는 다양한 옵션으로 클래스 패밀리를 생성하기 위한 일련의 Sass맵 및 함수를 기반으로 합니다. Sass맵에 익숙하지 않은 경우 [official Sass docs](https://sass-lang.com/documentation/values/maps) 를 읽고 시작해 보세요.
 
-The `$utilities` map contains all our utilities and is later merged with your custom `$utilities` map, if present. The utility map contains a keyed list of utility groups which accept the following options:
+
+`$utilities` 맵에는 우리의 모든 유틸리티가 포함되어 나중에는 사용자정의 `$utilities`와 통합(파일이 있을경우)됩니다. 유틸리티 맵에는 다음 옵션을 허용할 수 있는 유틸리티 그룹의 키 목록이 포함되어 있습니다.:
 
 {{< bs-table "table text-start" >}}
-| Option | Type | Description |
+| 옵션 | 형식 | 설명 |
 | --- | --- | --- |
 | `property` | **Required** | Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins). |
 | `values` | **Required** | List of values, or a map if you don't want the class name to be the same as the value. If `null` is used as map key, it isn't compiled. |
@@ -26,7 +27,7 @@ The `$utilities` map contains all our utilities and is later merged with your cu
 
 ## API explained
 
-All utility variables are added to the `$utilities` variable within our `_utilities.scss` stylesheet. Each group of utilities looks something like this:
+모든 유틸리티 변수는`_utilities.scss` 스타일 시트의`$utilities` 변수에 추가됩니다. 각 유틸리티 그룹은 다음과 같습니다.:
 
 ```scss
 $utilities: (
@@ -43,7 +44,7 @@ $utilities: (
  );
 ```
 
-Which outputs the following:
+다음과 같이 출력됩니다:
 
 ```css
 .opacity-0 { opacity: 0; }
@@ -55,7 +56,7 @@ Which outputs the following:
 
 ### Custom class prefix
 
-Use the `class` option to change the class prefix used in the compiled CSS:
+컴파일 된 CSS에서 사용되는 클래스 접두사를 변경하려면 `class` 옵션을 사용하세요.:
 
 ```scss
 $utilities: (
@@ -73,7 +74,7 @@ $utilities: (
  );
 ```
 
-Output:
+출력 결과:
 
 ```css
 .o-0 { opacity: 0; }
@@ -83,11 +84,11 @@ Output:
 .o-100 { opacity: 1; }
 ```
 
-## States
+### States
 
-Use the `state` option to generate pseudo-class variations. Example pseudo-classes are `:hover` and `:focus`. When a list of states are provided, classnames are created for that pseudo-class. For example, to change opacity on hover, add `state: hover` and you'll get `.opacity-hover:hover` in your compiled CSS.
+가상 클래스의 변형을 생성하려면 `state` 옵션을 사용하십시오. 비슷한 클래스의 예시로는 `:hover` 및 `:focus`입니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 `state: hover` 를 추가하면 컴파일 된 CSS에 `.opacity-hover:hover`가 표시됩니다.
 
-Need multiple pseudo-classes? Use a space-separated list of states: `state: hover focus`.
+여러개의 가상 클래스가 필요하십니까? `state : hover focus`와 같이 공백으로 구분 된 상태 목록을 사용하세요.
 
 ```scss
 $utilities: (
@@ -106,7 +107,7 @@ $utilities: (
 );
 ```
 
-Output:
+출력 결과:
 
 ```css
 .opacity-0-hover:hover { opacity: 0; }
@@ -118,7 +119,8 @@ Output:
 
 ### Responsive utilities
 
-Add the `responsive` boolean to generate responsive utilities (e.g., `.opacity-md-25`) across [all breakpoints]({{< docsref "/layout/breakpoints" >}}).
+[all breakpoints]({{< docsref "/layout/breakpoints" >}})에서 반응 형 유틸리티 (예 : `.opacity-md-25`)를 생성하려면 `responsive` 불리언을 추가합니다.
+
 
 ```scss
 $utilities: (
@@ -136,7 +138,7 @@ $utilities: (
  );
 ```
 
-Output:
+출력 결과:
 
 ```css
 .opacity-0 { opacity: 0; }
@@ -188,7 +190,7 @@ Output:
 
 ### Changing utilities
 
-Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:
+동일한 키를 사용하여 기존 유틸리티를 대체하십시오. 예를 들어 추가 반응형 오버플로 유틸리티 클래스를 원할 경우 다음을 수행 할 수 있습니다.:
 
 ```scss
 $utilities: (
@@ -202,7 +204,7 @@ $utilities: (
 
 ### Print utilities
 
-Enabling the `print` option will **also** generate utility classes for print, which are only applied within the `@media print { ... }` media query.
+`print` 옵션을 활성화하면 ** 또한 ** 인쇄용 유틸리티 클래스가 생성되며, 이는 `@media print {...}` 미디어 쿼리 내에서만 적용됩니다.
 
 ```scss
 $utilities: (
@@ -220,7 +222,7 @@ $utilities: (
  );
 ```
 
-Output:
+출력 결과물:
 
 ```css
 .opacity-0 { opacity: 0; }
@@ -240,13 +242,15 @@ Output:
 
 ## Using the API
 
-Now that you're familiar with how the utilities API works, learn how to add your own custom classes and modify our default utilities.
+이제 유틸리티 API의 작동 방식에 익숙해 졌으므로 사용자 지정 클래스를 추가하고 기본 유틸리티를 수정하는 방법을 배워 봅시다.
 
 ### Add utilities
 
-New utilities can be added to the default `$utilities` map with a `map-merge`. Make sure our `_utilities.scss` is imported first, then use the `map-merge` to add your additional utilities. For example, here's how to add a responsive `cursor` utility with three values.
+`map-merge` 를 사용하면 새로운 유틸리티를 기본 `$utilities` 맵에 추가할 수 있습니다. 먼저 `_utilities.scss` 를 가져왔는지 확인한 다음 `map-merge` 를 이용하여 새로운 유틸리티를 추가하십시오. 다음 예시는 세 개의 값이 있는 반응형 `cursor` 유틸리티를 추가하는 방법입니다.
 
 ```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
@@ -254,19 +258,21 @@ $utilities: map-merge(
   (
     "cursor": (
       property: cursor,
-      class: cursor
+      class: cursor,
       responsive: true,
       values: auto pointer grab,
     )
   )
-);
+); 
 ```
 
 ### Modify utilities
 
-Modify existing utilities in the default `$utilities` map with `map-get` and `map-merge` functions. In the example below, we're adding an additional value to the `width` utilities. Start with an initial `map-merge` and then specify which utility you want to modify. From there, fetch the nested `"width"` map with `map-get` to access and modify the utility's options and values.
-
+`map-get` 및 `map-merge` 함수를 사용하여 기본 `$utilities` 맵의 기존 유틸리티를 수정합니다. 아래는 `width` 유틸리티에 신규 값을 추가하는 예시입니다.
+초기 `map-merge`로 시작한 다음 수정할 유틸리티를 지정하세요. 중첩 된 `"width"` 맵을 `map-get`을 이용해 가져 온 뒤 유틸리티의 옵션 및 값에 접근하여 수정합니다.
 ```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
@@ -285,11 +291,32 @@ $utilities: map-merge(
 );
 ```
 
-### Remove utilities
+#### Rename utilities
 
-Remove any of the default utilities by setting the group key to `null`. For example, to remove all our `width` utilities, create a `$utilities` `map-merge` and add `"width": null` within.
+Missing v4 utilities, or used to another naming convention? The utilities API can be used to override the resulting `class` of a given utility—for example, to rename `.ms-*` utilities to oldish `.ml-*`:
 
 ```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities, (
+    "margin-start": map-merge(
+      map-get($utilities, "margin-start"),
+      ( class: ml ),
+    ),
+  )
+);
+```
+
+### Remove utilities
+
+그룹 키를 `null`로 설정하면 기본 유틸리티를 제거 할 수 있습니다. 예를 들어 모든 `width` 유틸리티를 제거하려면 `$utilities` `map-merge`를 만들고 ` "width": null`을 추가합니다.
+
+```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
@@ -302,7 +329,7 @@ $utilities: map-merge(
 
 #### Remove utility in RTL
 
-Some edge cases make [RTL styling difficult](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl), such as line breaks in Arabic. Thus utilities can be dropped from RTL output by setting the `rtl` option to `false`:
+아랍어 줄 바꿈과 같은 일부 예외적 인 경우는 [RTL styling difficult](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl) 를 합니다(스타일 지정을 어렵게 만든다는 뜻). 따라서`rtl` 옵션을`false`로 설정하여 RTL 출력에서 유틸리티를 삭제할 수 있습니다.
 
 ```scss
 $utilities: (
@@ -315,7 +342,7 @@ $utilities: (
 );
 ```
 
-Output:
+결과물:
 
 ```css
 /* rtl:begin:remove */

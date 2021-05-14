@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Input group
-description: Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.
+title: Input group(입력 그룹)
+description: 텍스트 입력, 사용자 셀렉트, 사용자 파일 입력등의 폼의 좌우에 문자, 버튼 혹은 버튼 그룹을 추가해 폼 컨트롤을 간단하게 확장할 수 있습니다.
 group: forms
 toc: true
 ---
 
 ## Basic example
 
-Place one add-on or button on either side of an input. You may also place one on both sides of an input. Remember to place `<label>`s outside the input group.
+추가 기능(add-on) 이나 버튼을 입력의 한쪽 혹은 양쪽에 배치할 수 있습니다. `<label>`은 입력 그룹 밖에 작성해야 합니다.
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -47,7 +47,7 @@ Place one add-on or button on either side of an input. You may also place one on
 
 ## Wrapping
 
-Input groups wrap by default via `flex-wrap: wrap` in order to accommodate custom form field validation within an input group. You may disable this with `.flex-nowrap`.
+입력 그룹은 입력 그룹내의 사용자 정의 폼 검증에 대응하기 위해 기본적으로 `flex-wrap: wrap`으로 감싸고 있습니다. 이것을 비활성화 하려면 `.flex-nowrap`을 추가하여 사용합니다.
 
 {{< example >}}
 <div class="input-group flex-nowrap">
@@ -58,9 +58,9 @@ Input groups wrap by default via `flex-wrap: wrap` in order to accommodate custo
 
 ## Sizing
 
-Add the relative form sizing classes to the `.input-group` itself and contents within will automatically resize—no need for repeating the form control size classes on each element.
+상대적으로 사이즈를 조정해 주는 클래스를 `.input-group`이 있는 곳에 추가하면, 그 안의 컨텐츠가 자동적으로 재조정됩니다. 각 요소에 폼 컨트롤 크기 조정 클래스를 추가할 필요가 없습니다
 
-**Sizing on the individual input group elements isn't supported.**
+**각각의 입력 그룹 요소의 크기 변경은 지원하지 않습니다.**
 
 {{< example >}}
 <div class="input-group input-group-sm mb-3">
@@ -81,19 +81,19 @@ Add the relative form sizing classes to the `.input-group` itself and contents w
 
 ## Checkboxes and radios
 
-Place any checkbox or radio option within an input group's addon instead of text.
+입력 그룹의 추가 기능 자리에 문자 대신 체크박스나 라디오 버튼 같은 옵션을 배치할 수 있습니다. 우리는 입력 부분에 표시되는 텍스트가 없는 경우 `.form-check-input` 에 `.mt-0` 을 추가하는 것을 권장합니다.
 
 {{< example >}}
 <div class="input-group mb-3">
   <div class="input-group-text">
-    <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input">
+    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
   </div>
   <input type="text" class="form-control" aria-label="Text input with checkbox">
 </div>
 
 <div class="input-group">
   <div class="input-group-text">
-    <input class="form-check-input" type="radio" value="" aria-label="Radio button for following text input">
+    <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
   </div>
   <input type="text" class="form-control" aria-label="Text input with radio button">
 </div>
@@ -101,7 +101,7 @@ Place any checkbox or radio option within an input group's addon instead of text
 
 ## Multiple inputs
 
-While multiple `<input>`s are supported visually, validation styles are only available for input groups with a single `<input>`.
+복수의 `<input>`은 시각적으로 지원되고 있지만, 검증 확인을 사용할 때에는 하나의 `<input>`을 가진 입력 그룹에서만 사용 가능합니다.
 
 {{< example >}}
 <div class="input-group">
@@ -113,7 +113,7 @@ While multiple `<input>`s are supported visually, validation styles are only ava
 
 ## Multiple addons
 
-Multiple add-ons are supported and can be mixed with checkbox and radio input versions.
+복수의 추가 기능을 지원하고 있어 체크박스나 라디오 버튼과 함께 사용할 수 있습니다.
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -239,7 +239,7 @@ Multiple add-ons are supported and can be mixed with checkbox and radio input ve
 
 ## Custom forms
 
-Input groups include support for custom selects and custom file inputs. Browser default versions of these are not supported.
+입력 그룹에는 사용자 셀렉트 및 사용자 파일 입력 지원이 표함되어 있습니다. 브라우저 기본 버전에서는 이러한 기능은 지원되지 않습니다.
 
 ### Custom select
 
@@ -308,3 +308,9 @@ Input groups include support for custom selects and custom file inputs. Browser 
   <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
 </div>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="input-group-variables" file="scss/_variables.scss" >}}

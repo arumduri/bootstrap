@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Tooltips(툴팁)
-description: CSS3 를 사용한 애니메이션이나 data-bs-attributes 를 사용한 CSS 와 JavaScript 로 커스텀 Bootstrap 의 툴팁을 추가하기 위한 문서와 예시입니다.
+description: CSS3 를 사용한 애니메이션이나 data-bs-attributes를 사용한 CSS와 JavaScript로 커스텀 Bootstrap의 툴팁을 추가하기 위한 문서와 예시입니다.
 group: components
 toc: true
 ---
@@ -10,15 +10,19 @@ toc: true
 
 툴팁 플러그인을 사용할 때 알아두어야 할 점:
 
-- 툴팁의 배치는 [Popper](https://popper.js.org/)  에 의존하고 있습니다. bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 을 쓰거나, 툴팁을 동작시키기 위해 팝오버를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해야 합니다.
+- 툴팁의 배치는 [Popper](https://popper.js.org/) 에 의존하고 있습니다. bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 을 쓰거나, 툴팁을 동작시키기 위해 팝오버를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해야 합니다.
 - 툴팁은 퍼포먼스를 위해 opt-in 되어 있기 때문에 **스스로 초기화를 해야 합니다.**
 - 길이가 0 의 타이틀을 가진 툴팁은 표시되지 않습니다.
 - 더 복잡한 컴포넌트(input group, button groups 등)의 랜더링 문제를 피하기 위해 `container: 'body'` 를 지정해 주십시오.
 - 숨겨진 요소에서 툴팁을 트리거해도 제 기능을 하지 않습니다.
 - `.disabled` 나 `disabled` 요소의 툴팁은 그 위(바깥) 요소에서 트리거해야 합니다.
 - 여러 라인에 걸쳐 있는 하이퍼링크에서 트리거된 툴팁은 중앙에 배치됩니다. 이 동작을 피하기 위해서는 `<a>` 에 `white-space: nowrap;` 을 사용해 주십시오.
-- 툴팁은 대응 요소가 DOM 에서 삭제되기 전에 숨겨야 합니다.
+- 툴팁은 대응 요소가 DOM에서 삭제되기 전에 숨겨야 합니다.
 - 툴팁은 shadow DOM 내의 요소 덕분에 트리거할 수 있습니다.
+
+{{< callout info >}}
+{{< partial "callout-info-sanitizer.md" >}}
+{{< /callout >}}
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -42,11 +46,11 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 아래 링크에 커서를 맞추면 툴팁이 나타납니다:
 
 <div class="bd-example tooltip-demo">
-  <p class="muted">Tight pants next level keffiyeh <a href="#" data-bs-toggle="tooltip" title="Default tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-bs-toggle="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-bs-toggle="tooltip" title="Another one here too">whatever keytar</a>, scenester farm-to-table banksy Austin <a href="#" data-bs-toggle="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+  <p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" title="The last tip!">your own</a> site or project.
   </p>
 </div>
 
-아래 버튼에 커서를 맞추면 top, right, bottom, left의 4개 툴팁이 나타납니다: RTL 에서 Bootstrap 를 사용하는 경우 방향은 반대가 됩니다.
+아래 버튼에 커서를 맞추면 top, right, bottom, left의 4개 툴팁이 나타납니다: RTL에서 Bootstrap을 사용하는 경우 방향은 반대가 됩니다.
 
 <div class="bd-example tooltip-demo">
   <div class="bd-example-tooltips">
@@ -73,7 +77,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 </button>
 ```
 
-그리고 커스텀 HTML 을 추가할 수 있습니다:
+그리고 커스텀 HTML을 추가할 수 있습니다:
 
 ```html
 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
@@ -84,7 +88,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 SVG 와 함께:
 
 <div class="bd-example tooltip-demo">
-  <a href="#" data-bs-toggle="tooltip" title="Default tooltip">
+  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" title="Default tooltip">
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
       <rect width="100%" height="100%" fill="#563d7c"/>
       <circle cx="50" cy="50" r="30" fill="#007bff"/>
@@ -92,11 +96,17 @@ SVG 와 함께:
   </a>
 </div>
 
+## Sass
+
+### Variables
+
+{{< scss-docs name="tooltip-variables" file="scss/_variables.scss" >}}
+
 ## Usage
 
 툴팁 플러그인은 필요에 따라 컨텐츠와 마크업을 생성하고 기본 값으로는 트리거 요소 뒤에 툴팁을 배치합니다.
 
-JavaScript 를 사용해 툴팁을 트리거 합니다:
+JavaScript를 사용해 툴팁을 트리거 합니다:
 
 ```js
 var exampleEl = document.getElementById('example')
@@ -106,12 +116,12 @@ var tooltip = new bootstrap.Tooltip(exampleEl, options)
 {{< callout warning >}}
 ##### Overflow `auto` and `scroll`
 
-툴팁의 위치는 부모 컨테이너에 `.table-responsive` 처럼 `overflow: auto` 나 `overflow: scroll` 이 있는 경우 자동으로 변경되지만, 원래 배치 위치는 유지됩니다. 이를 해결하려면 `boundary` 옵션을 기본 값 `'scrollParent'` 이외의 값, 예를 들어 `'window'` 같은 것을 설정합니다:
+Tooltip position attempts to automatically change when a **parent container** has `overflow: auto` or `overflow: scroll` like our `.table-responsive`, but still keeps the original placement's positioning. To resolve this, set the [`boundary` option](https://popper.js.org/docs/v2/modifiers/flip/#boundary) (for the flip modifier using the `popperConfig` option) to any HTMLElement to override the default value, `'clippingParents'`, such as `document.body`:
 
 ```js
 var exampleEl = document.getElementById('example')
 var tooltip = new bootstrap.Tooltip(exampleEl, {
-  boundary: 'window'
+  boundary: document.body // or document.querySelector('#boundary')
 })
 ```
 {{< /callout >}}
@@ -123,7 +133,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 {{< callout warning >}}
 ##### Making tooltips work for keyboard and assistive technology users
 
-툴팁을 추가해야 하는 것은 키보드 포커스가 가능하고 인터랙티브한 HTML 요소(링크나 폼 컨트롤 등)뿐 입니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가하여 포커스 가능하게 할 수 있지만 이는 키보드 사용자에게는 비인터랙티브적인 요소의 탭 멈춤이 추가되어 버리기 때문에 키보드 사용자를 곤란하게 하거나 혼란스럽게 할 수 있으며 현재 대부분의 스크린 리더는 이러한 상황에서 툴팁을 제공하지 않습니다. 게다가 툴팁의 트리거로서 `hover` 에만 의지해서는 안됩니다. 이것은 키보드 사용자가 툴팁을 트리거 할 수 없게 되기 때문입니다.
+툴팁을 추가해야 하는 부분은 키보드로 포커스가 가능하고 상호작용이 가능한 HTML 요소(링크나 폼 컨트롤 등)뿐 입니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가하여 포커스가 가능하게 할 수 있지만 이는 키보드 사용자에게 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 키보드 사용자를 곤란하게 하거나 혼란스럽게 할 수 있으며 현재 대부분의 스크린 리더는 이러한 상황에서 툴팁을 제공하지 않습니다. 게다가 툴팁의 트리거로서 `hover` 에만 의지해서는 안됩니다. 이것은 키보드 사용자가 툴팁을 트리거 할 수 없게 되기 때문입니다.
 {{< /callout >}}
 
 ```html
@@ -141,19 +151,19 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 ### Disabled elements
 
-`Disabled` 속성을 갖는 요소는 인터랙티브 하지 않습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁(혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 `<div>` 나 `<span>` 으로 툴팁을 트리거하여, 이상적으로 `tabindex="0"` 으로 키보드 포커스 가능하게 하고, disabled 요소인 `pointer-events` 를 오버라이드 해야 합니다.
+`disabled` 속성을 갖는 요소는 상호작용할 수 없습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁 (혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 `<div>` 나 `<span>` 으로 툴팁을 트리거하여, 이상적으로 `tabindex="0"`을 사용해서 키보드로 포커스가 가능하도록 해야합니다.
 
 <div class="tooltip-demo">
 {{< example >}}
 <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Disabled tooltip">
-  <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
+  <button class="btn btn-primary" type="button" disabled>Disabled button</button>
 </span>
 {{< /example >}}
 </div>
 
 ### Options
 
-옵션은 data 속성 또는 JavaScript 로 줄 수 있습니다. data 속성의 경우는 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
+옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우는 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션명을 추가합니다. Make sure to change the case type of the option name from camelCase to kebab-case when passing the options via data attributes. For example, instead of using `data-bs-customClass="beautifier"`, use `data-bs-custom-class="beautifier"`.
 
 {{< callout warning >}}
 보안상의 이유로, `sanitize`, `sanitizeFn`, `allowList` 옵션을 data 속성으로 지정할 수 없다는 것에 주의해 주세요.
@@ -249,16 +259,17 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       </td>
     </tr>
     <tr>
-      <td><code>fallbackPlacement</code></td>
-      <td>null | array</td>
-      <td><code>null</code></td>
-      <td>Fallback 시 팝오버가 어떤 위치를 사용하는지 지정할 수 있습니다. 자체한 것은 팝오버의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a> 를 참조해 주세요.</td>
+      <td><code>fallbackPlacements</code></td>
+      <td>array</td>
+      <td><code>['top', 'right', 'bottom', 'left']</code></td>
+      <td>Define fallback placements by providing a list of placements in array (in order of preference). For more information refer to
+      Popper's <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a></td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>툴팁의 Overflow 제약경계. 기본 값은 <code>'clippingParents'</code> 로 HTMLElement 참조를 받을 수 있습니다.(JavaScript only). 자세한 것은 팝오버의 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">preventOverflow docs</a> 를 참조해 주세요.</td>
+      <td>Overflow constraint boundary of the tooltip (applies only to Popper's preventOverflow modifier). By default it's <code>'clippingParents'</code> and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>.</td>
     </tr>
     <tr>
       <td><code>customClass</code></td>
@@ -273,7 +284,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>sanitize</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>sanitization 을 유효화 하거나 무효화합니다. 유효로 했을 경우 <code>'template'</code> 와  <code>'title'</code> 옵션은 sanitize 됩니다.</td>
+      <td>Enable or disable the sanitization. If activated <code>'template'</code> and <code>'title'</code> options will be sanitized. See the <a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">sanitizer section in our JavaScript documentation</a>.</td>
     </tr>
     <tr>
       <td><code>allowList</code></td>
@@ -288,10 +299,23 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td>여기세어는 독자적인 sanitize 함수를 지정할 수 있습니다. 이것은 sanitize 를 실행하기 위해 전용 라이브러리를 사용하고 싶은 경우에 편리합니다.</td>
     </tr>
     <tr>
+      <td><code>offset</code></td>
+      <td>array | string | function</td>
+      <td><code>[0, 0]</code></td>
+      <td>
+        <p>Offset of the tooltip relative to its target. You can pass a string in data attributes with comma separated values like: <code>data-bs-offset="10,20"</code></p>
+        <p>When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
+        <p>For more information refer to Popper's <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>.</p>
+      </td>
+    </tr>
+    <tr>
       <td><code>popperConfig</code></td>
-      <td>null | object</td>
+      <td>null | object | function</td>
       <td><code>null</code></td>
-      <td>Bootstrap 기본 팝오버의 설정을 변경하려면 <a href="https://popper.js.org/docs/v1/#Popper.Defaults">Popper's configuration</a> 를 참조해 주세요.</td>
+      <td>
+        <p>To change Bootstrap's default Popper config, see <a href="https://popper.js.org/docs/v2/constructors/#options">Popper's configuration</a>.</p>
+        <p>When a function is used to create the Popper configuration, it's called with an object that contains the Bootstrap's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper.</p>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -301,6 +325,18 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 
 개별 툴팁 옵션은 위에서 설명한 것처럼 data 속성을 사용해 지정할 수도 있습니다.
 {{< /callout >}}
+
+#### Using function with `popperConfig`
+
+```js
+var tooltip = new bootstrap.Tooltip(element, {
+  popperConfig: function (defaultBsPopperConfig) {
+    // var newPopperConfig = {...}
+    // use defaultBsPopperConfig if needed...
+    // return newPopperConfig
+  }
+})
+```
 
 ### Methods
 

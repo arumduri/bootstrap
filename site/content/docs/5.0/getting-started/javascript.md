@@ -93,6 +93,15 @@ var modal = new bootstrap.Modal(myModalEl, { keyboard: false }) // initialized w
 
 특정 플러그인 인스턴스를 가져오려면 각 플러그인이 `getInstance` 메서드를 노출합니다. 요소에서 직접 가져오려면 `bootstrap.Popover.getInstance(myPopoverEl)`를 사용해주세요.
 
+### CSS selectors in constructors
+
+You can also use a CSS selector as the first argument instead of a DOM element to initialize the plugin. Currently the element for the plugin is found by the `querySelector` method since our plugins support a single element only.
+
+```js
+var modal = new bootstrap.Modal('#myModal')
+var dropdown = new bootstrap.Dropdown('[data-bs-toggle="dropdown"]')
+```
+
 ### Asynchronous functions and transitions
 
 모든 프로그래밍 가능한 API 메서드는 **비동기적**이며 트랜지션이 시작되고 **종료되기 전에** 호출자에게 반환됩니다.
