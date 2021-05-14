@@ -254,7 +254,7 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 
 ### Outlined styles
 
-다양하게 아웃랑인화 된 스타일 등의 `.btn`의 다양한 종류가 지원되고 있습니다.
+다양하게 아웃라인화 된 스타일 등의 `.btn`의 다양한 종류가 지원되고 있습니다.
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
