@@ -25,7 +25,7 @@ toc: true
 
 ### JS
 
-우리의 많은 컴포넌트들은 작동에 JavaScript를 필요로 합니다. 정확히 말하면 우리의 JavaScript 플러그인과 [Popper](https://popper.js.org/) 가 필요합니다. **다음 중 하나의`<script>`**를 `/body>` 태그가 닫히기 전에 페이지 끝 부분에 넣어 활성화 시켜주세요.
+우리의 많은 컴포넌트들은 작동에 JavaScript를 필요로 합니다. 정확히 말하면 우리의 JavaScript 플러그인과 [Popper](https://popper.js.org/) 가 필요합니다. **다음 중 하나의`<script>`**를 `</body>` 태그가 닫히기 전에 페이지 끝 부분에 넣어 활성화 시켜주세요.
 
 #### Bundle
 
@@ -102,7 +102,7 @@ toc: true
 </html>
 ```
 
-이것이 페이지 전반에 관한 요구사항입니다. [레이아웃 문서]({{< docsref "/layout/grid" >}}) 또는 [공식 예제]({{< docsref "/examples" >}})를 통해 사이트의 콘텐츠와 구성요소를 배치하기 시작해보세요.
+다음 단계를 위해서 [레이아웃 문서]({{< docsref "/layout/grid" >}}) 또는 [공식 예제]({{< docsref "/examples" >}})를 통해 사이트의 콘텐츠와 구성요소를 배치하기 시작해보세요.
 
 ## Important globals
 
@@ -153,7 +153,6 @@ CSS에서 보다 간단한 크기 조절을 위해서 우리는 `content-box`에
 
 최신 Bootstrap 개발 상황을 계속 알아보고 여기 있는 도움이 될 만한 리소스들을 통해 커뮤니티에 참가해 보세요.
 
-- [Twitter에서 @getbootstrap을 팔로우하세요](https://twitter.com/{{< param twitter >}}).
 - [공식 Bootstrap 블로그]({{< param blog >}})를 읽고 구독해 보세요.
 - [공식 Slack 방]({{< param slack >}})에 참가해 보세요.
 - 다른 Bootstrap 유저들과 IRC에서 대화해 보세요. `irc.freenode.net` 서버의 `##bootstrap` 채널에서 만나실 수 있습니다.

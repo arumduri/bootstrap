@@ -8,7 +8,7 @@ toc: true
 
 ## Overview
 
-`<input type="range">`에 `.form-range`를 사용합니다. track(배경)과 thumb(값)은 어느 브라우저에서도 동일하게 표시되도록 스타일링 되어 있습니다. 진행 상황을 시각적으로 보여주는 수단으로 thumb의 왼쪽 또는 오른쪽을 track으로 "채우는" 것을 지원하는 것은 Edge Legacy와 Firefox뿐이라서 현재는 지원하지 않습니다.
+`<input type="range">`에 `.form-range`를 사용합니다. track (배경)과 thumb (값)은 어느 브라우저에서도 동일하게 표시되도록 스타일링되어 있습니다. 진행 상황을 시각적으로 보여주는 수단으로 thumb의 왼쪽 또는 오른쪽을 track으로 "채우는" 것을 지원하는 것은 Firefox뿐이라서 현재는 지원하지 않습니다.
 
 {{< example >}}
 <label for="customRange1" class="form-label">Example range</label>
@@ -41,3 +41,9 @@ toc: true
 <label for="customRange3" class="form-label">Example range</label>
 <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="form-range-variables" file="scss/_variables.scss" >}}

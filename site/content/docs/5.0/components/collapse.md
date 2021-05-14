@@ -22,7 +22,7 @@ Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에
 - `.collapsing` 전환 중에 적용됩니다.
 - `.collapse.show` 컨텐츠를 표시합니다.
 
-`href` 속성을 가진 링크, 혹은 `data-bs-target` 속성을 가진 버튼을 사용할 수 있습니다. 양쪽 다, `data-bs-toggle="collapse"` 가 필요합니다.
+일반적으로 우리는 버튼을 `data-bs-target` 속성과 함께 사용하기를 권장합니다. While not recommended from a semantic point of view, you can also use a link with the `href` attribute (and a `role="button"`). 양쪽 모두 `data-bs-toggle="collapse"` 가 필요합니다.
 
 {{< example >}}
 <p>
@@ -35,7 +35,7 @@ Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에
 </p>
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
   </div>
 </div>
 {{< /example >}}
@@ -55,14 +55,14 @@ Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample1">
       <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        Some placeholder content for the first collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
       </div>
     </div>
   </div>
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample2">
       <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+        Some placeholder content for the second collapse component of this multi-collapse example. This panel is hidden by default but revealed when the user activates the relevant trigger.
       </div>
     </div>
   </div>
@@ -76,6 +76,18 @@ Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에
 컨트롤 요소가 하나의 접을 수 있는 요소를 타겟으로 하고 있는 경우, 즉 `data-bs-target` 속성이 `id` 셀렉터를 바라보는 경우, 접을 수 있는 요소의 `id` 를 한 `aria-controls` 속성을 컨트롤 요소에 추가하지 않으면 안됩니다. 최근 스크린 리더 및 지원 기술에서는 이 속성을 이용하여 접을 수 있는 요소 자체로 직접 이동하기 위한 단축키를 사용자에게 제공하고 있습니다.
 
 Bootstrap 의 현재 구현은, [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion) 에 설명되어 있는 여러가지 *optional* 키보드 인터랙션을 커버하고 있지 않음을 주의해 주십시오. - 커스텀 JavaScript로 이것들을 직접 포함시켜야 합니다.
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="collapse-transition" file="scss/_variables.scss" >}}
+
+### Classes
+
+Collapse transition classes can be found in `scss/_transitions.scss` as these are shared across multiple components (collapse and accordion).
+
+{{< scss-docs name="collapse-classes" file="scss/_transitions.scss" >}}
 
 ## Usage
 

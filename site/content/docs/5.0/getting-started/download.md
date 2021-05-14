@@ -23,6 +23,9 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 - CSS 컴파일을 위한 Sass 컴파일러 (Libsass 또는 Ruby Sass도 지원함).
 - CSS 벤더 접두사를 위한 [Autoprefixer](https://github.com/postcss/autoprefixer)
 
+- Sass 소스 파일을 CSS 파일로 컴파일하기 위한 [Sass 컴파일러]({{< docsref "/getting-started/build-tools#sass" >}})
+- CSS 벤더 접두사를 위한 [Autoprefixer](https://github.com/postcss/autoprefixer)
+
 필요한 경우 [빌드 도구]({{< docsref "/getting-started/build-tools#tooling-setup" >}})를 사용할 수도 있습니다. Bootstrap 및 문서 개발을 위해 포함되어 있긴 하지만, 목적에 적합하지 않을 수도 있습니다.
 
 <a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">소스 다운로드</a>
@@ -51,14 +54,14 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 
 ## Package managers
 
-Bootstrap의 **소스 파일**을 유명한 패키지 관리자들을 사용해서 거의 모든 프로젝트에 BootStrap을 사용할 수 있습니다. 패키지 관리자와 상관없이 Bootstrap은 공식 컴파일된 버전과 일치하는 구성을 위해 **Sass 컴파일러와 [Autoprefixer](https://github.com/postcss/autoprefixer)를 필요로 합니다**.
+Bootstrap의 **소스 파일**을 유명한 패키지 관리자들을 사용해서 거의 모든 프로젝트에 Bootstrap을 사용할 수 있습니다. 패키지 관리자와 상관없이 Bootstrap은 공식 컴파일된 버전과 일치하는 구성을 위해 **[Sass 컴파일러]({{< docsref "/getting-started/build-tools#sass" >}})와 [Autoprefixer](https://github.com/postcss/autoprefixer)를 필요로 합니다**.
 
 ### npm
 
 [npm 패키지](https://www.npmjs.com/package/bootstrap)를 사용해서 Node.js로 만들어진 앱에 Bootstrap를 설치하세요:
 
 ```sh
-npm install bootstrap@next
+npm install bootstrap
 ```
 
 `const bootstrap = require('bootstrap')` 또는 `import bootstrap from 'bootstrap'`는 `bootstrap` 객체에 모든 Bootstrap의 플러그인을 불러옵니다.
@@ -69,12 +72,16 @@ Bootstrap의 `package.json`에는 다음 키에 몇몇 메타데이터가 포함
 - `sass` - Bootstrap의 메인 [Sass](https://sass-lang.com/) 소스 파일로 향하는 경로
 - `style` - Bootstrap의 경량화되지 않았지만 (추가 설정 없이) 기본 설정으로만 사전 컴파일된 CSS로 향하는 경로
 
+{{< callout info >}}
+{{< partial "callout-info-npm-starter.md" >}}
+{{< /callout >}}
+
 ### yarn
 
 [yarn 패키지](https://yarnpkg.com/en/package/bootstrap)를 사용해서 Node.js로 만들어진 앱에 Bootstrap를 설치하세요:
 
 ```sh
-yarn add bootstrap@next
+yarn add bootstrap
 ```
 
 ### RubyGems

@@ -28,8 +28,8 @@ Where *sides* is one of:
 
 - `t` - for classes that set `margin-top` or `padding-top`
 - `b` - for classes that set `margin-bottom` or `padding-bottom`
-- `s` - for classes that set `margin-left` or `padding-left` in LTR, `margin-right` or `padding-right` in RTL
-- `e` - for classes that set `margin-right` or `padding-right` in LTR, `margin-left` or `padding-left` in RTL
+- `s` - (start) for classes that set `margin-left` or `padding-left` in LTR, `margin-right` or `padding-right` in RTL
+- `e` - (end) for classes that set `margin-right` or `padding-right` in LTR, `margin-left` or `padding-left` in RTL
 - `x` - for classes that set both `*-left` and `*-right`
 - `y` - for classes that set both `*-top` and `*-bottom`
 - blank - for classes that set a `margin` or `padding` on all 4 sides of the element
@@ -109,5 +109,18 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 </div>
 {{< /example >}}
 
+지원에는 Bootstrap의 모든 그리드 중단점에 대한 반응형 옵션과 `$ spacers` 맵 (`0` – `5`)의 6 가지 크기가 포함됩니다. `.gap-auto` 유틸리티 클래스는 사실상`.gap-0` 과 동일하므로 별도로 없습니다.
 
-지원에는 Bootstrap의 모든 그리드 중단 점에 대한 반응형 옵션과 `$ spacers` 맵 (`0` – `5`)의 6 가지 크기가 포함됩니다. `.gap-auto` 유틸리티 클래스는 사실상`.gap-0` 과 동일하므로 별도로 없습니다.
+## Sass
+
+### Maps
+
+Spacing utilities are declared via Sass map and then generated with our utilities API.
+
+{{< scss-docs name="spacer-variables-maps" file="scss/_variables.scss" >}}
+
+### Utilities API
+
+Spacing utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-spacing" file="scss/_utilities.scss" >}}

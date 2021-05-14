@@ -80,9 +80,9 @@ Flush list group을 사용하여 카드안에 리스트를 만듭니다.
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
 </div>
 {{< /example >}}
@@ -93,9 +93,9 @@ Flush list group을 사용하여 카드안에 리스트를 만듭니다.
     Featured
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
 </div>
 {{< /example >}}
@@ -103,9 +103,9 @@ Flush list group을 사용하여 카드안에 리스트를 만듭니다.
 {{< example >}}
 <div class="card" style="width: 18rem;">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
   <div class="card-footer">
     Card footer
@@ -125,9 +125,9 @@ Flush list group을 사용하여 카드안에 리스트를 만듭니다.
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
   </ul>
   <div class="card-body">
     <a href="#" class="card-link">Card link</a>
@@ -173,7 +173,7 @@ Header 와/혹은 footer 를 넣는 카드의 옵션이 있습니다.
   </div>
   <div class="card-body">
     <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <p>A well-known quote, contained in a blockquote element.</p>
       <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
@@ -416,7 +416,7 @@ Header 나 footer 와 같이, 카드에는 카드의 상부와 하부의 "image 
 
 ### Background and color
 
-[Text and background utilities]({{< docsref "/utilities/colors" >}}) 을 사용해, 카드의 외형을 변경할 수 있습니다.
+[글꼴 색상]({{< docsref "/utilities/colors" >}})과 [배경 유틸리티]({{< docsref "/utilities/background" >}})를 사용해서 카드의 외형을 변경할 수 있습니다.
 
 {{< example >}}
 {{< card.inline >}}
@@ -719,4 +719,10 @@ Bootstrap grid 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/grid#ro
 
 ### Masonry
 
-`v4` 에서는 [Masonry](https://masonry.desandro.com/) 식의 컬럼을 따라했습니다만, 이 기법은 많은 [side effects](https://github.com/twbs/bootstrap/pull/28922)가 있었습니다. 만일 `v5` 에서도 이런 레이아웃으로 하고 싶다면, Masonry 플러그인을 이용하십시오. **Masonry 는 Bootstrap에 포함되어 있지 않지만**, 당신이 시작하는데 도움이 되도록 [demo example]({{< docsref "/examples/masonry" >}}) 을 만들어 보았습니다.
+`v4` 에서는 CSS 전용 기술을 사용하여 Masonry 식의 컬럼의 동작을 따라했지만 이러한 기술에는 많은 영 좋지 않은 [부작용](https://github.com/twbs/bootstrap/pull/28922)을 발생시킵니다. `v5`에서 이러한 유형의 레이아웃을 사용하려면 Masonry 플러그인을 사용하면 됩니다. Masonry는 *Bootstrap에 포함되어 있지 않지만* 시작하는 데 도움이 되는 [데모 예제]({{< docsref "/examples/masonry" >}})를 만들었습니다.
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="card-variables" file="scss/_variables.scss" >}}

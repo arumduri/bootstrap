@@ -171,6 +171,20 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 </button>
 {{< /example >}}
 
+## Sass
+
+### Variables
+
+{{< scss-docs name="spinner-variables" file="scss/_variables.scss" >}}
+
+### Keyframes
+
+Used for creating the CSS animations for our spinners. Included in `scss/_spinners.scss`.
+
+{{< scss-docs name="spinner-border-keyframes" file="scss/_spinners.scss" >}}
+
+{{< scss-docs name="spinner-grow-keyframes" file="scss/_spinners.scss" >}}
+
 
 [color]:   {{< docsref "/utilities/colors" >}}
 [display]: {{< docsref "/utilities/display" >}}

@@ -73,3 +73,9 @@ toc: true
   <option value="3">Three</option>
 </select>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="form-select-variables" file="scss/_variables.scss" >}}
