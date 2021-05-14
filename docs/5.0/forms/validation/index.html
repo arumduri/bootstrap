@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.">
+<meta name="description" content="HTML5 폼 검증에서는 브라우저의 기본 동작이나 사용자 스타일과 JavaScript를 이용해 사용자에게 가치있고 실용적인 피드백을 제공합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.79.0">
+<meta name="generator" content="Hugo 0.83.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Validation · Bootstrap v5.0</title>
+<title>Validation(검증) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/forms/validation/">
 
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Validation">
-<meta name="twitter:description" content="Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.">
+<meta name="twitter:title" content="Validation(검증)">
+<meta name="twitter:description" content="HTML5 폼 검증에서는 브라우저의 기본 동작이나 사용자 스타일과 JavaScript를 이용해 사용자에게 가치있고 실용적인 피드백을 제공합니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/forms/validation/">
-<meta property="og:title" content="Validation">
-<meta property="og:description" content="Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.">
+<meta property="og:title" content="Validation(검증)">
+<meta property="og:description" content="HTML5 폼 검증에서는 브라우저의 기본 동작이나 사용자 스타일과 JavaScript를 이용해 사용자에게 가치있고 실용적인 피드백을 제공합니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -55,14 +55,15 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
+<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
   <body>
-    <div class="skippy overflow-hidden">
+    <div class="skippy visually-hidden-focusable overflow-hidden">
   <div class="container-xl">
-    <a class="visually-hidden-focusable d-inline-flex p-2 m-1" href="#content">내용으로 건너뛰기</a>
-    <a class="visually-hidden-focusable d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">문서 내비게이션으로 건너뛰기</a>
+    <a class="d-inline-flex p-2 m-1" href="#content">내용으로 건너뛰기</a>
+    <a class="d-none d-md-inline-flex p-2 m-1" href="#bd-docs-nav">문서 내비게이션으로 건너뛰기</a>
   </div>
 </div>
 
@@ -74,9 +75,10 @@
     </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <svg class="bi" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
+
     </button>
 
     <div class="collapse navbar-collapse" id="bdNavbar">
@@ -162,12 +164,12 @@
 
 
     <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 order-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor" viewBox="0 0 16 16">
   <title>Expand</title>
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z"/>
 </svg>
 
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor" viewBox="0 0 16 16">
   <title>Collapse</title>
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z"/>
 </svg>
@@ -180,202 +182,204 @@
   <div class="container-xxl my-md-4 bd-layout">
     <aside class="bd-sidebar">
       <nav class="collapse bd-links" id="bd-docs-nav" aria-label="Docs navigation"><ul class="list-unstyled mb-0 py-3 pt-md-1">
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
+          Getting started
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-collapse" aria-expanded="false">
-        Getting started
-      </button>
-      <div class="collapse" id="getting-started-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/getting-started/introduction/" class="d-inline-flex align-items-center rounded">Introduction</a></li>
-            <li><a href="/docs/5.0/getting-started/download/" class="d-inline-flex align-items-center rounded">Download</a></li>
-            <li><a href="/docs/5.0/getting-started/contents/" class="d-inline-flex align-items-center rounded">Contents</a></li>
-            <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">Browsers &amp; devices</a></li>
-            <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
-            <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">Build tools</a></li>
-            <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
-            <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">Accessibility</a></li>
-            <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
-            <li><a href="/docs/5.0/getting-started/rtl/" class="d-inline-flex align-items-center rounded">RTL</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="getting-started-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/getting-started/introduction/" class="d-inline-flex align-items-center rounded">Introduction</a></li>
+              <li><a href="/docs/5.0/getting-started/download/" class="d-inline-flex align-items-center rounded">Download</a></li>
+              <li><a href="/docs/5.0/getting-started/contents/" class="d-inline-flex align-items-center rounded">Contents</a></li>
+              <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">Browsers &amp; devices</a></li>
+              <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
+              <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">Build tools</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
+              <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
+              <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">Accessibility</a></li>
+              <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
+              <li><a href="/docs/5.0/getting-started/rtl/" class="d-inline-flex align-items-center rounded">RTL</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
+          Customize
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-        Customize
-      </button>
-      <div class="collapse" id="customize-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/customize/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
-            <li><a href="/docs/5.0/customize/sass/" class="d-inline-flex align-items-center rounded">Sass</a></li>
-            <li><a href="/docs/5.0/customize/options/" class="d-inline-flex align-items-center rounded">Options</a></li>
-            <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded">Color</a></li>
-            <li><a href="/docs/5.0/customize/components/" class="d-inline-flex align-items-center rounded">Components</a></li>
-            <li><a href="/docs/5.0/customize/css-variables/" class="d-inline-flex align-items-center rounded">CSS variables</a></li>
-            <li><a href="/docs/5.0/customize/optimize/" class="d-inline-flex align-items-center rounded">Optimize</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="customize-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/customize/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.0/customize/sass/" class="d-inline-flex align-items-center rounded">Sass</a></li>
+              <li><a href="/docs/5.0/customize/options/" class="d-inline-flex align-items-center rounded">Options</a></li>
+              <li><a href="/docs/5.0/customize/color/" class="d-inline-flex align-items-center rounded">Color</a></li>
+              <li><a href="/docs/5.0/customize/components/" class="d-inline-flex align-items-center rounded">Components</a></li>
+              <li><a href="/docs/5.0/customize/css-variables/" class="d-inline-flex align-items-center rounded">CSS variables</a></li>
+              <li><a href="/docs/5.0/customize/optimize/" class="d-inline-flex align-items-center rounded">Optimize</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
+          Layout
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#layout-collapse" aria-expanded="false">
-        Layout
-      </button>
-      <div class="collapse" id="layout-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
-            <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">Containers</a></li>
-            <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">Grid</a></li>
-            <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">Columns</a></li>
-            <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a></li>
-            <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">Utilities</a></li>
-            <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="layout-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">Breakpoints</a></li>
+              <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">Containers</a></li>
+              <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">Grid</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">Columns</a></li>
+              <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">Gutters</a></li>
+              <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">Utilities</a></li>
+              <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
+          Content
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#content-collapse" aria-expanded="false">
-        Content
-      </button>
-      <div class="collapse" id="content-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
-            <li><a href="/docs/5.0/content/typography/" class="d-inline-flex align-items-center rounded">Typography</a></li>
-            <li><a href="/docs/5.0/content/images/" class="d-inline-flex align-items-center rounded">Images</a></li>
-            <li><a href="/docs/5.0/content/tables/" class="d-inline-flex align-items-center rounded">Tables</a></li>
-            <li><a href="/docs/5.0/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="content-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
+              <li><a href="/docs/5.0/content/typography/" class="d-inline-flex align-items-center rounded">Typography</a></li>
+              <li><a href="/docs/5.0/content/images/" class="d-inline-flex align-items-center rounded">Images</a></li>
+              <li><a href="/docs/5.0/content/tables/" class="d-inline-flex align-items-center rounded">Tables</a></li>
+              <li><a href="/docs/5.0/content/figures/" class="d-inline-flex align-items-center rounded">Figures</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="true" aria-current="true">
+          Forms
+        </button>
 
-    <li class="mb-1 active">
-      <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#forms-collapse" aria-expanded="true" aria-current="true">
-        Forms
-      </button>
-      <div class="collapse show" id="forms-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/forms/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
-            <li><a href="/docs/5.0/forms/form-control/" class="d-inline-flex align-items-center rounded">Form control</a></li>
-            <li><a href="/docs/5.0/forms/select/" class="d-inline-flex align-items-center rounded">Select</a></li>
-            <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded">Checks &amp; radios</a></li>
-            <li><a href="/docs/5.0/forms/range/" class="d-inline-flex align-items-center rounded">Range</a></li>
-            <li><a href="/docs/5.0/forms/input-group/" class="d-inline-flex align-items-center rounded">Input group</a></li>
-            <li><a href="/docs/5.0/forms/floating-labels/" class="d-inline-flex align-items-center rounded">Floating labels</a></li>
-            <li><a href="/docs/5.0/forms/layout/" class="d-inline-flex align-items-center rounded">Layout</a></li>
-            <li><a href="/docs/5.0/forms/validation/" class="d-inline-flex align-items-center rounded active" aria-current="page">Validation</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse show" id="forms-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/forms/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.0/forms/form-control/" class="d-inline-flex align-items-center rounded">Form control</a></li>
+              <li><a href="/docs/5.0/forms/select/" class="d-inline-flex align-items-center rounded">Select</a></li>
+              <li><a href="/docs/5.0/forms/checks-radios/" class="d-inline-flex align-items-center rounded">Checks &amp; radios</a></li>
+              <li><a href="/docs/5.0/forms/range/" class="d-inline-flex align-items-center rounded">Range</a></li>
+              <li><a href="/docs/5.0/forms/input-group/" class="d-inline-flex align-items-center rounded">Input group</a></li>
+              <li><a href="/docs/5.0/forms/floating-labels/" class="d-inline-flex align-items-center rounded">Floating labels</a></li>
+              <li><a href="/docs/5.0/forms/layout/" class="d-inline-flex align-items-center rounded">Layout</a></li>
+              <li><a href="/docs/5.0/forms/validation/" class="d-inline-flex align-items-center rounded active" aria-current="page">Validation</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
+          Components
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#components-collapse" aria-expanded="false">
-        Components
-      </button>
-      <div class="collapse" id="components-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/components/accordion/" class="d-inline-flex align-items-center rounded">Accordion</a></li>
-            <li><a href="/docs/5.0/components/alerts/" class="d-inline-flex align-items-center rounded">Alerts</a></li>
-            <li><a href="/docs/5.0/components/badge/" class="d-inline-flex align-items-center rounded">Badge</a></li>
-            <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded">Breadcrumb</a></li>
-            <li><a href="/docs/5.0/components/buttons/" class="d-inline-flex align-items-center rounded">Buttons</a></li>
-            <li><a href="/docs/5.0/components/button-group/" class="d-inline-flex align-items-center rounded">Button group</a></li>
-            <li><a href="/docs/5.0/components/card/" class="d-inline-flex align-items-center rounded">Card</a></li>
-            <li><a href="/docs/5.0/components/carousel/" class="d-inline-flex align-items-center rounded">Carousel</a></li>
-            <li><a href="/docs/5.0/components/close-button/" class="d-inline-flex align-items-center rounded">Close button</a></li>
-            <li><a href="/docs/5.0/components/collapse/" class="d-inline-flex align-items-center rounded">Collapse</a></li>
-            <li><a href="/docs/5.0/components/dropdowns/" class="d-inline-flex align-items-center rounded">Dropdowns</a></li>
-            <li><a href="/docs/5.0/components/list-group/" class="d-inline-flex align-items-center rounded">List group</a></li>
-            <li><a href="/docs/5.0/components/modal/" class="d-inline-flex align-items-center rounded">Modal</a></li>
-            <li><a href="/docs/5.0/components/navs-tabs/" class="d-inline-flex align-items-center rounded">Navs &amp; tabs</a></li>
-            <li><a href="/docs/5.0/components/navbar/" class="d-inline-flex align-items-center rounded">Navbar</a></li>
-            <li><a href="/docs/5.0/components/pagination/" class="d-inline-flex align-items-center rounded">Pagination</a></li>
-            <li><a href="/docs/5.0/components/popovers/" class="d-inline-flex align-items-center rounded">Popovers</a></li>
-            <li><a href="/docs/5.0/components/progress/" class="d-inline-flex align-items-center rounded">Progress</a></li>
-            <li><a href="/docs/5.0/components/scrollspy/" class="d-inline-flex align-items-center rounded">Scrollspy</a></li>
-            <li><a href="/docs/5.0/components/spinners/" class="d-inline-flex align-items-center rounded">Spinners</a></li>
-            <li><a href="/docs/5.0/components/toasts/" class="d-inline-flex align-items-center rounded">Toasts</a></li>
-            <li><a href="/docs/5.0/components/tooltips/" class="d-inline-flex align-items-center rounded">Tooltips</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="components-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/components/accordion/" class="d-inline-flex align-items-center rounded">Accordion</a></li>
+              <li><a href="/docs/5.0/components/alerts/" class="d-inline-flex align-items-center rounded">Alerts</a></li>
+              <li><a href="/docs/5.0/components/badge/" class="d-inline-flex align-items-center rounded">Badge</a></li>
+              <li><a href="/docs/5.0/components/breadcrumb/" class="d-inline-flex align-items-center rounded">Breadcrumb</a></li>
+              <li><a href="/docs/5.0/components/buttons/" class="d-inline-flex align-items-center rounded">Buttons</a></li>
+              <li><a href="/docs/5.0/components/button-group/" class="d-inline-flex align-items-center rounded">Button group</a></li>
+              <li><a href="/docs/5.0/components/card/" class="d-inline-flex align-items-center rounded">Card</a></li>
+              <li><a href="/docs/5.0/components/carousel/" class="d-inline-flex align-items-center rounded">Carousel</a></li>
+              <li><a href="/docs/5.0/components/close-button/" class="d-inline-flex align-items-center rounded">Close button</a></li>
+              <li><a href="/docs/5.0/components/collapse/" class="d-inline-flex align-items-center rounded">Collapse</a></li>
+              <li><a href="/docs/5.0/components/dropdowns/" class="d-inline-flex align-items-center rounded">Dropdowns</a></li>
+              <li><a href="/docs/5.0/components/list-group/" class="d-inline-flex align-items-center rounded">List group</a></li>
+              <li><a href="/docs/5.0/components/modal/" class="d-inline-flex align-items-center rounded">Modal</a></li>
+              <li><a href="/docs/5.0/components/navs-tabs/" class="d-inline-flex align-items-center rounded">Navs &amp; tabs</a></li>
+              <li><a href="/docs/5.0/components/navbar/" class="d-inline-flex align-items-center rounded">Navbar</a></li>
+              <li><a href="/docs/5.0/components/offcanvas/" class="d-inline-flex align-items-center rounded">Offcanvas</a></li>
+              <li><a href="/docs/5.0/components/pagination/" class="d-inline-flex align-items-center rounded">Pagination</a></li>
+              <li><a href="/docs/5.0/components/popovers/" class="d-inline-flex align-items-center rounded">Popovers</a></li>
+              <li><a href="/docs/5.0/components/progress/" class="d-inline-flex align-items-center rounded">Progress</a></li>
+              <li><a href="/docs/5.0/components/scrollspy/" class="d-inline-flex align-items-center rounded">Scrollspy</a></li>
+              <li><a href="/docs/5.0/components/spinners/" class="d-inline-flex align-items-center rounded">Spinners</a></li>
+              <li><a href="/docs/5.0/components/toasts/" class="d-inline-flex align-items-center rounded">Toasts</a></li>
+              <li><a href="/docs/5.0/components/tooltips/" class="d-inline-flex align-items-center rounded">Tooltips</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
+          Helpers
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#helpers-collapse" aria-expanded="false">
-        Helpers
-      </button>
-      <div class="collapse" id="helpers-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a></li>
-            <li><a href="/docs/5.0/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Colored links</a></li>
-            <li><a href="/docs/5.0/helpers/ratio/" class="d-inline-flex align-items-center rounded">Ratio</a></li>
-            <li><a href="/docs/5.0/helpers/position/" class="d-inline-flex align-items-center rounded">Position</a></li>
-            <li><a href="/docs/5.0/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded">Visually hidden</a></li>
-            <li><a href="/docs/5.0/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Stretched link</a></li>
-            <li><a href="/docs/5.0/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Text truncation</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="helpers-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/helpers/clearfix/" class="d-inline-flex align-items-center rounded">Clearfix</a></li>
+              <li><a href="/docs/5.0/helpers/colored-links/" class="d-inline-flex align-items-center rounded">Colored links</a></li>
+              <li><a href="/docs/5.0/helpers/ratio/" class="d-inline-flex align-items-center rounded">Ratio</a></li>
+              <li><a href="/docs/5.0/helpers/position/" class="d-inline-flex align-items-center rounded">Position</a></li>
+              <li><a href="/docs/5.0/helpers/visually-hidden/" class="d-inline-flex align-items-center rounded">Visually hidden</a></li>
+              <li><a href="/docs/5.0/helpers/stretched-link/" class="d-inline-flex align-items-center rounded">Stretched link</a></li>
+              <li><a href="/docs/5.0/helpers/text-truncation/" class="d-inline-flex align-items-center rounded">Text truncation</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
+          Utilities
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
-        Utilities
-      </button>
-      <div class="collapse" id="utilities-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
-            <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded">Borders</a></li>
-            <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded">Colors</a></li>
-            <li><a href="/docs/5.0/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
-            <li><a href="/docs/5.0/utilities/flex/" class="d-inline-flex align-items-center rounded">Flex</a></li>
-            <li><a href="/docs/5.0/utilities/float/" class="d-inline-flex align-items-center rounded">Float</a></li>
-            <li><a href="/docs/5.0/utilities/interactions/" class="d-inline-flex align-items-center rounded">Interactions</a></li>
-            <li><a href="/docs/5.0/utilities/overflow/" class="d-inline-flex align-items-center rounded">Overflow</a></li>
-            <li><a href="/docs/5.0/utilities/position/" class="d-inline-flex align-items-center rounded">Position</a></li>
-            <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">Shadows</a></li>
-            <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">Sizing</a></li>
-            <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">Spacing</a></li>
-            <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">Text</a></li>
-            <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Vertical align</a></li>
-            <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibility</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="utilities-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/utilities/api/" class="d-inline-flex align-items-center rounded">API</a></li>
+              <li><a href="/docs/5.0/utilities/background/" class="d-inline-flex align-items-center rounded">Background</a></li>
+              <li><a href="/docs/5.0/utilities/borders/" class="d-inline-flex align-items-center rounded">Borders</a></li>
+              <li><a href="/docs/5.0/utilities/colors/" class="d-inline-flex align-items-center rounded">Colors</a></li>
+              <li><a href="/docs/5.0/utilities/display/" class="d-inline-flex align-items-center rounded">Display</a></li>
+              <li><a href="/docs/5.0/utilities/flex/" class="d-inline-flex align-items-center rounded">Flex</a></li>
+              <li><a href="/docs/5.0/utilities/float/" class="d-inline-flex align-items-center rounded">Float</a></li>
+              <li><a href="/docs/5.0/utilities/interactions/" class="d-inline-flex align-items-center rounded">Interactions</a></li>
+              <li><a href="/docs/5.0/utilities/overflow/" class="d-inline-flex align-items-center rounded">Overflow</a></li>
+              <li><a href="/docs/5.0/utilities/position/" class="d-inline-flex align-items-center rounded">Position</a></li>
+              <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">Shadows</a></li>
+              <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">Sizing</a></li>
+              <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">Spacing</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">Text</a></li>
+              <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">Vertical align</a></li>
+              <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">Visibility</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false">
+          Extend
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#extend-collapse" aria-expanded="false">
-        Extend
-      </button>
-      <div class="collapse" id="extend-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded">Approach</a></li>
-            <li><a href="/docs/5.0/extend/icons/" class="d-inline-flex align-items-center rounded">Icons</a></li>
-        </ul>
-      </div>
-    </li>
+        <div class="collapse" id="extend-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/extend/approach/" class="d-inline-flex align-items-center rounded">Approach</a></li>
+              <li><a href="/docs/5.0/extend/icons/" class="d-inline-flex align-items-center rounded">Icons</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
+          About
+        </button>
 
-    <li class="mb-1">
-      <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
-        About
-      </button>
-      <div class="collapse" id="about-collapse">
-        <ul class="list-unstyled fw-normal pb-1 small">
-            <li><a href="/docs/5.0/about/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
-            <li><a href="/docs/5.0/about/team/" class="d-inline-flex align-items-center rounded">Team</a></li>
-            <li><a href="/docs/5.0/about/brand/" class="d-inline-flex align-items-center rounded">Brand</a></li>
-            <li><a href="/docs/5.0/about/license/" class="d-inline-flex align-items-center rounded">License</a></li>
-            <li><a href="/docs/5.0/about/translations/" class="d-inline-flex align-items-center rounded">Translations</a></li>
-        </ul>
-      </div>
-    </li>
-
-    <li class="my-3 mx-4 border-top"></li>
-    <li>
-      <a href="/docs/5.0/migration/" class="d-inline-flex align-items-center rounded">
-        마이그레이션
-      </a>
-    </li>
+        <div class="collapse" id="about-collapse">
+          <ul class="list-unstyled fw-normal pb-1 small">
+              <li><a href="/docs/5.0/about/overview/" class="d-inline-flex align-items-center rounded">Overview</a></li>
+              <li><a href="/docs/5.0/about/team/" class="d-inline-flex align-items-center rounded">Team</a></li>
+              <li><a href="/docs/5.0/about/brand/" class="d-inline-flex align-items-center rounded">Brand</a></li>
+              <li><a href="/docs/5.0/about/license/" class="d-inline-flex align-items-center rounded">License</a></li>
+              <li><a href="/docs/5.0/about/translations/" class="d-inline-flex align-items-center rounded">Translations</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="my-3 mx-4 border-top"></li>
+      <li>
+        <a href="/docs/5.0/migration/" class="d-inline-flex align-items-center rounded">
+          Migration
+        </a>
+      </li>
   </ul>
 </nav>
 
@@ -385,9 +389,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/forms/validation.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Validation</h1>
+          <h1 class="bd-title" id="content">Validation(검증)</h1>
         </div>
-        <p class="bd-lead">Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.</p>
+        <p class="bd-lead">HTML5 폼 검증에서는 브라우저의 기본 동작이나 사용자 스타일과 JavaScript를 이용해 사용자에게 가치있고 실용적인 피드백을 제공합니다.</p>
         
 
       </div>
@@ -403,7 +407,15 @@
     <li><a href="#server-side">Server side</a></li>
     <li><a href="#supported-elements">Supported elements</a></li>
     <li><a href="#tooltips">Tooltips</a></li>
-    <li><a href="#customizing">Customizing</a></li>
+    <li><a href="#sass">Sass</a>
+      <ul>
+        <li><a href="#variables">Variables</a></li>
+        <li><a href="#mixins">Mixins</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#loop">Loop</a></li>
+        <li><a href="#customizing">Customizing</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>
@@ -413,22 +425,22 @@
         
 
         <div class="bd-callout bd-callout-warning">
-We are aware that currently the client-side custom validation styles and tooltips are not accessible, since they are not exposed to assistive technologies. While we work on a solution, we&rsquo;d recommend either using the server-side option or the default browser validation method.
+현재 클라이언트 측의 맞춤 검증 스타일과 툴팁은 지원 기술에 공개되지 않아 접근할 수 없다는 것을 알고 있습니다. 해결책을 검토하는 동안 서버사이드 옵션을 사용하거나 브라우저 기본 검증 방법을 사용하는 것이 좋습니다.
 </div>
 
 <h2 id="how-it-works">How it works</h2>
-<p>Here&rsquo;s how form validation works with Bootstrap:</p>
+<p>Bootstrap에서의 폼 검증 구조를 소개합니다:</p>
 <ul>
-<li>HTML form validation is applied via CSS&rsquo;s two pseudo-classes, <code>:invalid</code> and <code>:valid</code>. It applies to <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;textarea&gt;</code> elements.</li>
-<li>Bootstrap scopes the <code>:invalid</code> and <code>:valid</code> styles to parent <code>.was-validated</code> class, usually applied to the <code>&lt;form&gt;</code>. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).</li>
-<li>To reset the appearance of the form (for instance, in the case of dynamic form submissions using AJAX), remove the <code>.was-validated</code> class from the <code>&lt;form&gt;</code> again after submission.</li>
-<li>As a fallback, <code>.is-invalid</code> and <code>.is-valid</code> classes may be used instead of the pseudo-classes for <a href="#server-side">server-side validation</a>. They do not require a <code>.was-validated</code> parent class.</li>
-<li>Due to constraints in how CSS works, we cannot (at present) apply styles to a <code>&lt;label&gt;</code> that comes before a form control in the DOM without the help of custom JavaScript.</li>
-<li>All modern browsers support the <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api">constraint validation API</a>, a series of JavaScript methods for validating form controls.</li>
-<li>Feedback messages may utilize the <a href="#browser-defaults">browser defaults</a> (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.</li>
-<li>You may provide custom validity messages with <code>setCustomValidity</code> in JavaScript.</li>
+<li>HTML의 폼 검증은 CSS의 두개의 가상 클래스 <code>:invalid</code> 와 <code>:valid</code>를 사용해 <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code> 요소에 적용됩니다.</li>
+<li>Bootstrap는 <code>:invalid</code> 과 <code>:valid</code> 스타일을 상위 클래스 <code>.was-validated</code>에 범위를 지정하고 일반적으로 <code>&lt;form&gt;</code>에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 비활설화 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)</li>
+<li>폼의 외형을 새로 적용하려면(예를 들어, AJAX를 사용한 동적인 폼 송신의 경우), 송신 후에 <code>.was-validated</code> 클래스를 <code>&lt;form&gt;</code>으로부터 다시 삭제합니다.</li>
+<li>폴백으로서 <a href="#server-side">server-side validation</a>의 가상 클래스 대신 <code>.is-invalid</code> 와 <code>.is-valid</code> 클래스를 사용할 수 있습니다. 이 클래스들은 상위 클래스인 <code>.was-validated</code>를 필요로 하지 않습니다.</li>
+<li>(현시점에서는)CSS 동작에 제약이 있기 때문에 사용자 정의 JavaScript의 도움을 받지 않고 DOM 내에서 폼 컨트롤의 앞에 있는 <code>&lt;label&gt;</code>에 스타일을 적용할 수 없습니다.</li>
+<li>모든 모던 브라우저는 폼 컨트롤을 검증하기 위한 일련의 JavaScript 메소드인 <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api">constraint validation API</a>를 지원합니다.</li>
+<li>피드백 메세지는 <a href="#browser-defaults">browser defaults</a> (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다)나 HTML과 CSS를 추가한 사용자 피드백 스타일을 이용할 수 도 있습니다.</li>
+<li>JavaScript의 <code>setCustomValidity</code>를 사용해 사용자 정의의 유효성 문구를 제공할 수도 있습니다.</li>
 </ul>
-<p>With that in mind, consider the following demos for our custom form validation styles, optional server-side classes, and browser defaults.</p>
+<p>이 점을 고려하여 사용자 정의 폼 검증 스타일, 옵션 서버 사이드 클래스 및 브라우저 기본값에 대해, 아래의 데모를 검토해 주세요.</p>
 <h2 id="custom-styles">Custom styles</h2>
 <p>For custom Bootstrap form validation messages, you&rsquo;ll need to add the <code>novalidate</code> boolean attribute to your <code>&lt;form&gt;</code>. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you&rsquo;ll see the <code>:invalid</code> and <code>:valid</code> styles applied to your form controls.</p>
 <p>Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for <code>&lt;select&gt;</code>s are only available with <code>.form-select</code>, and not <code>.form-control</code>.</p>
@@ -580,8 +592,7 @@ We are aware that currently the client-side custom validation styles and tooltip
         <span class="nx">form</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;was-validated&#39;</span><span class="p">)</span>
       <span class="p">},</span> <span class="kc">false</span><span class="p">)</span>
     <span class="p">})</span>
-<span class="p">})()</span>
-</code></pre></div>
+<span class="p">})()</span></code></pre></div>
 <h2 id="browser-defaults">Browser defaults</h2>
 <p>Not interested in custom validation feedback messages or writing JavaScript to change form behaviors? All good, you can use the browser defaults. Try submitting the form below. Depending on your browser and OS, you&rsquo;ll see a slightly different style of feedback.</p>
 <p>While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.</p>
@@ -1010,10 +1021,163 @@ We are aware that currently the client-side custom validation styles and tooltip
     <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>Submit form<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="customizing">Customizing</h2>
-<p>Validation states can be customized via Sass with the <code>$form-validation-states</code> map. Located in our <code>_variables.scss</code> file, this Sass map is looped over to generate the default <code>valid</code>/<code>invalid</code> validation states. Included is a nested map for customizing each state&rsquo;s color and icon. While no other states are supported by browsers, those using custom styles can easily add more complex form feedback.</p>
-<p>Please note that we do not recommend customizing these values without also modifying the <code>form-validation-state</code> mixin.</p>
-<p>This is the Sass map from <code>_variables.scss</code>. Override this and recompile your Sass to generate different states:</p>
+<h2 id="sass">Sass</h2>
+<h3 id="variables">Variables</h3>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$form-feedback-margin-top</span><span class="o">:</span>          <span class="nv">$form-text-margin-top</span><span class="p">;</span>
+<span class="nv">$form-feedback-font-size</span><span class="o">:</span>           <span class="nv">$form-text-font-size</span><span class="p">;</span>
+<span class="nv">$form-feedback-font-style</span><span class="o">:</span>          <span class="nv">$form-text-font-style</span><span class="p">;</span>
+<span class="nv">$form-feedback-valid-color</span><span class="o">:</span>         <span class="nv">$success</span><span class="p">;</span>
+<span class="nv">$form-feedback-invalid-color</span><span class="o">:</span>       <span class="nv">$danger</span><span class="p">;</span>
+
+<span class="nv">$form-feedback-icon-valid-color</span><span class="o">:</span>    <span class="nv">$form-feedback-valid-color</span><span class="p">;</span>
+<span class="nv">$form-feedback-icon-valid</span><span class="o">:</span>          <span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 8 8&#39;&gt;&lt;path fill=&#39;</span><span class="si">#{</span><span class="nv">$form-feedback-icon-valid-color</span><span class="si">}</span><span class="sx">&#39; d=&#39;M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">;</span>
+<span class="nv">$form-feedback-icon-invalid-color</span><span class="o">:</span>  <span class="nv">$form-feedback-invalid-color</span><span class="p">;</span>
+<span class="nv">$form-feedback-icon-invalid</span><span class="o">:</span>        <span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 12 12&#39; width=&#39;12&#39; height=&#39;12&#39; fill=&#39;none&#39; stroke=&#39;</span><span class="si">#{</span><span class="nv">$form-feedback-icon-invalid-color</span><span class="si">}</span><span class="sx">&#39;&gt;&lt;circle cx=&#39;6&#39; cy=&#39;6&#39; r=&#39;4.5&#39;/&gt;&lt;path stroke-linejoin=&#39;round&#39; d=&#39;M5.8 3.6h.4L6 6.5z&#39;/&gt;&lt;circle cx=&#39;6&#39; cy=&#39;8.2&#39; r=&#39;.6&#39; fill=&#39;</span><span class="si">#{</span><span class="nv">$form-feedback-icon-invalid-color</span><span class="si">}</span><span class="sx">&#39; stroke=&#39;none&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="mixins">Mixins</h3>
+<p>Two mixins are combined together, through our <a href="#loop">loop</a>, to generate our form validation feedback styles.</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">@if</span> <span class="p">(</span><span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;valid&#34;</span> <span class="ow">or</span> <span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;invalid&#34;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nc">.was-validated</span> <span class="nn">#</span><span class="p">{</span><span class="nt">if</span><span class="o">(</span><span class="k">&amp;</span><span class="o">,</span> <span class="s2">&#34;&amp;&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="o">)</span><span class="p">}</span><span class="nd">:</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="o">,</span>
+    <span class="nn">#</span><span class="p">{</span><span class="nt">if</span><span class="o">(</span><span class="k">&amp;</span><span class="o">,</span> <span class="s2">&#34;&amp;&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="o">)</span><span class="p">}</span><span class="nc">.is-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
+      <span class="k">@content</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span> <span class="k">@else</span> <span class="p">{</span>
+    <span class="nn">#</span><span class="p">{</span><span class="nt">if</span><span class="o">(</span><span class="k">&amp;</span><span class="o">,</span> <span class="s2">&#34;&amp;&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="o">)</span><span class="p">}</span><span class="nc">.is-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
+      <span class="k">@content</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@mixin</span><span class="nf"> form-validation-state</span><span class="p">(</span>
+  <span class="nv">$state</span><span class="o">,</span>
+  <span class="nv">$color</span><span class="o">,</span>
+  <span class="nv">$icon</span><span class="o">,</span>
+  <span class="nv">$tooltip-color</span><span class="o">:</span> <span class="nf">color-contrast</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span><span class="o">,</span>
+  <span class="nv">$tooltip-bg-color</span><span class="o">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$form-feedback-tooltip-opacity</span><span class="p">)</span><span class="o">,</span>
+  <span class="nv">$focus-box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="nv">$input-btn-focus-blur</span> <span class="nv">$input-focus-width</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$input-btn-focus-color-opacity</span><span class="p">)</span>
+<span class="p">)</span> <span class="p">{</span>
+  <span class="nc">.</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="nc">-feedback</span> <span class="p">{</span>
+    <span class="nt">display</span><span class="nd">:</span> <span class="nt">none</span><span class="p">;</span>
+    <span class="nt">width</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span>
+    <span class="nt">margin-top</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-feedback-margin-top</span><span class="p">;</span>
+    <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="nv">$form-feedback-font-size</span><span class="p">);</span>
+    <span class="nt">font-style</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-feedback-font-style</span><span class="p">;</span>
+    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nc">.</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="nc">-tooltip</span> <span class="p">{</span>
+    <span class="nt">position</span><span class="nd">:</span> <span class="nt">absolute</span><span class="p">;</span>
+    <span class="nt">top</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span>
+    <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">5</span><span class="p">;</span>
+    <span class="nt">display</span><span class="nd">:</span> <span class="nt">none</span><span class="p">;</span>
+    <span class="nt">max-width</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span> <span class="c1">// Contain to parent when possible
+</span><span class="c1"></span>    <span class="nt">padding</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-feedback-tooltip-padding-y</span> <span class="err">$</span><span class="nt">form-feedback-tooltip-padding-x</span><span class="p">;</span>
+    <span class="nt">margin-top</span><span class="nd">:</span> <span class="nc">.1rem</span><span class="p">;</span>
+    <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="nv">$form-feedback-tooltip-font-size</span><span class="p">);</span>
+    <span class="nt">line-height</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-feedback-tooltip-line-height</span><span class="p">;</span>
+    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">tooltip-color</span><span class="p">;</span>
+    <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">tooltip-bg-color</span><span class="p">;</span>
+    <span class="k">@include</span><span class="nd"> border-radius</span><span class="p">(</span><span class="nv">$form-feedback-tooltip-border-radius</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">~</span> <span class="nc">.</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="nc">-feedback</span><span class="o">,</span>
+    <span class="o">~</span> <span class="nc">.</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="nc">-tooltip</span> <span class="p">{</span>
+      <span class="nt">display</span><span class="nd">:</span> <span class="nt">block</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nc">.form-control</span> <span class="p">{</span>
+    <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+
+      <span class="k">@if</span> <span class="nv">$enable-validation-icons</span> <span class="p">{</span>
+        <span class="nt">padding-right</span><span class="nd">:</span> <span class="err">$</span><span class="nt">input-height-inner</span><span class="p">;</span>
+        <span class="nt">background-image</span><span class="nd">:</span> <span class="nt">escape-svg</span><span class="o">(</span><span class="err">$</span><span class="nt">icon</span><span class="o">)</span><span class="p">;</span>
+        <span class="nt">background-repeat</span><span class="nd">:</span> <span class="nt">no-repeat</span><span class="p">;</span>
+        <span class="nt">background-position</span><span class="nd">:</span> <span class="nt">right</span> <span class="err">$</span><span class="nt">input-height-inner-quarter</span> <span class="nt">center</span><span class="p">;</span>
+        <span class="nt">background-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">input-height-inner-half</span> <span class="err">$</span><span class="nt">input-height-inner-half</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+        <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+        <span class="nt">box-shadow</span><span class="nd">:</span> <span class="err">$</span><span class="nt">focus-box-shadow</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1">// stylelint-disable-next-line selector-no-qualifying-type
+</span><span class="c1"></span>  <span class="nt">textarea</span><span class="nc">.form-control</span> <span class="p">{</span>
+    <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">@if</span> <span class="nv">$enable-validation-icons</span> <span class="p">{</span>
+        <span class="nt">padding-right</span><span class="nd">:</span> <span class="err">$</span><span class="nt">input-height-inner</span><span class="p">;</span>
+        <span class="nt">background-position</span><span class="nd">:</span> <span class="nt">top</span> <span class="err">$</span><span class="nt">input-height-inner-quarter</span> <span class="nt">right</span> <span class="err">$</span><span class="nt">input-height-inner-quarter</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nc">.form-select</span> <span class="p">{</span>
+    <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+
+      <span class="k">@if</span> <span class="nv">$enable-validation-icons</span> <span class="p">{</span>
+        <span class="k">&amp;</span><span class="nd">:not</span><span class="o">([</span><span class="nt">multiple</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">size</span><span class="o">]),</span>
+        <span class="k">&amp;</span><span class="nd">:not</span><span class="o">([</span><span class="nt">multiple</span><span class="o">])[</span><span class="nt">size</span><span class="o">=</span><span class="s2">&#34;1&#34;</span><span class="o">]</span> <span class="p">{</span>
+          <span class="nt">padding-right</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-select-feedback-icon-padding-end</span><span class="p">;</span>
+          <span class="nt">background-image</span><span class="nd">:</span> <span class="nt">escape-svg</span><span class="o">(</span><span class="err">$</span><span class="nt">form-select-indicator</span><span class="o">),</span> <span class="nt">escape-svg</span><span class="o">(</span><span class="err">$</span><span class="nt">icon</span><span class="o">)</span><span class="p">;</span>
+          <span class="nt">background-position</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-select-bg-position</span><span class="o">,</span> <span class="err">$</span><span class="nt">form-select-feedback-icon-position</span><span class="p">;</span>
+          <span class="nt">background-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-select-bg-size</span><span class="o">,</span> <span class="err">$</span><span class="nt">form-select-feedback-icon-size</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+        <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+        <span class="nt">box-shadow</span><span class="nd">:</span> <span class="err">$</span><span class="nt">focus-box-shadow</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nc">.form-check-input</span> <span class="p">{</span>
+    <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+
+      <span class="k">&amp;</span><span class="nd">:checked</span> <span class="p">{</span>
+        <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+        <span class="nt">box-shadow</span><span class="nd">:</span> <span class="err">$</span><span class="nt">focus-box-shadow</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="o">~</span> <span class="nc">.form-check-label</span> <span class="p">{</span>
+        <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nc">.form-check-inline</span> <span class="nc">.form-check-input</span> <span class="p">{</span>
+    <span class="o">~</span> <span class="nc">.</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="nc">-feedback</span> <span class="p">{</span>
+      <span class="nt">margin-left</span><span class="nd">:</span> <span class="nc">.5em</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nc">.input-group</span> <span class="nc">.form-control</span><span class="o">,</span>
+  <span class="nc">.input-group</span> <span class="nc">.form-select</span> <span class="p">{</span>
+    <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">@if</span> <span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;valid&#34;</span> <span class="p">{</span>
+        <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">1</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">@else</span> <span class="nt">if</span> <span class="err">$</span><span class="nt">state</span> <span class="o">==</span> <span class="s2">&#34;invalid&#34;</span> <span class="p">{</span>
+        <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">2</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
+        <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">3</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="map">Map</h3>
+<p>This is the validation Sass map from <code>_variables.scss</code>. Override or extend this to generate different or additional states.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$form-validation-states</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;valid&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="s2">&#34;color&#34;</span><span class="o">:</span> <span class="nv">$form-feedback-valid-color</span><span class="o">,</span>
@@ -1023,31 +1187,83 @@ We are aware that currently the client-side custom validation styles and tooltip
     <span class="s2">&#34;color&#34;</span><span class="o">:</span> <span class="nv">$form-feedback-invalid-color</span><span class="o">,</span>
     <span class="s2">&#34;icon&#34;</span><span class="o">:</span> <span class="nv">$form-feedback-icon-invalid</span>
   <span class="p">)</span>
-<span class="p">);</span></code></pre></div>
-<p>This is the loop from <code>forms/_validation.scss</code>. Any modifications to the above Sass map will be reflected in your compiled CSS via this loop:</p>
+<span class="p">);</span>
+</code></pre></div>
+<p>Maps of <code>$form-validation-states</code> can contain three optional parameters to override tooltips and focus styles.</p>
+<h3 id="loop">Loop</h3>
+<p>Used to iterate over <code>$form-validation-states</code> map values to generate our validation styles. Any modifications to the above Sass map will be reflected in your compiled CSS via this loop.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="err">$</span><span class="nt">state</span><span class="o">,</span> <span class="err">$</span><span class="nt">data</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">form-validation-states</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> form-validation-state</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$data</span><span class="o">,</span> <span class="no">color</span><span class="p">)</span><span class="o">,</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$data</span><span class="o">,</span> <span class="no">icon</span><span class="p">));</span>
-<span class="p">}</span></code></pre></div>
+  <span class="k">@include</span><span class="nd"> form-validation-state</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$data</span><span class="o">...</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="customizing">Customizing</h3>
+<p>Validation states can be customized via Sass with the <code>$form-validation-states</code> map. Located in our <code>_variables.scss</code> file, this Sass map is how we generate the default <code>valid</code>/<code>invalid</code> validation states. Included is a nested map for customizing each state&rsquo;s color, icon, tooltip color, and focus shadow. While no other states are supported by browsers, those using custom styles can easily add more complex form feedback.</p>
+<p>Please note that <strong>we do not recommend customizing <code>$form-validation-states</code> values without also modifying the <code>form-validation-state</code> mixin</strong>.</p>
 
       </div>
     </main>
   </div>
 
 
-    <footer class="bd-footer p-3 p-md-5 mt-5 bg-light text-center text-sm-start">
-  <div class="container">
-    <ul class="bd-footer-links ps-0 mb-3">
-      <li class="d-inline-block"><a href="https://github.com/twbs">GitHub</a></li>
-      <li class="d-inline-block ms-3"><a href="https://twitter.com/getbootstrap">Twitter</a></li>
-      <li class="d-inline-block ms-3"><a href="/docs/5.0/examples/">예제</a></li>
-      <li class="d-inline-block ms-3"><a href="/docs/5.0/about/overview/">소개</a></li>
-    </ul>
-    <p class="mb-0">Designed and built with all the love in the world by the <a href="/docs/5.0/about/team/">Bootstrap team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-    <p class="mb-0">Currently v5.0.0-beta1. Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>, docs <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>.</p>
+    <footer class="bd-footer py-5 mt-5 bg-light">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 mb-3">
+        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"/></svg>
+          <span class="fs-5">Bootstrap</span>
+        </a>
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
+          <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
+          <li class="mb-2">현재 v5.0.1입니다.</li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <h5>링크</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/">홈</a></li>
+          <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
+          <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>가이드</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/docs/5.0/getting-started/">시작하기</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/starter-template/">스타터 템플릿</a></li>
+          <li class="mb-2"><a href="/docs/5.0/getting-started/webpack/">Webpack</a></li>
+          <li class="mb-2"><a href="/docs/5.0/getting-started/parcel/">Parcel</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>프로젝트</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/icons">Icons</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/rfs">RFS</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap-npm-starter">npm 스타터</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2 mb-3">
+        <h5>커뮤니티</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/issues">이슈</a></li>
+          <li class="mb-2"><a href="https://github.com/twbs/bootstrap/discussions">토론</a></li>
+          <li class="mb-2"><a href="https://github.com/sponsors/twbs">후원사</a></li>
+          <li class="mb-2"><a href="https://opencollective.com/bootstrap">Open Collective</a></li>
+          <li class="mb-2"><a href="https://bootstrap-slack.herokuapp.com/">Slack</a></li>
+          <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
