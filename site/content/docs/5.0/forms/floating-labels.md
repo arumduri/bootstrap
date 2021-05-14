@@ -8,7 +8,7 @@ toc: true
 
 ## Example
 
-`<input class="form-control">`과 `<label>` 요소를 함께 `.form-floating`으로 감싸면, Bootstrap의 텍스트 형식의 폼 필드에서 플로팅 라벨 사용이 가능합니다. CSS만으로 플로팅 라벨을 실현하는 방법은 `:placeholder-shown` 가상 요소를 사용하기 때문에 각 `<input>`에는 `placeholder`가 필요합니다. 또한 형제 셀렉터(예를 들어, `~`)를 사용하기 때문에 `<input>`이 처음에 와야 하는 순서에 주의해 주세요.
+`<input class="form-control">`과 `<label>` 요소를 함께 `.form-floating`으로 감싸면, Bootstrap의 문자 형식의 폼 필드에서 플로팅 라벨 사용이 가능합니다. CSS만으로 플로팅 라벨을 실현하는 방법은 `:placeholder-shown` 가상 요소를 사용하기 때문에 각 `<input>`에는 `placeholder`가 필요합니다. 또한 형제 셀렉터(예를 들어, `~`)를 사용하기 때문에 `<input>`이 처음에 와야 하는 순서에 주의해 주세요.
 
 {{< example >}}
 <div class="form-floating mb-3">
@@ -21,7 +21,7 @@ toc: true
 </div>
 {{< /example >}}
 
-`value` 가 이미 정의되어 있는 경우에는 `<label>`이 자동적으로 플로팅 되어져 있습니다.
+`value`가 이미 정의되어 있는 경우에는 `<label>`이 자동적으로 플로팅 되어져 있습니다.
 
 {{< example >}}
 <form class="form-floating">
@@ -30,7 +30,7 @@ toc: true
 </form>
 {{< /example >}}
 
-또한, 폼 검증에서도 기대한대로 잘 동작합니다.
+또한, 폼 유효성 검사에서도 기대한대로 잘 동작합니다.
 
 {{< example >}}
 <form class="form-floating">
@@ -41,7 +41,7 @@ toc: true
 
 ## Textareas
 
-기본적으로, `.form-control`를 사용하는 `<textarea>`는 `<input>`의 높이와 동일합니다.
+기본적으로, `.form-control`을 사용하는 `<textarea>`는 `<input>`의 높이와 동일합니다.
 
 {{< example >}}
 <div class="form-floating">
@@ -50,7 +50,7 @@ toc: true
 </div>
 {{< /example >}}
 
-`<textarea>`의 높이를 변경하고 싶다면, `rows`속성 대신, 명시적인 `height`을 사용해 설정합니다(인라인 또는 사용자 CSS를 사용합니다).
+`<textarea>`의 높이를 변경하고 싶다면, `rows`속성 대신, 명시적인 `height`를 사용해 설정해 주세요(인라인 또는 사용자 CSS를 사용합니다).
 
 {{< example >}}
 <div class="form-floating">
@@ -61,7 +61,7 @@ toc: true
 
 ## Selects
 
-`.form-control` 이외에서의 플로팅 라벨은 `.form-select` 에서만 사용할 수 있습니다. 이들은 똑같이 동작하지만, `<input>`과는 다르게 항상 `<label>`이 플로팅 된 상태로 표시됩니다. **`size`와 `multiple` 선택자는 지원되지 않습니다.**
+`.form-control` 이외에서의 플로팅 라벨은 `.form-select` 에서만 사용할 수 있습니다. 이들은 똑같이 동작하지만, `<input>`과는 다르게 `<label>`이 항상 플로팅 된 상태로 표시됩니다. **`size`와 `multiple` 선택자는 지원되지 않습니다.**
 
 {{< example >}}
 <div class="form-floating">
