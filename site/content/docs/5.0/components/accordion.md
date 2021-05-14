@@ -64,7 +64,7 @@ toc: true
 
 ### Flush
 
-`.accordion-flush` 를 추가하여, 기본 `background-color` 와 몇 개의 외곽선, 그리고 몇 개의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge로 랜더링합니다.
+`.accordion-flush`를 추가하여, 기본 `background-color`와 몇 개의 외곽선, 그리고 몇 개의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge로 랜더링합니다.
 
 {{< example class="bg-light" >}}
 <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -103,7 +103,7 @@ toc: true
 
 ### Always open
 
-Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accordion items stay open when another item is opened.
+다른 항목이 열렸을 때에도 이전 아코디언 항목이 열린 상태로 유지되게 하고 싶으면 각 `.accordion-collapse`의 `data-bs-parent` 속성을 생략하면 됩니다.
 
 {{< example >}}
 <div class="accordion" id="accordionPanelsStayOpenExample">
