@@ -363,7 +363,7 @@ Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에
 
 ### Map
 
-이것은 `_variables.scss`의 유효성 검사용 Sass 맵입니다. 이것을 덮어쓰거나 확장해 서로 다른 상태나 추가 상태를 만들수 있습니다.
+이것은 `_variables.scss`의 유효성 검사용 Sass맵 입니다. 이것을 덮어쓰거나 확장해 서로 다른 상태나 추가 상태를 만들수 있습니다.
 
 {{< scss-docs name="form-validation-states" file="scss/_variables.scss" >}}
 
