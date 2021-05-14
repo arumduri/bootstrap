@@ -26,7 +26,7 @@ sections:
 
 ## Overview
 
-Bootstrap의 폼 컨트롤은 [our Rebooted form styles]({{< docsref "/content/reboot#forms" >}}) 과 함께 사용합니다. 이 클래스를 사용해 재정의 된 표시를 선택하면 브라우저나 단말기 간에 보다 일관된 렌더링을 적용시킬 수 있습니다.
+Bootstrap의 폼 컨트롤은 [our Rebooted form styles]({{< docsref "/content/reboot#forms" >}}) 과 함께 사용합니다. 이 클래스를 사용해 재정의 된 표시를 선택하면 브라우저나 디바이스 간에 보다 일관된 렌더링을 적용시킬 수 있습니다.
 
 메일 인증이나 숫자 선택 등의 새로운 입력 컨트롤을 사용하기 위해 모든 입력에 적절한 `type` 속성을 사용해 주세요. (예를 들어, 메일 주소에는 `email`, 숫자 정보에는 `number`)
 
