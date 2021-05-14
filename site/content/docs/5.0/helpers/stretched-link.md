@@ -5,6 +5,7 @@ description: CSS를 통해 중첩 된 링크를 "확장"하여 HTML 요소 또�
 group: helpers
 ---
 
+Add `.stretched-link` to a link to make its [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block) clickable via a `::after` pseudo element. In most cases, this means that an element with `position: relative;` that contains a link with the `.stretched-link` class is clickable. Please note given [how CSS `position` works](https://www.w3.org/TR/CSS21/visuren.html#propdef-position), `.stretched-link` cannot be mixed with most table elements.
 
 a link에 `.stretched-link` 를 추가하여 [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block)을 가상요소인 `::after`  를 통해 클릭할수 있도록 만듭니다. 대부분의 경우 이는, a link에 `.stretched-link` 클래스가 붙어있고 a link를 감싸고 있는 상위의 `position : relative;` 상태의 요소는 클릭 할 수 있음을 의미합니다.
 
@@ -30,12 +31,11 @@ a link에 `.stretched-link` 를 추가하여 [containing block](https://develope
   {{< placeholder width="144" height="144" class="flex-shrink-0 me-3" text="false" title="Generic placeholder image" >}}
   <div>
     <h5 class="mt-0">Custom component with stretched link</h5>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p>This is some placeholder content for the custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
     <a href="#" class="stretched-link">Go somewhere</a>
   </div>
 </div>
 {{< /example >}}
-
 
 {{< example >}}
 <div class="row g-0 bg-light position-relative">
@@ -44,7 +44,7 @@ a link에 `.stretched-link` 를 추가하여 [containing block](https://develope
   </div>
   <div class="col-md-6 p-4 ps-md-0">
     <h5 class="mt-0">Columns with stretched link</h5>
-    <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    <p>Another instance of placeholder content for this other custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
     <a href="#" class="stretched-link">Go somewhere</a>
   </div>
 </div>

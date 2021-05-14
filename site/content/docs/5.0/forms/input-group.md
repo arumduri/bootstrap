@@ -81,19 +81,19 @@ toc: true
 
 ## Checkboxes and radios
 
-입력 그룹의 추가 기능 자리에 문자 대신 체크박스나 라디오 버튼 같은 옵션을 배치할 수 있습니다.
+입력 그룹의 추가 기능 자리에 문자 대신 체크박스나 라디오 버튼 같은 옵션을 배치할 수 있습니다. 우리는 입력 부분에 표시되는 텍스트가 없는 경우 `.form-check-input` 에 `.mt-0` 을 추가하는 것을 권장합니다.
 
 {{< example >}}
 <div class="input-group mb-3">
   <div class="input-group-text">
-    <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input">
+    <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
   </div>
   <input type="text" class="form-control" aria-label="Text input with checkbox">
 </div>
 
 <div class="input-group">
   <div class="input-group-text">
-    <input class="form-check-input" type="radio" value="" aria-label="Radio button for following text input">
+    <input class="form-check-input mt-0" type="radio" value="" aria-label="Radio button for following text input">
   </div>
   <input type="text" class="form-control" aria-label="Text input with radio button">
 </div>
@@ -308,3 +308,9 @@ toc: true
   <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
 </div>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="input-group-variables" file="scss/_variables.scss" >}}

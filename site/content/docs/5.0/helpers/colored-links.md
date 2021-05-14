@@ -6,7 +6,7 @@ group: helpers
 toc: false
 ---
 
-`.link-*` 클래스를 사용하여 링크를 색상화 할 수 있습니다. [`.text-*` classes]({{< docsref "/utilities/colors#colors" >}})와 다르게, 이 클래스들에는 `:hover` 와 `:focus` 상태가 있습니다.
+`.link-*` 클래스를 사용하여 링크를 색상을 입힐 수 있습니다. [`.text-*` 클래스]({{< docsref "/utilities/colors" >}})와는 다르게, 이 클래스들에는 `:hover` 와 `:focus` 상태가 있습니다.
 
 {{< example >}}
 {{< colored-links.inline >}}

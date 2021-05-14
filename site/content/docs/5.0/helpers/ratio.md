@@ -48,10 +48,10 @@ toc: true
 
 각 `.ratio-*` 클래스는 선택기에 CSS 사용자 정의 속성 (또는 CSS 변수)이 내장되어 있습니다. 이 CSS 변수를 재정의하여 사용자전용 가로세로 비율을 즉석에서 만들 수 있습니다. 
 
-예를 들어 2x1 가로세로 비율을 만들려면 `.ratio` 에서 `--aspect-ratio : 50 %` 를 설정합니다.
+예를 들어 2x1 가로세로 비율을 만들려면 `.ratio` 에서 `--bs-aspect-ratio: 50%` 를 설정합니다.
 
 {{< example class="bd-example-ratios" >}}
-<div class="ratio" style="--aspect-ratio: 50%;">
+<div class="ratio" style="--bs-aspect-ratio: 50%;">
   <div>2x1</div>
 </div>
 {{< /example >}}
@@ -61,7 +61,7 @@ toc: true
 ```scss
 .ratio-4x3 {
   @include media-breakpoint-up(md) {
-    --aspect-ratio: 50%; // 2x1
+    --bs-aspect-ratio: 50%; // 2x1
   }
 }
 ```

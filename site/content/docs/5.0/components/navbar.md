@@ -25,12 +25,13 @@ toc: true
 
 내비게이션에는 몇 가지의 서브 컴포넌트의 지원이 포함되어 있습니다. 필요에 따라, 아래에서 선택해 주세요.:
 
-- 회사명, 제품명, 프로젝트명의 `.navbar-brand`.
-- full-height 와 가벼운 내비게이션의 `.navbar-nav`(드롭다운 포함).
-- collapse 플러그인이나 기타 [navigation toggling](#responsive-behaviors) 동작을 사용하기 위한 `.navbar-toggler`.
-- 폼 컨트롤과 액션을 위한 Flex 와 spacing 유틸리티.
-- 수직 방향 중앙에 텍스트를 추가하기 위한 `.navbar-text`.
-- 내비게이션 바의 내용을 부모 브레이크 포인트로 그룹화 하거나 숨기기 위한 `.collapse.navbar-collapse`.
+- `.navbar-brand` for your company, product, or project name.
+- `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns).
+- `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#responsive-behaviors) behaviors.
+- Flex and spacing utilities for any form controls and actions.
+- `.navbar-text` for adding vertically centered strings of text.
+- `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
+- Add an optional `.navbar-scroll` to set a `max-height` and [scroll expanded navbar content](#scrolling).
 
 여기서는 `lg` (large) 브레이크 포인트에서 자동으로 접히는 'light' 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.
 
@@ -73,11 +74,15 @@ toc: true
 </nav>
 {{< /example >}}
 
-이 예시에서는, [color]({{< docsref "/utilities/colors" >}}) (`bg-light`) 와 [spacing]({{< docsref "/utilities/spacing" >}}) (`my-2`, `my-lg-0`, `me-sm-0`, `my-sm-0`) 유틸리티 클래스를 사용하고 있습니다.
+This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-light`) and [spacing]({{< docsref "/utilities/spacing" >}}) (`my-2`, `my-lg-0`, `me-sm-0`, `my-sm-0`) utility classes.
 
 ### Brand
 
 `.navbar-brand` 는 대부분의 요소에 적용이 가능하지만, 요소에 따라서 유틸리티 클래스나 커스텀 스타일을 필요로 하는 경우가 있기 때문에 앵커가 최적입니다.
+
+#### Text
+
+Add your text within an element with the `.navbar-brand` class.
 
 {{< example >}}
 <!-- As a link -->
@@ -95,10 +100,11 @@ toc: true
 </nav>
 {{< /example >}}
 
-`.navbar-brand` 에 이미지를 추가하는 경우, 적절한 크기로 조정하기 위해서 커스텀 스타일이나 유틸리티가 필요하게 됩니다. 아래의 예시를 참고해 주세요.
+#### Image
+
+You can replace the text within the `.navbar-brand` with an `<img>`.
 
 {{< example >}}
-<!-- Just an image -->
 <nav class="navbar navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand" href="#">
@@ -108,12 +114,15 @@ toc: true
 </nav>
 {{< /example >}}
 
+#### Image and text
+
+You can also make use of some additional utilities to add an image and text at the same time. Note the addition of `.d-inline-block` and `.align-text-top` on the `<img>`.
+
 {{< example >}}
-<!-- Image and text -->
 <nav class="navbar navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-top">
+      <img src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
       Bootstrap
     </a>
   </div>
@@ -124,9 +133,9 @@ toc: true
 
 내비게이션 바의 내비게이션 링크는 `.nav` 옵션에 독자적인 변경 클래스를 추가하여 구축되며, 적절한 반응형 스타일링을 위해 [toggler classes](#toggler) 사용을 필요로 합니다. 내비게이션 바 안에서 내비게이션 링크는 **수평 방향으로 펼쳐져 깔끔하게 정렬**합니다.
 
-현재 페이지를 `.nav-link` 나 상위의 부모 `.nav-item` 에 `.active` 를 사용하여 활성화 상태를 나타냅니다.
+Add the `.active` class on `.nav-link` to indicate the current page.
 
-그리고 `.nav-link` 자체에 `aria-current` 속성을 추가해야 할 필요가 있다는 점에 주의해 주세요.
+Please note that you should also add the `aria-current` attribute on the active `.nav-link`.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -478,6 +487,53 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 </nav>
 {{< /example >}}
 
+## Scrolling
+
+Add `.navbar-nav-scroll` to a `.navbar-nav` (or other navbar sub-component) to enable vertical scrolling within the toggleable contents of a collapsed navbar. By default, scrolling kicks in at `75vh` (or 75% of the viewport height), but you can override that with the local CSS custom property `--bs-navbar-height` or custom styles. At larger viewports when the navbar is expanded, content will appear as it does in a default navbar.
+
+Please note that this behavior comes with a potential drawback of `overflow`—when setting `overflow-y: auto` (required to scroll the content here), `overflow-x` is the equivalent of `auto`, which will crop some horizontal content.
+
+Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-height: 100px;"`, with some extra margin utilities for optimum spacing.
+
+{{< example >}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar scroll</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+{{< /example >}}
+
 ## Responsive behaviors
 
 `.navbar-toggler`, `.navbar-collapse`, 및 `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` 클래스를 사용하여 컨텐츠가 버튼 뒤쪽에서 접히는 시점을 결정합니다. 다른 유틸리티와 결합하여 특정 요소를 언제 표시하고 감출지 손쉽게 선택할 수 있습니다.
@@ -598,4 +654,18 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 </nav>
 {{< /example >}}
 
-이러한 경우는, 컨테이너가 열렸을 때에 프로그램적으로 포커스를 컨테이너로 이동시키기 위해 추가의 JavaScript 를 포함하는 것을 권장합니다. 그렇지 않으면 키보드 사용자나 스크린 리더 사용자는 새로 표시된 컨텐츠를 찾는데 어려움을 겪을 것입니다. 특히 열린 컨테이너가 문서 구조의 토글 *앞*에 있는 경우가 그렇습니다. 또한 토글이 `aria-controls` 속성을 가지고 있으며 `id` 를 가리키도록 하는 것을 권장합니다. 이론적으로는 이를 통해 스크린 리더 사용자가 토글에서 토글이 컨트롤하는 컨테이너로 직접 뛰어오를 수 있게 되는데, 현재까지 이 지원은 상당 부분 패치가 잘 되어 있습니다.
+When you do this, we recommend including additional JavaScript to move the focus programmatically to the container when it is opened. Otherwise, keyboard users and users of assistive technologies will likely have a hard time finding the newly revealed content - particularly if the container that was opened comes *before* the toggler in the document's structure. We also recommend making sure that the toggler has the `aria-controls` attribute, pointing to the `id` of the content container. In theory, this allows assistive technology users to jump directly from the toggler to the container it controls–but support for this is currently quite patchy.
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="navbar-theme-variables" file="scss/_variables.scss" >}}
+
+### Loop
+
+[Responsive navbar expand/collapse classes](#responsive-behaviors) (e.g., `.navbar-expand-lg`) are combined with the `$breakpoints` map and generated through a loop in `scss/_navbar.scss`.
+
+{{< scss-docs name="navbar-expand-loop" file="scss/_navbar.scss" >}}

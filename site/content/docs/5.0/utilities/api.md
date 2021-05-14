@@ -84,7 +84,7 @@ $utilities: (
 .o-100 { opacity: 1; }
 ```
 
-## States
+### States
 
 가상 클래스의 변형을 생성하려면 `state` 옵션을 사용하십시오. 비슷한 클래스의 예시로는 `:hover` 및 `:focus`입니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 `state: hover` 를 추가하면 컴파일 된 CSS에 `.opacity-hover:hover`가 표시됩니다.
 
@@ -246,9 +246,11 @@ $utilities: (
 
 ### Add utilities
 
-`map-merge`를 사용하면 새로운 유틸리티를 기본 `$utilities` 맵에 추가 할 수 있습니다. 먼저 `_utilities.scss`를 가져 왔는지 확인한 다음 `map-merge`를 이용하여 새로운 유틸리티를 추가하십시오. 다음 예시는, 세 개의 값이 있는 반응 형 `cursor` 유틸리티를 추가하는 방법입니다.
+`map-merge` 를 사용하면 새로운 유틸리티를 기본 `$utilities` 맵에 추가할 수 있습니다. 먼저 `_utilities.scss` 를 가져왔는지 확인한 다음 `map-merge` 를 이용하여 새로운 유틸리티를 추가하십시오. 다음 예시는 세 개의 값이 있는 반응형 `cursor` 유틸리티를 추가하는 방법입니다.
 
 ```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
@@ -256,7 +258,7 @@ $utilities: map-merge(
   (
     "cursor": (
       property: cursor,
-      class: cursor
+      class: cursor,
       responsive: true,
       values: auto pointer grab,
     )
@@ -269,6 +271,8 @@ $utilities: map-merge(
 `map-get` 및 `map-merge` 함수를 사용하여 기본 `$utilities` 맵의 기존 유틸리티를 수정합니다. 아래는 `width` 유틸리티에 신규 값을 추가하는 예시입니다.
 초기 `map-merge`로 시작한 다음 수정할 유틸리티를 지정하세요. 중첩 된 `"width"` 맵을 `map-get`을 이용해 가져 온 뒤 유틸리티의 옵션 및 값에 접근하여 수정합니다.
 ```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
@@ -287,11 +291,32 @@ $utilities: map-merge(
 );
 ```
 
+#### Rename utilities
+
+Missing v4 utilities, or used to another naming convention? The utilities API can be used to override the resulting `class` of a given utility—for example, to rename `.ms-*` utilities to oldish `.ml-*`:
+
+```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities, (
+    "margin-start": map-merge(
+      map-get($utilities, "margin-start"),
+      ( class: ml ),
+    ),
+  )
+);
+```
+
 ### Remove utilities
 
 그룹 키를 `null`로 설정하면 기본 유틸리티를 제거 할 수 있습니다. 예를 들어 모든 `width` 유틸리티를 제거하려면 `$utilities` `map-merge`를 만들고 ` "width": null`을 추가합니다.
 
 ```scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(

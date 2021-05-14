@@ -85,4 +85,12 @@ $breadcrumb-divider: none;
 
 ## Accessibility
 
-브레드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 `<nav>` 요소에 `aria-label="breadcrumb"` 과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 `aria-current="page"` 를 추가하는게 좋습니다. 자세한 내용은 [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb).
+브레드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 `<nav>` 요소에 `aria-label="breadcrumb"` 과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 `aria-current="page"` 를 추가하는 것이 좋습니다.
+
+자세한 내용은 [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb)을 확인해주세요.
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="breadcrumb-variables" file="scss/_variables.scss" >}}

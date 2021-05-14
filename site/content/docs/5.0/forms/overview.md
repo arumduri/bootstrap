@@ -143,3 +143,14 @@ Bootstrap의 폼 컨트롤은 [재정의 된 폼 스타일]({{< docsref "/conten
 
 시각적으로 숨긴 컨텐츠(`.visually-hidden`, `aria-label`, 그리고 더 나아가 폼 필드에 컨텐츠가 입력되면 사라지는 `placeholder` 컨텐츠)를 사용하는 것은 지원 기술 사용자에게 유익할 수 있지만, 가시화된 라벨 텍스트가 없는 것은 다른 특정 사용자에게는 여전히 문제가 될 수 있습니다. 따라서 접근성과 사용성 양쪽의 관점에서 봐도 어떠한 형식으로든 가시화된 라벨을 제공 하는것이 최적의 접근 방식입니다.
 
+While using visually hidden content (`.visually-hidden`, `aria-label`, and even `placeholder` content, which disappears once a form field has content) will benefit assistive technology users, a lack of visible label text may still be problematic for certain users. Some form of visible label is generally the best approach, both for accessibility and usability.
+
+## Sass
+
+Many form variables are set at a general level to be re-used and extended by individual form components. You'll see these most often as `$btn-input-*` and `$input-*` variables.
+
+### Variables
+
+`$btn-input-*` variables are shared global variables between our [buttons]({{< docsref "/components/buttons" >}}) and our form components. You'll find these frequently reassigned as values to other component-specific variables.
+
+{{< scss-docs name="input-btn-variables" file="scss/_variables.scss" >}}

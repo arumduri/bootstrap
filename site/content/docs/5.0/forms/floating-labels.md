@@ -61,7 +61,7 @@ toc: true
 
 ## Selects
 
-`.form-control` 이외에서의 플로팅 라벨은 `.form-select`에서만 사용할 수 있습니다. 이들은 똑같이 동작하지만, `<input>`과는 다르게 항상 `<label>`이 플로팅 된 상태로 표시됩니다.
+`.form-control` 이외에서의 플로팅 라벨은 `.form-select` 에서만 사용할 수 있습니다. 이들은 똑같이 동작하지만, `<input>`과는 다르게 항상 `<label>`이 플로팅 된 상태로 표시됩니다. **`size`와 `multiple` 선택자는 지원되지 않습니다.**
 
 {{< example >}}
 <div class="form-floating">
@@ -100,3 +100,9 @@ Bootstrap 그리드 시스템을 사용할 경우, 폼 요소는 반드시 컬�
   </div>
 </div>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="form-floating-variables" file="scss/_variables.scss" >}}

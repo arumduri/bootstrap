@@ -3,6 +3,7 @@ layout: docs
 title: Shadows (그림자)
 description: box-shadow 유틸리티를 사용하여 요소에 그림자를 추가하거나 제거합니다.
 group: utilities
+toc: true
 ---
 
 ## Examples
@@ -11,7 +12,19 @@ group: utilities
 
 {{< example >}}
 <div class="shadow-none p-3 mb-5 bg-light rounded">No shadow</div>
-<div class="shadow-sm p-3 mb-5 bg-white rounded">Small shadow</div>
-<div class="shadow p-3 mb-5 bg-white rounded">Regular shadow</div>
-<div class="shadow-lg p-3 mb-5 bg-white rounded">Larger shadow</div>
+<div class="shadow-sm p-3 mb-5 bg-body rounded">Small shadow</div>
+<div class="shadow p-3 mb-5 bg-body rounded">Regular shadow</div>
+<div class="shadow-lg p-3 mb-5 bg-body rounded">Larger shadow</div>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="box-shadow-variables" file="scss/_variables.scss" >}}
+
+### Utilities API
+
+Shadow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-shadow" file="scss/_utilities.scss" >}}

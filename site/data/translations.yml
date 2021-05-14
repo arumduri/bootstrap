@@ -1,3 +1,8 @@
+- name: العربية
+  code: ar
+  description: Bootstrap 5 باللغة العربية
+  url: https://bootstrap.mahdi.style/
+
 - name: 中文(繁體)
   code: zh-tw
   description: Bootstrap 4 繁體中文手冊
@@ -22,3 +27,13 @@
   code: ru
   description: Bootstrap 5 на русском
   url: https://getbootstrap.su/
+
+- name: Korean
+  code: ko
+  description: Bootstrap 5 한국어 문서
+  url: https://getbootstrap.kr/
+
+- name: 中文(繁體)
+  code: zh-tw
+  description: Bootstrap 5 繁體中文手冊
+  url: https://bootstrap5.hexschool.com/

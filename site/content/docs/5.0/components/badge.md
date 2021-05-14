@@ -63,3 +63,9 @@ Background 유틸리티 클래스를 사용해, 배지의 외형을 변경할 �
 <span class="badge rounded-pill bg-{{ .name }}{{ with .contrast_color }} text-{{ . }}{{ end }}">{{ .name | title }}</span>{{- end -}}
 {{< /badge.inline >}}
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+{{< scss-docs name="badge-variables" file="scss/_variables.scss" >}}
