@@ -11,7 +11,7 @@ sections:
   - title: Select
     description: 브라우저의 기본 셀렉트 요소의 초기 표시를 재정의 할 수 있게 개선하였습니다.
   - title: Checks & radios
-    description: 우리가 개선한 라디오 버튼과 체크 박스를 폼으로 사용하여, 입력 옵션을 선택할 수 있습니다.
+    description: 우리가 개선한 라디오 버튼과 체크박스를 폼으로 사용하여, 입력 옵션을 선택할 수 있습니다.
   - title: Range
     description: 브라우저의 기본 범위 선택 폼을 우리가 개선한 버전으로 사용할 수 있습니다.
   - title: Input group

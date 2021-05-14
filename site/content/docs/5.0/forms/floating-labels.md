@@ -8,7 +8,7 @@ toc: true
 
 ## Example
 
-`<input class="form-control">`과 `<label>` 요소를 함께 `.form-floating`으로 감싸면, Bootstrap의 텍스트 형식의 폼 필드에서 플로팅 라벨 사용이 가능합니다. CSS만으로 플로팅 라벨을 실현하는 방법은 `:placeholder-shown` 가상 요소를 사용하기 때문에 각 `<input>`에는 `placeholder`가 필요합니다. 또한 형제 셀렉터(예를 들어, `~`)를 사용하기 때문에 `<input>`이 처음에 와야 하는 순서에 주의해 주세요.
+`<input class="form-control">`과 `<label>` 요소를 함께 `.form-floating`으로 감싸면, Bootstrap의 문자 형식의 폼 필드에서 플로팅 라벨 사용이 가능합니다. CSS만으로 플로팅 라벨을 실현하는 방법은 `:placeholder-shown` 가상 요소를 사용하기 때문에 각 `<input>`에는 `placeholder`가 필요합니다. 또한 형제 셀렉터(예를 들어, `~`)를 사용하기 때문에 `<input>`이 처음에 와야 하는 순서에 주의해 주세요.
 
 {{< example >}}
 <div class="form-floating mb-3">
@@ -21,7 +21,7 @@ toc: true
 </div>
 {{< /example >}}
 
-`value` 가 이미 정의되어 있는 경우에는 `<label>`이 자동적으로 플로팅 되어져 있습니다.
+`value`가 이미 정의되어 있는 경우에는 `<label>`이 자동적으로 플로팅 되어져 있습니다.
 
 {{< example >}}
 <form class="form-floating">
