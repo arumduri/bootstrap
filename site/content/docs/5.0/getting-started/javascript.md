@@ -95,7 +95,7 @@ var modal = new bootstrap.Modal(myModalEl, { keyboard: false }) // initialized w
 
 ### CSS selectors in constructors
 
-You can also use a CSS selector as the first argument instead of a DOM element to initialize the plugin. Currently the element for the plugin is found by the `querySelector` method since our plugins support a single element only.
+플러그인을 초기화하기 위해 DOM 요소 대신 CSS 선택자를 첫 번째 인수로 사용할 수도 있습니다. 현재 플러그인의 요소는 단일 요소만 지원하므로 `querySelector` 메소드에 의해 발견됩니다.
 
 ```js
 var modal = new bootstrap.Modal('#myModal')
