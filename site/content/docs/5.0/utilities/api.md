@@ -10,7 +10,7 @@ toc: true
 부트 스트랩 유틸리티는 유틸리티 API로 생성되며 Sass를 통해 기본 유틸리티 클래스 세트를 수정하거나 확장하는 데 사용할 수 있습니다. 저희 유틸리티 API는 다양한 옵션으로 클래스 패밀리를 생성하기 위한 일련의 Sass맵 및 함수를 기반으로 합니다. Sass맵에 익숙하지 않은 경우 [official Sass docs](https://sass-lang.com/documentation/values/maps) 를 읽고 시작해 보세요.
 
 
-`$utilities` 맵에는 우리의 모든 유틸리티가 포함되어 나중에는 사용자정의 `$utilities`와 통합(파일이 있을경우)됩니다. 유틸리티 맵에는 다음 옵션을 허용할 수 있는 유틸리티 그룹의 키 목록이 포함되어 있습니다.:
+`$utilities` 맵에는 우리의 모든 유틸리티가 포함되어 나중에는 사용자정의 `$utilities` 와 통합(파일이 있을경우)됩니다. 유틸리티 맵에는 다음 옵션을 허용할 수 있는 유틸리티 그룹의 키 목록이 포함되어 있습니다.:
 
 {{< bs-table "table text-start" >}}
 | 옵션 | 형식 | 설명 |
@@ -27,7 +27,7 @@ toc: true
 
 ## API explained
 
-모든 유틸리티 변수는`_utilities.scss` 스타일 시트의`$utilities` 변수에 추가됩니다. 각 유틸리티 그룹은 다음과 같습니다.:
+모든 유틸리티 변수는 `_utilities.scss` 스타일 시트의 `$utilities` 변수에 추가됩니다. 각 유틸리티 그룹은 다음과 같습니다.:
 
 ```scss
 $utilities: (
@@ -86,9 +86,9 @@ $utilities: (
 
 ### States
 
-가상 클래스의 변형을 생성하려면 `state` 옵션을 사용하십시오. 비슷한 클래스의 예시로는 `:hover` 및 `:focus`입니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 `state: hover` 를 추가하면 컴파일 된 CSS에 `.opacity-hover:hover`가 표시됩니다.
+가상 클래스의 변형을 생성하려면 `state` 옵션을 사용하십시오. 비슷한 클래스의 예시로는 `:hover` 및 `:focus` 입니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 `state: hover` 를 추가하면 컴파일 된 CSS에 `.opacity-hover:hover` 가 표시됩니다.
 
-여러개의 가상 클래스가 필요하십니까? `state : hover focus`와 같이 공백으로 구분 된 상태 목록을 사용하세요.
+여러개의 가상 클래스가 필요하십니까? `state : hover focus` 와 같이 공백으로 구분 된 상태 목록을 사용하세요.
 
 ```scss
 $utilities: (
@@ -119,7 +119,7 @@ $utilities: (
 
 ### Responsive utilities
 
-[all breakpoints]({{< docsref "/layout/breakpoints" >}})에서 반응 형 유틸리티 (예 : `.opacity-md-25`)를 생성하려면 `responsive` 불리언을 추가합니다.
+[all breakpoints]({{< docsref "/layout/breakpoints" >}})에서 반응 형 유틸리티 (예 : `.opacity-md-25` )를 생성하려면 `responsive` 불리언을 추가합니다.
 
 
 ```scss
@@ -269,7 +269,8 @@ $utilities: map-merge(
 ### Modify utilities
 
 `map-get` 및 `map-merge` 함수를 사용하여 기본 `$utilities` 맵의 기존 유틸리티를 수정합니다. 아래는 `width` 유틸리티에 신규 값을 추가하는 예시입니다.
-초기 `map-merge`로 시작한 다음 수정할 유틸리티를 지정하세요. 중첩 된 `"width"` 맵을 `map-get`을 이용해 가져 온 뒤 유틸리티의 옵션 및 값에 접근하여 수정합니다.
+초기 `map-merge`로 시작한 다음 수정할 유틸리티를 지정하세요. 중첩 된 `"width"` 맵을 `map-get` 을 이용해 가져 온 뒤 유틸리티의 옵션 및 값에 접근하여 수정합니다.
+
 ```scss
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
@@ -293,7 +294,7 @@ $utilities: map-merge(
 
 #### Rename utilities
 
-Missing v4 utilities, or used to another naming convention? The utilities API can be used to override the resulting `class` of a given utility—for example, to rename `.ms-*` utilities to oldish `.ml-*`:
+이전 v4 유틸리티가 그립거나 다른 명명 규칙을 사용 하고 싶습니까? 유틸리티 API는 주어진 유틸리티의 결과 `class` 를 재정의 하는데 사용할 수 있습니다. 예를 들어 `.ms- *` 유틸리티의 이름을 오래된 `.ml- *` 로 바꿀 경우 다음과 같이 할 수 있습니다:
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -312,7 +313,7 @@ $utilities: map-merge(
 
 ### Remove utilities
 
-그룹 키를 `null`로 설정하면 기본 유틸리티를 제거 할 수 있습니다. 예를 들어 모든 `width` 유틸리티를 제거하려면 `$utilities` `map-merge`를 만들고 ` "width": null`을 추가합니다.
+그룹 키를 `null` 로 설정하면 기본 유틸리티를 제거 할 수 있습니다. 예를 들어 모든 `width` 유틸리티를 제거하려면 `$utilities` `map-merge` 를 만들고 ` "width": null` 을 추가합니다.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -329,7 +330,7 @@ $utilities: map-merge(
 
 #### Remove utility in RTL
 
-아랍어 줄 바꿈과 같은 일부 예외적 인 경우는 [RTL styling difficult](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl) 를 합니다(스타일 지정을 어렵게 만든다는 뜻). 따라서`rtl` 옵션을`false`로 설정하여 RTL 출력에서 유틸리티를 삭제할 수 있습니다.
+아랍어 줄 바꿈과 같은 일부 예외적 인 경우는 [RTL styling difficult](https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl) 를 합니다(스타일 지정을 어렵게 만든다는 뜻). 따라서 `rtl` 옵션을 `false` 로 설정하여 RTL 출력에서 유틸리티를 삭제할 수 있습니다.
 
 ```scss
 $utilities: (
@@ -345,7 +346,7 @@ $utilities: (
 결과물:
 
 ```css
-/* rtl:begin:remove */
+/* rtl:begin:remove */   
 .text-break {
   word-wrap: break-word !important;
   word-break: break-word !important;
@@ -353,4 +354,4 @@ $utilities: (
 /* rtl:end:remove */
 ```
 
-This doesn't output anything in RTL, thanks to [the RTLCSS `remove` control directive](https://rtlcss.com/learn/usage-guide/control-directives/#remove).
+[RTLCSS `remove` 제어 지시문] (https://rtlcss.com/learn/usage-guide/control-directives/#remove) 덕분에 RTL에는 아무 것도 출력되지 않습니다.
