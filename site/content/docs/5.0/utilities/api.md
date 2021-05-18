@@ -354,4 +354,4 @@ $utilities: (
 /* rtl:end:remove */
 ```
 
-[RTLCSS `remove` 제어 지시문] (https://rtlcss.com/learn/usage-guide/control-directives/#remove) 덕분에 RTL에는 아무 것도 출력되지 않습니다.
+[RTLCSS `remove` 제어 지시문](https://rtlcss.com/learn/usage-guide/control-directives/#remove) 덕분에 RTL에는 아무 것도 출력되지 않습니다.
