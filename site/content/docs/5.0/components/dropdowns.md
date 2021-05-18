@@ -1,33 +1,33 @@
 ---
 layout: docs
 title: Dropdowns(드롭다운)
-description: Bootstrap의 드롭다운 플러그인으로 링크 목록 등을 표시하기 위한 컨문자 오버레이를 토글합니다.
+description: Bootstrap의 드롭다운 플러그인으로 링크 목록 등을 표시하기 위한 상황별 오버레이를 토글합니다.
 group: components
 toc: true
 ---
 
 ## Overview
 
-드롭다운은 토글이 가능하며 링크 목록 등을 표시하기 위한 컨문자 오버레이입니다. 이들은  Bootstrap에 포함되어 있는 드롭다운 JavaScript 플러그인으로 작동합니다. 토글은 호버링이 아닌 클릭을 통해 작동합니다. 참고 [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
+드롭다운은 링크 목록 등을 표시하기 위한 상황별 오버레이를 토글합니다. 이들은  Bootstrap에 포함되어 있는 드롭다운 JavaScript 플러그인으로 작동합니다. 토글은 호버링이 아닌 클릭을 통해 작동합니다. 참고 [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
 
-드롭다운은 동적인 포지셔닝과 뷰포트 검출을 제공하는 서드파티의 라이브러리인 [Popper](https://popper.js.org/) 로 구축되어 있습니다. 반드시 Bootstrap 의 JavaScript 전에 [popper.min.js]({{< param "cdn.popper" >}}) 을 넣거나 Popper를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해 주십시오. Popper는 동적인 배치가 필요하지 않기 때문에, navbars의 드롭다운 배치에는 사용하지 않습니다.
+드롭다운은 동적인 포지셔닝과 뷰포트 검출을 제공하는 서드파티의 라이브러리인 [Popper](https://popper.js.org/)로 구축되어 있습니다. 반드시 Bootstrap의 JavaScript 전에 [popper.min.js]({{< param "cdn.popper" >}})를 넣거나 Popper를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`를 사용해 주십시오. Popper는 동적인 배치가 필요하지 않기 때문에, navbars의 드롭다운 배치에는 사용하지 않습니다.
 
 
 ## Accessibility
 
-[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 에서는, 실제의 [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu) 가 정의되어 있습니다만, 이것은 액션이나 기능을 트리거로 하는 application-like 메뉴에 특화한 것입니다. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴는 메뉴 아이템, 체크박스 메뉴 아이템, 라디오 버튼 메뉴 아이템, 라디오 버튼 그룹, 서브메뉴만을 포함할 수 있습니다.
+[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 에서는, 실제의 [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu)가 정의되어 있지만, 이것은 액션이나 기능을 트리거로 하는 application-like 메뉴에 특화한 것입니다. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴는 메뉴 항목, 체크박스 메뉴 항목, 라디오 버튼 메뉴 항목, 라디오 버튼 그룹, 서브메뉴만을 포함할 수 있습니다.
 
-한편 Bootstrap 의 드롭다운은 범용적으로 설계되어 다양한 상황이나 마크업 구조에 적용할 수 있습니다. 예를 들어 검색 필드나 로그인 폼 등의 추가 입력이나 폼 컨트롤을 포함한 드롭다운을 작성할 수 있습니다. 이 때문에 Bootstrap은, 진정한 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴에 필요한 `role` 과 `aria-` 속성을 모두 기대하고 있지 않습니다(자동으로 추가도 하고 있지 않습니다). 이러한 보다 구체적인 속성들을 사용자가 추가로 작성해야 합니다.
+한편 Bootstrap의 드롭다운은 범용적으로 설계되어 다양한 상황이나 마크업 구조에 적용할 수 있습니다. 예를 들어 검색 필드나 로그인 폼 등의 추가 입력이나 폼 컨트롤을 포함한 드롭다운을 작성할 수 있습니다. 이 때문에 Bootstrap은, 진정한 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴에 필요한 `role`과 `aria-` 속성을 모두 기대하고 있지 않습니다(자동으로 추가도 하고 있지 않습니다). 이러한 보다 구체적인 속성들을 사용자가 추가로 작성해야 합니다.
 
 그러나, Bootstrap은 커서 키를 이용하여 각각의 `.dropdown-item` 요소를 이동하거나 <kbd>ESC</kbd> 키로 메뉴를 닫는 기능과 대부분의 표준 키보드 메뉴의 상호작용을 위한 built-in 지원을 추가하고 있습니다.
 
 ## Examples
 
-드롭다운의 토글(버튼이나 링크)과 드롭다운 메뉴를 `.dropdown` 이나 `position: relative;` 를 가진 다른 요소로 감쌉니다. 드롭다운은 `<a>` 나 `<button>` 요소로부터 트리거 할 수 있습니다. 여기서 보여주는 예시는, 필요에 따라서 시멘틱적인 `<ul>` 요소를 사용하고 있습니다만, 사용자 정의 마크업도 지원하고 있습니다.
+드롭다운의 토글(버튼이나 링크)과 드롭다운 메뉴를 `.dropdown` 이나 `position: relative;` 를 가진 다른 요소로 감쌉니다. 드롭다운은 `<a>` 나 `<button>` 요소로부터 트리거 할 수 있습니다. 여기서 보여주는 예시는, 필요에 따라서 시멘틱적인 `<ul>` 요소를 사용하고 있지만, 사용자 정의 마크업도 지원하고 있습니다.
 
 ### Single button
 
-마크업을 변경하는 것만으로, 임의의 단일 `.btn` 을 드롭다운 토글로 바꿀 수 있습니다. 여기에서는, `<button>` 요소의 어느 쪽인가로 동작하는 방법을 설명합니다.
+마크업을 변경하는 것만으로, 임의의 단일 `.btn`을 드롭다운 토글로 바꿀 수 있습니다. 여기에서는, `<button>` 요소의 어느 쪽인가로 동작하는 방법을 설명합니다.
 
 {{< example >}}
 <div class="dropdown">
@@ -141,9 +141,9 @@ toc: true
 
 ### Split button
 
-마찬가지로, 단일 버튼의 드롭다운과 실질적으로 같은 마크업으로 분할된 버튼의 드롭다운을 만드는데, 드롭다운의 화살표 주위의 적절한 간격을 확보하기 위해서 `.dropdown-toggle-split` 을 추가합니다.
+마찬가지로, 단일 버튼의 드롭다운과 실질적으로 같은 마크업으로 분할된 버튼의 드롭다운을 만드는데, 드롭다운의 화살표 주위의 적절한 간격을 확보하기 위해서 `.dropdown-toggle-split`를 추가합니다.
 
-이 추가 클래스를 사용하여, 화살표 양쪽의 좌우 `padding` 을 25% 줄이고, 일반적인 버튼 트롭다운을 위해 추가 되었던 `margin-left` 를 삭제합니다. 이러한 추가 변경으로 인해 화살표는 분활된 버튼의 중앙에 오게 되고 메인 버튼 옆에서의 클릭 영역의 크기가 더욱 적절해집니다.
+이 추가 클래스를 사용하여, 화살표 양쪽의 좌우 `padding`을 25% 줄이고, 일반적인 버튼 트롭다운을 위해 추가 되었던 `margin-left`를 삭제합니다. 이러한 추가 변경으로 인해 화살표는 분활된 버튼의 중앙에 오게 되고 메인 버튼 옆에서의 클릭 영역의 크기가 더욱 적절해집니다.
 
 
 <div class="bd-example">
@@ -351,7 +351,7 @@ toc: true
 
 ## Dark dropdowns
 
-기존의 `.dropdown-menu` 에 `.dropdown-menu-dark` 를 추가해 어두운 내비게이션바나 사용자 정의 스타일에 맞추어 어두운 드롭다운을 만들 수 있습니다. 드롭다운 아이템을 변경을 할 필요는 없습니다.
+기존의 `.dropdown-menu`에 `.dropdown-menu-dark`를 추가해 어두운 내비게이션바나 사용자 정의 스타일에 맞추어 어두운 드롭다운을 만들 수 있습니다. 드롭다운 항목을 변경을 할 필요는 없습니다.
 
 {{< example >}}
 <div class="dropdown">
@@ -368,7 +368,7 @@ toc: true
 </div>
 {{< /example >}}
 
-그리고, 이걸 navbar 에 넣어 사용:
+그리고, 이걸 navbar에 넣어 사용:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -399,12 +399,12 @@ toc: true
 
 {{< callout info >}}
 #### RTL
-RTL 에서 Bootstrap 을 사용할 경우, 방향성은 반대가 되어 `.dropstart` 는 오른쪽에 표시됩니다.
+RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropstart`는 오른쪽에 표시됩니다.
 {{< /callout >}}
 
 ### Dropup
 
-부모 요소에 `.dropup` 을 추가하여 요소의 위쪽으로 표시할 수 있습니다.
+부모 요소에 `.dropup`을 추가하여 요소의 위쪽으로 표시할 수 있습니다.
 
 <div class="bd-example">
   <div class="btn-group dropup">
@@ -463,7 +463,7 @@ RTL 에서 Bootstrap 을 사용할 경우, 방향성은 반대가 되어 `.drops
 
 ### Dropright
 
-부모 요소에 `.dropend` 을 추가하여 요소의 오른쪽에 표시할 수 있습니다.
+부모 요소에 `.dropend`를 추가하여 요소의 오른쪽에 표시할 수 있습니다.
 
 <div class="bd-example">
   <div class="btn-group dropend">
@@ -522,7 +522,7 @@ RTL 에서 Bootstrap 을 사용할 경우, 방향성은 반대가 되어 `.drops
 
 ### Dropleft
 
-부모 요소에 `.dropstart` 를 추가하여 요소의 왼쪽에 표시할 수 있습니다.
+부모 요소에 `.dropstart`를 추가하여 요소의 왼쪽에 표시할 수 있습니다.
 
 <div class="bd-example">
   <div class="btn-group dropstart">
@@ -585,7 +585,7 @@ RTL 에서 Bootstrap 을 사용할 경우, 방향성은 반대가 되어 `.drops
 
 ## Menu items
 
-역사적으로 드롭다운 메뉴의 내용은 링크가 되어야 했는데, v4 에서는 그렇지 않았습니다. 드롭다운에서는 `<a>` 대신에 `<button>` 요소를 사용할 수 있게 되었습니다.
+역사적으로 드롭다운 메뉴의 내용은 링크가 되어야 했는데, v4에서는 그렇지 않았습니다. 드롭다운에서는 `<a>` 대신에 `<button>` 요소를 사용할 수 있게 되었습니다.
 
 {{< example >}}
 <div class="dropdown">
@@ -600,7 +600,7 @@ RTL 에서 Bootstrap 을 사용할 경우, 방향성은 반대가 되어 `.drops
 </div>
 {{< /example >}}
 
-또한, `.dropdown-item-text` 으로 non-interactive 드롭다운 아이템을 만들 수 있습니다. 사용자 정의 CSS 나 text 유틸리티를 사용하여 자유롭게 스타일을 설정해 주십시오.
+또한, `.dropdown-item-text` 으로 non-interactive 드롭다운 을 만들 수 있습니다. 사용자 정의 CSS 나 text 유틸리티를 사용하여 자유롭게 스타일을 설정해 주십시오.
 
 {{< example >}}
 <ul class="dropdown-menu">
