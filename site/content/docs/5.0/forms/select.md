@@ -21,7 +21,7 @@ toc: true
 
 ## Sizing
 
-같은 크기의 텍스트 입력에 맞춰 크고 작은 사용자 정의 셀렉트를 선택해 사용할 수 있습니다.
+같은 크기의 문자 입력에 맞춰 크고 작은 사용자 정의 셀렉트를 선택해 사용할 수 있습니다.
 
 {{< example >}}
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">

@@ -7,7 +7,7 @@ toc: true
 ---
 
 ## Examples
-텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing) 을 사용합니다.
+문자 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing) 을 사용합니다.
 
 {{< example >}}
 {{< alerts.inline >}}
@@ -49,7 +49,7 @@ toc: true
 
 ### Icons
 
-Similarly, you can use [flexbox utilities]({{< docsref "/utilities/flex" >}}) and [Bootstrap Icons]({{< param icons >}}) to create alerts with icons. Depending on your icons and content, you may want to add more utilities or custom styles.
+마찬가지로 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 와 [Bootstrap Icons]({{< param icons >}})을 이용하여 경고창을 만들 수 있습니다. 아이콘이나 컨텐츠에 따라서는 유틸리티나 사용자 정의 스타일을 더 추가할 수도 있습니다.
 
 {{< example >}}
 <div class="alert alert-primary d-flex align-items-center" role="alert">
@@ -62,7 +62,7 @@ Similarly, you can use [flexbox utilities]({{< docsref "/utilities/flex" >}}) an
 </div>
 {{< /example >}}
 
-Need more than one icon for your alerts? Consider using more Bootstrap Icons and making a local SVG sprite like so to easily reference the same icons repeatedly.
+경고창에 여러 개의 아이콘이 필요한가요? 로컬 SVG 스프라이트를 만들어 같은 아이콘을 간단하게 반복시켜 참조할 수 있는 보다 많은 Bootstrap 아이콘을 사용해 보세요.
 
 {{< example >}}
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">

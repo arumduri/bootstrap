@@ -11,7 +11,7 @@ toc: true
 
 브라우저 기본 체크박스와 라디오 버튼은 `.form-check`의 도움을 받아 대체할 수 있습니다. 이는 두 입력 유형을 위한 클래스로, HTML 요소의 레이아웃과 동작을 개선하여 보다 높은 맞춤성과 크로스 브라우저의 일관성을 제공합니다. 체크박스는 목록 중 하나 또는 여러 개를 선택하고, 라디오 버튼은 여러 목록 중 하나를 선택하는 것입니다.
 
-구조적으로 `<input>`과 `<label>`은 형제 요소이며, `<label>` 안에 `<input>`이 들어 있는 것과는 다릅니다. 이것은 `<input>` 이라고 `<label>`을 연관짓기 위해 `id` 와 `for`속성을 지정해야 하기 때문에 약간 장황해 집니다. 또한 `:checked` 나 `:disabled` 등, 모든 `<input>` 상태에는 형제 셀렉터(`~`)를 사용합니다. `.form-check-label` 클래스와 함께 사용함으로써 `<input>` 상태에 따라 각 아이템의 텍스트를 쉽게 표시할 수 있습니다.
+구조적으로 `<input>`과 `<label>`은 형제 요소이며, `<label>` 안에 `<input>`이 들어 있는 것과는 다릅니다. 이것은 `<input>` 이라고 `<label>`을 연관짓기 위해 `id` 와 `for`속성을 지정해야 하기 때문에 약간 장황해 집니다. 또한 `:checked` 나 `:disabled` 등, 모든 `<input>` 상태에는 형제 셀렉터(`~`)를 사용합니다. `.form-check-label` 클래스와 함께 사용함으로써 `<input>` 상태에 따라 각 아이템의 문자를 쉽게 표시할 수 있습니다.
 
 체크박스에서는 Bootstrap 커스텀 아이콘을 사용하여 선택되었거나 선택전 상태를 표시하고 있습니다.
 
@@ -199,7 +199,7 @@ toc: true
 
 ## Without labels
 
-라벨 텍스트가 없는 체크박스나 라디오 버튼을 사용할 때에는 `.form-check`를 생략합니다. 지원 기술을 위해 어떤 형태로든 접근성에 맞는 이름을 제공해야 하는 것을 잊지 마세요.(예를 들어, `aria-label`을 사용 한다든지 등). 자세한 내용은 [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}})을 참조해 주세요.
+라벨 문자가 없는 체크박스나 라디오 버튼을 사용할 때에는 `.form-check`를 생략합니다. 지원 기술을 위해 어떤 형태로든 접근성에 맞는 이름을 제공해야 하는 것을 잊지 마세요.(예를 들어, `aria-label`을 사용 한다든지 등). 자세한 내용은 [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}})을 참조해 주세요.
 
 {{< example >}}
 <div>

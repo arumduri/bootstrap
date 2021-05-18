@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: List group(리스트 그룹)
-description: 리스트 그룹은 일련의 컨텐츠를 보여주기 위한 유연하고 강력한 컴포넌트입니다. 그룹을 변경하거나 확장하여 모든 컨텐츠를 지원합니다.
+title: List group(목록 그룹)
+description: 목록 그룹은 일련의 컨텐츠를 보여주기 위한 유연하고 강력한 컴포넌트입니다. 그룹을 변경하거나 확장하여 모든 컨텐츠를 지원합니다.
 group: components
 toc: true
 ---
 
 ## Basic example
 
-가장 기본적인 리스트 그룹은 리스트 아이템과 적절한 클래스를 가진 순서없는 리스트입니다. 이하의 옵션을 사용해, 혹은 필요에 따라서 독자적인 CSS 를 사용해 만듭니다.
+가장 기본적인 목록 그룹은 목록 아이템과 적절한 클래스를 가진 순서없는 목록입니다. 이하의 옵션을 사용해, 혹은 필요에 따라서 독자적인 CSS 를 사용해 만듭니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -36,7 +36,7 @@ toc: true
 
 ## Disabled items
 
-`.list-group-item` 에 `.disabled` 를 추가하면, 비활성화 되어 있는 것처럼 보입니다. `.disabled` 를 가진 요소 중에는 클릭 이벤트(링크 등)를 완전히 비활성화 하기 위해 커스텀 JavaScript 를 사용해야 합니다.
+`.list-group-item` 에 `.disabled` 를 추가하면, 비활성화 되어 있는 것처럼 보입니다. `.disabled` 를 가진 요소 중에는 클릭 이벤트(링크 등)를 완전히 비활성화 하기 위해 사용자 정의 JavaScript 를 사용해야 합니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -50,7 +50,7 @@ toc: true
 
 ## Links and buttons
 
-_actionable_ 한 리스트 그룹 아이템을 작성하려면 `<a>` 나 `<button>` 을 사용하고, `.list-group-item-action` 을 추가합니다. 비인터랙티브한 요소(`<li>` 혹은 `<div>` 와 같은)로 만들어진 리스트 그룹이 클릭이나 탭 어포던스를 제공하지 않도록, 이러한 가상 클래스를 분리하고 있습니다.
+_actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>` 을 사용하고, `.list-group-item-action` 을 추가합니다. 비인터랙티브한 요소(`<li>` 혹은 `<div>` 와 같은)로 만들어진 목록 그룹이 클릭이나 탭 어포던스를 제공하지 않도록, 이러한 가상 클래스를 분리하고 있습니다.
 
 여기에서는 **표준의 `.btn` 클래스를 사용하지 않도록 주의해 주세요**.
 
@@ -82,7 +82,7 @@ _actionable_ 한 리스트 그룹 아이템을 작성하려면 `<a>` 나 `<butto
 
 ## Flush
 
-`.list-group-flush` 를 추가하고, 부모 컨테이너(카드 등) 내의 리스트 그룹의 아이템을 끝에서 끝까지 표시하기 위해 몇개의 라인과 둥근 모서리를 제거하도록 합니다.
+`.list-group-flush` 를 추가하고, 부모 컨테이너(카드 등) 내의 목록 그룹의 아이템을 끝에서 끝까지 표시하기 위해 몇개의 라인과 둥근 모서리를 제거하도록 합니다.
 
 {{< example >}}
 <ul class="list-group list-group-flush">
@@ -138,9 +138,9 @@ These work great with custom content as well.
 
 ## Horizontal
 
-리스트 그룹의 아이템 레이아웃을 모든 브레이크 포인트에서 수직에서 수평으로 변경하려면 `.list-group-horizontal` 을 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}` 를 선택하고 브레이크 포인트의 `min-width` 로 시작하는 리스트 그룹을 수평으로 합니다. 현재 **수평 리스트 그룹을 flush 리스트 그룹과 조합할 수 없습니다.**
+목록 그룹의 아이템 레이아웃을 모든 브레이크 포인트에서 수직에서 수평으로 변경하려면 `.list-group-horizontal` 을 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}` 를 선택하고 브레이크 포인트의 `min-width` 로 시작하는 목록 그룹을 수평으로 합니다. 현재 **수평 목록 그룹을 flush 목록 그룹과 조합할 수 없습니다.**
 
-**ProTip:** 리스트 그룹의 아이템을 수평 방향의 동일한 너비로 하고 싶을 경우, 리스트 그룹의 각 아이템에 `.flex-fill` 을 추가합니다.
+**ProTip:** 목록 그룹의 아이템을 수평 방향의 동일한 너비로 하고 싶을 경우, 목록 그룹의 각 아이템에 `.flex-fill` 을 추가합니다.
 
 {{< example >}}
 {{< list-group.inline >}}
@@ -156,7 +156,7 @@ These work great with custom content as well.
 
 ## Contextual classes
 
-상황별 클래스를 사용하여, 스테이트풀(stateful)한 배경색과 글자색으로 리스트 아이템을 꾸밉니다.
+상황별 클래스를 사용하여, 스테이트풀(stateful)한 배경색과 글자색으로 목록 아이템을 꾸밉니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -169,7 +169,7 @@ These work great with custom content as well.
 </ul>
 {{< /example >}}
 
-상황별 클래스는 `.list-group-item-action` 에도 동작합니다. 앞선 예시에서 볼 수 없었던 호버 스타일이 추가 되었음을 주의하세요. 또 `.active` 상태도 지원되고 있습니다. 이것을 적용해 상황별 리스트 그룹 아이템에서 활성화 된 선택을 나타낼 수 있습니다.
+상황별 클래스는 `.list-group-item-action` 에도 동작합니다. 앞선 예시에서 볼 수 없었던 호버 스타일이 추가 되었음을 주의하세요. 또 `.active` 상태도 지원되고 있습니다. 이것을 적용해 상황별 목록 그룹 아이템에서 활성화 된 선택을 나타낼 수 있습니다.
 
 {{< example >}}
 <div class="list-group">
@@ -188,7 +188,7 @@ These work great with custom content as well.
 
 ## With badges
 
-[utilities]({{< docsref "/utilities/flex" >}}) 를 사용해, 아직 읽지 않은 수나 액티비티 등을 표시하기 위한 배지를 리스트 그룹의 아이템에 추가합니다.
+[utilities]({{< docsref "/utilities/flex" >}}) 를 사용해, 아직 읽지 않은 수나 액티비티 등을 표시하기 위한 배지를 목록 그룹의 아이템에 추가합니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -209,7 +209,7 @@ These work great with custom content as well.
 
 ## Custom content
 
-[flexbox utilities]({{< docsref "/utilities/flex" >}}) 의 도움을 받아 아래와 같은 링크된 리스트 그룹에서도 거의 모든 HTML 를 추가할 수 있습니다.
+[flexbox utilities]({{< docsref "/utilities/flex" >}}) 의 도움을 받아 아래와 같은 링크된 목록 그룹에서도 거의 모든 HTML 를 추가할 수 있습니다.
 
 {{< example >}}
 <div class="list-group">
@@ -242,7 +242,7 @@ These work great with custom content as well.
 
 ## Checkboxes and radios
 
-리스트 그룹 아이템 내에 Bootstrap 체크박스와 라디오를 배치하고 필요에 따라 커스터마이즈 합니다. `<label>` 없이도 사용이 가능하지만 접근성을 위해 `aria-label` 속성과 값을 포함시켜 주십시오.
+목록 그룹 아이템 내에 Bootstrap 체크박스와 라디오를 배치하고 필요에 따라 재정의 합니다. `<label>` 없이도 사용이 가능하지만 접근성을 위해 `aria-label` 속성과 값을 포함시켜 주십시오.
 
 {{< example >}}
 <ul class="list-group">
@@ -316,7 +316,7 @@ Loop that generates the modifier classes with the `list-group-item-variant()` mi
 
 ## JavaScript behavior
 
-탭 JavaScript 플러그인—개별적으로 혹은 컴파일된 `bootstrap.js` 를 사용해 리스트 그룹을 확장하고 로컬 컨텐츠의 탭 가능한 판넬을 작성합니다.
+탭 JavaScript 플러그인—개별적으로 혹은 컴파일된 `bootstrap.js` 를 사용해 목록 그룹을 확장하고 로컬 컨텐츠의 탭 가능한 판넬을 작성합니다.
 
 <div class="bd-example" role="tabpanel">
   <div class="row">
@@ -370,7 +370,7 @@ Loop that generates the modifier classes with the `list-group-item-variant()` mi
 
 ### Using data attributes
 
-JavaScript 를 쓰지 않아도, `data-bs-toggle="list"` 를 지정하거나 요소로 지정만 해도 리스트 그룹 내비게이션을 활성화 시킬 수 있습니다. 이들의 data 속성을 `.list-group-item` 에 이용합니다.
+JavaScript 를 쓰지 않아도, `data-bs-toggle="list"` 를 지정하거나 요소로 지정만 해도 목록 그룹 내비게이션을 활성화 시킬 수 있습니다. 이들의 data 속성을 `.list-group-item` 에 이용합니다.
 
 ```html
 <div role="tabpanel">
@@ -394,7 +394,7 @@ JavaScript 를 쓰지 않아도, `data-bs-toggle="list"` 를 지정하거나 요
 
 ### Via JavaScript
 
-JavaScript로 탭 가능한 리스트 아이템을 유효하게 합니다.(각 리스트 아이템을 개별적으로 유효하게 할 필요가 있습니다):
+JavaScript로 탭 가능한 목록 아이템을 유효하게 합니다.(각 목록 아이템을 개별적으로 유효하게 할 필요가 있습니다):
 
 ```js
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
@@ -408,7 +408,7 @@ triggerTabList.forEach(function (triggerEl) {
 })
 ```
 
-각각의 리스트 아이템을 여러가지 방법으로 활성화 할 수 있습니다:
+각각의 목록 아이템을 여러가지 방법으로 활성화 할 수 있습니다:
 
 ```js
 var triggerEl = document.querySelector('#myTab a[href="#profile"]')
@@ -435,7 +435,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### constructor
 
-리스트 아이템 요소와 컨텐츠 컨테이너를 활성화 시킵니다. 탭에는 DOM 내의 컨테이너 노드를 타겟으로 하는 `data-bs-target` 또는 `href` 가 필요합니다.
+목록 아이템 요소와 컨텐츠 컨테이너를 활성화 시킵니다. 탭에는 DOM 내의 컨테이너 노드를 타겟으로 하는 `data-bs-target` 또는 `href` 가 필요합니다.
 
 ```html
 <div class="list-group" id="myList" role="tablist">
@@ -462,7 +462,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### show
 
-지정된 리스트 아이템을 선택하고 관련 판넬을 표시합니다. 이전에 선택되었던 다른 리스트 아이템은 선택되지 않은 상태로 돌아가고, 관련된 판넬은 숨김이 됩니다. 탭 판넬이 실제로 표시되기 전에 호출한 곳으로 돌아갑니다(예를 들어, `shown.bs.tab` 이벤트가 발생하기 전 등)
+지정된 목록 아이템을 선택하고 관련 판넬을 표시합니다. 이전에 선택되었던 다른 목록 아이템은 선택되지 않은 상태로 돌아가고, 관련된 판넬은 숨김이 됩니다. 탭 판넬이 실제로 표시되기 전에 호출한 곳으로 돌아갑니다(예를 들어, `shown.bs.tab` 이벤트가 발생하기 전 등)
 
 ```js
   var someListItemEl = document.querySelector('#someListItem')

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Modal(모달)
-description: Bootstrap JavaScript 모달 플러그인을 사용하여 라이트박스, 사용자 알림 또는 커스텀 컨텐츠를 만들 수 있습니다.
+description: Bootstrap JavaScript 모달 플러그인을 사용하여 라이트박스, 사용자 알림 또는 사용자 정의 컨텐츠를 만들 수 있습니다.
 group: components
 toc: true
 ---
@@ -15,7 +15,7 @@ toc: true
 - Bootstrap은 한번에 하나의 모달을 지원합니다. 중첩된 모달은 지원되지 않습니다.
 - 모달은 `position: fixed` 를 사용합니다. 가능한 다른 요소와의 간섭을 피하기 위해, 모달 HTML 을 최상단의 위치에 넣어 주세요. 다른 고정 요소안에 `.modal` 을 중첩해 넣으면 문제가 발생할 가능성이 높습니다.
 - 다시 한번 말씀드리지만, `position: fixed` 때문에 모바일 디바이스에서 모달을 사용할 때 주의할 사항이 몇가지 있습니다. 자세한 내용은 [browser support docs]({{< docsref "/getting-started/browsers-devices#modals-and-dropdowns-on-mobile" >}}) 를 참조해 주십시오.
-- HTML5가 시멘틱하게 정의하는 방법 때문에, [`autofocus` HTML 속성](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) 은 Bootstrap 모달에 영향을 줄 수 없습니다. 같은 효과를 얻으려면 몇개의 커스텀 JavaScript를 사용해 주십시오:
+- HTML5가 시멘틱하게 정의하는 방법 때문에, [`autofocus` HTML 속성](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) 은 Bootstrap 모달에 영향을 줄 수 없습니다. 같은 효과를 얻으려면 몇개의 사용자 정의 JavaScript를 사용해 주십시오:
 
 ```js
 var myModal = document.getElementById('myModal')

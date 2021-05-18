@@ -1,13 +1,13 @@
 ---
 layout: docs
 title: Carousel(캐러셀)
-description: 캐러셀은 이미지나 텍스트의 슬라이드를 가로로 슬라이드시켜 여러개를 표시하는 컴포넌트입니다.
+description: 캐러셀은 이미지나 문자의 슬라이드를 가로로 슬라이드시켜 여러개를 표시하는 컴포넌트입니다.
 toc: true
 ---
 
 ## How it works
 
-캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript 로 만들어진, 일련의 컨텐츠를 순환시키기 위한 슬라이드쇼 입니다. 일련의 이미지, 텍스트, 혹은 커스텀 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
+캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript 로 만들어진, 일련의 컨텐츠를 순환시키기 위한 슬라이드쇼 입니다. 일련의 이미지, 문자, 혹은 사용자 정의 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
 
 [Page Visibility API](https://www.w3.org/TR/page-visibility/) 가 지원되고 있는 브라우저에서는, 웹 페이지가 사용자에게 보이지 않을 때(브라우저 탭이 활성화 되지 않았거나, 브라우저 윈도우 크기가 최소화되어 있을때 등등), 캐러셀은 동작하지 않습니다.
 
@@ -19,7 +19,7 @@ toc: true
 
 ## Example
 
-캐러셀은, 슬라이드의 치수를 자동적으로 정규화하지 않습니다. 그 때문에, 컨텐츠의 크기를 적절하게 조정하기 위해, 추가의 유틸리티나 커스텀 스타일을 사용할 필요가 있는 경우가 있습니다. 캐러셀은 이전/다음의 컨트롤과 위치 표시(인디게이터, indicator)를 지원하고 있지만, 명시적으로 필수는 아닙니다. 자유롭게 추가하여 커스터마이즈 해 주세요.
+캐러셀은, 슬라이드의 치수를 자동적으로 정규화하지 않습니다. 그 때문에, 컨텐츠의 크기를 적절하게 조정하기 위해, 추가의 유틸리티나 사용자 정의 스타일을 사용할 필요가 있는 경우가 있습니다. 캐러셀은 이전/다음의 컨트롤과 위치 표시(인디게이터, indicator)를 지원하고 있지만, 명시적으로 필수는 아닙니다. 자유롭게 추가하여 재정의 해 주세요.
 
 **The `.active` class needs to be added to one of the slides** otherwise the carousel will not be visible. Also be sure to set a unique `id` on the `.carousel` for optional controls, especially if you're using multiple carousels on a single page. Control and indicator elements must have a `data-bs-target` attribute (or `href` for links) that matches the `id` of the `.carousel` element.
 
@@ -235,7 +235,7 @@ Carousels support swiping left/right on touchscreen devices to move between slid
 
 ## Dark variant
 
-컨트롤, 위치 표시(인디게이터, indicator) 혹은 설명문(캡션, caption) 을 어둡게 하기 위해서 `.carousel-dark` 을 `.carousel` 에 추가했습니다. 컨트롤은 `filter` CSS 속성으로 기본 흰색으로 칠해 진 것이 반전됩니다. 설명문(캡션, caption)과 컨트롤에는 `color` 와 `background-color` 를 커스터마이즈하는 Sass 변수가 추가되었습니다.
+컨트롤, 위치 표시(인디게이터, indicator) 혹은 설명문(캡션, caption) 을 어둡게 하기 위해서 `.carousel-dark` 을 `.carousel` 에 추가했습니다. 컨트롤은 `filter` CSS 속성으로 기본 흰색으로 칠해 진 것이 반전됩니다. 설명문(캡션, caption)과 컨트롤에는 `color` 와 `background-color` 를 재정의하는 Sass 변수가 추가되었습니다.
 
 {{< example >}}
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">

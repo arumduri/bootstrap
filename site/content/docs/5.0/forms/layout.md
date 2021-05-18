@@ -18,7 +18,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 
 ## Utilities
 
-[Margin utilities]({{< docsref "/utilities/spacing" >}})는 폼에 구조를 추가하는 가장 간단한 방법입니다. 이들은 라벨, 컨트롤, 옵션 폼 텍스트, 폼 검증 문구의 기본적인 그룹화를 제공합니다. 우리는 일관성을 유지하기 위해 `margin-bottom`유틸리티를 사용해 폼 전체에 하나의 방향성을 사용할 것을 권장합니다.
+[Margin utilities]({{< docsref "/utilities/spacing" >}})는 폼에 구조를 추가하는 가장 간단한 방법입니다. 이들은 라벨, 컨트롤, 옵션 폼 문자, 폼 검증 문구의 기본적인 그룹화를 제공합니다. 우리는 일관성을 유지하기 위해 `margin-bottom`유틸리티를 사용해 폼 전체에 하나의 방향성을 사용할 것을 권장합니다.
 
 `<fieldset>`나 `<div>` 등의 거의 모든 요소를 사용하여 자유롭게 폼을 작성해 주세요.
 

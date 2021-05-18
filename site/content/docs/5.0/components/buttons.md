@@ -26,7 +26,7 @@ Bootstrap 에서는 미리 정의된 버튼 스타일이 포함되어 있으며,
 
 ## Disable text wrapping
 
-버튼의 텍스트를 감싸고 싶지 않다면 `.text-nowrap` 클래스를 버튼에 추가할 수 있습니다. Sass 로 `$btn-white-space: nowrap` 을 설정하여 버튼별로 텍스트를 감싸지 않도록 할 수 있습니다.
+버튼의 문자를 감싸고 싶지 않다면 `.text-nowrap` 클래스를 버튼에 추가할 수 있습니다. Sass 로 `$btn-white-space: nowrap` 을 설정하여 버튼별로 문자를 감싸지 않도록 할 수 있습니다.
 
 ## Button tags
 
@@ -95,12 +95,12 @@ Bootstrap 에서는 미리 정의된 버튼 스타일이 포함되어 있으며,
 {{< callout warning >}}
 ##### Link functionality caveat
 
-`.disabled` 클래스는 `<a>` 의 링크 기능을 무효화하기 위해서 `pointer-events: none` 을 사용하지만, 이 CSS 속성은 아직 표준화되어 있지 않습니다. 게다가 `pointer-events: none` 를 지원하고 있는 브라우저에서도 키보드 내비게이션은 영향을 받지 않습니다. 그렇기 때문에 안전을 위해 `aria-disabled="true"` 에 더해 `tabindex="-1"` 속성을 링크로 설정하고 키보드 포커스를 받지 않도록 하며, 커스텀 JavaScript 를 사용하여 기능을 완전히 무효화 하도록 합니다.
+`.disabled` 클래스는 `<a>` 의 링크 기능을 무효화하기 위해서 `pointer-events: none`을 사용하지만, 이 CSS 속성은 아직 표준화되어 있지 않습니다. 게다가 `pointer-events: none`를 지원하고 있는 브라우저에서도 키보드 내비게이션은 영향을 받지 않습니다. 그렇기 때문에 안전을 위해 `aria-disabled="true"`에 더해 `tabindex="-1"` 속성을 링크로 설정하고 키보드 포커스를 받지 않도록 하며, 사용자 정의 JavaScript 를 사용하여 기능을 완전히 무효화 하도록 합니다.
 {{< /callout >}}
 
 ## Block buttons
 
-Display와 gap 유틸리티를 조합해, Bootstrap4 와 같은 전체 너비에 걸친 "블럭 버튼"을 만듭니다. 버튼 고유의 클래스 대신 유틸리티를 사용하여, 간격, 정렬, 또는 반응형 동작을 훨씬 크게 제어할 수 있습니다.
+Display와 gap 유틸리티를 조합해, Bootstrap4와 같은 전체 너비에 걸친 "블럭 버튼"을 만듭니다. 버튼 고유의 클래스 대신 유틸리티를 사용하여, 간격, 정렬, 또는 반응형 동작을 훨씬 크게 제어할 수 있습니다.
 
 {{< example >}}
 <div class="d-grid gap-2">
@@ -109,7 +109,7 @@ Display와 gap 유틸리티를 조합해, Bootstrap4 와 같은 전체 너비에
 </div>
 {{< /example >}}
 
-여기서는 `.d-md-block` 이 `.d-grid` 클래스로 대체되어 `gap-2` 유틸리티를 무효화 할 때까지, 버튼을 수직으로 쌓은 상태로 시작하는 반응형 변형를 만들고 있습니다. 브라우저 크기를 조절해 가며 차이를 확인 해 보세요.
+여기서는 `.d-md-block`이 `.d-grid` 클래스로 대체되어 `gap-2` 유틸리티를 무효화 할 때까지, 버튼을 수직으로 쌓은 상태로 시작하는 반응형 변형를 만들고 있습니다. 브라우저 크기를 조절해 가며 차이를 확인 해 보세요.
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-block">
@@ -118,7 +118,7 @@ Display와 gap 유틸리티를 조합해, Bootstrap4 와 같은 전체 너비에
 </div>
 {{< /example >}}
 
-블럭 버튼의 가로 폭은, 그리드의 컬럼 가로 폭 클래스로 조정할 수 있습니다. 예를 들어, 50%의 가로 폭의 "블럭 버튼"에는 `.col-6` 을 사용합니다. 수평으로 중앙에 배치하고 싶을 때는 `.mx-auto` 를 사용합니다.
+블럭 버튼의 가로 폭은, 그리드의 컬럼 가로 폭 클래스로 조정할 수 있습니다. 예를 들어, 50%의 가로 폭의 "블럭 버튼"에는 `.col-6`을 사용합니다. 수평으로 중앙에 배치하고 싶을 때는 `.mx-auto`를 사용합니다.
 
 {{< example >}}
 <div class="d-grid gap-2 col-6 mx-auto">
@@ -141,12 +141,12 @@ Display와 gap 유틸리티를 조합해, Bootstrap4 와 같은 전체 너비에
 버튼 플러그인에서는, 간단한 on/off 토글 버튼을 생성할 수 있습니다.
 
 {{< callout info >}}
-시각적으로, 이 토글 버튼은 [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}) 과 같습니다. 하지만, 이런 것들은 지원 기술에 따라 다르게 전달됩니다. 체크박스는 스크린 리더에 의해, "checked"/"not checked" 로 안내되며(보이는 것과 상관없이 기본적으로는 체크박스이기 때문에), 토글 버튼은 "button"/"button pressed" 로 안내됩니다. 이 두가지 접근방식 중 어느 쪽을 선택할지는 작성하는 토글의 타입과 체크박스 또는 실제 버튼으로 안내 되었을때 토글이 사용자에게 의미가 있느지 여부에 따라 다릅니다.
+시각적으로, 이 토글 버튼은 [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}})과 같습니다. 하지만, 이런 것들은 지원 기술에 따라 다르게 전달됩니다. 체크박스는 스크린 리더에 의해, "checked"/"not checked" 로 안내되며(보이는 것과 상관없이 기본적으로는 체크박스이기 때문에), 토글 버튼은 "button"/"button pressed"로 안내됩니다. 이 두가지 접근방식 중 어느 쪽을 선택할지는 작성하는 토글의 타입과 체크박스 또는 실제 버튼으로 안내 되었을때 토글이 사용자에게 의미가 있느지 여부에 따라 다릅니다.
 {{< /callout >}}
 
 ### Toggle states
 
-버튼의 `active` 상태를 토글하기 위해, `data-bs-toggle="button"` 을 추가합니다. 버튼을 미리 토글하고 있는 경우, 지원 기술에 적절하게 전달될수 있도록 `.active` 클래스와 `aria-pressed="true"` 을 수동으로 버튼에 추가해야 합니다.
+버튼의 `active` 상태를 토글하기 위해, `data-bs-toggle="button"`을 추가합니다. 버튼을 미리 토글하고 있는 경우, 지원 기술에 적절하게 전달될 수 있도록 `.active` 클래스와 `aria-pressed="true"`를 수동으로 버튼에 추가해야 합니다.
 
 {{< example >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off">Toggle button</button>
@@ -214,7 +214,7 @@ buttons.forEach(function (button) {
 
 ### Mixins
 
-There are three mixins for buttons: button and button outline variant mixins (both based on `$theme-colors`), plus a button size mixin.
+버튼에는 3개의 믹스인이 있습니다.: 버튼과 버튼 아웃라인 변수 믹스인(양쪽 다 `$theme-colors`를 기반으로 사용), 그리고 버튼 사이즈 믹스인.
 
 {{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
@@ -224,6 +224,6 @@ There are three mixins for buttons: button and button outline variant mixins (bo
 
 ### Loops
 
-Button variants (for regular and outline buttons) use their respective mixins with our `$theme-colors` map to generate the modifier classes in `scss/_buttons.scss`.
+버튼 종류(일반 버튼과 아웃라인 버튼)는 각각의 믹스인과 `$theme-colors`맵을 사용하여 `scss/_buttons.scss`에 수정 클래스를 생성합니다.
 
 {{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}

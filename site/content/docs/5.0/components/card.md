@@ -7,13 +7,13 @@ toc: true
 ---
 
 ## About
-**카드**는 유연하고 확장이 가능한 컨테이너입니다. Headers 나 footers 의 옵션, 다양한 컨텐츠, 문맥에 따른 배경 색상, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap3 의 panels、wells、thumbnails는 카드로 바뀝니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
+**카드**는 유연하고 확장이 가능한 컨테이너입니다. Headers나 footers의 옵션, 다양한 컨텐츠, 문맥에 따른 배경 색상, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap3 의 panels、wells、thumbnails는 카드로 바뀝니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
 
 ## Example
 
-카드는 적은 마크업과 스타일로 되어 있지만, 다양한 커스터마이즈가 가능합니다. Flexbox 로 만들어져 있어 쉽게 배치가 가능하고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 `margin` 설정이 없기 때문에 필요에 따라 [spacing utilities]({{< docsref "/utilities/spacing" >}}) 를 사용합니다.
+카드는 적은 마크업과 스타일로 되어 있지만, 다양한 사용자 정의가 가능합니다. Flexbox로 만들어져 있어 쉽게 배치가 가능하고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 `margin` 설정이 없기 때문에 필요에 따라 [spacing utilities]({{< docsref "/utilities/spacing" >}})를 사용합니다.
 
-아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [sizing options](#sizing) 을 통해서 간단하게 커스터마이즈 할 수 있습니다.
+아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [sizing options](#sizing)을 통해서 간단하게 재정의 할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -28,11 +28,11 @@ toc: true
 
 ## Content types
 
-이미지나 텍스트, 리스트, 링크 등의 카드는 다양한 컨텐츠를 지원하고 있습니다. 아래와 같습니다.
+이미지나 문자, 목록, 링크 등의 카드는 다양한 컨텐츠를 지원하고 있습니다. 아래와 같습니다.
 
 ### Body
 
-카드를 구축하는 클래스는 `.card-body` 입니다. 카드 내에 여백에 필요할 때 사용합니다.
+카드를 구축하는 클래스는 `.card-body`입니다. 카드 내에 여백에 필요할 때 사용합니다.
 
 {{< example >}}
 <div class="card">
@@ -44,9 +44,9 @@ toc: true
 
 ### Titles, text, and links
 
-카드 타이틀은 `<h*>` 태그에 `.card-title` 을 적용합니다. `<a>` 태그에 `.card-link` 를 적용하면 링크가 추가됩니다. 서브 타이틀은, `<h*>` 태크에 `.card-subtitle` 를 적용합니다.
+카드 타이틀은 `<h*>` 태그에 `.card-title`을 적용합니다. `<a>` 태그에 `.card-link`를 적용하면 링크가 추가됩니다. 서브 타이틀은, `<h*>` 태크에 `.card-subtitle`를 적용합니다.
 
-`.card-title` 과 `.card-subtitle` 를 `.card-body` 안에 배치하면 카드 제목과 서브 타이틀이 깔끔하게 적용됩니다.
+`.card-title`과 `.card-subtitle`를 `.card-body` 안에 배치하면 카드 제목과 서브 타이틀이 깔끔하게 적용됩니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -62,7 +62,7 @@ toc: true
 
 ### Images
 
-`.card-img-top` 은 이미지를 위로 가지고 옵니다. `.card-text` 는 텍스트를 카드에 추가할 수 있습니다.
+`.card-img-top`은 이미지를 위로 가지고 옵니다. `.card-text`는 문자를 카드에 추가할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -75,7 +75,7 @@ toc: true
 
 ### List groups
 
-Flush list group을 사용하여 카드안에 리스트를 만듭니다.
+Flush list group을 사용하여 카드안에 목록을 만듭니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -115,7 +115,7 @@ Flush list group을 사용하여 카드안에 리스트를 만듭니다.
 
 ### Kitchen sink
 
-복수의 컨텐츠 타입을 조합하고, 필요한 카드를 작성하거나 모든 것을 이 안에 집어 넣을 수 있습니다. 아래는 이미지 스타일, 블럭, 텍스트 스타일, 리스트 그룹으로, 모든것이 고정폭의 카드안에 싸여 있습니다.
+복수의 컨텐츠 타입을 조합하고, 필요한 카드를 작성하거나 모든 것을 이 안에 집어 넣을 수 있습니다. 아래는 이미지 스타일, 블럭, 문자 스타일, 목록 그룹으로, 모든것이 고정폭의 카드안에 싸여 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -138,7 +138,7 @@ Flush list group을 사용하여 카드안에 리스트를 만듭니다.
 
 ### Header and footer
 
-Header 와/혹은 footer 를 넣는 카드의 옵션이 있습니다.
+Header와/혹은 footer를 넣는 카드의 옵션이 있습니다.
 
 {{< example >}}
 <div class="card">
@@ -153,7 +153,7 @@ Header 와/혹은 footer 를 넣는 카드의 옵션이 있습니다.
 </div>
 {{< /example >}}
 
-`<h*>` 요소에 `.card-header` 를 적용합니다.
+`<h*>` 요소에 `.card-header`를 적용합니다.
 
 {{< example >}}
 <div class="card">
@@ -198,7 +198,7 @@ Header 와/혹은 footer 를 넣는 카드의 옵션이 있습니다.
 
 ## Sizing
 
-카드는 특별히 지정하지 않는 한, `width` 는 100% 의 가로 폭을 가지게 됩니다. 필요에 따라, 커스텀 CSS, grid 클래스, grid Sass 믹스인, 혹은 유틸리티를 사용해 변경할 수 있습니다.
+카드는 특별히 지정하지 않는 한, `width`는 100% 의 가로 폭을 가지게 됩니다. 필요에 따라, 사용자 정의 CSS, grid 클래스, grid Sass 믹스인, 혹은 유틸리티를 사용해 변경할 수 있습니다.
 
 ### Using grid markup
 
@@ -265,7 +265,7 @@ Grid 를 사용해, 필요에 따라 카드를 columns 과 rows 안에 넣어서
 
 ## Text alignment
 
-텍스트의 배치는 [text align classes]({{< docsref "/utilities/text#text-alignment" >}}) 을 사용해 변경할 수 있습니다.
+문자의 배치는 [text align classes]({{< docsref "/utilities/text#text-alignment" >}}) 을 사용해 변경할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -372,7 +372,7 @@ Header 나 footer 와 같이, 카드에는 카드의 상부와 하부의 "image 
 
 ### Image overlays
 
-이미지를 카드의 배경으로 하여, 카드의 텍스트를 덮어씌우기 합니다. 이미지에 따라서는, 추가 스타일이나 유틸리티가 필요한 경우와 필요하지 않은 경우가 있습니다.
+이미지를 카드의 배경으로 하여, 카드의 문자를 덮어씌우기 합니다. 이미지에 따라서는, 추가 스타일이나 유틸리티가 필요한 경우와 필요하지 않은 경우가 있습니다.
 
 {{< example >}}
 <div class="card bg-dark text-white">
@@ -391,7 +391,7 @@ Header 나 footer 와 같이, 카드에는 카드의 상부와 하부의 "image 
 
 ## Horizontal
 
-그리드와 유틸리티 클래스를 조합해 사용하는 것으로, 모바일에 친화적이고 반응형적인 방법으로 카드를 수평으로 배치할 수 있습니다. 아래의 예시에서는, `.g-0` 으로 그리드의 거터를 삭제하고, `.col-md-*` 클래스를 사용해 `md` 브레이크 포인트로 카드를 수평으로 배치하고 있습니다. 카드의 내용에 따라서는, 좀 더 조정이 필요할지도 모릅니다.
+그리드와 유틸리티 클래스를 조합해 사용하는 것으로, 모바일에 친화적이고 반응형적인 방법으로 카드를 수평으로 배치할 수 있습니다. 아래의 예시에서는, `.g-0`으로 그리드의 거터를 삭제하고, `.col-md-*` 클래스를 사용해 `md` 브레이크 포인트로 카드를 수평으로 배치하고 있습니다. 카드의 내용에 따라서는, 좀 더 조정이 필요할지도 모릅니다.
 
 {{< example >}}
 <div class="card mb-3" style="max-width: 540px;">
@@ -412,7 +412,7 @@ Header 나 footer 와 같이, 카드에는 카드의 상부와 하부의 "image 
 
 ## Card styles
 
-카드에는 배경, 모서리, 색을 커스터마이즈 하기 위한 다양한 옵션이 포함되어 있습니다.
+카드에는 배경, 모서리, 색을 재정의 하기 위한 다양한 옵션이 포함되어 있습니다.
 
 ### Background and color
 

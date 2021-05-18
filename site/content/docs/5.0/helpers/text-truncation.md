@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Text truncation(말 줄임표)
-description: 줄임표를 사용하여 긴 텍스트의 문자열을 자릅니다.
+description: 줄임표를 사용하여 긴 문자의 문자열을 자릅니다.
 group: helpers
 toc: false
 --- 

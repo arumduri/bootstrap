@@ -78,7 +78,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-lig
 
 ### Brand
 
-`.navbar-brand` 는 대부분의 요소에 적용이 가능하지만, 요소에 따라서 유틸리티 클래스나 커스텀 스타일을 필요로 하는 경우가 있기 때문에 앵커가 최적입니다.
+`.navbar-brand` 는 대부분의 요소에 적용이 가능하지만, 요소에 따라서 유틸리티 클래스나 사용자 정의 스타일을 필요로 하는 경우가 있기 때문에 앵커가 최적입니다.
 
 #### Text
 
@@ -164,7 +164,7 @@ Please note that you should also add the `aria-current` attribute on the active 
 </nav>
 {{< /example >}}
 
-또한, 내비게이션 링크에 클래스를 사용하고 있기 때문에 리스트 기반 접근법을 완전히 피할수 있습니다.
+또한, 내비게이션 링크에 클래스를 사용하고 있기 때문에 목록 기반 접근법을 완전히 피할수 있습니다.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -451,7 +451,7 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 
 ## Placement
 
-[Position utilities]({{< docsref "/utilities/position" >}}) 를 사용하여 내비게이션 바를 정적이지 않은 위치에 배치할 수 있습니다. 상단고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단고정을 할지 선택할 수 있습니다. 고정 내비게이션 바는 `position: fixed` 를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 커스텀 CSS(예를 들어, `<body>` 의 `padding-top` 등)가 필요할 수 있습니다.
+[Position utilities]({{< docsref "/utilities/position" >}}) 를 사용하여 내비게이션 바를 정적이지 않은 위치에 배치할 수 있습니다. 상단고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단고정을 할지 선택할 수 있습니다. 고정 내비게이션 바는 `position: fixed` 를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 사용자 정의 CSS(예를 들어, `<body>` 의 `padding-top` 등)가 필요할 수 있습니다.
 
 또한, **`.sticky-top`은 `position: sticky`를 사용하고 있는데 [모든 브라우저에서 완벽하게 지원되는 것은 아닙니다](https://caniuse.com/css-sticky)**
 

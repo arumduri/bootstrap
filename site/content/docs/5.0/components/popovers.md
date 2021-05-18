@@ -10,14 +10,14 @@ toc: true
 
 팝오버 플러그인을 사용할 때 알아두어야 할 점:
 
-- 팝오버는 [Popper](https://popper.js.org/) 에 의존하고 있습니다. 팝오버를 동작시키기 위해서는 bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 를 쓰거나 Popper 를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js` 를 사용해야 합니다.
-- 팝오버는, 의존관계로 [tooltip plugin]({{< docsref "/components/tooltips" >}}) 이 필요합니다.
+- 팝오버는 [Popper](https://popper.js.org/)에 의존하고 있습니다. 팝오버를 동작시키기 위해서는 bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 를 쓰거나 Popper를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`를 사용해야 합니다.
+- 팝오버는, 의존관계로 [tooltip plugin]({{< docsref "/components/tooltips" >}})이 필요합니다.
 - 팝오버는 퍼포먼스를 위해 opt-in 되어 있기 때문에, **스스로 초기화를 해야 합니다.**
 - 길이가 0 인 `title` 과 `content` 값은 팝오버를 표시하지 않습니다.
-- 더 복잡한 컴포넌트(input group, button groups 등)의 렌더링 문제를 피하기 위해 `container: 'body'` 를 지정해 주십시오.
+- 더 복잡한 컴포넌트(input group, button groups 등)의 렌더링 문제를 피하기 위해 `container: 'body'`를 지정해 주십시오.
 - 숨겨진 요소에서 팝오버를 트리거해도 작동하지 않습니다.
 - `.disabled` 또는 `disabled` 요소의 팝오버는 그 위(바깥) 요소에서 트리거해야 합니다.
-- 여러 라인에 걸쳐 있는 앵커로부터 트리거 된 경우, 팝오버는 앵커의 전체 폭을 중심으로 표시됩니다. 이 동작을 피하기 위해서는 `<a>` 에 `.text-nowrap` 을 사용해 주십시오.
+- 여러 라인에 걸쳐 있는 앵커로부터 트리거 된 경우, 팝오버는 앵커의 전체 폭을 중심으로 표시됩니다. 이 동작을 피하기 위해서는 `<a>`에 `.text-nowrap`을 사용해 주십시오.
 - 팝오버는 대응 요소가 DOM 에서 삭제되기 전에 숨겨야 합니다.
 - 팝오버는 shadow DOM 내의 요소 덕분에 트리거 할 수 있습니다.
 
@@ -29,7 +29,7 @@ toc: true
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-팝오버가 어떤 기능을 하는지 몇 가지 예를 들어보겠습니다.
+팝오버가 어떤 기능을 하는지 몇 가지 예를 들어 보겠습니다.
 
 ## Example: Enable popovers everywhere
 
@@ -44,7 +44,7 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 
 ## Example: Using the `container` option
 
-부모 요소에 팝오버를 방해하는 몇 가지 스타일이 있다면, 대신 커스텀 `container` 를 지정하여 팝오버의 HTML을 해당 요소 내에 표시되도록 합니다.
+부모 요소에 팝오버를 방해하는 몇 가지 스타일이 있다면, 대신 사용자 정의 `container`를 지정하여 팝오버의 HTML을 해당 요소 내에 표시되도록 합니다.
 
 ```js
 var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
@@ -99,9 +99,10 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 
 ### Disabled elements
 
-Elements with the `disabled` attribute aren't interactive, meaning users cannot hover or click them to trigger a popover (or tooltip). As a workaround, you'll want to trigger the popover from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`.
+`disabled` 속성을 갖는 요소는 인터랙티브하지 않습니다. 즉, 사용자가 팝오버(또는 툴팁)를 일으키기 위해서 호버하거나 클릭할 수 없습니다. 차선책으로 감싼 `<div>` 및 `<span>`에서 팝오버를 트리거되길 원하지만, `tabindex="0"`을 사용해 키보드 포커스가 가능하도록 이상적으로 만듭니다.
 
-For disabled popover triggers, you may also prefer `data-bs-trigger="hover focus"` so that the popover appears as immediate visual feedback to your users as they may not expect to _click_ on a disabled element.
+무효화된 팝오버를 트리거 하기 위해서는 `data-bs-trigger="hover focus"`라고 하면 사용자는 무효화된 요소를 _click_ 할 것을 기대하지 않기 때문에 팝오버가 바로 시각적으로 표시되게 됩니다.
+
 
 {{< example >}}
 <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
@@ -136,7 +137,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 
 ### Options
 
-Options can be passed via data attributes or JavaScript. For data attributes, append the option name to `data-bs-`, as in `data-bs-animation=""`. Make sure to change the case type of the option name from camelCase to kebab-case when passing the options via data attributes. For example, instead of using `data-bs-customClass="beautifier"`, use `data-bs-custom-class="beautifier"`.
+옵션은 data 속성이나 JavaScript로 전달할 수 있습니다. data 속성의 경우는, `data-bs-animation=""`과 같이 `data-bs-`에 옵션명을 추가합니다. data 속성으로 옵션을 전달하려면 옵션명의 대문자와 소문자를 캐멀케이스(camelCase)에서 케밥케이스(kebab-case)로 변경해 주세요. 예를 들어 `data-bs-customClass="beautifier"`가 아니라 `data-bs-custom-class="beautifier"`로 해야 합니다.
 
 {{< callout warning >}}
 보안상의 이유로 `sanitize`, `sanitizeFn`, `allowList` 옵션을 data 속성으로 지정할 수 없다는 것에 주의해 주세요.
@@ -182,14 +183,14 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>
         <p>팝오버 표시 및 숨김 지연(ms) - 수동 트리커 타입에는 적용되지 않습니다.</p>
         <p>수치가 부여된 경우 숨김/표시의 양쪽에 지연이 적용됩니다.</p>
-        <p>오브젝트 구조: <code>delay: { "show": 500, "hide": 100 }</code></p>
+        <p>객체 구조: <code>delay: { "show": 500, "hide": 100 }</code></p>
       </td>
     </tr>
     <tr>
       <td><code>html</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
-      <td>팝오버에 HTML 을 삽입합니다. false 의 경우 <code>innerText</code> 속성을 사용하여 DOM 에 컨텐츠를 삽입합니다. XSS 공격이 걱정될 경우 텍스트를 사용합니다.</td>
+      <td>팝오버에 HTML 을 삽입합니다. false 의 경우 <code>innerText</code> 속성을 사용하여 DOM 에 컨텐츠를 삽입합니다. XSS 공격이 걱정될 경우 문자를 사용합니다.</td>
     </tr>
     <tr>
       <td><code>placement</code></td>
@@ -197,7 +198,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td><code>'right'</code></td>
       <td>
         <p>팝오버의 배치 방법 - auto | top | bottom | left | right.<br><code>auto</code> 를 지정하면 동적으로 팝오버 배치를 변경합니다.</p>
-        <p>배치를 변경하기 위해 함수를 사용하는 경우, 팝오버 DOM 노드를 첫번째 인수로, triggering element DOM 노드를 두번째 인수로 호출됩니다.<code>this</code> 컨텍스트는 팝오버의 인스턴스로 설정되어 있습니다.</p>
+        <p>배치를 변경하기 위해 함수를 사용하는 경우, 팝오버 DOM 노드를 첫번째 인수로, triggering element DOM 노드를 두번째 인수로 호출됩니다.<code>this</code> 컨문자는 팝오버의 인스턴스로 설정되어 있습니다.</p>
       </td>
     </tr>
     <tr>
@@ -237,14 +238,13 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td><code>fallbackPlacements</code></td>
       <td>array</td>
       <td><code>['top', 'right', 'bottom', 'left']</code></td>
-      <td>Define fallback placements by providing a list of placements in array (in order of preference). For more information refer to
-      Popper's <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a></td>
+      <td>폴백 배치를 배열로 지정하여 우선수위가 높은 순으로 배치를 결정할 수 있습니다. 자세한 내용은 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a>를 참조해 주세요</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>Overflow constraint boundary of the popover (applies only to Popper's preventOverflow modifier). By default it's <code>'clippingParents'</code> and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>.</td>
+      <td>팝오버의 오버플로 제약 경계(Popper의 preventOverflow modifier에만 적용). 기본적으로 <code>'clippingParents'</code>로 HTMLElement의 참조를 받을 수 있습니다.(JavaScript만). 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>customClass</code></td>
@@ -259,13 +259,13 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td><code>sanitize</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Enable or disable the sanitization. If activated <code>'template'</code>, <code>'content'</code> and <code>'title'</code> options will be sanitized. See the <a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">sanitizer section in our JavaScript documentation</a>.</td>
+      <td>sanitize를 유효 혹은 무효화 합니다. 유효화 하면 <code>'template'</code>, <code>'content'</code>와 <code>'title'</code>의 각 옵션이 sanitize 됩니다. 자세한 정보는 <a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">sanitizer section in our JavaScript documentation</a>을 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>allowList</code></td>
       <td>object</td>
       <td><a href="{{< docsref "/getting-started/javascript#sanitizer" >}}">Default value</a></td>
-      <td>허용된 속성과 태그를 포함하는 오브젝트</td>
+      <td>허용된 속성과 태그를 포함하는 객체</td>
     </tr>
     <tr>
       <td><code>sanitizeFn</code></td>
@@ -278,9 +278,9 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>array | string | function</td>
       <td><code>[0, 8]</code></td>
       <td>
-        <p>Offset of the popover relative to its target. You can pass a string in data attributes with comma separated values like: <code>data-bs-offset="10,20"</code></p>
-        <p>When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
-        <p>For more information refer to Popper's <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>.</p>
+        <p>타겟에 대한 팝오버의 상대적인 오프셋. data 속성에는 <code>data-bs-offset="10,20"</code>와 같이 콤마 구분으로 문자열을 건내줄 수 있습니다.</p>
+        <p>오프셋을 결정하기 위해 함수가 사용되는 경우는 Popper의 배치, 참조, Popper의 직사각형을 포함한 객체를 첫번째 인수로 호출합니다. 트리거 되는 요소의 DOM 노드가 두번째 인수로 전달됩니다. 이 함수는 두 값을 갖는 배열 <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>을 반환해야 합니다.</p>
+        <p>보다 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>를 참조해 주세요.</p>
       </td>
     </tr>
     <tr>
@@ -288,8 +288,8 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <td>null | object | function</td>
       <td><code>null</code></td>
       <td>
-        <p>To change Bootstrap's default Popper config, see <a href="https://popper.js.org/docs/v2/constructors/#options">Popper's configuration</a>.</p>
-        <p>When a function is used to create the Popper configuration, it's called with an object that contains the Bootstrap's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper.</p>
+        <p>Bootstrap의 기본 Popper 설정을 변경하려면 <a href="https://popper.js.org/docs/v2/constructors/#options">Popper's configuration</a>을 참조해 주세요.</p>
+        <p>Popper 구성을 만들기 위해 함수가 사용될 때 Bootstrap 기본 Popper 구성을 포함한 객체로 호출됩니다. 그것은 당신이 기본을 사용하고, 당신의 구성과 통합하는것을 도와줍니다. 함수는 Popper의 구성 객체를 반환해야 합니다.</p>
       </td>
     </tr>
   </tbody>
