@@ -847,7 +847,7 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 
 ### Options
 
-옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우는 `data-bs-backdrop=""`처럼 `data-bs-`에 옵션명을 추가합니다.
+옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우는 `data-bs-backdrop=""`처럼 `data-bs-`에 옵션 명을 추가합니다.
 
 <table class="table">
   <thead>

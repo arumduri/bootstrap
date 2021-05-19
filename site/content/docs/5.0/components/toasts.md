@@ -325,7 +325,7 @@ var toastList = toastElList.map(function (toastEl) {
 
 ### Options
 
-옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
+옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션 명을 추가합니다.
 
 <table class="table">
   <thead>

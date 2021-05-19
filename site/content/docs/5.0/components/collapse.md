@@ -118,7 +118,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 ### Options
 
-옵션은 JavaScript나 데이터 속성으로 줄 수 있습니다. 데이터 속성의 경우는 `data-bs-parent=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
+옵션은 JavaScript나 데이터 속성으로 줄 수 있습니다. 데이터 속성의 경우는 `data-bs-parent=""` 처럼 `data-bs-` 에 옵션 명을 추가합니다.
 
 <table class="table">
   <thead>

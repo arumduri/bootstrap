@@ -209,7 +209,7 @@ var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
 
 ### Options
 
-data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성의 경우, `data-bs-backdrop=""`처럼 ` data-bs-`에 옵션명을 추가해 사용합니다.
+data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성의 경우, `data-bs-backdrop=""`처럼 ` data-bs-`에 옵션 명을 추가해 사용합니다.
 
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |

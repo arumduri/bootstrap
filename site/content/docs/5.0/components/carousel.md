@@ -307,7 +307,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
 
 ### Options
 
-옵션은, data 속성 혹은 JavaScript로 줄 수 있습니다. data 속성의 경우, `data-bs-interval=""`과 같이, `data-bs-`에 옵션명을 추가합니다.
+옵션은, data 속성 혹은 JavaScript로 줄 수 있습니다. data 속성의 경우, `data-bs-interval=""`과 같이, `data-bs-`에 옵션 명을 추가합니다.
 
 <table class="table">
   <thead>
