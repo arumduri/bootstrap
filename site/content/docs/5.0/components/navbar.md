@@ -10,12 +10,12 @@ toc: true
 
 내비게이션 바를 시작하기 전에 알아야 할 것들을 설명하겠습니다:
 
-- 내비게이션 바는 `.navbar` 를 `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` 로 감싸야 하며, [color scheme](#color-schemes) 클래스가 필요합니다.
-- 내비게이션과 그 컨텐츠는 기본적으로 유동적입니다. [container](#containers) 를 변경하여 다양한 방법으로 가로폭을 제한할 수 있습니다.
+- 내비게이션 바는 `.navbar`를 `.navbar-expand{-sm|-md|-lg|-xl|-xxl}`로 감싸야 하며, [color scheme](#color-schemes)클래스가 필요합니다.
+- 내비게이션과 그 컨텐츠는 기본적으로 유동적입니다. [container](#containers)를 변경하여 다양한 방법으로 가로폭을 제한할 수 있습니다.
 - 내비게이션에서 배치 및 간격 제어는 [spacing]({{< docsref "/utilities/spacing" >}}) 와 [flex]({{< docsref "/utilities/flex" >}}) 유틸리티 클래스를 사용합니다.
 - 내비게이션은 기본적으로 반응형이지만 간단히 변경할 수 있습니다. 반응형 동작은 Collapse JavaScript 플러그인에 의존합니다.
-- 접근성을 확보하려면 `<nav>` 요소를 사용하거나, 혹은 `<div>` 와 같이 보다 범용적인 요소를 사용하는 경우에는 `role="navigation"` 을 추가하여 스크린 리더 사용자를 위해 랜드마크가 되는 곳임을 명시적으로 알려주어야 합니다.
-- 현재 페이지에는 `aria-current="page"` 를, 세트 안에서의 현재 아이템에는 `aria-current="true"` 를 사용하여, 현재 아이템을 표시합니다.
+- 접근성을 확보하려면 `<nav>` 요소를 사용하거나, 혹은 `<div>`와 같이 보다 범용적인 요소를 사용하는 경우에는 `role="navigation"`을 추가하여 스크린 리더 사용자를 위해 랜드마크가 되는 곳임을 명시적으로 알려주어야 합니다.
+- 현재 페이지에는 `aria-current="page"`를, 세트 안에서의 현재 아이템에는 `aria-current="true"`를 사용하여, 현재 아이템을 표시합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -25,13 +25,13 @@ toc: true
 
 내비게이션에는 몇 가지의 서브 컴포넌트의 지원이 포함되어 있습니다. 필요에 따라, 아래에서 선택해 주세요.:
 
-- `.navbar-brand` for your company, product, or project name.
-- `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns).
-- `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#responsive-behaviors) behaviors.
-- Flex and spacing utilities for any form controls and actions.
-- `.navbar-text` for adding vertically centered strings of text.
-- `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
-- Add an optional `.navbar-scroll` to set a `max-height` and [scroll expanded navbar content](#scrolling).
+- `.navbar-brand`으로 회사명이나 제품명, 프로젝틈명 등.
+- `.navbar-nav` 으로 full-height와 보다 가벼운 네비게이션(드롭다운을 위한 지원 포함)을 실현.
+- `.navbar-toggler`은 콜랩스 플러그인과 다른 [navigation toggling](#responsive-behaviors)행동에 사용.
+- 모든 폼 컨트롤과 액션을 위한 flex와 spacing 유틸리티.
+- 수직방향으로 센터링된 문자열을 추가하기 위한 `.navbar-text`.
+- `.collapse.navbar-collapse` 으로 부모 브레이크 포인트에 따라 내비바의 컨텐츠를 그룹화하거나 감출수 있음.
+- 옵션으로 `.navbar-scroll`를 추가해 `max-height`와 [scroll expanded navbar content](#scrolling)이 가능.
 
 여기서는 `lg` (large) 브레이크 포인트에서 자동으로 접히는 'light' 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.
 
@@ -489,11 +489,11 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 
 ## Scrolling
 
-Add `.navbar-nav-scroll` to a `.navbar-nav` (or other navbar sub-component) to enable vertical scrolling within the toggleable contents of a collapsed navbar. By default, scrolling kicks in at `75vh` (or 75% of the viewport height), but you can override that with the local CSS custom property `--bs-navbar-height` or custom styles. At larger viewports when the navbar is expanded, content will appear as it does in a default navbar.
+`.navbar-nav` (혹은 다른 내비바의 서브 컴포넌트)에 `.navbar-nav-scroll`을 추가하여 접힌 내비바의 토글 가능한 컨텐츠 내에서 수직방향 스크롤을 활성화시킵니다. 기본적으로는 `75vh`(혹은 뷰포트 높이의 75%)로 스크롤이 시작되지만 로컬 CSS 사용자 정의 속성 `--bs-navbar-height`나 사용자 정의 스타일로 덮어쓸수 있습니다. 큰 뷰포트에서 내비바를 펼치면 기본 내비바처럼 컨텐츠가 나타납니다.
 
-Please note that this behavior comes with a potential drawback of `overflow`—when setting `overflow-y: auto` (required to scroll the content here), `overflow-x` is the equivalent of `auto`, which will crop some horizontal content.
+이 동작에는 `overflow`의 잠재적인 결점이 따르므로 주의가 필요합니다. `overflow-y: auto`(여기서 컨텐츠를 스크롤하기 위해 필요)를 설정하면 `overflow-x`는 `auto`와 동등해져 수평방향의 컨텐츠가 일부 잘립니다. 
 
-Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-height: 100px;"`, with some extra margin utilities for optimum spacing.
+아래는 `.navbar-nav-scroll`에 `style="--bs-scroll-height: 100px;"`를 사용한 내비바의 예시로, 최적의 간격을 확보하기 위한 여백을 갖추고 있습니다.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -542,9 +542,10 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
 
 ### Toggler
 
-내비게이션 바의 토글은 기본적으로 왼쪽 정렬이지만 `.navbar-brand` 와 같은 형제 요소와 연결되는 경우는 자동적으로 오른쪽 정렬이 됩니다. 마크업을 거꾸로 하면 토글의 배치도 반대로 바뀝니다. 아래는 색다른 토글 스타일의 예입니다.
+내비게이션 바의 토글은 기본적으로 왼쪽 정렬이지만 `.navbar-brand`와 같은 형제 요소와 연결되는 경우는 자동적으로 오른쪽 정렬이 됩니다. 마크업을 거꾸로 하면 토글의 배치도 반대로 바뀝니다. 아래는 색다른 토글 스타일의 예입니다.
 
-최소의 브레이크 포인트에서 `.navbar-brand` 가 표시되지 않습니다:
+아래의 예시를 가장 작은 브레이크 포인트로 확인해 보세요.
+`.navbar-brand`가 표시되지 않습니다:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -636,7 +637,7 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
 
 ### External content
 
-구조적으로 `.navbar` 바깥쪽에 있는 컨텐츠를 위해 collapse 플러그인을 사용해 컨테이너 요소를 트리거하고 싶을 수도 있습니다. 이 플러그인은 `id` 와 `data-bs-target` 의 매칭으로 동작하기 때문에 실행이 간단합니다.
+구조적으로 `.navbar` 바깥쪽에 있는 컨텐츠를 위해 콜랩스 플러그인을 사용해 컨테이너 요소를 트리거하고 싶을 수도 있습니다. 이 플러그인은 `id`와 `data-bs-target`의 매칭으로 동작하기 때문에 실행이 간단합니다.
 
 {{< example >}}
 <div class="collapse" id="navbarToggleExternalContent">
@@ -654,7 +655,7 @@ Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-hei
 </nav>
 {{< /example >}}
 
-When you do this, we recommend including additional JavaScript to move the focus programmatically to the container when it is opened. Otherwise, keyboard users and users of assistive technologies will likely have a hard time finding the newly revealed content - particularly if the container that was opened comes *before* the toggler in the document's structure. We also recommend making sure that the toggler has the `aria-controls` attribute, pointing to the `id` of the content container. In theory, this allows assistive technology users to jump directly from the toggler to the container it controls–but support for this is currently quite patchy.
+이렇게 했을때는 컨테이너가 열렸을 때 포커스를 이동시키기 위한 추가적인 JavaScript를 포함시키는 것을 권장합니다. 그렇지 않으면, 키보드 사용자나 지원 기술 사용자는 새롭게 표시된 컨텐츠를 찾는데 어려움을 겪을 것입니다. 특히, 열린 컨테이너가 문서의 구조상 토글러보다 *before*에 있는 경우는 더욱 그렇습니다. 또한 토글러가 컨텐츠의 `id`를 가르키는 `aria-controls` 속성을 가지고 있는 것을 확인할 필요가 있습니다. 이론적으로는 지원 기술 사용자가 토글러에서 그것을 제어하는 컨텐츠를 직접 점프할수 있게 되어 있지만 현재 이 지원은 매우 애매합니다.
 
 ## Sass
 
@@ -666,6 +667,6 @@ When you do this, we recommend including additional JavaScript to move the focus
 
 ### Loop
 
-[Responsive navbar expand/collapse classes](#responsive-behaviors) (e.g., `.navbar-expand-lg`) are combined with the `$breakpoints` map and generated through a loop in `scss/_navbar.scss`.
+[Responsive navbar expand/collapse classes](#responsive-behaviors)(예를 들어, `.navbar-expand-lg`)는 `$breakpoints` 맵과 조합되어 `scss/_navbar.scss`내의 반복문으로 생성됩니다.
 
 {{< scss-docs name="navbar-expand-loop" file="scss/_navbar.scss" >}}
