@@ -207,7 +207,7 @@ Adding in the previous and next controls. We recommend using `<button>` elements
 
 ### Disable touch swiping
 
-Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled using the `data-bs-touch` attribute. The example below also does not include the `data-bs-ride` attribute and has `data-bs-interval="false"` so it doesn't autoplay.
+캐러셀은 터치 스크린 단말기에서의 좌우 스와이프에 의한 슬라이드간 이동을 지원합니다. 이것은 `data-bs-touch` 속성을 사용해 비활성화 시킬수 있습니다. 아래의 예시는 자동 재생 시키지 않기 위해 `data-bs-ride` 속성을 포함시키지 않고 `data-bs-interval="false"`로 하였습니다.
 
 {{< example >}}
 <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
@@ -235,7 +235,7 @@ Carousels support swiping left/right on touchscreen devices to move between slid
 
 ## Dark variant
 
-컨트롤, 위치 표시(인디게이터, indicator) 혹은 설명문(캡션, caption) 을 어둡게 하기 위해서 `.carousel-dark` 을 `.carousel` 에 추가했습니다. 컨트롤은 `filter` CSS 속성으로 기본 흰색으로 칠해 진 것이 반전됩니다. 설명문(캡션, caption)과 컨트롤에는 `color` 와 `background-color` 를 재정의하는 Sass 변수가 추가되었습니다.
+컨트롤, 위치 표시(인디게이터, indicator) 혹은 설명문(캡션, caption)을 어둡게 하기 위해서 `.carousel-dark`를 `.carousel`에 추가했습니다. 컨트롤은 `filter` CSS 속성으로 기본 흰색으로 칠해 진 것이 반전됩니다. 설명문(캡션, caption)과 컨트롤에는 `color`와 `background-color`를 재정의하는 Sass 변수가 추가되었습니다.
 
 {{< example >}}
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -280,7 +280,7 @@ Carousels support swiping left/right on touchscreen devices to move between slid
 
 ## Custom transition
 
-The transition duration of `.carousel-item` can be changed with the `$carousel-transition-duration` Sass variable before compiling or custom styles if you're using the compiled CSS. If multiple transitions are applied, make sure the transform transition is defined first (eg. `transition: transform 2s ease, opacity .5s ease-out`).
+`.carousel-item`의 트랜지션의 지속시간은 컴파일전의 Sass 변수인 `$carousel-transition-duration`이나, 컴파일 된 CSS를 사용하는 경우의 사용자 정의 스타일로 변경할 수 있습니다. 여러 개의 트랜지션이 적용되는 경우 트랜스폼 트랜지션이 맨앞에 정의되어 있는지 확인해 주세요(예를 들어, `transition: transform 2s ease, opacity .5s ease-out`).
 
 ## Sass
 
@@ -292,9 +292,9 @@ The transition duration of `.carousel-item` can be changed with the `$carousel-t
 
 ### Via data attributes
 
-캐러셀의 위치를 간단히 제어하려면, data 속성을 사용합니다. `data-bs-slide` 는 키워드 `prev` 나 `next` 을 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 `data-bs-slide-to` 를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 `data-bs-slide-to="2"` 가 되어, 슬라이드의 위치를 `0` 에서 시작하는 특정의 인덱스로 이동시킵니다.
+캐러셀의 위치를 간단히 제어하려면, data 속성을 사용합니다. `data-bs-slide`는 키워드 `prev`나 `next`를 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 `data-bs-slide-to`를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 `data-bs-slide-to="2"`가 되어, 슬라이드의 위치를 `0`에서 시작하는 특정의 인덱스로 이동시킵니다.
 
-`data-bs-ride="carousel"` 속성은, 페이지 로드시 캐러셀을 애니메이션화 시키는데 사용됩니다. 캐러셀의 초기화에 `data-bs-ride="carousel"` 를 사용하지 않는 경우에는, 스스로 초기화 할 필요가 있습니다. **같은 캐러셀의 명시적인 JavaScript 의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.**
+`data-bs-ride="carousel"` 속성은, 페이지 로드시 캐러셀을 애니메이션화 시키는데 사용됩니다. 캐러셀의 초기화에 `data-bs-ride="carousel"`를 사용하지 않는 경우에는, 스스로 초기화 할 필요가 있습니다. **같은 캐러셀의 명시적인 JavaScript의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.**
 
 ### Via JavaScript
 
@@ -307,7 +307,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
 
 ### Options
 
-옵션은, data 속성 혹은 JavaScript 으로 줄 수 있습니다. data 속성의 경우, `data-bs-interval=""` 과 같이, `data-bs-` 에 옵션명을 추가합니다.
+옵션은, data 속성 혹은 JavaScript로 줄 수 있습니다. data 속성의 경우, `data-bs-interval=""`과 같이, `data-bs-`에 옵션명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -335,14 +335,14 @@ var carousel = new bootstrap.Carousel(myCarousel)
       <td><code>pause</code></td>
       <td>string | boolean</td>
       <td><code>'hover'</code></td>
-      <td><p>If set to <code>'hover'</code>, pauses the cycling of the carousel on <code>mouseenter</code> and resumes the cycling of the carousel on <code>mouseleave</code>. If set to <code>false</code>, hovering over the carousel won't pause it.</p>
-      <p>On touch-enabled devices, when set to <code>'hover'</code>, cycling will pause on <code>touchend</code> (once the user finished interacting with the carousel) for two intervals, before automatically resuming. Note that this is in addition to the above mouse behavior.</p></td>
+      <td><p><code>'hover'</code>로 설정하면, <code>mouseenter</code>로 캐러셀의 순환이 일시 정지하고 <code>mouseleave</code>로 캐러셀의 순환이 재개됩니다. 만약 <code>false</code>라면, 캐러셀 위에 커서를 올려도 일시 정지하지 않습니다.</p>
+      <p>터치 대응 디바이스에서는 <code>'hover'</code>로 설정되어 있는 경우, <code>touchend</code>(사용자가 캐러셀과의 상호작용을 마치면)시에 순환은 두번의 간격으로 일시 정지하고 그 후 자동으로 재개됩니다. 이는 위의 마우스 동작에 덧붙여 수행된다는 점에 주의해 주세요.</p></td>
     </tr>
     <tr>
       <td><code>ride</code></td>
       <td>string | boolean</td>
       <td><code>false</code></td>
-      <td>Autoplays the carousel after the user manually cycles the first item. If set to <code>'carousel'</code>, autoplays the carousel on load.</td>
+      <td>사용자가 수동으로 처음 아이템을 순화시킨 후, 캐러셀을 자동 재생합니다. 만약 <code>'carousel'</code>로 설정되어 있는 경우에는 로드시 캐러셀을 자동 재생합니다.</td>
     </tr>
     <tr>
       <td><code>wrap</code></td>
@@ -422,7 +422,7 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 
 Bootstrap의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 두가지 이벤트를 제공하고 있습니다. 두가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:
 
-- `direction`: 캐러셀이 슬라이딩 하는 방향 (`"left"` 혹은 `"right"`). 
+- `direction`: 캐러셀이 슬라이딩 하는 방향 (`"left"` 혹은 `"right"`).
 - `relatedTarget`: 액티브한 아이템으로 슬라이드 시키고 있는 DOM 요소.
 - `from`: 현재 아이템의 인덱스.
 - `to`: 다음 아이템의 인덱스.
