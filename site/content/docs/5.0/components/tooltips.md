@@ -227,7 +227,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>셀렉타가 제공되는 경우 툴팁 객체는 지정된 타겟으로 이양됩니다. 실제로는 동적으로 추가된 DOM 요소에 툴팁을 적용하기 위해서도 사용됩니다.(<code>jQuery.on</code> 지원). <a href="{{< param repo >}}/issues/4215">this</a> 와 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
+      <td>셀렉타가 제공되는 경우 툴팁 객체는 지정된 타깃으로 이양됩니다. 실제로는 동적으로 추가된 DOM 요소에 툴팁을 적용하기 위해서도 사용됩니다.(<code>jQuery.on</code> 지원). <a href="{{< param repo >}}/issues/4215">this</a> 와 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>template</code></td>
@@ -303,7 +303,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td>array | string | function</td>
       <td><code>[0, 0]</code></td>
       <td>
-        <p>타겟에 대한 툴팁의 상대적인 오프셋. data 속성에는 <code>data-bs-offset="10,20"</code>와 같이 콤마 구분으로 문자열을 건내줄 수 있습니다.</p>
+        <p>타깃에 대한 툴팁의 상대적인 오프셋. data 속성에는 <code>data-bs-offset="10,20"</code>와 같이 콤마 구분으로 문자열을 건내줄 수 있습니다.</p>
         <p>오프셋을 결정하기 위해 함수가 사용되는 경우는 Popper의 배치, 참조, Popper의 직사각형을 포함한 객체를 첫번째 인수로 호출합니다. 트리거 되는 요소의 DOM 노드가 두번째 인수로 전달됩니다. 이 함수는 두 값을 갖는 배열 <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>을 반환해야 합니다.</p>
         <p>보다 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>를 참조해 주세요.</p>
       </td>

@@ -73,7 +73,7 @@ Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에
 
 컨트롤 요소에 `aria-expanded`를 반드시 추가해 주세요. 이 속성은 컨트롤에 연결된 접을 수 있는 요소의 현재 상태를 스크린 리더나 동일한 지원 기술에 명시적으로 전달합니다. 접을 수 있는 요소가 기본적으로 닫혀있는 경우, 컨트롤 요소의 속성값은 `aria-expanded="false"` 이어야 합니다. `show` 클래스를 사용해 접을 수 있는 요소를 기본으로 열도록 설정한 경우에는, 대신 컨트롤에 `aria-expanded="true"` 로 설정해 주십시오. 플러그인은 접을 수 있는 요소가 열려 있는지 닫혀 있는지에 따라(JavaScript를 통해 사용자가 접을 수 있는 요소와 관련된 별도의 요소를 트리거 했기 때문에) 컨트롤 상에서 이 속성을 자동으로 바꿉니다. 컨트롤 요소의 HTML 요소가 버튼이 아닌 경우(예를 들어 `<a>` 나 `<div>` 등) 요소에 `role="button"` 속성을 추가해야 합니다.
 
-컨트롤 요소가 하나의 접을 수 있는 요소를 타겟으로 하는 경우, 즉 `data-bs-target` 속성이 `id` 셀렉타를 바라보는 경우, 접을 수 있는 요소의 `id`를 한 `aria-controls` 속성을 컨트롤 요소에 추가하지 않으면 안 됩니다. 최근 스크린 리더 및 지원 기술에서는 이 속성을 이용하여 접을 수 있는 요소 자체로 직접 이동하기 위한 단축키를 사용자에게 제공하고 있습니다.
+컨트롤 요소가 하나의 접을 수 있는 요소를 타깃으로 하는 경우, 즉 `data-bs-target` 속성이 `id` 셀렉타를 바라보는 경우, 접을 수 있는 요소의 `id`를 한 `aria-controls` 속성을 컨트롤 요소에 추가하지 않으면 안 됩니다. 최근 스크린 리더 및 지원 기술에서는 이 속성을 이용하여 접을 수 있는 요소 자체로 직접 이동하기 위한 단축키를 사용자에게 제공하고 있습니다.
 
 Bootstrap의 현재 구현은, [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)에 설명되어 있는 여러 가지 *optional* 키보드 인터랙션을 커버하고 있지 않음을 주의해 주십시오. - 사용자 정의 JavaScript로 이것들을 직접 포함해야 합니다.
 
@@ -134,7 +134,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
       <td><code>parent</code></td>
       <td>selector | jQuery object | DOM element </td>
       <td><code>false</code></td>
-      <td>parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다(기존 accordion(아코디언) 동작과 비슷합니다. - 이것은 <code>card</code> 클래스에 의존합니다). 속성은 접을 수 있는 타겟 영역으로 설정해야 합니다.</td>
+      <td>parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다(기존 accordion(아코디언) 동작과 비슷합니다. - 이것은 <code>card</code> 클래스에 의존합니다). 속성은 접을 수 있는 타깃 영역으로 설정해야 합니다.</td>
     </tr>
     <tr>
       <td><code>toggle</code></td>

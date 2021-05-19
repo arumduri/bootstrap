@@ -14,7 +14,7 @@ toc: true
 - 스크롤 스파이는 감시 대상의 요소, 보통은 `<body>`의 `position: relative;`를 필요로 합니다.
 - 앵커 (`<a>`)가 필요하고, 그 요소를 가르키는 `id`가 필요합니다.
 
-정상적으로 구현되면 내비게이션이나 목록 그룹은 그에 따라 갱신되며, `.active` 클래스는 관련 타겟에 따라 한 개의 아이템에서 다음 아이템으로 이동합니다.
+정상적으로 구현되면 내비게이션이나 목록 그룹은 그에 따라 갱신되며, `.active` 클래스는 관련 타깃에 따라 한 개의 아이템에서 다음 아이템으로 이동합니다.
 
 {{< callout >}}
 ### Scrollable containers and keyboard access
@@ -261,13 +261,13 @@ var scrollSpy = new bootstrap.ScrollSpy(document.body, {
 {{< callout danger >}}
 #### Resolvable ID targets required
 
-Navbar 링크는 해결 가능한 id 타겟을 가져야 합니다. 예를 들면, `<a href="#home">home</a>`은 `<div id="home"></div>`와 같은 DOM 내의 무엇인가에 있지 않으면 안됩니다.
+Navbar 링크는 해결 가능한 id 타깃을 가져야 합니다. 예를 들면, `<a href="#home">home</a>`은 `<div id="home"></div>`와 같은 DOM 내의 무엇인가에 있지 않으면 안됩니다.
 {{< /callout >}}
 
 {{< callout info >}}
 #### Non-visible target elements ignored
 
-표시되지 않는 타겟 요소는 무시되며 대응 nav 아이템은 강조 표시되지 않습니다.
+표시되지 않는 타깃 요소는 무시되며 대응 nav 아이템은 강조 표시되지 않습니다.
 {{< /callout >}}
 
 ### Methods

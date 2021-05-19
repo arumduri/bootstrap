@@ -568,7 +568,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### constructor
 
-탭 요소와 콘텐츠 컨테이너를 활성화합니다. 탭은 DOM 안의 컨테이너 노드를 타겟으로 하는 `data-bs-target`가 있어야 하며 링크를 사용하면 `href`가 있어야 합니다.
+탭 요소와 콘텐츠 컨테이너를 활성화합니다. 탭은 DOM 안의 컨테이너 노드를 타깃으로 하는 `data-bs-target`가 있어야 하며 링크를 사용하면 `href`가 있어야 합니다.
 
 ```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -646,19 +646,19 @@ var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instan
   <tbody>
     <tr>
       <td><code>show.bs.tab</code></td>
-      <td>이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타겟으로 합니다.</td>
+      <td>이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다.</td>
     </tr>
     <tr>
       <td><code>shown.bs.tab</code></td>
-      <td>이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타겟으로 합니다.</td>
+      <td>이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다.</td>
     </tr>
     <tr>
       <td><code>hide.bs.tab</code></td>
-      <td>이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타겟으로 합니다.</td>
+      <td>이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타깃으로 합니다.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.tab</code></td>
-      <td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타겟으로 합니다.</td>
+      <td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타깃으로 합니다.</td>
     </tr>
   </tbody>
 </table>

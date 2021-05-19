@@ -435,7 +435,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### constructor
 
-목록 아이템 요소와 콘텐츠 컨테이너를 활성화 시킵니다. 탭에는 DOM 내의 컨테이너 노드를 타겟으로 하는 `data-bs-target` 또는 `href` 가 필요합니다.
+목록 아이템 요소와 콘텐츠 컨테이너를 활성화 시킵니다. 탭에는 DOM 내의 컨테이너 노드를 타깃으로 하는 `data-bs-target` 또는 `href` 가 필요합니다.
 
 ```html
 <div class="list-group" id="myList" role="tablist">
@@ -505,19 +505,19 @@ var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instan
   <tbody>
     <tr>
       <td><code>show.bs.tab</code></td>
-      <td>이 이벤트는 탭 표시시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭(이용 가능한 경우)을 타겟으로 합니다.</td>
+      <td>이 이벤트는 탭 표시시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭(이용 가능한 경우)을 타깃으로 합니다.</td>
     </tr>
     <tr>
       <td><code>shown.bs.tab</code></td>
-      <td>이 이벤트는 탭이 표시된 이후 탭을 표시할 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭(이용 가능한 경우)을 타겟으로 합니다.</td>
+      <td>이 이벤트는 탭이 표시된 이후 탭을 표시할 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭(이용 가능한 경우)을 타깃으로 합니다.</td>
     </tr>
     <tr>
       <td><code>hide.bs.tab</code></td>
-      <td>이 이벤트는 새로운 탭이 표시될(따라서 이전에 활성화 한 탭이 숨겨집니다) 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 현재 활성화된 탭과 곧 활성화 될 새로운 탭을 타겟으로 합니다.</td>
+      <td>이 이벤트는 새로운 탭이 표시될(따라서 이전에 활성화 한 탭이 숨겨집니다) 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 현재 활성화된 탭과 곧 활성화 될 새로운 탭을 타깃으로 합니다.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.tab</code></td>
-      <td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다(따라서 이전 활성화 탭은 숨겨집니다). <code>event.target</code> 과 <code>event.relatedTarget</code> 를 사용하여 각각 이전 활성화 탭과 새로운 활성화 탭을 타겟으로 합니다.</td>
+      <td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다(따라서 이전 활성화 탭은 숨겨집니다). <code>event.target</code> 과 <code>event.relatedTarget</code> 를 사용하여 각각 이전 활성화 탭과 새로운 활성화 탭을 타깃으로 합니다.</td>
     </tr>
   </tbody>
 </table>

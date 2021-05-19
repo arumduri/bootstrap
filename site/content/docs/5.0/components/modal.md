@@ -831,7 +831,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 
 ### Via data attributes
 
-JavaScript를 쓰지 않고 모달을 활성화 시킵니다. 버튼과 같은 컨트롤러 요소에 `data-bs-toggle="modal"`을 설정하고, 추가로 `data-bs-target="#foo"` 또는 `href="#foo"`를 지정하고, 토글하는 특정 모달을 타겟으로 합니다.
+JavaScript를 쓰지 않고 모달을 활성화 시킵니다. 버튼과 같은 컨트롤러 요소에 `data-bs-toggle="modal"`을 설정하고, 추가로 `data-bs-target="#foo"` 또는 `href="#foo"`를 지정하고, 토글하는 특정 모달을 타깃으로 합니다.
 
 ```html
 <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Launch modal</button>
