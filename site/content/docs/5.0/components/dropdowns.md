@@ -979,7 +979,7 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 
 ## Usage
 
-data 속성이나 JavaScript를 사용해, 드롭다운 플러그인은 부모의 `.dropdown-menu`의 `.show` 클래스를 토글하는 것으로 숨기는 컨텐츠(드롭다운 메뉴)를 토글합니다. `data-bs-toggle="dropdown"` 속성은 어플리케이션 레벨에서 드롭다운 메뉴를 닫기 위해 이용됩니다.
+data 속성이나 JavaScript를 사용해, 드롭다운 플러그인은 부모의 `.dropdown-menu`의 `.show` 클래스를 토글하는 것으로 숨기는 콘텐츠(드롭다운 메뉴)를 토글합니다. `data-bs-toggle="dropdown"` 속성은 어플리케이션 레벨에서 드롭다운 메뉴를 닫기 위해 이용됩니다.
 
 {{< callout info >}}
 touch 대응 디바이서에서는, 드롭다운을 열면 빈 `mouseover` 핸들러가 `<body>` 요소의 바로 아래 자식 요소에 추가됩니다. 이렇게 보기 싫은 hack은  [iOS' event delegation](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html)을 피하기 위해서 필요한 것으로, 그렇지 않으면 드롭다운 바깥쪽의 임의의 곳을 탭해도 드롭다운을 닫는 코드를 트리거 할 수 없습니다. 드롭다운이 닫히면, 이렇게 추가된 빈 `mouseover` 핸들러는 삭제됩니다.

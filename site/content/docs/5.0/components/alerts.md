@@ -49,7 +49,7 @@ toc: true
 
 ### Icons
 
-마찬가지로 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 와 [Bootstrap Icons]({{< param icons >}})을 이용하여 경고창을 만들 수 있습니다. 아이콘이나 컨텐츠에 따라서는 유틸리티나 사용자 정의 스타일을 더 추가할 수도 있습니다.
+마찬가지로 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 와 [Bootstrap Icons]({{< param icons >}})을 이용하여 경고창을 만들 수 있습니다. 아이콘이나 콘텐츠에 따라서는 유틸리티나 사용자 정의 스타일을 더 추가할 수도 있습니다.
 
 {{< example >}}
 <div class="alert alert-primary d-flex align-items-center" role="alert">

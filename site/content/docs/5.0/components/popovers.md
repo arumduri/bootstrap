@@ -130,7 +130,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 
 키보드 사용자가 팝오버를 활성화 하려면, 키보드 포커스가 가능하며 상호작용이 가능한 HTML 요소(링크나 폼 컨트톨 등)에만 추가해야 합니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가함으로써 포커스가 가능한데, 이는 키보드 사용자에게는 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 혼란을 초래할 수 있습니다. 게다가 키보드 사용자가 팝오버를 트리거 할수 없게 되므로 팝오버의 트리거를 `hover` 에만 의지해서는 안됩니다.
 
-`html` 옵션에서 리치로 구조화된 HTML을 팝오버에 넣을 수 있지만 과도한 양의 컨텐츠를 추가하는 것은 피하는 것이 좋습니다. 팝오버가 현재 기능을 하는 방법은 한 번 표시되면 해당 컨텐츠는 `aria-describedby` 속성을 갖는 트리거 요소에 연결됩니다. 그 결과 팝오버 컨텐츠 전체가 스크린 리더 사용자에게 길고 끊기지 않는 스트림으로 알릴 것입니다.
+`html` 옵션에서 리치로 구조화된 HTML을 팝오버에 넣을 수 있지만 과도한 양의 콘텐츠를 추가하는 것은 피하는 것이 좋습니다. 팝오버가 현재 기능을 하는 방법은 한 번 표시되면 해당 콘텐츠는 `aria-describedby` 속성을 갖는 트리거 요소에 연결됩니다. 그 결과 팝오버 콘텐츠 전체가 스크린 리더 사용자에게 길고 끊기지 않는 스트림으로 알릴 것입니다.
 
 또한, 인터랙티브한 컨트롤(폼 요소나 링크 등)들을 팝오버에 포함시킬 수도 있지만 (허락된 속성이나 태그의 `allowList` 에 이러한 요소를 추가하여), 현재 팝오버는 키보드 포커스 순서를 관리하지 않는다는 점에 유의하십시오. 키보드 사용자가 팝오버를 열면 포커스는 트리거가 되는 요소에 머무르고, 팝오버는 보통 문서 구조의 트리거를 쉽게 따라가지 않기 때문에 <kbd>TAB</kbd> 을 앞으로 이동/눌러도 키보드 사용자가 팝오버 자체로 이동하리라는 보장은 없습니다. 요컨대 단순히 팝오버에 상호작용할 수 있는 컨트롤을 추가하는 것만으로도 키보드 사용자나 스크린 리더 사용자들이 이들 컨트롤에 접근할 수 없거나 적어도 전체적으로 비논리적인 포커스 순서가 될 수 있습니다. 이러한 경우는, modal(모달) 사용을 검토해 주십시오.
 {{< /callout >}}
@@ -172,7 +172,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td>string | element | function</td>
       <td><code>''</code></td>
       <td>
-        <p><code>data-bs-content</code> 속성이 존재하지 않는 경우의 기본 컨텐츠 값.</p>
+        <p><code>data-bs-content</code> 속성이 존재하지 않는 경우의 기본 콘텐츠 값.</p>
         <p>함수가 주어졌을 경우, 그 <code>this</code> 참조가 팝오버가 어태치 되어 있는 요소로 설정된 상태로 호출됩니다.</p>
       </td>
     </tr>
@@ -190,7 +190,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>html</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
-      <td>팝오버에 HTML 을 삽입합니다. false 의 경우 <code>innerText</code> 속성을 사용하여 DOM 에 컨텐츠를 삽입합니다. XSS 공격이 걱정될 경우 문자를 사용합니다.</td>
+      <td>팝오버에 HTML 을 삽입합니다. false 의 경우 <code>innerText</code> 속성을 사용하여 DOM 에 콘텐츠를 삽입합니다. XSS 공격이 걱정될 경우 문자를 사용합니다.</td>
     </tr>
     <tr>
       <td><code>placement</code></td>
@@ -205,7 +205,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>셀렉터가 제공되는 경우 팝오버 객체는 지정된 타겟으로 이양됩니다. 실제로 이는 동적인 HTML 컨텐츠에 팝오버를 추가할 수 있도록 하기 위해 사용됩니다. 자세한 내용은 <a href="{{< param repo >}}/issues/4215">this</a> 과 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
+      <td>셀렉터가 제공되는 경우 팝오버 객체는 지정된 타겟으로 이양됩니다. 실제로 이는 동적인 HTML 콘텐츠에 팝오버를 추가할 수 있도록 하기 위해 사용됩니다. 자세한 내용은 <a href="{{< param repo >}}/issues/4215">this</a> 과 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>template</code></td>
@@ -322,7 +322,7 @@ var popover = new bootstrap.Popover(element, {
 
 #### show
 
-요소의 팝오버를 표시합니다. **팝오버가 실제로 나타나기 전에 호출된 곳으로 돌아갑니다.** (즉, `shown.bs.popover` 이벤트가 발생하기 전). 이것은 팝오버의 "manual" 트리거로 간주됩니다. 타이틀과 컨텐츠의 양쪽 모두의 길이가 0 인 팝오버는 결코 표시되지 않습니다.
+요소의 팝오버를 표시합니다. **팝오버가 실제로 나타나기 전에 호출된 곳으로 돌아갑니다.** (즉, `shown.bs.popover` 이벤트가 발생하기 전). 이것은 팝오버의 "manual" 트리거로 간주됩니다. 타이틀과 콘텐츠의 양쪽 모두의 길이가 0 인 팝오버는 결코 표시되지 않습니다.
 
 ```js
 myPopover.show()

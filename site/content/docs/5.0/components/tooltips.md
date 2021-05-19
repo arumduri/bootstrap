@@ -104,7 +104,7 @@ SVG 와 함께:
 
 ## Usage
 
-툴팁 플러그인은 필요에 따라 컨텐츠와 마크업을 생성하고 기본 값으로는 트리거 요소 뒤에 툴팁을 배치합니다.
+툴팁 플러그인은 필요에 따라 콘텐츠와 마크업을 생성하고 기본 값으로는 트리거 요소 뒤에 툴팁을 배치합니다.
 
 JavaScript를 사용해 툴팁을 트리거 합니다:
 
@@ -210,7 +210,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>false</code></td>
       <td>
         <p>툴팁내의 HTML을 허용합니다.</p>
-        <p>true의 경우, 툴팁의 <code>title</code>에 있는 HTML 태그가 툴팁에 나타납니다. false 의 경우는, <code>innerText</code> 속성이 DOM에 컨텐츠를 삽입하기 위해 사용됩니다.</p>
+        <p>true의 경우, 툴팁의 <code>title</code>에 있는 HTML 태그가 툴팁에 나타납니다. false 의 경우는, <code>innerText</code> 속성이 DOM에 콘텐츠를 삽입하기 위해 사용됩니다.</p>
         <p>XSS 공격이 걱정된다면 문자를 사용하세요.</p>
       </td>
     </tr>

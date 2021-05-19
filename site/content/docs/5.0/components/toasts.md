@@ -23,9 +23,9 @@ toc: true
 
 ### Basic
 
-토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 `display: flex` 를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 컨텐츠를 쉽게 정렬시킬 수 있습니다.
+토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 `display: flex` 를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 콘텐츠를 쉽게 정렬시킬 수 있습니다.
 
-토스트는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. 토스트 컨텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.
+토스트는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. 토스트 콘텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.
 
 {{< example class="bg-light" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -83,7 +83,7 @@ toc: true
 
 ### Translucent
 
-토스트는 아래의 컨텐츠와 어울려져 보이도록 약간 비치게 보여집니다.
+토스트는 아래의 콘텐츠와 어울려져 보이도록 약간 비치게 보여집니다.
 
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -274,13 +274,13 @@ toc: true
 
 ## Accessibility
 
-토스트는 방문자가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 `aria-atomic="true"`를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 컨텐츠 일부만을 갱신한 경우나 같은 토스트의 컨텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용해 주세요.
+토스트는 방문자가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 `aria-atomic="true"`를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 콘텐츠 일부만을 갱신한 경우나 같은 토스트의 콘텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용해 주세요.
 
 토스트가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
 
 그리고, 내용에 따라 `role` 과 `aria-live` 의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
 
-보여지는 컨텐츠가 바뀌면 사용자가 토스트를 읽기에 충분한 시간이 필요하므로 [`delay` timeout](#options)을 반드시 업데이트 해 주세요.
+보여지는 콘텐츠가 바뀌면 사용자가 토스트를 읽기에 충분한 시간이 필요하므로 [`delay` timeout](#options)을 반드시 업데이트 해 주세요.
 
 ```html
 <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-bs-delay="10000">

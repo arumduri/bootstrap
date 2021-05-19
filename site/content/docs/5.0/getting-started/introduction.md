@@ -29,7 +29,7 @@ toc: true
 
 #### Bundle
 
-두가지의 번들을 통해서 모든 Bootstrap JavaScript 플러그인과 의존성을 한 번에 포함시키세요. `bootstrap.bundle.js`와 `bootstrap.bundle.min.js` 모두 툴팁과 팝오버를 위해서 [Popper](https://popper.js.org/)가 포함되어 있습니다. Bootstrap에 무엇이 포함되어 있는지 자세히 알고 싶으시다면 [컨텐츠]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}) 부분을 확인해주세요.
+두가지의 번들을 통해서 모든 Bootstrap JavaScript 플러그인과 의존성을 한 번에 포함시키세요. `bootstrap.bundle.js`와 `bootstrap.bundle.min.js` 모두 툴팁과 팝오버를 위해서 [Popper](https://popper.js.org/)가 포함되어 있습니다. Bootstrap에 무엇이 포함되어 있는지 자세히 알고 싶으시다면 [콘텐츠]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}) 부분을 확인해주세요.
 
 ```html
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>

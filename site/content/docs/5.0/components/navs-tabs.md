@@ -313,7 +313,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 
 ## JavaScript behavior
 
-`bootstrap.js`파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.
+`bootstrap.js`파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 콘텐츠의 탭 가능한 창을 만들 수 있습니다.
 
 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel)에서는, 지원 기술(스크린 리더 등)의 사용자에게 구조, 기능, 현재의 상태를 전달하기 위해 `role="tablist"`, `role="tab"`, `role="tabpanel"` 및 추가의 `aria-` 속성을 지원합니다. 좋은 실행 방법으로써 탭에는 `<button>` 요소 사용을 권장합니다. 이것은 새로운 페이지나 장소로 이동하는 링크가 아니라, 동적인 변화를 일으키는 컨트롤이기 때문입니다.
 
@@ -549,7 +549,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Fade effect
 
-탭을 페이드인 시키려면, `.tab-pane`에 `.fade`를 추가합니다. 첫 번째 탭에는 컨텐츠를 표시하기 위해 `.show`를 추가할 필요가 있습니다.
+탭을 페이드인 시키려면, `.tab-pane`에 `.fade`를 추가합니다. 첫 번째 탭에는 콘텐츠를 표시하기 위해 `.show`를 추가할 필요가 있습니다.
 
 ```html
 <div class="tab-content">
@@ -568,7 +568,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### constructor
 
-탭 요소와 컨텐츠 컨테이너를 활성화합니다. 탭은 DOM 안의 컨테이너 노드를 타겟으로 하는 `data-bs-target`가 있어야 하며 링크를 사용하면 `href`가 있어야 합니다.
+탭 요소와 콘텐츠 컨테이너를 활성화합니다. 탭은 DOM 안의 컨테이너 노드를 타겟으로 하는 `data-bs-target`가 있어야 하며 링크를 사용하면 `href`가 있어야 합니다.
 
 ```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">

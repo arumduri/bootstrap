@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Modal(모달)
-description: Bootstrap JavaScript 모달 플러그인을 사용하여 라이트박스, 사용자 알림 또는 사용자 정의 컨텐츠를 만들 수 있습니다.
+description: Bootstrap JavaScript 모달 플러그인을 사용하여 라이트박스, 사용자 알림 또는 사용자 정의 콘텐츠를 만들 수 있습니다.
 group: components
 toc: true
 ---
@@ -10,7 +10,7 @@ toc: true
 
 모달 컴포넌트의 메뉴 옵션이 최근 변경되었으니 사용하기 전에 아래 내용을 꼭 읽어보시기 바랍니다.
 
-- 모달은 HTML, CSS, 그리고 JavaScript로 구축됩니다. 모달은 문서 내의 다른 모든 것 위에 배치되어 `<body>` 의 스크롤을 제거하고 모달의 컨텐츠가 스크롤 되도록 합니다.
+- 모달은 HTML, CSS, 그리고 JavaScript로 구축됩니다. 모달은 문서 내의 다른 모든 것 위에 배치되어 `<body>` 의 스크롤을 제거하고 모달의 콘텐츠가 스크롤 되도록 합니다.
 - 모달의 "배경" 을 클릭하면 자동적으로 모달이 닫힙니다.
 - Bootstrap은 한번에 하나의 모달을 지원합니다. 중첩된 모달은 지원되지 않습니다.
 - 모달은 `position: fixed`를 사용합니다. 가능한 다른 요소와의 간섭을 피하기 위해, 모달 HTML을 최상단의 위치에 넣어 주세요. 다른 고정 요소안에 `.modal`을 중첩해 넣으면 문제가 발생할 가능성이 높습니다.
@@ -827,7 +827,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 
 ## Usage
 
-모달 플러그인은, data 속성이나 JavaScript를 사용하고, 필요에 따라 숨겨서 컨텐츠를 바꿉니다. 또한 기본 스크롤 동작을 덮어쓰기 위해서 `.modal-open`을 `<body>`에 추가하고, 모달의 바깥쪽을 클릭했을 때 표시된 모달을 삭제하기 위한 클릭 영역을 제공하기 위해서 `.modal-backdrop`을 생성합니다.
+모달 플러그인은, data 속성이나 JavaScript를 사용하고, 필요에 따라 숨겨서 콘텐츠를 바꿉니다. 또한 기본 스크롤 동작을 덮어쓰기 위해서 `.modal-open`을 `<body>`에 추가하고, 모달의 바깥쪽을 클릭했을 때 표시된 모달을 삭제하기 위한 클릭 영역을 제공하기 위해서 `.modal-backdrop`을 생성합니다.
 
 ### Via data attributes
 
@@ -888,7 +888,7 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 
 #### Passing options
 
-모달로서 컨텐츠를 활성화 합니다. 옵션의 `object`를 받습니다.
+모달로서 콘텐츠를 활성화 합니다. 옵션의 `object`를 받습니다.
 
 ```js
 var myModal = new bootstrap.Modal(document.getElementById('myModal'), {

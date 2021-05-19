@@ -43,8 +43,8 @@ toc: true
 
 아래의 버튼을 클릭하면 `.offcanvas` 클래스를 갖고 있는 요소의 `.show` 클래스를 토글하는 JavaScript로 오프캔버스를 표시/숨김하는 것을 확인할 수 있습니다.
 
-- `.offcanvas` 컨텐츠를 숨김 (기본)
-- `.offcanvas.show` 컨텐츠를 표시
+- `.offcanvas` 콘텐츠를 숨김 (기본)
+- `.offcanvas.show` 콘텐츠를 표시
 
 `href` 속성으로 링크를, `data-bs-target` 속성으로 버튼을 사용할 수 있습니다. 어느 경우든 `data-bs-toggle="offcanvas"`가 필요합니다.
 
@@ -184,8 +184,8 @@ toc: true
 
 오프캔버스 플러그인에서는 몇 가지 클래스와 속성을 이용하여 힘든 처리를 합니다.:
 
-- `.offcanvas`는 컨텐츠를 숨깁니다.
-- `.offcanvas.show`는 컨텐츠를 표시합니다.
+- `.offcanvas`는 콘텐츠를 숨깁니다.
+- `.offcanvas.show`는 콘텐츠를 표시합니다.
 - `.offcanvas-start`는 왼쪽의 오프캔버스를 숨깁니다.
 - `.offcanvas-end`는 오른쪽의 오프캔버스를 숨깁니다.
 - `.offcanvas-bottom`은 아래쪽의 오프캔버스를 숨깁니다.
@@ -225,7 +225,7 @@ data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성�
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-컨텐츠를 오프캔버스 요소로 액티브하게 합니다. 옵션의 `object`를 받습니다.
+콘텐츠를 오프캔버스 요소로 액티브하게 합니다. 옵션의 `object`를 받습니다.
 
 아래의 예시처럼 생성자를 사용해 오프캔버스의 인스턴스를 만들수 있습니다.:
 

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: List group(목록 그룹)
-description: 목록 그룹은 일련의 컨텐츠를 보여주기 위한 유연하고 강력한 컴포넌트입니다. 그룹을 변경하거나 확장하여 모든 컨텐츠를 지원합니다.
+description: 목록 그룹은 일련의 콘텐츠를 보여주기 위한 유연하고 강력한 컴포넌트입니다. 그룹을 변경하거나 확장하여 모든 콘텐츠를 지원합니다.
 group: components
 toc: true
 ---
@@ -98,7 +98,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 `.list-group-numbered`라는 수식어 클래스(와 옵션에서 `<ol>`요소를 사용하여)를 추가하여 숫자 목록 리스트 그룹을 만들수 있습니다. 숫자는(`<ol>`의 브라우저 기본 스타일링이 아닌) CSS에 의해 추가되므로 목록 그룹 아이템 내에서 배치가 간단하고 재정의하기도 쉬워집니다.
 
-숫자는 `<ol>`의 `counter-increment`에 의해 생성되며 `counter-increment`와 컨텐츠를 가진 `<li>`의 `::before` 가상 요소를 사용하여 스타일링되고 배치됩니다.
+숫자는 `<ol>`의 `counter-increment`에 의해 생성되며 `counter-increment`와 콘텐츠를 가진 `<li>`의 `::before` 가상 요소를 사용하여 스타일링되고 배치됩니다.
 
 {{< example >}}
 <ol class="list-group list-group-numbered">
@@ -108,7 +108,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 </ol>
 {{< /example >}}
 
-이들은 사용자 정의 컨텐츠와도 잘 어울립니다.
+이들은 사용자 정의 콘텐츠와도 잘 어울립니다.
 
 {{< example >}}
 <ol class="list-group list-group-numbered">
@@ -316,7 +316,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## JavaScript behavior
 
-탭 JavaScript 플러그인—개별적으로 혹은 컴파일된 `bootstrap.js`를 사용해 목록 그룹을 확장하고 로컬 컨텐츠의 탭 가능한 판넬을 작성합니다.
+탭 JavaScript 플러그인—개별적으로 혹은 컴파일된 `bootstrap.js`를 사용해 목록 그룹을 확장하고 로컬 콘텐츠의 탭 가능한 판넬을 작성합니다.
 
 <div class="bd-example" role="tabpanel">
   <div class="row">
@@ -420,7 +420,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Fade effect
 
-탭 판넬을 페이드인 시키려면 `.tab-pane` 에 `.fade` 를 추가합니다. 첫번째 탭 판넬에는 첫번째 컨텐츠를 표시하기 위해서 `.show` 를 추가 할 필요가 있습니다.
+탭 판넬을 페이드인 시키려면 `.tab-pane` 에 `.fade` 를 추가합니다. 첫번째 탭 판넬에는 첫번째 콘텐츠를 표시하기 위해서 `.show` 를 추가 할 필요가 있습니다.
 
 ```html
 <div class="tab-content">
@@ -435,7 +435,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### constructor
 
-목록 아이템 요소와 컨텐츠 컨테이너를 활성화 시킵니다. 탭에는 DOM 내의 컨테이너 노드를 타겟으로 하는 `data-bs-target` 또는 `href` 가 필요합니다.
+목록 아이템 요소와 콘텐츠 컨테이너를 활성화 시킵니다. 탭에는 DOM 내의 컨테이너 노드를 타겟으로 하는 `data-bs-target` 또는 `href` 가 필요합니다.
 
 ```html
 <div class="list-group" id="myList" role="tablist">

@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Collapse(콜랩스)
-description: 몇 가지 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체 컨텐츠의 표시 방식을 전환합니다.
+description: 몇 가지 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체 콘텐츠의 표시 방식을 전환합니다.
 group: components
 toc: true
 ---
 
 ## How it works
 
-Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에 사용됩니다. 버튼 및 앵커는, 토글 하는 특정 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 `height` 가 기존 값에서 `0` 으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 감안하면, `.collapse` 요소에 `padding` 을 사용할 수 없습니다. 대신, 이 클래스를 독립된 래핑 요소로 사용합니다.
+Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에 사용됩니다. 버튼 및 앵커는, 토글 하는 특정 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 `height` 가 기존 값에서 `0` 으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 감안하면, `.collapse` 요소에 `padding` 을 사용할 수 없습니다. 대신, 이 클래스를 독립된 래핑 요소로 사용합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -18,9 +18,9 @@ Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에
 
 아래의 버튼을 클릭하면, 클래스 변경에 따라 다른 요소의 표시 및 숨김을 전환할 수 있습니다.
 
-- `.collapse` 컨텐츠를 숨깁니다.
+- `.collapse` 콘텐츠를 숨깁니다.
 - `.collapsing` 전환 중에 적용됩니다.
-- `.collapse.show` 컨텐츠를 표시합니다.
+- `.collapse.show` 콘텐츠를 표시합니다.
 
 일반적으로 우리는 버튼을 `data-bs-target` 속성과 함께 사용하기를 권장합니다. 의미론적으로는 권장하지 않지만 `href` 속성을 갖는 링크(및 `role="button"`)를 사용할 수도 있습니다. 양쪽 모두 `data-bs-toggle="collapse"`가 필요합니다.
 
@@ -93,8 +93,8 @@ Bootstrap의 현재 구현은, [WAI-ARIA Authoring Practices 1.1 accordion patte
 
 콜랩스 플러그인은, 여러 클래스를 이용하여 중요한 작업을 처리합니다.
 
-- `.collapse` 컨텐츠를 숨김
-- `.collapse.show` 컨텐츠를 표시
+- `.collapse` 콘텐츠를 숨김
+- `.collapse.show` 콘텐츠를 표시
 - `.collapsing`은 트랜지션 시작시 추가되어, 종료시 삭제 됨
 
 이들의 클래스는 `_transitions.scss`에 있습니다.
@@ -151,7 +151,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-접을 수 있는 요소로서 컨텐츠를 활성화합니다. 옵션의 `object`를 받습니다.
+접을 수 있는 요소로서 콘텐츠를 활성화합니다. 옵션의 `object`를 받습니다.
 
 생성자를 사용해, 콜랩스 인스턴스를 작성할 수 있습니다:
 

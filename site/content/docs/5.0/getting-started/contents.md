@@ -73,7 +73,7 @@ Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 
     <tr>
       <th scope="col">CSS 파일</th>
       <th scope="col">레이아웃</th>
-      <th scope="col">컨텐츠</th>
+      <th scope="col">콘텐츠</th>
       <th scope="col">컴포넌트</th>
       <th scope="col">유틸리티</th>
     </tr>
