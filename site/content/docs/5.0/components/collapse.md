@@ -22,7 +22,7 @@ Collapse(콜랩스) JavaScript 플러그인은, 컨텐츠의 표시와 숨김에
 - `.collapsing` 전환 중에 적용됩니다.
 - `.collapse.show` 컨텐츠를 표시합니다.
 
-일반적으로 우리는 버튼을 `data-bs-target` 속성과 함께 사용하기를 권장합니다. While not recommended from a semantic point of view, you can also use a link with the `href` attribute (and a `role="button"`). 양쪽 모두 `data-bs-toggle="collapse"` 가 필요합니다.
+일반적으로 우리는 버튼을 `data-bs-target` 속성과 함께 사용하기를 권장합니다. 의미론적으로는 권장하지 않지만 `href` 속성을 갖는 링크(및 `role="button"`)를 사용할 수도 있습니다. 양쪽 모두 `data-bs-toggle="collapse"`가 필요합니다.
 
 {{< example >}}
 <p>

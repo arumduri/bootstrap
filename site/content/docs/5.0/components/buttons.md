@@ -224,6 +224,6 @@ buttons.forEach(function (button) {
 
 ### Loops
 
-버튼 종류(일반 버튼과 아웃라인 버튼)는 각각의 믹스인과 `$theme-colors`맵을 사용하여 `scss/_buttons.scss`에 수정 클래스를 생성합니다.
+버튼 종류(일반 버튼과 아웃라인 버튼)는 각각의 믹스인과 `$theme-colors`맵을 사용하여 `scss/_buttons.scss`에 수식어 클래스를 생성합니다.
 
 {{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}
