@@ -1,15 +1,15 @@
 ---
 layout: docs
 title: Carousel(캐러셀)
-description: 캐러셀은 이미지나 문자의 슬라이드를 가로로 슬라이드시켜 여러개를 표시하는 컴포넌트입니다.
+description: 캐러셀은 이미지나 문자의 슬라이드를 가로로 슬라이드시켜 여러 개를 표시하는 컴포넌트입니다.
 toc: true
 ---
 
 ## How it works
 
-캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript 로 만들어진, 일련의 콘텐츠를 순환시키기 위한 슬라이드쇼 입니다. 일련의 이미지, 문자, 혹은 사용자 정의 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
+캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript로 만들어진, 일련의 콘텐츠를 순환시키기 위한 슬라이드쇼입니다. 일련의 이미지, 문자, 혹은 사용자 정의 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
 
-[Page Visibility API](https://www.w3.org/TR/page-visibility/) 가 지원되고 있는 브라우저에서는, 웹 페이지가 사용자에게 보이지 않을 때(브라우저 탭이 활성화 되지 않았거나, 브라우저 윈도우 크기가 최소화되어 있을때 등등), 캐러셀은 동작하지 않습니다.
+[Page Visibility API](https://www.w3.org/TR/page-visibility/) 가 지원되고 있는 브라우저에서는, 웹 페이지가 사용자에게 보이지 않을 때(브라우저 탭이 활성화되지 않았거나, 브라우저 윈도 크기가 최소화되어 있을 때 등등), 캐러셀은 동작하지 않습니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -19,13 +19,13 @@ toc: true
 
 ## Example
 
-캐러셀은, 슬라이드의 치수를 자동적으로 정규화하지 않습니다. 그 때문에, 콘텐츠의 크기를 적절하게 조정하기 위해, 추가의 유틸리티나 사용자 정의 스타일을 사용할 필요가 있는 경우가 있습니다. 캐러셀은 이전/다음의 컨트롤과 위치 표시(인디게이터, indicator)를 지원하고 있지만, 명시적으로 필수는 아닙니다. 자유롭게 추가하여 재정의 해 주세요.
+캐러셀은, 슬라이드의 치수를 자동으로 정규화하지 않습니다. 그 때문에, 콘텐츠의 크기를 적절하게 조정하기 위해, 추가의 유틸리티나 사용자 정의 스타일을 사용할 필요가 있는 떄가 있습니다. 캐러셀은 이전/다음의 컨트롤과 위치 표시(인디게이터, indicator)를 지원하고 있지만, 명시적으로 필수는 아닙니다. 자유롭게 추가하여 재정의해 주세요.
 
-**The `.active` class needs to be added to one of the slides** otherwise the carousel will not be visible. Also be sure to set a unique `id` on the `.carousel` for optional controls, especially if you're using multiple carousels on a single page. Control and indicator elements must have a `data-bs-target` attribute (or `href` for links) that matches the `id` of the `.carousel` element.
+**어느 쪽이든 슬라이드에 `.active` 클래스를 추가할 필요가 있습니다.** 그렇지 않으면 캐러셀은 표시되지 않습니다, 그리고 특히, 1개의 페이지에서 복수의 캐러셀을 사용하고 있는 경우에는, 옵션의 컨트롤용으로 `.carousel`로 유니크한 `id`를 설정해 주세요. 컨트롤이나 인디게이터의 요소는 `.carousel` 요소의 `id`에 매치하는 `data-bs-target` 속성(링크의 경우는 `href`)을 가져야 합니다.
 
 ### Slides only
 
-슬라이드만 사용하는 캐러셀입니다. 캐러셀 이미지에 `.d-block` 과 `.w-100` 이 있는 것을 주의해 주세요.
+슬라이드만 사용하는 캐러셀입니다. 캐러셀 이미지에 `.d-block`과 `.w-100` 이 있는 것을 주의해 주세요.
 
 {{< example >}}
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -45,7 +45,7 @@ toc: true
 
 ### With controls
 
-Adding in the previous and next controls. We recommend using `<button>` elements, but you can also use `<a>` elements with `role="button"`.
+이전/다음의 컨트롤을 추가할 때 권장하는 것은 `<button>` 요소지만, `role="button"`을 사용한 `<a>` 요소를 사용할 수도 있습니다.
 
 {{< example >}}
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -106,7 +106,7 @@ Adding in the previous and next controls. We recommend using `<button>` elements
 
 ### With captions
 
-`.carousel-item` 안의 `.carousel-caption` 요소를 사용해, 슬라이드에 설명문(캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 [display utilities]({{< docsref "/utilities/display" >}}) 를 사용함으로써, 보다 작은 뷰포트에서 간단하게 설명문(캡션, caption)을 감추는것도 가능합니다. 처음에는 `.d-none` 로 비표시하고, 중형 디바이스에서는 `.d-md-block` 로 다시 표시합니다.
+`.carousel-item` 안의 `.carousel-caption` 요소를 사용해, 슬라이드에 설명문(캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 [display utilities]({{< docsref "/utilities/display" >}}) 를 사용함으로써, 보다 작은 뷰포트에서 간단하게 설명문(캡션, caption)을 감추는 것도 가능합니다. 처음에는 `.d-none` 로 비표시하고, 중형 기기에서는 `.d-md-block` 으로 다시 표시합니다.
 
 {{< example >}}
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -151,7 +151,7 @@ Adding in the previous and next controls. We recommend using `<button>` elements
 
 ### Crossfade
 
-`.carousel-fade` 를 캐러셀에 추가하면, 슬라이드 대신에 fade 트랜지션으로 슬라이드를 애니메이션화 시킬 수 있습니다.
+`.carousel-fade`를 캐러셀에 추가하면, 슬라이드 대신에 fade 트랜지션으로 슬라이드를 애니메이션화 시킬 수 있습니다.
 
 {{< example >}}
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -179,7 +179,7 @@ Adding in the previous and next controls. We recommend using `<button>` elements
 
 ### Individual `.carousel-item` interval
 
-다음 아이템으로 자동적으로 바뀔 때까지의 지연 시간을 변경하려면 `.carousel-item` 에 `data-bs-interval=""` 을 추가합니다.
+다음 아이템으로 자동으로 바뀔 때까지의 지연 시간을 변경하려면 `.carousel-item` 에 `data-bs-interval=""` 을 추가합니다.
 
 {{< example >}}
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -207,7 +207,7 @@ Adding in the previous and next controls. We recommend using `<button>` elements
 
 ### Disable touch swiping
 
-캐러셀은 터치 스크린 단말기에서의 좌우 스와이프에 의한 슬라이드간 이동을 지원합니다. 이것은 `data-bs-touch` 속성을 사용해 비활성화 시킬수 있습니다. 아래의 예시는 자동 재생 시키지 않기 위해 `data-bs-ride` 속성을 포함시키지 않고 `data-bs-interval="false"`로 하였습니다.
+캐러셀은 터치 스크린 단말기에서의 좌우 스와이프에 의한 슬라이드 간 이동을 지원합니다. 이것은 `data-bs-touch` 속성을 사용해 비활성화시킬 수 있습니다. 아래의 예시는 자동 재생시키지 않기 위해 `data-bs-ride` 속성을 포함하지 않고 `data-bs-interval="false"`로 하였습니다.
 
 {{< example >}}
 <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
@@ -235,7 +235,7 @@ Adding in the previous and next controls. We recommend using `<button>` elements
 
 ## Dark variant
 
-컨트롤, 위치 표시(인디게이터, indicator) 혹은 설명문(캡션, caption)을 어둡게 하기 위해서 `.carousel-dark`를 `.carousel`에 추가했습니다. 컨트롤은 `filter` CSS 속성으로 기본 흰색으로 칠해 진 것이 반전됩니다. 설명문(캡션, caption)과 컨트롤에는 `color`와 `background-color`를 재정의하는 Sass 변수가 추가되었습니다.
+컨트롤, 위치 표시(인디게이터, indicator) 혹은 설명문(캡션, caption)을 어둡게 하기 위해서 `.carousel-dark`를 `.carousel`에 추가했습니다. 컨트롤은 `filter` CSS 속성으로 기본 흰색으로 칠해진 것이 반전됩니다. 설명문(캡션, caption)과 컨트롤에는 `color`와 `background-color`를 재정의하는 Sass 변수가 추가되었습니다.
 
 {{< example >}}
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -280,7 +280,7 @@ Adding in the previous and next controls. We recommend using `<button>` elements
 
 ## Custom transition
 
-`.carousel-item`의 트랜지션의 지속시간은 컴파일전의 Sass 변수인 `$carousel-transition-duration`이나, 컴파일 된 CSS를 사용하는 경우의 사용자 정의 스타일로 변경할 수 있습니다. 여러 개의 트랜지션이 적용되는 경우 트랜스폼 트랜지션이 맨앞에 정의되어 있는지 확인해 주세요(예를 들어, `transition: transform 2s ease, opacity .5s ease-out`).
+`.carousel-item`의 트랜지션의 지속시간은 컴파일 전의 Sass 변수인 `$carousel-transition-duration`이나, 컴파일된 CSS를 사용하는 경우의 사용자 정의 스타일로 변경할 수 있습니다. 여러 개의 트랜지션이 적용되는 경우 트랜스폼 트랜지션이 맨 앞에 정의되어 있는지 확인해 주세요(예를 들어, `transition: transform 2s ease, opacity .5s ease-out`).
 
 ## Sass
 
@@ -294,7 +294,7 @@ Adding in the previous and next controls. We recommend using `<button>` elements
 
 캐러셀의 위치를 간단히 제어하려면, data 속성을 사용합니다. `data-bs-slide`는 키워드 `prev`나 `next`를 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 `data-bs-slide-to`를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 `data-bs-slide-to="2"`가 되어, 슬라이드의 위치를 `0`에서 시작하는 특정의 인덱스로 이동시킵니다.
 
-`data-bs-ride="carousel"` 속성은, 페이지 로드시 캐러셀을 애니메이션화 시키는데 사용됩니다. 캐러셀의 초기화에 `data-bs-ride="carousel"`를 사용하지 않는 경우에는, 스스로 초기화 할 필요가 있습니다. **같은 캐러셀의 명시적인 JavaScript의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.**
+`data-bs-ride="carousel"` 속성은, 페이지 로드 시 캐러셀을 애니메이션화 시키는데 사용됩니다. 캐러셀의 초기화에 `data-bs-ride="carousel"`를 사용하지 않는 경우에는, 스스로 초기화할 필요가 있습니다. **같은 캐러셀의 명시적인 JavaScript의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.**
 
 ### Via JavaScript
 
@@ -336,7 +336,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
       <td>string | boolean</td>
       <td><code>'hover'</code></td>
       <td><p><code>'hover'</code>로 설정하면, <code>mouseenter</code>로 캐러셀의 순환이 일시 정지하고 <code>mouseleave</code>로 캐러셀의 순환이 재개됩니다. 만약 <code>false</code>라면, 캐러셀 위에 커서를 올려도 일시 정지하지 않습니다.</p>
-      <p>터치 대응 디바이스에서는 <code>'hover'</code>로 설정되어 있는 경우, <code>touchend</code>(사용자가 캐러셀과의 상호작용을 마치면)시에 순환은 두번의 간격으로 일시 정지하고 그 후 자동으로 재개됩니다. 이는 위의 마우스 동작에 덧붙여 수행된다는 점에 주의해 주세요.</p></td>
+      <p>터치 대응 기기에서는 <code>'hover'</code>로 설정되어 있는 경우, <code>touchend</code>(사용자가 캐러셀과의 상호작용을 마치면)시에 순환은 두번의 간격으로 일시 정지하고 그 후 자동으로 재개됩니다. 이는 위의 마우스 동작에 덧붙여 수행된다는 점에 주의해 주세요.</p></td>
     </tr>
     <tr>
       <td><code>ride</code></td>
@@ -354,7 +354,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
       <td><code>touch</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>터치 스크린 디바이스에서 캐러셀이 좌우 스와이프 인터렉션을 지원할지 여부.</td>
+      <td>터치 스크린 기기에서 캐러셀이 좌우 스와이프 인터렉션을 지원할지 여부.</td>
     </tr>
   </tbody>
 </table>
@@ -420,9 +420,9 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 
 ### Events
 
-Bootstrap의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 두가지 이벤트를 제공하고 있습니다. 두가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:
+Bootstrap의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 두 가지 이벤트를 제공하고 있습니다. 두 가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:
 
-- `direction`: 캐러셀이 슬라이딩 하는 방향 (`"left"` 혹은 `"right"`).
+- `direction`: 캐러셀이 슬라이딩하는 방향 (`"left"` 혹은 `"right"`).
 - `relatedTarget`: 액티브한 아이템으로 슬라이드 시키고 있는 DOM 요소.
 - `from`: 현재 아이템의 인덱스.
 - `to`: 다음 아이템의 인덱스.

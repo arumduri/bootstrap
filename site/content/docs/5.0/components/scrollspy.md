@@ -18,7 +18,7 @@ toc: true
 
 {{< callout >}}
 ### Scrollable containers and keyboard access
-스크롤 가능한 컨테이너(`<body>` 이외의 )를 작성할 경우에는 반드시 `height`를 설정하고 키보드로 부터의 접근을 확실히 하기 위해서 `tabindex="0"` 와 함께 `overflow-y: scroll;`을 적용하십시오.
+스크롤 가능한 컨테이너(`<body>` 이외의 )를 작성할 경우에는 반드시 `height`를 설정하고 키보드로 부터의 접근을 확실히 하기 위해서 `tabindex="0"`와 함께 `overflow-y: scroll;`을 적용하십시오.
 {{< /callout >}}
 
 ## Example in navbar

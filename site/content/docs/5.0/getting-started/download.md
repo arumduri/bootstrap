@@ -45,7 +45,7 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-이미 컴파일된 JavaScript를 사용하고 있고 Popper를 개별적으로 포함시키는 것을 선호한다면 JS 이전에 CDN을 통해서 Popper를 추가하세요.
+이미 컴파일된 JavaScript를 사용하고 있고 Popper를 개별적으로 포함하는 것을 선호한다면 JS 이전에 CDN을 통해서 Popper를 추가하세요.
 
 ```html
 <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>

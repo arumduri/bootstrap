@@ -22,7 +22,7 @@ toc: true
 
 ## Active items
 
-현재 활성화 된 선택 범위를 나타내기 위해 `.list-group-item` 에 `.active` 를 추가합니다.
+현재 활성화 된 선택 범위를 나타내기 위해 `.list-group-item` 에 `.active`를 추가합니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -36,7 +36,7 @@ toc: true
 
 ## Disabled items
 
-`.list-group-item` 에 `.disabled` 를 추가하면, 비활성화 되어 있는 것처럼 보입니다. `.disabled` 를 가진 요소 중에는 클릭 이벤트(링크 등)를 완전히 비활성화 하기 위해 사용자 정의 JavaScript 를 사용해야 합니다.
+`.list-group-item` 에 `.disabled`를 추가하면, 비활성화되어 있는 것처럼 보입니다. `.disabled`를 가진 요소 중에는 클릭 이벤트(링크 등)를 완전히 비활성화하기 위해 사용자 정의 JavaScript를 사용해야 합니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -50,7 +50,7 @@ toc: true
 
 ## Links and buttons
 
-_actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>` 을 사용하고, `.list-group-item-action` 을 추가합니다. 비인터랙티브한 요소(`<li>` 혹은 `<div>` 와 같은)로 만들어진 목록 그룹이 클릭이나 탭 어포던스를 제공하지 않도록, 이러한 가상 클래스를 분리하고 있습니다.
+_actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>` 을 사용하고, `.list-group-item-action` 을 추가합니다. 비인터랙티브한 요소(`<li>` 혹은 `<div>`와 같은)로 만들어진 목록 그룹이 클릭이나 탭 어포던스를 제공하지 않도록, 이러한 가상 클래스를 분리하고 있습니다.
 
 여기에서는 **표준의 `.btn` 클래스를 사용하지 않도록 주의해 주세요**.
 
@@ -82,7 +82,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## Flush
 
-`.list-group-flush` 를 추가하고, 부모 컨테이너(카드 등) 내의 목록 그룹의 아이템을 끝에서 끝까지 표시하기 위해 몇개의 라인과 둥근 모서리를 제거하도록 합니다.
+`.list-group-flush`를 추가하고, 부모 컨테이너(카드 등) 내의 목록 그룹의 아이템을 끝에서 끝까지 표시하기 위해 몇개의 라인과 둥근 모서리를 제거하도록 합니다.
 
 {{< example >}}
 <ul class="list-group list-group-flush">
@@ -96,7 +96,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## Numbered
 
-`.list-group-numbered`라는 수식어 클래스(와 옵션에서 `<ol>`요소를 사용하여)를 추가하여 숫자 목록 리스트 그룹을 만들수 있습니다. 숫자는(`<ol>`의 브라우저 기본 스타일링이 아닌) CSS에 의해 추가되므로 목록 그룹 아이템 내에서 배치가 간단하고 재정의하기도 쉬워집니다.
+`.list-group-numbered`라는 수식어 클래스(와 옵션에서 `<ol>`요소를 사용하여)를 추가하여 숫자 목록 리스트 그룹을 만들 수 있습니다. 숫자는(`<ol>`의 브라우저 기본 스타일링이 아닌) CSS에 의해 추가되므로 목록 그룹 아이템 내에서 배치가 간단하고 재정의하기도 쉬워집니다.
 
 숫자는 `<ol>`의 `counter-increment`에 의해 생성되며 `counter-increment`와 콘텐츠를 가진 `<li>`의 `::before` 가상 요소를 사용하여 스타일링되고 배치됩니다.
 
@@ -138,7 +138,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## Horizontal
 
-목록 그룹의 아이템 레이아웃을 모든 브레이크 포인트에서 수직에서 수평으로 변경하려면 `.list-group-horizontal` 을 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}` 를 선택하고 브레이크 포인트의 `min-width` 로 시작하는 목록 그룹을 수평으로 합니다. 현재 **수평 목록 그룹을 flush 목록 그룹과 조합할 수 없습니다.**
+목록 그룹의 아이템 레이아웃을 모든 브레이크 포인트에서 수직에서 수평으로 변경하려면 `.list-group-horizontal` 을 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}`를 선택하고 브레이크 포인트의 `min-width` 로 시작하는 목록 그룹을 수평으로 합니다. 현재 **수평 목록 그룹을 flush 목록 그룹과 조합할 수 없습니다.**
 
 **꿀팁:** 목록 그룹의 아이템을 수평 방향의 동일한 너비로 하고 싶을 경우, 목록 그룹의 각 아이템에 `.flex-fill` 을 추가합니다.
 
@@ -242,7 +242,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## Checkboxes and radios
 
-목록 그룹 아이템 내에 Bootstrap 체크박스와 라디오 버튼을 배치하고 필요에 따라 재정의 합니다. `<label>` 없이도 사용이 가능하지만 접근성을 위해 `aria-label` 속성과 값을 포함시켜 주세요.
+목록 그룹 아이템 내에 Bootstrap 체크 박스와 라디오 버튼을 배치하고 필요에 따라 재정의 합니다. `<label>` 없이도 사용이 가능하지만 접근성을 위해 `aria-label` 속성과 값을 포함시켜 주세요.
 
 {{< example >}}
 <ul class="list-group">
@@ -420,7 +420,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Fade effect
 
-탭 판넬을 페이드인 시키려면 `.tab-pane` 에 `.fade` 를 추가합니다. 첫번째 탭 판넬에는 첫번째 콘텐츠를 표시하기 위해서 `.show` 를 추가 할 필요가 있습니다.
+탭 판넬을 페이드인 시키려면 `.tab-pane` 에 `.fade`를 추가합니다. 첫번째 탭 판넬에는 첫번째 콘텐츠를 표시하기 위해서 `.show`를 추가 할 필요가 있습니다.
 
 ```html
 <div class="tab-content">
@@ -493,7 +493,7 @@ var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instan
 3. `hidden.bs.tab` (이전 활성화 탭에서 `hide.bs.tab` 이벤트 동일)
 4. `shown.bs.tab` (새로 활성화 된 지 얼마 안 된 탭으로 `show.bs.tab` 이벤트와 동일)
 
-이미 활성화 된 탭이 없는 경우, `hide.bs.tab` 와 `hidden.bs.tab` 이벤트는 발생하지 않습니다.
+이미 활성화 된 탭이 없는 경우, `hide.bs.tab`와 `hidden.bs.tab` 이벤트는 발생하지 않습니다.
 
 <table class="table">
   <thead>

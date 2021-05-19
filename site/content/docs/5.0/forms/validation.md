@@ -17,10 +17,10 @@ extra_js:
 
 Bootstrap에서 사용하고 있는 폼 유효성 검사 구조를 소개합니다:
 
-- HTML의 폼 유효성 검사는 CSS의 두개의 가상 클래스 `:invalid` 와 `:valid`를 사용해 `<input>`, `<select>`, `<textarea>` 요소에 적용됩니다.
+- HTML의 폼 유효성 검사는 CSS의 두개의 가상 클래스 `:invalid`와 `:valid`를 사용해 `<input>`, `<select>`, `<textarea>` 요소에 적용됩니다.
 - Bootstrap는 `:invalid` 과 `:valid` 스타일을 상위 클래스 `.was-validated`에 범위를 지정하고 일반적으로 `<form>`에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 잘못된 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)
 - 폼의 외형을 새로 적용하려면(예를 들어, AJAX를 사용한 동적인 폼 송신의 경우), 송신 후에 `.was-validated` 클래스를 `<form>`으로부터 다시 삭제합니다.
-- 폴백으로서 [server-side validation](#server-side)의 가상 클래스 대신 `.is-invalid` 와 `.is-valid` 클래스를 사용할 수 있습니다. 이 클래스들은 상위 클래스인 `.was-validated`를 필요로 하지 않습니다.
+- 폴백으로서 [server-side validation](#server-side)의 가상 클래스 대신 `.is-invalid`와 `.is-valid` 클래스를 사용할 수 있습니다. 이 클래스들은 상위 클래스인 `.was-validated`를 필요로 하지 않습니다.
 - (현시점에서는)CSS 동작에 제약이 있기 때문에 사용자 정의 JavaScript의 도움을 받지 않고 DOM 내에서 폼 컨트롤의 앞에 있는 `<label>`에 스타일을 적용할 수 없습니다.
 - 모든 모던 브라우저는 폼 컨트롤을 유효성 검사하기 위한 일련의 JavaScript 메소드인 [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api)를 지원합니다.
 - 전달 문구는 [browser defaults](#browser-defaults) (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다)나 HTML과 CSS를 추가한 사용자 정의 전달 스타일을 이용할 수도 있습니다.
@@ -30,7 +30,7 @@ Bootstrap에서 사용하고 있는 폼 유효성 검사 구조를 소개합니�
 
 ## Custom styles
 
-Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에 `novalidate`라고 하는 불리언 속성을 추가할 필요가 있습니다. 이는 브라우저의 기본 전달 툴팁을 비활성화 시켜 JavaScript에서 폼 검증 API에 대한 접근을 제공합니다. 아래 예시의 전송 버튼을 눌러 보세요. JavaScript가 전송 버튼을 가로채고 전달합니다. 전송 버튼을 누르면, 폼 컨트롤에 `:invalid` 과 `:valid`의 스타일이 적용되고 있는 것을 알 수 있습니다.
+Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에 `novalidate`라고 하는 불리언 속성을 추가할 필요가 있습니다. 이는 브라우저의 기본 전달 툴팁을 비활성화시켜 JavaScript에서 폼 검증 API에 대한 접근을 제공합니다. 아래 예시의 전송 버튼을 눌러 보세요. JavaScript가 전송 버튼을 가로채고 전달합니다. 전송 버튼을 누르면, 폼 컨트롤에 `:invalid` 과 `:valid`의 스타일이 적용되고 있는 것을 알 수 있습니다.
 
 색상, 모서리, 포커스 스타일 및 배경 아이콘을 이용해 더 나은 사용자 정의 전달 스타일을 적용하고 있습니다. `<select>` 의 배경 아이콘은 `.form-select`에서만 사용 가능하며 `.form-control`에서는 사용할 수 없습니다.
 
@@ -161,7 +161,7 @@ Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에
 
 ## Server side
 
-클라이언트 측의 유효성 검사를 권장하지만, 서버 측의 유효성 검사가 필요한 경우에는 `.is-invalid` 와 `.is-valid`를 사용해 잘못된 폼 필드와 잘된 폼 필드를 각각 표현할 수 있습니다. 이러한 클래스에서는 `.invalid-feedback`도 지원되고 있다는 점을 주의해 주세요.
+클라이언트 측의 유효성 검사를 권장하지만, 서버 측의 유효성 검사가 필요한 경우에는 `.is-invalid`와 `.is-valid`를 사용해 잘못된 폼 필드와 잘된 폼 필드를 각각 표현할 수 있습니다. 이러한 클래스에서는 `.invalid-feedback`도 지원되고 있다는 점을 주의해 주세요.
 
 잘못된 필드의 경우, 잘못된 전달/오류 문구가 `aria-describedby`(이 속성은 이미 추가의 폼 문구를 가리키는 경우, 여러 `id`를 허용한다는 점에 유의해 주세요)를 사용해 적절한 폼 필드와 연관되어 있다는 점을 확인해 주세요.
 
@@ -363,7 +363,7 @@ Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에
 
 ### Map
 
-이것은 `_variables.scss`의 유효성 검사용 Sass맵 입니다. 이것을 덮어쓰거나 확장해 서로 다른 상태나 추가 상태를 만들수 있습니다.
+이것은 `_variables.scss`의 유효성 검사용 Sass맵 입니다. 이것을 덮어쓰거나 확장해 서로 다른 상태나 추가 상태를 만들 수 있습니다.
 
 {{< scss-docs name="form-validation-states" file="scss/_variables.scss" >}}
 

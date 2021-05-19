@@ -29,7 +29,7 @@ toc: true
 - `.navbar-nav` 으로 full-height와 보다 가벼운 네비게이션(드롭다운을 위한 지원 포함)을 실현.
 - `.navbar-toggler`은 콜랩스 플러그인과 다른 [navigation toggling](#responsive-behaviors)행동에 사용.
 - 모든 폼 컨트롤과 액션을 위한 flex와 spacing 유틸리티.
-- 수직방향으로 센터링된 문자열을 추가하기 위한 `.navbar-text`.
+- 수직 방향으로 센터링된 문자열을 추가하기 위한 `.navbar-text`.
 - `.collapse.navbar-collapse` 으로 부모 브레이크 포인트에 따라 내비바의 콘텐츠를 그룹화하거나 감출수 있음.
 - 옵션으로 `.navbar-scroll`를 추가해 `max-height`와 [scroll expanded navbar content](#scrolling)이 가능.
 
@@ -186,7 +186,7 @@ Please note that you should also add the `aria-current` attribute on the active 
 {{< /example >}}
 
 내비게이션 바에서 드롭다운을 사용할 수도 있습니다.
-드롭다운 메뉴는 배치를 위한 랩핑된 요소가 필요하기 때문에 아래와 같이 `.nav-item` 와 `.nav-link` 과는 다른 중첩 된 요소로 분리해 사용해 주세요.
+드롭다운 메뉴는 배치를 위한 랩핑된 요소가 필요하기 때문에 아래와 같이 `.nav-item`와 `.nav-link` 과는 다른 중첩 된 요소로 분리해 사용해 주세요.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -277,7 +277,7 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 
 ### Text
 
-문자열의 수직 방향과 수평 간격을 조정하는 `.navbar-text` 를 포함할 수 있습니다.
+문자열의 수직 방향과 수평 간격을 조정하는 `.navbar-text`를 포함할 수 있습니다.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
@@ -320,7 +320,7 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 
 ## Color schemes
 
-테마 설정 클래스와 `background-color` 유틸리티의 조합으로 내비게이션 바의 테마 설정이 더욱 간단해졌습니다. 밝은 배경색에는 `.navbar-light`, 어두운 배경색에는 `.navbar-dark` 를 선택합니다. 그 다음, `.bg-*` 유틸리티를 사용하여 커스터마이징합니다.
+테마 설정 클래스와 `background-color` 유틸리티의 조합으로 내비게이션 바의 테마 설정이 더욱 간단해졌습니다. 밝은 배경색에는 `.navbar-light`, 어두운 배경색에는 `.navbar-dark`를 선택합니다. 그 다음, `.bg-*` 유틸리티를 사용하여 커스터마이징합니다.
 
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -451,7 +451,7 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 
 ## Placement
 
-[Position utilities]({{< docsref "/utilities/position" >}}) 를 사용하여 내비게이션 바를 정적이지 않은 위치에 배치할 수 있습니다. 상단고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단고정을 할지 선택할 수 있습니다. 고정 내비게이션 바는 `position: fixed` 를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 사용자 정의 CSS(예를 들어, `<body>` 의 `padding-top` 등)가 필요할 수 있습니다.
+[Position utilities]({{< docsref "/utilities/position" >}}) 를 사용하여 내비게이션 바를 정적이지 않은 위치에 배치할 수 있습니다. 상단고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단고정을 할지 선택할 수 있습니다. 고정 내비게이션 바는 `position: fixed`를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 사용자 정의 CSS(예를 들어, `<body>` 의 `padding-top` 등)가 필요할 수 있습니다.
 
 또한, **`.sticky-top`은 `position: sticky`를 사용하고 있는데 [모든 브라우저에서 완벽하게 지원되는 것은 아닙니다](https://caniuse.com/css-sticky)**
 
@@ -489,9 +489,9 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 
 ## Scrolling
 
-`.navbar-nav` (혹은 다른 내비바의 서브 컴포넌트)에 `.navbar-nav-scroll`을 추가하여 접힌 내비바의 토글 가능한 콘텐츠 내에서 수직방향 스크롤을 활성화시킵니다. 기본적으로는 `75vh`(혹은 뷰포트 높이의 75%)로 스크롤이 시작되지만 로컬 CSS 사용자 정의 속성 `--bs-navbar-height`나 사용자 정의 스타일로 덮어쓸수 있습니다. 큰 뷰포트에서 내비바를 펼치면 기본 내비바처럼 콘텐츠가 나타납니다.
+`.navbar-nav` (혹은 다른 내비바의 서브 컴포넌트)에 `.navbar-nav-scroll`을 추가하여 접힌 내비바의 토글 가능한 콘텐츠 내에서 수직 방향 스크롤을 활성화시킵니다. 기본적으로는 `75vh`(혹은 뷰포트 높이의 75%)로 스크롤이 시작되지만 로컬 CSS 사용자 정의 속성 `--bs-navbar-height`나 사용자 정의 스타일로 덮어쓸수 있습니다. 큰 뷰포트에서 내비바를 펼치면 기본 내비바처럼 콘텐츠가 나타납니다.
 
-이 동작에는 `overflow`의 잠재적인 결점이 따르므로 주의가 필요합니다. `overflow-y: auto`(여기서 콘텐츠를 스크롤하기 위해 필요)를 설정하면 `overflow-x`는 `auto`와 동등해져 수평방향의 콘텐츠가 일부 잘립니다. 
+이 동작에는 `overflow`의 잠재적인 결점이 따르므로 주의가 필요합니다. `overflow-y: auto`(여기서 콘텐츠를 스크롤하기 위해 필요)를 설정하면 `overflow-x`는 `auto`와 동등해져 수평 방향의 콘텐츠가 일부 잘립니다. 
 
 아래는 `.navbar-nav-scroll`에 `style="--bs-scroll-height: 100px;"`를 사용한 내비바의 예시로, 최적의 간격을 확보하기 위한 여백을 갖추고 있습니다.
 
@@ -542,7 +542,7 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 
 ### Toggler
 
-내비게이션 바의 토글은 기본적으로 왼쪽 정렬이지만 `.navbar-brand`와 같은 형제 요소와 연결되는 경우는 자동적으로 오른쪽 정렬이 됩니다. 마크업을 거꾸로 하면 토글의 배치도 반대로 바뀝니다. 아래는 색다른 토글 스타일의 예입니다.
+내비게이션 바의 토글은 기본적으로 왼쪽 정렬이지만 `.navbar-brand`와 같은 형제 요소와 연결되는 경우는 자동으로 오른쪽 정렬이 됩니다. 마크업을 거꾸로 하면 토글의 배치도 반대로 바뀝니다. 아래는 색다른 토글 스타일의 예입니다.
 
 아래의 예시를 가장 작은 브레이크 포인트로 확인해 보세요.
 `.navbar-brand`가 표시되지 않습니다:
@@ -655,7 +655,7 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 </nav>
 {{< /example >}}
 
-이렇게 했을때는 컨테이너가 열렸을 때 포커스를 이동시키기 위한 추가적인 JavaScript를 포함시키는 것을 권장합니다. 그렇지 않으면, 키보드 사용자나 지원 기술 사용자는 새롭게 표시된 콘텐츠를 찾는데 어려움을 겪을 것입니다. 특히, 열린 컨테이너가 문서의 구조상 토글러보다 *before*에 있는 경우는 더욱 그렇습니다. 또한 토글러가 콘텐츠의 `id`를 가르키는 `aria-controls` 속성을 가지고 있는 것을 확인할 필요가 있습니다. 이론적으로는 지원 기술 사용자가 토글러에서 그것을 제어하는 콘텐츠를 직접 점프할수 있게 되어 있지만 현재 이 지원은 매우 애매합니다.
+이렇게 했을때는 컨테이너가 열렸을 때 포커스를 이동시키기 위한 추가적인 JavaScript를 포함하는 것을 권장합니다. 그렇지 않으면, 키보드 사용자나 지원 기술 사용자는 새롭게 표시된 콘텐츠를 찾는데 어려움을 겪을 것입니다. 특히, 열린 컨테이너가 문서의 구조상 토글러보다 *before*에 있는 경우는 더욱 그렇습니다. 또한 토글러가 콘텐츠의 `id`를 가르키는 `aria-controls` 속성을 가지고 있는 것을 확인할 필요가 있습니다. 이론적으로는 지원 기술 사용자가 토글러에서 그것을 제어하는 콘텐츠를 직접 점프할수 있게 되어 있지만 현재 이 지원은 매우 애매합니다.
 
 ## Sass
 

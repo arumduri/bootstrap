@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Breadcrumb(브레드크럼)
-description: CSS로 구분자를 자동적으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.
+description: CSS로 구분자를 자동으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.
 group: components
 toc: true
 ---
@@ -35,7 +35,7 @@ toc: true
 
 ## Dividers
 
-구분자는 CSS의 [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) 과 [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content) 를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 `--bs-breadcrumb-divider` 를 변경하거나, `$breadcrumb-divider` Sass 변수 — 와 `$breadcrumb-divider-flipped` 을 사용해 RTL에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS를 다시 컴파일하지 않고 재정의할 수 있는 글로벌한 구분자를 얻을 수 있습니다.
+구분자는 CSS의 [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) 과 [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content) 를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 `--bs-breadcrumb-divider`를 변경하거나, `$breadcrumb-divider` Sass 변수와 `$breadcrumb-divider-flipped`를 사용해 RTL에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS를 다시 컴파일하지 않고 재정의할 수 있는 글로벌한 구분자를 얻을 수 있습니다.
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -46,7 +46,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-Sass 를 통해 수정할때, 문자열의 주변에 따옴표를 만들기 위해 [quote](https://sass-lang.com/documentation/modules/string#quote) 함수가 필요합니다. 예를 들어, `>` 을 구분자로 사용하려면 이렇게 사용합니다.
+Sass 를 통해 수정할 때, 문자열의 주변에 따옴표를 만들기 위해 [quote](https://sass-lang.com/documentation/modules/string#quote) 함수가 필요합니다. 예를 들어, `>` 을 구분자로 사용하려면 이렇게 사용합니다.
 
 ```scss
 $breadcrumb-divider: quote(">");
@@ -85,7 +85,7 @@ $breadcrumb-divider: none;
 
 ## Accessibility
 
-브레드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 `<nav>` 요소에 `aria-label="breadcrumb"` 과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 `aria-current="page"` 를 추가하는 것이 좋습니다.
+브레드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 `<nav>` 요소에 `aria-label="breadcrumb"` 과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 `aria-current="page"`를 추가하는 것이 좋습니다.
 
 자세한 내용은 [WAI-ARIA Authoring Practices for the breadcrumb pattern](https://www.w3.org/TR/wai-aria-practices/#breadcrumb)을 확인해주세요.
 

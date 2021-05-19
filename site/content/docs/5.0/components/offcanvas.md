@@ -134,7 +134,7 @@ toc: true
 
 ## Backdrop
 
-오프캔버스와 그 배경이 표시될 때에는 `<body>` 요소의 스크롤은 비활성화 됩니다. `<body>` 스크롤을 바꾸고 싶으면 `data-bs-scroll` 속성을, 배경의 스크롤을 바꾸고 싶으면 `data-bs-backdrop` 속성을 사용해 주세요.
+오프캔버스와 그 배경이 표시될 때에는 `<body>` 요소의 스크롤은 비활성화됩니다. `<body>` 스크롤을 바꾸고 싶으면 `data-bs-scroll` 속성을, 배경의 스크롤을 바꾸고 싶으면 `data-bs-backdrop` 속성을 사용해 주세요.
 
 {{< example >}}
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
@@ -227,7 +227,7 @@ data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성�
 
 콘텐츠를 오프캔버스 요소로 액티브하게 합니다. 옵션의 `object`를 받습니다.
 
-아래의 예시처럼 생성자를 사용해 오프캔버스의 인스턴스를 만들수 있습니다.:
+아래의 예시처럼 생성자를 사용해 오프캔버스의 인스턴스를 만들 수 있습니다.:
 
 ```js
 var myOffcanvas = document.getElementById('myOffcanvas')

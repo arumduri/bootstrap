@@ -23,7 +23,7 @@ toc: true
 
 ### Basic
 
-토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 `display: flex` 를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 콘텐츠를 쉽게 정렬시킬 수 있습니다.
+토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 `display: flex`를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 콘텐츠를 쉽게 정렬시킬 수 있습니다.
 
 토스트는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. 토스트 콘텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.
 
@@ -101,7 +101,7 @@ toc: true
 
 ### Stacking
 
-토스트를 `toast container`로 감싸면 여러개 사용할 수 있습니다.
+토스트를 `toast container`로 감싸면 여러 개 사용할 수 있습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast-container">
@@ -251,7 +251,7 @@ toc: true
 </div>
 {{< /example >}}
 
-또한 flexbox 유틸리티를 사용해서 토스트를 수평방향이나 수직방향으로 정렬시킬 수도 있습니다.
+또한 flexbox 유틸리티를 사용해서 토스트를 수평 방향이나 수직 방향으로 정렬시킬 수도 있습니다.
 
 {{< example class="bg-dark bd-example-toasts d-flex" >}}
 <!-- Flexbox container for aligning the toasts -->
@@ -276,7 +276,7 @@ toc: true
 
 토스트는 방문자가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 `aria-atomic="true"`를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 콘텐츠 일부만을 갱신한 경우나 같은 토스트의 콘텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용해 주세요.
 
-토스트가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
+토스트가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두 가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
 
 그리고, 내용에 따라 `role` 과 `aria-live` 의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
 
@@ -304,7 +304,7 @@ toc: true
 </div>
 {{< /example >}}
 
-기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에게 긴 [`delay` timeout](#options)를 주었다고 하더라도 키보드나 지원 기술 사용자가 알수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 `autohide: false`를 사용하는 것을 권장합니다.
+기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만, 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에 긴 [`delay` timeout](#options) 를 주었다고 하더라도 키보드나 지원 기술 사용자가 알 수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 `autohide: false`를 사용하는 것을 권장합니다.
 
 ## Sass
 
@@ -314,7 +314,7 @@ toc: true
 
 ## Usage
 
-JavaScript 를 통해 초기화:
+JavaScript를 통해 초기화:
 
 ```js
 var toastElList = [].slice.call(document.querySelectorAll('.toast'))
@@ -325,7 +325,7 @@ var toastList = toastElList.map(function (toastEl) {
 
 ### Options
 
-옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우 `data-bs-animation=""` 처럼 `data-bs-` 에 옵션 명을 추가합니다.
+옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우 `data-bs-animation=""`처럼 `data-bs-` 에 옵션 명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -377,7 +377,7 @@ toast.show()
 
 #### hide
 
-요소인 토스트를 숨깁니다. **토스트가 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.toast` 이벤트가 발생하기 전). `autohide`를 `false`로 했을 경우, 이 메소드를 수동으로 호출 할 필요가 있습니다.
+요소인 토스트를 숨깁니다. **토스트가 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.toast` 이벤트가 발생하기 전). `autohide`를 `false`로 했을 경우, 이 메소드를 수동으로 호출할 필요가 있습니다.
 
 ```js
 toast.hide()

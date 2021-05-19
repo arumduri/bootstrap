@@ -8,7 +8,7 @@ toc: true
 
 ## How it works
 
-프로그레스 컴포넌트는 2개의 HTML 요소와 너비를 설정하기 위한 몇 가지 CSS와 속성들로 구축됩니다. [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)는 사용하지 않으므로, 프로그레스 바를 쌓아 올리거나 애니메이션화 하거나 문자 라벨을 배치할 수 있습니다.
+프로그레스 컴포넌트는 2개의 HTML 요소와 너비를 설정하기 위한 몇 가지 CSS와 속성들로 구축됩니다. [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)는 사용하지 않음으로, 프로그레스 바를 쌓아 올리거나 애니메이션화 하거나 문자 라벨을 배치할 수 있습니다.
 
 - 프로그레스 바의 최대 너비를 나타내기 위해 `.progress`를 사용합니다.
 - 진행상황을 나타내기 위해 안쪽에 `.progress-bar`를 사용합니다.
@@ -55,7 +55,7 @@ Bootstrap [utilities for setting width]({{< docsref "/utilities/sizing" >}})을 
 
 ## Height
 
-`.progress`에는 `height` 값만 설정되어 있기 때문에, 이 값을 변경하면 내부 `.progress-bar`는 그에 따라 자동적으로 크기가 변경됩니다.
+`.progress`에는 `height` 값만 설정되어 있기 때문에, 이 값을 변경하면 내부 `.progress-bar`는 그에 따라 자동으로 크기가 변경됩니다.
 
 {{< example >}}
 <div class="progress" style="height: 1px;">

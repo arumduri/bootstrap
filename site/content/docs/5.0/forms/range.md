@@ -17,7 +17,7 @@ toc: true
 
 ## Disabled
 
-`disabled` 블리언 속성을 추가하면 비활성화 되어 표시되고 포인터 이벤트가 삭제됩니다.
+`disabled` 블리언 속성을 추가하면 비활성화되어 표시되고 포인터 이벤트가 삭제됩니다.
 
 {{< example >}}
 <label for="disabledRange" class="form-label">Disabled range</label>

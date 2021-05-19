@@ -116,9 +116,9 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 
 ## Horizontal form
 
-폼 그룹에 `.row` 클래스를 추가하고 `.col-*-*` 클래스를 사용해 라벨이나 컨트롤의 폭을 지정하는 것으로, 그리드를 사용한 수평 방향의 폼을 작성할 수 있습니다. `<label>`에는 반드시 `.col-form-label`을 추가하여 관련 폼 컨트롤과 함께 수직방향의 중앙에 배치하도록 합니다.
+폼 그룹에 `.row` 클래스를 추가하고 `.col-*-*` 클래스를 사용해 라벨이나 컨트롤의 폭을 지정하는 것으로, 그리드를 사용한 수평 방향의 폼을 작성할 수 있습니다. `<label>`에는 반드시 `.col-form-label`을 추가하여 관련 폼 컨트롤과 함께 수직 방향의 중앙에 배치하도록 합니다.
 
-경우에 따라서는 완변한 배치를 위해 여백(마진이나 패딩) 유틸리티를 사용할 필요가 있을지도 모릅니다. 예를 들어 아래의 예시와 같이 오른쪽의 쌓여진 라디오 버튼의 라벨과의 정렬을 맞추기 위해 `padding-top`을 삭제하는 유틸리티를 추가합니다.
+때에 따라서는 완벽한 배치를 위해 여백(마진이나 패딩) 유틸리티를 사용할 필요가 있을지도 모릅니다. 예를 들어 아래의 예시와 같이 오른쪽의 싸인 라디오 버튼의 라벨과의 정렬을 맞추기 위해 `padding-top`을 삭제하는 유틸리티를 추가합니다.
 
 {{< example >}}
 <form>
@@ -173,7 +173,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 
 ### Horizontal form label sizing
 
-`.form-control-lg` 와 `.form-control-sm`의 사용에 따라 `<label>`이나 `<legend>`에 `.col-form-label-sm` 이나 `.col-form-label-lg`를 사용해 주세요.
+`.form-control-lg`와 `.form-control-sm`의 사용에 따라 `<label>`이나 `<legend>`에 `.col-form-label-sm` 이나 `.col-form-label-lg`를 사용해 주세요.
 
 {{< example >}}
 <div class="row mb-3">

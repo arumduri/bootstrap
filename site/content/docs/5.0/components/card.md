@@ -11,7 +11,7 @@ toc: true
 
 ## Example
 
-카드는 적은 마크업과 스타일로 되어 있지만, 다양한 사용자 정의가 가능합니다. Flexbox로 만들어져 있어 쉽게 배치가 가능하고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 `margin` 설정이 없기 때문에 필요에 따라 [spacing utilities]({{< docsref "/utilities/spacing" >}})를 사용합니다.
+카드는 적은 마크업과 스타일로 되어 있지만, 다양한 사용자 정의가 가능합니다. Flexbox로 만들어져 있어 쉽게 배치할 수 있고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 `margin` 설정이 없어서 필요에 따라 [spacing utilities]({{< docsref "/utilities/spacing" >}})를 사용합니다.
 
 아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [sizing options](#sizing) 을 통해서 간단하게 재정의할 수 있습니다.
 
@@ -44,9 +44,9 @@ toc: true
 
 ### Titles, text, and links
 
-카드 타이틀은 `<h*>` 태그에 `.card-title`을 적용합니다. `<a>` 태그에 `.card-link`를 적용하면 링크가 추가됩니다. 서브 타이틀은, `<h*>` 태크에 `.card-subtitle`를 적용합니다.
+카드 타이틀은 `<h*>` 태그에 `.card-title`을 적용합니다. `<a>` 태그에 `.card-link`를 적용하면 링크가 추가됩니다. 서브 타이틀은, `<h*>` 태그에 `.card-subtitle`을 적용합니다.
 
-`.card-title`과 `.card-subtitle`를 `.card-body` 안에 배치하면 카드 제목과 서브 타이틀이 깔끔하게 적용됩니다.
+`.card-title`과 `.card-subtitle`을 `.card-body` 안에 배치하면 카드 제목과 서브 타이틀이 깔끔하게 적용됩니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -75,7 +75,7 @@ toc: true
 
 ### List groups
 
-Flush list group을 사용하여 카드안에 목록을 만듭니다.
+Flush list group을 사용하여 카드 안에 목록을 만듭니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -115,7 +115,7 @@ Flush list group을 사용하여 카드안에 목록을 만듭니다.
 
 ### Kitchen sink
 
-복수의 콘텐츠 타입을 조합하고, 필요한 카드를 작성하거나 모든 것을 이 안에 집어 넣을 수 있습니다. 아래는 이미지 스타일, 블럭, 문자 스타일, 목록 그룹으로, 모든것이 고정폭의 카드안에 싸여 있습니다.
+복수의 콘텐츠 타입을 조합하고, 필요한 카드를 작성하거나 모든 것을 이 안에 집어넣을 수 있습니다. 아래는 이미지 스타일, 블록, 문자 스타일, 목록 그룹으로, 모든 것이 고정 폭의 카드 안에 싸여 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -198,11 +198,11 @@ Header와/혹은 footer를 넣는 카드의 옵션이 있습니다.
 
 ## Sizing
 
-카드는 특별히 지정하지 않는 한, `width`는 100% 의 가로 폭을 가지게 됩니다. 필요에 따라, 사용자 정의 CSS, grid 클래스, grid Sass 믹스인, 혹은 유틸리티를 사용해 변경할 수 있습니다.
+카드는 특별히 지정하지 않는 한, `width`는 100%의 가로 폭을 가지게 됩니다. 필요에 따라, 사용자 정의 CSS, grid 클래스, grid Sass 믹스인, 혹은 유틸리티를 사용해 변경할 수 있습니다.
 
 ### Using grid markup
 
-Grid 를 사용해, 필요에 따라 카드를 columns 과 rows 안에 넣어서 사용합니다.
+Grid를 사용해, 필요에 따라 카드를 columns 과 rows 안에 넣어서 사용합니다.
 
 {{< example >}}
 <div class="row">
@@ -345,11 +345,11 @@ Grid 를 사용해, 필요에 따라 카드를 columns 과 rows 안에 넣어서
 
 ## Images
 
-카드에는, 이미지를 다루기 위한 몇 가지의 옵션이 있습니다. 카드의 양끝에 "image caps" 을 추가하거나, 카드의 내용에 이미지를 겹쳐 맞추거나 또는 그저 이미지를 카드에 삽입할 수 있습니다.
+카드에는, 이미지를 다루기 위한 몇 가지의 옵션이 있습니다. 카드의 양 끝에 "image caps"를 추가하거나, 카드의 내용에 이미지를 겹쳐 맞추거나 또는 그저 이미지를 카드에 삽입할 수 있습니다.
 
 ### Image caps
 
-Header 나 footer 와 같이, 카드에는 카드의 상부와 하부의 "image caps"(카드의 상부 또는 하부의 이미지) 을 포함할 수 있습니다.
+Header 나 footer와 같이, 카드에는 카드의 상부와 하부의 "image caps"(카드의 상부 또는 하부의 이미지) 을 포함할 수 있습니다.
 
 {{< example >}}
 <div class="card mb-3">
@@ -372,7 +372,7 @@ Header 나 footer 와 같이, 카드에는 카드의 상부와 하부의 "image 
 
 ### Image overlays
 
-이미지를 카드의 배경으로 하여, 카드의 문자를 덮어씌우기 합니다. 이미지에 따라서는, 추가 스타일이나 유틸리티가 필요한 경우와 필요하지 않은 경우가 있습니다.
+이미지를 카드의 배경으로 하여, 카드의 문자를 덮어씌우게 합니다. 이미지에 따라서는, 추가 스타일이나 유틸리티가 필요한 경우와 필요하지 않은 경우가 있습니다.
 
 {{< example >}}
 <div class="card bg-dark text-white">
@@ -438,7 +438,7 @@ Header 나 footer 와 같이, 카드에는 카드의 상부와 하부의 "image 
 
 ### Border
 
-카드의 `border-color` 만 변경하려면, [border utilities]({{< docsref "/utilities/borders" >}}) 를 사용합니다. 아래와 같이, `.text-{color}` 클래스를 부모의 `.card` 나 카드의 내용의 서브 세트에 배치할 수 있습니다.
+카드의 `border-color` 만 변경하려면, [border utilities]({{< docsref "/utilities/borders" >}}) 를 사용합니다. 아래와 같이, `.text-{color}` 클래스를 부모의 `.card` 나 카드 내용의 서브 세트에 배치할 수 있습니다.
 
 {{< example >}}
 {{< card.inline >}}
@@ -456,7 +456,7 @@ Header 나 footer 와 같이, 카드에는 카드의 상부와 하부의 "image 
 
 ### Mixins utilities
 
-필요에 따라서 카드의 header 나 footer 의 라인을 변경하거나, `.bg-transparent` 를 사용해 `background-color` 를 삭제할 수 있습니다.
+필요에 따라서 카드의 header 나 footer의 라인을 변경하거나, `.bg-transparent`를 사용해 `background-color`를 삭제할 수 있습니다.
 
 {{< example >}}
 <div class="card border-success mb-3" style="max-width: 18rem;">
@@ -471,11 +471,11 @@ Header 나 footer 와 같이, 카드에는 카드의 상부와 하부의 "image 
 
 ## Card layout
 
-카드안의 콘텐츠의 스타일링에 가세해, 일련의 카드를 배치하기 위한 옵션이 포함되어 있습니다. **현재, 레이아웃 옵션은 아직 반응형에는 지원하고 있지 않습니다**.
+카드 안의 콘텐츠의 스타일링에 가세해, 일련의 카드를 배치하기 위한 옵션이 포함되어 있습니다. **현재, 레이아웃 옵션은 아직 반응형에는 지원하고 있지 않습니다**.
 
 ### Card groups
 
-카드 그룹을 사용해, 폭과 높이의 열이 같은 하나의 요소로 카드를 렌더링합니다. 카드 그룹은 쌓여진 상태로부터 시작하고, `display: flex;` 를 사용해 `sm` 브레이크 포인트부터 같은 크기의 상태로 넣어집니다.
+카드 그룹을 사용해, 폭과 높이의 열이 같은 하나의 요소로 카드를 렌더링합니다. 카드 그룹은 싸인 상태로부터 시작하고, `display: flex;`를 사용해 `sm` 브레이크 포인트부터 같은 크기의 상태로 넣어집니다.
 
 {{< example >}}
 <div class="card-group">
@@ -545,7 +545,7 @@ Footer가 있는 카드 그룹을 사용하면, 그 내용이 자동으로 정�
 
 ### Grid cards
 
-Bootstrap grid 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/grid#row-columns" >}})를 사용해, 행마다 표시하는 그리드 열의 개수(카드 주변을 감싼)를 제어합니다. 예를 들어, 여기에서는 `.row-cols-1` 은 한 줄로 카드를 배치하고, `.row-cols-md-2` 은 4개의 카드를 해당 브레이크 포인트에서 그 다음 줄로 넘겨 동일의 가로 폭으로 나눠주고 있습니다.
+Bootstrap 그리드 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/grid#row-columns" >}})를 사용해, 행마다 표시하는 그리드 열의 개수(카드 주변을 감싼)를 제어합니다. 예를 들어, 여기에서는 `.row-cols-1` 은 한 줄로 카드를 배치하고, `.row-cols-md-2` 은 4개의 카드를 해당 브레이크 포인트에서 그다음 줄로 넘겨 동일의 가로 폭으로 나눠주고 있습니다.
 
 {{< example >}}
 <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -631,7 +631,7 @@ Bootstrap grid 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/grid#ro
 </div>
 {{< /example >}}
 
-같은 높이가 필요한 경우에는, 카드에 `.h-100` 클래스를 추가합니다. Sass 에 `$card-height: 100%` 를 설정하면, 클래스 추가없이 기본적(항상)으로 같은 높이를 사용할 수 있습니다.
+같은 높이가 필요한 경우에는, 카드에 `.h-100` 클래스를 추가합니다. Sass 에 `$card-height: 100%`를 설정하면, 클래스 추가 없이 기본적(항상)으로 같은 높이를 사용할 수 있습니다.
 
 {{< example >}}
 <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -719,7 +719,7 @@ Bootstrap grid 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/grid#ro
 
 ### Masonry
 
-`v4` 에서는 CSS 전용 기술을 사용하여 Masonry 식의 컬럼의 동작을 따라했지만 이러한 기술에는 많은 영 좋지 않은 [부작용](https://github.com/twbs/bootstrap/pull/28922)을 발생시킵니다. `v5`에서 이러한 유형의 레이아웃을 사용하려면 Masonry 플러그인을 사용하면 됩니다. Masonry는 *Bootstrap에 포함되어 있지 않지만* 시작하는 데 도움이 되는 [데모 예제]({{< docsref "/examples/masonry" >}})를 만들었습니다.
+`v4` 에서는 CSS 전용 기술을 사용하여 Masonry 식의 컬럼의 동작을 따라 했지만 이러한 기술에는 많은 영 좋지 않은 [부작용](https://github.com/twbs/bootstrap/pull/28922)을 발생시킵니다. `v5`에서 이러한 유형의 레이아웃을 사용하려면 Masonry 플러그인을 사용하면 됩니다. Masonry는 *Bootstrap에 포함되어 있지 않지만* 시작하는 데 도움이 되는 [데모 예제]({{< docsref "/examples/masonry" >}})를 만들었습니다.
 
 ## Sass
 

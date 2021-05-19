@@ -21,7 +21,7 @@ toc: true
 </div>
 {{< /example >}}
 
-`value`가 이미 정의되어 있는 경우에는 `<label>`이 자동적으로 플로팅 되어져 있습니다.
+`value`가 이미 정의되어 있는 경우에는 `<label>`이 자동으로 플로팅 되어져 있습니다.
 
 {{< example >}}
 <form class="form-floating">

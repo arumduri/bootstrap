@@ -87,7 +87,7 @@ Additionally, Bootstrap also includes an `.mx-auto` class for horizontally cente
 
 ## Negative margin
 
-CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding` 은 사용할 수 없음). 이러한 음수 여백은 **기본적으로 사용 중지** 되지만 `$ enable-negative-margins : true` 를 설정하여 Sass에서 사용하도록 설정할 수 있습니다.
+CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding` 은 사용할 수 없음). 이러한 음수 여백은 **기본적으로 사용 중지** 되지만 `$ enable-negative-margins : true`를 설정하여 Sass에서 사용하도록 설정할 수 있습니다.
 
 구문은 기본 양수 margin 유틸리티와 거의 동일하지만 요청 된 크기 앞에 `n`이 추가됩니다. 다음은 `.mt-1` 과 반대되는 예제 클래스입니다:
 
@@ -99,7 +99,7 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 
 ## Gap
 
-`display : grid` 를 사용할 때 부모 그리드 컨테이너에서 `gap` 유틸리티를 사용할 수 있습니다. 이렇게하면 개별 그리드 항목 (`display : grid` 컨테이너의 하위 항목)에 여백 유틸리티를 추가 할 필요가 없습니다. 간격 유틸리티는 기본적으로 반응형이며 `$ spacers` Sass 맵을 기반으로 유틸리티 API를 통해 생성됩니다.
+`display : grid`를 사용할 때 부모 그리드 컨테이너에서 `gap` 유틸리티를 사용할 수 있습니다. 이렇게하면 개별 그리드 항목 (`display : grid` 컨테이너의 하위 항목)에 여백 유틸리티를 추가 할 필요가 없습니다. 간격 유틸리티는 기본적으로 반응형이며 `$ spacers` Sass 맵을 기반으로 유틸리티 API를 통해 생성됩니다.
 
 {{< example html >}}
 <div class="d-grid gap-3">

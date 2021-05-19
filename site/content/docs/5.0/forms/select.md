@@ -63,7 +63,7 @@ toc: true
 
 ## Disabled
 
-불리언 속성인 `disabled`를 셀렉트에 추가하면 비활성화 된 외형으로 표시되며 포인터 이벤트가 삭제됩니다.
+불리언 속성인 `disabled`를 셀렉트에 추가하면 비활성화된 외형으로 표시되며 포인터 이벤트가 삭제됩니다.
 
 {{< example >}}
 <select class="form-select" aria-label="Disabled select example" disabled>

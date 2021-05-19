@@ -72,7 +72,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 
 ### Margin
 
-`.m-5` 와 같이 [margin utilities][margin] 을 사용하면 간단하게 간격을 둘 수 있습니다.
+`.m-5`와 같이 [margin utilities][margin] 을 사용하면 간단하게 간격을 둘 수 있습니다.
 
 {{< example >}}
 <div class="spinner-border m-5" role="status">

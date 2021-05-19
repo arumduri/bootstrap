@@ -15,7 +15,7 @@ toc: true
 
 ## Accessibility
 
-[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 에서는, 실제의 [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu)가 정의되어 있지만, 이것은 액션이나 기능을 트리거로 하는 application-like 메뉴에 특화한 것입니다. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴는 메뉴 항목, 체크박스 메뉴 항목, 라디오 버튼 메뉴 항목, 라디오 버튼 그룹, 서브메뉴만을 포함할 수 있습니다.
+[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 에서는, 실제의 [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu)가 정의되어 있지만, 이것은 액션이나 기능을 트리거로 하는 application-like 메뉴에 특화한 것입니다. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴는 메뉴 항목, 체크 박스 메뉴 항목, 라디오 버튼 메뉴 항목, 라디오 버튼 그룹, 서브메뉴만을 포함할 수 있습니다.
 
 한편 Bootstrap의 드롭다운은 범용적으로 설계되어 다양한 상황이나 마크업 구조에 적용할 수 있습니다. 예를 들어 검색 필드나 로그인 폼 등의 추가 입력이나 폼 컨트롤을 포함한 드롭다운을 작성할 수 있습니다. 이 때문에 Bootstrap은, 진정한 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴에 필요한 `role`과 `aria-` 속성을 모두 기대하고 있지 않습니다(자동으로 추가도 하고 있지 않습니다). 이러한 보다 구체적인 속성들을 사용자가 추가로 작성해야 합니다.
 
@@ -23,7 +23,7 @@ toc: true
 
 ## Examples
 
-드롭다운의 토글(버튼이나 링크)과 드롭다운 메뉴를 `.dropdown` 이나 `position: relative;` 를 가진 다른 요소로 감쌉니다. 드롭다운은 `<a>` 나 `<button>` 요소로부터 트리거 할 수 있습니다. 여기서 보여주는 예시는, 필요에 따라서 시멘틱적인 `<ul>` 요소를 사용하고 있지만, 사용자 정의 마크업도 지원하고 있습니다.
+드롭다운의 토글(버튼이나 링크)과 드롭다운 메뉴를 `.dropdown` 이나 `position: relative;`를 가진 다른 요소로 감쌉니다. 드롭다운은 `<a>` 나 `<button>` 요소로부터 트리거 할 수 있습니다. 여기서 보여주는 예시는, 필요에 따라서 시멘틱적인 `<ul>` 요소를 사용하고 있지만, 사용자 정의 마크업도 지원하고 있습니다.
 
 ### Single button
 
@@ -613,7 +613,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 
 ### Active
 
-드롭다운 아이템에 `.active` 를 추가하여 **활성화** 스타일을 만듭니다. 활성화된 상태를 스크린 리더에 전달하기 위해 `aria-current` 속성을 사용합니다. 현재 페이지에는 `page` 값을, 세트 내 현재 아이템에는 `true` 를 사용합니다.
+드롭다운 아이템에 `.active`를 추가하여 **활성화** 스타일을 만듭니다. 활성화된 상태를 스크린 리더에 전달하기 위해 `aria-current` 속성을 사용합니다. 현재 페이지에는 `page` 값을, 세트 내 현재 아이템에는 `true`를 사용합니다.
 
 {{< example >}}
 <ul class="dropdown-menu">
@@ -625,7 +625,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 
 ### Disabled
 
-드롭다운 아이템에 `.disabled` 를 추가해 **disabled** 의 스타일을 만듭니다.
+드롭다운 아이템에 `.disabled`를 추가해 **disabled** 의 스타일을 만듭니다.
 
 {{< example >}}
 <ul class="dropdown-menu">
@@ -639,7 +639,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 
 기본적으로, 드롭다운 메뉴는 자동으로 위에서 100% 위치와 부모의 왼쪽에 따라 배치됩니다. You can change this with the directional `.drop*` classes, but you can also control them with additional modifier classes.
 
-드롭다운 메뉴를 오른쪽으로 배치시키려면 `.dropdown-menu` 에 `.dropdown-menu-end` 를 추가합니다. RTL로 사용할 경우 방향성은 반대가 되기 때문에 `.dropdown-menu-end` 는 왼쪽에 표시됩니다.
+드롭다운 메뉴를 오른쪽으로 배치시키려면 `.dropdown-menu` 에 `.dropdown-menu-end`를 추가합니다. RTL로 사용할 경우 방향성은 반대가 되기 때문에 `.dropdown-menu-end` 는 왼쪽에 표시됩니다.
 
 {{< callout info >}}
 **주의!** 드롭다운은 네비바에 포함되어 있는 경우를 제외하고 Popper에 의해 배치되어 있습니다.
@@ -662,7 +662,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 
 반응형 배치를 사용하고 싶을 경우, `data-bs-display="static"` 속성을 추가하여 동적 배치를 비활성화하고 반응형 변형 클래스를 사용합니다.
 
-드롭다운 메뉴를 지정된 브레이크 포인트 혹은 그 이상일 경우 **오른쪽**에 배치하려면 `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end` 를 추가합니다.
+드롭다운 메뉴를 지정된 브레이크 포인트 혹은 그 이상일 경우 **오른쪽**에 배치하려면 `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end`를 추가합니다.
 
 {{< example >}}
 <div class="btn-group">
@@ -677,7 +677,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 </div>
 {{< /example >}}
 
-**왼쪽**의 드롭다운 메뉴를 지정된 브레이크 포인트 이상의 크기에 배치하려면, `.dropdown-menu-end` 와 `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start` 를 추가합니다.
+**왼쪽**의 드롭다운 메뉴를 지정된 브레이크 포인트 이상의 크기에 배치하려면, `.dropdown-menu-end`와 `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start`를 추가합니다.
 
 {{< example >}}
 <div class="btn-group">
@@ -875,7 +875,7 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 
 ## Dropdown options
 
-드롭다운의 위치를 변경하려면 `data-bs-offset` 나 `data-bs-reference` 를 사용합니다.
+드롭다운의 위치를 변경하려면 `data-bs-offset` 나 `data-bs-reference`를 사용합니다.
 
 {{< example >}}
 <div class="d-flex">
@@ -1047,7 +1047,7 @@ JavaScript로 드롭다운을 호출하느냐 data-api를 사용하느냐에 상
       <td><code>display</code></td>
       <td>string</td>
       <td><code>'dynamic'</code></td>
-      <td>기본적으로는, 동적인 위치 맞추기로 Popper를 사용하고 있습니다. 이것을 비활성화 시키려면, <code>static</code> 으로 지정해 주세요.</td>
+      <td>기본적으로는, 동적인 위치 맞추기로 Popper를 사용하고 있습니다. 이것을 비활성화시키려면, <code>static</code> 으로 지정해 주세요.</td>
     </tr>
     <tr>
       <td><code>offset</code></td>

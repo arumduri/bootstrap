@@ -29,7 +29,7 @@ toc: true
 
 #### Bundle
 
-두가지의 번들을 통해서 모든 Bootstrap JavaScript 플러그인과 의존성을 한 번에 포함시키세요. `bootstrap.bundle.js`와 `bootstrap.bundle.min.js` 모두 툴팁과 팝오버를 위해서 [Popper](https://popper.js.org/)가 포함되어 있습니다. Bootstrap에 무엇이 포함되어 있는지 자세히 알고 싶으시다면 [콘텐츠]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}) 부분을 확인해주세요.
+두 가지의 번들을 통해서 모든 Bootstrap JavaScript 플러그인과 의존성을 한 번에 포함시키세요. `bootstrap.bundle.js`와 `bootstrap.bundle.min.js` 모두 툴팁과 팝오버를 위해서 [Popper](https://popper.js.org/)가 포함되어 있습니다. Bootstrap에 무엇이 포함되어 있는지 자세히 알고 싶으시다면 [콘텐츠]({{< docsref "/getting-started/contents#precompiled-bootstrap" >}}) 부분을 확인해주세요.
 
 ```html
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
@@ -56,7 +56,7 @@ toc: true
 <summary class="text-primary mb-3">JavaScript를 요구하는 컴포넌트 보기</summary>
 {{< markdown >}}
 - 경고 닫기
-- 상태 및 체크박스/라디오 기능 버튼
+- 상태 및 체크 박스/라디오 기능 버튼
 - 캐러셀의 모든 슬라이드 동작, 제어 및 인디케이터
 - 콘텐츠 가시성 접기 전환
 - 드롭다운에서의 표시 및 위치 ([Popper](https://popper.js.org/)도 필요)

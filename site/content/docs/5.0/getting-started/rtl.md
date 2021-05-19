@@ -20,7 +20,7 @@ RTL 기능은 아직 **실험적이며** 사용자 피드백에 따라 발전할
 
 ## Required HTML
 
-현재 Bootstrap 기반 페이지에서 RTL을 활성화하기 위한 두가지 엄격한 요구 사항이 있습니다.
+현재 Bootstrap 기반 페이지에서 RTL을 활성화하기 위한 두 가지 엄격한 요구 사항이 있습니다.
 
 1. `<html>` 요소에 `dir="rtl"`을 설정하세요.
 2. `<html>` 요소에 `lang="ar"`와 같은 적절한 `lang` 속성을 추가해주세요.
@@ -168,7 +168,7 @@ Sass를 실행한 다음 RTLCSS를 실행하면 CSS 파일의 각 선택자에 `
 
 1. `.ltr`과 `.rtl` 간에서 전환할 때 그에 따른 `dir` 및 `lang` 속성을 추가해야 합니다.
 2. 두 파일을 모두 불러오면 실제 성능에 병목 현상이 발생할 수 있습니다. [최적화]({{< docsref "/customize/optimize" >}})를 고려하고 둘 중 하나의 파일만 [비동기적으로 로드](https://www.filamentgroup.com/lab/load-css-simpler/)해보세요.
-3. 이런 식으로 스타일을 중첩하면 `form-validation-state()` 믹스인이 의도한 대로 작동하지 않으므로 어느정도 직접 조정이 필요합니다. [#31223을 참고](https://github.com/twbs/bootstrap/issues/31223)해주세요.
+3. 이런 식으로 스타일을 중첩하면 `form-validation-state()` 믹스인이 의도한 대로 작동하지 않음으로 어느정도 직접 조정이 필요합니다. [#31223을 참고](https://github.com/twbs/bootstrap/issues/31223)해주세요.
 {{< /callout >}}
 
 ## The breadcrumb case
