@@ -365,7 +365,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-예를 들어, 캐러셀의 컨스트럭터에서 캐러셀의 인스턴스를 만들어, 추가 옵션으로 초기화 하거나, 아이템의 순환을 시작하거나 할 수 있습니다.
+예를 들어, 캐러셀의 생성자에서 캐러셀의 인스턴스를 만들어, 추가 옵션으로 초기화 하거나, 아이템의 순환을 시작하거나 할 수 있습니다.
 
 ```js
 var myCarousel = document.querySelector('#myCarousel')

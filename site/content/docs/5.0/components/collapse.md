@@ -153,7 +153,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 접을 수 있는 요소로서 컨텐츠를 활성화합니다. 옵션의 `object`를 받습니다.
 
-컨스트럭터를 사용해, 콜랩스 인스턴스를 작성할 수 있습니다:
+생성자를 사용해, 콜랩스 인스턴스를 작성할 수 있습니다:
 
 ```js
 var myCollapse = document.getElementById('myCollapse')
