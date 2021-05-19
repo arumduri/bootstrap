@@ -75,13 +75,12 @@ Bootstrap 3의 도우미 (helpers)였던 유틸리티 클래스는 CSS 과점 (b
 
 ## Flexible HTML
 
-항상 가능한 것은 아니지만 우리는 컴포넌트에 대한 HTML 요구 사항에서 지나치게 독단적이지 않도록 노력합니다. 따라서 CSS 선택자에서 단일 클래스에 초점을 맞추고 직접적인 하위 선택자 (`>`)를 피하려고 합니다. 이는 구현에 더 많은 유연성을 제공하고 CSS를 더 단순하고 덜 구체적으로 유지하는 데 도움이 됩니다.
-While not always possible, we strive to avoid being overly dogmatic in our HTML requirements for components. Thus, we focus on single classes in our CSS selectors and try to avoid immediate children selectors (`>`). This gives you more flexibility in your implementation and helps keep our CSS simpler and less specific.
+항상 가능한 것은 아니지만 우리는 컴포넌트에 대한 HTML 요구 사항에서 지나치게 독단적이지 않도록 노력합니다. 따라서 CSS 선택자에서 단일 클래스에 초점을 맞추고 직접적인 하위 선택자 (`>`)를 피하려고 합니다. 이는 구현에 더 많은 유연성을 제공하고 CSS를 더 단순하고 덜 복잡하도록 유지하는 데 도움이 됩니다.
 
 ## Code conventions
 
-[Code Guide](https://codeguide.co/) (from Bootstrap co-creator, @mdo) documents how we write our HTML and CSS across Bootstrap. It specifices guidelines for general formatting, common sense defaults, property and attribute orders, and more.
+ (Bootstrap공동 제작자 @mdo가 만든) [Code Guide](https://codeguide.co/)는 Bootstrap에서 HTML과 CSS를 작성하는 방법을 설명합니다. 일반 서식, 기본 상식, 속성 및 속성 순서 등에 대한 지침을 구체적으로 설명합니다.
 
-We use [Stylelint](https://stylelint.io/) to enforce these standards and more in our Sass/CSS. [Our custom Stylelint config](https://github.com/twbs/stylelint-config-twbs-bootstrap) is open source and available for others to use and extend.
+우리는 [Stylelint](https://stylelint.io/)를 사용하여 Sass/CSS에서 이러한 표준 등을 시행합니다. [우리의 커스텀 Stylelint 설정](https://github.com/twbs/stylelint-config-twbs-bootstrap)은 오픈 소스이며 다른 사용자가 사용하고 확장시킬 수 있습니다.
 
-We use [vnu-jar](https://www.npmjs.com/package/vnu-jar) to enforce standard and semantic HTML, as well as detecting common errors.
+우리는 [vnu-jar](https://www.npmjs.com/package/vnu-jar)를 사용하여 표준 및 시멘틱 HTML 뿐만 아니라 일반적인 오류에 대한 검출도 시행합니다.

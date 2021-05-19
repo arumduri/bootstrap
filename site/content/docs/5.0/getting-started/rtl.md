@@ -137,7 +137,7 @@ $font-family-sans-serif:
 
 ### LTR and RTL at the same time
 
-Need both LTR and RTL on the same page? Thanks to [RTLCSS String Maps](https://rtlcss.com/learn/usage-guide/string-map/), this is pretty straightforward. Wrap your `@import`s with a class, and set a custom rename rule for RTLCSS:
+동일한 페이지에 LTR과 RTL이 모두 필요하신가요? [RTLCSS String Maps](https://rtlcss.com/learn/usage-guide/string-map/) 덕분에 이것은 매우 간단합니다. `@import`를 클래스로 래핑하고 RTLCSS에 대한 커스텀 이름 바꾸기 규칙을 다음과 같이 설정하면 됩니다:
 
 ```scss
 /* rtl:begin:options: {
@@ -159,16 +159,16 @@ Need both LTR and RTL on the same page? Thanks to [RTLCSS String Maps](https://r
 /*rtl:end:options*/
 ```
 
-After running Sass then RTLCSS, each selector in your CSS files will be prepended by `.ltr`, and `.rtl` for RTL files. Now you're able to use both files on the same page, and simply use `.ltr` or `.rtl` on your components wrappers to use one or the other direction.
+Sass를 실행한 다음 RTLCSS를 실행하면 CSS 파일의 각 선택자에 `.ltr`이 추가되고 RTL 파일의 경우 `.rtl`이 추가됩니다. 이제 동일한 페이지에서 두 파일을 모두 사용할 수 있으며 컴포넌트 래퍼에서 .ltr 또는 .rtl을 사용하여 둘 중 하나의 방향을 사용할 수 있습니다.
 
 {{< callout warning >}}
 #### Edge cases and known limitations
 
-While this approach is understandable, please pay attention to the following:
+이러한 접근은 이해 가능하지만 다음 사항을 주의해주셔야 합니다:
 
-1. When switching `.ltr` and `.rtl`, make sure you add `dir` and `lang` attributes accordingly.
-2. Loading both files can be a real performance bottleneck: consider some [optimization]({{< docsref "/customize/optimize" >}}), and maybe try to [load one of those files asynchronously](https://www.filamentgroup.com/lab/load-css-simpler/).
-3. Nesting styles this way will prevent our `form-validation-state()` mixin from working as intended, thus require you tweak it a bit by yourself. [See #31223](https://github.com/twbs/bootstrap/issues/31223).
+1. `.ltr`과 `.rtl` 간에서 전환할 때 그에 따른 `dir` 및 `lang` 속성을 추가해야 합니다.
+2. 두 파일을 모두 불러오면 실제 성능에 병목 현상이 발생할 수 있습니다. [최적화]({{< docsref "/customize/optimize" >}})를 고려하고 둘 중 하나의 파일만 [비동기적으로 로드](https://www.filamentgroup.com/lab/load-css-simpler/)해보세요.
+3. 이런 식으로 스타일을 중첩하면 `form-validation-state()` 믹스인이 의도한 대로 작동하지 않으므로 어느정도 직접 조정이 필요합니다. [#31223을 참고](https://github.com/twbs/bootstrap/issues/31223)해주세요.
 {{< /callout >}}
 
 ## The breadcrumb case

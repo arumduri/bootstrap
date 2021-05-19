@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Form controls(폼 컨트롤)
-description: 문자 형식의 폼 컨트롤에 스타일, 사이즈, 포커스 상태등을 업그레이드 조정합니다.
+description: 문자 형식의 `<input>`이나 `<textarea>`과 같은 폼 컨트롤에 사용자 정의 스타일, 크기 조정, 포커스 상태등의 업그레이드를 실시할 수 있습니다.
 group: forms
 toc: true
 ---
@@ -21,7 +21,7 @@ toc: true
 
 ## Sizing
 
-`.form-control-lg` 과 `.form-control-sm` 클래스를 사용해서 크기를 다르게 설정할 수 있습니다.
+`.form-control-lg` 와 `.form-control-sm` 클래스를 사용해서 크기를 다르게 설정할 수 있습니다.
 
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
@@ -31,7 +31,7 @@ toc: true
 
 ## Disabled
 
-`disabled` 불리언 속성을 추가하면 비활성화 외형이 되어 포인터 이벤트가 삭제됩니다.
+`disabled` 불리언 속성을 추가하면 비활성화 외형이 되면서 포인터 이벤트가 삭제됩니다.
 
 {{< example >}}
 <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
@@ -40,7 +40,7 @@ toc: true
 
 ## Readonly
 
-`readonly` 불리언 속성을 추가함으로써 입력 값의 변경을 막을 수 있습니다. 읽기전용 입력은 비활성화 입력과 동일한 외형으로 표시되지만 표준 커서는 유지됩니다.
+`readonly` 불리언 속성을 추가함으로써 입력 값의 변경을 막을 수 있습니다. 읽기 전용 입력은 비활성화 입력과 동일한 외형으로 표시되지만 표준 커서는 유지됩니다.
 
 {{< example >}}
 <input class="form-control" type="text" placeholder="Readonly input here..." aria-label="readonly input example" readonly>
@@ -115,9 +115,9 @@ toc: true
 
 ## Datalists
 
-데이터 목록을 사용하면 `<input>` 안에서 액세스(및 자동 보완) 할 수 있는 `<option>` 그룹을 작성할 수 있습니다. 이들은 `<select>` 요소와 비슷하지만 메뉴 표시에는 많은 제한과 차이가 있습니다. 대부분의 브라우저나 운영 체계는 `<datalist>` 요소를 어느 정도 지원하고 있지만, 그 표시에는 일관성이 없습니다.
+데이터 목록을 사용하면 `<input>` 안에서 엑세스(및 자동 보완) 할 수 있는 `<option>` 그룹을 작성할 수 있습니다. 이들은 `<select>` 요소와 비슷하지만 목록 표시에는 많은 제한과 차이가 있습니다. 대부분의 브라우저나 운영 체계는 `<datalist>` 요소를 어느 정도 지원하고 있지만, 그 표시에는 일관성이 없습니다.
 
-자세한 내용은 [datalist 요소의 서포트](https://caniuse.com/datalist)를 참고해 주세요.
+자세한 내용은 [support for datalist elements](https://caniuse.com/datalist)를 참고해 주세요.
 
 {{< example >}}
 <label for="exampleDataList" class="form-label">Datalist example</label>
@@ -135,16 +135,16 @@ toc: true
 
 ### Variables
 
-`$input-*` are shared across most of our form controls (and not buttons).
+`$input-*`는 (버튼빼고)대부분의 폼 컨트롤로 공유되고 있습니다.
 
 {{< scss-docs name="form-input-variables" file="scss/_variables.scss" >}}
 
-`$form-label-*` and `$form-text-*` are for our `<label>`s and `.form-text` component.
+`$form-label-*`과 `$form-text-*` 는 `<label>`과 `.form-text` 컴포넌트용입니다.
 
 {{< scss-docs name="form-label-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="form-text-variables" file="scss/_variables.scss" >}}
 
-`$form-file-*` are for file input.
+`$form-file-*`은 파일 입력용입니다.
 
 {{< scss-docs name="form-file-variables" file="scss/_variables.scss" >}}

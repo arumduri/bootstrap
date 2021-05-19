@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Validation(검증)
-description: HTML5 폼 검증에서는 브라우저의 기본 동작이나 사용자 스타일과 JavaScript를 이용해 사용자에게 가치있고 실용적인 피드백을 제공합니다.
+title: Validation(유효성 검사)
+description: HTML5 폼 유효성 검사에서는 브라우저의 기본 동작이나 사용자 정의 스타일과 JavaScript를 이용해 사용자에게 가치있고 실용적인 전달을 제공합니다.
 group: forms
 toc: true
 extra_js:
@@ -10,29 +10,29 @@ extra_js:
 ---
 
 {{< callout warning >}}
-현재 클라이언트 측의 맞춤 검증 스타일과 툴팁은 지원 기술에 공개되지 않아 접근할 수 없다는 것을 알고 있습니다. 해결책을 검토하는 동안 서버사이드 옵션을 사용하거나 브라우저 기본 검증 방법을 사용하는 것이 좋습니다.
+현재 클라이언트 측의 재정의하는 유효성 검사 스타일과 툴팁은 지원 기술에 공개되지 않아 접근할 수 없다는 것을 알고 있습니다. 해결책을 검토하는 동안 서버사이드 옵션을 사용하거나 브라우저의 기본 유효성 검사 방법을 사용하는 것을 권장합니다.
 {{< /callout >}}
 
 ## How it works
 
-Bootstrap에서의 폼 검증 구조를 소개합니다:
+Bootstrap에서 사용하고 있는 폼 유효성 검사 구조를 소개합니다:
 
-- HTML의 폼 검증은 CSS의 두개의 가상 클래스 `:invalid` 와 `:valid`를 사용해 `<input>`, `<select>`, `<textarea>` 요소에 적용됩니다.
-- Bootstrap는 `:invalid` 과 `:valid` 스타일을 상위 클래스 `.was-validated`에 범위를 지정하고 일반적으로 `<form>`에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 비활설화 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)
+- HTML의 폼 유효성 검사는 CSS의 두개의 가상 클래스 `:invalid` 와 `:valid`를 사용해 `<input>`, `<select>`, `<textarea>` 요소에 적용됩니다.
+- Bootstrap는 `:invalid` 과 `:valid` 스타일을 상위 클래스 `.was-validated`에 범위를 지정하고 일반적으로 `<form>`에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 잘못된 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)
 - 폼의 외형을 새로 적용하려면(예를 들어, AJAX를 사용한 동적인 폼 송신의 경우), 송신 후에 `.was-validated` 클래스를 `<form>`으로부터 다시 삭제합니다.
 - 폴백으로서 [server-side validation](#server-side)의 가상 클래스 대신 `.is-invalid` 와 `.is-valid` 클래스를 사용할 수 있습니다. 이 클래스들은 상위 클래스인 `.was-validated`를 필요로 하지 않습니다.
 - (현시점에서는)CSS 동작에 제약이 있기 때문에 사용자 정의 JavaScript의 도움을 받지 않고 DOM 내에서 폼 컨트롤의 앞에 있는 `<label>`에 스타일을 적용할 수 없습니다.
-- 모든 모던 브라우저는 폼 컨트롤을 검증하기 위한 일련의 JavaScript 메소드인 [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api)를 지원합니다.
-- 피드백 메세지는 [browser defaults](#browser-defaults) (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다)나 HTML과 CSS를 추가한 사용자 피드백 스타일을 이용할 수 도 있습니다.
+- 모든 모던 브라우저는 폼 컨트롤을 유효성 검사하기 위한 일련의 JavaScript 메소드인 [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api)를 지원합니다.
+- 전달 문구는 [browser defaults](#browser-defaults) (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다)나 HTML과 CSS를 추가한 사용자 정의 전달 스타일을 이용할 수도 있습니다.
 - JavaScript의 `setCustomValidity`를 사용해 사용자 정의의 유효성 문구를 제공할 수도 있습니다.
 
-이 점을 고려하여 사용자 정의 폼 검증 스타일, 옵션 서버 사이드 클래스 및 브라우저 기본값에 대해, 아래의 데모를 검토해 주세요.
+이 점들을 고려하여 사용자 정의 폼 유효성 검사 스타일, 선택적인 서버 사이드 클래스 및 브라우저 기본값에 대해, 아래의 데모를 확인 부탁드립니다.
 
 ## Custom styles
 
-For custom Bootstrap form validation messages, you'll need to add the `novalidate` boolean attribute to your `<form>`. This disables the browser default feedback tooltips, but still provides access to the form validation APIs in JavaScript. Try to submit the form below; our JavaScript will intercept the submit button and relay feedback to you. When attempting to submit, you'll see the `:invalid` and `:valid` styles applied to your form controls.
+Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에 `novalidate`라고 하는 불리언 속성을 추가할 필요가 있습니다. 이는 브라우저의 기본 전달 툴팁을 비활성화 시켜 JavaScript에서 폼 검증 API에 대한 접근을 제공합니다. 아래 예시의 전송 버튼을 눌러 보세요. JavaScript가 전송 버튼을 가로채고 전달합니다. 전송 버튼을 누르면, 폼 컨트롤에 `:invalid` 과 `:valid`의 스타일이 적용되고 있는 것을 알 수 있습니다.
 
-Custom feedback styles apply custom colors, borders, focus styles, and background icons to better communicate feedback. Background icons for `<select>`s are only available with `.form-select`, and not `.form-control`.
+색상, 모서리, 포커스 스타일 및 배경 아이콘을 이용해 더 나은 사용자 정의 전달 스타일을 적용하고 있습니다. `<select>` 의 배경 아이콘은 `.form-select`에서만 사용 가능하며 `.form-control`에서는 사용할 수 없습니다.
 
 {{< example >}}
 <form class="row g-3 needs-validation" novalidate>
@@ -109,9 +109,9 @@ Custom feedback styles apply custom colors, borders, focus styles, and backgroun
 
 ## Browser defaults
 
-Not interested in custom validation feedback messages or writing JavaScript to change form behaviors? All good, you can use the browser defaults. Try submitting the form below. Depending on your browser and OS, you'll see a slightly different style of feedback.
+유효성 검사의 전달 문구를 사용자 정의하거나 폼의 동작을 변경하기 위한 JavaScript에 관심이 없으신가요? 브라우저 기본값을 사용하면 됩니다. 아래의 전송 버튼을 눌러보세요. 사용하고 있는 브라우저와 OS에 따라 약간 다르게 표시되고 있습니다.
 
-While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
+이런 전달 스타일은 CSS로 변경할 수는 없지만, JavaScript로 전달 문구를 재정의할 수 있습니다.
 
 {{< example >}}
 <form class="row g-3">
@@ -161,11 +161,11 @@ While these feedback styles cannot be styled with CSS, you can still customize t
 
 ## Server side
 
-We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with `.is-invalid` and `.is-valid`. Note that `.invalid-feedback` is also supported with these classes.
+클라이언트 측의 유효성 검사를 권장하지만, 서버 측의 유효성 검사가 필요한 경우에는 `.is-invalid` 와 `.is-valid`를 사용해 잘못된 폼 필드와 잘된 폼 필드를 각각 표현할 수 있습니다. 이러한 클래스에서는 `.invalid-feedback`도 지원되고 있다는 점을 주의해 주세요.
 
-For invalid fields, ensure that the invalid feedback/error message is associated with the relevant form field using `aria-describedby` (noting that this attribute allows more than one `id` to be referenced, in case the field already points to additional form text).
+잘못된 필드의 경우, 잘못된 전달/오류 문구가 `aria-describedby`(이 속성은 이미 추가의 폼 문구를 가리키는 경우, 여러 `id`를 허용한다는 점에 유의해 주세요)를 사용해 적절한 폼 필드와 연관되어 있다는 점을 확인해 주세요.
 
-To fix [issues with border radii](https://github.com/twbs/bootstrap/issues/25110), input groups require an additional `.has-validation` class.
+입력 그룹과 함께 사용할 때 생기는 [issues with border radii](https://github.com/twbs/bootstrap/issues/25110)를 해결하기 위해 입력 그룹에 `.has-validation` 클래스를 추가하게 되었습니다.
 
 {{< example >}}
 <form class="row g-3">
@@ -236,11 +236,11 @@ To fix [issues with border radii](https://github.com/twbs/bootstrap/issues/25110
 
 ## Supported elements
 
-Validation styles are available for the following form controls and components:
+유효성 검사 스타일은 아래의 폼 컨트롤과 컴포넌트에서 사용할 수 있습니다:
 
-- `<input>`s and `<textarea>`s with `.form-control` (including up to one `.form-control` in input groups)
-- `<select>`s with `.form-select`
-- `.form-check`s
+- `.form-control`을 사용하고 있는 `<input>`과 `<textarea>` (입력 그룹에 최대 한 개의 `.form-control`을 포함)
+- `.form-select`를 사용하는 `<select>`
+- `.form-check`
 
 {{< example >}}
 <form class="was-validated">
@@ -291,7 +291,7 @@ Validation styles are available for the following form controls and components:
 
 ## Tooltips
 
-If your form layout allows it, you can swap the `.{valid|invalid}-feedback` classes for `.{valid|invalid}-tooltip` classes to display validation feedback in a styled tooltip. Be sure to have a parent with `position: relative` on it for tooltip positioning. In the example below, our column classes have this already, but your project may require an alternative setup.
+폼의 레이아웃이 허락된다면, 유효성 검사 전달을 `.{valid|invalid}-feedback` 클래스와 교체하여 스타일 있는 툴팁으로 표시할 수 있습니다. 툴팁의 위치를 정하기 위해서 반드시 상위 요소에 `position: relative`를 지정해야 합니다. 아래 예시에서는 컬럼 클래스에 이 설정을 추가했지만, 프로젝트에 따라 다른 설정이 필요할 수도 있습니다.
 
 {{< example >}}
 <form class="row g-3 needs-validation" novalidate>
@@ -357,26 +357,26 @@ If your form layout allows it, you can swap the `.{valid|invalid}-feedback` clas
 
 ### Mixins
 
-Two mixins are combined together, through our [loop](#loop), to generate our form validation feedback styles.
+두 개의 믹스인을 [loop](#loop)로 조합하고, 유효성 검사의 전달 스타일을 만들고 있습니다.
 
 {{< scss-docs name="form-validation-mixins" file="scss/mixins/_forms.scss" >}}
 
 ### Map
 
-This is the validation Sass map from `_variables.scss`. Override or extend this to generate different or additional states.
+이것은 `_variables.scss`의 유효성 검사용 Sass맵 입니다. 이것을 덮어쓰거나 확장해 서로 다른 상태나 추가 상태를 만들수 있습니다.
 
 {{< scss-docs name="form-validation-states" file="scss/_variables.scss" >}}
 
-Maps of `$form-validation-states` can contain three optional parameters to override tooltips and focus styles.
+`$form-validation-states` 맵에는 툴팁이나 포커스 스타일을 덮어쓸수 있는 세 가지 옵션의 파라미터를 포함할 수 있습니다.
 
 ### Loop
 
-Used to iterate over `$form-validation-states` map values to generate our validation styles. Any modifications to the above Sass map will be reflected in your compiled CSS via this loop.
+유효성 검사 스타일을 만들기 위해`$form-validation-states` 맵의 값을 반복 처리하기 위해 사용합니다. 위의 Sass맵에 변경이 있을 경우 이 반복문을 통해 컴파일되어 CSS에 반영됩니다.
 
 {{< scss-docs name="form-validation-states-loop" file="scss/forms/_validation.scss" >}}
 
 ### Customizing
 
-Validation states can be customized via Sass with the `$form-validation-states` map. Located in our `_variables.scss` file, this Sass map is how we generate the default `valid`/`invalid` validation states. Included is a nested map for customizing each state's color, icon, tooltip color, and focus shadow. While no other states are supported by browsers, those using custom styles can easily add more complex form feedback.
+유효성 검사 상태는 Sass의 `$form-validation-states` 맵을 사용하여 재정의 할 수 있습니다. 이 Sass맵은 `_variables.scss` 파일에 있으며 기본 `valid`/`invalid` 상태를 만듭니다. 이 맵에는 각 상태의 색상, 아이콘, 툴팁의 색상, 포커스 섀도를 재정의 하기 위한 중첩된 맵이 포함되어 있습니다. 브라우저에서는 다른 상태가 지원되고 있지 않지만 사용자 정의 스타일을 사용하여 더 복잡한 폼 전달을 쉽게 추가할 수 있습니다.
 
-Please note that **we do not recommend customizing `$form-validation-states` values without also modifying the `form-validation-state` mixin**.
+덧붙여 **`$form-validation-states`의 값을 재정의 할 때에는 `form-validation-state`의 믹스인을 변경하지 않는 것을 권장합니다.**
