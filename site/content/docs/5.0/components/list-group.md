@@ -8,7 +8,7 @@ toc: true
 
 ## Basic example
 
-가장 기본적인 목록 그룹은 목록 아이템과 적절한 클래스를 가진 순서없는 목록입니다. 이하의 옵션을 사용해, 혹은 필요에 따라서 독자적인 CSS 를 사용해 만듭니다.
+가장 기본적인 목록 그룹은 목록 아이템과 적절한 클래스를 가진 순서 없는 목록입니다. 이하의 옵션을 사용해, 혹은 필요에 따라서 독자적인 CSS를 사용해 만듭니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -50,7 +50,7 @@ toc: true
 
 ## Links and buttons
 
-_actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>` 을 사용하고, `.list-group-item-action` 을 추가합니다. 비인터랙티브한 요소(`<li>` 혹은 `<div>`와 같은)로 만들어진 목록 그룹이 클릭이나 탭 어포던스를 제공하지 않도록, 이러한 가상 클래스를 분리하고 있습니다.
+_actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`을 사용하고, `.list-group-item-action` 을 추가합니다. 비 인터랙티브한 요소(`<li>` 혹은 `<div>`와 같은)로 만들어진 목록 그룹이 클릭이나 탭 어포던스를 제공하지 않도록, 이러한 가상 클래스를 분리하고 있습니다.
 
 여기에서는 **표준의 `.btn` 클래스를 사용하지 않도록 주의해 주세요**.
 
@@ -98,7 +98,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 `.list-group-numbered`라는 수식어 클래스(와 옵션에서 `<ol>`요소를 사용하여)를 추가하여 숫자 목록 리스트 그룹을 만들 수 있습니다. 숫자는(`<ol>`의 브라우저 기본 스타일링이 아닌) CSS에 의해 추가되므로 목록 그룹 아이템 내에서 배치가 간단하고 재정의하기도 쉬워집니다.
 
-숫자는 `<ol>`의 `counter-increment`에 의해 생성되며 `counter-increment`와 콘텐츠를 가진 `<li>`의 `::before` 가상 요소를 사용하여 스타일링되고 배치됩니다.
+숫자는 `<ol>`의 `counter-increment`에 의해 생성되며 `counter-increment`와 콘텐츠를 가진 `<li>`의 `::before` 가상 요소를 사용하여 스타일링 되고 배치됩니다.
 
 {{< example >}}
 <ol class="list-group list-group-numbered">
@@ -138,9 +138,9 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## Horizontal
 
-목록 그룹의 아이템 레이아웃을 모든 브레이크 포인트에서 수직에서 수평으로 변경하려면 `.list-group-horizontal` 을 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}`를 선택하고 브레이크 포인트의 `min-width` 로 시작하는 목록 그룹을 수평으로 합니다. 현재 **수평 목록 그룹을 flush 목록 그룹과 조합할 수 없습니다.**
+목록 그룹의 아이템 레이아웃을 모든 브레이크 포인트에서 수직에서 수평으로 변경하려면 `.list-group-horizontal`를 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}`를 선택하고 브레이크 포인트의 `min-width`로 시작하는 목록 그룹을 수평으로 합니다. 현재 **수평 목록 그룹을 flush 목록 그룹과 조합할 수 없습니다.**
 
-**꿀팁:** 목록 그룹의 아이템을 수평 방향의 동일한 너비로 하고 싶을 경우, 목록 그룹의 각 아이템에 `.flex-fill` 을 추가합니다.
+**꿀팁:** 목록 그룹의 아이템을 수평 방향의 동일한 너비로 하고 싶을 경우, 목록 그룹의 각 아이템에 `.flex-fill`을 추가합니다.
 
 {{< example >}}
 {{< list-group.inline >}}
@@ -169,7 +169,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 </ul>
 {{< /example >}}
 
-상황별 클래스는 `.list-group-item-action`에도 동작합니다. 이전 예시에서 볼 수 없었던 호버 스타일이 추가 되었음을 주의하세요. 또 `.active` 상태도 지원되고 있습니다. 이것을 적용해 상황별 목록 그룹 아이템에서 활성화 된 선택을 나타낼 수 있습니다.
+상황별 클래스는 `.list-group-item-action`에도 동작합니다. 이전 예시에서 볼 수 없었던 호버 스타일이 추가되었음을 주의하세요. 또 `.active` 상태도 지원되고 있습니다. 이것을 적용해 상황별 목록 그룹 아이템에서 활성화된 선택을 나타낼 수 있습니다.
 
 {{< example >}}
 <div class="list-group">
@@ -242,7 +242,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## Checkboxes and radios
 
-목록 그룹 아이템 내에 Bootstrap 체크 박스와 라디오 버튼을 배치하고 필요에 따라 재정의 합니다. `<label>` 없이도 사용이 가능하지만 접근성을 위해 `aria-label` 속성과 값을 포함시켜 주세요.
+목록 그룹 아이템 내에 Bootstrap 체크 박스와 라디오 버튼을 배치하고 필요에 따라 재정의합니다. `<label>` 없이도 사용이 가능하지만 접근성을 위해 `aria-label` 속성과 값을 포함해 주세요.
 
 {{< example >}}
 <ul class="list-group">
