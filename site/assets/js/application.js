@@ -113,7 +113,7 @@
   }
 
   // Insert copy to clipboard button before .highlight
-  var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="클립보드에 복사">복사</button></div>'
+  var btnHtml = '<div class="bd-clipboard"><button type="button" class="btn-clipboard" title="클립보드에 복사">Copy</button></div>'
   document.querySelectorAll('div.highlight')
     .forEach(function (element) {
       element.insertAdjacentHTML('beforebegin', btnHtml)
