@@ -313,11 +313,11 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 
 ## JavaScript behavior
 
-`bootstrap.js` 파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.
+`bootstrap.js`파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.
 
-[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서는, 지원 기술(스크린 리더 등)의 사용자에게 구조, 기능, 현재의 상태를 전달하기 위해 `role="tablist"`, `role="tab"`, `role="tabpanel"` 및 추가의 `aria-` 속성을 지원합니다. As a best practice, we recommend using `<button>` elements for the tabs, as these are controls that trigger a dynamic change, rather than links that navigate to a new page or location.
+[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel)에서는, 지원 기술(스크린 리더 등)의 사용자에게 구조, 기능, 현재의 상태를 전달하기 위해 `role="tablist"`, `role="tab"`, `role="tabpanel"` 및 추가의 `aria-` 속성을 지원합니다. 좋은 실행 방법으로써 탭에는 `<button>` 요소 사용을 권장합니다. 이것은 새로운 페이지나 장소로 이동하는 링크가 아니라, 동적인 변화를 일으키는 컨트롤이기 때문입니다.
 
-동적인 탭이 있는 인터페이스는 드롭다운 메뉴를 포함해서는 <em>안됩니다</em>. 사용성 관점에서 현재 표시되고 있는 탭의 트리커 요소가 곧바로 표시되지 않는다는(닫힌 드롭다운 메뉴 안에 있기 때문에) 사실은 혼란을 일으킬 가능성이 있습니다. 접급성 관점에서 이러한 종류의 구조를 표준적인 WAI ARIA 패턴에 매핑하기 위한 현명한 방법은 현재로선 없습니다.
+동적인 탭이 있는 인터페이스는 드롭다운 메뉴를 포함해서는 <em>안됩니다</em>. 사용성 관점에서 현재 표시되고 있는 탭의 트리커 요소가 곧바로 표시되지 않는다는(닫힌 드롭다운 메뉴 안에 있기 때문에) 사실은 혼란을 일으킬 가능성이 있습니다. 접근성 관점에서 이러한 종류의 구조를 표준적인 WAI ARIA 패턴에 매핑하기 위한 현명한 방법은 현재로선 없습니다.
 
 <div class="bd-example">
   <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
@@ -363,7 +363,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 </div>
 ```
 
-요구에 맞춰, 이것은 위에 나온 것과 같은 `<ul>` 베이스의 마크업에서도, 임의의 마크업에서도 동작합니다. `<nav>` 를 사용하는 경우 `role="tablist"` 를 직접 추가하지 않습니다. 대신에 다른 요소(아래의 예시에서는 단순한 `<div>`)로 전환해 `<nav>` 로 감쌌습니다.
+요구에 맞춰, 이것은 위에 나온 것과 같이 `<ul>`의 마크업에서도, 임의의 마크업에서도 동작합니다. `<nav>`를 사용하는 경우 `role="tablist"`를 직접 추가하지 않습니다. 대신에 다른 요소(아래의 예시에서는 단순한 `<div>`)로 전환해 `<nav>`로 감쌌습니다.
 
 <div class="bd-example">
   <nav>
@@ -401,7 +401,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 </div>
 ```
 
-탭의 플러그인은 pills 에서도 동작합니다.
+탭의 플러그인은 pills에서도 동작합니다.
 
 <div class="bd-example">
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -447,7 +447,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 </div>
 ```
 
- 세로 pills 에서도 같습니다.
+ 세로형 pills에서도 같습니다.
 
 <div class="bd-example">
   <div class="d-flex align-items-start">
@@ -493,7 +493,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 
 ### Using data attributes
 
-요소에 `data-bs-toggle="tab"` 혹은 `data-bs-toggle="pill"` 를 지정하는것 만으로, JavaScript 를 쓰지 않고도 탭이나 pill의 내비게이션을 활성화 시킬 수 있습니다. 이러한 data 속성은 `.nav-tabs` 나 `.nav-pills` 로 사용합니다.
+요소에 `data-bs-toggle="tab"` 혹은 `data-bs-toggle="pill"`를 지정하는것 만으로, JavaScript를 쓰지 않고도 탭이나 pill의 내비게이션을 활성화 시킬 수 있습니다. 이러한 data 속성은 `.nav-tabs`나 `.nav-pills`로 사용합니다.
 
 ```html
 <!-- Nav tabs -->
@@ -549,7 +549,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Fade effect
 
-탭을 페이드인 시키려면, `.tab-pane` 에 `.fade` 를 추가합니다. 첫 번째 탭에는 컨텐츠를 표시하기 위해 `.show` 를 추가할 필요가 있습니다.
+탭을 페이드인 시키려면, `.tab-pane`에 `.fade`를 추가합니다. 첫 번째 탭에는 컨텐츠를 표시하기 위해 `.show`를 추가할 필요가 있습니다.
 
 ```html
 <div class="tab-content">
@@ -568,7 +568,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### constructor
 
-탭 요소와 컨텐츠 컨테이너를 활성화합니다. 탭은 DOM 안의 컨테이너 노드를 타겟으로 하는 `data-bs-target`가 있어야 하며 링크를 사용하면 `href` 가 있어야 합니다.
+탭 요소와 컨텐츠 컨테이너를 활성화합니다. 탭은 DOM 안의 컨테이너 노드를 타겟으로 하는 `data-bs-target`가 있어야 하며 링크를 사용하면 `href`가 있어야 합니다.
 
 ```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">
