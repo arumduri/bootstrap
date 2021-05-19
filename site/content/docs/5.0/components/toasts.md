@@ -43,7 +43,7 @@ toc: true
 
 ### Live
 
-Click the button below to show a toast (positioned with our utilities in the lower right corner) that has been hidden by default with `.hide`.
+아래의 버튼을 클릭하면 `.hide`를 사용해 기본적으로 숨겨져 있던 (유틸리티를 사용해 오른쪽 아래에 배치한)토스트가 표시됩니다.
 
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
@@ -83,7 +83,7 @@ Click the button below to show a toast (positioned with our utilities in the low
 
 ### Translucent
 
-Toasts are slightly translucent to blend in with what's below them.
+토스트는 아래의 컨텐츠와 어울려져 보이도록 약간 비치게 보여집니다.
 
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -101,7 +101,7 @@ Toasts are slightly translucent to blend in with what's below them.
 
 ### Stacking
 
-토스트를 `toast container` 로 감싸면 여러개 사용할 수 있습니다.
+토스트를 `toast container`로 감싸면 여러개 사용할 수 있습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast-container">
@@ -133,7 +133,7 @@ Toasts are slightly translucent to blend in with what's below them.
 
 ### Custom content
 
-Customize your toasts by removing sub-components, tweaking them with [utilities]({{< docsref "/utilities/api" >}}), or by adding your own markup. Here we've created a simpler toast by removing the default `.toast-header`, adding a custom hide icon from [Bootstrap Icons]({{< param icons >}}), and using some [flexbox utilities]({{< docsref "/utilities/flex" >}}) to adjust the layout.
+서브 컴포넌트를 삭제하거나, [utilities]({{< docsref "/utilities/api" >}})로 조정하거나, 독자적인 마크업을 추가하여 토스트를 재정의 할 수 있습니다. 아래 예시에서는, 기본 제공하는 `.toast-header`를 삭제하고 [Bootstrap Icons]({{< param icons >}})을 사용하여 사용자 정의 숨김 아이콘을 추가하고 [flexbox utilities]({{< docsref "/utilities/flex" >}})로 레이아웃을 조정해 보다 간단한 토스트를 만들고 있습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
@@ -162,7 +162,7 @@ Customize your toasts by removing sub-components, tweaking them with [utilities]
 
 ### Color schemes
 
-Building on the above example, you can create different toast color schemes with our [color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utilities. Here we've added `.bg-primary` and `.text-white` to the `.toast`, and then added `.btn-close-white` to our close button. For a crisp edge, we remove the default border with `.border-0`.
+위의 예시를 바탕으로 [color]({{< docsref "/utilities/colors" >}})와 [background]({{< docsref "/utilities/background" >}}) 유틸리티를 사용해 다른 토스트의 색상 배합을 만들 수 있습니다. 여기에서는 `.toast`에 `.bg-primary`와 `.text-white`를 추가하고, 닫기 버튼에는 `.btn-close-white`를 추가하고 있습니다. 선명한 모서리를 보여주기 위해 `.border-0`을 추가해 기본으로 제공한 모서리를 삭제하고 있습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
@@ -177,7 +177,7 @@ Building on the above example, you can create different toast color schemes with
 
 ## Placement
 
-필요에 따라 사용자 지정 CSS로 토스트를 배치시킵니다. 우측 상단은 알림용으로 사용되는 경우가 많으며, 상단 중앙도 마찬가지입니다. 한번에 하나의 토스트 밖에 표시하지 않는다면, 배치 스타일을 `.toast` 의 오른쪽에 넣어주세요.
+필요에 따라 사용자 지정 CSS로 토스트를 배치시킵니다. 우측 상단은 알림용으로 사용되는 경우가 많으며, 상단 중앙도 마찬가지입니다. 한번에 하나의 토스트 밖에 표시하지 않는다면, 배치 스타일을 `.toast`의 오른쪽에 넣어주세요.
 
 {{< example >}}
 <form>
@@ -213,7 +213,7 @@ Building on the above example, you can create different toast color schemes with
 </div>
 {{< /example >}}
 
-더 많은 알림을 만드는 시스템에서는 쉽게 쌓이게 하도록 wrapping 요소의 사용을 검토하십시오.
+더 많은 알림을 만드는 시스템에서는 쉽게 쌓이게 하도록 wrapping 요소의 사용을 검토해 주세요.
 
 {{< example class="bg-dark bd-example-toasts p-0" >}}
 <div aria-live="polite" aria-atomic="true" class="position-relative">
@@ -274,13 +274,13 @@ Building on the above example, you can create different toast color schemes with
 
 ## Accessibility
 
-Toasts are intended to be small interruptions to your visitors or users, so to help those with screen readers and similar assistive technologies, you should wrap your toasts in an [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Changes to live regions (such as injecting/updating a toast component) are automatically announced by screen readers without needing to move the user's focus or otherwise interrupt the user. Additionally, include `aria-atomic="true"` to ensure that the entire toast is always announced as a single (atomic) unit, rather than just announcing what was changed (which could lead to problems if you only update part of the toast's content, or if displaying the same toast content at a later point in time). If the information needed is important for the process, e.g. for a list of errors in a form, then use the [alert component]({{< docsref "/components/alerts" >}}) instead of toast.
+토스트는 방문자가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 `aria-atomic="true"`를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 컨텐츠 일부만을 갱신한 경우나 같은 토스트의 컨텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용해 주세요.
 
 토스트가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
 
 그리고, 내용에 따라 `role` 과 `aria-live` 의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
 
-As the content you're displaying changes, be sure to update the [`delay` timeout](#options) so that users have enough time to read the toast.
+보여지는 컨텐츠가 바뀌면 사용자가 토스트를 읽기에 충분한 시간이 필요하므로 [`delay` timeout](#options)을 반드시 업데이트 해 주세요.
 
 ```html
 <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-bs-delay="10000">
@@ -288,7 +288,7 @@ As the content you're displaying changes, be sure to update the [`delay` timeout
 </div>
 ```
 
-`autohide: false` 를 사용할 때에는, 사용자가 토스트를 해제할 수 있도록 닫기 버튼을 추가해야 합니다.
+`autohide: false`를 사용할 때에는, 사용자가 토스트를 해제할 수 있도록 닫기 버튼을 추가해야 합니다.
 
 {{< example class="bg-light" >}}
 <div role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-bs-autohide="false">
@@ -304,7 +304,7 @@ As the content you're displaying changes, be sure to update the [`delay` timeout
 </div>
 {{< /example >}}
 
-While technically it's possible to add focusable/actionable controls (such as additional buttons or links) in your toast, you should avoid doing this for autohiding toasts. Even if you give the toast a long [`delay` timeout](#options), keyboard and assistive technology users may find it difficult to reach the toast in time to take action (since toasts don't receive focus when they are displayed). If you absolutely must have further controls, we recommend using a toast with `autohide: false`.
+기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에게 긴 [`delay` timeout](#options)를 주었다고 하더라도 키보드나 지원 기술 사용자가 알수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 `autohide: false`를 사용하는 것을 권장합니다.
 
 ## Sass
 
@@ -377,7 +377,7 @@ toast.show()
 
 #### hide
 
-요소인 토스트를 숨깁니다. **토스트가 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.toast` 이벤트가 발생하기 전). `autohide` 를 `false` 로 했을 경우, 이 메소드를 수동으로 호출할 필요가 있습니다.
+요소인 토스트를 숨깁니다. **토스트가 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.toast` 이벤트가 발생하기 전). `autohide`를 `false`로 했을 경우, 이 메소드를 수동으로 호출 할 필요가 있습니다.
 
 ```js
 toast.hide()
@@ -385,7 +385,7 @@ toast.hide()
 
 #### dispose
 
-요소의 토스트를 숨깁니다. 토스트는 DOM 상에 남습니다만, 표시되지 않게 됩니다.
+요소의 토스트를 숨깁니다. 토스트는 DOM 상에 남지만, 표시되지 않게 됩니다.
 
 ```js
 toast.dispose()
