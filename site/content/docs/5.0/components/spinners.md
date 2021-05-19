@@ -41,7 +41,7 @@ Border 스피너는 `border-color` 에 `currentColor` 을 사용합니다. 표�
 {{< /example >}}
 
 {{< callout info >}}
-**왜 `border-color` 유틸리티를 사용하지 않나요?** 각 border 스피너는 적어도 한 쪽의 보더를 `transparent` 로 지정하므로, `.border-{color}` 유틸리티는 그것을 덮어씁니다.
+**`border-color` 유틸리티를 사용하면 안되나요?** 각 border스피너는 적어도 한 쪽의 보더를 `transparent` 로 지정해야 하는데, `.border-{color}` 유틸리티는 그것을 덮어쓰기 때문입니다.
 {{< /callout >}}
 
 ## Growing spinner
