@@ -13,7 +13,7 @@ toc: true
 
 카드는 적은 마크업과 스타일로 되어 있지만, 다양한 사용자 정의가 가능합니다. Flexbox로 만들어져 있어 쉽게 배치가 가능하고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 `margin` 설정이 없기 때문에 필요에 따라 [spacing utilities]({{< docsref "/utilities/spacing" >}})를 사용합니다.
 
-아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [sizing options](#sizing)을 통해서 간단하게 재정의 할 수 있습니다.
+아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [sizing options](#sizing) 을 통해서 간단하게 재정의할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">

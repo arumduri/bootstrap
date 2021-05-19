@@ -9,7 +9,7 @@ sections:
   - title: Form control
     description: 다양한 상태를 지원하는 문자 입력과 문자 영역의 스타일을 설정할 수 있습니다.
   - title: Select
-    description: 브라우저의 기본 셀렉트 요소의 초기 표시를 재정의 할 수 있게 개선하였습니다.
+    description: 브라우저의 기본 셀렉트 요소의 초기 표시를 재정의할 수 있게 개선하였습니다.
   - title: Checks & radios
     description: 우리가 개선한 라디오 버튼과 체크박스를 폼으로 사용하여, 입력 옵션을 선택할 수 있습니다.
   - title: Range

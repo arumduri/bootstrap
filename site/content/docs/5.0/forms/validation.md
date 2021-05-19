@@ -377,6 +377,6 @@ Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에
 
 ### Customizing
 
-유효성 검사 상태는 Sass의 `$form-validation-states` 맵을 사용하여 재정의 할 수 있습니다. 이 Sass맵은 `_variables.scss` 파일에 있으며 기본 `valid`/`invalid` 상태를 만듭니다. 이 맵에는 각 상태의 색상, 아이콘, 툴팁의 색상, 포커스 섀도를 재정의 하기 위한 중첩된 맵이 포함되어 있습니다. 브라우저에서는 다른 상태가 지원되고 있지 않지만 사용자 정의 스타일을 사용하여 더 복잡한 폼 전달을 쉽게 추가할 수 있습니다.
+유효성 검사 상태는 Sass의 `$form-validation-states` 맵을 사용하여 재정의할 수 있습니다. 이 Sass맵은 `_variables.scss` 파일에 있으며 기본 `valid`/`invalid` 상태를 만듭니다. 이 맵에는 각 상태의 색상, 아이콘, 툴팁의 색상, 포커스 섀도를 재정의 하기 위한 중첩된 맵이 포함되어 있습니다. 브라우저에서는 다른 상태가 지원되고 있지 않지만 사용자 정의 스타일을 사용하여 더 복잡한 폼 전달을 쉽게 추가할 수 있습니다.
 
-덧붙여 **`$form-validation-states`의 값을 재정의 할 때에는 `form-validation-state`의 믹스인을 변경하지 않는 것을 권장합니다.**
+덧붙여 **`$form-validation-states`의 값을 재정의할 때에는 `form-validation-state`의 믹스인을 변경하지 않는 것을 권장합니다.**

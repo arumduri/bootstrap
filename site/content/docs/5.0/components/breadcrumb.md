@@ -35,7 +35,7 @@ toc: true
 
 ## Dividers
 
-구분자는 CSS의 [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) 과 [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content) 를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 `--bs-breadcrumb-divider` 를 변경하거나, `$breadcrumb-divider` Sass 변수 — 와 `$breadcrumb-divider-flipped` 을 사용해 RTL에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS를 다시 컴파일하지 않고 재정의 할 수 있는 글로벌한 구분자를 얻을 수 있습니다.
+구분자는 CSS의 [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) 과 [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content) 를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 `--bs-breadcrumb-divider` 를 변경하거나, `$breadcrumb-divider` Sass 변수 — 와 `$breadcrumb-divider-flipped` 을 사용해 RTL에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS를 다시 컴파일하지 않고 재정의할 수 있는 글로벌한 구분자를 얻을 수 있습니다.
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">

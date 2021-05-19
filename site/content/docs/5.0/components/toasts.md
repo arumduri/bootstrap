@@ -133,7 +133,7 @@ toc: true
 
 ### Custom content
 
-서브 컴포넌트를 삭제하거나, [utilities]({{< docsref "/utilities/api" >}})로 조정하거나, 독자적인 마크업을 추가하여 토스트를 재정의 할 수 있습니다. 아래 예시에서는, 기본 제공하는 `.toast-header`를 삭제하고 [Bootstrap Icons]({{< param icons >}})을 사용하여 사용자 정의 숨김 아이콘을 추가하고 [flexbox utilities]({{< docsref "/utilities/flex" >}})로 레이아웃을 조정해 보다 간단한 토스트를 만들고 있습니다.
+서브 컴포넌트를 삭제하거나, [utilities]({{< docsref "/utilities/api" >}})로 조정하거나, 독자적인 마크업을 추가하여 토스트를 재정의할 수 있습니다. 아래 예시에서는, 기본 제공하는 `.toast-header`를 삭제하고 [Bootstrap Icons]({{< param icons >}})을 사용하여 사용자 정의 숨김 아이콘을 추가하고 [flexbox utilities]({{< docsref "/utilities/flex" >}})로 레이아웃을 조정해 보다 간단한 토스트를 만들고 있습니다.
 
 {{< example class="bg-light" >}}
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
