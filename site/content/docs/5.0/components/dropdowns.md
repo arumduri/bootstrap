@@ -8,14 +8,14 @@ toc: true
 
 ## Overview
 
-드롭다운은 링크 목록 등을 표시하기 위한 상황별 오버레이를 토글합니다. 이들은 Bootstrap에 포함되어 있는 드롭다운 JavaScript 플러그인으로 작동합니다. 토글은 호버링이 아닌 클릭을 통해 작동합니다. 참고 [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
+드롭다운은 링크 목록 등을 표시하기 위한 상황별 오버레이를 토글합니다. 이들은 Bootstrap에 포함된 드롭다운 JavaScript 플러그인으로 작동합니다. 토글은 호버링이 아닌 클릭을 통해 작동합니다. 참고 [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
 
 드롭다운은 동적인 포지셔닝과 뷰포트 검출을 제공하는 서드파티의 라이브러리인 [Popper](https://popper.js.org/)로 구축되어 있습니다. 반드시 Bootstrap의 JavaScript 전에 [popper.min.js]({{< param "cdn.popper" >}})를 넣거나 Popper를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`를 사용해 주십시오. Popper는 동적인 배치가 필요하지 않기 때문에, navbars의 드롭다운 배치에는 사용하지 않습니다.
 
 
 ## Accessibility
 
-[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 에서는, 실제의 [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu)가 정의되어 있지만, 이것은 액션이나 기능을 트리거로 하는 application-like 메뉴에 특화한 것입니다. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴는 메뉴 항목, 체크 박스 메뉴 항목, 라디오 버튼 메뉴 항목, 라디오 버튼 그룹, 서브메뉴만을 포함할 수 있습니다.
+[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 에서는, 실제의 [`role="menu"` widget](https://www.w3.org/WAI/PF/aria/roles#menu)가 정의되어 있지만, 이것은 액션이나 기능을 트리거로 하는 application-like 메뉴에 특화한 것입니다. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴는 메뉴 항목, 체크 박스 메뉴 항목, 라디오 버튼 메뉴 항목, 라디오 버튼 그룹, 서브 메뉴만을 포함할 수 있습니다.
 
 한편 Bootstrap의 드롭다운은 범용적으로 설계되어 다양한 상황이나 마크업 구조에 적용할 수 있습니다. 예를 들어 검색 필드나 로그인 폼 등의 추가 입력이나 폼 컨트롤을 포함한 드롭다운을 작성할 수 있습니다. 이 때문에 Bootstrap은, 진정한 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴에 필요한 `role`과 `aria-` 속성을 모두 기대하고 있지 않습니다(자동으로 추가도 하고 있지 않습니다). 이러한 보다 구체적인 속성들을 사용자가 추가로 작성해야 합니다.
 
@@ -143,7 +143,7 @@ toc: true
 
 마찬가지로, 단일 버튼의 드롭다운과 실질적으로 같은 마크업으로 분할된 버튼의 드롭다운을 만드는데, 드롭다운의 화살표 주위의 적절한 간격을 확보하기 위해서 `.dropdown-toggle-split`를 추가합니다.
 
-이 추가 클래스를 사용하여, 화살표 양쪽의 좌우 `padding`을 25% 줄이고, 일반적인 버튼 트롭다운을 위해 추가 되었던 `margin-left`를 삭제합니다. 이러한 추가 변경으로 인해 화살표는 분활된 버튼의 중앙에 오게 되고 메인 버튼 옆에서의 클릭 영역의 크기가 더욱 적절해집니다.
+이 추가 클래스를 사용하여, 화살표 양쪽의 좌우 `padding`을 25% 줄이고, 일반적인 버튼 트롭다운을 위해 추가되었던 `margin-left`를 삭제합니다. 이러한 추가 변경으로 인해 화살표는 분할된 버튼의 중앙에 오게 되고 메인 버튼 옆에서의 클릭 영역의 크기가 더욱 적절해집니다.
 
 
 <div class="bd-example">
@@ -246,7 +246,7 @@ toc: true
 
 ## Sizing
 
-버튼의 드롭다운은 기본적인 드롭다운 버튼이나 분활된 드롭다운 버튼 등 모든 크기의 버튼으로 동작합니다.
+버튼의 드롭다운은 기본적인 드롭다운 버튼이나 분할된 드롭다운 버튼 등 모든 크기의 버튼으로 동작합니다.
 
 <div class="bd-example">
   <div class="btn-group">
@@ -600,7 +600,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 </div>
 {{< /example >}}
 
-또한, `.dropdown-item-text` 으로 non-interactive 드롭다운 을 만들 수 있습니다. 사용자 정의 CSS 나 text 유틸리티를 사용하여 자유롭게 스타일을 설정해 주십시오.
+또한, `.dropdown-item-text` 으로 non-interactive 드롭다운을 만들 수 있습니다. 사용자 정의 CSS 나 text 유틸리티를 사용하여 자유롭게 스타일을 설정해 주십시오.
 
 {{< example >}}
 <ul class="dropdown-menu">
@@ -639,10 +639,10 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 
 기본적으로, 드롭다운 메뉴는 자동으로 위에서 100% 위치와 부모의 왼쪽에 따라 배치됩니다. You can change this with the directional `.drop*` classes, but you can also control them with additional modifier classes.
 
-드롭다운 메뉴를 오른쪽으로 배치시키려면 `.dropdown-menu` 에 `.dropdown-menu-end`를 추가합니다. RTL로 사용할 경우 방향성은 반대가 되기 때문에 `.dropdown-menu-end` 는 왼쪽에 표시됩니다.
+드롭다운 메뉴를 오른쪽으로 배치하려면 `.dropdown-menu` 에 `.dropdown-menu-end`를 추가합니다. RTL로 사용할 경우 방향성은 반대가 되기 때문에 `.dropdown-menu-end` 는 왼쪽에 표시됩니다.
 
 {{< callout info >}}
-**주의!** 드롭다운은 네비바에 포함되어 있는 경우를 제외하고 Popper에 의해 배치되어 있습니다.
+**주의!** 드롭다운은 네비바에 포함된 경우를 제외하고 Popper에 의해 배치되어 있습니다.
 {{< /callout >}}
 
 {{< example >}}
@@ -807,7 +807,7 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 
 ### Text
 
-자유롭게 드롭다운 메뉴 내에 문자로 배치하고 [spacing utilities]({{< docsref "/utilities/spacing" >}})를 사용합니다. 메뉴의 너비를 제한하기 위해 추가로 인라인 스타일이 필요할 가능성이 높다는 점에 유의하십시오.
+자유롭게 드롭다운 메뉴 내에 문자로 배치하고 [spacing utilities]({{< docsref "/utilities/spacing" >}})를 사용합니다. 메뉴의 너비를 제한하기 위해 추가로 인라인 스타일이 필요할 가능성이 크다는 점에 유의하십시오.
 
 {{< example >}}
 <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
@@ -982,7 +982,7 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 data 속성이나 JavaScript를 사용해, 드롭다운 플러그인은 부모의 `.dropdown-menu`의 `.show` 클래스를 토글하는 것으로 숨기는 콘텐츠(드롭다운 메뉴)를 토글합니다. `data-bs-toggle="dropdown"` 속성은 어플리케이션 레벨에서 드롭다운 메뉴를 닫기 위해 이용됩니다.
 
 {{< callout info >}}
-touch 대응 디바이서에서는, 드롭다운을 열면 빈 `mouseover` 핸들러가 `<body>` 요소의 바로 아래 자식 요소에 추가됩니다. 이렇게 보기 싫은 hack은  [iOS' event delegation](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html)을 피하기 위해서 필요한 것으로, 그렇지 않으면 드롭다운 바깥쪽의 임의의 곳을 탭해도 드롭다운을 닫는 코드를 트리거 할 수 없습니다. 드롭다운이 닫히면, 이렇게 추가된 빈 `mouseover` 핸들러는 삭제됩니다.
+터치 대응 기기에서는, 드롭다운을 열면 빈 `mouseover` 핸들러가 `<body>` 요소의 바로 아래 자식 요소에 추가됩니다. 이렇게 보기 싫은 hack은  [iOS' event delegation](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html)을 피하고자 필요한 것으로, 그렇지 않으면 드롭다운 바깥쪽의 임의의 곳을 탭 해도 드롭다운을 닫는 코드를 트리거 할 수 없습니다. 드롭다운이 닫히면, 이렇게 추가된 빈 `mouseover` 핸들러는 삭제됩니다.
 {{< /callout >}}
 
 ### Via data attributes
@@ -1148,7 +1148,7 @@ var dropdown = new bootstrap.Dropdown(element, {
 
 ### Events
 
-모든 드롭다운 이벤트는 토글링 요소로 시작해 이후 버블업 됩니다. 그 때문에 `.dropdown-menu`의 부모 요소에 이벤트 리스너를 추가할수도 있습니다. `hide.bs.dropdown`과 `hidden.bs.dropdown` 이벤트는, 클릭 이벤트의 이벤트 객체를 포함한 `clickEvent` 속성(원래의 이벤트 타입이 `click` 경우만)을 가집니다.
+모든 드롭다운 이벤트는 토글링 요소로 시작해 이후 버블 업 됩니다. 그 때문에 `.dropdown-menu`의 부모 요소에 이벤트 리스너를 추가할 수도 있습니다. `hide.bs.dropdown`과 `hidden.bs.dropdown` 이벤트는, 클릭 이벤트의 이벤트 객체를 포함한 `clickEvent` 속성(원래의 이벤트 타입이 `click` 경우만)을 가집니다.
 
 <table class="table">
   <thead>

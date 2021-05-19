@@ -8,7 +8,7 @@ toc: true
 
 ## Example
 
-`.btn-close` 을 사용해 컴포넌트를 닫는 옵션을 제공합니다. 기본 스타일은 제한되어 있지만, 재정의가 가능합니다. Sass 변수를 변경해, 기본 `background-image`를 바꿉니다. **`aria-label` 과 같은 스크린 리더용의 문자를 꼭 넣어 주십시오.**
+`.btn-close`를 사용해 컴포넌트를 닫는 옵션을 제공합니다. 기본 스타일은 제한되어 있지만, 재정의가 가능합니다. Sass 변수를 변경해, 기본 `background-image`를 바꿉니다. **`aria-label`과 같은 스크린 리더용의 문자를 꼭 넣어 주십시오.**
 
 
 {{< example >}}
@@ -17,7 +17,7 @@ toc: true
 
 ## Disabled state
 
-비활성화된 닫기 버튼은, `opacity`를 변경합니다. 그리고 `pointer-events: none` 과 `user-select: none`를 적용해, hover 상태와 active 상태가 트리거 되지 않도록 하였습니다.
+비활성화된 닫기 버튼은, `opacity`를 변경합니다. 그리고 `pointer-events: none` 과 `user-select: none`을 적용해, hover 상태와 active 상태가 트리거 되지 않도록 하였습니다.
 
 {{< example >}}
 <button type="button" class="btn-close" disabled aria-label="Close"></button>

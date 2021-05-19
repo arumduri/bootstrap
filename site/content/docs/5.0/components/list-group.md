@@ -408,7 +408,7 @@ triggerTabList.forEach(function (triggerEl) {
 })
 ```
 
-각각의 목록 아이템을 여러가지 방법으로 활성화 할 수 있습니다:
+각각의 목록 아이템을 여러 가지 방법으로 활성화 할 수 있습니다:
 
 ```js
 var triggerEl = document.querySelector('#myTab a[href="#profile"]')

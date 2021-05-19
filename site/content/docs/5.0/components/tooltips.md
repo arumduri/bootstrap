@@ -227,7 +227,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>셀렉터가 제공되는 경우 툴팁 객체는 지정된 타겟으로 이양됩니다. 실제로는 동적으로 추가된 DOM 요소에 툴팁을 적용하기 위해서도 사용됩니다.(<code>jQuery.on</code> 지원). <a href="{{< param repo >}}/issues/4215">this</a> 와 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
+      <td>셀렉타가 제공되는 경우 툴팁 객체는 지정된 타겟으로 이양됩니다. 실제로는 동적으로 추가된 DOM 요소에 툴팁을 적용하기 위해서도 사용됩니다.(<code>jQuery.on</code> 지원). <a href="{{< param repo >}}/issues/4215">this</a> 와 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>template</code></td>

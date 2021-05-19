@@ -194,7 +194,7 @@ toc: true
 
 ### Via data attributes
 
-요소에 `data-bs-toggle="offcanvas"`와 `data-bs-target`이나 `href`를 추가하면 1개의 오프캔버스 요소의 제어를 자동으로 할 수 있습니다. `data-bs-target` 속성에는 오프캔버스를 적용하기 위한 CSS 셀렉터를 지정합니다. 오프캔버스 속성에는 반드시 `offcanvas` 클래스를 추가해야 합니다. 기본 열린 상태로 하고 싶다면 `show` 클래스를 추가하세요.
+요소에 `data-bs-toggle="offcanvas"`와 `data-bs-target`이나 `href`를 추가하면 1개의 오프캔버스 요소의 제어를 자동으로 할 수 있습니다. `data-bs-target` 속성에는 오프캔버스를 적용하기 위한 CSS 셀렉타를 지정합니다. 오프캔버스 속성에는 반드시 `offcanvas` 클래스를 추가해야 합니다. 기본 열린 상태로 하고 싶다면 `show` 클래스를 추가하세요.
 
 ### Via JavaScript
 

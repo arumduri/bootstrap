@@ -8,7 +8,7 @@ toc: true
 
 ## How it works
 
-Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에 사용됩니다. 버튼 및 앵커는, 토글 하는 특정 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 `height` 가 기존 값에서 `0` 으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 감안하면, `.collapse` 요소에 `padding` 을 사용할 수 없습니다. 대신, 이 클래스를 독립된 래핑 요소로 사용합니다.
+Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에 사용됩니다. 버튼과 앵커는, 토글 하는 특정 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 `height` 가 기존 값에서 `0`으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 고려하면, `.collapse` 요소에 `padding`을 사용할 수 없습니다. 대신, 이 클래스를 독립된 래핑 요소로 사용합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -42,7 +42,7 @@ Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에
 
 ## Multiple targets
 
-`<button>` 이나 `<a>` 는, 그 `href` 나 `data-bs-target` 속성의 셀렉터로 여러 요소를 참조 하는 것으로, 여러 개의 요소를 표시하거나 숨길 수 있습니다.
+`<button>` 이나 `<a>` 는, 그 `href` 나 `data-bs-target` 속성의 셀렉타로 여러 요소를 참조하는 것으로, 여러 개의 요소를 표시하거나 숨길 수 있습니다.
 여러 개의 `<button>` 이나 `<a>` 는, 각각의 `href` 나 `data-bs-target` 속성으로 요소를 참조하고 있는 경우, 어느 요소를 표시하거나 숨길 수 있습니다.
 
 {{< example >}}
@@ -71,11 +71,11 @@ Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에
 
 ## Accessibility
 
-컨트롤 요소에 `aria-expanded`를 반드시 추가해 주세요. 이 속성은 컨트롤에 연결된 접을 수 있는 요소의 현재 상태를 스크린 리더나 동일한 지원 기술에 명시적으로 전달합니다. 접을 수 있는 요소가 기본적으로 닫혀있는 경우, 컨트롤 요소의 속성 값은 `aria-expanded="false"` 이어야 합니다. `show` 클래스를 사용해 접을 수 있는 요소를 기본으로 열도록 설정한 경우에는, 대신 컨트롤에 `aria-expanded="true"` 로 설정해 주십시오. 플러그인은 접을 수 있는 요소가 열려 있는지 닫혀 있는 지에 따라(JavaScript를 통해 사용자가 접을 수 있는 요소와 관련된 별도의 요소를 트리거했기 때문에) 컨트롤 상에서 이 속성을 자동으로 바꿉니다. 컨트롤 요소의 HTML 요소가 버튼이 아닌 경우(예를 들어 `<a>` 나 `<div>` 등) 요소에 `role="button"` 속성을 추가해야 합니다.
+컨트롤 요소에 `aria-expanded`를 반드시 추가해 주세요. 이 속성은 컨트롤에 연결된 접을 수 있는 요소의 현재 상태를 스크린 리더나 동일한 지원 기술에 명시적으로 전달합니다. 접을 수 있는 요소가 기본적으로 닫혀있는 경우, 컨트롤 요소의 속성값은 `aria-expanded="false"` 이어야 합니다. `show` 클래스를 사용해 접을 수 있는 요소를 기본으로 열도록 설정한 경우에는, 대신 컨트롤에 `aria-expanded="true"` 로 설정해 주십시오. 플러그인은 접을 수 있는 요소가 열려 있는지 닫혀 있는지에 따라(JavaScript를 통해 사용자가 접을 수 있는 요소와 관련된 별도의 요소를 트리거 했기 때문에) 컨트롤 상에서 이 속성을 자동으로 바꿉니다. 컨트롤 요소의 HTML 요소가 버튼이 아닌 경우(예를 들어 `<a>` 나 `<div>` 등) 요소에 `role="button"` 속성을 추가해야 합니다.
 
-컨트롤 요소가 하나의 접을 수 있는 요소를 타겟으로 하고 있는 경우, 즉 `data-bs-target` 속성이 `id` 셀렉터를 바라보는 경우, 접을 수 있는 요소의 `id`를 한 `aria-controls` 속성을 컨트롤 요소에 추가하지 않으면 안됩니다. 최근 스크린 리더 및 지원 기술에서는 이 속성을 이용하여 접을 수 있는 요소 자체로 직접 이동하기 위한 단축키를 사용자에게 제공하고 있습니다.
+컨트롤 요소가 하나의 접을 수 있는 요소를 타겟으로 하는 경우, 즉 `data-bs-target` 속성이 `id` 셀렉타를 바라보는 경우, 접을 수 있는 요소의 `id`를 한 `aria-controls` 속성을 컨트롤 요소에 추가하지 않으면 안 됩니다. 최근 스크린 리더 및 지원 기술에서는 이 속성을 이용하여 접을 수 있는 요소 자체로 직접 이동하기 위한 단축키를 사용자에게 제공하고 있습니다.
 
-Bootstrap의 현재 구현은, [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)에 설명되어 있는 여러가지 *optional* 키보드 인터랙션을 커버하고 있지 않음을 주의해 주십시오. - 사용자 정의 JavaScript로 이것들을 직접 포함시켜야 합니다.
+Bootstrap의 현재 구현은, [WAI-ARIA Authoring Practices 1.1 accordion pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#accordion)에 설명되어 있는 여러 가지 *optional* 키보드 인터랙션을 커버하고 있지 않음을 주의해 주십시오. - 사용자 정의 JavaScript로 이것들을 직접 포함해야 합니다.
 
 ## Sass
 
@@ -101,7 +101,7 @@ Bootstrap의 현재 구현은, [WAI-ARIA Authoring Practices 1.1 accordion patte
 
 ### Via data attributes
 
-요소에 `data-bs-toggle="collapse"`와 `data-bs-target`만 추가하면 접을 수 있는 요소의 제어를 자동으로 할당할 수 있습니다. `data-bs-target` 속성은 접을 수 있는 CSS 셀렉터를 지정합니다. 접을 수 있는 요소에는 반드시 `collapse` 클래스를 추가해야 합니다. 기본적으로 열린 상태로 만드려면 `show` 클래스를 추가해야 합니다.
+요소에 `data-bs-toggle="collapse"`와 `data-bs-target`만 추가하면 접을 수 있는 요소의 제어를 자동으로 할당할 수 있습니다. `data-bs-target` 속성은 접을 수 있는 CSS 셀렉타를 지정합니다. 접을 수 있는 요소에는 반드시 `collapse` 클래스를 추가해야 합니다. 기본적으로 열린 상태로 만들려면 `show` 클래스를 추가해야 합니다.
 
 접을 수 있는 영역에 accordion(아코디언) 같은 그룹 관리를 추가하려면, 데이터 속성 `data-bs-parent="#selector"`를 추가합니다. 데모를 참조해 주세요.
 
