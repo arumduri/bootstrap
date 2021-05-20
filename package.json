@@ -95,6 +95,7 @@
     "type": "opencollective",
     "url": "https://opencollective.com/bootstrap"
   },
+  "dependencies": {},
   "peerDependencies": {
     "@popperjs/core": "^2.9.2"
   },
