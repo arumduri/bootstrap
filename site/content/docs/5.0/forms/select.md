@@ -21,7 +21,7 @@ toc: true
 
 ## Sizing
 
-같은 크기의 텍스트 입력에 맞춰 크고 작은 사용자 정의 셀렉트를 선택해 사용할 수 있습니다.
+같은 크기의 문자 입력에 맞춰 크고 작은 사용자 정의 셀렉트를 선택해 사용할 수 있습니다.
 
 {{< example >}}
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -63,7 +63,7 @@ toc: true
 
 ## Disabled
 
-불리언 속성인 `disabled`를 셀렉트에 추가하면 비활성화 된 외형으로 표시되며 포인터 이벤트가 삭제됩니다.
+불리언 속성인 `disabled`를 셀렉트에 추가하면 비활성화된 외형으로 표시되며 포인터 이벤트가 삭제됩니다.
 
 {{< example >}}
 <select class="form-select" aria-label="Disabled select example" disabled>

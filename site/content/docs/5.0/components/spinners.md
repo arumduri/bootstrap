@@ -8,7 +8,7 @@ toc: true
 
 ## About
 
-Bootstrap "스피너"는 프로젝트의 로딩 상태를 표시하기 위해 사용할 수 있습니다. 이것은 HTML과 CSS로 만들어져 있기 때문에 JavaScript를 필요로 하지 않습니다. 그러나 가시성을 바꾸기 위해 몇 가지의 커스텀 JavaScript가 필요합니다. 이러한 외형, 배치, 크기는 유틸리티 클래스를 통해 간단하게 커스터마이즈 할 수 있습니다.
+Bootstrap "스피너"는 프로젝트의 로딩 상태를 표시하기 위해 사용할 수 있습니다. 이것은 HTML과 CSS로 만들어져 있기 때문에 JavaScript를 필요로 하지 않습니다. 그러나 가시성을 바꾸기 위해 몇 가지의 사용자 정의 JavaScript가 필요합니다. 이러한 외형, 배치, 크기는 유틸리티 클래스를 통해 간단하게 재정의할 수 있습니다.
 
 접근성을 위해, 여기에서의 각 loader 는 `role="status"` 과 `<span class="visually-hidden">Loading...</span>` 을 포함하고 있습니다.
 
@@ -41,7 +41,7 @@ Border 스피너는 `border-color` 에 `currentColor` 을 사용합니다. 표�
 {{< /example >}}
 
 {{< callout info >}}
-**왜 `border-color` 유틸리티를 사용하지 않나요?** 각 border 스피너는 적어도 한 쪽의 보더를 `transparent` 로 지정하므로, `.border-{color}` 유틸리티는 그것을 덮어씁니다.
+**`border-color` 유틸리티를 사용하면 안되나요?** 각 border스피너는 적어도 한 쪽의 보더를 `transparent` 로 지정해야 하는데, `.border-{color}` 유틸리티는 그것을 덮어쓰기 때문입니다.
 {{< /callout >}}
 
 ## Growing spinner
@@ -72,7 +72,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 
 ### Margin
 
-`.m-5` 와 같이 [margin utilities][margin] 을 사용하면 간단하게 간격을 둘 수 있습니다.
+`.m-5`와 같이 [margin utilities][margin] 을 사용하면 간단하게 간격을 둘 수 있습니다.
 
 {{< example >}}
 <div class="spinner-border m-5" role="status">
@@ -134,7 +134,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 </div>
 {{< /example >}}
 
-혹은, 커스텀 CSS나 인라인 스타일을 사용하여 필요에 따라서 치수를 변경할 수 있습니다.
+혹은, 사용자 정의 CSS나 인라인 스타일을 사용하여 필요에 따라서 치수를 변경할 수 있습니다.
 
 {{< example >}}
 <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
@@ -147,7 +147,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 
 ## Buttons
 
-버튼 중 스피너를 사용하여 액션이 현재 처리 중이거나 실행 중임을 나타냅니다. 또한 스피너 밖에 있는 텍스트를 교체하여 필요에 따라 버튼 텍스트를 이용할 수 있습니다.
+버튼 중 스피너를 사용하여 액션이 현재 처리 중이거나 실행 중임을 나타냅니다. 또한 스피너 밖에 있는 문자를 교체하여 필요에 따라 버튼 문자를 이용할 수 있습니다.
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
@@ -179,7 +179,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 
 ### Keyframes
 
-Used for creating the CSS animations for our spinners. Included in `scss/_spinners.scss`.
+스피너의 CSS 애니메이션 작성에 사용합니다. `scss/_spinners.scss`에 포함되어 있습니다.
 
 {{< scss-docs name="spinner-border-keyframes" file="scss/_spinners.scss" >}}
 
