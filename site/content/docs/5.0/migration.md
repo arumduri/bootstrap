@@ -9,41 +9,41 @@ toc: true
 
 ## Dependencies
 
-- Dropped jQuery.
-- Upgraded from Popper v1.x to Popper v2.x.
-- Replaced Libsass with Dart Sass as our Sass compiler given Libsass was deprecated.
-- Migrated from Jekyll to Hugo for building our documentation
+- jQuery 폐지.
+- Popper v1.x에서 Popper v2.x로 업그레이드.
+- Libsass가 권장되지 않아 Dart Sass로 Sass 컴파일러 변경.
+- 문서 작성을 위해 Jekyll에서 Hugo로 이동.
 
 ## Browser support
 
-- Dropped Internet Explorer 10 and 11
-- Dropped Microsoft Edge < 16 (Legacy Edge)
-- Dropped Firefox < 60
-- Dropped Safari < 12
-- Dropped iOS Safari < 12
-- Dropped Chrome < 60
+- Internet Explorer 10와 11 폐지
+- Microsoft Edge < 16 (Legacy Edge) 삭제
+- 비대상 Firefox < 60
+- 비대상 Safari < 12
+- 비대상 iOS Safari < 12
+- 비대상 Chrome < 60
 
 <hr class="my-5">
 
 ## Documentation changes
 
-- Redesigned homepage, docs layout, and footer.
-- Added [new Parcel guide](https://getbootstrap.com/docs/5.0/getting-started/parcel/).
-- Added [new Customize section](https://getbootstrap.com/docs/5.0/customize/overview/), replacing [v4's Theming page](https://getbootstrap.com/docs/4.6/getting-started/theming/), with new details on Sass, global configuration options, color schemes, CSS variables, and more.
-- Reorganized all form documentation into [new Forms section](https://getbootstrap.com/docs/5.0/forms/overview/), breaking apart the content into more focused pages.
-- Similarly, updated [the Layout section](https://getbootstrap.com/docs/5.0/layout/breakpoints/), to flesh out grid content more clearly.
-- Renamed "Navs" component page to "Navs & Tabs".
-- Renamed "Checks" page to "Checks & radios".
-- Redesigned the navbar and added a new subnav to make it easier to get around our sites and docs versions.
-- Added new keyboard shortcut for the search field: <kbd>Ctrl + /</kbd>.
+- 첫페이지, 문서 레이아웃과 하단의 디자인 변경.
+- [new Parcel guide](https://getbootstrap.com/docs/5.0/getting-started/parcel/) 추가.
+- [new Customize section](https://getbootstrap.com/docs/5.0/customize/overview/) 추가하고, [v4's Theming page](https://getbootstrap.com/docs/4.6/getting-started/theming/) 대체하여, Sass, 글로벌 설정 옵션, 색상 조합, CSS 변수 등의 세부사항 추가.
+- 모든 폼 문서를 [new Forms section](https://getbootstrap.com/docs/5.0/forms/overview/)으로 재편성하여 콘텐츠를 좀 더 집중적인 페이지로 재편성하였습니다.
+- 마찬가지로, [the Layout section](https://getbootstrap.com/docs/5.0/layout/breakpoints/)를 업데이트하여, 그리드 콘텐츠를 보다 명확하게 하였습니다.
+- "Navs" 컴포넌트 페이지가 "Navs & Tabs"로 변경.
+- "Checks" 페이지가 "Checks & radios"로 변경.
+- 사이트와 문서 버전의 이동을 손쉽게 하기 위해 navbar의 디자인을 변경하고 새로운 subnav를 추가하였습니다.
+- 검색에 새로운 키보드 단축키를 추가 하였습니다: <kbd>Ctrl + /</kbd>.
 
 ## Sass
 
-- We've ditched the default Sass map merges to make it easier to remove redundant values. Keep in mind you now have to define all values in the Sass maps like `$theme-colors`. Check out how to deal with [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}}).
+- 중복된 값을 쉽게 삭제할 수 있도록 기본 Sass 맵의 병합을 폐지하였습니다. 앞으로는 `$theme-colors`과 같은 모든 값을 Sass 맵에서 정의해야 합니다. 자세한 내용은 [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}})을 참조해 주세요.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `color-yiq()` function and related variables to `color-contrast()` as it's no longer related to YIQ colorspace. [See #30168.](https://github.com/twbs/bootstrap/pull/30168/)
-  - `$yiq-contrasted-threshold` is renamed to `$min-contrast-ratio`.
-  - `$yiq-text-dark` and `$yiq-text-light` are respectively renamed to `$color-contrast-dark` and `$color-contrast-light`.
+- <span class="badge bg-danger">Breaking</span> YIQ 색공간과 관련 없어졌기 때문에 `color-yiq()` 함수와 그에 관련된 변수들을 `color-contrast()`로 변경하였습니다. [자세히 보기 #30168.](https://github.com/twbs/bootstrap/pull/30168/)
+  - `$yiq-contrasted-threshold`는 `$min-contrast-ratio`로 변경.
+  - `$yiq-text-dark`와 `$yiq-text-light`는 각각 `$color-contrast-dark`와 `$color-contrast-light`로 변경ㄴ.
 
 - <span class="badge bg-danger">Breaking</span> Removed print styles and `$enable-print-styles` variable. Print display classes are still around. [See #28339](https://github.com/twbs/bootstrap/pull/28339).
 
