@@ -9,14 +9,14 @@ toc: true
 
 ## Base nav
 
-Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스부터 활성화 상태와 비활성화상태까지 일반적인 마크업과 스타일을 공유합니다. 각각의 스타일을 바꾸기 위해서 수식자 클래스를 교체합니다.
+Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스부터 활성화 상태와 비활성화 상태까지 일반적인 마크업과 스타일을 공유합니다. 각각의 스타일을 바꾸기 위해서 수식자 클래스를 교체합니다.
 
-기본 `.nav` 컴포넌트는 flexbox로 구축되어 있으며, 모든 타입의 내비게이션 컴포넌트를 구축하기 위한 강력한 구조를 제공하고 있습니다. 여기에는 몇몇의 스타일 오버라이드(목록을 다루기 위한), 보다 넓은 클릭 영역을 위한 여백, 기본적인 비활성화된 스타일이 포함되어 있습니다.
+기본 `.nav` 컴포넌트는 flexbox로 구축되어 있으며, 모든 타입의 내비게이션 컴포넌트를 구축하기 위한 강력한 구조를 제공하고 있습니다. 여기에는 몇몇 스타일 오버라이드(목록을 다루기 위한), 보다 넓은 클릭 영역을 위한 여백, 기본적인 비활성화된 스타일이 포함되어 있습니다.
 
 {{< callout info >}}
 베이스의 `.nav` 컴포넌트에는 `.active` 상태는 포함되지 않습니다. 아래의 예에서는 주로 이 특정 클래스가 특별한 스타일링을 하지 않는 것을 나타내기 위해 이 클래스를 포함합니다.
 
-활성화된 상태를 스크린 리더에 전달하기 위해서는 현재 페이지라면 `page` 속성을, 세트내의 현재 아이템이라면 `true`를 사용합니다.
+활성화된 상태를 스크린 리더에 전달하기 위해서는 현재 페이지라면 `page` 속성을, 세트 내의 현재 아이템이라면 `true`를 사용합니다.
 {{< /callout >}}
 
 {{< example >}}
@@ -36,7 +36,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 `<ul>` 을 사용하거나, 아이템의 순서가 중요한 경우에는 `<ol>`를 사용하거나, `<nav>` 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. `.nav` 는 `display: flex` 을 사용하고 있기 때문에, nav-link 는 따로 추가적인 마크업 없이, nav-item 과 동일하게 동작합니다.
+클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 `<ul>` 을 사용하거나, 아이템의 순서가 중요한 경우에는 `<ol>`를 사용하거나, `<nav>` 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. `.nav` 는 `display: flex`를 사용하고 있기 때문에, nav-link는 따로 추가적인 마크업 없이, nav-item과 동일하게 동작합니다.
 
 {{< example >}}
 <nav class="nav">
@@ -55,7 +55,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 [flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}}) 를 사용해, 내비게이션의 수평 방향의 배치를 변경합니다. 내비게이션의 기본은 왼쪽 정렬이지만, 쉽게 가운데 혹은 오른쪽 정렬로 변경 가능합니다.
 
-`.justify-content-center` 을 사용해 가운데 정렬이 가능합니다.
+`.justify-content-center`를 사용해 가운데 정렬이 가능합니다.
 
 {{< example >}}
 <ul class="nav justify-content-center">
@@ -95,7 +95,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### Vertical
 
-`.flex-column` 유틸리티를 사용해 flex item(플렉스 아이템) 의 방향을 변경해 내비게이션을 세로로 만들 수 있습니다. 일부 뷰포트에서는 세로로, 또 다른 뷰포트에서는 세로로 하고 싶지 않을 경우, `.flex-sm-column` 을 사용해 주세요.
+`.flex-column` 유틸리티를 사용해 flex item(플렉스 아이템)의 방향을 변경해 내비게이션을 세로로 만들 수 있습니다. 일부 뷰포트에서는 세로로, 또 다른 뷰포트에서는 세로로 하고 싶지 않을 경우, `.flex-sm-column`을 사용해 주세요.
 
 {{< example >}}
 <ul class="nav flex-column">
@@ -169,7 +169,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### Fill and justify
 
-`.nav` 가로폭을 100% 사용하게 합니다. `.nav-item` 에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill` 을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.
+`.nav` 가로 폭을 100% 사용하게 합니다. `.nav-item`에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill`을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.
 
 {{< example >}}
 <ul class="nav nav-pills nav-fill">
@@ -199,7 +199,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </nav>
 {{< /example >}}
 
-동일한 가로 폭의 아이템을 사용하고 싶은 경우에는, `.nav-justified` 을 사용합니다. 모든 수평 방향의 여백은 nav-links 가 갖고 있지만, 위의 `.nav-fill` 과는 다르게, 모든 내비게이션 아이템은 동일한 가로폭을 가지게 됩니다.
+동일한 가로 폭의 아이템을 사용하고 싶은 경우에는, `.nav-justified`를 사용합니다. 모든 수평 방향의 여백은 nav-links 가 갖고 있지만, 위의 `.nav-fill` 과는 다르게, 모든 내비게이션 아이템은 동일한 가로 폭을 가지게 됩니다.
 
 {{< example >}}
 <ul class="nav nav-pills nav-justified">
@@ -246,7 +246,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 내비게이션바를 제공하기 위해 내비게이션을 사용하고 있는 경우, `<ul>` 의 부모 컨테이너에 `role="navigation"` 을 추가하거나, `<nav>` 요소를 내비게이션 전체에 감싸주세요. role을 `<ul>` 자체에 추가하지 마십시오.
 
-내비게이션바는, `.nav-tabs` 에서 시각적으로는 탭으로 보여지게 되있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior) 를 참조해 주십시오. JavaScript 는 활성화된 탭에 `aria-selected="true"`를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하기 않습니다.
+내비게이션바는, `.nav-tabs`에서 시각적으로는 탭으로 보여지게 되있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior) 를 참조해 주십시오. JavaScript는 활성화된 탭에 `aria-selected="true"`를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하지 않습니다.
 
 ## Using dropdowns
 

@@ -82,7 +82,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-lig
 
 #### Text
 
-Add your text within an element with the `.navbar-brand` class.
+`.navbar-brand` 클래스를 요소 내의 텍스트에 추가합니다.
 
 {{< example >}}
 <!-- As a link -->
@@ -102,7 +102,7 @@ Add your text within an element with the `.navbar-brand` class.
 
 #### Image
 
-You can replace the text within the `.navbar-brand` with an `<img>`.
+`.navbar-brand` 안에 문자 대신 `<img>`를 사용할 수 있습니다.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
@@ -116,7 +116,7 @@ You can replace the text within the `.navbar-brand` with an `<img>`.
 
 #### Image and text
 
-You can also make use of some additional utilities to add an image and text at the same time. Note the addition of `.d-inline-block` and `.align-text-top` on the `<img>`.
+또한 몇 가지 추가 유틸리티를 이용하여 이미지와 문자를 동시에 추가할 수 있습니다. `<img>`에 `.d-inline-block`과 `.align-text-top`을 추가하고 있다는 사실에 주목해 주세요.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
@@ -131,11 +131,12 @@ You can also make use of some additional utilities to add an image and text at t
 
 ### Nav
 
-내비게이션 바의 내비게이션 링크는 `.nav` 옵션에 독자적인 변경 클래스를 추가하여 구축되며, 적절한 반응형 스타일링을 위해 [toggler classes](#toggler) 사용을 필요로 합니다. 내비게이션 바 안에서 내비게이션 링크는 **수평 방향으로 펼쳐져 깔끔하게 정렬**합니다.
+내비게이션 바의 내비게이션 링크는 `.nav` 옵션에 독자적인 변경 클래스를 추가하여 구축되며, 적절한 반응형 스타일링을 위해 [toggler classes](#toggler) 사용을 해야 합니다. 내비게이션 바 안에서 내비게이션 링크는 **수평 방향으로 펼쳐져 깔끔하게 정렬**합니다.
 
-Add the `.active` class on `.nav-link` to indicate the current page.
+현재 페이지를 나타내기 위해 `.nav-link`에 `.nav-link` 클래스를 추가합니다.
 
-Please note that you should also add the `aria-current` attribute on the active `.nav-link`.
+현재 페이지의 `.nav-link`에는 `aria-current` 속성을 추가해 주세요.
+
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -186,7 +187,7 @@ Please note that you should also add the `aria-current` attribute on the active 
 {{< /example >}}
 
 내비게이션 바에서 드롭다운을 사용할 수도 있습니다.
-드롭다운 메뉴는 배치를 위한 랩핑된 요소가 필요하기 때문에 아래와 같이 `.nav-item`와 `.nav-link` 과는 다른 중첩 된 요소로 분리해 사용해 주세요.
+드롭다운 메뉴는 배치를 위한 랩핑 된 요소가 필요하기 때문에 아래와 같이 `.nav-item`과 `.nav-link` 과는 다른 중첩 된 요소로 분리해 사용해 주세요.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -251,7 +252,7 @@ Please note that you should also add the `aria-current` attribute on the active 
 </nav>
 {{< /example >}}
 
-Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 대부분이 폼인 경우라면, `<form>` 요소를 컨테이너로 사용하여 HTML 을 저장할 수 있습니다.
+Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 대부분이 폼인 경우라면, `<form>` 요소를 컨테이너로 사용하여 HTML을 저장할 수 있습니다.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
@@ -655,7 +656,7 @@ Input group 도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은
 </nav>
 {{< /example >}}
 
-이렇게 했을때는 컨테이너가 열렸을 때 포커스를 이동시키기 위한 추가적인 JavaScript를 포함하는 것을 권장합니다. 그렇지 않으면, 키보드 사용자나 지원 기술 사용자는 새롭게 표시된 콘텐츠를 찾는데 어려움을 겪을 것입니다. 특히, 열린 컨테이너가 문서의 구조상 토글러보다 *before*에 있는 경우는 더욱 그렇습니다. 또한 토글러가 콘텐츠의 `id`를 가르키는 `aria-controls` 속성을 가지고 있는 것을 확인할 필요가 있습니다. 이론적으로는 지원 기술 사용자가 토글러에서 그것을 제어하는 콘텐츠를 직접 점프할수 있게 되어 있지만 현재 이 지원은 매우 애매합니다.
+이렇게 했을 때는 컨테이너가 열렸을 때 포커스를 이동시키기 위한 추가적인 JavaScript를 포함하는 것을 권장합니다. 그렇지 않으면, 키보드 사용자나 지원 기술 사용자는 새롭게 표시된 콘텐츠를 찾는 데 어려움을 겪을 것입니다. 특히, 열린 컨테이너가 문서의 구조상 토글러보다 *before*에 있는 경우는 더욱더 그렇습니다. 또한 토글러가 콘텐츠의 `id`를 가르키는 `aria-controls` 속성을 가지고 있는 것을 확인할 필요가 있습니다. 이론적으로는 지원 기술 사용자가 토글러에서 그것을 제어하는 콘텐츠를 직접 점프할 수 있게 되어 있지만, 현재 이 지원은 매우 애매합니다.
 
 ## Sass
 

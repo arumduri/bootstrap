@@ -370,7 +370,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ### Using data attributes
 
-JavaScript를 쓰지 않아도, `data-bs-toggle="list"`를 지정하거나 요소로 지정만 해도 목록 그룹 내비게이션을 활성화 시킬 수 있습니다. 이들의 data 속성을 `.list-group-item`에 이용합니다.
+JavaScript를 쓰지 않아도, `data-bs-toggle="list"`를 지정하거나 요소로 지정만 해도 목록 그룹 내비게이션을 활성화할 수 있습니다. 이들의 data 속성을 `.list-group-item`에 이용합니다.
 
 ```html
 <div role="tabpanel">
@@ -435,7 +435,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### constructor
 
-목록 아이템 요소와 콘텐츠 컨테이너를 활성화 시킵니다. 탭에는 DOM 내의 컨테이너 노드를 타깃으로 하는 `data-bs-target` 또는 `href` 가 필요합니다.
+목록 아이템 요소와 콘텐츠 컨테이너를 활성화합니다. 탭에는 DOM 내의 컨테이너 노드를 타깃으로 하는 `data-bs-target` 또는 `href` 가 필요합니다.
 
 ```html
 <div class="list-group" id="myList" role="tablist">
@@ -491,9 +491,9 @@ var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instan
 1. `hide.bs.tab` (현재 활성 탭)
 2. `show.bs.tab` (표시되는 탭)
 3. `hidden.bs.tab` (이전 활성화 탭에서 `hide.bs.tab` 이벤트 동일)
-4. `shown.bs.tab` (새로 활성화 된 지 얼마 안 된 탭으로 `show.bs.tab` 이벤트와 동일)
+4. `shown.bs.tab` (새로 활성화된 지 얼마 안 된 탭으로 `show.bs.tab` 이벤트와 동일)
 
-이미 활성화 된 탭이 없는 경우, `hide.bs.tab`와 `hidden.bs.tab` 이벤트는 발생하지 않습니다.
+이미 활성화 된 탭이 없는 경우, `hide.bs.tab`과 `hidden.bs.tab` 이벤트는 발생하지 않습니다.
 
 <table class="table">
   <thead>
