@@ -21,7 +21,7 @@ toc: true
 
 ## Sizing
 
-`.form-control-lg` 와 `.form-control-sm` 클래스를 사용해서 크기를 다르게 설정할 수 있습니다.
+`.form-control-lg`와 `.form-control-sm` 클래스를 사용해서 크기를 다르게 설정할 수 있습니다.
 
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
@@ -31,7 +31,7 @@ toc: true
 
 ## Disabled
 
-`disabled` 불리언 속성을 추가하면 비활성화 외형이 되면서 포인터 이벤트가 삭제됩니다.
+`disabled` 불리언 속성을 추가하면 비활성화외형이 되면서 포인터 이벤트가 삭제됩니다.
 
 {{< example >}}
 <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
@@ -40,7 +40,7 @@ toc: true
 
 ## Readonly
 
-`readonly` 불리언 속성을 추가함으로써 입력 값의 변경을 막을 수 있습니다. 읽기 전용 입력은 비활성화 입력과 동일한 외형으로 표시되지만 표준 커서는 유지됩니다.
+`readonly` 불리언 속성을 추가함으로써 입력 값의 변경을 막을 수 있습니다. 읽기 전용 입력은 비활성화입력과 동일한 외형으로 표시되지만 표준 커서는 유지됩니다.
 
 {{< example >}}
 <input class="form-control" type="text" placeholder="Readonly input here..." aria-label="readonly input example" readonly>

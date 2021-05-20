@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Overflow (오버플로우)
-description: 컨텐츠가 요소를 오버플로우 하는 방식을 빠르게 구현 하려면 이러한 단축 유틸리티를 사용하십시오.
+description: 콘텐츠가 요소를 오버플로우 하는 방식을 빠르게 구현 하려면 이러한 단축 유틸리티를 사용하십시오.
 group: utilities
 ---
 

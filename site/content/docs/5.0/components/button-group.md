@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Button group(버튼그룹)
-description: 여러개의 버튼을 묶어 그룹화 하거나, 세로로 겹쳐 놓을 수 있습니다.
+title: Button group(버튼 그룹)
+description: 여러 개의 버튼을 묶어 그룹화하거나, 세로로 겹쳐 놓을 수 있습니다.
 group: components
 toc: true
 ---
 
 ## Basic example
 
-`.btn-group` 으로 `.btn` 요소를 포장합니다.
+`.btn-group`으로 `.btn`요소를 포장합니다.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic example">
@@ -21,9 +21,9 @@ toc: true
 {{< callout warning >}}
 ##### Ensure correct `role` and provide a label
 
-스크린 리더에게 일련의 버튼이 그룹화 되어 있음을 전달하기 위해서는 적절한 `role` 을 지정해야 합니다. 버튼 그룹의 경우, `role="group"` 이 되고, 툴바의 경우는 `role="toolbar"` 가 됩니다.
+스크린 리더에게 일련의 버튼이 그룹화되어 있음을 전달하기 위해서는 적절한 `role`을 지정해야 합니다. 버튼 그룹의 경우, `role="group"`이 되고, 툴바의 경우는 `role="toolbar"`가 됩니다.
 
-또한 그룹이나 툴바에는 명시적인 라벨을 붙일 필요가 있습니다. 그 말은, 올바른 롤 속성이 있어도 대부분의 스크린 리더는 그것을 안내하지 않기 때문입니다. 여기에서는 `aria-label` 을 사용하고 있지만, `aria-labelledby` 같은 대체품을 사용하는 것도 가능합니다.
+또한, 그룹이나 툴바에는 명시적인 라벨을 붙일 필요가 있습니다. 그 말은, 올바른 롤 속성이 있어도 대부분의 스크린 리더는 그것을 안내하지 않기 때문입니다. 여기에서는 `aria-label`을 사용하고 있지만, `aria-labelledby` 같은 대체품을 사용하는 것도 가능합니다.
 {{< /callout >}}
 
 이 클래스는 [`.nav` navigation components]({{< docsref "/components/navs-tabs" >}}) 를 대체하여 링크 그룹에 추가할 수도 있습니다.
@@ -58,7 +58,7 @@ toc: true
 
 ## Checkbox and radio button groups
 
-버튼과 같은 체크박스와 라디오 [toggle buttons]({{< docsref "/forms/checks-radios" >}}) 을 조합하여 아주 매끄러운 외형의 버튼그룹을 만듭니다.
+버튼과 같은 체크 박스와 라디오 [toggle buttons]({{< docsref "/forms/checks-radios" >}}) 을 조합하여 아주 매끄러운 외형의 버튼 그룹을 만듭니다.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
@@ -88,7 +88,7 @@ toc: true
 
 ## Button toolbar
 
-버튼그룹의 세트를 버튼 툴바와 결합해, 보다 복잡한 컴포넌트를 만들수 있습니다. 필요에 따라서 유틸리티 클래스를 사용해 그룹과 버튼등에 여백을 줄수 있습니다.
+버튼 그룹의 세트를 버튼 툴바와 결합해, 더욱 복잡한 컴포넌트를 만들 수 있습니다. 필요에 따라서 유틸리티 클래스를 사용해 그룹과 버튼 등에 여백을 줄 수 있습니다.
 
 {{< example >}}
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -109,7 +109,7 @@ toc: true
 </div>
 {{< /example >}}
 
-입력그룹과 버튼그룹을 자유롭게 조합해 주세요. 위의 예시와 같이, 적절한 여백을 갖기 위해서는 몇개의 유틸리티가 필요합니다.
+입력그룹과 버튼 그룹을 자유롭게 조합해 주세요. 위의 예시와 같이, 적절한 여백을 갖기 위해서는 몇 개의 유틸리티가 필요합니다.
 
 {{< example >}}
 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
@@ -141,7 +141,7 @@ toc: true
 
 ## Sizing
 
-그룹내의 모든 버튼에 버튼 사이징 클래스를 적용하는 대신에, 각각의 버튼을 포함한 `.btn-group` 에 `.btn-group-*` 을 추가하면 됩니다.
+그룹 내의 모든 버튼에 버튼 크기 클래스를 적용하는 대신에, 각각의 버튼을 포함한 `.btn-group`에 `.btn-group-*`을 추가하면 됩니다.
 
 <div class="bd-example">
   <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
@@ -171,7 +171,7 @@ toc: true
 
 ## Nesting
 
-드롭다운과 버튼그룹을 조합하는 경우는 다른 `.btn-group` 안에 `.btn-group` 을 배치합니다.
+드롭다운과 버튼 그룹을 조합하는 경우는 다른 `.btn-group` 안에 `.btn-group`을 배치합니다.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -192,7 +192,7 @@ toc: true
 
 ## Vertical variation
 
-버튼 세트를 수평방향이 아닌 수직방향으로 표시합니다. **Split button dropdown 은 여기에서는 지원되지 않습니다**
+버튼 세트를 수평 방향이 아닌 수직 방향으로 표시합니다. **Split button dropdown 은 여기에서는 지원되지 않습니다**
 
 <div class="bd-example">
   <div class="btn-group-vertical" role="group" aria-label="Vertical button group">

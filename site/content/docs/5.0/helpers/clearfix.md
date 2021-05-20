@@ -1,12 +1,12 @@
 ---
 layout: docs
 title: Clearfix (클리어픽스)
-description: clearfix 유틸리티를 추가하여 컨테이너 내에서 floating 된 컨텐츠를 빠르고 쉽게 정렬합니다.
+description: clearfix 유틸리티를 추가하여 컨테이너 내에서 floating 된 콘텐츠를 빠르고 쉽게 정렬합니다.
 group: helpers
 aliases: "/docs/5.0/helpers/"
 ---
 
-부모 요소에 `.clearfix` 를 추가하여 `floats` 를 쉽게 정렬합니다. 믹스 인으로도 사용할 수 있습니다.
+부모 요소에 `.clearfix`를 추가하여 `floats`를 쉽게 정렬합니다. 믹스 인으로도 사용할 수 있습니다.
 
 HTML에서 사용시:
 

@@ -86,9 +86,9 @@ $utilities: (
 
 ### States
 
-가상 클래스의 변형을 생성하려면 `state` 옵션을 사용하십시오. 비슷한 클래스의 예시로는 `:hover` 및 `:focus`입니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 `state: hover` 를 추가하면 컴파일 된 CSS에 `.opacity-hover:hover`가 표시됩니다.
+가상 클래스의 변형을 생성하려면 `state` 옵션을 사용하십시오. 비슷한 클래스의 예시로는 `:hover` 및 `:focus`입니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 `state: hover`를 추가하면 컴파일 된 CSS에 `.opacity-hover:hover`가 표시됩니다.
 
-여러개의 가상 클래스가 필요하십니까? `state : hover focus`와 같이 공백으로 구분 된 상태 목록을 사용하세요.
+여러 개의 가상 클래스가 필요하십니까? `state : hover focus`와 같이 공백으로 구분 된 상태 목록을 사용하세요.
 
 ```scss
 $utilities: (
@@ -246,7 +246,7 @@ $utilities: (
 
 ### Add utilities
 
-`map-merge` 를 사용하면 새로운 유틸리티를 기본 `$utilities` 맵에 추가할 수 있습니다. 먼저 `_utilities.scss` 를 가져왔는지 확인한 다음 `map-merge` 를 이용하여 새로운 유틸리티를 추가하십시오. 다음 예시는 세 개의 값이 있는 반응형 `cursor` 유틸리티를 추가하는 방법입니다.
+`map-merge`를 사용하면 새로운 유틸리티를 기본 `$utilities` 맵에 추가할 수 있습니다. 먼저 `_utilities.scss`를 가져왔는지 확인한 다음 `map-merge`를 이용하여 새로운 유틸리티를 추가하십시오. 다음 예시는 세 개의 값이 있는 반응형 `cursor` 유틸리티를 추가하는 방법입니다.
 
 ```scss
 @import "bootstrap/scss/functions";
