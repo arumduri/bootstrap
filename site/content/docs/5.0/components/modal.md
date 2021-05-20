@@ -600,7 +600,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
   </tbody>
 </table>
 
-변경 클래스를 가지고 있지 않은 기본 모달은, "medium" 크기의 모달을 구성합니다.
+수식어 클래스를 가지고 있지 않은 기본 모달은, "medium" 크기의 모달로 보여집니다.
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalXl">Extra large modal</button>

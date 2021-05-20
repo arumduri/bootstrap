@@ -323,7 +323,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
       <td><code>interval</code></td>
       <td>number</td>
       <td><code>5000</code></td>
-      <td>The amount of time to delay between automatically cycling an item. If <code>false</code>, carousel will not automatically cycle.</td>
+      <td>아이템을 자동으로 순환시킬 때까지의 지연 시간을 지정합니다. 만약, <code>false</code>면, 캐러셀은 자동으로 순환되지 않습니다.</td>
     </tr>
     <tr>
       <td><code>keyboard</code></td>
