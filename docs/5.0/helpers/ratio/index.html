@@ -415,14 +415,14 @@
         
 
         <h2 id="about">About</h2>
-<p>비율 도우미를 사용하여 <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;video&gt;</code>, 그리고 <code>&lt;object&gt;</code> 와 같은 외부 콘텐츠의 가로세로 비율을 관리할 수 있습니다. 이 도우미는 모든 표준 HTML 하위 요소에도 사용 할 수 있습니다 (예를 들어, <code>&lt;div&gt;</code> 또는 <code>&lt;img&gt;</code>). 스타일은 부모 <code>.ratio</code> 클래스에서 하위 요소로 직접 적용 됩니다.</p>
+<p>비율 도우미를 사용하여 <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;video&gt;</code>, 그리고 <code>&lt;object&gt;</code>와 같은 외부 콘텐츠의 가로세로 비율을 관리할 수 있습니다. 이 도우미는 모든 표준 HTML 하위 요소에도 사용 할 수 있습니다 (예를 들어, <code>&lt;div&gt;</code> 또는 <code>&lt;img&gt;</code>). 스타일은 부모 <code>.ratio</code> 클래스에서 하위 요소로 직접 적용 됩니다.</p>
 <p>가로세로 비율은 Sass 맵에서 선언되고 CSS 변수를 통해 각 클래스에 적용되므로 <a href="#custom-ratios">사용자 정의 가로세로 비율</a> 도 사용 할 수 있습니다.</p>
 <div class="bd-callout bd-callout-info">
 <strong>꿀팁!</strong> <a href="/docs/5.0/content/reboot/">Reboot</a>에서 자동으로 재정의하기 때문에 <code>&lt;iframe&gt;</code> 에서 <code>frameborder=&quot;0&quot;</code> 은 사용하지 않아도 됩니다.
 </div>
 
 <h2 id="example">Example</h2>
-<p>부모요소에 <code>.ratio</code> 와 가로세로 비율 클래스를 사용해 <code>&lt;iframe&gt;</code> 같은 요소를 감싸보세요. 범용 선택기 <code>.ratio &gt; *</code> 덕분에 직계 하위 요소는 사이즈가 자동으로 조정 됩니다.</p>
+<p>부모요소에 <code>.ratio</code>와 가로세로 비율 클래스를 사용해 <code>&lt;iframe&gt;</code> 같은 요소를 감싸보세요. 범용 선택기 <code>.ratio &gt; *</code> 덕분에 직계 하위 요소는 사이즈가 자동으로 조정 됩니다.</p>
 <div class="bd-example">
 <div class="ratio ratio-16x9">
   <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
@@ -459,7 +459,7 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="custom-ratios">Custom ratios</h2>
 <p>각 <code>.ratio-*</code> 클래스는 선택기에 CSS 사용자 정의 속성 (또는 CSS 변수)이 내장되어 있습니다. 이 CSS 변수를 재정의하여 사용자전용 가로세로 비율을 즉석에서 만들 수 있습니다.</p>
-<p>예를 들어 2x1 가로세로 비율을 만들려면 <code>.ratio</code> 에서 <code>--bs-aspect-ratio: 50%</code> 를 설정합니다.</p>
+<p>예를 들어 2x1 가로세로 비율을 만들려면 <code>.ratio</code> 에서 <code>--bs-aspect-ratio: 50%</code>를 설정합니다.</p>
 <div class="bd-example bd-example-ratios">
 <div class="ratio" style="--bs-aspect-ratio: 50%;">
   <div>2x1</div>

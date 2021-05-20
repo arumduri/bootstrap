@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.">
+<meta name="description" content="몇 가지의 클래스와 JavaScript 플러그인을 사용해 네비게이션이나 쇼핑카트 등에 유용한 숨겨진 사이드바를 사용할 수 있습니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.83.1">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Offcanvas · Bootstrap v5.0</title>
+<title>Offcanvas(오프캔버스) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/components/offcanvas/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Offcanvas">
-<meta name="twitter:description" content="Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.">
+<meta name="twitter:title" content="Offcanvas(오프캔버스)">
+<meta name="twitter:description" content="몇 가지의 클래스와 JavaScript 플러그인을 사용해 네비게이션이나 쇼핑카트 등에 유용한 숨겨진 사이드바를 사용할 수 있습니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/offcanvas/">
-<meta property="og:title" content="Offcanvas">
-<meta property="og:description" content="Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.">
+<meta property="og:title" content="Offcanvas(오프캔버스)">
+<meta property="og:description" content="몇 가지의 클래스와 JavaScript 플러그인을 사용해 네비게이션이나 쇼핑카트 등에 유용한 숨겨진 사이드바를 사용할 수 있습니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -389,9 +389,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/offcanvas.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Offcanvas</h1>
+          <h1 class="bd-title" id="content">Offcanvas(오프캔버스)</h1>
         </div>
-        <p class="bd-lead">Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.</p>
+        <p class="bd-lead">몇 가지의 클래스와 JavaScript 플러그인을 사용해 네비게이션이나 쇼핑카트 등에 유용한 숨겨진 사이드바를 사용할 수 있습니다.</p>
         
 
       </div>
@@ -434,21 +434,21 @@
         
 
         <h2 id="how-it-works">How it works</h2>
-<p>Offcanvas is a sidebar component that can be toggled via JavaScript to appear from the left, right, or bottom edge of the viewport. Buttons or anchors are used as triggers that are attached to specific elements you toggle, and <code>data</code> attributes are used to invoke our JavaScript.</p>
+<p>오프캔버스는 JavaScript로 뷰포트의 왼쪽, 오른쪽, 혹은 아래쪽에서 표시되는 사이드바 컴포넌트입니다. 버튼이나 앵커는 토글하는 특정 요소에 붙여지는 트리거로 사용되며 <code>data</code> 속성은 JavaScript를 호출하기 위해 사용됩니다.</p>
 <ul>
-<li>Offcanvas shares some of the same JavaScript code as modals. Conceptually, they are quite similar, but they are separate plugins.</li>
-<li>Similarly, some <a href="#sass">source Sass</a> variables for offcanvas&rsquo;s styles and dimensions are inherited from the modal&rsquo;s variables.</li>
-<li>When shown, offcanvas includes a default backdrop that can be clicked to hide the offcanvas.</li>
-<li>Similar to modals, only one offcanvas can be shown at a time.</li>
+<li>오프캔버스는 모달과 같이 JavaScript 코드를 일부 공유하고 있습니다. 개념적으로는 아주 비슷하지만 이들은 다른 플러그인입니다.</li>
+<li>마찬가지로, 오프캔버승의 스타일과 치수를 위한 <a href="#sass">source Sass</a> 변수의 일부는 모달 변수로부터 상속받고 있습니다.</li>
+<li>오프캔버스를 표시하면 기본적으로 배경이 포함되어져 있어 그것을 클릭하면 오프캔버스가 사라집니다.</li>
+<li>모달과 마찬가지로 오프캔버스는 한번에 1개밖에 표시할 수 없습니다.</li>
 </ul>
-<p><strong>Heads up!</strong> Given how CSS handles animations, you cannot use <code>margin</code> or <code>translate</code> on an <code>.offcanvas</code> element. Instead, use the class as an independent wrapping element.</p>
+<p><strong>주의!</strong> CSS에 의한 애니메이션 사용을 고려한다면 <code>.offcanvas</code> 요소의 <code>margin</code>이나 <code>translate</code>를 사용할 수 없습니다. 대신, 이 클래스를 독립된 포장 요소 감싸서 사용해 주세요.</p>
 <div class="bd-callout bd-callout-info">
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
 </div>
 
 <h2 id="examples">Examples</h2>
 <h3 id="offcanvas-components">Offcanvas components</h3>
-<p>Below is an offcanvas example that is shown by default (via <code>.show</code> on <code>.offcanvas</code>). Offcanvas includes support for a header with a close button and an optional body class for some initial <code>padding</code>. We suggest that you include offcanvas headers with dismiss actions whenever possible, or provide an explicit dismiss action.</p>
+<p>다음은 기본적으로 표시되는(<code>.offcanvas</code>의 <code>.show</code>에 의해) 오프캔버스의 예시입니다. 오프캔버스에는 닫기 버튼이 있는 헤더와 초기 <code>padding</code>을 위한 옵션의 body클래스가 지원됩니다. 가능한 오프캔버스의 헤더에 닫기 액션을 포함시키거나 명시적인 닫기 액션을 제공할 것을 권장합니다.</p>
 <div class="bd-example bd-example-offcanvas p-0 bg-light overflow-hidden">
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
   <div class="offcanvas-header">
@@ -469,12 +469,12 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="live-demo">Live demo</h3>
-<p>Use the buttons below to show and hide an offcanvas element via JavaScript that toggles the <code>.show</code> class on an element with the <code>.offcanvas</code> class.</p>
+<p>아래의 버튼을 클릭하면 <code>.offcanvas</code> 클래스를 갖고 있는 요소의 <code>.show</code> 클래스를 토글하는 JavaScript로 오프캔버스를 표시/숨김하는 것을 확인할 수 있습니다.</p>
 <ul>
-<li><code>.offcanvas</code> hides content (default)</li>
-<li><code>.offcanvas.show</code> shows content</li>
+<li><code>.offcanvas</code> 콘텐츠를 숨김 (기본)</li>
+<li><code>.offcanvas.show</code> 콘텐츠를 표시</li>
 </ul>
-<p>You can use a link with the <code>href</code> attribute, or a button with the <code>data-bs-target</code> attribute. In both cases, the <code>data-bs-toggle=&quot;offcanvas&quot;</code> is required.</p>
+<p><code>href</code> 속성으로 링크를, <code>data-bs-target</code> 속성으로 버튼을 사용할 수 있습니다. 어느 경우든 <code>data-bs-toggle=&quot;offcanvas&quot;</code>가 필요합니다.</p>
 <div class="bd-example">
 <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
   Link with href
@@ -533,14 +533,14 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="placement">Placement</h2>
-<p>There&rsquo;s no default placement for offcanvas components, so you must add one of the modifier classes below;</p>
+<p>오프캔버스 컴포넌트의 기본 배치는 없으므로 아래 수식어 클래스 중 하나를 추가해야 합니다:</p>
 <ul>
-<li><code>.offcanvas-start</code> places offcanvas on the left of the viewport (shown above)</li>
-<li><code>.offcanvas-end</code> places offcanvas on the right of the viewport</li>
-<li><code>.offcanvas-top</code> places offcanvas on the top of the viewport</li>
-<li><code>.offcanvas-bottom</code> places offcanvas on the bottom of the viewport</li>
+<li><code>.offcanvas-start</code>는 오프캔버스를 뷰포트의 왼쪽에 배치합니다(위의 예시로 확인)</li>
+<li><code>.offcanvas-end</code>는 오프캔버스를 뷰포트의 오른쪽에 배치합니다.</li>
+<li><code>.offcanvas-top</code>은 뷰포트의 맨 위에 오프캔버스를 배치합니다.</li>
+<li><code>.offcanvas-bottom</code>은 뷰포트의 맨 아래에 오프캔버스를 배치합니다.</li>
 </ul>
-<p>Try the top, right, and bottom examples out below.</p>
+<p>위, 오른쪽, 아래에서 나오는 오프캔버스를 아래의 예시에서 확인해 보세요.</p>
 <div class="bd-example">
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
 
@@ -611,7 +611,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="backdrop">Backdrop</h2>
-<p>Scrolling the <code>&lt;body&gt;</code> element is disabled when an offcanvas and its backdrop are visible. Use the <code>data-bs-scroll</code> attribute to toggle <code>&lt;body&gt;</code> scrolling and <code>data-bs-backdrop</code> to toggle the backdrop.</p>
+<p>오프캔버스와 그 배경이 표시될 때에는 <code>&lt;body&gt;</code> 요소의 스크롤은 비활성화됩니다. <code>&lt;body&gt;</code> 스크롤을 바꾸고 싶으면 <code>data-bs-scroll</code> 속성을, 배경의 스크롤을 바꾸고 싶으면 <code>data-bs-backdrop</code> 속성을 사용해 주세요.</p>
 <div class="bd-example">
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Enable backdrop (default)</button>
@@ -676,7 +676,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="accessibility">Accessibility</h2>
-<p>Since the offcanvas panel is conceptually a modal dialog, be sure to add <code>aria-labelledby=&quot;...&quot;</code>—referencing the offcanvas title—to <code>.offcanvas</code>. Note that you don’t need to add <code>role=&quot;dialog&quot;</code> since we already add it via JavaScript.</p>
+<p>개념적으로 오프캔버스 패널은 모달 dialog여서, 반드시 <code>.offcanvas</code>에 <code>aria-labelledby=&quot;...&quot;</code>라는 오프캔버스의 타이틀을 참조하는 기술을 추가해 주세요. 덧붙여 <code>role=&quot;dialog&quot;</code>는 이미 JavaScript로 추가되고 있기 때문에 따로 추가할 필요는 없습니다.</p>
 <h2 id="sass">Sass</h2>
 <h3 id="variables">Variables</h3>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$offcanvas-padding-y</span><span class="o">:</span>               <span class="nv">$modal-inner-padding</span><span class="p">;</span>
@@ -692,25 +692,25 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="nv">$offcanvas-box-shadow</span><span class="o">:</span>              <span class="nv">$modal-content-box-shadow-xs</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="usage">Usage</h2>
-<p>The offcanvas plugin utilizes a few classes and attributes to handle the heavy lifting:</p>
+<p>오프캔버스 플러그인에서는 몇 가지 클래스와 속성을 이용하여 힘든 처리를 합니다.:</p>
 <ul>
-<li><code>.offcanvas</code> hides the content</li>
-<li><code>.offcanvas.show</code> shows the content</li>
-<li><code>.offcanvas-start</code> hides the offcanvas on the left</li>
-<li><code>.offcanvas-end</code> hides the offcanvas on the right</li>
-<li><code>.offcanvas-bottom</code> hides the offcanvas on the bottom</li>
+<li><code>.offcanvas</code>는 콘텐츠를 숨깁니다.</li>
+<li><code>.offcanvas.show</code>는 콘텐츠를 표시합니다.</li>
+<li><code>.offcanvas-start</code>는 왼쪽의 오프캔버스를 숨깁니다.</li>
+<li><code>.offcanvas-end</code>는 오른쪽의 오프캔버스를 숨깁니다.</li>
+<li><code>.offcanvas-bottom</code>은 아래쪽의 오프캔버스를 숨깁니다.</li>
 </ul>
-<p>Add a dismiss button with the <code>data-bs-dismiss=&quot;offcanvas&quot;</code> attribute, which triggers the JavaScript functionality. Be sure to use the <code>&lt;button&gt;</code> element with it for proper behavior across all devices.</p>
+<p>닫기 버튼에 <code>data-bs-dismiss=&quot;offcanvas&quot;</code> 속성을 추가해 JavaScript 기능으로 감춥니다.</p>
 <h3 id="via-data-attributes">Via data attributes</h3>
-<p>Add <code>data-bs-toggle=&quot;offcanvas&quot;</code> and a <code>data-bs-target</code> or <code>href</code> to the element to automatically assign control of one offcanvas element. The <code>data-bs-target</code> attribute accepts a CSS selector to apply the offcanvas to. Be sure to add the class <code>offcanvas</code> to the offcanvas element. If you&rsquo;d like it to default open, add the additional class <code>show</code>.</p>
+<p>요소에 <code>data-bs-toggle=&quot;offcanvas&quot;</code>와 <code>data-bs-target</code>이나 <code>href</code>를 추가하면 1개의 오프캔버스 요소의 제어를 자동으로 할 수 있습니다. <code>data-bs-target</code> 속성에는 오프캔버스를 적용하기 위한 CSS 셀렉타를 지정합니다. 오프캔버스 속성에는 반드시 <code>offcanvas</code> 클래스를 추가해야 합니다. 기본 열린 상태로 하고 싶다면 <code>show</code> 클래스를 추가하세요.</p>
 <h3 id="via-javascript">Via JavaScript</h3>
-<p>Enable manually with:</p>
+<p>이처럼 수동으로 활성화 합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">offcanvasElementList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.offcanvas&#39;</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">offcanvasList</span> <span class="o">=</span> <span class="nx">offcanvasElementList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">offcanvasEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Offcanvas</span><span class="p">(</span><span class="nx">offcanvasEl</span><span class="p">)</span>
 <span class="p">})</span>
 </code></pre></div><h3 id="options">Options</h3>
-<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-bs-</code>, as in <code>data-bs-backdrop=&quot;&quot;</code>.</p>
+<p>data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성의 경우, <code>data-bs-backdrop=&quot;&quot;</code>처럼 <code> data-bs-</code>에 옵션 명을 추가해 사용합니다.</p>
 <table class="table">
 <thead>
 <tr>
@@ -725,19 +725,19 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <td><code>backdrop</code></td>
 <td>boolean</td>
 <td><code>true</code></td>
-<td>Apply a backdrop on body while offcanvas is open</td>
+<td>오프캔버스가 열려 있는 동안, body에 배경을 적용합니다.</td>
 </tr>
 <tr>
 <td><code>keyboard</code></td>
 <td>boolean</td>
 <td><code>true</code></td>
-<td>Closes the offcanvas when escape key is pressed</td>
+<td>escape키가 눌려지면 오프캔버스를 닫습니다.</td>
 </tr>
 <tr>
 <td><code>scroll</code></td>
 <td>boolean</td>
 <td><code>false</code></td>
-<td>Allow body scrolling while offcanvas is open</td>
+<td>오프캔버스를 여는 동안 body 스크롤링을 허용합니다.</td>
 </tr>
 </tbody>
 </table>
@@ -750,8 +750,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 
 </div>
 
-<p>Activates your content as an offcanvas element. Accepts an optional options <code>object</code>.</p>
-<p>You can create an offcanvas instance with the constructor, for example:</p>
+<p>콘텐츠를 오프캔버스 요소로 액티브하게 합니다. 옵션의 <code>object</code>를 받습니다.</p>
+<p>아래의 예시처럼 생성자를 사용해 오프캔버스의 인스턴스를 만들 수 있습니다.:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myOffcanvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myOffcanvas&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">bsOffcanvas</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Offcanvas</span><span class="p">(</span><span class="nx">myOffcanvas</span><span class="p">)</span>
 </code></pre></div><table class="table">
@@ -764,25 +764,25 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <tbody>
 <tr>
 <td><code>toggle</code></td>
-<td>Toggles an offcanvas element to shown or hidden. <strong>Returns to the caller before the offcanvas element has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.offcanvas</code> or <code>hidden.bs.offcanvas</code> event occurs).</td>
+<td>오프캔버스 요소의 표시 및 숨김을 바꿉니다. <strong>실제로 표시 또는 숨김 되기 전의 오프캔버스 요소로 돌아갑니다</strong> (즉, <code>shown.bs.offcanvas</code> 또는 <code>hidden.bs.offcanvas</code> 이벤트가 발생하기 전)</td>
 </tr>
 <tr>
 <td><code>show</code></td>
-<td>Shows an offcanvas element. <strong>Returns to the caller before the offcanvas element has actually been shown</strong> (i.e. before the <code>shown.bs.offcanvas</code> event occurs).</td>
+<td>오프캔버스 요소를 표시합니다. <strong>실제로 표시되기 전의 오프캔버스 요소로 돌아갑니다</strong> (즉, <code>shown.bs.offcanvas</code> 이벤트가 발생하기 전).</td>
 </tr>
 <tr>
 <td><code>hide</code></td>
-<td>Hides an offcanvas element. <strong>Returns to the caller before the offcanvas element has actually been hidden</strong> (i.e. before the <code>hidden.bs.offcanvas</code> event occurs).</td>
+<td>오프캔버스 요소를 숨깁니다. <strong>실제로 숨겨지기전의 오픈캔버스 요소로 돌아갑니다.</strong> (즉, <code>hidden.bs.offcanvas</code> 이벤트가 발생하기 전).</td>
 </tr>
 <tr>
 <td><code>getInstance</code></td>
-<td><em>Static</em> method which allows you to get the offcanvas instance associated with a DOM element</td>
+<td>DOM 요소와 연관된 오프캔버스 인스턴스를 얻기 위한 <em>Static</em> 메서드입니다.</td>
 </tr>
 </tbody>
 </table>
 
 <h3 id="events">Events</h3>
-<p>Bootstrap&rsquo;s offcanvas class exposes a few events for hooking into offcanvas functionality.</p>
+<p>Bootstrap의 오프캔버스 클래스는 오프캔버스 기능에 연결하기 위한 몇 가지 이벤트를 공개하고 있습니다.</p>
 <table class="table">
 <thead>
 <tr>
@@ -793,19 +793,19 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <tbody>
 <tr>
 <td><code>show.bs.offcanvas</code></td>
-<td>This event fires immediately when the <code>show</code> instance method is called.</td>
+<td>이 이벤트는 <code>show</code> 인스턴스 메서드가 호출되면 즉시 발생합니다.</td>
 </tr>
 <tr>
 <td><code>shown.bs.offcanvas</code></td>
-<td>This event is fired when an offcanvas element has been made visible to the user (will wait for CSS transitions to complete).</td>
+<td>이 이벤트는 오프캔버스 요소가 사용자에게 보일 때 발생합니다(CSS 트랜지션이 완료될 때까지 기다립니다).</td>
 </tr>
 <tr>
 <td><code>hide.bs.offcanvas</code></td>
-<td>This event is fired immediately when the <code>hide</code> method has been called.</td>
+<td>이 이벤트는 <code>hide</code> 메서드가 호출되면 즉시 발생합니다.</td>
 </tr>
 <tr>
 <td><code>hidden.bs.offcanvas</code></td>
-<td>This event is fired when an offcanvas element has been hidden from the user (will wait for CSS transitions to complete).</td>
+<td>이 이벤트는 오프캔버스 요소가 사용자로부터 없어졌을때 발생합니다(CSS 트랜지션이 완료되기를 기다립니다).</td>
 </tr>
 </tbody>
 </table>

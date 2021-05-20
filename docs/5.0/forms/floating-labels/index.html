@@ -419,7 +419,7 @@
         
 
         <h2 id="example">Example</h2>
-<p><code>&lt;input class=&quot;form-control&quot;&gt;</code>과 <code>&lt;label&gt;</code> 요소를 함께 <code>.form-floating</code>으로 감싸면, Bootstrap의 텍스트 형식의 폼 필드에서 플로팅 라벨 사용이 가능합니다. CSS만으로 플로팅 라벨을 실현하는 방법은 <code>:placeholder-shown</code> 가상 요소를 사용하기 때문에 각 <code>&lt;input&gt;</code>에는 <code>placeholder</code>가 필요합니다. 또한 형제 셀렉터(예를 들어, <code>~</code>)를 사용하기 때문에 <code>&lt;input&gt;</code>이 처음에 와야 하는 순서에 주의해 주세요.</p>
+<p><code>&lt;input class=&quot;form-control&quot;&gt;</code>과 <code>&lt;label&gt;</code> 요소를 함께 <code>.form-floating</code>으로 감싸면, Bootstrap의 문자 형식의 폼 필드에서 플로팅 라벨 사용이 가능합니다. CSS만으로 플로팅 라벨을 실현하는 방법은 <code>:placeholder-shown</code> 가상 요소를 사용하기 때문에 각 <code>&lt;input&gt;</code>에는 <code>placeholder</code>가 필요합니다. 또한 형제 셀렉타(예를 들어, <code>~</code>)를 사용하기 때문에 <code>&lt;input&gt;</code>이 처음에 와야 하는 순서에 주의해 주세요.</p>
 <div class="bd-example">
 <div class="form-floating mb-3">
   <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
@@ -437,7 +437,7 @@
   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;floatingPassword&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Password&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;floatingPassword&#34;</span><span class="p">&gt;</span>Password<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p><code>value</code> 가 이미 정의되어 있는 경우에는 <code>&lt;label&gt;</code>이 자동적으로 플로팅 되어져 있습니다.</p>
+<p><code>value</code>가 이미 정의되어 있는 경우에는 <code>&lt;label&gt;</code>이 자동으로 플로팅 되어져 있습니다.</p>
 <div class="bd-example">
 <form class="form-floating">
   <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" value="test@example.com">
@@ -447,7 +447,7 @@
   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;floatingInputValue&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;name@example.com&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;test@example.com&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;floatingInputValue&#34;</span><span class="p">&gt;</span>Input with value<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
-<p>또한, 폼 검증에서도 기대한대로 잘 동작합니다.</p>
+<p>또한, 폼 유효성 검사에서도 기대한대로 잘 동작합니다.</p>
 <div class="bd-example">
 <form class="form-floating">
   <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
@@ -458,7 +458,7 @@
   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;floatingInputInvalid&#34;</span><span class="p">&gt;</span>Invalid input<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="textareas">Textareas</h2>
-<p>기본적으로, <code>.form-control</code>를 사용하는 <code>&lt;textarea&gt;</code>는 <code>&lt;input&gt;</code>의 높이와 동일합니다.</p>
+<p>기본적으로, <code>.form-control</code>을 사용하는 <code>&lt;textarea&gt;</code>는 <code>&lt;input&gt;</code>의 높이와 동일합니다.</p>
 <div class="bd-example">
 <div class="form-floating">
   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
@@ -468,7 +468,7 @@
   <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Leave a comment here&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;floatingTextarea&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;floatingTextarea&#34;</span><span class="p">&gt;</span>Comments<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p><code>&lt;textarea&gt;</code>의 높이를 변경하고 싶다면, <code>rows</code>속성 대신, 명시적인 <code>height</code>을 사용해 설정합니다(인라인 또는 사용자 CSS를 사용합니다).</p>
+<p><code>&lt;textarea&gt;</code>의 높이를 변경하고 싶다면, <code>rows</code>속성 대신, 명시적인 <code>height</code>를 사용해 설정해 주세요(인라인 또는 사용자 CSS를 사용합니다).</p>
 <div class="bd-example">
 <div class="form-floating">
   <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
@@ -479,7 +479,7 @@
   <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;floatingTextarea2&#34;</span><span class="p">&gt;</span>Comments<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="selects">Selects</h2>
-<p><code>.form-control</code> 이외에서의 플로팅 라벨은 <code>.form-select</code> 에서만 사용할 수 있습니다. 이들은 똑같이 동작하지만, <code>&lt;input&gt;</code>과는 다르게 항상 <code>&lt;label&gt;</code>이 플로팅 된 상태로 표시됩니다. <strong><code>size</code>와 <code>multiple</code> 선택자는 지원되지 않습니다.</strong></p>
+<p><code>.form-control</code> 이외에서의 플로팅 라벨은 <code>.form-select</code> 에서만 사용할 수 있습니다. 이들은 똑같이 동작하지만, <code>&lt;input&gt;</code>과는 다르게 <code>&lt;label&gt;</code>이 항상 플로팅 된 상태로 표시됩니다. <strong><code>size</code>와 <code>multiple</code> 선택자는 지원되지 않습니다.</strong></p>
 <div class="bd-example">
 <div class="form-floating">
   <select class="form-select" id="floatingSelect" aria-label="Floating label select example">

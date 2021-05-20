@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 텍스트의 지원을 활성화하는 방법을 알아보세요.">
+<meta name="description" content="레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 문자의 지원을 활성화하는 방법을 알아보세요.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.83.1">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="RTL">
-<meta name="twitter:description" content="레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 텍스트의 지원을 활성화하는 방법을 알아보세요.">
+<meta name="twitter:description" content="레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 문자의 지원을 활성화하는 방법을 알아보세요.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/getting-started/rtl/">
 <meta property="og:title" content="RTL">
-<meta property="og:description" content="레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 텍스트의 지원을 활성화하는 방법을 알아보세요.">
+<meta property="og:description" content="레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 문자의 지원을 활성화하는 방법을 알아보세요.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -391,7 +391,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/getting-started/rtl.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">RTL</h1>
         </div>
-        <p class="bd-lead">레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 텍스트의 지원을 활성화하는 방법을 알아보세요.</p>
+        <p class="bd-lead">레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 문자의 지원을 활성화하는 방법을 알아보세요.</p>
         
 
       </div>
@@ -435,7 +435,7 @@
 </div>
 
 <h2 id="required-html">Required HTML</h2>
-<p>현재 Bootstrap 기반 페이지에서 RTL을 활성화하기 위한 두가지 엄격한 요구 사항이 있습니다.</p>
+<p>현재 Bootstrap 기반 페이지에서 RTL을 활성화하기 위한 두 가지 엄격한 요구 사항이 있습니다.</p>
 <ol>
 <li><code>&lt;html&gt;</code> 요소에 <code>dir=&quot;rtl&quot;</code>을 설정하세요.</li>
 <li><code>&lt;html&gt;</code> 요소에 <code>lang=&quot;ar&quot;</code>와 같은 적절한 <code>lang</code> 속성을 추가해주세요.</li>
@@ -524,7 +524,7 @@
   <span class="c1">// Emoji fonts</span>
   <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="o">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span> <span class="nv">!default</span><span class="p">;</span>
 </code></pre></div><h3 id="ltr-and-rtl-at-the-same-time">LTR and RTL at the same time</h3>
-<p>Need both LTR and RTL on the same page? Thanks to <a href="https://rtlcss.com/learn/usage-guide/string-map/">RTLCSS String Maps</a>, this is pretty straightforward. Wrap your <code>@import</code>s with a class, and set a custom rename rule for RTLCSS:</p>
+<p>동일한 페이지에 LTR과 RTL이 모두 필요하신가요? <a href="https://rtlcss.com/learn/usage-guide/string-map/">RTLCSS String Maps</a> 덕분에 이것은 매우 간단합니다. <code>@import</code>를 클래스로 래핑하고 RTLCSS에 대한 커스텀 이름 바꾸기 규칙을 다음과 같이 설정하면 됩니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="cm">/* rtl:begin:options: {
 </span><span class="cm">  &#34;autoRename&#34;: true,
 </span><span class="cm">  &#34;stringMap&#34;:[ {
@@ -542,14 +542,14 @@
   <span class="k">@import</span> <span class="s2">&#34;../node_modules/bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="cm">/*rtl:end:options*/</span>
-</code></pre></div><p>After running Sass then RTLCSS, each selector in your CSS files will be prepended by <code>.ltr</code>, and <code>.rtl</code> for RTL files. Now you&rsquo;re able to use both files on the same page, and simply use <code>.ltr</code> or <code>.rtl</code> on your components wrappers to use one or the other direction.</p>
+</code></pre></div><p>Sass를 실행한 다음 RTLCSS를 실행하면 CSS 파일의 각 선택자에 <code>.ltr</code>이 추가되고 RTL 파일의 경우 <code>.rtl</code>이 추가됩니다. 이제 동일한 페이지에서 두 파일을 모두 사용할 수 있으며 컴포넌트 래퍼에서 .ltr 또는 .rtl을 사용하여 둘 중 하나의 방향을 사용할 수 있습니다.</p>
 <div class="bd-callout bd-callout-warning">
 <h4 id="edge-cases-and-known-limitations">Edge cases and known limitations</h4>
-<p>While this approach is understandable, please pay attention to the following:</p>
+<p>이러한 접근은 이해 가능하지만 다음 사항을 주의해주셔야 합니다:</p>
 <ol>
-<li>When switching <code>.ltr</code> and <code>.rtl</code>, make sure you add <code>dir</code> and <code>lang</code> attributes accordingly.</li>
-<li>Loading both files can be a real performance bottleneck: consider some <a href="/docs/5.0/customize/optimize/">optimization</a>, and maybe try to <a href="https://www.filamentgroup.com/lab/load-css-simpler/">load one of those files asynchronously</a>.</li>
-<li>Nesting styles this way will prevent our <code>form-validation-state()</code> mixin from working as intended, thus require you tweak it a bit by yourself. <a href="https://github.com/twbs/bootstrap/issues/31223">See #31223</a>.</li>
+<li><code>.ltr</code>과 <code>.rtl</code> 간에서 전환할 때 그에 따른 <code>dir</code> 및 <code>lang</code> 속성을 추가해야 합니다.</li>
+<li>두 파일을 모두 불러오면 실제 성능에 병목 현상이 발생할 수 있습니다. <a href="/docs/5.0/customize/optimize/">최적화</a>를 고려하고 둘 중 하나의 파일만 <a href="https://www.filamentgroup.com/lab/load-css-simpler/">비동기적으로 로드</a>해보세요.</li>
+<li>이런 식으로 스타일을 중첩하면 <code>form-validation-state()</code> 믹스인이 의도한 대로 작동하지 않음으로 어느정도 직접 조정이 필요합니다. <a href="https://github.com/twbs/bootstrap/issues/31223">#31223을 참고</a>해주세요.</li>
 </ol>
 
 </div>

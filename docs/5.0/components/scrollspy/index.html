@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="스크롤 위치에 따라 Bootstrap 내비게이션 또는 리스트 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.">
+<meta name="description" content="스크롤 위치에 따라 Bootstrap 내비게이션 또는 목록 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.83.1">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Scrollspy(스크롤 스파이)">
-<meta name="twitter:description" content="스크롤 위치에 따라 Bootstrap 내비게이션 또는 리스트 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.">
+<meta name="twitter:description" content="스크롤 위치에 따라 Bootstrap 내비게이션 또는 목록 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/scrollspy/">
 <meta property="og:title" content="Scrollspy(스크롤 스파이)">
-<meta property="og:description" content="스크롤 위치에 따라 Bootstrap 내비게이션 또는 리스트 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.">
+<meta property="og:description" content="스크롤 위치에 따라 Bootstrap 내비게이션 또는 목록 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -391,7 +391,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/scrollspy.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">Scrollspy(스크롤 스파이)</h1>
         </div>
-        <p class="bd-lead">스크롤 위치에 따라 Bootstrap 내비게이션 또는 리스트 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.</p>
+        <p class="bd-lead">스크롤 위치에 따라 Bootstrap 내비게이션 또는 목록 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.</p>
         
 
       </div>
@@ -431,14 +431,14 @@
         <h2 id="how-it-works">How it works</h2>
 <p>스크롤 스파이가 제대로 동작하기 위해서는 몇 가지 조건이 있습니다:</p>
 <ul>
-<li>Bootstrap <a href="/docs/5.0/components/navs-tabs/">nav component</a> 혹은 <a href="/docs/5.0/components/list-group/">list group</a> 에서 사용해야 합니다.</li>
-<li>스크롤 스파이는 감시 대상의 요소, 보통은 <code>&lt;body&gt;</code> 의 <code>position: relative;</code> 를 필요로 합니다.</li>
-<li>앵커 (<code>&lt;a&gt;</code>) 가 필요하고, 그 요소를 가르키는 <code>id</code> 가 필요합니다.</li>
+<li>Bootstrap <a href="/docs/5.0/components/navs-tabs/">nav component</a> 혹은 <a href="/docs/5.0/components/list-group/">list group</a>에서 사용해야 합니다.</li>
+<li>스크롤 스파이는 감시 대상의 요소, 보통은 <code>&lt;body&gt;</code>의 <code>position: relative;</code>를 필요로 합니다.</li>
+<li>앵커 (<code>&lt;a&gt;</code>)가 필요하고, 그 요소를 가르키는 <code>id</code>가 필요합니다.</li>
 </ul>
-<p>정상적으로 구현되면 내비게이션이나 리스트 그룹은 그에 따라 갱신되며, <code>.active</code> 클래스는 관련 타겟에 따라 한 개의 아이템에서 다음 아이템으로 이동합니다.</p>
+<p>정상적으로 구현되면 내비게이션이나 목록 그룹은 그에 따라 갱신되며, <code>.active</code> 클래스는 관련 타깃에 따라 한 개의 아이템에서 다음 아이템으로 이동합니다.</p>
 <div class="bd-callout bd-callout-info">
 <h3 id="scrollable-containers-and-keyboard-access">Scrollable containers and keyboard access</h3>
-<p>스크롤 가능한 컨테이너(<code>&lt;body&gt;</code> 이외의 )를 작성할 경우에는 반드시 <code>height</code> 를 설정하고 키보드로부터의 접근을 확실히 하기 위해서 <code>tabindex=&quot;0&quot;</code> 와 함께 <code>overflow-y: scroll;</code> 을 적용하십시오.
+<p>스크롤 가능한 컨테이너(<code>&lt;body&gt;</code> 이외의 )를 작성할 경우에는 반드시 <code>height</code>를 설정하고 키보드로 부터의 접근을 확실히 하기 위해서 <code>tabindex=&quot;0&quot;</code>와 함께 <code>overflow-y: scroll;</code>을 적용하십시오.
 </div>
 
 <h2 id="example-in-navbar">Example in navbar</h2>
@@ -510,7 +510,7 @@
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="example-with-nested-nav">Example with nested nav</h2>
-<p>스크롤 스파이는 중첩된 <code>.nav</code> 에서도 동작합니다. 중첩 된 <code>.nav</code> 가 <code>.active</code> 인 경우, 그 부모도 <code>.active</code> 가 됩니다. 내비게이션 바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.</p>
+<p>스크롤 스파이는 중첩된 <code>.nav</code> 에서도 동작합니다. 중첩 된 <code>.nav</code>가 <code>.active</code>인 경우, 그 부모도 <code>.active</code>가 됩니다. 내비게이션 바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.</p>
 <div class="bd-example">
   <div class="row">
     <div class="col-4">
@@ -585,7 +585,7 @@
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="example-with-list-group">Example with list-group</h2>
-<p>스크롤 스파이는 <code>.list-group</code> 에서도 동작합니다. 리스트 그룹 옆의 영역을 스크롤해서 활성화 된 클래스가 변화하는 것을 보겠습니다.</p>
+<p>스크롤 스파이는 <code>.list-group</code>에서도 동작합니다. 목록 그룹 옆의 영역을 스크롤해서 활성화 된 클래스가 변화하는 것을 보겠습니다.</p>
 <div class="bd-example">
   <div class="row">
     <div class="col-4">
@@ -628,7 +628,7 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="usage">Usage</h2>
 <h3 id="via-data-attributes">Via data attributes</h3>
-<p>topbar 내비게이션에 스크롤 스파이 동작을 간단하게 추가하려면, 스크롤스파이 하고 싶은 요소에 <code>data-bs-spy=&quot;scroll&quot;</code> 를 추가합니다(가장 전형적으로는 <code>&lt;body&gt;</code> 입니다). 그 다음에 <code>data-bs-target</code> 속성에 임의의 Bootstrap <code>.nav</code> 컴포넌트의 부모요소의 ID 또는 클래스를 추가합니다.</p>
+<p>topbar 내비게이션에 스크롤 스파이 동작을 간단하게 추가하려면, 스크롤 스파이 하고 싶은 요소에 <code>data-bs-spy=&quot;scroll&quot;</code>를 추가합니다(가장 전형적으로는 <code>&lt;body&gt;</code>입니다). 그 다음에 <code>data-bs-target</code> 속성에 임의의 Bootstrap <code>.nav</code> 컴포넌트의 부모 요소의 ID 또는 클래스를 추가합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
   <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
 <span class="p">}</span>
@@ -642,18 +642,18 @@
   ...
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="via-javascript">Via JavaScript</h3>
-<p>CSS에 <code>position: relative;</code> 를 추가한 뒤, JavaScript 로 스크롤 스파이를 호출합니다:</p>
+<p>CSS에 <code>position: relative;</code>를 추가한 뒤, JavaScript로 스크롤 스파이를 호출합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;#navbar-example&#39;</span>
 <span class="p">})</span>
 </code></pre></div><div class="bd-callout bd-callout-danger">
 <h4 id="resolvable-id-targets-required">Resolvable ID targets required</h4>
-<p>Navbar 링크는 해결 가능한 id 타겟을 가져야 합니다. 예를 들면, <code>&lt;a href=&quot;#home&quot;&gt;home&lt;/a&gt;</code> 은 <code>&lt;div id=&quot;home&quot;&gt;&lt;/div&gt;</code> 와 같은 DOM 내의 무엇인가에 있지 않으면 안됩니다.
+<p>Navbar 링크는 해결 가능한 id 타깃을 가져야 합니다. 예를 들면, <code>&lt;a href=&quot;#home&quot;&gt;home&lt;/a&gt;</code>은 <code>&lt;div id=&quot;home&quot;&gt;&lt;/div&gt;</code>와 같은 DOM 내의 무엇인가에 있지 않으면 안됩니다.
 </div>
 
 <div class="bd-callout bd-callout-info">
 <h4 id="non-visible-target-elements-ignored">Non-visible target elements ignored</h4>
-<p>표시되지 않는 타겟 요소는 무시되며 대응 nav 아이템은 강조 표시되지 않습니다.
+<p>표시되지 않는 타깃 요소는 무시되며 대응 nav 아이템은 강조 표시되지 않습니다.
 </div>
 
 <h3 id="methods">Methods</h3>
@@ -671,7 +671,7 @@
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">scrollSpyContentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">scrollSpyContentEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap scrollspy instance
 </span></code></pre></div><h3 id="options">Options</h3>
-<p>옵션은 data 속성 또는 JavaScript 로 줄 수 있습니다. data 속성인 경우는 <code>data-bs-offset=&quot;&quot;</code> 처럼 <code>data-bs-</code> 에 옵션명을 추가합니다.</p>
+<p>옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성인 경우는 <code>data-bs-offset=&quot;&quot;</code> 처럼 <code>data-bs-</code>에 옵션 명을 추가합니다.</p>
 <table class="table">
   <thead>
     <tr>

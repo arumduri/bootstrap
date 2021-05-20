@@ -432,7 +432,7 @@
         
 
         <h2 id="examples">Examples</h2>
-<p>텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를들면, <code>.alert-success</code>) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, <a href="#dismissing">alerts JavaScript plugin</a> 을 사용합니다.</p>
+<p>문자 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를 들면, <code>.alert-success</code>) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, <a href="#dismissing">alerts JavaScript plugin</a> 을 사용합니다.</p>
 <div class="bd-example">
 
 <div class="alert alert-primary" role="alert">
@@ -556,7 +556,7 @@
   <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;mb-0&#34;</span><span class="p">&gt;</span>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="icons">Icons</h3>
-<p>Similarly, you can use <a href="/docs/5.0/utilities/flex/">flexbox utilities</a> and <a href="https://icons.getbootstrap.kr/">Bootstrap Icons</a> to create alerts with icons. Depending on your icons and content, you may want to add more utilities or custom styles.</p>
+<p>마찬가지로 <a href="/docs/5.0/utilities/flex/">flexbox utilities</a> 와 <a href="https://icons.getbootstrap.kr/">Bootstrap Icons</a> 을 이용하여 경고창을 만들 수 있습니다. 아이콘이나 콘텐츠에 따라서는 유틸리티나 사용자 정의 스타일을 더 추가할 수도 있습니다.</p>
 <div class="bd-example">
 <div class="alert alert-primary d-flex align-items-center" role="alert">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
@@ -574,7 +574,7 @@
     An example alert with an icon
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Need more than one icon for your alerts? Consider using more Bootstrap Icons and making a local SVG sprite like so to easily reference the same icons repeatedly.</p>
+<p>경고창에 여러 개의 아이콘이 필요한가요? 로컬 SVG 스프라이트를 만들어 같은 아이콘을 간단하게 반복시켜 참조할 수 있는 보다 많은 Bootstrap 아이콘을 사용해 보세요.</p>
 <div class="bd-example">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -653,8 +653,8 @@
 <ul>
 <li>JavaScript 플러그인 또는 Bootstrap JavaScript를 가지고 옵니다.</li>
 <li><a href="/docs/5.0/components/close-button/">close button</a> 에 <code>.alert-dismissible</code> 의 클래스를 추가하면 경고창의 오른쪽에 여백이 추가되고, 닫기 버튼의 위치가 결정됩니다.</li>
-<li>닫기 버튼에 <code>data-bs-dismiss=&quot;alert&quot;</code> 속성을 추가합니다. 그러면 JavaScript 기능이 트리거 됩니다. 모든 디바이스에서 올바르게 동작시키려면 반드시 <code>&lt;button&gt;</code> 요소를 사용해 주세요.</li>
-<li>경고창을 닫을 때 애니메이션을 적용하려면, 반드시 <code>.fade</code> 와 <code>.show</code> 의 클래스를 추가해 주세요.</li>
+<li>닫기 버튼에 <code>data-bs-dismiss=&quot;alert&quot;</code> 속성을 추가합니다. 그러면 JavaScript 기능이 트리거 됩니다. 모든 기기에서 올바르게 동작시키려면 반드시 <code>&lt;button&gt;</code> 요소를 사용해 주세요.</li>
+<li>경고창을 닫을 때 애니메이션을 적용하려면, 반드시 <code>.fade</code>와 <code>.show</code> 의 클래스를 추가해 주세요.</li>
 </ul>
 <p>실시간 데모로 확인할 수 있습니다:</p>
 <div class="bd-example">
@@ -667,7 +667,7 @@
   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <div class="bd-callout bd-callout-warning">
-경고창이 해제되면 해당 요소는 페이지 구조에서 완전히 제거됩니다. 키보드 사용자가 닫기 버튼을 통해 경고창을 해제하면 포커스가 갑자기 사라지고 브라우저에 따라서는 페이지나 문서의 선두에 리셋됩니다. 그래서 <code>closed.bs.alert</code> 이벤트를 리슨하고 <code>focus()</code> 를 페이지 내의 가장 적절한 위치에 프로그램적으로 설정하는 JavaScript 를 추가할 것을 권장합니다. 보통은 포커스를 받지 않는 상호 작용할 수 없는 요소에 포커스를 이동시키는 경우는, 그 요소에 <code>tabindex=&quot;-1&quot;</code> 을 추가하도록 해 주세요.
+경고창이 해제되면 해당 요소는 페이지 구조에서 완전히 제거됩니다. 키보드 사용자가 닫기 버튼을 통해 경고창을 해제하면 포커스가 갑자기 사라지고 브라우저에 따라서는 페이지나 문서의 선두에 리셋됩니다. 그래서 <code>closed.bs.alert</code> 이벤트를 리슨하고 <code>focus()</code>를 페이지 내의 가장 적절한 위치에 프로그램적으로 설정하는 JavaScript를 추가할 것을 권장합니다. 보통은 포커스를 받지 않는 상호 작용할 수 없는 요소에 포커스를 이동시키는 경우는, 그 요소에 <code>tabindex=&quot;-1&quot;</code> 을 추가하도록 해 주세요.
 </div>
 
 <h2 id="sass">Sass</h2>
@@ -684,7 +684,7 @@
 <span class="nv">$alert-dismissible-padding-r</span><span class="o">:</span>   <span class="nv">$alert-padding-x</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span> <span class="c1">// 3x covers width of x plus default padding on either side
 </span></code></pre></div>
 <h3 id="variant-mixin">Variant mixin</h3>
-<p>Used in combination with <code>$theme-colors</code> to create contextual modifier classes for our alerts.</p>
+<p><code>$theme-colors</code>와 조합하여 알림 경고창의 수식어 클래스를 생성합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> alert-variant</span><span class="p">(</span><span class="nv">$background</span><span class="o">,</span> <span class="nv">$border</span><span class="o">,</span> <span class="nv">$color</span><span class="p">)</span> <span class="p">{</span>
   <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
   <span class="k">@include</span><span class="nd"> gradient-bg</span><span class="p">(</span><span class="nv">$background</span><span class="p">);</span>
@@ -696,7 +696,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="loop">Loop</h3>
-<p>Loop that generates the modifier classes with the <code>alert-variant()</code> mixin.</p>
+<p>믹스인 <code>alert-variant()</code>에서 수식어 클래스를 생성하는 반복문입니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Generate contextual modifier classes for colorizing the alert.
 </span><span class="c1"></span>
 <span class="k">@each</span> <span class="err">$</span><span class="nt">state</span><span class="o">,</span> <span class="err">$</span><span class="nt">value</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">theme-colors</span> <span class="p">{</span>
@@ -713,19 +713,19 @@
 </code></pre></div>
 <h2 id="javascript-behavior">JavaScript behavior</h2>
 <h3 id="triggers">Triggers</h3>
-<p>JavaScript 를 통해 경고창을 닫습니다.</p>
+<p>JavaScript를 통해 경고창을 닫습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">alertList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.alert&#39;</span><span class="p">)</span>
 <span class="nx">alertList</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">alert</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Alert</span><span class="p">(</span><span class="nx">alert</span><span class="p">)</span>
 <span class="p">})</span>
-</code></pre></div><p>혹은, 위에 설명한대로 <strong>경고창 안의</strong> 닫기 버튼에 <code>data</code> 속성을:</p>
+</code></pre></div><p>혹은, 위에 설명한 대로 <strong>경고창 안의</strong> 닫기 버튼에 <code>data</code> 속성을:</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div><p>경고창을 닫으면 DOM에서 제거되는 점을 주의하세요.</p>
 <h3 id="methods">Methods</h3>
 <p>경고창의 생성자를 사용해 경고창의 인스턴스를 만들 수 있습니다. 예를 들어:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myAlert</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myAlert&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">bsAlert</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Alert</span><span class="p">(</span><span class="nx">myAlert</span><span class="p">)</span>
-</code></pre></div><p>이렇게 하면 <code>data-bs-dismiss=&quot;alert&quot;</code> 의 속성이 있는 하위 요소에서 클릭 이벤트를 상위의 경고창에서 알수 있습니다. (data-api 의 자동 초기화를 사용할 때에는 필요 없습니다.)</p>
+</code></pre></div><p>이렇게 하면 <code>data-bs-dismiss=&quot;alert&quot;</code> 의 속성이 있는 하위 요소에서 클릭 이벤트를 상위의 경고창에서 알 수 있습니다. (data-api 의 자동 초기화를 사용할 때에는 필요 없습니다.)</p>
 <table class="table">
   <thead>
     <tr>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Learn how to include Bootstrap in your project using Parcel.">
+<meta name="description" content="Parcel을 사용해서 Bootstrap을 프로젝트에 포함하는 방법에 대해 알아봅니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.83.1">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Parcel">
-<meta name="twitter:description" content="Learn how to include Bootstrap in your project using Parcel.">
+<meta name="twitter:description" content="Parcel을 사용해서 Bootstrap을 프로젝트에 포함하는 방법에 대해 알아봅니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/getting-started/parcel/">
 <meta property="og:title" content="Parcel">
-<meta property="og:description" content="Learn how to include Bootstrap in your project using Parcel.">
+<meta property="og:description" content="Parcel을 사용해서 Bootstrap을 프로젝트에 포함하는 방법에 대해 알아봅니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -391,7 +391,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/getting-started/parcel.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">Parcel</h1>
         </div>
-        <p class="bd-lead">Learn how to include Bootstrap in your project using Parcel.</p>
+        <p class="bd-lead">Parcel을 사용해서 Bootstrap을 프로젝트에 포함하는 방법에 대해 알아봅니다.</p>
         
 
       </div>
@@ -421,11 +421,11 @@
         
 
         <h2 id="install-parcel">Install Parcel</h2>
-<p>Install <a href="https://en.parceljs.org/getting_started.html">Parcel Bundler</a>.</p>
+<p><a href="https://en.parceljs.org/getting_started.html">Parcel Bundler</a>를 설치해주세요.</p>
 <h2 id="install-bootstrap">Install Bootstrap</h2>
-<p><a href="/docs/5.0/getting-started/download/#npm">Install bootstrap</a> as a Node.js module using npm.</p>
-<p>Bootstrap depends on <a href="https://popper.js.org/">Popper</a>, which is specified in the <code>peerDependencies</code> property. This means that you will have to make sure to add both of them to your <code>package.json</code> using <code>npm install @popperjs/core</code>.</p>
-<p>When all will be completed, your project will be structured like this:</p>
+<p>npm을 통해서 Node.js 모듈로 <a href="/docs/5.0/getting-started/download/#npm">bootstrap을 설치</a>해주세요.</p>
+<p>Bootstrap은 <code>peerDependencies</code> 속성에 지정된 Popper에 의존합니다. 이것은 <code>npm install @ popperjs/core</code>를 사용하여 두 가지 모두를 <code>package.json</code> 에 추가해야 한다는 것을 의미합니다.</p>
+<p>모든 작업이 완료되면 프로젝트는 다음과 같이 구성됩니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">project-name/
 ├── build/
 ├── node_modules/
@@ -438,7 +438,7 @@
 │   └── index.js
 └── package.json
 </code></pre></div><h2 id="importing-javascript">Importing JavaScript</h2>
-<p>Import <a href="/docs/5.0/getting-started/javascript/">Bootstrap&rsquo;s JavaScript</a> in your app&rsquo;s entry point (usually <code>src/index.js</code>). You can import all our plugins in one file or separately if you require only a subset of them.</p>
+<p>앱의 진입점 (일반적으로 <code>src/index.js</code>)에서 <a href="/docs/5.0/getting-started/javascript/">Bootstrap의 JavaScript</a>를 가져옵니다. 모든 플러그인을 하나의 파일로 가져오거나 일부만 필요한 경우 개별적으로 가져올 수도 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Import all plugins
 </span><span class="c1"></span><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">bootstrap</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span>
 
@@ -448,10 +448,10 @@
 <span class="c1">// Or import just one
 </span><span class="c1"></span><span class="kr">import</span> <span class="nx">Alert</span> <span class="nx">as</span> <span class="nx">Alert</span> <span class="nx">from</span> <span class="s1">&#39;../node_modules/bootstrap/js/dist/alert&#39;</span><span class="p">;</span>
 </code></pre></div><h2 id="importing-css">Importing CSS</h2>
-<p>To utilize the full potential of Bootstrap and customize it to your needs, use the source files as a part of your project&rsquo;s bundling process.</p>
-<p>Create your own <code>scss/custom.scss</code> to <a href="/docs/5.0/customize/sass/#importing">import Bootstrap&rsquo;s Sass files</a> and then override the <a href="/docs/5.0/customize/sass/#variable-defaults">built-in custom variables</a>.</p>
+<p>Bootstrap의 잠재력을 최대한 활용하고 필요에 맞게 커스터마이징하려면 프로젝트 번들링 과정의 일부로 소스 파일을 사용하세요.</p>
+<p>자체 <code>scss/custom.scss</code>를 만들어서 <a href="/docs/5.0/customize/sass/#importing">Bootstrap의 Sass 파일을 불러오고</a> <a href="/docs/5.0/customize/sass/#variable-defaults">기본 제공되는 맞춤 변수</a>를 재정의해주세요.</p>
 <h2 id="build-app">Build app</h2>
-<p>Include <code>src/index.js</code> before the closing <code>&lt;/body&gt;</code> tag.</p>
+<p><code>&lt;/body&gt;</code> 태그로 닫기 전에 <code>src/index.js</code>를 포함시켜주세요.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -463,17 +463,17 @@
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="edit-packagejson">Edit <code>package.json</code></h3>
-<p>Add <code>dev</code> and <code>build</code> scripts in your <code>package.json</code> file.</p>
+<p><code>package.json</code> 파일에 <code>dev</code> 및 <code>build</code> 스크립트를 추가해주세요.</p>
 <div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
   <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;parcel ./src/index.html&#34;</span><span class="p">,</span>
   <span class="nt">&#34;prebuild&#34;</span><span class="p">:</span> <span class="s2">&#34;npx rimraf build&#34;</span><span class="p">,</span>
   <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;parcel build --public-url ./ ./src/index.html --experimental-scope-hoisting --out-dir build&#34;</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="run-dev-script">Run dev script</h3>
-<p>Your app will be accessible at <code>http://127.0.0.1:1234</code>.</p>
+<p><code>http://127.0.0.1:1234</code>를 통해서 앱에 접근할 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npm run dev
 </code></pre></div><h3 id="build-app-files">Build app files</h3>
-<p>Built files are in the <code>build/</code> folder.</p>
+<p>빌드된 파일은 <code>build/</code> 폴더 내에 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npm run build
 </code></pre></div>
       </div>

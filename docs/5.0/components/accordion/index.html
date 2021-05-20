@@ -423,7 +423,7 @@
         
 
         <h2 id="how-it-works">How it works</h2>
-<p>아코디언은 내부적으로 <a href="/docs/5.0/components/collapse/">collapse</a> 를 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 랜더링을 하려면, <code>.accordion</code> 에 <code>.open</code> 클래스를 추가해야 합니다.</p>
+<p>아코디언은 내부적으로 <a href="/docs/5.0/components/collapse/">collapse</a> 를 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 렌더링을 하려면, <code>.accordion</code> 에 <code>.open</code> 클래스를 추가해야 합니다.</p>
 <div class="bd-callout bd-callout-info">
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
 </div>
@@ -508,7 +508,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="flush">Flush</h3>
-<p><code>.accordion-flush</code> 를 추가하여, 기본 <code>background-color</code> 와 몇 개의 외곽선, 그리고 몇 개의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge로 랜더링합니다.</p>
+<p><code>.accordion-flush</code>를 추가하여, 기본 <code>background-color</code>와 몇 개의 외곽선, 그리고 몇 개의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge로 렌더링합니다.</p>
 <div class="bd-example bg-light">
 <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
@@ -575,7 +575,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="always-open">Always open</h3>
-<p>Omit the <code>data-bs-parent</code> attribute on each <code>.accordion-collapse</code> to make accordion items stay open when another item is opened.</p>
+<p>다른 항목이 열렸을 때도 이전 아코디언 항목이 열린 상태로 유지되게 하고 싶으면 각 <code>.accordion-collapse</code>의 <code>data-bs-parent</code> 속성을 생략하면 됩니다.</p>
 <div class="bd-example">
 <div class="accordion" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">

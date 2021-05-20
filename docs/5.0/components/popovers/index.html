@@ -450,15 +450,15 @@
         <h2 id="overview">Overview</h2>
 <p>팝오버 플러그인을 사용할 때 알아두어야 할 점:</p>
 <ul>
-<li>팝오버는 <a href="https://popper.js.org/">Popper</a> 에 의존하고 있습니다. 팝오버를 동작시키기 위해서는 bootstrap.js 앞에 <a href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">popper.min.js</a> 를 쓰거나 Popper 를 포함한 <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> 를 사용해야 합니다.</li>
-<li>팝오버는, 의존관계로 <a href="/docs/5.0/components/tooltips/">tooltip plugin</a> 이 필요합니다.</li>
+<li>팝오버는 <a href="https://popper.js.org/">Popper</a>에 의존하고 있습니다. 팝오버를 동작시키기 위해서는 bootstrap.js 앞에 <a href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">popper.min.js</a> 를 쓰거나 Popper를 포함한 <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code>를 사용해야 합니다.</li>
+<li>팝오버는, 의존관계로 <a href="/docs/5.0/components/tooltips/">tooltip plugin</a>이 필요합니다.</li>
 <li>팝오버는 퍼포먼스를 위해 opt-in 되어 있기 때문에, <strong>스스로 초기화를 해야 합니다.</strong></li>
-<li>길이가 0 인 <code>title</code> 과 <code>content</code> 값은 팝오버를 표시하지 않습니다.</li>
-<li>더 복잡한 컴포넌트(input group, button groups 등)의 렌더링 문제를 피하기 위해 <code>container: 'body'</code> 를 지정해 주십시오.</li>
-<li>숨겨진 요소에서 팝오버를 트리거해도 작동하지 않습니다.</li>
-<li><code>.disabled</code> 또는 <code>disabled</code> 요소의 팝오버는 그 위(바깥) 요소에서 트리거해야 합니다.</li>
-<li>여러 라인에 걸쳐 있는 앵커로부터 트리거 된 경우, 팝오버는 앵커의 전체 폭을 중심으로 표시됩니다. 이 동작을 피하기 위해서는 <code>&lt;a&gt;</code> 에 <code>.text-nowrap</code> 을 사용해 주십시오.</li>
-<li>팝오버는 대응 요소가 DOM 에서 삭제되기 전에 숨겨야 합니다.</li>
+<li>길이가 0인 <code>title</code> 과 <code>content</code> 값은 팝오버를 표시하지 않습니다.</li>
+<li>더 복잡한 컴포넌트(input group, button groups 등)의 렌더링 문제를 피하기 위해 <code>container: 'body'</code>를 지정해 주십시오.</li>
+<li>숨겨진 요소에서 팝오버를 트리거 해도 작동하지 않습니다.</li>
+<li><code>.disabled</code> 또는 <code>disabled</code> 요소의 팝오버는 그 위(바깥) 요소에서 트리거 해야 합니다.</li>
+<li>여러 라인에 걸쳐 있는 앵커로부터 트리거 된 경우, 팝오버는 앵커의 전체 폭을 중심으로 표시됩니다. 이 동작을 피하기 위해서는 <code>&lt;a&gt;</code>에 <code>.text-nowrap</code>을 사용해 주십시오.</li>
+<li>팝오버는 대응 요소가 DOM에서 삭제되기 전에 숨겨야 합니다.</li>
 <li>팝오버는 shadow DOM 내의 요소 덕분에 트리거 할 수 있습니다.</li>
 </ul>
 <div class="bd-callout bd-callout-info">
@@ -469,7 +469,7 @@ By default, this component uses the built-in content sanitizer, which strips out
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
 </div>
 
-<p>팝오버가 어떤 기능을 하는지 몇 가지 예를 들어보겠습니다.</p>
+<p>팝오버가 어떤 기능을 하는지 몇 가지 예를 들어 보겠습니다.</p>
 <h2 id="example-enable-popovers-everywhere">Example: Enable popovers everywhere</h2>
 <p>페이지 상의 모든 팝오버를 초기화하는 방법 중 하나는 <code>data-bs-toggle</code> 속성으로 선택하는 것입니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">popoverTriggerList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;popover&#34;]&#39;</span><span class="p">))</span>
@@ -477,7 +477,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">popoverTriggerEl</span><span class="p">)</span>
 <span class="p">})</span>
 </code></pre></div><h2 id="example-using-the-container-option">Example: Using the <code>container</code> option</h2>
-<p>부모 요소에 팝오버를 방해하는 몇 가지 스타일이 있다면, 대신 커스텀 <code>container</code> 를 지정하여 팝오버의 HTML을 해당 요소 내에 표시되도록 합니다.</p>
+<p>부모 요소에 팝오버를 방해하는 몇 가지 스타일이 있다면, 대신 사용자 정의 <code>container</code>를 지정하여 팝오버의 HTML을 해당 요소 내에 표시되도록 합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.example-popover&#39;</span><span class="p">),</span> <span class="p">{</span>
   <span class="nx">container</span><span class="o">:</span> <span class="s1">&#39;body&#39;</span>
 <span class="p">})</span>
@@ -526,8 +526,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="nx">trigger</span><span class="o">:</span> <span class="s1">&#39;focus&#39;</span>
 <span class="p">})</span>
 </code></pre></div><h3 id="disabled-elements">Disabled elements</h3>
-<p>Elements with the <code>disabled</code> attribute aren&rsquo;t interactive, meaning users cannot hover or click them to trigger a popover (or tooltip). As a workaround, you&rsquo;ll want to trigger the popover from a wrapper <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code>, ideally made keyboard-focusable using <code>tabindex=&quot;0&quot;</code>.</p>
-<p>For disabled popover triggers, you may also prefer <code>data-bs-trigger=&quot;hover focus&quot;</code> so that the popover appears as immediate visual feedback to your users as they may not expect to <em>click</em> on a disabled element.</p>
+<p><code>disabled</code> 속성을 갖는 요소는 인터랙티브하지 않습니다. 즉, 사용자가 팝오버(또는 툴팁)를 일으키기 위해서 호버하거나 클릭할 수 없습니다. 차선책으로 감싼 <code>&lt;div&gt;</code> 및 <code>&lt;span&gt;</code>에서 팝오버를 트리거 되길 원하지만, <code>tabindex=&quot;0&quot;</code>을 사용해 키보드 포커스가 가능하도록 이상적으로 만듭니다.</p>
+<p>무효화된 팝오버를 트리거 하기 위해서는 <code>data-bs-trigger=&quot;hover focus&quot;</code>라고 하면 사용자는 무효가 된 요소를 <em>click</em> 할 것을 기대하지 않기 때문에 팝오버가 바로 시각적으로 표시되게 됩니다.</p>
 <div class="bd-example">
 <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
   <button class="btn btn-primary" type="button" disabled>Disabled button</button>
@@ -567,14 +567,14 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="kd">var</span> <span class="nx">popover</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
 </code></pre></div><div class="bd-callout bd-callout-warning">
 <h3 id="making-popovers-work-for-keyboard-and-assistive-technology-users">Making popovers work for keyboard and assistive technology users</h3>
-<p>키보드 사용자가 팝오버를 활성화 하려면, 키보드 포커스가 가능하며 상호작용이 가능한 HTML 요소(링크나 폼 컨트톨 등)에만 추가해야 합니다. 임의의 HTML 요소(<code>&lt;span&gt;</code> 등)는 <code>tabindex=&quot;0&quot;</code> 속성을 추가함으로써 포커스가 가능한데, 이는 키보드 사용자에게는 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 혼란을 초래할 수 있습니다. 게다가 키보드 사용자가 팝오버를 트리거 할수 없게 되므로 팝오버의 트리거를 <code>hover</code> 에만 의지해서는 안됩니다.</p>
-<p><code>html</code> 옵션에서 리치로 구조화된 HTML을 팝오버에 넣을 수 있지만 과도한 양의 컨텐츠를 추가하는 것은 피하는 것이 좋습니다. 팝오버가 현재 기능을 하는 방법은 한 번 표시되면 해당 컨텐츠는 <code>aria-describedby</code> 속성을 갖는 트리거 요소에 연결됩니다. 그 결과 팝오버 컨텐츠 전체가 스크린 리더 사용자에게 길고 끊기지 않는 스트림으로 알릴 것입니다.</p>
-<p>또한, 인터랙티브한 컨트롤(폼 요소나 링크 등)들을 팝오버에 포함시킬 수도 있지만 (허락된 속성이나 태그의 <code>allowList</code> 에 이러한 요소를 추가하여), 현재 팝오버는 키보드 포커스 순서를 관리하지 않는다는 점에 유의하십시오. 키보드 사용자가 팝오버를 열면 포커스는 트리거가 되는 요소에 머무르고, 팝오버는 보통 문서 구조의 트리거를 쉽게 따라가지 않기 때문에 <kbd>TAB</kbd> 을 앞으로 이동/눌러도 키보드 사용자가 팝오버 자체로 이동하리라는 보장은 없습니다. 요컨대 단순히 팝오버에 상호작용할 수 있는 컨트롤을 추가하는 것만으로도 키보드 사용자나 스크린 리더 사용자들이 이들 컨트롤에 접근할 수 없거나 적어도 전체적으로 비논리적인 포커스 순서가 될 수 있습니다. 이러한 경우는, modal(모달) 사용을 검토해 주십시오.</p>
+<p>키보드 사용자가 팝오버를 활성화하려면, 키보드 포커스가 가능하며 상호작용이 가능한 HTML 요소(링크나 폼 컨트톨 등)에만 추가해야 합니다. 임의의 HTML 요소(<code>&lt;span&gt;</code> 등)는 <code>tabindex=&quot;0&quot;</code> 속성을 추가함으로써 포커스가 가능한데, 이는 키보드 사용자에게는 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 혼란을 초래할 수 있습니다. 게다가 키보드 사용자가 팝오버를 트리거 할 수 없게 되므로 팝오버의 트리거를 <code>hover</code> 에만 의지해서는 안됩니다.</p>
+<p><code>html</code> 옵션에서 리치로 구조화된 HTML을 팝오버에 넣을 수 있지만 과도한 양의 콘텐츠를 추가하는 것은 피하는 것이 좋습니다. 팝오버가 현재 기능을 하는 방법은 한 번 표시되면 해당 콘텐츠는 <code>aria-describedby</code> 속성을 갖는 트리거 요소에 연결됩니다. 그 결과 팝오버 콘텐츠 전체가 스크린 리더 사용자에게 길고 끊기지 않는 스트림으로 알릴 것입니다.</p>
+<p>또한, 인터랙티브한 컨트롤(폼 요소나 링크 등)들을 팝오버에 포함할 수도 있지만 (허락된 속성이나 태그의 <code>allowList</code> 에 이러한 요소를 추가하여), 현재 팝오버는 키보드 포커스 순서를 관리하지 않는다는 점에 유의하십시오. 키보드 사용자가 팝오버를 열면 포커스는 트리거가 되는 요소에 머무르고, 팝오버는 보통 문서 구조의 트리거를 쉽게 따라가지 않기 때문에 <kbd>TAB</kbd> 을 앞으로 이동/눌러도 키보드 사용자가 팝오버 자체로 이동하라는 보장은 없습니다. 요컨대 단순히 팝오버에 상호작용할 수 있는 컨트롤을 추가하는 것만으로도 키보드 사용자나 스크린 리더 사용자들이 이들 컨트롤에 접근할 수 없거나 적어도 전체적으로 비논리적인 포커스 순서가 될 수 있습니다. 이러한 경우는, modal(모달) 사용을 검토해 주십시오.</p>
 
 </div>
 
 <h3 id="options">Options</h3>
-<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-bs-</code>, as in <code>data-bs-animation=&quot;&quot;</code>. Make sure to change the case type of the option name from camelCase to kebab-case when passing the options via data attributes. For example, instead of using <code>data-bs-customClass=&quot;beautifier&quot;</code>, use <code>data-bs-custom-class=&quot;beautifier&quot;</code>.</p>
+<p>옵션은 data 속성이나 JavaScript로 전달할 수 있습니다. data 속성의 경우는, <code>data-bs-animation=&quot;&quot;</code>과 같이 <code>data-bs-</code>에 옵션 명을 추가합니다. data 속성으로 옵션을 전달하려면 옵션 명의 대문자와 소문자를 캐멀케이스(camelCase)에서 케밥케이스(kebab-case)로 변경해 주세요. 예를 들어 <code>data-bs-customClass=&quot;beautifier&quot;</code>가 아니라 <code>data-bs-custom-class=&quot;beautifier&quot;</code>로 해야 합니다.</p>
 <div class="bd-callout bd-callout-warning">
 보안상의 이유로 <code>sanitize</code>, <code>sanitizeFn</code>, <code>allowList</code> 옵션을 data 속성으로 지정할 수 없다는 것에 주의해 주세요.
 </div>
@@ -608,7 +608,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td>string | element | function</td>
       <td><code>''</code></td>
       <td>
-        <p><code>data-bs-content</code> 속성이 존재하지 않는 경우의 기본 컨텐츠 값.</p>
+        <p><code>data-bs-content</code> 속성이 존재하지 않는 경우의 기본 콘텐츠 값.</p>
         <p>함수가 주어졌을 경우, 그 <code>this</code> 참조가 팝오버가 어태치 되어 있는 요소로 설정된 상태로 호출됩니다.</p>
       </td>
     </tr>
@@ -619,14 +619,14 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td>
         <p>팝오버 표시 및 숨김 지연(ms) - 수동 트리커 타입에는 적용되지 않습니다.</p>
         <p>수치가 부여된 경우 숨김/표시의 양쪽에 지연이 적용됩니다.</p>
-        <p>오브젝트 구조: <code>delay: { "show": 500, "hide": 100 }</code></p>
+        <p>객체 구조: <code>delay: { "show": 500, "hide": 100 }</code></p>
       </td>
     </tr>
     <tr>
       <td><code>html</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
-      <td>팝오버에 HTML 을 삽입합니다. false 의 경우 <code>innerText</code> 속성을 사용하여 DOM 에 컨텐츠를 삽입합니다. XSS 공격이 걱정될 경우 텍스트를 사용합니다.</td>
+      <td>팝오버에 HTML 을 삽입합니다. false 의 경우 <code>innerText</code> 속성을 사용하여 DOM 에 콘텐츠를 삽입합니다. XSS 공격이 걱정될 경우 문자를 사용합니다.</td>
     </tr>
     <tr>
       <td><code>placement</code></td>
@@ -634,14 +634,14 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td><code>'right'</code></td>
       <td>
         <p>팝오버의 배치 방법 - auto | top | bottom | left | right.<br><code>auto</code> 를 지정하면 동적으로 팝오버 배치를 변경합니다.</p>
-        <p>배치를 변경하기 위해 함수를 사용하는 경우, 팝오버 DOM 노드를 첫번째 인수로, triggering element DOM 노드를 두번째 인수로 호출됩니다.<code>this</code> 컨텍스트는 팝오버의 인스턴스로 설정되어 있습니다.</p>
+        <p>배치를 변경하기 위해 함수를 사용하는 경우, 팝오버 DOM 노드를 첫번째 인수로, triggering element DOM 노드를 두번째 인수로 호출됩니다.<code>this</code> 컨문자는 팝오버의 인스턴스로 설정되어 있습니다.</p>
       </td>
     </tr>
     <tr>
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>셀렉터가 제공되는 경우 팝오버 객체는 지정된 타겟으로 이양됩니다. 실제로 이는 동적인 HTML 컨텐츠에 팝오버를 추가할 수 있도록 하기 위해 사용됩니다. 자세한 내용은 <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> 과 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
+      <td>셀렉타가 제공되는 경우 팝오버 객체는 지정된 타깃으로 이양됩니다. 실제로 이는 동적인 HTML 콘텐츠에 팝오버를 추가할 수 있도록 하기 위해 사용됩니다. 자세한 내용은 <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> 과 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>template</code></td>
@@ -674,14 +674,13 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td><code>fallbackPlacements</code></td>
       <td>array</td>
       <td><code>['top', 'right', 'bottom', 'left']</code></td>
-      <td>Define fallback placements by providing a list of placements in array (in order of preference). For more information refer to
-      Popper's <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a></td>
+      <td>폴백 배치를 배열로 지정하여 우선수위가 높은 순으로 배치를 결정할 수 있습니다. 자세한 내용은 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a>를 참조해 주세요</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>Overflow constraint boundary of the popover (applies only to Popper's preventOverflow modifier). By default it's <code>'clippingParents'</code> and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>.</td>
+      <td>팝오버의 오버플로 제약 경계(Popper의 preventOverflow modifier에만 적용). 기본적으로 <code>'clippingParents'</code>로 HTMLElement의 참조를 받을 수 있습니다.(JavaScript만). 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>customClass</code></td>
@@ -696,13 +695,13 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td><code>sanitize</code></td>
       <td>boolean</td>
       <td><code>true</code></td>
-      <td>Enable or disable the sanitization. If activated <code>'template'</code>, <code>'content'</code> and <code>'title'</code> options will be sanitized. See the <a href="/docs/5.0/getting-started/javascript/#sanitizer">sanitizer section in our JavaScript documentation</a>.</td>
+      <td>sanitize를 유효 혹은 무효화 합니다. 유효화 하면 <code>'template'</code>, <code>'content'</code>와 <code>'title'</code>의 각 옵션이 sanitize 됩니다. 자세한 정보는 <a href="/docs/5.0/getting-started/javascript/#sanitizer">sanitizer section in our JavaScript documentation</a>을 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>allowList</code></td>
       <td>object</td>
       <td><a href="/docs/5.0/getting-started/javascript/#sanitizer">Default value</a></td>
-      <td>허용된 속성과 태그를 포함하는 오브젝트</td>
+      <td>허용된 속성과 태그를 포함하는 객체</td>
     </tr>
     <tr>
       <td><code>sanitizeFn</code></td>
@@ -715,9 +714,9 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td>array | string | function</td>
       <td><code>[0, 8]</code></td>
       <td>
-        <p>Offset of the popover relative to its target. You can pass a string in data attributes with comma separated values like: <code>data-bs-offset="10,20"</code></p>
-        <p>When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>.</p>
-        <p>For more information refer to Popper's <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>.</p>
+        <p>타깃에 대한 팝오버의 상대적인 오프셋. data 속성에는 <code>data-bs-offset="10,20"</code>와 같이 콤마 구분으로 문자열을 건내줄 수 있습니다.</p>
+        <p>오프셋을 결정하기 위해 함수가 사용되는 경우는 Popper의 배치, 참조, Popper의 직사각형을 포함한 객체를 첫번째 인수로 호출합니다. 트리거 되는 요소의 DOM 노드가 두번째 인수로 전달됩니다. 이 함수는 두 값을 갖는 배열 <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>을 반환해야 합니다.</p>
+        <p>보다 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>를 참조해 주세요.</p>
       </td>
     </tr>
     <tr>
@@ -725,8 +724,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td>null | object | function</td>
       <td><code>null</code></td>
       <td>
-        <p>To change Bootstrap's default Popper config, see <a href="https://popper.js.org/docs/v2/constructors/#options">Popper's configuration</a>.</p>
-        <p>When a function is used to create the Popper configuration, it's called with an object that contains the Bootstrap's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper.</p>
+        <p>Bootstrap의 기본 Popper 설정을 변경하려면 <a href="https://popper.js.org/docs/v2/constructors/#options">Popper's configuration</a>을 참조해 주세요.</p>
+        <p>Popper 구성을 만들기 위해 함수가 사용될 때 Bootstrap 기본 Popper 구성을 포함한 객체로 호출됩니다. 그것은 당신이 기본을 사용하고, 당신의 구성과 통합하는것을 도와줍니다. 함수는 Popper의 구성 객체를 반환해야 합니다.</p>
       </td>
     </tr>
   </tbody>
@@ -753,16 +752,16 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </div>
 
 <h4 id="show">show</h4>
-<p>요소의 팝오버를 표시합니다. <strong>팝오버가 실제로 나타나기 전에 호출된 곳으로 돌아갑니다.</strong> (즉, <code>shown.bs.popover</code> 이벤트가 발생하기 전). 이것은 팝오버의 &ldquo;manual&rdquo; 트리거로 간주됩니다. 타이틀과 컨텐츠의 양쪽 모두의 길이가 0 인 팝오버는 결코 표시되지 않습니다.</p>
+<p>요소의 팝오버를 표시합니다. <strong>팝오버가 실제로 나타나기 전에 호출된 곳으로 돌아갑니다.</strong> (즉, <code>shown.bs.popover</code> 이벤트가 발생하기 전). 이것은 팝오버의 &ldquo;manual&rdquo; 트리거로 간주합니다. 타이틀과 콘텐츠의 양쪽 모두의 길이가 0인 팝오버는 결코 표시되지 않습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">show</span><span class="p">()</span>
 </code></pre></div><h4 id="hide">hide</h4>
-<p>요소의 팝오버를 숨깁니다. <strong>팝오버가 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다</strong> (즉, <code>hidden.bs.popover</code> 이벤트 발생 전). 이것은 팝오버의 &ldquo;manual&rdquo; 트리거로 간주됩니다.</p>
+<p>요소의 팝오버를 숨깁니다. <strong>팝오버가 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다</strong> (즉, <code>hidden.bs.popover</code> 이벤트 발생 전). 이것은 팝오버의 &ldquo;manual&rdquo; 트리거로 간주합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">hide</span><span class="p">()</span>
 </code></pre></div><h4 id="toggle">toggle</h4>
-<p>요소의 팝오버를 토글합니다. <strong>팝오버가 실제로 표시 또는 숨기기 전에 호출된 곳으로 돌아갑니다</strong> (즉, <code>shown.bs.popover</code> 혹은 <code>hidden.bs.popover</code> 이벤트가 발생하기 전). 이것은 팝오버의 &ldquo;manual&rdquo; 트리거로 간주됩니다.</p>
+<p>요소의 팝오버를 토글합니다. <strong>팝오버가 실제로 표시 또는 숨기기 전에 호출된 곳으로 돌아갑니다</strong> (즉, <code>shown.bs.popover</code> 혹은 <code>hidden.bs.popover</code> 이벤트가 발생하기 전). 이것은 팝오버의 &ldquo;manual&rdquo; 트리거로 간주합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
 </code></pre></div><h4 id="dispose">dispose</h4>
-<p>요소의 팝오버를 숨기고 없앱니다(DOM 요소에 저장된 데이터를 삭제합니다). 위임을 사용하는 팝오버(<a href="#options">the <code>selector</code> option</a> 를 사용하여 작성된 것) 는 자식의 트리거 요소로 인해 개벌젹으로 없앨수 없습니다.</p>
+<p>요소의 팝오버를 숨기고 없앱니다(DOM 요소에 저장된 데이터를 삭제합니다). 위임을 사용하는 팝오버(<a href="#options">the <code>selector</code> option</a> 를 사용하여 작성된 것) 는 자식의 트리거 요소로 인해 개벌적으로 없앨 수 없습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">myPopover</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
 </code></pre></div><h4 id="enable">enable</h4>
 <p>요소의 팝오버를 표시하는 기능을 부여합니다. <strong>팝오버는 기본으로 활성화되어 있습니다.</strong></p>

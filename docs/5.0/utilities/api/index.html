@@ -529,8 +529,8 @@
 <span class="p">.</span><span class="nc">o-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">o-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div><h3 id="states">States</h3>
-<p>가상 클래스의 변형을 생성하려면 <code>state</code> 옵션을 사용하십시오. 비슷한 클래스의 예시로는 <code>:hover</code> 및 <code>:focus</code>입니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 <code>state: hover</code> 를 추가하면 컴파일 된 CSS에 <code>.opacity-hover:hover</code>가 표시됩니다.</p>
-<p>여러개의 가상 클래스가 필요하십니까? <code>state : hover focus</code>와 같이 공백으로 구분 된 상태 목록을 사용하세요.</p>
+<p>가상 클래스의 변형을 생성하려면 <code>state</code> 옵션을 사용하십시오. 비슷한 클래스의 예시로는 <code>:hover</code> 및 <code>:focus</code>입니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 <code>state: hover</code>를 추가하면 컴파일 된 CSS에 <code>.opacity-hover:hover</code>가 표시됩니다.</p>
+<p>여러 개의 가상 클래스가 필요하십니까? <code>state : hover focus</code>와 같이 공백으로 구분 된 상태 목록을 사용하세요.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="n">property</span><span class="o">:</span> <span class="no">opacity</span><span class="o">,</span>
@@ -653,7 +653,7 @@
 </code></pre></div><h2 id="using-the-api">Using the API</h2>
 <p>이제 유틸리티 API의 작동 방식에 익숙해 졌으므로 사용자 지정 클래스를 추가하고 기본 유틸리티를 수정하는 방법을 배워 봅시다.</p>
 <h3 id="add-utilities">Add utilities</h3>
-<p><code>map-merge</code> 를 사용하면 새로운 유틸리티를 기본 <code>$utilities</code> 맵에 추가할 수 있습니다. 먼저 <code>_utilities.scss</code> 를 가져왔는지 확인한 다음 <code>map-merge</code> 를 이용하여 새로운 유틸리티를 추가하십시오. 다음 예시는 세 개의 값이 있는 반응형 <code>cursor</code> 유틸리티를 추가하는 방법입니다.</p>
+<p><code>map-merge</code>를 사용하면 새로운 유틸리티를 기본 <code>$utilities</code> 맵에 추가할 수 있습니다. 먼저 <code>_utilities.scss</code>를 가져왔는지 확인한 다음 <code>map-merge</code>를 이용하여 새로운 유틸리티를 추가하십시오. 다음 예시는 세 개의 값이 있는 반응형 <code>cursor</code> 유틸리티를 추가하는 방법입니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities&#34;</span><span class="p">;</span>

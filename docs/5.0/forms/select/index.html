@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="네이티브 &lt;select&gt;를 사용자 정의 CSS로 만들어 요소의 초기 표시를 변경할 수 있습니다.">
+<meta name="description" content="브라우저의 기본 &lt;select&gt;를 사용자 정의 CSS로 만들어 요소의 초기 표시를 변경할 수 있습니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.83.1">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Select(셀렉트)">
-<meta name="twitter:description" content="네이티브 &lt;select&gt;를 사용자 정의 CSS로 만들어 요소의 초기 표시를 변경할 수 있습니다.">
+<meta name="twitter:description" content="브라우저의 기본 &lt;select&gt;를 사용자 정의 CSS로 만들어 요소의 초기 표시를 변경할 수 있습니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/forms/select/">
 <meta property="og:title" content="Select(셀렉트)">
-<meta property="og:description" content="네이티브 &lt;select&gt;를 사용자 정의 CSS로 만들어 요소의 초기 표시를 변경할 수 있습니다.">
+<meta property="og:description" content="브라우저의 기본 &lt;select&gt;를 사용자 정의 CSS로 만들어 요소의 초기 표시를 변경할 수 있습니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -391,7 +391,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/forms/select.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">Select(셀렉트)</h1>
         </div>
-        <p class="bd-lead">네이티브 <code>&lt;select&gt;</code>를 사용자 정의 CSS로 만들어 요소의 초기 표시를 변경할 수 있습니다.</p>
+        <p class="bd-lead">브라우저의 기본 <code>&lt;select&gt;</code>를 사용자 정의 CSS로 만들어 요소의 초기 표시를 변경할 수 있습니다.</p>
         
 
       </div>
@@ -418,7 +418,7 @@
         
 
         <h2 id="default">Default</h2>
-<p>사용자 <code>&lt;select&gt;</code>를 사용하기 위해 필요한 클래스는 <code>.form-select</code>입니다. 이 사용자 정의 스타일은 브러우저 제한으로 <code>&lt;select&gt;</code>의 처음 외형만 변경할 수 있고 그 안에 있는 <code>&lt;option&gt;</code> 들의 스타일 변경은 불가능합니다.</p>
+<p>사용자 정의의 <code>&lt;select&gt;</code>를 사용하기 위해 필요한 클래스는 <code>.form-select</code>입니다. 이 스타일은 브러우저 제한으로 <code>&lt;select&gt;</code>의 처음 외형만 변경할 수 있고 그 안에 있는 <code>&lt;option&gt;</code> 들의 스타일 변경은 불가능합니다.</p>
 <div class="bd-example">
 <select class="form-select" aria-label="Default select example">
   <option selected>Open this select menu</option>
@@ -433,7 +433,7 @@
   <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Three<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="sizing">Sizing</h2>
-<p>같은 크기의 텍스트 입력에 맞춰 크고 작은 사용자 정의 셀렉트를 선택해 사용할 수 있습니다.</p>
+<p>같은 크기의 문자 입력에 맞춰 크고 작은 사용자 정의 셀렉트를 선택해 사용할 수 있습니다.</p>
 <div class="bd-example">
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
   <option selected>Open this select menu</option>
@@ -490,7 +490,7 @@
   <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Three<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="disabled">Disabled</h2>
-<p>불리언 속성인 <code>disabled</code>를 셀렉터에 추가하면 비활성화 된 외형으로 표시되며 포인터 이벤트가 삭제됩니다.</p>
+<p>불리언 속성인 <code>disabled</code>를 셀렉트에 추가하면 비활성화된 외형으로 표시되며 포인터 이벤트가 삭제됩니다.</p>
 <div class="bd-example">
 <select class="form-select" aria-label="Disabled select example" disabled>
   <option selected>Open this select menu</option>

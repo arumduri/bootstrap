@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="CSS로 구분자를 자동적으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.">
+<meta name="description" content="CSS로 구분자를 자동으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.83.1">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Breadcrumb(브레드크럼)">
-<meta name="twitter:description" content="CSS로 구분자를 자동적으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.">
+<meta name="twitter:description" content="CSS로 구분자를 자동으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/components/breadcrumb/">
 <meta property="og:title" content="Breadcrumb(브레드크럼)">
-<meta property="og:description" content="CSS로 구분자를 자동적으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.">
+<meta property="og:description" content="CSS로 구분자를 자동으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -391,7 +391,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/breadcrumb.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">Breadcrumb(브레드크럼)</h1>
         </div>
-        <p class="bd-lead">CSS로 구분자를 자동적으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.</p>
+        <p class="bd-lead">CSS로 구분자를 자동으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.</p>
         
 
       </div>
@@ -418,7 +418,7 @@
         
 
         <h2 id="example">Example</h2>
-<p>순서를 가진 리스트 또는 순서를 가지지 않은 리스트를 사용해, 최소 스타일의 브레드크럼을 작성합니다. 유틸리티를 사용해 원하는 스타일을 추가할 수 있습니다.</p>
+<p>순서를 가진 목록 또는 순서를 가지지 않은 목록을 사용해, 최소 스타일의 브레드크럼을 작성합니다. 유틸리티를 사용해 원하는 스타일을 추가할 수 있습니다.</p>
 <div class="bd-example">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -461,7 +461,7 @@
   <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="dividers">Dividers</h2>
-<p>구분자는 CSS의 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before"><code>::before</code></a> 과 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"><code>content</code></a> 를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 <code>--bs-breadcrumb-divider</code> 를 변경하거나, <code>$breadcrumb-divider</code> Sass 변수 — 와 <code>$breadcrumb-divider-flipped</code> 을 사용해 RTL에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS를 다시 컴파일하지 않고 재정의 할 수 있는 글로벌한 구분자를 얻을 수 있습니다.</p>
+<p>구분자는 CSS의 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before"><code>::before</code></a> 과 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"><code>content</code></a> 를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 <code>--bs-breadcrumb-divider</code>를 변경하거나, <code>$breadcrumb-divider</code> Sass 변수와 <code>$breadcrumb-divider-flipped</code>를 사용해 RTL에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS를 다시 컴파일하지 않고 재정의할 수 있는 글로벌한 구분자를 얻을 수 있습니다.</p>
 <div class="bd-example">
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
   <ol class="breadcrumb">
@@ -475,7 +475,7 @@
     <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;breadcrumb-item active&#34;</span> <span class="na">aria-current</span><span class="o">=</span><span class="s">&#34;page&#34;</span><span class="p">&gt;</span>Library<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
-<p>Sass 를 통해 수정할때, 문자열의 주변에 따옴표를 만들기 위해 <a href="https://sass-lang.com/documentation/modules/string#quote">quote</a> 함수가 필요합니다. 예를 들어, <code>&gt;</code> 을 구분자로 사용하려면 이렇게 사용합니다.</p>
+<p>Sass 를 통해 수정할 때, 문자열의 주변에 따옴표를 만들기 위해 <a href="https://sass-lang.com/documentation/modules/string#quote">quote</a> 함수가 필요합니다. 예를 들어, <code>&gt;</code> 을 구분자로 사용하려면 이렇게 사용합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$breadcrumb-divider</span><span class="o">:</span> <span class="nf">quote</span><span class="p">(</span><span class="s2">&#34;&gt;&#34;</span><span class="p">);</span>
 </code></pre></div><p>또한 <strong>내장된 SVG 아이콘</strong>을 사용할 수도 있습니다. CSS 사용자 지정 속성을 통해 적용하거나 Sass 변수를 사용하십시오.</p>
 <div class="bd-example">
@@ -508,7 +508,7 @@
 <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></code></pre></div>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$breadcrumb-divider</span><span class="o">:</span> <span class="no">none</span><span class="p">;</span>
 </code></pre></div><h2 id="accessibility">Accessibility</h2>
-<p>브레드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 <code>&lt;nav&gt;</code> 요소에 <code>aria-label=&quot;breadcrumb&quot;</code> 과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 <code>aria-current=&quot;page&quot;</code> 를 추가하는 것이 좋습니다.</p>
+<p>브레드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 <code>&lt;nav&gt;</code> 요소에 <code>aria-label=&quot;breadcrumb&quot;</code> 과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 <code>aria-current=&quot;page&quot;</code>를 추가하는 것이 좋습니다.</p>
 <p>자세한 내용은 <a href="https://www.w3.org/TR/wai-aria-practices/#breadcrumb">WAI-ARIA Authoring Practices for the breadcrumb pattern</a>을 확인해주세요.</p>
 <h2 id="sass">Sass</h2>
 <h3 id="variables">Variables</h3>

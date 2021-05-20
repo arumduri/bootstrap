@@ -437,7 +437,7 @@
         
 
         <h2 id="about">About</h2>
-<p>Bootstrap &ldquo;스피너&quot;는 프로젝트의 로딩 상태를 표시하기 위해 사용할 수 있습니다. 이것은 HTML과 CSS로 만들어져 있기 때문에 JavaScript를 필요로 하지 않습니다. 그러나 가시성을 바꾸기 위해 몇 가지의 커스텀 JavaScript가 필요합니다. 이러한 외형, 배치, 크기는 유틸리티 클래스를 통해 간단하게 커스터마이즈 할 수 있습니다.</p>
+<p>Bootstrap &ldquo;스피너&quot;는 프로젝트의 로딩 상태를 표시하기 위해 사용할 수 있습니다. 이것은 HTML과 CSS로 만들어져 있기 때문에 JavaScript를 필요로 하지 않습니다. 그러나 가시성을 바꾸기 위해 몇 가지의 사용자 정의 JavaScript가 필요합니다. 이러한 외형, 배치, 크기는 유틸리티 클래스를 통해 간단하게 재정의할 수 있습니다.</p>
 <p>접근성을 위해, 여기에서의 각 loader 는 <code>role=&quot;status&quot;</code> 과 <code>&lt;span class=&quot;visually-hidden&quot;&gt;Loading...&lt;/span&gt;</code> 을 포함하고 있습니다.</p>
 <div class="bd-callout bd-callout-info">
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
@@ -505,7 +505,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Loading...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <div class="bd-callout bd-callout-info">
-<strong>왜 <code>border-color</code> 유틸리티를 사용하지 않나요?</strong> 각 border 스피너는 적어도 한 쪽의 보더를 <code>transparent</code> 로 지정하므로, <code>.border-{color}</code> 유틸리티는 그것을 덮어씁니다.
+<strong><code>border-color</code> 유틸리티를 사용하면 안되나요?</strong> 각 border스피너는 적어도 한 쪽의 보더를 <code>transparent</code> 로 지정해야 하는데, <code>.border-{color}</code> 유틸리티는 그것을 덮어쓰기 때문입니다.
 </div>
 
 <h2 id="growing-spinner">Growing spinner</h2>
@@ -571,7 +571,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <h2 id="alignment">Alignment</h2>
 <p>Bootstrap 스피너는, <code>rem</code>, <code>currentColor</code>, <code>display: inline-flex</code> 로 구축되어 있습니다. 이것은 크기, 색, 배치를 빠르게 변경 할 수 있다는 것을 의미합니다.</p>
 <h3 id="margin">Margin</h3>
-<p><code>.m-5</code> 와 같이 <a href="/docs/5.0/utilities/spacing/">margin utilities</a> 을 사용하면 간단하게 간격을 둘 수 있습니다.</p>
+<p><code>.m-5</code>와 같이 <a href="/docs/5.0/utilities/spacing/">margin utilities</a> 을 사용하면 간단하게 간격을 둘 수 있습니다.</p>
 <div class="bd-example">
 <div class="spinner-border m-5" role="status">
   <span class="visually-hidden">Loading...</span>
@@ -641,7 +641,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;spinner-grow spinner-grow-sm&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;status&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Loading...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>혹은, 커스텀 CSS나 인라인 스타일을 사용하여 필요에 따라서 치수를 변경할 수 있습니다.</p>
+<p>혹은, 사용자 정의 CSS나 인라인 스타일을 사용하여 필요에 따라서 치수를 변경할 수 있습니다.</p>
 <div class="bd-example">
 <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
   <span class="visually-hidden">Loading...</span>
@@ -656,7 +656,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Loading...<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="buttons">Buttons</h2>
-<p>버튼 중 스피너를 사용하여 액션이 현재 처리 중이거나 실행 중임을 나타냅니다. 또한 스피너 밖에 있는 텍스트를 교체하여 필요에 따라 버튼 텍스트를 이용할 수 있습니다.</p>
+<p>버튼 중 스피너를 사용하여 액션이 현재 처리 중이거나 실행 중임을 나타냅니다. 또한 스피너 밖에 있는 문자를 교체하여 필요에 따라 버튼 문자를 이용할 수 있습니다.</p>
 <div class="bd-example">
 <button class="btn btn-primary" type="button" disabled>
   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -704,7 +704,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="nv">$spinner-border-width-sm</span><span class="o">:</span> <span class="mf">.2</span><span class="kt">em</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="keyframes">Keyframes</h3>
-<p>Used for creating the CSS animations for our spinners. Included in <code>scss/_spinners.scss</code>.</p>
+<p>스피너의 CSS 애니메이션 작성에 사용합니다. <code>scss/_spinners.scss</code>에 포함되어 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@keyframes</span> <span class="nt">spinner-border</span> <span class="p">{</span>
   <span class="nt">to</span> <span class="p">{</span> <span class="nt">transform</span><span class="nd">:</span> <span class="nt">rotate</span><span class="o">(</span><span class="nt">360deg</span><span class="o">)</span> <span class="nn">#</span><span class="p">{</span><span class="s2">&#34;/* rtl:ignore */&#34;</span><span class="p">};</span> <span class="p">}</span>
 <span class="p">}</span>

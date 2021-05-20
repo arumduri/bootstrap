@@ -474,8 +474,8 @@
 </div>
 
 <h2 id="sass">Sass</h2>
-<p>Bootstrap uses <a href="https://sass-lang.com/dart-sass">Dart Sass</a> for compiling our Sass source files into CSS files (included in our build process), and we recommend you do the same if you&rsquo;re compiling Sass using your own asset pipeline. We previously used Node Sass for Bootstrap v4, but LibSass and packages built on top of it, including Node Sass, are now <a href="https://sass-lang.com/blog/libsass-is-deprecated">deprecated</a>.</p>
-<p>Dart Sass uses a rounding precision of 10 and for efficiency reasons does not allow adjustment of this value. We don&rsquo;t lower this precision during further processing of our generated CSS, such as during minification, but if you chose to do so we recommend maintaining a precision of at least 6 to prevent issues with browser rounding.</p>
+<p>Bootstrap은 빌드할 때 Sass 소스 파일을 CSS 파일로 컴파일하기 위해 <a href="https://sass-lang.com/dart-sass">Dart Sass</a> (빌드 과정에 포함됨)를 사용하며 자체 자산 파이프라인을 사용해서 Sass를 컴파일하는 경우에도 동일한 작업을 수행하는 것이 좋습니다. 이전 Bootstrap v4에는 Node Sass를 사용했지만 Node Sass를 포함하여 그 위에 빌드된 LibSass 및 패키지는 이제 더 이상 <a href="https://sass-lang.com/blog/libsass-is-deprecated">사용되지 않습니다</a>.</p>
+<p>Dart Sass는 10의 반올림 정밀도를 사용하며 이 값은 효율성을 위해서 조정할 수 없습니다. 경량화와 같이 생성된 CSS를 추가적으로 처리하는 동안에는 정밀도를 낮추지 않지만 그렇게 선택한다면 브라우저 반올림 문제를 방지하기 위해서 정밀도를 6 이상으로 유지하는 것이 좋습니다.</p>
 <h2 id="autoprefixer">Autoprefixer</h2>
 <p>Bootstrap은 빌드할 때 CSS 속성에 자동으로 벤더 접두사를 추가하기 위해 <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (빌드 과정에 포함됨)를 사용합니다. 이것을 통해서 시간과 코드를 아낄 수 있고 v3에서 볼 수 있는 것과 같은 벤더 믹스인의 필요성을 제거하면서 CSS의 핵심 부분을 한 번에 작성할 수 있습니다.</p>
 <p>우리는 Autoprefixer를 통해서 지원하는 브라우저의 목록을 GitHub repository내의 개별 파일에서 관리하고 있습니다. 자세한 부분은 <a href="https://github.com/twbs/bootstrap/blob/v5.0.1/.browserslistrc">.browserslistrc</a>를 확인해주세요.</p>
