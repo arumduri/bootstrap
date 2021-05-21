@@ -83,23 +83,23 @@ toc: true
 
 ## Grid updates
 
-- **New breakpoint!** Added new `xxl` breakpoint for `1400px` and up. No changes to all other breakpoints.
+- **새로운 브레이크 포인트!** `1400px` 이상의 경우, 새로운 `xxl` 브레이크 포인트를 추가. 다른 브레이크 포인트는 변경 없이 그대로.
 
-- **Improved gutters.** Gutters are now set in rems, and are narrower than v4 (`1.5rem`, or about `24px`, down from `30px`). This aligns our grid system's gutters with our spacing utilities.
-  - Added new [gutter class](https://getbootstrap.com/docs/5.0/layout/gutters/) (`.g-*`, `.gx-*`, and `.gy-*`) to control horizontal/vertical gutters, horizontal gutters, and vertical gutters.
-  - <span class="badge bg-danger">Breaking</span> Renamed `.no-gutters` to `.g-0` to match new gutter utilities.
+- **개선된 거터.** 거터는 rem 단위로 설정되어, v4 보다 좁아졌습니다 (`1.5rem`, 혹은 약 `24px`, `30px`에서 감소). 이로 그리드 시스템의 거터가 여백 유틸리티와 일치 되었습니다.
+  - 수평/수직 거터, 수평 거터, 그리고 수직 거터를 제어하는 새로운 [gutter class](https://getbootstrap.com/docs/5.0/layout/gutters/)(`.g-*`, `.gx-*`, 그리고 `.gy-*`)가 추가 되었습니다.
+  - <span class="badge bg-danger">Breaking</span> 새로운 거터 클래스에 맞춰 기존의 `.no-gutters` 클래스 이름이 `.g-0`으로 변경 되었습니다.
 
-- Columns no longer have `position: relative` applied, so you may have to add `.position-relative` to some elements to restore that behavior.
+- 컬럼은 더 이상 `position: relative`가 적용되지 않기 때문에 필요에 따라 해당 동작을 위해 요소에 `.position-relative` 클래스를 추가해 사용할 필요가 있습니다.
 
-- <span class="badge bg-danger">Breaking</span> Dropped several `.order-*` classes that often went unused. We now only provide `.order-1` to `.order-5` out of the box.
+- <span class="badge bg-danger">Breaking</span> 자주 사용되지 않는 몇몇 `.order-*` 클래스를 삭제하였습니다. 현재는 `.order-1` 부터 `.order-5`까지의 클래슴만 제공하고 있습니다.
 
-- <span class="badge bg-danger">Breaking</span> Dropped the `.media` component as it can be easily replicated with utilities. [See #28265](https://github.com/twbs/bootstrap/pull/28265) and the [flex utilities page for an example]({{< docsref "/utilities/flex#media-object" >}}).
+- <span class="badge bg-danger">Breaking</span> 유틸리티로 쉽게 복제 할 수 있는 `.media` 클래스를 삭제 하였습니다. [자세히 보기 #28265](https://github.com/twbs/bootstrap/pull/28265)와 [flex utilities page for an example]({{< docsref "/utilities/flex#media-object" >}})을 참조해 주세요.
 
-- <span class="badge bg-danger">Breaking</span> `bootstrap-grid.css` now only applies `box-sizing: border-box` to the column instead of resetting the global box-sizing. This way, our grid styles can be used in more places without interference.
+- <span class="badge bg-danger">Breaking</span> 이제 `bootstrap-grid.css`에서는 global box-sizing을 리셋하는 대신, `box-sizing: border-box`만 적용합니다. 그렇게 함으로써 그리드 스타일을 더 많은 곳에서 간섭 없이 사용할 수 있습니다.
 
-- `$enable-grid-classes` no longer disables the generation of container classes anymore. [See #29146.](https://github.com/twbs/bootstrap/pull/29146)
+- `$enable-grid-classes`에서는 컨테이너 클래스의 생성을 비활성화 시키지 않습니다. [자세히 보기 #29146.](https://github.com/twbs/bootstrap/pull/29146)
 
-- Updated the `make-col` mixin to default to equal columns without a specified size.
+- `make-col` 믹스인을 업데이드 하여 사이즈를 지정하지 않아도 기본적으로 균등한 열이 되도록 하였습니다.
 
 ## Content, Reboot, etc
 
