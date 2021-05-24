@@ -8,7 +8,7 @@ toc: true
 
 ## Background color
 
-상황별 텍스트 색상 클래스와 비슷하게 요소의 배경을 상황별 클래스로 설정합니다. background 유틸리티는 ** `color` 는 세팅하지 않습니다 **. 따라서 경우에 따라 `.text- *` [색상 유틸리티]({{<docsref "/ utilities / colors">}})를 사용하는 것이 좋습니다.
+상황별 텍스트 색상 클래스와 비슷하게 요소의 배경을 상황별 클래스로 설정합니다. background 유틸리티는 ** `color` 는 세팅하지 않습니다 **. 따라서 경우에 따라 `.text- *` [색상 유틸리티]({{<docsref "/utilities/colors">}})를 사용하는 것이 좋습니다.
 
 {{< example >}}
 {{< colors.inline >}}
@@ -37,7 +37,7 @@ toc: true
 
 ## Sass
 
-다음 Sass 기능 외에도 색상 등이 포함 된 [CSS 사용자 정의 속성]({{<docsref "/ customize / css-variables">}}) (일명 CSS 변수)에 대해 읽어보십시오.
+다음 Sass 기능 외에도 색상 등이 포함 된 [CSS 사용자 정의 속성]({{<docsref "/customize/css-variables">}}) (일명 CSS 변수)에 대해 읽어보십시오.
 
 ### Variables
 
