@@ -103,7 +103,7 @@ Bootstrap의 현재 구현은, [WAI-ARIA Authoring Practices 1.1 accordion patte
 
 요소에 `data-bs-toggle="collapse"`와 `data-bs-target`만 추가하면 접을 수 있는 요소의 제어를 자동으로 할당할 수 있습니다. `data-bs-target` 속성은 접을 수 있는 CSS 셀렉타를 지정합니다. 접을 수 있는 요소에는 반드시 `collapse` 클래스를 추가해야 합니다. 기본적으로 열린 상태로 만들려면 `show` 클래스를 추가해야 합니다.
 
-접을 수 있는 영역에 accordion(아코디언) 같은 그룹 관리를 추가하려면, 데이타 속성 `data-bs-parent="#selector"`를 추가합니다. 데모를 참조해 주세요.
+접을 수 있는 영역에 accordion(아코디언) 같은 그룹 관리를 추가하려면, 데이터 속성 `data-bs-parent="#selector"`를 추가합니다. 데모를 참조해 주세요.
 
 ### Via JavaScript
 
@@ -118,7 +118,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 ### Options
 
-옵션은 JavaScript나 데이타 속성으로 줄 수 있습니다. 데이타 속성의 경우는 `data-bs-parent=""` 처럼 `data-bs-` 에 옵션 명을 추가합니다.
+옵션은 JavaScript나 데이터 속성으로 줄 수 있습니다. 데이터 속성의 경우는 `data-bs-parent=""` 처럼 `data-bs-` 에 옵션 명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -184,7 +184,7 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
     </tr>
     <tr>
       <td><code>dispose</code></td>
-      <td>요소의 콜랩스를 처리합니다. (DOM 요소에 저장되어 있는 데이타를 삭제합니다)</td>
+      <td>요소의 콜랩스를 처리합니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다)</td>
     </tr>
     <tr>
       <td><code>getInstance</code></td>

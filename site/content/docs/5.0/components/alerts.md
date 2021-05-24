@@ -194,7 +194,7 @@ var bsAlert = new bootstrap.Alert(myAlert)
         <code>dispose</code>
       </td>
       <td>
-        경고창을 없앱니다. (DOM 요소에 저장되어 있는 데이타를 삭제)
+        경고창을 없앱니다. (DOM 요소에 저장되어 있는 데이터를 삭제)
       </td>
     </tr>
     <tr>

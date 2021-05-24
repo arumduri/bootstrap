@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: JavaScript
-description: 선택적 JavaScript 플러그인으로 Bootstrap에 생명을 불어넣으세요. 각 플러그인, 데이타 및 프로그래밍 방식 API 옵션 등에 대해 알아보세요.
+description: 선택적 JavaScript 플러그인으로 Bootstrap에 생명을 불어넣으세요. 각 플러그인, 데이터 및 프로그래밍 방식 API 옵션 등에 대해 알아보세요.
 group: getting-started
 toc: true
 ---
@@ -43,7 +43,7 @@ Bootstrap 5는 jQuery 없이도 사용할 수 있게 설계되었지만 여전�
 
 ## Data attributes
 
-거의 모든 Bootstrap 플러그인은 데이타 속성 (JavaScript 기능을 사용하는 권장 방법)과 함께 HTML을 통해서만 활성화 및 구성할 수 있습니다. **단일 요소의 한 세트의 데이타 속성만 사용해야 합니다.** (예: 동일한 버튼으로 툴팁과 모달을 트리거할 수 없음)
+거의 모든 Bootstrap 플러그인은 데이터 속성 (JavaScript 기능을 사용하는 권장 방법)과 함께 HTML을 통해서만 활성화 및 구성할 수 있습니다. **단일 요소의 한 세트의 데이터 속성만 사용해야 합니다.** (예: 동일한 버튼으로 툴팁과 모달을 트리거할 수 없음)
 
 {{< callout warning >}}
 ## 선택자

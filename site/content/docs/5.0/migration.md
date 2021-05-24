@@ -16,12 +16,12 @@ toc: true
 
 ## Browser support
 
-- Internet Explorer 10와 11 폐지
-- Microsoft Edge < 16 (Legacy Edge) 삭제
-- 비대상 Firefox < 60
-- 비대상 Safari < 12
-- 비대상 iOS Safari < 12
-- 비대상 Chrome < 60
+- Internet Explorer 10 및 11 지원 종료
+- Microsoft Edge 16 미만 (Legacy Edge) 지원 종료
+- Firefox 60 미만 지원 종료
+- Safari 12 미만 지원 종료
+- iOS Safari 12 미만 지원 종료
+- Chrome 60 미만 지원 종료
 
 <hr class="my-5">
 
@@ -364,7 +364,7 @@ toc: true
 
 - **jQuery에 대한 의존을 중단**하고 플러그인을 통상적인 JavaScript로 다시 썼습니다.
 
-- <span class="badge bg-danger">Breaking</span> 모든 JavaScript 플러그인의 데이타 속성은 제삼자의 코드와 자체 코드에서 Bootstrap의 기능을 구별하는 데 도움이 되도록 이름을 붙이고 있습니다. 예를 들어 `data-toggle` 대신 `data-bs-toggle`을 사용합니다.
+- <span class="badge bg-danger">Breaking</span> 모든 JavaScript 플러그인의 데이터 속성은 제삼자의 코드와 자체 코드에서 Bootstrap의 기능을 구별하는 데 도움이 되도록 이름을 붙이고 있습니다. 예를 들어 `data-toggle` 대신 `data-bs-toggle`을 사용합니다.
 
 - **모든 클러그인은 첫번째 인수로서 CSS 셀렉타를 받아들일 수 있게 되었습니다.** 플러그인의 새로운 인스턴스를 작성하기 위해 DOM 요소 또는 임의의 CSS 셀렉타를 전달할 수 있습니다. :
 

@@ -67,7 +67,7 @@ npm install bootstrap
 `const bootstrap = require('bootstrap')` 또는 `import bootstrap from 'bootstrap'`는 `bootstrap` 객체에 모든 Bootstrap의 플러그인을 불러옵니다.
 `bootstrap` 모듈은 자체에서 모든 플러그인을 내보냅니다. 패키지 최상위 디렉토리 아래에 있는 `/js/dist/*.js` 파일을 불러옴으로서 Bootstrap의 플러그인을 직접 독립적으로 불러올 수 있습니다.
 
-Bootstrap의 `package.json`에는 다음 키에 몇몇 메타데이타가 포함되어 있습니다:
+Bootstrap의 `package.json`에는 다음 키에 몇몇 메타데이터가 포함되어 있습니다:
 
 - `sass` - Bootstrap의 메인 [Sass](https://sass-lang.com/) 소스 파일로 향하는 경로
 - `style` - Bootstrap의 경량화되지 않았지만 (추가 설정 없이) 기본 설정으로만 사전 컴파일된 CSS로 향하는 경로
