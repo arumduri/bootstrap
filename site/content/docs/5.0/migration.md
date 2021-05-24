@@ -221,41 +221,41 @@ toc: true
 
 ### Close button
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.close` to `.btn-close` for a less generic name.
+- <span class="badge bg-danger">Breaking</span> `.close`에서 보다 일반적인 이름인 `.btn-close`으로 변경되었습니다.
 
-- Close buttons now use a `background-image` (embedded SVG) instead of a `&times;` in the HTML, allowing for easier customization without the need to touch your markup.
+- 닫기 버튼은 HTML 내의 `&times;` 대신에 `background-image`(embedded SVG)를 사용하게 되어 마크업 변경없이 손쉽게 재정의 할 수 있게 되었습니다.
 
-- Added new `.btn-close-white` variant that uses `filter: invert(1)` to enable higher contrast dismiss icons against darker backgrounds.
+- 어두운 배경에서 고대비 닫기 아이콘을 활성화하려고 `filter: invert(1)`를 사용한 새로운 `.btn-close-white` 변형 클래스가 추가되었습니다.
 
 ### Collapse
 
-- Removed scroll anchoring for accordions.
+- 아코디언에 스크롤 고정 장치가 삭제 되었습니다.
 
 ### Dropdowns
 
-- Added new `.dropdown-menu-dark` variant and associated variables for on-demand dark dropdowns.
+- 어두운 드롭다운을 위해 새로운 `.dropdown-menu-dark` 변형 클래스와 관련된 변수를 추가하였습니다.
 
-- Added new variable for `$dropdown-padding-x`.
+- 새로운 `$dropdown-padding-x` 변수를 추가하였습니다.
 
-- Darkened the dropdown divider for improved contrast.
+- 드롭다운의 구분자를 진하게 해 색 대비를 개선하였습니다.
 
-- <span class="badge bg-danger">Breaking</span> All the events for the dropdown are now triggered on the dropdown toggle button and then bubbled up to the parent element.
+- <span class="badge bg-danger">Breaking</span> 드롭다운의 모든 이벤트는 드롭다운 토글 버튼으로 트리거 되어 이후 부모 요소에 버블링 됩니다.
 
-- Dropdown menus now have a `data-bs-popper="static"` attribute set when the positioning of the dropdown is static and `data-bs-popper="none"` when dropdown is in the navbar. This is added by our JavaScript and helps us use custom position styles without interfering with Popper's positioning.
+- 드롭다운 메뉴에는 위치가 정적일때 `data-bs-popper="static"` 속성이 설정되며, 드롭다운이 내비바에 있을 때에는 `data-bs-popper="none"`으로 설정됩니다. 이것은 JavaScript를 통해 추가되며 Popper의 배치에 간섭하지 않고 사용자 정의 위치 스타일을 사용하는데 도움이 됩니다.
 
-- <span class="badge bg-danger">Breaking</span> Dropped `flip` option for dropdown plugin in favor of native Popper configuration. You can now disable the flipping behavior by passing an empty array for [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) option in [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier.
+- <span class="badge bg-danger">Breaking</span> 드롭다운 플러그인에 대한 `flip` 옵션을 삭제하고 Popper의 네이티브 설정으로 변경되었습니다. [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier의 [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements)의 빈 배열을 통해서 플립 동작을 비활성화 할 수 있습니다.
 
-- Dropdown menus can now be clickable with a new `autoClose` option to handle the [auto close behavior]({{< docsref "/components/dropdowns#auto-close-behavior" >}}). You can use this option to accept the click inside or outside the dropdown menu to make it interactive.
+- 드롭다운 메뉴는 새로운 `autoClose` 옵션에서 [auto close behavior]({{< docsref "/components/dropdowns#auto-close-behavior" >}})를 처리하게 되었습니다. 이 옵션을 사용하면 드롭다운 메뉴의 안쪽 또는 바깥쪽에서 클릭을 받아 상호적인 메뉴를 만들 수 있습니다.
 
-- Dropdowns now support `.dropdown-item`s wrapped in `<li>`s.
+- 드롭다운이 이제 `<li>`에 싸여진 `.dropdown-item`를 지원합니다.
 
 ### Jumbotron
 
-- <span class="badge bg-danger">Breaking</span> Dropped the jumbotron component as it can be replicated with utilities. [See our new Jumbotron example for a demo.](https://getbootstrap.com/docs/5.0/examples/jumbotron/)
+- <span class="badge bg-danger">Breaking</span> 유틸리티로 만들수 있기 때문에 점보트론 컴포넌트는 삭제되었습니다. [데모로 새로운 점보트론의 사용을 확인해 주세요.](https://getbootstrap.com/docs/5.0/examples/jumbotron/)
 
 ### List group
 
-- Added new [`.list-group-numbered` modifier]({{< docsref "/components/list-group#numbered" >}}) to list groups.
+- 목록 그룹에 새로운 [`.list-group-numbered` modifier]({{< docsref "/components/list-group#numbered" >}})가 추가되었습니다.
 
 ### Navs and tabs
 

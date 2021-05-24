@@ -132,13 +132,13 @@ toc: true
 
 ### Variant mixin
 
-`$theme-colors`와 조합하여 알림 경고창의 수식어 클래스를 생성합니다.
+`$theme-colors`와 조합하여 알림 경고창의 modifier 클래스를 생성합니다.
 
 {{< scss-docs name="alert-variant-mixin" file="scss/mixins/_alert.scss" >}}
 
 ### Loop
 
-믹스인 `alert-variant()`에서 수식어 클래스를 생성하는 반복문입니다.
+믹스인 `alert-variant()`에서 modifier 클래스를 생성하는 반복문입니다.
 
 {{< scss-docs name="alert-modifiers" file="scss/_alert.scss" >}}
 
