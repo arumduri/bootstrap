@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Background
-description: `background-color` 을 통해 의미를 전달하고 그라디언트로 꾸밈을 추가 합니다.
+description: "`background-color`를 통해 의미를 전달하고 그라디언트로 꾸밈을 추가 합니다."
 group: utilities
 toc: true
 ---
