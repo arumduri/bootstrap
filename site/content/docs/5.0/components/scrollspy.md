@@ -286,7 +286,7 @@ dataSpyList.forEach(function (dataSpyEl) {
 
 #### dispose
 
-요소의 스크롤 스파이를 없앱니다.(DOM 요소에 저장되어 있는 데이타를 삭제)
+요소의 스크롤 스파이를 없앱니다.(DOM 요소에 저장되어 있는 데이터를 삭제)
 
 #### getInstance
 
