@@ -401,7 +401,7 @@
       <div class="bd-content ps-lg-4">
         
 
-        <p><code>.visually-hidden</code> 을 사용하여 요소가 화면 판독기와 같은 보조 기술에 노출되도록 하면서 시각적으로는 보이지 않게 숨길 수 있습니다. <code>.visually-hidden-focusable</code> 을 사용하면 요소를 시각적으로 숨긴상태가 기본이지만 초점이 맞춰질 때는 표시 (예: 키보드 전용 사용자)됩니다. <code>.visually-hidden-focusable</code> can also be applied to a container–thanks to <code>:focus-within</code>, the container will be displayed when any child element of the container receives focus.</p>
+        <p><code>.visually-hidden</code> 을 사용하여 요소가 화면 판독기와 같은 보조 기술에 노출되도록 하면서 시각적으로는 보이지 않게 숨길 수 있습니다. <code>.visually-hidden-focusable</code> 을 사용하면 요소를 시각적으로 숨긴상태가 기본이지만 초점이 맞춰질 때는 표시 (예: 키보드 전용 사용자)됩니다. <code>.visually-hidden-focusable</code> 은 컨테이너에도 적용 할 수 있습니다. <code>: focus-within</code> 덕분에 컨테이너의 자식 요소가 focus 될 때 컨테이너가 나타납니다.</p>
 <div class="bd-example">
 <h2 class="visually-hidden">Title for screen readers</h2>
 <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
@@ -409,7 +409,7 @@
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Title for screen readers<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Skip to main content<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span><span class="p">&gt;</span>A container with a <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>focusable element<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>Both <code>visually-hidden</code> and <code>visually-hidden-focusable</code> can also be used as mixins.</p>
+<p><code>visually-hidden</code> 과 <code>visually-hidden-focusable</code> 모두 믹스 인으로 사용 할 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Usage as a mixin
 </span><span class="c1"></span>
 <span class="nc">.visually-hidden-title</span> <span class="p">{</span>
