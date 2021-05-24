@@ -190,7 +190,7 @@ var bsButton = new bootstrap.Button(button)
         <code>dispose</code>
       </td>
       <td>
-        버튼 요소를 삭제합니다. (DOM 요소에 저장되어 있는 데이타를 삭제)
+        버튼 요소를 삭제합니다. (DOM 요소에 저장되어 있는 데이터를 삭제)
       </td>
     </tr>
   </tbody>
@@ -224,6 +224,6 @@ buttons.forEach(function (button) {
 
 ### Loops
 
-버튼 종류(일반 버튼과 아웃라인 버튼)는 각각의 믹스인과 `$theme-colors`맵을 사용하여 `scss/_buttons.scss`에 수식어 클래스를 생성합니다.
+버튼 종류(일반 버튼과 아웃라인 버튼)는 각각의 믹스인과 `$theme-colors`맵을 사용하여 `scss/_buttons.scss`에 modifier 클래스를 생성합니다.
 
 {{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}

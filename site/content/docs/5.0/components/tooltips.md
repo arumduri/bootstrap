@@ -370,7 +370,7 @@ tooltip.toggle()
 
 #### dispose
 
-요소의 툴팁을 숨기고 업앱니다(DOM 요소에 보존되어 있는 데이타를 삭제). 위임을 사용하는 툴팁([the `selector` option](#options) 을 사용하여 작성된 것)은 후손의 트리거 요소상에서 개별적으로 없앨수 없습니다.
+요소의 툴팁을 숨기고 업앱니다(DOM 요소에 보존되어 있는 데이터를 삭제). 위임을 사용하는 툴팁([the `selector` option](#options) 을 사용하여 작성된 것)은 후손의 트리거 요소상에서 개별적으로 없앨수 없습니다.
 
 ```js
 tooltip.dispose()
