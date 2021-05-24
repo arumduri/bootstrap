@@ -6,6 +6,10 @@ group: helpers
 ---
 
 링크에 `.stretched-link` 클래스 를 추가하여 `:: after` 가상 요소를 통해 [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block)을 클릭 할 수 있도록 만듭니다. 대부분의 경우 이는 링크에 `.stretched-link` 클래스가 포함되어 있고 이를 감싸고있는 `position : relative;` 상태의 요소를 클릭 할 수 있음을 의미합니다. [CSS `position` 이 작동하는 방식](https://www.w3.org/TR/CSS21/visuren.html#propdef-position)을 고려하면 `.stretched-link` 는 대부분의 테이블 요소와 혼합 할 수 없습니다.
+=======
+Add `.stretched-link` to a link to make its [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block) clickable via a `::after` pseudo element. In most cases, this means that an element with `position: relative;` that contains a link with the `.stretched-link` class is clickable. Please note given [how CSS `position` works](https://www.w3.org/TR/CSS21/visuren.html#propdef-position), `.stretched-link` cannot be mixed with most table elements.
+
+a link에 `.stretched-link`를 추가하여 [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block)을 가상요소인 `::after`  를 통해 클릭할수 있도록 만듭니다. 대부분의 경우 이는, a link에 `.stretched-link` 클래스가 붙어있고 a link를 감싸고 있는 상위의 `position : relative;` 상태의 요소는 클릭 할 수 있음을 의미합니다.
 
 부트스트랩에서 card는 기본적으로 `position: relative` 상태를 갖고 있습니다, 그렇기 때문에 이 경우 사용자가 별도의 HTML 변경없이 `.stretched-link` 클래스를 안전하게 카드의 a링크 부분에 추가 할 수 있습니다.
 
@@ -22,7 +26,7 @@ group: helpers
 </div>
 {{< /example >}}
 
-대부분의 사용자 지정 컴포넌트는 `position: relative` 를 기본적으로 포함하고 있지 않습니다. 따라서 a링크가 상위요소 바깥으로 무한정 확장하는 것을 방지하려면 상위 요소에 `.position-relative` 클래스를 추가해야합니다.
+대부분의 사용자 지정 컴포넌트는 `position: relative`를 기본적으로 포함하고 있지 않습니다. 따라서 a링크가 상위요소 바깥으로 무한정 확장하는 것을 방지하려면 상위 요소에 `.position-relative` 클래스를 추가해야합니다.
 
 {{< example >}}
 <div class="d-flex position-relative">

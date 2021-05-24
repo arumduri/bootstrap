@@ -33,7 +33,7 @@ toc: true
 
 방향 유틸리티를 사용하여 flex 컨테이너에서 flex 항목의 방향을 설정합니다. 대부분의 경우 브라우저 기본값이 `row` 이므로 여기서 horizontal클래스를 생략 할 수 있습니다. 그러나 값을 명시적으로 설정해야하는 상황이 발생할 수 있습니다 (예 : 반응 형 레이아웃).
 
-`.flex-row` 를 사용하여 수평 방향 (브라우저 기본값)으로 설정하고 `.flex-row-reverse` 를 사용하여 역방향에서 수평 방향을 시작합니다.
+`.flex-row`를 사용하여 수평 방향 (브라우저 기본값)으로 설정하고 `.flex-row-reverse`를 사용하여 역방향에서 수평 방향을 시작합니다.
 
 {{< example >}}
 <div class="d-flex flex-row bd-highlight mb-3">
@@ -48,7 +48,7 @@ toc: true
 </div>
 {{< /example >}}
 
-`.flex-column` 을 사용하여 수직 방향으로 설정하거나 `.flex-column-reverse` 를 사용하여 역방향으로 수직 방향을 시작합니다.
+`.flex-column` 을 사용하여 수직 방향으로 설정하거나 `.flex-column-reverse`를 사용하여 역방향으로 수직 방향을 시작합니다.
 
 {{< example >}}
 <div class="d-flex flex-column bd-highlight mb-3">
@@ -193,7 +193,7 @@ flexbox 컨테이너에서 `align-items` 유틸리티를 사용하여 교차 축
 
 ## Align self
 
-flexbox 항목에서`align-self` 유틸리티를 사용하여 교차 축 (시작할 y 축,`flex-direction : column` 인 경우 x 축)에서 정렬을 개별적으로 변경합니다. `align-items` 와 동일한 옵션 인 `start` , `end` , `center` , `baseline` 또는 `stretch` (브라우저 기본값) 중에서 선택합니다.
+flexbox 항목에서`align-self` 유틸리티를 사용하여 교차 축 (시작할 y 축,`flex-direction : column` 인 경우 x 축)에서 정렬을 개별적으로 변경합니다. `align-items`와 동일한 옵션 인 `start` , `end` , `center` , `baseline` 또는 `stretch` (브라우저 기본값) 중에서 선택합니다.
 
 <div class="bd-example">
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
@@ -247,7 +247,7 @@ flexbox 항목에서`align-self` 유틸리티를 사용하여 교차 축 (시작
 
 ## Fill
 
-일련의 형제 요소에 `.flex-fill` 클래스를 사용하면 사용 가능한 모든 가로 공간을 차지하면서 컨텐츠와 동일한 너비 (또는 컨텐츠가 테두리 상자를 초과하지 않는 너비)로 강제 설정합니다.
+일련의 형제 요소에 `.flex-fill` 클래스를 사용하면 사용 가능한 모든 가로 공간을 차지하면서 콘텐츠와 동일한 너비 (또는 콘텐츠가 테두리 상자를 초과하지 않는 너비)로 강제 설정합니다.
 
 {{< example >}}
 <div class="d-flex bd-highlight">
@@ -289,7 +289,7 @@ flexbox 항목에서`align-self` 유틸리티를 사용하여 교차 축 (시작
 </div>
 {{< /example >}}
 
-`flex-grow` 와 `flex-shrink` 에 대한 반응형 변형도 존재합니다.
+`flex-grow`와 `flex-shrink` 에 대한 반응형 변형도 존재합니다.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -326,7 +326,7 @@ Flexbox는 flex 정렬과 자동여백을 혼합 할 때 꽤 멋진 일을 할 �
 
 ### With align-items
 
-`align-items` , `flex-direction : column` , `margin-top : auto` 또는 `margin-bottom : auto` 를 혼합하여 하나의 flex 아이템을 컨테이너의 상단 또는 하단으로 수직 이동 시킵니다.
+`align-items` , `flex-direction : column` , `margin-top : auto` 또는 `margin-bottom : auto`를 혼합하여 하나의 flex 아이템을 컨테이너의 상단 또는 하단으로 수직 이동 시킵니다.
 
 {{< example >}}
 <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
@@ -451,7 +451,7 @@ flex 컨테이너에서 flex 아이템이 래핑되는 방식을 변경합니다
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-또한 각각`order : -1` 및 `order : 6` 을 적용하여 요소의 `순서` 를 변경하는 반응형 `.order-first` 및 `.order-last` 클래스도 있습니다.
+또한 각각`order : -1` 및 `order : 6` 을 적용하여 요소의 `순서`를 변경하는 반응형 `.order-first` 및 `.order-last` 클래스도 있습니다.
 
 {{< markdown >}}
 {{< flex.inline >}}

@@ -18,7 +18,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 
 ## Utilities
 
-[Margin utilities]({{< docsref "/utilities/spacing" >}})는 폼에 구조를 추가하는 가장 간단한 방법입니다. 이들은 라벨, 컨트롤, 옵션 폼 텍스트, 폼 검증 문구의 기본적인 그룹화를 제공합니다. 우리는 일관성을 유지하기 위해 `margin-bottom`유틸리티를 사용해 폼 전체에 하나의 방향성을 사용할 것을 권장합니다.
+[Margin utilities]({{< docsref "/utilities/spacing" >}})는 폼에 구조를 추가하는 가장 간단한 방법입니다. 이들은 라벨, 컨트롤, 옵션 폼 문자, 폼 검증 문구의 기본적인 그룹화를 제공합니다. 우리는 일관성을 유지하기 위해 `margin-bottom`유틸리티를 사용해 폼 전체에 하나의 방향성을 사용할 것을 권장합니다.
 
 `<fieldset>`나 `<div>` 등의 거의 모든 요소를 사용하여 자유롭게 폼을 작성해 주세요.
 
@@ -116,9 +116,9 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 
 ## Horizontal form
 
-폼 그룹에 `.row` 클래스를 추가하고 `.col-*-*` 클래스를 사용해 라벨이나 컨트롤의 폭을 지정하는 것으로, 그리드를 사용한 수평 방향의 폼을 작성할 수 있습니다. `<label>`에는 반드시 `.col-form-label`을 추가하여 관련 폼 컨트롤과 함께 수직방향의 중앙에 배치하도록 합니다.
+폼 그룹에 `.row` 클래스를 추가하고 `.col-*-*` 클래스를 사용해 라벨이나 컨트롤의 폭을 지정하는 것으로, 그리드를 사용한 수평 방향의 폼을 작성할 수 있습니다. `<label>`에는 반드시 `.col-form-label`을 추가하여 관련 폼 컨트롤과 함께 수직 방향의 중앙에 배치하도록 합니다.
 
-경우에 따라서는 완변한 배치를 위해 여백(마진이나 패딩) 유틸리티를 사용할 필요가 있을지도 모릅니다. 예를 들어 아래의 예시와 같이 오른쪽의 쌓여진 라디오 버튼의 라벨과의 정렬을 맞추기 위해 `padding-top`을 삭제하는 유틸리티를 추가합니다.
+때에 따라서는 완벽한 배치를 위해 여백(마진이나 패딩) 유틸리티를 사용할 필요가 있을지도 모릅니다. 예를 들어 아래의 예시와 같이 오른쪽의 싸인 라디오 버튼의 라벨과의 정렬을 맞추기 위해 `padding-top`을 삭제하는 유틸리티를 추가합니다.
 
 {{< example >}}
 <form>
@@ -173,7 +173,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 
 ### Horizontal form label sizing
 
-`.form-control-lg` 와 `.form-control-sm`의 사용에 따라 `<label>`이나 `<legend>`에 `.col-form-label-sm` 이나 `.col-form-label-lg`를 사용해 주세요.
+`.form-control-lg`와 `.form-control-sm`의 사용에 따라 `<label>`이나 `<legend>`에 `.col-form-label-sm` 이나 `.col-form-label-lg`를 사용해 주세요.
 
 {{< example >}}
 <div class="row mb-3">
@@ -216,7 +216,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 
 ## Auto-sizing
 
-아래 예시에서는 플렉스박스 유틸리티를 사용하여 컨텐츠를 수직 방향으로 중앙에 오게 하고 `.col`을 `.col-auto`로 변경함으로써 필요한 만큼 컬럼이 공간을 차지하도록 하고 있습니다. 컨텐츠에 따라 컬럼의 크기가 다르게 설정됩니다.
+아래 예시에서는 플렉스박스 유틸리티를 사용하여 콘텐츠를 수직 방향으로 중앙에 오게 하고 `.col`을 `.col-auto`로 변경함으로써 필요한 만큼 컬럼이 공간을 차지하도록 하고 있습니다. 콘텐츠에 따라 컬럼의 크기가 다르게 설정됩니다.
 
 {{< example >}}
 <form class="row gy-2 gx-3 align-items-center">

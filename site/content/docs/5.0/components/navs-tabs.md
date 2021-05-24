@@ -11,12 +11,12 @@ toc: true
 
 Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스부터 활성화 상태와 비활성화 상태까지 일반적인 마크업과 스타일을 공유합니다. 각각의 스타일을 바꾸기 위해서 수식자 클래스를 교체합니다.
 
-기본 `.nav` 컴포넌트는 flexbox로 구축되어 있으며, 모든 타입의 내비게이션 컴포넌트를 구축하기 위한 강력한 구조를 제공하고 있습니다. 여기에는 몇몇의 스타일 오버라이드(리스트를 다루기 위한), 보다 넓은 클릭 영역을 위한 여백, 기본적인 비활성화된 스타일이 포함되어 있습니다.
+기본 `.nav` 컴포넌트는 flexbox로 구축되어 있으며, 모든 타입의 내비게이션 컴포넌트를 구축하기 위한 강력한 구조를 제공하고 있습니다. 여기에는 몇몇 스타일 오버라이드(목록을 다루기 위한), 보다 넓은 클릭 영역을 위한 여백, 기본적인 비활성화된 스타일이 포함되어 있습니다.
 
 {{< callout info >}}
 베이스의 `.nav` 컴포넌트에는 `.active` 상태는 포함되지 않습니다. 아래의 예에서는 주로 이 특정 클래스가 특별한 스타일링을 하지 않는 것을 나타내기 위해 이 클래스를 포함합니다.
 
-활성화된 상태를 스크린 리더에 전달하기 위해서는 현재 페이지라면 `page` 속성을, 세트내의 현재 아이템이라면 `true` 를 사용합니다.
+활성화된 상태를 스크린 리더에 전달하기 위해서는 현재 페이지라면 `page` 속성을, 세트 내의 현재 아이템이라면 `true`를 사용합니다.
 {{< /callout >}}
 
 {{< example >}}
@@ -36,7 +36,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 `<ul>` 을 사용하거나, 아이템의 순서가 중요한 경우에는 `<ol>` 를 사용하거나, `<nav>` 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. `.nav` 는 `display: flex` 을 사용하고 있기 때문에, nav-link 는 따로 추가적인 마크업 없이, nav-item 과 동일하게 동작합니다.
+클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 `<ul>` 을 사용하거나, 아이템의 순서가 중요한 경우에는 `<ol>`를 사용하거나, `<nav>` 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. `.nav` 는 `display: flex`를 사용하고 있기 때문에, nav-link는 따로 추가적인 마크업 없이, nav-item과 동일하게 동작합니다.
 
 {{< example >}}
 <nav class="nav">
@@ -53,9 +53,9 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### Horizontal alignment
 
-[flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}}) 를 사용해, 내비게이션의 수평방향의 배치를 변경합니다. 내비게이션의 기본은 왼쪽 정렬이지만, 쉽게 가운데 혹은 오른쪽 정렬로 변경 가능합니다.
+[flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}}) 를 사용해, 내비게이션의 수평 방향의 배치를 변경합니다. 내비게이션의 기본은 왼쪽 정렬이지만, 쉽게 가운데 혹은 오른쪽 정렬로 변경 가능합니다.
 
-`.justify-content-center` 을 사용해 가운데 정렬이 가능합니다.
+`.justify-content-center`를 사용해 가운데 정렬이 가능합니다.
 
 {{< example >}}
 <ul class="nav justify-content-center">
@@ -74,7 +74,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-`.justify-content-end` 를 사용해, 오른쪽 정렬:
+`.justify-content-end`를 사용해, 오른쪽 정렬:
 
 {{< example >}}
 <ul class="nav justify-content-end">
@@ -95,7 +95,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### Vertical
 
-`.flex-column` 유틸리티를 사용해 flex item(플렉스 아이템) 의 방향을 변경해 내비게이션을 세로로 만들수 있습니다. 일부 뷰포트에서는 세로로, 또 다른 뷰포트에서는 세로로 하고 싶지 않을 경우, `.flex-sm-column` 을 사용해 주세요.
+`.flex-column` 유틸리티를 사용해 flex item(플렉스 아이템)의 방향을 변경해 내비게이션을 세로로 만들 수 있습니다. 일부 뷰포트에서는 세로로, 또 다른 뷰포트에서는 세로로 하고 싶지 않을 경우, `.flex-sm-column`을 사용해 주세요.
 
 {{< example >}}
 <ul class="nav flex-column">
@@ -127,7 +127,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### Tabs
 
-`.nav-tabs` 클래스를 추가해 탭이 있는 인터페이스를 만들수 있습니다. [tab JavaScript plugin](#javascript-behavior) 으로 탭 가능한 영역을 만듭니다。
+`.nav-tabs` 클래스를 추가해 탭이 있는 인터페이스를 만들 수 있습니다. [tab JavaScript plugin](#javascript-behavior) 으로 탭 가능한 영역을 만듭니다。
 
 {{< example >}}
 <ul class="nav nav-tabs">
@@ -169,7 +169,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### Fill and justify
 
-`.nav` 가로폭을 100% 사용하게 합니다. `.nav-item` 에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill` 을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.
+`.nav` 가로 폭을 100% 사용하게 합니다. `.nav-item`에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill`을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.
 
 {{< example >}}
 <ul class="nav nav-pills nav-fill">
@@ -199,7 +199,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </nav>
 {{< /example >}}
 
-동일한 가로 폭의 아이템을 사용하고 싶은 경우에는, `.nav-justified` 을 사용합니다. 모든 수평 방향의 여백은 nav-links 가 갖고 있지만, 위의 `.nav-fill` 과는 다르게, 모든 내비게이션 아이템은 동일한 가로폭을 가지게 됩니다.
+동일한 가로 폭의 아이템을 사용하고 싶은 경우에는, `.nav-justified`를 사용합니다. 모든 수평 방향의 여백은 nav-links 가 갖고 있지만, 위의 `.nav-fill` 과는 다르게, 모든 내비게이션 아이템은 동일한 가로 폭을 가지게 됩니다.
 
 {{< example >}}
 <ul class="nav nav-pills nav-justified">
@@ -246,7 +246,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 내비게이션바를 제공하기 위해 내비게이션을 사용하고 있는 경우, `<ul>` 의 부모 컨테이너에 `role="navigation"` 을 추가하거나, `<nav>` 요소를 내비게이션 전체에 감싸주세요. role을 `<ul>` 자체에 추가하지 마십시오.
 
-내비게이션바는, `.nav-tabs` 에서 시각적으로는 탭으로 보여지게 되있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior) 를 참조해 주십시오. JavaScript 는 활성화된 탭에 `aria-selected="true"` 를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하기 않습니다.
+내비게이션바는, `.nav-tabs`에서 시각적으로는 탭으로 보여지게 되있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior) 를 참조해 주십시오. JavaScript는 활성화된 탭에 `aria-selected="true"`를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하지 않습니다.
 
 ## Using dropdowns
 
@@ -313,11 +313,11 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 
 ## JavaScript behavior
 
-`bootstrap.js` 파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 컨텐츠의 탭 가능한 창을 만들 수 있습니다.
+`bootstrap.js`파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 콘텐츠의 탭 가능한 창을 만들 수 있습니다.
 
-[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서는, 지원 기술(스크린 리더 등)의 사용자에게 구조, 기능, 현재의 상태를 전달하기 위해 `role="tablist"`, `role="tab"`, `role="tabpanel"` 및 추가의 `aria-` 속성을 지원합니다. As a best practice, we recommend using `<button>` elements for the tabs, as these are controls that trigger a dynamic change, rather than links that navigate to a new page or location.
+[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel)에서는, 지원 기술(스크린 리더 등)의 사용자에게 구조, 기능, 현재의 상태를 전달하기 위해 `role="tablist"`, `role="tab"`, `role="tabpanel"` 및 추가의 `aria-` 속성을 지원합니다. 좋은 실행 방법으로써 탭에는 `<button>` 요소 사용을 권장합니다. 이것은 새로운 페이지나 장소로 이동하는 링크가 아니라, 동적인 변화를 일으키는 컨트롤이기 때문입니다.
 
-동적인 탭이 있는 인터페이스는 드롭다운 메뉴를 포함해서는 <em>안됩니다</em>. 사용성 관점에서 현재 표시되고 있는 탭의 트리커 요소가 곧바로 표시되지 않는다는(닫힌 드롭다운 메뉴 안에 있기 때문에) 사실은 혼란을 일으킬 가능성이 있습니다. 접급성 관점에서 이러한 종류의 구조를 표준적인 WAI ARIA 패턴에 매핑하기 위한 현명한 방법은 현재로선 없습니다.
+동적인 탭이 있는 인터페이스는 드롭다운 메뉴를 포함해서는 <em>안됩니다</em>. 사용성 관점에서 현재 표시되고 있는 탭의 트리커 요소가 곧바로 표시되지 않는다는(닫힌 드롭다운 메뉴 안에 있기 때문에) 사실은 혼란을 일으킬 가능성이 있습니다. 접근성 관점에서 이러한 종류의 구조를 표준적인 WAI ARIA 패턴에 매핑하기 위한 현명한 방법은 현재로선 없습니다.
 
 <div class="bd-example">
   <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
@@ -363,7 +363,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 </div>
 ```
 
-요구에 맞춰, 이것은 위에 나온 것과 같은 `<ul>` 베이스의 마크업에서도, 임의의 마크업에서도 동작합니다. `<nav>` 를 사용하는 경우 `role="tablist"` 를 직접 추가하지 않습니다. 대신에 다른 요소(아래의 예시에서는 단순한 `<div>`)로 전환해 `<nav>` 로 감쌌습니다.
+위에 나온 것과 같이 `<ul>`의 마크업과 필요에 따라 임의의 마크업에서도 동작합니다. `<nav>`를 사용하는 경우 `role="tablist"`를 직접 추가하지 않습니다. 이것은 내비게이션 요소가 가진 랜드마크로서의 본래의 역할을 덮어쓰기 때문입니다. 대신에 다른 요소(아래의 예시에서는 단순한 `<div>`)로 바꿔 그 안에 `<nav>`를 넣어 주세요.
 
 <div class="bd-example">
   <nav>
@@ -401,7 +401,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 </div>
 ```
 
-탭의 플러그인은 pills 에서도 동작합니다.
+탭의 플러그인은 pills에서도 동작합니다.
 
 <div class="bd-example">
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -447,7 +447,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 </div>
 ```
 
- 세로 pills 에서도 같습니다.
+ 세로형 pills에서도 같습니다.
 
 <div class="bd-example">
   <div class="d-flex align-items-start">
@@ -493,7 +493,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 
 ### Using data attributes
 
-요소에 `data-bs-toggle="tab"` 혹은 `data-bs-toggle="pill"` 를 지정하는것 만으로, JavaScript 를 쓰지 않고도 탭이나 pill의 내비게이션을 활성화 시킬 수 있습니다. 이러한 data 속성은 `.nav-tabs` 나 `.nav-pills` 로 사용합니다.
+요소에 `data-bs-toggle="tab"` 혹은 `data-bs-toggle="pill"`를 지정하는것 만으로, JavaScript를 쓰지 않고도 탭이나 pill의 내비게이션을 활성화 시킬 수 있습니다. 이러한 data 속성은 `.nav-tabs`나 `.nav-pills`로 사용합니다.
 
 ```html
 <!-- Nav tabs -->
@@ -549,7 +549,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Fade effect
 
-탭을 페이드인 시키려면, `.tab-pane` 에 `.fade` 를 추가합니다. 첫 번째 탭에는 컨텐츠를 표시하기 위해 `.show` 를 추가할 필요가 있습니다.
+탭을 페이드인 시키려면, `.tab-pane`에 `.fade`를 추가합니다. 첫 번째 탭에는 콘텐츠를 표시하기 위해 `.show`를 추가할 필요가 있습니다.
 
 ```html
 <div class="tab-content">
@@ -568,7 +568,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### constructor
 
-탭 요소와 컨텐츠 컨테이너를 활성화합니다. 탭은 DOM 안의 컨테이너 노드를 타겟으로 하는 `data-bs-target`가 있어야 하며 링크를 사용하면 `href` 가 있어야 합니다.
+탭 요소와 콘텐츠 컨테이너를 활성화합니다. 탭은 DOM 안의 컨테이너 노드를 타깃으로 하는 `data-bs-target`가 있어야 하며 링크를 사용하면 `href`가 있어야 합니다.
 
 ```html
 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -646,19 +646,19 @@ var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instan
   <tbody>
     <tr>
       <td><code>show.bs.tab</code></td>
-      <td>이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타겟으로 합니다.</td>
+      <td>이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다.</td>
     </tr>
     <tr>
       <td><code>shown.bs.tab</code></td>
-      <td>이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타겟으로 합니다.</td>
+      <td>이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다.</td>
     </tr>
     <tr>
       <td><code>hide.bs.tab</code></td>
-      <td>이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타겟으로 합니다.</td>
+      <td>이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타깃으로 합니다.</td>
     </tr>
     <tr>
       <td><code>hidden.bs.tab</code></td>
-      <td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타겟으로 합니다.</td>
+      <td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타깃으로 합니다.</td>
     </tr>
   </tbody>
 </table>

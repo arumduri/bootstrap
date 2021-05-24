@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Modal(모달)
-description: Bootstrap JavaScript 모달 플러그인을 사용하여 라이트박스, 사용자 알림 또는 커스텀 컨텐츠를 만들 수 있습니다.
+description: Bootstrap JavaScript 모달 플러그인을 사용하여 라이트박스, 사용자 알림 또는 사용자 정의 콘텐츠를 만들 수 있습니다.
 group: components
 toc: true
 ---
@@ -10,12 +10,12 @@ toc: true
 
 모달 컴포넌트의 메뉴 옵션이 최근 변경되었으니 사용하기 전에 아래 내용을 꼭 읽어보시기 바랍니다.
 
-- 모달은 HTML, CSS, 그리고 JavaScript로 구축됩니다. 모달은 문서 내의 다른 모든 것 위에 배치되어 `<body>` 의 스크롤을 제거하고 모달의 컨텐츠가 스크롤 되도록 합니다.
-- 모달의 "배경" 을 클릭하면 자동적으로 모달이 닫힙니다.
+- 모달은 HTML, CSS, 그리고 JavaScript로 구축됩니다. 모달은 문서 내의 다른 모든 것 위에 배치되어 `<body>` 의 스크롤을 제거하고 모달의 콘텐츠가 스크롤 되도록 합니다.
+- 모달의 "배경" 을 클릭하면 자동으로 모달이 닫힙니다.
 - Bootstrap은 한번에 하나의 모달을 지원합니다. 중첩된 모달은 지원되지 않습니다.
-- 모달은 `position: fixed` 를 사용합니다. 가능한 다른 요소와의 간섭을 피하기 위해, 모달 HTML 을 최상단의 위치에 넣어 주세요. 다른 고정 요소안에 `.modal` 을 중첩해 넣으면 문제가 발생할 가능성이 높습니다.
-- 다시 한번 말씀드리지만, `position: fixed` 때문에 모바일 디바이스에서 모달을 사용할 때 주의할 사항이 몇가지 있습니다. 자세한 내용은 [browser support docs]({{< docsref "/getting-started/browsers-devices#modals-and-dropdowns-on-mobile" >}}) 를 참조해 주십시오.
-- HTML5가 시멘틱하게 정의하는 방법 때문에, [`autofocus` HTML 속성](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) 은 Bootstrap 모달에 영향을 줄 수 없습니다. 같은 효과를 얻으려면 몇개의 커스텀 JavaScript를 사용해 주십시오:
+- 모달은 `position: fixed`를 사용합니다. 가능한 다른 요소와의 간섭을 피하기 위해, 모달 HTML을 최상단의 위치에 넣어 주세요. 다른 고정 요소안에 `.modal`을 중첩해 넣으면 문제가 발생할 가능성이 높습니다.
+- 다시 한번 말씀드리지만, `position: fixed` 때문에 모바일 기기에서 모달을 사용할 때 주의할 사항이 몇가지 있습니다. 자세한 내용은 [browser support docs]({{< docsref "/getting-started/browsers-devices#modals-and-dropdowns-on-mobile" >}})를 참조해 주십시오.
+- HTML5가 시멘틱하게 정의하는 방법 때문에, [`autofocus` HTML 속성](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus)은 Bootstrap 모달에 영향을 줄 수 없습니다. 같은 효과를 얻으려면 몇개의 사용자 정의 JavaScript를 사용해 주십시오:
 
 ```js
 var myModal = document.getElementById('myModal')
@@ -36,7 +36,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 ### Modal components
 
-아래는 _static_ 모달의 예입니다. (즉, `position` 과 `display` 가 오버라이드 되는 것을 의미합니다) 여기에는 모달 header, 모달 body(`padding` 때문에 필요), 모달 footer(선택사항) 가 포함되어 있습니다. 가능한 한 모달을 닫을 수 있는 것을 포함시키거나 닫을 수 있는 다른 명시적인 요소를 제공하도록 부탁드립니다.
+아래는 _static_ 모달의 예입니다. (즉, `position`과 `display`가 오버라이드 되는 것을 의미합니다) 여기에는 모달 header, 모달 body(`padding` 때문에 필요), 모달 footer(선택사항)가 포함되어 있습니다. 가능한 한 모달을 닫을 수 있는 것을 포함시키거나 닫을 수 있는 다른 명시적인 요소를 제공하도록 부탁드립니다.
 
 <div class="bd-example bd-example-modal">
   <div class="modal" tabindex="-1">
@@ -80,7 +80,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 ### Live demo
 
-아래 버튼을 눌러 보세요. 모달 화면이 위에서 아래로 페이드인 합니다.
+아래 버튼을 눌러 보세요. 모달 화면이 위에서 아래로 나타납니다.
 
 <div class="modal fade" id="exampleModalLive" tabindex="-1" aria-labelledby="exampleModalLiveLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -188,7 +188,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 ### Scrolling long content
 
-사용자의 뷰포트나 디바이스가 너무 길면 모달 페이지가 자체적으로 스크롤을 생성합니다. 아래 버튼을 클릭해 시도해 보십시오.
+사용자의 뷰포트나 기기가 너무 길면 모달 페이지가 자체적으로 스크롤을 생성합니다. 아래 버튼을 클릭해 시도해 보십시오.
 
 <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog">
@@ -214,7 +214,7 @@ myModal.addEventListener('shown.bs.modal', function () {
   </button>
 </div>
 
-또한 `.modal-dialog` 에 `.modal-dialog-scrollable` 를 추가하는 것으로, 모달 본체를 스크롤할 수 있는 스크롤 가능한 모달을 만들 수 있습니다.
+또한 `.modal-dialog`에 `.modal-dialog-scrollable`를 추가하는 것으로, 모달 본체를 스크롤할 수 있는 스크롤 가능한 모달로 만들 수 있습니다.
 
 <div class="modal fade" id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">
@@ -251,7 +251,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 ### Vertically centered
 
-모달을 중앙에 배치하기 위해서 `.modal-dialog` 에 `.modal-dialog-centered` 를 추가합니다.
+모달을 중앙에 배치하기 위해서 `.modal-dialog`에 `.modal-dialog-centered`를 추가합니다.
 
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -314,7 +314,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 ### Tooltips and popovers
 
-[Tooltips]({{< docsref "/components/tooltips" >}}) 과 [popovers]({{< docsref "/components/popovers" >}}) 는 필요에 따라 모달 안에 배치시킬 수 있습니다. 모달이 닫히면 그 안에 있는 툴팁이나 팝오버도 자동으로 삭제됩니다.
+[Tooltips]({{< docsref "/components/tooltips" >}})과 [popovers]({{< docsref "/components/popovers" >}})는 필요에 따라 모달 안에 배치시킬 수 있습니다. 모달이 닫히면 그 안에 있는 툴팁이나 팝오버도 자동으로 삭제됩니다.
 
 <div class="modal fade" id="exampleModalPopovers" tabindex="-1" aria-labelledby="exampleModalPopoversLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -356,7 +356,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 ### Using the grid
 
-`.modal-body` 안에 `.container-fluid` 를 중첩시켜 모달 안에 Bootstrap 그리드 시스템을 이용할 수 있습니다. 다른 곳에서 사용하듯이 일반적인 그리드 시스템 클래스를 사용합니다.
+`.modal-body` 안에 `.container-fluid`를 중첩시켜 모달 안에 Bootstrap 그리드 시스템을 이용할 수 있습니다. 다른 곳에서 사용하듯이 일반적인 그리드 시스템 클래스를 사용합니다.
 
 <div class="modal fade" id="gridSystemModal" tabindex="-1" aria-labelledby="gridModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -440,9 +440,9 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 ### Varying modal content
 
-같은 모달을 트리거하는 버튼들이 있는데, 그 모두가 미묘하게 내용이 다른 모달을 트리거 하고 있습니까? `event.relatedTarget` 과 [HTML `data-bs-*` attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) 를 사용하여 어떤 버튼이 클릭되었는지에 따라 모달의 내용을 변화시킬 수 있습니다.
+같은 모달을 트리거하는 버튼들이 있는데, 그것들이 미묘하게 다른 내용의 모달을 트리거 하고 있습니까? `event.relatedTarget`과 [HTML `data-bs-*` attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)를 사용하여 어떤 버튼이 클릭 되었는지에 따라 모달의 내용을 변화시킬 수 있습니다.
 
-다음은 HTML과 JavaScript의 예시를 넣은 라이브 데모입니다. `relatedTarget` 의 자세한 내용은 [read the modal events docs](#events) 를 참조해 주십시오.
+다음은 HTML과 JavaScript의 예시를 넣은 라이브 데모입니다. `relatedTarget`의 자세한 내용은 [read the modal events docs](#events)를 참조해 주세요.
 
 {{< example >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
@@ -498,7 +498,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 ### Toggle between modals
 
-Toggle between multiple modals with some clever placement of the `data-bs-target` and `data-bs-toggle` attributes. For example, you could toggle a password reset modal from within an already open sign in modal. **Please note multiple modals cannot be open at the same time**—this method simply toggles between two separate modals.
+`data-bs-target`과 `data-bs-toggle` 속성을 교묘하게 배치함으로써 여러 모달을 토글할 수 있습니다. 예를 들어 이미 열려있는 로그인 모달에서 비밀번호 재설정의 모달을 열수 있습니다. **여러 개의 모달을 동시에 열 수 없으므로 주의해 주세요.** 이 방법으로 손쉽게 두 개의 다른 모달을 표시할 수 있습니다.
 
 {{< example >}}
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -538,13 +538,13 @@ Toggle between multiple modals with some clever placement of the `data-bs-target
 
 ### Change animation
 
-변수 `$modal-fade-transform` 은 모달 fade-in 애니메이션 이전의 `.modal-dialog` 의 transform 상태를 결정하고, 변수 `$modal-show-transform` 은 fade-in 애니메이션 종료시의 `.modal-dialog` 의 transform 상태를 결정합니다.
+`$modal-fade-transform` 변수는 모달 페이드인 애니메이션 이전 `.modal-dialog` 의 전환 상태를 결정하고, `$modal-show-transform` 변수는 모달 페이드인 애니메이션 종료시 `.modal-dialog` 의 전환 상태를 결정합니다.
 
-예를 들어, zoom-in 애니메이션을 만들고 싶다면 `$modal-fade-transform: scale(.8)` 을 설정합니다.
+예를 들어, zoom-in애니메이션을 만들고 싶다면 `$modal-fade-transform: scale(.8)` 을 설정합니다.
 
 ### Remove animation
 
-화면에 페이드 인 하는 것이 아니라 단순히 표시만 하는 경우에는, 마크업에서 `.fade` 클래스를 삭제합니다.
+화면에 페이드인 하는 것이 아니라 단순히 표시만 하는 경우에는, 마크업에서 `.fade` 클래스를 삭제합니다.
 
 ```html
 <div class="modal" tabindex="-1" aria-labelledby="..." aria-hidden="true">
@@ -554,19 +554,19 @@ Toggle between multiple modals with some clever placement of the `data-bs-target
 
 ### Dynamic heights
 
-모달이 열려있는데 높이가 변경된 경우에는 스크롤바가 표시되었을 때 모달의 위치를 재조정하기 위해 `myModal.handleUpdate()` 를 호출해야 합니다.
+모달이 열려있는데 높이가 변경된 경우에는 스크롤바가 표시되었을 때 모달의 위치를 재조정하기 위해 `myModal.handleUpdate()`를 호출해야 합니다.
 
 ### Accessibility
 
-반드시 `.modal` 에 모달 타이틀을 참조하는 `aria-labelledby="..."` 을 추가해 주세요. 게다가 `.modal` 에 `aria-describedby` 를 추가하는 것으로, 모달 다이얼로그의 설명을 줄 수 있습니다. JavaScript로 이미 추가하고 있으므로 `role="dialog"` 를 추가할 필요가 없다는 점에 주의하십시오.
+반드시 `.modal`에 모달 타이틀을 참조하는 `aria-labelledby="..."`를 추가해 주세요. 게다가 `.modal`에 `aria-describedby`를 추가하는 것으로, 모달 다이얼로그의 설명을 줄 수 있습니다. JavaScript로 이미 추가하고 있음으로 `role="dialog"`를 추가할 필요가 없다는 점에 주의해 주세요.
 
 ### Embedding YouTube videos
 
-YouTube 동영상을 모달에 포함시키려면, Bootstrap 에는 없는 JavaScript 를 추가해 자동으로 재생을 정지하는 등의 처리가 필요합니다. 자세한 내용은 [See this helpful Stack Overflow post](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal) 를 참조해 주세요.
+YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaScript를 추가해 자동으로 재생을 정지하는 등의 처리가 필요합니다. 자세한 내용은 [See this helpful Stack Overflow post](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal)를 참조해 주세요.
 
 ## Optional sizes
 
-모달에는 3개의 옵션 크기가 있어, 변경 클래스를 통해 `.modal-dialog` 로 배치할 수 있습니다. 이들 크기는 좁은 뷰포트에서의 가로 스크롤 바를 피하기 위해 특정 브레이크 포인트에서 유효하게 됩니다.
+모달에는 3개의 옵션 크기가 있어, 수식어 클래스를 통해 `.modal-dialog`로 배치할 수 있습니다. 이들 크기는 좁은 뷰포트에서의 가로 스크롤 바를 피하기 위해 특정 브레이크 포인트에서 유효하게 됩니다.
 
 <table class="table">
   <thead>
@@ -600,7 +600,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap 에는 없는 JavaS
   </tbody>
 </table>
 
-변경 클래스를 가지고 있지 않은 기본 모달은, "medium" 크기의 모달을 구성합니다.
+수식어 클래스를 가지고 있지 않은 기본 모달은, "medium" 크기의 모달로 보여집니다.
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalXl">Extra large modal</button>
@@ -658,7 +658,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap 에는 없는 JavaS
 
 ## Fullscreen Modal
 
-`.modal-dialog` 에는 아래와 같은 클래스를 추가하는 것으로, 풀스크린 모달을 이용할 수 있습니다.
+`.modal-dialog`에는 아래와 같은 클래스를 추가하는 것으로, 화면을 꽉채운 모달을 이용할 수 있습니다.
 
 <table class="table">
   <thead>
@@ -821,17 +821,17 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap 에는 없는 JavaS
 
 ### Loop
 
-[Responsive fullscreen modals](#fullscreen-modal) are generated via the `$breakpoints` map and a loop in `scss/_modal.scss`.
+[Responsive fullscreen modals](#fullscreen-modal)은 `$breakpoints` 맵과 `scss/_modal.scss`내의 반복에 의해 생성됩니다.
 
 {{< scss-docs name="modal-fullscreen-loop" file="scss/_modal.scss" >}}
 
 ## Usage
 
-모달 플러그인은, data 속성이나 JavaScript를 사용하고, 필요에 따라 숨겨서 컨텐츠를 바꿉니다. 또한 기본 스크롤 동작을 덮어쓰기 위해서 `.modal-open` 을 `<body>` 에 추가하고, 모달의 바깥쪽을 클릭했을 때 표시된 모달을 삭제하기 위한 클릭 영역을 제공하기 위해서 `.modal-backdrop` 을 생성합니다.
+모달 플러그인은, data 속성이나 JavaScript를 사용하고, 필요에 따라 숨겨서 콘텐츠를 바꿉니다. 또한 기본 스크롤 동작을 덮어쓰기 위해서 `.modal-open`을 `<body>`에 추가하고, 모달의 바깥쪽을 클릭했을 때 표시된 모달을 삭제하기 위한 클릭 영역을 제공하기 위해서 `.modal-backdrop`을 생성합니다.
 
 ### Via data attributes
 
-JavaScript를 쓰지 않고 모달을 활성화 합니다. 버튼과 같은 컨트롤러 요소에 `data-bs-toggle="modal"` 을 설정하고, 추가로 `data-bs-target="#foo"` 또는 `href="#foo"` 를 지정하고, 토글하는 특정 모달을 타겟으로 합니다.
+JavaScript를 쓰지 않고 모달을 활성화 시킵니다. 버튼과 같은 컨트롤러 요소에 `data-bs-toggle="modal"`을 설정하고, 추가로 `data-bs-target="#foo"` 또는 `href="#foo"`를 지정하고, 토글하는 특정 모달을 타깃으로 합니다.
 
 ```html
 <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Launch modal</button>
@@ -847,7 +847,7 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 
 ### Options
 
-옵션은 data 속성 또는 JavaScript 로 줄 수 있습니다. data 속성의 경우는 `data-bs-backdrop=""` 처럼 `data-bs-` 에 옵션명을 추가합니다.
+옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우는 `data-bs-backdrop=""`처럼 `data-bs-`에 옵션 명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -888,7 +888,7 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 
 #### Passing options
 
-모달로서 컨텐츠를 활성화 합니다. 옵션의 `object` 를 받습니다.
+모달로서 콘텐츠를 활성화 합니다. 옵션의 `object`를 받습니다.
 
 ```js
 var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
@@ -912,7 +912,7 @@ myModal.toggle()
 myModal.show()
 ```
 
-Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property).
+또한, 모달 이벤트로 받을 수 있는 DOM 요소를 인수로 건네줄 수도 있습니다.(`relatedTarget` 속성으로서).
 
 ```js
 var modalToggle = document.getElementById('toggleMyModal') // relatedTarget
@@ -954,7 +954,7 @@ var modal = bootstrap.Modal.getInstance(myModalEl) // Returns a Bootstrap modal 
 
 ### Events
 
-Bootstrap 의 모달 클래스는 모달 기능으로 연결하기 위한 몇 가지 이벤트를 공개하고 있습니다. 모든 모달 이벤트는, 모달 자체(즉, `<div class="modal">`)에서 발생합니다.
+Bootstrap의 모달 클래스는 모달 기능으로 연결하기 위한 몇 가지 이벤트를 공개하고 있습니다. 모든 모달 이벤트는, 모달 자체(즉, `<div class="modal">`)에서 발생합니다.
 
 <table class="table">
   <thead>
@@ -982,7 +982,7 @@ Bootstrap 의 모달 클래스는 모달 기능으로 연결하기 위한 몇 �
     </tr>
     <tr>
       <td><code>hidePrevented.bs.modal</code></td>
-      <td>이 이벤트는 모달이 표시되고 그 배경이 <code>static</code> 이고, 키보드 옵션 또는 <code>data-bs-keyboard</code> 가 <code>false</code> 로 설정되어 있는 상태에서 모달 바깥쪽 클릭이나 escape key 를 누루면 됩니다.</td>
+      <td>이 이벤트는 모달이 표시되고 그 배경이 <code>static</code>이고, 키보드 옵션 또는 <code>data-bs-keyboard</code>가 <code>false</code>로 설정되어 있는 상태에서 모달 바깥쪽 클릭이나 escape key를 누루면 됩니다.</td>
     </tr>
   </tbody>
 </table>

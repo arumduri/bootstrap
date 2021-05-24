@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Interactions
-description: 사용자가 웹 사이트의 컨텐츠와 상호 작용하는 방식을 변경하는 유틸리티 클래스입니다.
+description: 사용자가 웹 사이트의 콘텐츠와 상호 작용하는 방식을 변경하는 유틸리티 클래스입니다.
 group: utilities
 toc: false
 ---
 
 ## Text selection
 
-사용자가 컨텐츠와 상호 작용할 때 컨텐츠가 선택되는 방식을 변경합니다.
+사용자가 콘텐츠와 상호 작용할 때 콘텐츠가 선택되는 방식을 변경합니다.
 
 {{< example >}}
 <p class="user-select-all">This paragraph will be entirely selected when clicked by the user.</p>

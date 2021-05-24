@@ -158,7 +158,7 @@ bootstrap.Tooltip.VERSION // => "{{< param current_version >}}"
 
 ## No special fallbacks when JavaScript is disabled
 
-Bootstrap의 플러그인은 JavaScript가 비활성화 되어있을 때 특히 멋있게 폴백되지 않습니다. 이 경우 사용자 경험에 관심이 있다면 [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)를 사용해서 상황 (및 JavaScript를 다시 활성화하는 방법)을 사용자에게 설명하거나 직접 만든 폴백을 추가하세요.
+Bootstrap의 플러그인은 JavaScript가 비활성화되어있을 때 특히 멋있게 폴백되지 않습니다. 이 경우 사용자 경험에 관심이 있다면 [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)를 사용해서 상황 (및 JavaScript를 다시 활성화하는 방법)을 사용자에게 설명하거나 직접 만든 폴백을 추가하세요.
 
 {{< callout warning >}}
 ##### 서드파티 라이브러리
