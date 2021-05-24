@@ -346,7 +346,7 @@ myPopover.toggle()
 
 #### dispose
 
-요소의 팝오버를 숨기고 없앱니다(DOM 요소에 저장된 데이터를 삭제합니다). 위임을 사용하는 팝오버([the `selector` option](#options) 를 사용하여 작성된 것) 는 자식의 트리거 요소로 인해 개벌적으로 없앨 수 없습니다.
+요소의 팝오버를 숨기고 없앱니다(DOM 요소에 저장된 데이타를 삭제합니다). 위임을 사용하는 팝오버([the `selector` option](#options) 를 사용하여 작성된 것) 는 자식의 트리거 요소로 인해 개벌적으로 없앨 수 없습니다.
 
 ```js
 myPopover.dispose()

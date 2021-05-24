@@ -937,7 +937,7 @@ myModal.handleUpdate()
 
 #### dispose
 
-모달의 요소를 없앱니다.(DOM 요소에 저장되어 있는 데이터를 삭제합니다)
+모달의 요소를 없앱니다.(DOM 요소에 저장되어 있는 데이타를 삭제합니다)
 
 ```js
 myModal.dispose()

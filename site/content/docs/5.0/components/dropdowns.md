@@ -1134,7 +1134,7 @@ var dropdown = new bootstrap.Dropdown(element, {
     <tr>
       <td><code>dispose</code></td>
       <td>
-        요소의 드롭다운을 없앱니다.(DOM 요소에 지정되어 있는 데이터를 삭제합니다)
+        요소의 드롭다운을 없앱니다.(DOM 요소에 지정되어 있는 데이타를 삭제합니다)
       </td>
     </tr>
     <tr>

@@ -137,7 +137,7 @@ toc: true
 
 ## Forms
 
-- **새로운 플로팅 폼 추가!** 플로팅 라벨의 예시를 완전히 지원되는 폼 컴포넌트로 승격시켰습니다.[See the new Floating labels page.]({{< docsref "/forms/floating-labels" >}})
+- **새로운 플로팅 폼 추가!** 플로팅 라벨의 예시를 완전히 지원되는 폼 컴포넌트로 승격시켰습니다. [새로운 플로팅 라벨 페이지 확인하러 가기]({{< docsref "/forms/floating-labels" >}})
 
 - <span class="badge bg-danger">Breaking</span> **네비티브와 사용자 정의 폼 요소의 통합.** 체크박스, 라디오 버튼, 셀렉트등 v4에서 네이티브와 사용자 정의 클래스를 가지고 있던 입력 요소들이 통합되었습니다. 이를 통해 모든 폼 요소가 완전히 커스텀화 되었고, 그 대부분이 사용자 정의 HTML을 필요로 하지 않게 되었습니다.
   - `.custom-check`는 `.form-check`로 변경.
@@ -149,7 +149,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> `.input-group-append`와 `.input-group-prepend`는 삭제. 입력 그룹의 직접 하위 요소로서 버튼과 `.input-group-text`를 추가 할 수 있게 되었습니다.
 
-- 오랫동안 지속 되었던 [Missing border radius on input group with validation feedback bug](https://github.com/twbs/bootstrap/issues/25110)는 유효성 검사 폼에 포함된 입력 그룹에 `.has-validation` 클래스를 추가하는 것으로 겨우 수정 되었습니다.
+- 오랫동안 지속 되었던 [유효성 검사를 사용할때 입력 그룹에서 반원 경계선이 누락되는 버그](https://github.com/twbs/bootstrap/issues/25110)는 유효성 검사 폼에 포함된 입력 그룹에 `.has-validation` 클래스를 추가하는 것으로 겨우 수정 되었습니다.
 
 - <span class="badge bg-danger">Breaking</span> **그리드 시스템을 위한 폼 고유의 레이아웃 클래스 삭제.** `.form-group`, `.form-row`, `.form-inline` 대신 그리드와 유틸리티를 사용해 주세요.
 
@@ -195,7 +195,7 @@ toc: true
 
 ### Buttons
 
-- <span class="badge bg-danger">Breaking</span> **체크박스나 라디오 버튼에 있는 [Toggle buttons](http://getbootstrap.com/docs/5.0/forms/checks-radios/#toggle-buttons)은, JavaScript가 필요없는 새로운 마크업을 채용하고 있습니다.** 더 이상 감싸는 요소는 필요하지 않고, 바로 `<input>`에 `.btn-check`를 추가해 `.btn` 클래스의 `<label>`과 조합 합니다. [#30650](https://github.com/twbs/bootstrap/pull/30650). _이 건에 관한 문서는 버튼 페이지에서 폼 섹션으로 이동하였습니다._
+- <span class="badge bg-danger">Breaking</span> **체크 박스나 라디오 버튼에 있는 [토글 버튼](http://getbootstrap.com/docs/5.0/forms/checks-radios/#toggle-buttons)은, JavaScript가 필요없는 새로운 마크업을 채용하고 있습니다.** 더 이상 감싸는 요소는 필요하지 않고, 바로 `<input>`에 `.btn-check`를 추가해 `.btn` 클래스의 `<label>`과 조합 합니다. [#30650](https://github.com/twbs/bootstrap/pull/30650). _이 건에 관한 문서는 버튼 페이지에서 폼 섹션으로 이동하였습니다._
 
 - <span class="badge bg-danger">Breaking</span> **유틸리티용 `.btn-block`를 삭제.** `.btn`에 `.btn-block`을 사용하는 대신에, 버튼을 `.d-grid`와 `.gap-*` 유틸리티로 감싸고 필요에 따라 여백을 위한 클래스를 사용합니다. 보다 강력한 컨트롤을 위해 반응형 클래스로 전환 합니다. [몇 가지 예시에 대해서는 문서를 참조해 주세요](http://getbootstrap.com/docs/5.0/components/buttons/#block-buttons)
 
@@ -215,7 +215,7 @@ toc: true
 
 ### Carousel
 
-- 진한 문자, 컨트롤과 기호(밝은 배경에 최적)를 위해 [`.carousel-dark` variant]({{< docsref "/components/carousel#dark-variant" >}})가 추가되었습니다.
+- 진한 문자, 컨트롤과 기호(밝은 배경에 최적) 표시를 위해 [`.carousel-dark`]({{< docsref "/components/carousel#dark-variant" >}})가 추가되었습니다.
 
 - 캐러셀의 chevron 아이콘을 [Bootstrap Icons]({{< param "icons" >}})의 새로운 SVG로 대체하였습니다.
 
@@ -245,7 +245,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> 드롭다운 플러그인에 대한 `flip` 옵션을 삭제하고 Popper의 네이티브 설정으로 변경되었습니다. [flip](https://popper.js.org/docs/v2/modifiers/flip/) modifier의 [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements)의 빈 배열을 통해서 플립 동작을 비활성화 할 수 있습니다.
 
-- 드롭다운 메뉴는 새로운 `autoClose` 옵션에서 [auto close behavior]({{< docsref "/components/dropdowns#auto-close-behavior" >}})를 처리하게 되었습니다. 이 옵션을 사용하면 드롭다운 메뉴의 안쪽 또는 바깥쪽에서 클릭을 받아 상호적인 메뉴를 만들 수 있습니다.
+- 드롭다운 메뉴는 새로운 `autoClose` 옵션을 추가해 [자동 닫기 동작]({{< docsref "/components/dropdowns#auto-close-behavior" >}})을 처리하게 되었습니다. 이 옵션을 사용하면 드롭다운 메뉴의 안쪽 또는 바깥쪽에서 클릭을 받아 상호적인 메뉴를 만들 수 있습니다.
 
 - 드롭다운이 이제 `<li>`에 싸여진 `.dropdown-item`를 지원합니다.
 
@@ -259,121 +259,122 @@ toc: true
 
 ### Navs and tabs
 
-- Added new `null` variables for `font-size`, `font-weight`, `color`, and `:hover` `color` to the `.nav-link` class.
+- `.nav-link` 클래스에 `font-size`, `font-weight`, `color`, `:hover` `color`에 대한 새로운 변수 `null`을 추가했습니다.
 
 ### Navbars
 
-- <span class="badge bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).
+- <span class="badge bg-danger">Breaking</span> 내비바는 컨테이너가 필요하게 되어 간격 요건이나 필요한 CSS가 대폭 간소화되었습니다.
 
 ### Offcanvas
 
-- Added the new [offcanvas component]({{< docsref "/components/offcanvas" >}}).
+- 새로운 [offcanvas 컴포넌트]({{< docsref "/components/offcanvas" >}})가 추가되었습니다.
 
 ### Pagination
 
-- Pagination links now have customizable `margin-left` that are dynamically rounded on all corners when separated from one another.
+- 페이지네이션 링크의 `margin-left`를 재정의할 수 있게 되어, 떨어져 있을 때 모든 모서리가 다이내믹하게 둥글어지게 되었습니다.
 
-- Added `transition`s to pagination links.
+- 페이지네이션 링크에 `트랜지션`을 추가하였습니다.
 
 ### Popovers
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.popover-arrow` in our default popover template.
+- <span class="badge bg-danger">Breaking</span> 기본 팝오버 템플릿의 `.arrow` 이름을 `.popover-arrow`로 변경하였습니다.
 
-- Renamed `whiteList` option to `allowList`.
+- `whiteList` 옵션 명을 `allowList`로 변경하였습니다.
 
 ### Spinners
 
-- Spinners now honor `prefers-reduced-motion: reduce` by slowing down animations. [See #31882](https://github.com/twbs/bootstrap/pull/31882).
+- 스피너의 애니메이션의 속도를 줄임으로써 `prefers-reduced-motion: reduce`를 존중하게 되었습니다. [#31882](https://github.com/twbs/bootstrap/pull/31882).
 
-- Improved spinner vertical alignment.
+- 스피너의 수직 방향 배치를 개선하였습니다.
 
 ### Toasts
 
-- Toasts can now be [positioned]({{< docsref "/components/toasts#placement" >}}) in a `.toast-container` with the help of [positioning utilities]({{< docsref "/utilities/position" >}}).
+- [위치 지정 유틸리티]({{< docsref "/utilities/position" >}})를 사용하여 `.toast-container` 안의 토스트를 [배치]({{< docsref "/components/toasts#placement" >}})시킬 수 있게 되었습니다.
 
-- Changed default toast duration to 5 seconds.
+- 기본 토스트의 지속 시간을 5초로 변경하였습니다.
 
-- Removed `overflow: hidden` from toasts and replaced with proper `border-radius`s with `calc()` functions.
+- 토스트에서 `overflow: hidden`을 삭제하고 `calc()` 함수로 적절한 `border-radius`를 대체하였습니다.
 
 ### Tooltips
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.arrow` to `.tooltip-arrow` in our default tooltip template.
+- <span class="badge bg-danger">Breaking</span> 기본 툴팁 템플렛에서 `.arrow` 이름을 `.tooltip-arrow`으로 변경하였습니다.
 
-- <span class="badge bg-danger">Breaking</span> The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of popper elements.
+- <span class="badge bg-danger">Breaking</span> `fallbackPlacements`의 기본 값이 `['top', 'right', 'bottom', 'left']` 으로 popper 요소의 배치가 개선되었습니다.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `whiteList` option to `allowList`.
+- <span class="badge bg-danger">Breaking</span> `whiteList` 옵션 명이 `allowList`로 변경되었습니다.
 
 ## Utilities
 
-- <span class="badge bg-danger">Breaking</span> Renamed several utilities to use logical property names instead of directional names with the addition of RTL support:
-  - Renamed `.left-*` and `.right-*` to `.start-*` and `.end-*`.
-  - Renamed `.float-left` and `.float-right` to `.float-start` and `.float-end`.
-  - Renamed `.border-left` and `.border-right` to `.border-start` and `.border-end`.
-  - Renamed `.rounded-left` and `.rounded-right` to `.rounded-start` and `.rounded-end`.
-  - Renamed `.ml-*` and `.mr-*` to `.ms-*` and `.me-*`.
-  - Renamed `.pl-*` and `.pr-*` to `.ps-*` and `.pe-*`.
-  - Renamed `.text-left` and `.text-right` to `.text-start` and `.text-end`.
+- <span class="badge bg-danger">Breaking</span> RTL 지원이 추가됨에 따라 방향적인 이름 대신 논리적인 속성명으로 여러 유틸리티의 이름이 변경되었습니다:
+  - `.left-*`와 `.right-*`에서 `.start-*`와 `.end-*`로 변경.
+  - `.float-left`와 `.float-right`에서 `.float-start`와 `.float-end`로 변경.
+  - `.border-left`와 `.border-right`에서 `.border-start`와 `.border-end`로 변경.
+  - `.rounded-left`와 `.rounded-right`에서 `.rounded-start`와 `.rounded-end`로 변경.
+  -`.ml-*`과 `.mr-*`에서 `.ms-*`와 `.me-*`로 변경.
+  - `.pl-*`과 `.pr-*`에서 `.ps-*`와 `.pe-*`로 변경.
+  - `.text-left`와 `.text-right`에서 `.text-start`와 `.text-end`로 변경.
 
-- <span class="badge bg-danger">Breaking</span> Disabled negative margins by default.
+- <span class="badge bg-danger">Breaking</span> 기본적으로 음수 마진을 비활성화.
 
-- Added new `.bg-body` class for quickly setting the `<body>`'s background to additional elements.
+- `<body>`의 배경을 추가적인 요소로 빠르게 설정하기 위해 새롭게 `.bg-body` 클래스를 추가하였습니다.
 
-- Added new [position utilities]({{< docsref "/utilities/position#arrange-elements" >}}) for `top`, `right`, `bottom`, and `left`. Values include `0`, `50%`, and `100%` for each property.
+- `top`, `right`, `bottom`, `left` 표시를 위해 새로운 [위치 유틸리티]({{< docsref "/utilities/position#arrange-elements" >}})를 추가하였습니다. 값으로는 `0`, `50%`, `100%`가 있습니다.
 
-- Added new `.translate-middle-x` & `.translate-middle-y` utilities to horizontally or vertically center absolute/fixed positioned elements.
+- 새로운 `.translate-middle-x`와 `.translate-middle-y` 유틸리티를 추가하였습니다. 이 유틸리티는 absolute/fixed에 배치된 요소들을 수평 혹은 수직 방향에서 중앙에 오게 합니다.
 
-- Added new [`border-width` utilities]({{< docsref "/utilities/borders#border-width" >}}).
+- 새로운 [`border-width` 유틸리티]({{< docsref "/utilities/borders#border-width" >}})를 추가하였습니다.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.text-monospace` to `.font-monospace`.
+- <span class="badge bg-danger">Breaking</span> `.text-monospace` 클래스명이 `.font-monospace`으로 변경되었습니다.
 
-- <span class="badge bg-danger">Breaking</span> Removed `.text-hide` as it's an antiquated method for hiding text that shouldn't be used anymore.
+- <span class="badge bg-danger">Breaking</span> 문자를 숨기기 위한 시대 착오적인 방법으로 더 이상 사용되서는 안되는 `.text-hide`를 삭제하였습니다.
 
-- Added `.fs-*` utilities for `font-size` utilities (with RFS enabled). These use the same scale as HTML's default headings (1-6, large to small), and can be modified via Sass map.
+- `font-size` 유틸리티를 위한 `.fs-*` 유틸리티를 추가하였습니다. (RFS 사용). 이들은 HTML의 기본 제목과 동일한 크기(1-6, large ~ small)를 사용하고 있으며 Sass 맵에서 변경할 수 있습니다.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.font-weight-*` utilities as `.fw-*` for brevity and consistency.
+- <span class="badge bg-danger">Breaking</span> `.font-weight-*` 유틸리티를 간결함과 일관성을 위해 `.fw-*`로 변경하였습니다.
 
-- <span class="badge bg-danger">Breaking</span> Renamed `.font-style-*` utilities as `.fst-*` for brevity and consistency.
+- <span class="badge bg-danger">Breaking</span> Renamed `.font-style-*` 유틸리티를 간결함과 일관성을 위해 `.fst-*`로 변경하였습니다.
 
-- Added `.d-grid` to display utilities and new `gap` utilities (`.gap`) for CSS Grid and flexbox layouts.
+- CSS 그리드와 flexbox 레이아웃용 표시를 위한 `.d-grid` 유틸리티와 새로운 `gap` 유틸리티(`.gap`)를 추가하였습니다.
 
-- <span class="badge bg-danger">Breaking</span> Removed `.rounded-sm` and `rounded-lg`, and introduced a new scale of classes, `.rounded-0` to `.rounded-3`. [See #31687](https://github.com/twbs/bootstrap/pull/31687).
+- <span class="badge bg-danger">Breaking</span> `.rounded-sm`과 `rounded-lg`를 삭제하고, 스케일로서 새로운 클래스 `.rounded-0`부터 `.rounded-3`을 도입하였습니다. [#31687](https://github.com/twbs/bootstrap/pull/31687).
 
-- Added new `line-height` utilities: `.lh-1`, `.lh-sm`, `.lh-base` and `.lh-lg`. See [here]({{< docsref "/utilities/text#line-height" >}}).
+- 새로운 `line-height` 유틸리티를 추가하였습니다: `.lh-1`, `.lh-sm`, `.lh-base`와 `.lh-lg`. [자세히 보기]({{< docsref "/utilities/text#line-height" >}}).
 
-- Moved the `.d-none` utility in our CSS to give it more weight over other display utilities.
+- 다른 표시 유틸리티보다 더 비중을 두기 위해 CSS에 있는 `.d-none` 유틸리티를 이동 시켰습니다.
 
-- Extended the `.visually-hidden-focusable` helper to also work on containers, using `:focus-within`.
+- 컨테이너 작업에도 사용할 수 있도록 `.visually-hidden-focusable` 도우미를 `:focus-within`로 확장하였습니다.
+
 
 ## Helpers
 
-- <span class="badge bg-danger">Breaking</span> **Responsive embed helpers have been renamed to [ratio helpers]({{< docsref "/helpers/ratio" >}})** with new class names and improved behaviors, as well as a helpful CSS variable.
-  - Classes have been renamed to change `by` to `x` in the aspect ratio. For example, `.ratio-16by9` is now `.ratio-16x9`.
-  - We've dropped the `.embed-responsive-item` and element group selector in favor of a simpler `.ratio > *` selector. No more class is needed, and the ratio helper now works with any HTML element.
-  - The `$embed-responsive-aspect-ratios` Sass map has been renamed to `$aspect-ratios` and its values have been simplified to include the class name and the percentage as the `key: value` pair.
-  - CSS variables are now generated and included for each value in the Sass map. Modify the `--bs-aspect-ratio` variable on the `.ratio` to create any [custom aspect ratio]({{< docsref "/helpers/ratio#custom-ratios" >}}).
+- <span class="badge bg-danger">Breaking</span> 더욱 편리한 CSS 변수 추가로 동작이 개선된 **Responsive embed가 [ratio 도우미]({{< docsref "/helpers/ratio" >}})** 로 이름이 변경되었습니다.
+  - 비율을 나타내는 클래스가 `by`에서 `x`로 이름이 변경되었습니다. 예를 들어, `.ratio-16by9`는 `.ratio-16x9`가 되었습니다.
+  - `.embed-responsive-item`과 요소 그룹 셀렉타를 삭제하여 더욱 단순한 `.ratio > *` 셀렉타로 변경되었습니다. 이로써 클래스는 불필요해 졌고, 비율 도우미는 어떠한 HTML 요소로도 사용 가능해졌습니다.
+  - `$embed-responsive-aspect-ratios`의 Sass 맵은 `$aspect-ratios`로 이름이 변경되었고, 그 값은 클래스 이름과 퍼센티지를 `key: value` 값으로 포함하도록 간소화되었습니다.
+  - Sass 맵의 각 값에 CSS 변수가 생성되어 포함되었습니다. `.ratio`의 `--bs-aspect-ratio` 변수를 수정하여 임의의 [사용자 정의 비율]({{< docsref "/helpers/ratio#custom-ratios" >}})을 만듭니다.
 
-- <span class="badge bg-danger">Breaking</span> **"Screen reader" classes are now ["visually hidden" classes]({{< docsref "/helpers/visually-hidden" >}}).**
-  - Changed the Sass file from `scss/helpers/_screenreaders.scss` to `scss/helpers/_visually-hidden.scss`
-  - Renamed `.sr-only` and `.sr-only-focusable` to `.visually-hidden` and `.visually-hidden-focusable`
-  - Renamed `sr-only()` and `sr-only-focusable()` mixins to `visually-hidden()` and `visually-hidden-focusable()`.
+- <span class="badge bg-danger">Breaking</span> **"Screen reader" 클래스는 ["visually hidden"]({{< docsref "/helpers/visually-hidden" >}})이 되었습니다.**
+  - `scss/helpers/_screenreaders.scss`에서 `scss/helpers/_visually-hidden.scss`로 Sass 파일이 변경되었습니다.
+  - `.sr-only`와 `.sr-only-focusable`에서 `.visually-hidden`과 `.visually-hidden-focusable`로 변경되었습니다.
+  - `sr-only()`와 `sr-only-focusable()`믹스인은 `visually-hidden()`과 `visually-hidden-focusable()`로 변경되었습니다.
 
-- `bootstrap-utilities.css` now also includes our helpers. Helpers don't need to be imported in custom builds anymore.
+- `bootstrap-utilities.css` 안에 도우미가 포함되어 있습니다. 도우미는 더 이상 사용자 정의 빌드로 따로 포함할 필요가 없습니다.
 
 ## JavaScript
 
-- **Dropped jQuery dependency** and rewrote plugins to be in regular JavaScript.
+- **jQuery에 대한 의존을 중단**하고 플러그인을 통상적인 JavaScript로 다시 썼습니다.
 
-- <span class="badge bg-danger">Breaking</span> Data attributes for all JavaScript plugins are now namespaced to help distinguish Bootstrap functionality from third parties and your own code. For example, we use `data-bs-toggle` instead of `data-toggle`.
+- <span class="badge bg-danger">Breaking</span> 모든 JavaScript 플러그인의 데이타 속성은 제삼자의 코드와 자체 코드에서 Bootstrap의 기능을 구별하는 데 도움이 되도록 이름을 붙이고 있습니다. 예를 들어 `data-toggle` 대신 `data-bs-toggle`을 사용합니다.
 
-- **All plugins can now accept a CSS selector as the first argument.** You can either pass a DOM element or any valid CSS selector to create a new instance of the plugin:
+- **모든 클러그인은 첫번째 인수로서 CSS 셀렉타를 받아들일 수 있게 되었습니다.** 플러그인의 새로운 인스턴스를 작성하기 위해 DOM 요소 또는 임의의 CSS 셀렉타를 전달할 수 있습니다. :
 
   ```js
   var modal = new bootstrap.Modal('#myModal')
   var dropdown = new bootstrap.Dropdown('[data-bs-toggle="dropdown"]')
   ```
 
-- `popperConfig` can be passed as a function that accepts the Bootstrap's default Popper config as an argument, so that you can merge this default configuration in your way. **Applies to dropdowns, popovers, and tooltips.**
+- `popperConfig`는 Bootstrap 기본 Popper 콘피그를 인수로 하는 함수로 전달할 수 있으며, 이 기본 콘피그를 내 방식대로 병합할 수 있습니다. **드롭다운, 팝오버, 툴팁에 적용됩니다.**
 
-- The default value for the `fallbackPlacements` is changed to `['top', 'right', 'bottom', 'left']` for better placement of Popper elements. **Applies to dropdowns, popovers, and tooltips.**
+- 팝오버 요소의 보다 나은 배치를 위해 `fallbackPlacements` 기본값이 `['top', 'right', 'bottom', 'left']`로 변경되었습니다. **드롭다운, 팝오버, 툴팁에 적용됩니다.**
 
-- Removed underscore from public static methods like `_getInstance()` → `getInstance()`.
+- `_getInstance()` → `getInstance()`와 같이 공공의 정적 메소드에서 밑줄표시 삭제하였습니다.
