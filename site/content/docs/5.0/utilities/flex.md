@@ -661,6 +661,6 @@ Bootstrap4에서 [미디어 개체 구성 요소](https://getbootstrap.com/docs/
 
 ### Utilities API
 
-Flexbox 유틸리티는 `scss / _utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{<docsref "/ utilities / api # using-the-api">}})
+Flexbox 유틸리티는 `scss / _utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-flex" file="scss/_utilities.scss" >}}
