@@ -8,7 +8,7 @@ toc: true
 
 ## How it works
 
-반응형 디스플레이 유틸리티 클래스를 사용하여 [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)의 값을 변경합니다. 의도적으로 '디스플레이'에 대해 가능한 모든 값의 하위 집합만 지원합니다. 클래스는 다양한 효과를 위해 필요에 따라 결합 시킬 수 있습니다.
+반응형 디스플레이 유틸리티 클래스를 사용하여 [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)의 값을 변경합니다. 의도적으로 `디스플레이` 에 대해 가능한 모든 값의 하위 집합만 지원합니다. 클래스는 다양한 효과를 위해 필요에 따라 결합 시킬 수 있습니다.
 
 ## Notation
 
@@ -17,7 +17,7 @@ toc: true
 따라서 클래스는 다음 형식을 사용하여 이름이 지정됩니다.
 
 - `.d-{value}` for `xs`
-- `.d-{breakpoint}-{value}` for `sm`, `md`, `lg`, `xl`, and `xxl`.
+- `.d-{breakpoint}-{value}` for `sm` , `md` , `lg` , `xl` , and `xxl` .
 
 다음 *값* 중 하나일 경우:
 
@@ -32,9 +32,9 @@ toc: true
 - `flex`
 - `inline-flex`
 
-디스플레이 값은 `$displays` 변수 를 변경 하고 SCSS를 다시 컴파일하여 변경할 수 있습니다 .
+디스플레이 값은 `$displays` 변수를 변경 하고 SCSS를 다시 컴파일하여 변경할 수 있습니다.
 
-미디어 쿼리는 지정된 중단 점 *보다 큰* 화면 너비에 영향을 줍니다. 예를 들어, `.d-lg-none` 설정은 `lg` 뿐만 아니라 `xl` 그리고 `xxl` 화면을 `display: none;` 합니다. 
+미디어 쿼리는 지정된 중단 점 **보다 큰** 화면 너비에 영향을 줍니다. 예를 들어, `.d-lg-none` 설정은 `lg` 뿐만 아니라 `xl` 그리고 `xxl` 화면을 `display: none;` 합니다. 
 
 ## Examples
 
@@ -155,6 +155,6 @@ toc: true
 
 ### Utilities API
 
-Display utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+디스플레이 유틸리티는 `scss / _utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-display" file="scss/_utilities.scss" >}}
