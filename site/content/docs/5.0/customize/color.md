@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Color
-description: Bootstrap is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
+description: Bootstrap은 우리의 스타일과 컴포넌트를 테마로 한 광범위한 컬러 시스템을 지원합니다. 어떤 프로젝트라도 보다 포괄적으로 재정의 및 확장이 가능합니다.
 group: customize
 toc: true
 ---
 
 ## Theme colors
 
-We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Bootstrap's `scss/_variables.scss` file.
+모든 색상의 하위 집합을 사용하여 색 구성표를 만들기 위한 더 작은 색상 팔레트를 만들며, Sass 변수와 Bootstrap의 `scss/_variables.scss` 파일의 Sass 맵으로도 사용할 수 있습니다.
 
 <div class="row">
   {{< theme-colors.inline >}}
@@ -20,17 +20,17 @@ We use a subset of all colors to create a smaller color palette for generating c
   {{< /theme-colors.inline >}}
 </div>
 
-All these colors are available as a Sass map, `$theme-colors`.
+이 색상들은 모두 Sass 맵인 `$theme-colors`로 이용할 수 있습니다.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
-Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
+이 색상을 변경하는 방법은 [Sass 맵과 반복 문서]({{< docsref "/customize/sass#maps-and-loops" >}})를 확인해 주세요.
 
 ## All colors
 
-All Bootstrap colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).
+모든 Bootstrap 색상은 `scss/_variables.scss` 파일의 Sass 변수와 Sass 맵으로 이용할 수 있습니다. 파일 크기 증가를 막기 위해서 이런 변수마다 문자나 배경 색상 클래스를 만들지 않습니다. 그 대신에, 이런 색의 하위 집합을 [theme palette](#theme-colors)로 선택하고 있습니다.
 
-Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
+색을 재정의 할 때는, 색 대비에 주의해 주세요. 아래 표시된 것처럼 메인 색상에 - 현재 색상에 대해, 흰색에 대해, 검은색에 대해 - 각각 세 가지 대비 비율을 추가했습니다.
 
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
@@ -73,29 +73,29 @@ Be sure to monitor contrast ratios as you customize colors. As shown below, we'v
 
 ### Notes on Sass
 
-Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. We specify the midpoint value (e.g., `$blue-500`) and use custom color functions to tint (lighten) or shade (darken) our colors via Sass's `mix()` color function.
+Sass는 프로그램적으로 변수를 만들 수 없어서 모든 색상을 위한 변수를 수동으로 만듭니다. 중간 값을 지정하고 (예를 들어, `$blue-500`), Sass의 `mix()` 색상 함수로 색조(밝게) 혹은 음영(어둡게)의 사용자 정의 색상 함수를 사용하고 있습니다.
 
-Using `mix()` is not the same as `lighten()` and `darken()`—the former blends the specified color with white or black, while the latter only adjusts the lightness value of each color. The result is a much more complete suite of colors, as [shown in this CodePen demo](https://codepen.io/emdeoh/pen/zYOQOPB).
+`mix()` 사용은, `lighten()`과 `darken()`이 동일하지 않습니다. — 전자는 지정한 색상을 흰색과 검은색으로 섞지만, 후자는 각 색의 밝기 값을 조정하기만 하면 됩니다. 그 결과, [CodePen 데모](https://codepen.io/emdeoh/pen/zYOQOPB)처럼 충실한 색을 얻을 수 있습니다.
 
-Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$theme-color-interval` variable, which specifies a stepped percentage value for each mixed color we produce. See the `scss/_functions.scss` and `scss/_variables.scss` files for the full source code.
+`tint-color()` 및 `shade-color()` 함수에서는 `mix()`를 `$theme-color-interval` 변수와 함께 사용합니다. 전체 소스 코드는 `scss/_functions.scss`와 `scss/_variables.scss` 파일을 참조해 주세요.
 
 ## Color Sass maps
 
-Bootstrap's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
+Bootstrap의 소스 Sass 파일에는 색상과 그 16진수 값의 목록을 빠르고 쉽게 반복하기 위한 세가지 맵이 포함되어 있습니다.
 
-- `$colors` lists all our available base (`500`) colors
-- `$theme-colors` lists all semantically named theme colors (shown below)
-- `$grays` lists all tints and shades of gray
+- `$colors`는 이용 가능한 기본(`500`) 색상을 나열합니다.
+- `$theme-colors`는 의미 있는 이름을 가진 테마 색상을 나열합니다.(아래 그림 참조)
+- `$grays`는 모든 회색의 색조와 음영을 나열합니다.
 
-Within `scss/_variables.scss`, you'll find Bootstrap's color variables and Sass map. Here's an example of the `$colors` Sass map:
+`scss/_variables.scss` 안에는, Bootstrap의 색상 변수와 Sass 맵이 있습니다. 다음은 `$colors` Sass 맵의 예시입니다:
 
 {{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
 
-Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
+맵에서 값을 추가, 삭제, 수정하여 다른 많은 컴포넌트에서의 값을 사용하는 방법을 업데이트합니다. 안타깝게도 현시점에서는 _모든_ 컴포넌트가 이 Sass 맵을 이용하고 있는 것은 아닙니다. 추후 업데이트 시, 이 점을 개선하도록 노력하겠습니다. 그때까지는 Sass 맵과 `${color}` 변수를 이용해 주세요.
 
 ### Example
 
-Here's how you can use these in your Sass:
+당신의 Sass에서 이를 사용하는 방법입니다:
 
 ```scss
 .alpha { color: $purple; }
@@ -105,4 +105,4 @@ Here's how you can use these in your Sass:
 }
 ```
 
-[Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color` using the `500` color values.
+[Color]({{< docsref "/utilities/colors" >}})와 [background]({{< docsref "/utilities/background" >}}) 유틸리티 클래스는 `500` 색상의 값을 사용해 `color`와 `background-color`를 설정하기 위해서 이용할 수 있습니다.
