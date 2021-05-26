@@ -13,7 +13,7 @@ sections:
   - title: Color
     description: 툴킷 전체를 지원하는 컬러 시스템에 대해 배우고 재정의합니다.
   - title: Components
-    description: 기본 클래스와 modifier 클래스를 사용하여 거의 모든 컴포넌트를 반응형으로 구축하는 방법을 학습합니다.
+    description: 기본 클래스와 제어자 클래스를 사용하여 거의 모든 컴포넌트를 반응형으로 구축하는 방법을 학습합니다.
   - title: CSS variables
     description: 빠르고 미래지향적인 디자인과 개발 실현을 위해 Bootstrap의 CSS 사용자 정의 속성을 사용합니다.
   - title: Optimize

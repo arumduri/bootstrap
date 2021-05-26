@@ -116,7 +116,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, options)
 {{< callout warning >}}
 ##### Overflow `auto` and `scroll`
 
-**부모 컨테이너**가 `.table-responsive`처럼 `overflow: auto` 혹은 `overflow: scroll`로 되어 있으면 툴팁의 위치가 자동으로 변경되려고는 하지만, 위치는 원래대로 유지되고 있습니다. 그것을 해결하기 위해서는, [`boundary` option](https://popper.js.org/docs/v2/modifiers/flip/#boundary) (`popperConfig` 옵션을 사용한 flip modifier의 경우)을 기본값으로 가지고 있는 `'clippingParents'`를 임의의 HTML 요소, 예를 들어 `document.body`등으로 오버라이드하여 설정하면 됩니다:
+**부모 컨테이너**가 `.table-responsive`처럼 `overflow: auto` 혹은 `overflow: scroll`로 되어 있으면 툴팁의 위치가 자동으로 변경되려고는 하지만, 위치는 원래대로 유지되고 있습니다. 그것을 해결하기 위해서는, [`boundary` option](https://popper.js.org/docs/v2/modifiers/flip/#boundary) (`popperConfig` 옵션을 사용한 flip 제어자의 경우)을 기본값으로 가지고 있는 `'clippingParents'`를 임의의 HTML 요소, 예를 들어 `document.body`등으로 오버라이드하여 설정하면 됩니다:
 
 ```js
 var exampleEl = document.getElementById('example')
@@ -269,7 +269,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>툴팁의 오버플로 제약 경계(Popper의 preventOverflow modifier에만 적용). 기본적으로 <code>'clippingParents'</code>로 HTMLElement의 참조를 받을 수 있습니다.(JavaScript만). 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>를 참조해 주세요.</td>
+      <td>툴팁의 오버플로 제약 경계(Popper의 preventOverflow 제어자에만 적용). 기본적으로 <code>'clippingParents'</code>로 HTMLElement의 참조를 받을 수 있습니다.(JavaScript만). 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>customClass</code></td>

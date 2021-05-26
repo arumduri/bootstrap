@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Components
-description: Learn how and why we build nearly all our components responsively and with base and modifier classes.
+description:  기본 클래스와 수정 클래스를 가지고 거의 모든 컴포넌트를 반응하는 방식으로 구축하는 방법과 이유를 소개합니다.
 group: customize
 toc: true
 ---
 
 ## Base classes
 
-Bootstrap's components are largely built with a base-modifier nomenclature. We group as many shared properties as possible into a base class, like `.btn`, and then group individual styles for each variant into modifier classes, like `.btn-primary` or `.btn-success`.
+Bootstrap의 컴포넌트는 주로 기본-제어자 명명법으로 만들어졌습니다. 가능한 한 많은 공유 속성을 `.btn`과 같은 기본 클래스로 그룹화 하고, 각 변형 개개의 스타일을 `.btn-primary` 혹은 `.btn-success`와 같은 제어자 클래스로 그룹화 되어 있습니다.
 
 To build our modifier classes, we use Sass's `@each` loops to iterate over a Sass map. This is especially helpful for generating variants of a component by our `$theme-colors` and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you'll automatically see your changes reflected in these loops.
 

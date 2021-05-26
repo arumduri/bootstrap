@@ -637,7 +637,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 
 ## Menu alignment
 
-기본적으로, 드롭다운 메뉴는 자동으로 위에서 100% 위치와 부모의 왼쪽에 따라 배치됩니다. You can change this with the directional `.drop*` classes, but you can also control them with additional modifier classes.
+기본적으로, 드롭다운 메뉴는 자동으로 위에서 100% 위치와 부모의 왼쪽에 따라 배치됩니다. 이것은 방향성이 있는 `.drop*` 클래스로 변경할 수 있지만, 추가적인 제어자 클래스로 제어할 수도 있습니다.
 
 드롭다운 메뉴를 오른쪽으로 배치하려면 `.dropdown-menu` 에 `.dropdown-menu-end`를 추가합니다. RTL로 사용할 경우 방향성은 반대가 되기 때문에 `.dropdown-menu-end` 는 왼쪽에 표시됩니다.
 
@@ -1035,7 +1035,7 @@ JavaScript로 드롭다운을 호출하느냐 data-api를 사용하느냐에 상
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>드롭다운 메뉴의 오버플로 제약 경계(Popper의 preventOverflow modifier에만 적용). 기본적으로 <code>'clippingParents'</code>로 HTMLElement의 참조를 받을 수 있습니다.(JavaScript만). 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>를 참조해 주세요.</td>
+      <td>드롭다운 메뉴의 오버플로 제약 경계(Popper의 preventOverflow 제어자에만 적용). 기본적으로 <code>'clippingParents'</code>로 HTMLElement의 참조를 받을 수 있습니다.(JavaScript만). 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>reference</code></td>
