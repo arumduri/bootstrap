@@ -96,7 +96,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## Numbered
 
-`.list-group-numbered`라는 modifier 클래스(와 옵션에서 `<ol>`요소를 사용하여)를 추가하여 숫자 목록 리스트 그룹을 만들 수 있습니다. 숫자는(`<ol>`의 브라우저 기본 스타일링이 아닌) CSS에 의해 추가되므로 목록 그룹 아이템 내에서 배치가 간단하고 재정의하기도 쉬워집니다.
+`.list-group-numbered`라는 제어자 클래스(와 옵션에서 `<ol>`요소를 사용하여)를 추가하여 숫자 목록 리스트 그룹을 만들 수 있습니다. 숫자는(`<ol>`의 브라우저 기본 스타일링이 아닌) CSS에 의해 추가되므로 목록 그룹 아이템 내에서 배치가 간단하고 재정의하기도 쉬워집니다.
 
 숫자는 `<ol>`의 `counter-increment`에 의해 생성되며 `counter-increment`와 콘텐츠를 가진 `<li>`의 `::before` 가상 요소를 사용하여 스타일링 되고 배치됩니다.
 
@@ -310,7 +310,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ### Loop
 
-믹스인 `list-group-item-variant()`를 사용하여 modifier 클래스를 생성하는 반복문입니다.
+믹스인 `list-group-item-variant()`를 사용하여 제어자 클래스를 생성하는 반복문입니다.
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 

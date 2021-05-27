@@ -52,7 +52,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 
 ## Gutters
 
-[gutter modifier classes]({{< docsref "/layout/gutters" >}})를 추가하는 것으로, 인라인이나 블록 방향으로 거터의 너비를 조정할 수 있습니다. **이또한 Sass 변수 `$enable-grid-classes`가 활성화 되어 있어야 합니다.** (기본값이 활성화 상태임).
+[거터 제어자 클래스]({{< docsref "/layout/gutters" >}})를 추가하는 것으로, 인라인이나 블록 방향으로 거터의 너비를 조정할 수 있습니다. **이또한 Sass 변수 `$enable-grid-classes`가 활성화 되어 있어야 합니다.** (기본값이 활성화 상태임).
 
 {{< example >}}
 <div class="row g-3">
@@ -294,7 +294,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 
 ## Inline forms
 
-`.row-cols-*` 클래스를 사용해, 수평 방향의 레이아웃을 만듭니다. [gutter modifier classes]({{< docsref "/layout/gutters" >}})를 추가함으로써 수평 방향과 수직 방향에 거터를 적절하게 줄 수 있습니다. 좁은 모바일 뷰포트에서 `.col-12` 는 양식 컨트롤 등을 쌓을 수 있도록 도와줍니다. `.align-items-center`를 사용해 폼 요소를 중앙에 오게 해 `.form-checkbox`의 위치가 예쁘게 적용되었습니다.
+`.row-cols-*` 클래스를 사용해, 수평 방향의 레이아웃을 만듭니다. [거터 제어자 클래스]({{< docsref "/layout/gutters" >}})를 추가함으로써 수평 방향과 수직 방향에 거터를 적절하게 줄 수 있습니다. 좁은 모바일 뷰포트에서 `.col-12` 는 양식 컨트롤 등을 쌓을 수 있도록 도와줍니다. `.align-items-center`를 사용해 폼 요소를 중앙에 오게 해 `.form-checkbox`의 위치가 예쁘게 적용되었습니다.
 
 {{< example >}}
 <form class="row row-cols-lg-auto g-3 align-items-center">
