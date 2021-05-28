@@ -35,6 +35,6 @@ Sass 변수를 사용하여 `_variables.scss` 에서 `$overflows` 변수를 변�
 
 ### Utilities API
 
-Overflow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Overflow 유틸리티는 `scss/_utilities.scss` 의 유틸리티 APi에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-overflow" file="scss/_utilities.scss" >}}
