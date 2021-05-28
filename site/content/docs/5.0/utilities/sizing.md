@@ -8,7 +8,7 @@ toc: true
 
 ## Relative to the parent
 
-너비 및 높이 유틸리티는 `_utilities.scss` 의 유틸리티 API에서 생성됩니다. 기본적으로 `25 %` , `50 %` , `75 %` , `100 %` 및 `auto` 에 대한 지원을 포함합니다. 여기에서 다른 유틸리티를 생성 해야하므로 해당 값을 수정하십시오.
+너비 및 높이 유틸리티는 `_utilities.scss` 의 유틸리티 API에서 생성됩니다. 기본적으로 `25%` , `50%` , `75%` , `100%` 및 `auto` 에 대한 지원을 포함합니다. 여기에서 다른 유틸리티를 생성 해야하므로 해당 값을 수정하십시오.
 
 {{< example >}}
 <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
@@ -28,7 +28,7 @@ toc: true
 </div>
 {{< /example >}}
 
-필요에 따라 `max-width : 100 %;` 및 `max-height : 100 %;` 유틸리티를 사용할 수도 있습니다.
+필요에 따라 `max-width: 100 %;` 및 `max-height: 100 %;` 유틸리티를 사용할 수도 있습니다.
 
 {{< example >}}
 {{< placeholder width="100%" height="100" class="mw-100" text="Max-width 100%" >}}
