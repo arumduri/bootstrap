@@ -8,7 +8,7 @@ toc: true
 
 ## Colors
 
-색상 유틸리티를 사용하여 문자를 색상화 합니다. 링크에 색을 입히려면 `: hover` 및 `: focus` 상태가 있는 [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}})를 사용할 수 있습니다.
+색상 유틸리티를 사용하여 문자를 색상화 합니다. 링크에 색을 입히려면 `:hover` 및 `:focus` 상태가 있는 [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}})를 사용할 수 있습니다.
 
 {{< example >}}
 {{< colors.inline >}}
@@ -60,6 +60,6 @@ toc: true
 
 ### Utilities API
 
-색상 유틸리티는`scss / _utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
+색상 유틸리티는`scss/_utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-color" file="scss/_utilities.scss" >}}
