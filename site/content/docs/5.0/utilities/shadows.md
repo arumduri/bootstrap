@@ -25,6 +25,6 @@ toc: true
 
 ### Utilities API
 
-Shadow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Shadow 유틸리티는 `scss/_utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-shadow" file="scss/_utilities.scss" >}}
