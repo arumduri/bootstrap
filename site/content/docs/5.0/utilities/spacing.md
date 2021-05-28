@@ -15,7 +15,7 @@ CSS 그리드 시스템 모듈을 사용하십니까? 그렇다면 [the gap util
 ### Notation
 
 
-`xs`에서`xxl`까지 모든 중단점에 적용되는 간격 유틸리티에는 별도의 중단점 약어가 없습니다. 이는 이러한 클래스가 `min-width : 0` 이상에서 적용되므로 미디어 쿼리에 의해 바인딩되지 않기 때문입니다. 그러나 나머지 중단점에는 중단점 약어가 포함됩니다.
+`xs`에서`xxl`까지 모든 중단점에 적용되는 간격 유틸리티에는 별도의 중단점 약어가 없습니다. 이는 이러한 클래스가 `min-width: 0` 이상에서 적용되므로 미디어 쿼리에 의해 바인딩되지 않기 때문입니다. 그러나 나머지 중단점에는 중단점 약어가 포함됩니다.
 
 클래스는 `xs` 의 경우 `{property} {sides}-{size}` 형식을 사용하고 `sm` , `md` , `lg` , `xl` 의 경우  `{property} {sides}-{breakpoint}-{size}` 형식을 사용하여 이름이 지정됩니다.
 
@@ -44,7 +44,7 @@ Where *size* is one of:
 - `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3`
 - `auto` - for classes that set the `margin` to auto
 
-(`$ spacers` Sass 맵 변수에 항목을 추가하면 더 많은 크기를 추가 할 수 있습니다.)
+(`$spacers` Sass 맵 변수에 항목을 추가하면 더 많은 크기를 추가 할 수 있습니다.)
 
 ### Examples
 
@@ -71,7 +71,7 @@ Where *size* is one of:
 
 ### Horizontal centering
 
-Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
+또한 부트스트랩에는 가로여백을 `auto`로 설정하여 고정 너비 block형태의 컨텐츠 즉, `display: block` 및 `width`가 설정된 컨테츠를 가로 중앙에 배치하기 위한 `.mx-auto` 클래스도 포함되어 있습니다.
 
 <div class="bd-example">
   <div class="mx-auto" style="width: 200px; background-color: rgba(86,61,124,.15);">
@@ -87,9 +87,9 @@ Additionally, Bootstrap also includes an `.mx-auto` class for horizontally cente
 
 ## Negative margin
 
-CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding` 은 사용할 수 없음). 이러한 음수 여백은 **기본적으로 사용 중지** 되지만 `$ enable-negative-margins : true`를 설정하여 Sass에서 사용하도록 설정할 수 있습니다.
+CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding` 은 사용할 수 없음). 이러한 음수 여백은 **기본적으로 사용 중지** 되지만 `$enable-negative-margins: true`를 설정하여 Sass에서 사용하도록 설정할 수 있습니다.
 
-구문은 기본 양수 margin 유틸리티와 거의 동일하지만 요청 된 크기 앞에 `n`이 추가됩니다. 다음은 `.mt-1` 과 반대되는 예제 클래스입니다:
+구문은 기본 양수 margin 유틸리티와 거의 동일하지만 요청 된 크기 앞에 `n` 이 추가됩니다. 다음은 `.mt-1` 과 반대되는 예제 클래스입니다:
 
 ```scss
 .mt-n1 {
@@ -99,7 +99,7 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 
 ## Gap
 
-`display : grid`를 사용할 때 부모 그리드 컨테이너에서 `gap` 유틸리티를 사용할 수 있습니다. 이렇게하면 개별 그리드 항목 (`display : grid` 컨테이너의 하위 항목)에 여백 유틸리티를 추가 할 필요가 없습니다. 간격 유틸리티는 기본적으로 반응형이며 `$ spacers` Sass 맵을 기반으로 유틸리티 API를 통해 생성됩니다.
+`display: grid` 를 사용할 때 부모 그리드 컨테이너에서 `gap` 유틸리티를 사용할 수 있습니다. 이렇게하면 개별 그리드 항목 (`display: grid` 컨테이너의 하위 항목)에 여백 유틸리티를 추가 할 필요가 없습니다. 간격 유틸리티는 기본적으로 반응형이며 `$spacers` Sass 맵을 기반으로 유틸리티 API를 통해 생성됩니다.
 
 {{< example html >}}
 <div class="d-grid gap-3">
@@ -109,18 +109,18 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 </div>
 {{< /example >}}
 
-지원에는 Bootstrap의 모든 그리드 중단점에 대한 반응형 옵션과 `$ spacers` 맵 (`0` – `5`)의 6 가지 크기가 포함됩니다. `.gap-auto` 유틸리티 클래스는 사실상`.gap-0` 과 동일하므로 별도로 없습니다.
+지원에는 Bootstrap의 모든 그리드 중단점에 대한 반응형 옵션과 `$spacers` 맵 (`0` – `5`)의 6 가지 크기가 포함됩니다. `.gap-auto` 유틸리티 클래스는 사실상 `.gap-0` 과 동일하므로 별도로는 없습니다.
 
 ## Sass
 
 ### Maps
 
-Spacing utilities are declared via Sass map and then generated with our utilities API.
+Spacing유틸리티는 Sass 맵을 통해 선언 된 다음 유틸리티 API로 생성됩니다.
 
 {{< scss-docs name="spacer-variables-maps" file="scss/_variables.scss" >}}
 
 ### Utilities API
 
-Spacing utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Spacing유틸리티는 `scss/_utilities.scss` 의 유틸리티 APi에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-spacing" file="scss/_utilities.scss" >}}
