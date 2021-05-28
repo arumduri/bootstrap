@@ -35,7 +35,7 @@ Where *position* is one of:
 - `50` - for `50%` edge position
 - `100` - for `100%` edge position
 
-(`$ position-values` Sass 맵 변수에 항목을 추가하면 더 많은 위치 값을 추가 할 수 있습니다.)
+(`$position-values` Sass 맵 변수에 항목을 추가하면 더 많은 위치 값을 추가 할 수 있습니다.)
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -52,7 +52,7 @@ Where *position* is one of:
 
 또한 변환 유틸리티 클래스 `.translate-middle` 을 사용하여 요소를 중앙에 배치 할 수도 있습니다.
 
-이 클래스는 요소에 `translateX (-50 %)` 및 `translateY (-50 %)` 변환을 요소에 적용하여 edge positioning 유틸리티와 함께 요소를 absolute center 로 지정 할 수 있습니다.
+이 클래스는 요소에 `translateX(-50%)` 및 `translateY(-50%)` 변환을 요소에 적용하여 edge positioning 유틸리티와 함께 요소를 absolute center 로 지정 할 수 있습니다.
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -102,7 +102,7 @@ Where *position* is one of:
 </button>
 {{< /example >}}
 
-해당 클래스를 기존 구성 요소와 함께 사용하여 새 구성 요소를 만들 수 있습니다. `$ position-values` 변수에 항목을 추가하여 기능을 확장 할 수 있습니다.
+해당 클래스를 기존 구성 요소와 함께 사용하여 새 구성 요소를 만들 수 있습니다. `$position-values` 변수에 항목을 추가하여 기능을 확장 할 수 있습니다.
 
 {{< example class="bd-example-position-examples" >}}
 <div class="position-relative m-4">
@@ -119,12 +119,11 @@ Where *position* is one of:
 
 ### Maps
 
-Default position utility values are declared in a Sass map, then used to generate our utilities.
+기본 position유틸리티 값은 Sass 맵에 선언 된 다음 다른 유틸리티를 생성하는 데 사용됩니다.
 
 {{< scss-docs name="position-map" file="scss/_variables.scss" >}}
 
 ### Utilities API
-
-Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+디스플레이 유틸리티는 `scss/_utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-position" file="scss/_utilities.scss" >}}
