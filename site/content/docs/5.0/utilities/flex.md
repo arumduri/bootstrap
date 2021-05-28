@@ -78,7 +78,7 @@ toc: true
 
 ## Justify content
 
-flexbox 컨테이너에서 `justify-content` 유틸리티를 사용하여 기본 축 (시작할 x 축, `flex-direction : column` 인 경우 y축)에서 flex 항목들의 정렬을 변경합니다. `start` (브라우저 기본값), `end` , `center` , `between` , `around` 또는 `evenly` 중에서 선택합니다.
+flexbox 컨테이너에서 `justify-content` 유틸리티를 사용하여 기본 축 (시작할 x 축, `flex-direction: column` 인 경우 y축)에서 flex 항목들의 정렬을 변경합니다. `start` (브라우저 기본값), `end` , `center` , `between` , `around` 또는 `evenly` 중에서 선택합니다.
 
 <div class="bd-example">
   <div class="d-flex justify-content-start bd-highlight mb-3">
@@ -139,7 +139,7 @@ flexbox 컨테이너에서 `justify-content` 유틸리티를 사용하여 기본
 
 ## Align items
 
-flexbox 컨테이너에서 `align-items` 유틸리티를 사용하여 교차 축 (시작할 y 축, `flex-direction : column` 인 경우 x축)에서 flex 항목의 정렬을 변경합니다. `start` , `end` , `center` , `baseline` 또는 `stretch` (브라우저 기본값) 중에서 선택합니다.
+flexbox 컨테이너에서 `align-items` 유틸리티를 사용하여 교차 축 (시작할 y 축, `flex-direction: column` 인 경우 x축)에서 flex 항목의 정렬을 변경합니다. `start` , `end` , `center` , `baseline` 또는 `stretch` (브라우저 기본값) 중에서 선택합니다.
 
 <div class="bd-example">
   <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
@@ -193,7 +193,7 @@ flexbox 컨테이너에서 `align-items` 유틸리티를 사용하여 교차 축
 
 ## Align self
 
-flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시작할 y 축, `flex-direction : column` 인 경우 x축)에서 정렬을 개별적으로 변경합니다. `align-items` 와 동일한 옵션 인 `start` , `end` , `center` , `baseline` 또는 `stretch` (브라우저 기본값) 중에서 선택합니다.
+flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시작할 y 축, `flex-direction: column` 인 경우 x축)에서 정렬을 개별적으로 변경합니다. `align-items` 와 동일한 옵션 인 `start` , `end` , `center` , `baseline` 또는 `stretch` (브라우저 기본값) 중에서 선택합니다.
 
 <div class="bd-example">
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
@@ -270,7 +270,7 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 ## Grow and shrink
 
 
-`.flex-grow- *` 유틸리티는 사용 가능한 공간을 꽉 채우기 위해 확장하는 flex 아이템 입니다. 아래 예시에서 `.flex-grow-1` 요소는 가능한 모든 공간을 사용하고 나머지 두 개의 flex 항목은 필요한 공간만을 허용합니다.
+`.flex-grow-*` 유틸리티는 사용 가능한 공간을 꽉 채우기 위해 확장하는 flex 아이템 입니다. 아래 예시에서 `.flex-grow-1` 요소는 가능한 모든 공간을 사용하고 나머지 두 개의 flex 항목은 필요한 공간만을 허용합니다.
 
 {{< example >}}
 <div class="d-flex bd-highlight">
@@ -280,7 +280,7 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 </div>
 {{< /example >}}
 
-필요한 경우 `.flex-shrink- *` 유틸리티를 사용하여 flex 아이템의 수축 기능을 전환합니다. 아래 예시에서 `.flex-shrink-1` 이 포함 된 두 번째 flex 아이템은 해당 내용이 강제로 새로운 row로 감싸집니다. `.w-100` 이 포함 된 첫번째 flex 아이템에 더 많은 공간을 허용하기 위해 "축소" 합니다.
+필요한 경우 `.flex-shrink-*` 유틸리티를 사용하여 flex 아이템의 수축 기능을 전환합니다. 아래 예시에서 `.flex-shrink-1` 이 포함 된 두 번째 flex 아이템은 해당 내용이 강제로 새로운 row로 감싸집니다. `.w-100` 이 포함 된 첫번째 flex 아이템에 더 많은 공간을 허용하기 위해 "축소" 합니다.
 
 {{< example >}}
 <div class="d-flex bd-highlight">
@@ -326,7 +326,7 @@ Flexbox는 flex 정렬과 자동여백을 혼합 할 때 꽤 멋진 일을 할 �
 
 ### With align-items
 
-`align-items` , `flex-direction : column` , `margin-top : auto` 또는 `margin-bottom : auto` 를 혼합하여 하나의 flex 아이템을 컨테이너의 상단 또는 하단으로 수직 이동 시킵니다.
+`align-items` , `flex-direction: column` , `margin-top: auto` 또는 `margin-bottom: auto` 를 혼합하여 하나의 flex 아이템을 컨테이너의 상단 또는 하단으로 수직 이동 시킵니다.
 
 {{< example >}}
 <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
@@ -451,7 +451,7 @@ flex 컨테이너에서 flex 아이템이 래핑되는 방식을 변경합니다
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-또한 각각 `order : -1` 및 `order : 6` 을 적용하여 요소의 `순서` 를 변경하는 반응형 `.order-first` 및 `.order-last` 클래스도 있습니다.
+또한 각각 `order: -1` 및 `order: 6` 을 적용하여 요소의 `order` 를 변경하는 반응형 `.order-first` 및 `.order-last` 클래스도 있습니다.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -465,7 +465,7 @@ flex 컨테이너에서 flex 아이템이 래핑되는 방식을 변경합니다
 
 ## Align content
 
-flexbox 컨테이너에서 `align-content` 유틸리티를 사용하여 flex 아이템을 교차 축에서 *함께* 정렬합니다. `start` (브라우저 기본값), `end` , `center` , `between` , `around` 또는 `stretch` 중에서 선택합니다. 이러한 유틸리티를 시연하기 위해 `flex-wrap : wrap` 을 시행하고 flex 아이템의 수를 늘렸습니다.
+flexbox 컨테이너에서 `align-content` 유틸리티를 사용하여 flex 아이템을 교차 축에서 *함께* 정렬합니다. `start` (브라우저 기본값), `end` , `center` , `between` , `around` 또는 `stretch` 중에서 선택합니다. 이러한 유틸리티를 시연하기 위해 `flex-wrap: wrap` 을 시행하고 flex 아이템의 수를 늘렸습니다.
 
 **주의!** 이 속성은 플렉스 항목의 단일 행에서는 영향을 주지 않습니다.
 
@@ -661,6 +661,6 @@ Bootstrap4에서 [미디어 개체 구성 요소](https://getbootstrap.com/docs/
 
 ### Utilities API
 
-Flexbox 유틸리티는 `scss / _utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
+Flexbox 유틸리티는 `scss/_utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-flex" file="scss/_utilities.scss" >}}
