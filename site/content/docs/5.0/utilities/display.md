@@ -8,7 +8,7 @@ toc: true
 
 ## How it works
 
-반응형 디스플레이 유틸리티 클래스를 사용하여 [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)의 값을 변경합니다. 의도적으로 `디스플레이` 에 대해 가능한 모든 값의 하위 집합만 지원합니다. 클래스는 다양한 효과를 위해 필요에 따라 결합 시킬 수 있습니다.
+반응형 디스플레이 유틸리티 클래스를 사용하여 [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)의 값을 변경합니다. 의도적으로 `display` 에 대해 가능한 모든 값의 하위 집합만 지원합니다. 클래스는 다양한 효과를 위해 필요에 따라 결합 시킬 수 있습니다.
 
 ## Notation
 
@@ -130,7 +130,7 @@ toc: true
 
 ## Display in print
 
-인쇄 디스플레이 유틸리티 클래스로 인쇄 할 때 요소의 `display` 값을 변경합니다. 반응 형 `.d- *` 유틸리티와 동일한 `display` 값에 대한 지원을 포함합니다.
+인쇄 디스플레이 유틸리티 클래스로 인쇄 할 때 요소의 `display` 값을 변경합니다. 반응 형 `.d-*` 유틸리티와 동일한 `display` 값에 대한 지원을 포함합니다.
 
 - `.d-print-none`
 - `.d-print-inline`
@@ -155,6 +155,6 @@ toc: true
 
 ### Utilities API
 
-디스플레이 유틸리티는 `scss / _utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
+디스플레이 유틸리티는 `scss/_utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-display" file="scss/_utilities.scss" >}}
