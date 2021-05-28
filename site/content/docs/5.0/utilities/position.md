@@ -119,12 +119,12 @@ Where *position* is one of:
 
 ### Maps
 
-Default position utility values are declared in a Sass map, then used to generate our utilities.
+기본 Position 유틸리티 값은 Sass 맵에 선언 된 다음 유틸리티를 생성하는 데 사용됩니다.
 
 {{< scss-docs name="position-map" file="scss/_variables.scss" >}}
 
 ### Utilities API
 
-Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Position 유틸리티는 `scss/_utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-position" file="scss/_utilities.scss" >}}
