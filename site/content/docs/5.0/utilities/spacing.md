@@ -115,12 +115,12 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 
 ### Maps
 
-Spacing utilities are declared via Sass map and then generated with our utilities API.
+Spacing 유틸리티는 Sass 맵을 통해 선언 된 다음 유틸리티 API로 생성됩니다.
 
 {{< scss-docs name="spacer-variables-maps" file="scss/_variables.scss" >}}
 
 ### Utilities API
 
-Spacing utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Spacing 유틸리티는 `scss/_utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-spacing" file="scss/_utilities.scss" >}}
