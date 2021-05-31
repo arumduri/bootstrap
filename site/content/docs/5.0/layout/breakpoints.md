@@ -62,21 +62,21 @@ toc: true
   </tbody>
 </table>
 
-Each breakpoint was chosen to comfortably hold containers whose widths are multiples of 12. Breakpoints are also representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
+각각의 정의된 breakpoint는 너비가 12의 배수인 containers를 문제없이 유지하기 위해 선택 되었습니다. 중단 점은 또한 공통 기기의 크기 및 뷰포트 수치의 하위 집합을 대표하며 모든 사용 사례 또는 장치를 특별히 대상하지 않습니다. 대신, 이 사전정의된 범위들은 거의 모든 기기에서 사용할 수 있는 강력하고 일관된 기반을 제공합니다.
 
-These breakpoints are customizable via Sass—you'll find them in a Sass map in our `_variables.scss` stylesheet.
+Breakpoints는 Sass를 통해 사용자 정의 할 수 있습니다. `_variables.scss` 스타일 시트의 Sass 맵에서 찾을 수 있습니다.
 
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
 
-For more information and examples on how to modify our Sass maps and variables, please refer to [the Sass section of the Grid documentation]({{< docsref "/layout/grid#sass" >}}).
+Sass 맵과 변수를 수정하는 방법에 대한 자세한 정보와 예시는 [the Sass section of the Grid documentation]({{< docsref "/layout/grid#sass" >}}) 를 참고하세요.
 
 ## Media queries
 
-Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
+부트스트랩은 모바일 우선으로 개발 되었으므로 몇 가지 [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) 를 이용하여 레이아웃에 적합한 breakpoints를 만듭니다. 이러한 breakpoints는 대부분 최소 뷰포트 넓이를 기반으로하며 뷰포트를 변경함에 따라 요소를 확장 할 수 있습니다.
 
 ### Min-width
 
-Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
+부트스트랩은 주로 레이아웃, 그리드 시스템 및 구성 요소가 있는 Sass 소스 파일에서 다음과 같은 미디어쿼리 범위 또는 breakpoints를 사용합니다.
 
 ```scss
 // Source mixins
