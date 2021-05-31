@@ -1,7 +1,8 @@
 ---
 layout: docs
 title: Breakpoints
-description: Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Bootstrap.
+
+description: Breakpoints는 부트스트랩의 반응형 레이아웃이 뷰포트 크기 또는 기기에서 어떻게 작동 할지 결정하는 사용자가 정의 가능한 너비입니다.
 group: layout
 aliases: "/docs/5.0/layout/"
 toc: true
@@ -9,15 +10,15 @@ toc: true
 
 ## Core concepts
 
-- **Breakpoints are the building blocks of responsive design.** Use them to control when your layout can be adapted at a particular viewport or device size.
+- **Breakpoints는 반응형 디자인의 구성 요소입니다.** Breakpoints를 사용하여 레이아웃을 특정 뷰포트 크기 또는 기기에서 조정할 수 있는 시기를 제어합니다.
 
-- **Use media queries to architect your CSS by breakpoint.** Media queries are a feature of CSS that allow you to conditionally apply styles based on a set of browser and operating system parameters. We most commonly use `min-width` in our media queries.
+- **미디어 쿼리를 사용하여 Breakpoints로 CSS를 설계하세요.** 미디어 쿼리는 브라우저 및 운영체제의 매개 변수 세트를 기반으로 조건부로 스타일을 적용 할 수있는 CSS의 기능입니다. 미디어 쿼리에서는 일반적으로 `min-width` 를 사용합니다.
 
-- **Mobile first, responsive design is the goal.** Bootstrap's CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.
+- **반응형 디자인과 모바일 우선이 목표입니다.** 부트스트랩의 CSS는 최소한의 스타일을 적용하여 가장 작은 Breakpoints에서 레이아웃이 작동하도록 설정 한 후 스타일에 계층을 적용하여 더 큰 기기에 맞게 해당 디자인이 조정 되도록 하는 것을 목표로 합니다. 이를 통해 CSS를 최적화하고 렌더링 시간을 개선하며 방문자에게 훌륭한 경험을 제공합니다.
 
 ## Available breakpoints
 
-Bootstrap includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
+부트스트랩에는 반응형 제작을 위해 _grid tiers_ 라고 하는 6개의 Breakpoints가 포함되어 있습니다. 이러한 breakpoints는 Sass 소스 파일을 사용하는 경우 사용자가 지정할 수 있습니다.
 
 <table class="table">
   <thead>
