@@ -2,7 +2,7 @@
 layout: docs
 title: Breakpoints
 
-description: Breakpoints는 부트스트랩의 반응형 레이아웃이 뷰포트 크기 또는 기기에서 어떻게 작동 할지 결정하는 사용자가 정의 가능한 너비입니다.
+description: Breakpoints는 부트스트랩의 반응형 레이아웃이 뷰포트 크기 또는 기기에서 어떻게 작동 할지 결정하는 사용자가 정의 가능한 넓이입니다.
 group: layout
 aliases: "/docs/5.0/layout/"
 toc: true
@@ -62,7 +62,7 @@ toc: true
   </tbody>
 </table>
 
-각각의 정의된 breakpoint는 너비가 12의 배수인 containers를 문제없이 유지하기 위해 선택 되었습니다. 중단 점은 또한 공통 기기의 크기 및 뷰포트 수치의 하위 집합을 대표하며 모든 사용 사례 또는 장치를 특별히 대상하지 않습니다. 대신, 이 사전정의된 범위들은 거의 모든 기기에서 사용할 수 있는 강력하고 일관된 기반을 제공합니다.
+각각의 정의된 breakpoint는 넓이가 12의 배수인 containers를 문제없이 유지하기 위해 선택 되었습니다. 중단 점은 또한 공통 기기의 크기 및 뷰포트 수치의 하위 집합을 대표하며 모든 사용 사례 또는 장치를 특별히 대상하지 않습니다. 대신, 이 사전정의된 범위들은 거의 모든 기기에서 사용할 수 있는 강력하고 일관된 기반을 제공합니다.
 
 Breakpoints는 Sass를 통해 사용자 정의 할 수 있습니다. `_variables.scss` 스타일 시트의 Sass 맵에서 찾을 수 있습니다.
 
@@ -100,8 +100,7 @@ Sass 맵과 변수를 수정하는 방법에 대한 자세한 정보와 예시�
   }
 }
 ```
-
-These Sass mixins translate in our compiled CSS using the values declared in our Sass variables. For example:
+이러한 Sass 믹스인은 Sass 변수에 선언 된 값을 사용한 뒤 컴파일되어 CSS로 번역됩니다. 예를 들면:
 
 ```scss
 // X-Small devices (portrait phones, less than 576px)
@@ -125,7 +124,7 @@ These Sass mixins translate in our compiled CSS using the values declared in our
 
 ### Max-width
 
-We occasionally use media queries that go in the other direction (the given screen size *or smaller*):
+때때로 다른 방향 (주어진 화면 크기 *또는 더 작은*)으로 이동하는 미디어 쿼리를 사용합니다:
 
 ```scss
 // No media query necessary for xs breakpoint as it's effectively `@media (max-width: 0) { ... }`
@@ -142,8 +141,7 @@ We occasionally use media queries that go in the other direction (the given scre
   }
 }
 ```
-
-These mixins take those declared breakpoints, subtract `.02px` from them, and use them as our `max-width` values. For example:
+이러한 믹스인은 선언 된 breakpoints를 갖고 와서 `.02px` 를 뺀 뒤 `max-width` 값으로 사용합니다. 예를 들면:
 
 ```scss
 // X-Small devices (portrait phones, less than 576px)
@@ -171,7 +169,7 @@ These mixins take those declared breakpoints, subtract `.02px` from them, and us
 
 ### Single breakpoint
 
-There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.
+최소 및 최대 breakpoint 넓이를 사용하여 화면 크기의 단일 세그먼트를 대상으로하는 미디어 쿼리 및 믹스 인도 있습니다.
 
 ```scss
 @include media-breakpoint-only(xs) { ... }
@@ -182,7 +180,7 @@ There are also media queries and mixins for targeting a single segment of screen
 @include media-breakpoint-only(xxl) { ... }
 ```
 
-For example the `@include media-breakpoint-only(md) { ... }` will result in :
+예를들어 `@include media-breakpoint-only(md) { ... }` 결과는 다음과 같습니다:
 
 ```scss
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
@@ -190,13 +188,13 @@ For example the `@include media-breakpoint-only(md) { ... }` will result in :
 
 ### Between breakpoints
 
-Similarly, media queries may span multiple breakpoint widths:
+마찬가지로 미디어쿼리는 여러 breakpoint 넓이에 걸쳐있을 수 있습니다.
 
 ```scss
 @include media-breakpoint-between(md, xl) { ... }
 ```
 
-Which results in:
+결과:
 
 ```scss
 // Example
