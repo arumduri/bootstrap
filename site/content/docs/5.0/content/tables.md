@@ -1,22 +1,22 @@
 ---
 layout: docs
 title: Tables
-description: Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.
+description: Bootstrap을 사용한 테이블의 opt-in 스타일에 대한 문서 및 예제 (JavaScript 플러그인에서 널리 사용됨)입니다.
 group: content
 toc: true
 ---
 
 ## Overview
 
-Due to the widespread use of `<table>` elements across third-party widgets like calendars and date pickers, Bootstrap's tables are **opt-in**. Add the base class `.table` to any `<table>`, then extend with our optional modifier classes or custom styles. All table styles are not inherited in Bootstrap, meaning any nested tables can be styled independent from the parent.
+`<table>` 요소는 캘린더나 날짜 선택기 같은 서드 파티 위젯에서 폭넓게 사용되고 있기 때문에 Bootstrap의 표는 **opt-in** 방식을 사용합니다. 기본 클래스 `.table`을 `<table>`에 넣으면 우리의 선택 수정자 클래스 또는 커스텀 스타일로 확장할 수 있습니다. 모든 표 스타일이 Bootstrap에 상속되지 않기 때문에 중첩된 테이블은 부모와 독립적으로 스타일을 지정할 수 있습니다.
 
-Using the most basic table markup, here's how `.table`-based tables look in Bootstrap.
+가장 기본적인 표 마크업을 사용해서 `.table` 기반 표가 Bootstrap에서 어떻게 표시되는지 보여드리겠습니다.
 
 {{< table class="table" simplified="false" >}}
 
 ## Variants
 
-Use contextual classes to color tables, table rows or individual cells.
+상황별 표 색상, 표 행 또는 개별 셀을 사용하세요.
 
 <div class="bd-example">
   <table class="table">
@@ -76,11 +76,11 @@ Use contextual classes to color tables, table rows or individual cells.
 
 ### Striped rows
 
-Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
+`.table-striped`를 사용하여 `<tbody>`내의 테이블 행에 줄무늬 (zebra-striping)를 추가합니다.
 
 {{< table class="table table-striped" >}}
 
-These classes can also be added to table variants:
+이러한 클래스는 테이블 변형에도 추가할 수 있습니다:
 
 {{< table class="table table-dark table-striped" >}}
 
@@ -88,7 +88,7 @@ These classes can also be added to table variants:
 
 ### Hoverable rows
 
-Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
+`.table-hover`를 추가하여 `<tbody>`내의 테이블 행에 마우스 오버 상태를 활성화합니다.
 
 {{< table class="table table-hover" >}}
 
@@ -100,7 +100,7 @@ These hoverable rows can also be combined with the striped variant:
 
 ### Active tables
 
-Highlight a table row or cell by adding a `.table-active` class.
+`.table-active` 클래스를 추가하여 테이블 행 또는 셀을 강조 표시합니다.
 
 <div class="bd-example">
   <table class="table">
@@ -210,15 +210,15 @@ Highlight a table row or cell by adding a `.table-active` class.
 
 ## How do the variants and accented tables work?
 
-For the accented tables ([striped rows](#striped-rows), [hoverable rows](#hoverable-rows), and [active tables](#active-tables)), we used some techniques to make these effects work for all our [table variants](#variants):
+악센트가 있는 표 ([스트라이프 행](#striped-rows), [호버할 수 있는 행](#hoverable-rows), and [활성화 표](#active-tables))을 위해서 이러한 효과가 모든 [표 변수](#variants)에서 작동하도록 몇 가지 기술을 사용했습니다:
 
-- We start by setting the background of a table cell with the `--bs-table-bg` custom property. All table variants then set that custom property to colorize the table cells. This way, we don't get into trouble if semi-transparent colors are used as table backgrounds.
-- Then we add an inset box shadow on the table cells with `box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);` to layer on top of any specified `background-color`. Because we use a huge spread and no blur, the color will be monotone. Since `--bs-table-accent-bg` is unset by default, we don't have a default box shadow.
-- When either `.table-striped`, `.table-hover` or `.table-active` classes are added, the `--bs-table-accent-bg` is set to a semitransparent color to colorize the background.
-- For each table variant, we generate a `--bs-table-accent-bg` color with the highest contrast depending on that color. For example, the accent color for `.table-primary` is darker while `.table-dark` has a lighter accent color.
-- Text and border colors are generated the same way, and their colors are inherited by default.
+- 먼저 `--bs-table-bg` 사용자 정의 속성으로 테이블 셀의 배경을 설정합니다. 그런 다음 모든 테이블 변형에 해당 사용자 정의 속성을 설정하여 테이블 셀을 색상화합니다. 이렇게 하면 반투명 색상을 테이블 배경으로 사용하더라도 문제가 발생하지 않습니다.
+- 그런 다음 `box-shadow: inset 0009999px var (-bs-table-accent-bg);`를 사용하여 테이블 셀에 삽입 상자 그림자를 추가하여 지정된 `background-color` 위에 레이어를 추가합니다. 큰 스프레드를 사용하고 블러를 사용하지 않기 때문에 색상이 모노톤이 됩니다. `--bs-table-accent-bg`는 기본적으로 설정되어 있지 않기 때문에 기본 상자 그림자가 없습니다.
+- `.table-striped`, `.table-hover` 또는`.table-active` 클래스가 추가되면 `--bs-table-accent-bg`가 반투명 색상으로 설정되어 배경을 채색합니다.
+- 각 테이블 변형에 대해 해당 색상에 따라 가장 높은 대비를 가진 `--bs-table-accent-bg` 색상을 생성합니다. 예를 들어 `.table-primary`의 강조 색상은 더 어둡고 `.table-dark`는 더 밝은 강조 색상입니다.
+- 텍스트 및 테두리 색상은 동일한 방식으로 생성되며 기본적으로 색상이 상속됩니다.
 
-Behind the scenes it looks like this:
+내용을 보면 다음과 같습니다:
 
 {{< scss-docs name="table-variant" file="scss/mixins/_table-variants.scss" >}}
 
@@ -226,17 +226,17 @@ Behind the scenes it looks like this:
 
 ### Bordered tables
 
-Add `.table-bordered` for borders on all sides of the table and cells.
+셀의 모든 면에 테두리가 있는 표를 만드려면 `.table-border`를 추가하면 됩니다.
 
 {{< table class="table table-bordered" >}}
 
-[Border color utilities]({{< docsref "/utilities/borders#border-color" >}}) can be added to change colors:
+[테두리 색상 유틸리티]({{< docsref "/utilities/borders#border-color" >}})는 색상을 변경하는 데에 사용할 수 있습니다:
 
 {{< table class="table table-bordered border-primary" >}}
 
 ### Tables without borders
 
-Add `.table-borderless` for a table without borders.
+테두리가 없는 표를 만드려면 `.table-borderless`를 추가하면 됩니다.
 
 {{< table class="table table-borderless" >}}
 
@@ -244,7 +244,7 @@ Add `.table-borderless` for a table without borders.
 
 ## Small tables
 
-Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` in half.
+`.table-sm`을 추가하여 모든 셀 `padding`을 반으로 잘라 `.table`을 더 간결하게 만듭니다.
 
 {{< table class="table table-sm" >}}
 
@@ -252,7 +252,7 @@ Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` 
 
 ## Vertical alignment
 
-Table cells of `<thead>` are always vertical aligned to the bottom. Table cells in `<tbody>` inherit their alignment from `<table>` and are aligned to the the top by default. Use the [vertical align]({{< docsref "/utilities/vertical-align" >}}) classes to re-align where needed.
+`<thead>`의 표 셀은 항상 하단에 수직으로 정렬됩니다. `<tbody>`의 표 셀은 `<table>`에서 정렬을 상속하며 기본적으로 상단에 정렬됩니다. [수직 정렬]({{< docsref "/utilities/vertical-align" >}}) 클래스를 사용하여 필요한 곳에 다시 정렬합니다.
 
 <div class="bd-example">
   <div class="table-responsive">
@@ -317,7 +317,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 
 ## Nesting
 
-Border styles, active styles, and table variants are not inherited by nested tables.
+테두리 스타일, 활성화 스타일 및 표 변형은 중첩된 표에 상속되지 않습니다.
 
 <div class="bd-example">
 <table class="table table-striped table-bordered">
@@ -397,15 +397,15 @@ Border styles, active styles, and table variants are not inherited by nested tab
 
 ## How nesting works
 
-To prevent _any_ styles from leaking to nested tables, we use the child combinator (`>`) selector in our CSS. Since we need to target all the `td`s and `th`s in the `thead`, `tbody`, and `tfoot`, our selector would look pretty long without it. As such, we use the rather odd looking `.table > :not(caption) > * > *` selector to target all `td`s and `th`s of the `.table`, but none of any potential nested tables.
+_아무_ 스타일이 중첩 테이블로 유출되는 것을 방지하기 위해 CSS에서 자식 결합자 (`>`) 선택자를 사용합니다. 우리는 `thead`, `tbody`, `tfoot`의 모든 `td`와 `th`를 대상으로 해야 하므로 선택자가 없으면 꽤 길어보일 것입니다. 따라서 다소 이상해 보이는 `.table > :not(caption) > * > *`선택기를 사용하여 `.table`의 모든 `td`와 `th`를 타겟팅하지만 잠재적 중첩 테이블은 없습니다.
 
-Note that if you add `<tr>`s as direct children of a table, those `<tr>` will be wrapped in a `<tbody>` by default, thus making our selectors work as intended.
+테이블의 직계 자식으로 `<tr>`을 추가하면 해당 `<tr>`이 기본적으로 `<tbody>`에 래핑되므로 선택자가 의도한 대로 작동합니다.
 
 ## Anatomy
 
 ### Table head
 
-Similar to tables and dark tables, use the modifier classes `.table-light` or `.table-dark` to make `<thead>`s appear light or dark gray.
+표 및 어두운 표과 유사하게, 수정자 클래스 `.table-light` 또는 `.table-dark`를 사용하여 `<thead>`가 밝은 회색 또는 어두운 회색으로 표시되도록 합니다.
 
 <div class="bd-example">
 <table class="table">
@@ -554,7 +554,7 @@ Similar to tables and dark tables, use the modifier classes `.table-light` or `.
 
 ### Captions
 
-A `<caption>` functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
+`<caption>`은 표 제목과 같은 기능을 합니다. 화면 판독기를 사용하는 사용자가 표를 찾고 그 내용을 이해하고 읽을 것인지 결정할 수 있도록 도와줍니다.
 
 <div class="bd-example">
   <table class="table">
@@ -575,7 +575,7 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
 </table>
 ```
 
-You can also put the `<caption>` on the top of the table with `.caption-top`.
+`.caption-top`으로 테이블 상단에 `<caption>`을 넣을 수도 있습니다.
 
 {{< example >}}
 <table class="table caption-top">
@@ -612,18 +612,17 @@ You can also put the `<caption>` on the top of the table with `.caption-top`.
 {{< /example >}}
 
 ## Responsive tables
-
-Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a `.table` with `.table-responsive`. Or, pick a maximum breakpoint with which to have a responsive table up to by using `.table-responsive{-sm|-md|-lg|-xl|-xxl}`.
+반응형 표를 사용하면 테이블을 쉽게 가로로 스크롤할 수 있습니다. `.table`을 `.table-responsive`로 래핑하여 모든 뷰포트에서 표가 반응하도록 만듭니다. 또는 `.table-responsive{-sm|-md|-lg|-xl|-xxl}`을 사용하여 반응형 테이블을 가질 최대 중단점을 선택합니다.
 
 {{< callout warning >}}
-##### Vertical clipping/truncation
+##### 수직 자르기/잘림
 
-Responsive tables make use of `overflow-y: hidden`, which clips off any content that goes beyond the bottom or top edges of the table. In particular, this can clip off dropdown menus and other third-party widgets.
+반응형 표는 `overflow-y: hidden`을 사용하여 표의 하단 또는 상단 가장자리를 벗어나는 콘텐츠를 잘라냅니다. 특히 드롭다운 메뉴 및 기타 서드 타피 위젯을 잘라낼 수 있습니다.
 {{< /callout >}}
 
 ### Always responsive
 
-Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
+모든 중단 점에서 표 수평 스크롤에 `.table-responsive`를 사용합니다.
 
 <div class="bd-example">
   <div class="table-responsive">
@@ -694,9 +693,9 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 
 ### Breakpoint specific
 
-Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+특정 중단점까지 반응형 테이블을 생성하려면 필요에 따라 `.table-responsive{-sm|-md|-lg|-xl|-xxl}`을 사용합니다. 중단점 이상에서 표는 정상적으로 작동하며 가로로 스크롤되지 않습니다.
 
-**These tables may appear broken until their responsive styles apply at specific viewport widths.**
+**이러한 표는 반응형 스타일이 특정 뷰포트 너비에 적용될 때까지 깨져보일 수 있습니다.**
 
 {{< tables.inline >}}
 {{ range $.Site.Data.breakpoints }}
@@ -784,6 +783,5 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{< scss-docs name="table-loop" file="scss/_variables.scss" >}}
 
 ### Customizing
-
-- The factor variables (`$table-striped-bg-factor`, `$table-active-bg-factor` & `$table-hover-bg-factor`) are used to determine the contrast in table variants.
-- Apart from the light & dark table variants, theme colors are lightened by the `$table-bg-level` variable.
+-요인 변수 (`$table-striped-bg-factor`, `$table-active-bg-factor` & `$table-hover-bg-factor`)는 표 변형의 대비를 결정하는 데에 사용됩니다.
+-밝고 어두운 테이블 변형 외에도 테마 색상은 `$table-bg-level` 변수에 의해 밝아집니다.
