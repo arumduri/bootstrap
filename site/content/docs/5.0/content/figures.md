@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Figures
-description: Documentation and examples for displaying related images and text with the figure component in Bootstrap.
+title: Figures(피규어)
+description: Bootstrap에서 피규어 컴포넌트를 사용하여 관련 이미지 및 텍스트를 표시하기 위한 문서 및 예제입니다.
 group: content
 toc: true
 ---
 
-Anytime you need to display a piece of content—like an image with an optional caption, consider using a `<figure>`.
+선택적 캡션이 있는 이미지와 같은 콘텐츠를 표시해야 할 때마다 `<figure>` 를 사용하는 것을 고려해보세요.
 
-Use the included `.figure`, `.figure-img` and `.figure-caption` classes to provide some baseline styles for the HTML5 `<figure>` and `<figcaption>` elements. Images in figures have no explicit size, so be sure to add the `.img-fluid` class to your `<img>` to make it responsive.
+포함된 `.figure`, `.figure-img`, `.figure-caption` 클래스를 사용하여 HTML5 `<figure>` 및 `<figcaption>` 요소에 대한 일부 기본 스타일을 제공합니다. Figure의 이미지에는 명시적인 크기가 없으므로 `<img>`에 `.img-fluid` 클래스를 추가하여 반응하도록 해야합니다.
 
 {{< example >}}
 <figure class="figure">
@@ -17,7 +17,7 @@ Use the included `.figure`, `.figure-img` and `.figure-caption` classes to provi
 </figure>
 {{< /example >}}
 
-Aligning the figure's caption is easy with our [text utilities]({{< docsref "/utilities/text#text-alignment" >}}).
+[텍스트 유틸리티]({{< docsref "/utilities/text#text-alignment" >}})를 사용하면 피규어의 캡션을 쉽게 정렬할 수 있습니다.
 
 {{< example >}}
 <figure class="figure">
