@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="반응형 Flexbox 유틸리티 세트를 사용해 그리드 열, 네비게이션 바, 구성 요소, 레이아웃의 정렬 및 크기 조정을 신속하게 관리합니다. 더 복잡한 구현의 경우 사용자 정의 CSS가 필요할 수 있습니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -431,7 +430,7 @@
         
 
         <h2 id="enable-flex-behaviors">Enable flex behaviors</h2>
-<p><code>display</code> 유틸리티를 적용하여 flexbox 컨테이너를 만들고 <strong>직계 자식 요소</strong> 를 flex 항목으로 변환합니다. flex 컨테이너와 아이템은 추가적인 flex 속성을 사용하여 수정할 수 있습니다.</p>
+<p><code>display</code> 유틸리티를 적용하여 flexbox 컨테이너를 만들고 <strong>직계 자식 요소</strong> 를 flex 항목으로 변환합니다. flex컨테이너와 아이템은 추가적인 flex 속성을 사용하여 수정할 수 있습니다.</p>
 <div class="bd-example">
 <div class="d-flex p-2 bd-highlight">I'm a flexbox container!</div>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-flex p-2 bd-highlight&#34;</span><span class="p">&gt;</span>I&#39;m a flexbox container!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
@@ -455,8 +454,8 @@
 </ul>
 
 <h2 id="direction">Direction</h2>
-<p>방향 유틸리티를 사용하여 flex 컨테이너에서 flex 항목의 방향을 설정합니다. 대부분의 경우 브라우저 기본값이 <code>row</code> 이므로 여기서 horizontal클래스를 생략 할 수 있습니다. 그러나 값을 명시적으로 설정해야하는 상황이 발생할 수 있습니다 (예 : 반응 형 레이아웃).</p>
-<p><code>.flex-row</code>를 사용하여 수평 방향 (브라우저 기본값)으로 설정하고 <code>.flex-row-reverse</code>를 사용하여 역방향에서 수평 방향을 시작합니다.</p>
+<p>방향 유틸리티를 사용하여 flex 컨테이너에서 flex 항목의 방향을 설정합니다. 대부분의 경우 브라우저 기본값이 <code>row</code> 이므로 여기서 horizontal클래스를 생략 할 수 있습니다. 그러나 값을 명시적으로 설정해야하는 상황이 발생할 수 있습니다 (예 : 반응형 레이아웃).</p>
+<p><code>.flex-row</code> 를 사용하여 수평 방향 (브라우저 기본값)으로 설정하고 <code>.flex-row-reverse</code> 를 사용하여 역방향에서 수평 방향을 시작합니다.</p>
 <div class="bd-example">
 <div class="d-flex flex-row bd-highlight mb-3">
   <div class="p-2 bd-highlight">Flex item 1</div>
@@ -478,7 +477,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item 3<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p><code>.flex-column</code> 을 사용하여 수직 방향으로 설정하거나 <code>.flex-column-reverse</code>를 사용하여 역방향으로 수직 방향을 시작합니다.</p>
+<p><code>.flex-column</code> 을 사용하여 수직 방향으로 설정하거나 <code>.flex-column-reverse</code> 를 사용하여 역방향으로 수직 방향을 시작합니다.</p>
 <div class="bd-example">
 <div class="d-flex flex-column bd-highlight mb-3">
   <div class="p-2 bd-highlight">Flex item 1</div>
@@ -529,7 +528,7 @@
 </ul>
 
 <h2 id="justify-content">Justify content</h2>
-<p>flexbox 컨테이너에서 <code>justify-content</code> 유틸리티를 사용하여 기본 축 (시작할 x 축,<code>flex-direction : column</code> 인 경우 y 축)에서 flex 항목들의 정렬을 변경합니다. <code>start</code> (브라우저 기본값), <code>end</code> , <code>center</code> , <code>between</code> ,<code>around</code> 또는 <code>evenly</code> 중에서 선택합니다.</p>
+<p>flexbox 컨테이너에서 <code>justify-content</code> 유틸리티를 사용하여 기본 축 (시작할 x 축, <code>flex-direction : column</code> 인 경우 y축)에서 flex 항목들의 정렬을 변경합니다. <code>start</code> (브라우저 기본값), <code>end</code> , <code>center</code> , <code>between</code> , <code>around</code> 또는 <code>evenly</code> 중에서 선택합니다.</p>
 <div class="bd-example">
   <div class="d-flex justify-content-start bd-highlight mb-3">
     <div class="p-2 bd-highlight">Flex item</div>
@@ -609,7 +608,7 @@
 </ul>
 
 <h2 id="align-items">Align items</h2>
-<p>flexbox 컨테이너에서 <code>align-items</code> 유틸리티를 사용하여 교차 축 (시작할 y 축,<code>flex-direction : column</code> 인 경우 x 축)에서 flex 항목의 정렬을 변경합니다. <code>start</code> , <code>end</code> , <code>center</code> , <code>baseline</code> 또는 <code>stretch</code> (브라우저 기본값) 중에서 선택합니다.</p>
+<p>flexbox 컨테이너에서 <code>align-items</code> 유틸리티를 사용하여 교차 축 (시작할 y 축, <code>flex-direction : column</code> 인 경우 x축)에서 flex 항목의 정렬을 변경합니다. <code>start</code> , <code>end</code> , <code>center</code> , <code>baseline</code> 또는 <code>stretch</code> (브라우저 기본값) 중에서 선택합니다.</p>
 <div class="bd-example">
   <div class="d-flex align-items-start bd-highlight mb-3" style="height: 100px">
     <div class="p-2 bd-highlight">Flex item</div>
@@ -677,7 +676,7 @@
 </ul>
 
 <h2 id="align-self">Align self</h2>
-<p>flexbox 항목에서<code>align-self</code> 유틸리티를 사용하여 교차 축 (시작할 y 축,<code>flex-direction : column</code> 인 경우 x 축)에서 정렬을 개별적으로 변경합니다. <code>align-items</code>와 동일한 옵션 인 <code>start</code> , <code>end</code> , <code>center</code> , <code>baseline</code> 또는 <code>stretch</code> (브라우저 기본값) 중에서 선택합니다.</p>
+<p>flexbox 항목에서 <code>align-self</code> 유틸리티를 사용하여 교차 축 (시작할 y 축, <code>flex-direction : column</code> 인 경우 x축)에서 정렬을 개별적으로 변경합니다. <code>align-items</code> 와 동일한 옵션 인 <code>start</code> , <code>end</code> , <code>center</code> , <code>baseline</code> 또는 <code>stretch</code> (브라우저 기본값) 중에서 선택합니다.</p>
 <div class="bd-example">
   <div class="d-flex bd-highlight mb-3" style="height: 100px">
     <div class="p-2 bd-highlight">Flex item</div>
@@ -780,7 +779,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Third flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>필요한 경우 <code>.flex-shrink- *</code> 유틸리티를 사용하여 flex 아이템의 수축 기능을 전환합니다. 아래 예시에서 <code>.flex-shrink-1</code> 이 포함 된 두 번째 flex 아이템은 해당 내용이 강제로 새 줄로 감싸집니다. <code>.w-100</code> 이 포함 된 첫번째 flex 아이템에 더 많은 공간을 허용하기 위해 &ldquo;축소&quot;합니다.</p>
+<p>필요한 경우 <code>.flex-shrink- *</code> 유틸리티를 사용하여 flex 아이템의 수축 기능을 전환합니다. 아래 예시에서 <code>.flex-shrink-1</code> 이 포함 된 두 번째 flex 아이템은 해당 내용이 강제로 새로운 row로 감싸집니다. <code>.w-100</code> 이 포함 된 첫번째 flex 아이템에 더 많은 공간을 허용하기 위해 &ldquo;축소&rdquo; 합니다.</p>
 <div class="bd-example">
 <div class="d-flex bd-highlight">
   <div class="p-2 w-100 bd-highlight">Flex item</div>
@@ -790,7 +789,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 w-100 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;p-2 flex-shrink-1 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p><code>flex-grow</code>와 <code>flex-shrink</code> 에 대한 반응형 변형도 존재합니다.</p>
+<p><code>flex-grow</code> 와 <code>flex-shrink</code> 에 대한 반응형 변형도 존재합니다.</p>
 <ul>
 <li><code>.flex-{grow|shrink}-0</code></li>
 <li><code>.flex-{grow|shrink}-1</code></li>
@@ -807,7 +806,7 @@
 </ul>
 
 <h2 id="auto-margins">Auto margins</h2>
-<p>Flexbox는 flex 정렬과 자동여백을 혼합 할 때 꽤 멋진 일을 할 수 있습니다. 아래는 자동 여백을 통해 flex 아이템을 제어하는 세 가지 예시입니다. 기본값 (자동 여백 없음), 두 항목을 오른쪽으로 밀기 (<code>.me-auto</code>), 두 항목을 왼쪽으로 밀기 (<code>.ms-auto</code>).</p>
+<p>Flexbox는 flex 정렬과 자동여백을 혼합 할 때 꽤 멋진 일을 할 수 있습니다. 아래는 자동 여백을 통해 flex 아이템을 제어하는 세 가지 예시입니다. 기본값 (자동 여백 없음), 두 항목을 오른쪽으로 밀기 ( <code>.me-auto</code> ), 두 항목을 왼쪽으로 밀기 ( <code>.ms-auto</code> ).</p>
 <div class="bd-example">
 <div class="d-flex bd-highlight mb-3">
   <div class="p-2 bd-highlight">Flex item</div>
@@ -844,7 +843,7 @@
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ms-auto p-2 bd-highlight&#34;</span><span class="p">&gt;</span>Flex item<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="with-align-items">With align-items</h3>
-<p><code>align-items</code> , <code>flex-direction : column</code> , <code>margin-top : auto</code> 또는 <code>margin-bottom : auto</code>를 혼합하여 하나의 flex 아이템을 컨테이너의 상단 또는 하단으로 수직 이동 시킵니다.</p>
+<p><code>align-items</code> , <code>flex-direction : column</code> , <code>margin-top : auto</code> 또는 <code>margin-bottom : auto</code> 를 혼합하여 하나의 flex 아이템을 컨테이너의 상단 또는 하단으로 수직 이동 시킵니다.</p>
 <div class="bd-example">
 <div class="d-flex align-items-start flex-column bd-highlight mb-3" style="height: 200px;">
   <div class="mb-auto p-2 bd-highlight">Flex item</div>
@@ -1001,7 +1000,7 @@
 <li><code>.order-xxl-5</code></li>
 </ul>
 
-<p>또한 각각<code>order : -1</code> 및 <code>order : 6</code> 을 적용하여 요소의 <code>순서</code>를 변경하는 반응형 <code>.order-first</code> 및 <code>.order-last</code> 클래스도 있습니다.</p>
+<p>또한 각각 <code>order : -1</code> 및 <code>order : 6</code> 을 적용하여 요소의 <code>순서</code> 를 변경하는 반응형 <code>.order-first</code> 및 <code>.order-last</code> 클래스도 있습니다.</p>
 <ul>
 <li><code>.order-first</code></li>
 <li><code>.order-last</code></li>
@@ -1177,7 +1176,7 @@
 </ul>
 
 <h2 id="media-object">Media object</h2>
-<p>Looking to replicate the <a href="https://getbootstrap.com/docs/4.6/components/media-object/">media object component</a> from Bootstrap 4? Recreate it in no time with a few flex utilities that allow even more flexibility and customization than before.</p>
+<p>Bootstrap4에서 <a href="https://getbootstrap.com/docs/4.6/components/media-object/">미디어 개체 구성 요소</a> 를 복제 해오고 싶으십니까? 이전보다 훨씬 더 많은 유연성과 사용자 정의를 허용하는 몇 가지 flex유틸리티를 사용하여 즉시 다시 만드세요.</p>
 <div class="bd-example">
 <div class="d-flex">
   <div class="flex-shrink-0">
@@ -1196,7 +1195,7 @@
     This is some content from a media component. You can replace this with any content and adjust it as needed.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>And say you want to vertically center the content next to the image:</p>
+<p>이미지 옆에 컨텐츠를 세로로 가운데에 배치하고 싶다고 가정합니다.:</p>
 <div class="bd-example">
 <div class="d-flex align-items-center">
   <div class="flex-shrink-0">
@@ -1217,7 +1216,7 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="sass">Sass</h2>
 <h3 id="utilities-api">Utilities API</h3>
-<p>Flexbox utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.0/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
+<p>Flexbox 유틸리티는 <code>scss / _utilities.scss</code> 의 유틸리티 API에 선언되어 있습니다. <a href="/docs/5.0/utilities/api/#using-the-api">유틸리티 API 사용 방법 알아보기</a></p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss">    <span class="s2">&#34;flex&#34;</span><span class="nd">:</span> <span class="o">(</span>
       <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
       <span class="nt">property</span><span class="nd">:</span> <span class="nt">flex</span><span class="o">,</span>
@@ -1310,7 +1309,7 @@
       <span class="nt">responsive</span><span class="nd">:</span> <span class="nt">true</span><span class="o">,</span>
       <span class="nt">property</span><span class="nd">:</span> <span class="nt">order</span><span class="o">,</span>
       <span class="nt">values</span><span class="nd">:</span> <span class="o">(</span>
-        <span class="nt">first</span><span class="nd">:</span> <span class="nt">-1</span><span class="o">,</span>
+        <span class="nt">first</span><span class="nd">:</span> <span class="o">-</span><span class="nt">1</span><span class="o">,</span>
         <span class="nt">0</span><span class="nd">:</span> <span class="nt">0</span><span class="o">,</span>
         <span class="nt">1</span><span class="nd">:</span> <span class="nt">1</span><span class="o">,</span>
         <span class="nt">2</span><span class="nd">:</span> <span class="nt">2</span><span class="o">,</span>
@@ -1338,7 +1337,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -1385,7 +1384,7 @@
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인 리뷰함으로써 v4에서 v5로의 변경을 지원합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -487,7 +486,14 @@
 </ul>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> 인쇄 클래스와 <code>$enable-print-styles</code> 변수를 삭제하였습니다. 인쇄 표시 클래스는 아직 남아 있습니다.<a href="https://github.com/twbs/bootstrap/pull/28339">#28339</a>.</p>
+<p><span class="badge bg-danger">Breaking</span> Media query mixins parameters have changed for a more logical approach.</p>
+<ul>
+<li><code>media-breakpoint-down()</code> uses the breakpoint itself instead of the next breakpoint (e.g., <code>media-breakpoint-down(lg)</code> instead of <code>media-breakpoint-down(md)</code> targets viewports smaller than <code>lg</code>).</li>
+<li>Similarly, the second parameter in <code>media-breakpoint-between()</code> also uses the breakpoint itself instead of the next breakpoint (e.g., <code>media-between(sm, lg)</code> instead of <code>media-breakpoint-between(sm, md)</code> targets viewports between <code>sm</code> and <code>lg</code>).</li>
+</ul>
+</li>
+<li>
+<p><span class="badge bg-danger">Breaking</span> 인쇄 클래스와 <code>$enable-print-styles</code> 변수를 삭제하였습니다. 인쇄 표시 클래스는 아직 남아 있습니다. <a href="https://github.com/twbs/bootstrap/pull/28339">#28339</a>.</p>
 </li>
 <li>
 <p><span class="badge bg-danger">Breaking</span> <code>color()</code>, <code>theme-color()</code>, 그리고 <code>gray()</code> 의 함수를 폐지하고 변수를 사용하도록 하였습니다.<a href="https://github.com/twbs/bootstrap/pull/29083">#29083</a>.</p>
@@ -702,10 +708,10 @@
 <h3 id="buttons">Buttons</h3>
 <ul>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>체크 박스나 라디오 버튼에 있는 <a href="http://getbootstrap.com/docs/5.0/forms/checks-radios/#toggle-buttons">토글 버튼</a>은, JavaScript가 필요없는 새로운 마크업을 채용하고 있습니다.</strong> 더 이상 감싸는 요소는 필요하지 않고, 바로 <code>&lt;input&gt;</code>에 <code>.btn-check</code>를 추가해 <code>.btn</code> 클래스의 <code>&lt;label&gt;</code>과 조합 합니다. <a href="https://github.com/twbs/bootstrap/pull/30650">#30650</a>. <em>이 건에 관한 문서는 버튼 페이지에서 폼 섹션으로 이동하였습니다.</em></p>
+<p><span class="badge bg-danger">Breaking</span> <strong>체크 박스나 라디오 버튼에 있는 <a href="https://getbootstrap.com/docs/5.0/forms/checks-radios/#toggle-buttons">토글 버튼</a>은, JavaScript가 필요없는 새로운 마크업을 채용하고 있습니다.</strong> 더 이상 감싸는 요소는 필요하지 않고, 바로 <code>&lt;input&gt;</code>에 <code>.btn-check</code>를 추가해 <code>.btn</code> 클래스의 <code>&lt;label&gt;</code>과 조합 합니다. <a href="https://github.com/twbs/bootstrap/pull/30650">#30650</a>. <em>이 건에 관한 문서는 버튼 페이지에서 폼 섹션으로 이동하였습니다.</em></p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> <strong>유틸리티용 <code>.btn-block</code>를 삭제.</strong> <code>.btn</code>에 <code>.btn-block</code>을 사용하는 대신에, 버튼을 <code>.d-grid</code>와 <code>.gap-*</code> 유틸리티로 감싸고 필요에 따라 여백을 위한 클래스를 사용합니다. 보다 강력한 컨트롤을 위해 반응형 클래스로 전환 합니다. <a href="http://getbootstrap.com/docs/5.0/components/buttons/#block-buttons">몇 가지 예시에 대해서는 문서를 참조해 주세요</a></p>
+<p><span class="badge bg-danger">Breaking</span> <strong>유틸리티용 <code>.btn-block</code>를 삭제.</strong> <code>.btn</code>에 <code>.btn-block</code>을 사용하는 대신에, 버튼을 <code>.d-grid</code>와 <code>.gap-*</code> 유틸리티로 감싸고 필요에 따라 여백을 위한 클래스를 사용합니다. 보다 강력한 컨트롤을 위해 반응형 클래스로 전환 합니다. <a href="https://getbootstrap.com/docs/5.0/components/buttons/#block-buttons">몇 가지 예시에 대해서는 문서를 참조해 주세요</a></p>
 </li>
 <li>
 <p>추가 매개 변수를 지원하기 위해 <code>button-variant()</code>와 <code>button-outline-variant()</code> 믹스인을 업데이트 했습니다.</p>
@@ -772,7 +778,7 @@
 <p>드롭다운 메뉴에는 위치가 정적일때 <code>data-bs-popper=&quot;static&quot;</code> 속성이 설정되며, 드롭다운이 내비바에 있을 때에는 <code>data-bs-popper=&quot;none&quot;</code>으로 설정됩니다. 이것은 JavaScript를 통해 추가되며 Popper의 배치에 간섭하지 않고 사용자 정의 위치 스타일을 사용하는데 도움이 됩니다.</p>
 </li>
 <li>
-<p><span class="badge bg-danger">Breaking</span> 드롭다운 플러그인에 대한 <code>flip</code> 옵션을 삭제하고 Popper의 네이티브 설정으로 변경되었습니다. <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip</a> modifier의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements"><code>fallbackPlacements</code></a>의 빈 배열을 통해서 플립 동작을 비활성화 할 수 있습니다.</p>
+<p><span class="badge bg-danger">Breaking</span> 드롭다운 플러그인에 대한 <code>flip</code> 옵션을 삭제하고 Popper의 네이티브 설정으로 변경되었습니다. <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip</a> 제어자의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements"><code>fallbackPlacements</code></a>의 빈 배열을 통해서 플립 동작을 비활성화 할 수 있습니다.</p>
 </li>
 <li>
 <p>드롭다운 메뉴는 새로운 <code>autoClose</code> 옵션을 추가해 <a href="/docs/5.0/components/dropdowns/#auto-close-behavior">자동 닫기 동작</a>을 처리하게 되었습니다. 이 옵션을 사용하면 드롭다운 메뉴의 안쪽 또는 바깥쪽에서 클릭을 받아 상호적인 메뉴를 만들 수 있습니다.</p>
@@ -787,7 +793,7 @@
 </ul>
 <h3 id="list-group">List group</h3>
 <ul>
-<li>목록 그룹에 새로운 <a href="/docs/5.0/components/list-group/#numbered"><code>.list-group-numbered</code> modifier</a>가 추가되었습니다.</li>
+<li>목록 그룹에 새로운 <a href="/docs/5.0/components/list-group/#numbered"><code>.list-group-numbered</code> 제어자 클래스</a>가 추가되었습니다.</li>
 </ul>
 <h3 id="navs-and-tabs">Navs and tabs</h3>
 <ul>
@@ -975,7 +981,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -1022,7 +1028,7 @@
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

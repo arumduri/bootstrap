@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Bootstrap의 크기 조절 엔진은 일반적인 CSS 속성을 반응적으로 확장하여 뷰포트 및 기기에서 사용 가능한 공간을 더 잘 활용합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -438,11 +437,11 @@
 <span class="p">}</span>
 </code></pre></div><p>다른 속성은 다음과 같이 <code>rfs()</code> 믹스인에 전달할 수 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> rfs</span><span class="p">(</span><span class="mi">4</span><span class="kt">rem</span><span class="o">,</span> <span class="no">border</span><span class="o">-</span><span class="n">radius</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> rfs</span><span class="p">(</span><span class="mi">4</span><span class="kt">rem</span><span class="o">,</span> <span class="n">border-radius</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><p><code>!important</code>를 원하는 값에 추가할 수도 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> padding</span><span class="p">(</span><span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span> <span class="nv">!important</span><span class="p">);</span>
+  <span class="k">@include</span><span class="nd"> padding</span><span class="p">(</span><span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span> <span class="k">!important</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="using-the-functions">Using the functions</h3>
 <p>W포함해서 사용하지 않으려는 경우 다른 두 가지 기능도 있습니다:</p>
@@ -453,8 +452,8 @@
 <p>이 예제에서는 Bootstrap의 내장 <a href="/docs/5.0/layout/breakpoints/">반응형 중단점 믹스인</a> 중 하나를 사용하여 <code>lg</code> 중단점 아래에만 스타일을 적용합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nt">padding</span><span class="nd">:</span> <span class="nt">rfs-fluid-value</span><span class="o">(</span><span class="nt">2rem</span><span class="o">)</span><span class="p">;</span>
-    <span class="nt">font-size</span><span class="nd">:</span> <span class="nt">rfs-fluid-value</span><span class="o">(</span><span class="nt">1</span><span class="nc">.125rem</span><span class="o">)</span><span class="p">;</span>
+    <span class="na">padding</span><span class="o">:</span> <span class="nf">rfs-fluid-value</span><span class="p">(</span><span class="mi">2</span><span class="kt">rem</span><span class="p">);</span>
+    <span class="na">font-size</span><span class="o">:</span> <span class="nf">rfs-fluid-value</span><span class="p">(</span><span class="mi">1</span><span class="mf">.125</span><span class="kt">rem</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">991</span><span class="p">.</span><span class="nc">98px</span><span class="o">)</span> <span class="p">{</span>
@@ -482,7 +481,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -529,7 +528,7 @@
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

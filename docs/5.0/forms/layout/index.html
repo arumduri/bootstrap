@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="인라인, 수평, 사용자 그리드 등의 구현 방법까지 폼에 구조를 갖게 하는 폼 레이아웃 옵션을 준비하고 있습니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -470,7 +469,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="gutters">Gutters</h2>
-<p><a href="/docs/5.0/layout/gutters/">gutter modifier classes</a>를 추가하는 것으로, 인라인이나 블록 방향으로 거터의 너비를 조정할 수 있습니다. <strong>이또한 Sass 변수 <code>$enable-grid-classes</code>가 활성화 되어 있어야 합니다.</strong> (기본값이 활성화 상태임).</p>
+<p><a href="/docs/5.0/layout/gutters/">거터 제어자 클래스</a>를 추가하는 것으로, 인라인이나 블록 방향으로 거터의 너비를 조정할 수 있습니다. <strong>이또한 Sass 변수 <code>$enable-grid-classes</code>가 활성화 되어 있어야 합니다.</strong> (기본값이 활성화 상태임).</p>
 <div class="bd-example">
 <div class="row g-3">
   <div class="col">
@@ -880,7 +879,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="inline-forms">Inline forms</h2>
-<p><code>.row-cols-*</code> 클래스를 사용해, 수평 방향의 레이아웃을 만듭니다. <a href="/docs/5.0/layout/gutters/">gutter modifier classes</a>를 추가함으로써 수평 방향과 수직 방향에 거터를 적절하게 줄 수 있습니다. 좁은 모바일 뷰포트에서 <code>.col-12</code> 는 양식 컨트롤 등을 쌓을 수 있도록 도와줍니다. <code>.align-items-center</code>를 사용해 폼 요소를 중앙에 오게 해 <code>.form-checkbox</code>의 위치가 예쁘게 적용되었습니다.</p>
+<p><code>.row-cols-*</code> 클래스를 사용해, 수평 방향의 레이아웃을 만듭니다. <a href="/docs/5.0/layout/gutters/">거터 제어자 클래스</a>를 추가함으로써 수평 방향과 수직 방향에 거터를 적절하게 줄 수 있습니다. 좁은 모바일 뷰포트에서 <code>.col-12</code> 는 양식 컨트롤 등을 쌓을 수 있도록 도와줍니다. <code>.align-items-center</code>를 사용해 폼 요소를 중앙에 오게 해 <code>.form-checkbox</code>의 위치가 예쁘게 적용되었습니다.</p>
 <div class="bd-example">
 <form class="row row-cols-lg-auto g-3 align-items-center">
   <div class="col-12">
@@ -963,7 +962,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -1010,7 +1009,7 @@
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

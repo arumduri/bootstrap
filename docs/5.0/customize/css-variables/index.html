@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Use Bootstrap&rsquo;s CSS custom properties for fast and forward-looking design and development.">
+<meta name="description" content="빠르고 미래 지향적인 설계와 개발을 위해 Bootstrap의 CSS 사용자 정의를 사용합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="CSS variables">
-<meta name="twitter:description" content="Use Bootstrap&rsquo;s CSS custom properties for fast and forward-looking design and development.">
+<meta name="twitter:description" content="빠르고 미래 지향적인 설계와 개발을 위해 Bootstrap의 CSS 사용자 정의를 사용합니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/customize/css-variables/">
 <meta property="og:title" content="CSS variables">
-<meta property="og:description" content="Use Bootstrap&rsquo;s CSS custom properties for fast and forward-looking design and development.">
+<meta property="og:description" content="빠르고 미래 지향적인 설계와 개발을 위해 Bootstrap의 CSS 사용자 정의를 사용합니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -391,7 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/customize/css-variables.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">CSS variables</h1>
         </div>
-        <p class="bd-lead">Use Bootstrap&rsquo;s CSS custom properties for fast and forward-looking design and development.</p>
+        <p class="bd-lead">빠르고 미래 지향적인 설계와 개발을 위해 Bootstrap의 CSS 사용자 정의를 사용합니다.</p>
         
 
       </div>
@@ -412,10 +411,10 @@
       <div class="bd-content ps-lg-4">
         
 
-        <p>Bootstrap includes around two dozen <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS custom properties (variables)</a> in its compiled CSS, with dozens more on the way for improved customization on a per-component basis. These provide easy access to commonly used values like our theme colors, breakpoints, and primary font stacks when working in your browser&rsquo;s inspector, a code sandbox, or general prototyping.</p>
-<p><strong>All our custom properties are prefixed with <code>bs-</code></strong> to avoid conflicts with third party CSS.</p>
+        <p>Bootstrap은 컴파일된 CSS에 약 24개의 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS 사용자 정의 속성(변수)</a>를 포함하고 있으며, 컴포넌트별 재정의를 개선하기 위해 더 많은 변수들을 준비하고 있습니다. 이들은 브라우저의 검사기, 코드 샌드박스 또는 일반 프로토타입으로 작업할때 테마 색상, 브레이크 포인트, 주요 글꼴 스택과 같이 일반적으로 자주 사용되는 값에 대해 간단하게 접근을 제공합니다.</p>
+<p>제 3의 CSS와의 충돌을 피하기 위해 <strong>모든 사용자 정의 속성 앞에 <code>bs-</code>가 붙습니다.</strong></p>
 <h2 id="root-variables">Root variables</h2>
-<p>Here are the variables we include (note that the <code>:root</code> is required) that can be accessed anywhere Bootstrap&rsquo;s CSS is loaded. They&rsquo;re located in our <code>_root.scss</code> file and included in our compiled dist files.</p>
+<p>여기에는 Bootstrap의 CSS가 포함된 곳이면 어디에서나 접근할 수 있는(<code>:root</code>가 필수인 것에 주의해 주세요) 변수가 있습니다. 이들은 <code>_root.scss</code> 파일 안에 있음며 컴파일된 dist 파일에 포함되어 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">:root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -443,11 +442,11 @@
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }</span>
 </code></pre></div><h2 id="component-variables">Component variables</h2>
-<p>We&rsquo;re also beginning to make use of custom properties as local variables for various components. This way we can reduce our compiled CSS, ensure styles aren&rsquo;t inherited in places like nested tables, and allow some basic restyling and extending of Bootstrap components after Sass compilation.</p>
-<p>Have a look at our table documentation for some <a href="/docs/5.0/content/tables/#how-do-the-variants-and-accented-tables-work">insight into how we&rsquo;re using CSS variables</a>.</p>
-<p>We&rsquo;re also using CSS variables across our grids—primarily for gutters—with more component usage coming in the future.</p>
+<p>그리고 사용자 정의 속성을 여러 컴포넌트의 로컬 변수로 이용하는 것도 시작하고 있습니다. 이렇게 함으로써 컴파일된 CSS를 줄이고, 중첩된 테이블과 같은 곳에서 스타일이 상속되지 않도록 하며, Sass 컴파일 후에 Bootstrap 컴포넌트의 기본적인 스타일 변경과 확장을 가능하게 합니다.</p>
+<p>우리가 <a href="/docs/5.0/content/tables/#how-do-the-variants-and-accented-tables-work">어떻게 CSS 변수를 사용하고 있는지에</a> 대해서는 테이블 문서를 확인해 주세요.</p>
+<p>또한 주로 그리드의 거터에 CSS 변수를 사용하고 있는데 - 향후 더 많은 컴포넌트를 사용하게 될 것입니다.</p>
 <h2 id="examples">Examples</h2>
-<p>CSS variables offer similar flexibility to Sass&rsquo;s variables, but without the need for compilation before being served to the browser. For example, here we&rsquo;re resetting our page&rsquo;s font and link styles with CSS variables.</p>
+<p>CSS 변수는 Sass 변수와 동일한 유연성을 제공하지만 브라우저에 제공되기 전에 컴파일할 필요는 없습니다. 예를 들어, 여기에서는 페이지의 글꼴이나 링크의 스타일을 CSS 변수로 재설정하고 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
   <span class="k">font</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="o">/</span><span class="mf">1.5</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="kc">sans-serif</span><span class="p">);</span>
 <span class="p">}</span>
@@ -471,7 +470,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -518,7 +517,7 @@
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

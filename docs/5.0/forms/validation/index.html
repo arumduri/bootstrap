@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="HTML5 폼 유효성 검사에서는 브라우저의 기본 동작이나 사용자 정의 스타일과 JavaScript를 이용해 사용자에게 가치있고 실용적인 전달을 제공합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -1038,12 +1037,12 @@
 <p>두 개의 믹스인을 <a href="#loop">loop</a>로 조합하고, 유효성 검사의 전달 스타일을 만들고 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">@if</span> <span class="p">(</span><span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;valid&#34;</span> <span class="ow">or</span> <span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;invalid&#34;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nc">.was-validated</span> <span class="nn">#</span><span class="p">{</span><span class="nt">if</span><span class="o">(</span><span class="k">&amp;</span><span class="o">,</span> <span class="s2">&#34;&amp;&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="o">)</span><span class="p">}</span><span class="nd">:</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="o">,</span>
-    <span class="nn">#</span><span class="p">{</span><span class="nt">if</span><span class="o">(</span><span class="k">&amp;</span><span class="o">,</span> <span class="s2">&#34;&amp;&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="o">)</span><span class="p">}</span><span class="nc">.is-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
+    <span class="nc">.was-validated</span> <span class="si">#{</span><span class="nf">if</span><span class="p">(</span><span class="o">&amp;,</span> <span class="s2">&#34;&amp;&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span><span class="si">}</span><span class="nd">:</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="o">,</span>
+    <span class="si">#{</span><span class="nf">if</span><span class="p">(</span><span class="o">&amp;,</span> <span class="s2">&#34;&amp;&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span><span class="si">}</span><span class="nc">.is-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
       <span class="k">@content</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span> <span class="k">@else</span> <span class="p">{</span>
-    <span class="nn">#</span><span class="p">{</span><span class="nt">if</span><span class="o">(</span><span class="k">&amp;</span><span class="o">,</span> <span class="s2">&#34;&amp;&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="o">)</span><span class="p">}</span><span class="nc">.is-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
+    <span class="si">#{</span><span class="nf">if</span><span class="p">(</span><span class="o">&amp;,</span> <span class="s2">&#34;&amp;&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span><span class="si">}</span><span class="nc">.is-</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span> <span class="p">{</span>
       <span class="k">@content</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -1058,51 +1057,51 @@
   <span class="nv">$focus-box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="nv">$input-btn-focus-blur</span> <span class="nv">$input-focus-width</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span> <span class="nv">$input-btn-focus-color-opacity</span><span class="p">)</span>
 <span class="p">)</span> <span class="p">{</span>
   <span class="nc">.</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="nc">-feedback</span> <span class="p">{</span>
-    <span class="nt">display</span><span class="nd">:</span> <span class="nt">none</span><span class="p">;</span>
-    <span class="nt">width</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span>
-    <span class="nt">margin-top</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-feedback-margin-top</span><span class="p">;</span>
+    <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+    <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="na">margin-top</span><span class="o">:</span> <span class="nv">$form-feedback-margin-top</span><span class="p">;</span>
     <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="nv">$form-feedback-font-size</span><span class="p">);</span>
-    <span class="nt">font-style</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-feedback-font-style</span><span class="p">;</span>
-    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+    <span class="na">font-style</span><span class="o">:</span> <span class="nv">$form-feedback-font-style</span><span class="p">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="nc">.</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="nc">-tooltip</span> <span class="p">{</span>
-    <span class="nt">position</span><span class="nd">:</span> <span class="nt">absolute</span><span class="p">;</span>
-    <span class="nt">top</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span>
-    <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">5</span><span class="p">;</span>
-    <span class="nt">display</span><span class="nd">:</span> <span class="nt">none</span><span class="p">;</span>
-    <span class="nt">max-width</span><span class="nd">:</span> <span class="nt">100</span><span class="err">%</span><span class="p">;</span> <span class="c1">// Contain to parent when possible
-</span><span class="c1"></span>    <span class="nt">padding</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-feedback-tooltip-padding-y</span> <span class="err">$</span><span class="nt">form-feedback-tooltip-padding-x</span><span class="p">;</span>
-    <span class="nt">margin-top</span><span class="nd">:</span> <span class="nc">.1rem</span><span class="p">;</span>
+    <span class="na">position</span><span class="o">:</span> <span class="ni">absolute</span><span class="p">;</span>
+    <span class="na">top</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="na">z-index</span><span class="o">:</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
+    <span class="na">max-width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// Contain to parent when possible
+</span><span class="c1"></span>    <span class="na">padding</span><span class="o">:</span> <span class="nv">$form-feedback-tooltip-padding-y</span> <span class="nv">$form-feedback-tooltip-padding-x</span><span class="p">;</span>
+    <span class="na">margin-top</span><span class="o">:</span> <span class="mf">.1</span><span class="kt">rem</span><span class="p">;</span>
     <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="nv">$form-feedback-tooltip-font-size</span><span class="p">);</span>
-    <span class="nt">line-height</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-feedback-tooltip-line-height</span><span class="p">;</span>
-    <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">tooltip-color</span><span class="p">;</span>
-    <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">tooltip-bg-color</span><span class="p">;</span>
+    <span class="na">line-height</span><span class="o">:</span> <span class="nv">$form-feedback-tooltip-line-height</span><span class="p">;</span>
+    <span class="na">color</span><span class="o">:</span> <span class="nv">$tooltip-color</span><span class="p">;</span>
+    <span class="na">background-color</span><span class="o">:</span> <span class="nv">$tooltip-bg-color</span><span class="p">;</span>
     <span class="k">@include</span><span class="nd"> border-radius</span><span class="p">(</span><span class="nv">$form-feedback-tooltip-border-radius</span><span class="p">);</span>
   <span class="p">}</span>
 
   <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
     <span class="o">~</span> <span class="nc">.</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="nc">-feedback</span><span class="o">,</span>
     <span class="o">~</span> <span class="nc">.</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="nc">-tooltip</span> <span class="p">{</span>
-      <span class="nt">display</span><span class="nd">:</span> <span class="nt">block</span><span class="p">;</span>
+      <span class="na">display</span><span class="o">:</span> <span class="ni">block</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
   <span class="nc">.form-control</span> <span class="p">{</span>
     <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+      <span class="na">border-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
 
       <span class="k">@if</span> <span class="nv">$enable-validation-icons</span> <span class="p">{</span>
-        <span class="nt">padding-right</span><span class="nd">:</span> <span class="err">$</span><span class="nt">input-height-inner</span><span class="p">;</span>
-        <span class="nt">background-image</span><span class="nd">:</span> <span class="nt">escape-svg</span><span class="o">(</span><span class="err">$</span><span class="nt">icon</span><span class="o">)</span><span class="p">;</span>
-        <span class="nt">background-repeat</span><span class="nd">:</span> <span class="nt">no-repeat</span><span class="p">;</span>
-        <span class="nt">background-position</span><span class="nd">:</span> <span class="nt">right</span> <span class="err">$</span><span class="nt">input-height-inner-quarter</span> <span class="nt">center</span><span class="p">;</span>
-        <span class="nt">background-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">input-height-inner-half</span> <span class="err">$</span><span class="nt">input-height-inner-half</span><span class="p">;</span>
+        <span class="na">padding-right</span><span class="o">:</span> <span class="nv">$input-height-inner</span><span class="p">;</span>
+        <span class="na">background-image</span><span class="o">:</span> <span class="nf">escape-svg</span><span class="p">(</span><span class="nv">$icon</span><span class="p">);</span>
+        <span class="na">background-repeat</span><span class="o">:</span> <span class="ni">no-repeat</span><span class="p">;</span>
+        <span class="na">background-position</span><span class="o">:</span> <span class="ni">right</span> <span class="nv">$input-height-inner-quarter</span> <span class="ni">center</span><span class="p">;</span>
+        <span class="na">background-size</span><span class="o">:</span> <span class="nv">$input-height-inner-half</span> <span class="nv">$input-height-inner-half</span><span class="p">;</span>
       <span class="p">}</span>
 
       <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
-        <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
-        <span class="nt">box-shadow</span><span class="nd">:</span> <span class="err">$</span><span class="nt">focus-box-shadow</span><span class="p">;</span>
+        <span class="na">border-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+        <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$focus-box-shadow</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -1111,53 +1110,53 @@
 </span><span class="c1"></span>  <span class="nt">textarea</span><span class="nc">.form-control</span> <span class="p">{</span>
     <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">@if</span> <span class="nv">$enable-validation-icons</span> <span class="p">{</span>
-        <span class="nt">padding-right</span><span class="nd">:</span> <span class="err">$</span><span class="nt">input-height-inner</span><span class="p">;</span>
-        <span class="nt">background-position</span><span class="nd">:</span> <span class="nt">top</span> <span class="err">$</span><span class="nt">input-height-inner-quarter</span> <span class="nt">right</span> <span class="err">$</span><span class="nt">input-height-inner-quarter</span><span class="p">;</span>
+        <span class="na">padding-right</span><span class="o">:</span> <span class="nv">$input-height-inner</span><span class="p">;</span>
+        <span class="na">background-position</span><span class="o">:</span> <span class="ni">top</span> <span class="nv">$input-height-inner-quarter</span> <span class="ni">right</span> <span class="nv">$input-height-inner-quarter</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
   <span class="nc">.form-select</span> <span class="p">{</span>
     <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+      <span class="na">border-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
 
       <span class="k">@if</span> <span class="nv">$enable-validation-icons</span> <span class="p">{</span>
-        <span class="k">&amp;</span><span class="nd">:not</span><span class="o">([</span><span class="nt">multiple</span><span class="o">])</span><span class="nd">:not</span><span class="o">([</span><span class="nt">size</span><span class="o">]),</span>
-        <span class="k">&amp;</span><span class="nd">:not</span><span class="o">([</span><span class="nt">multiple</span><span class="o">])[</span><span class="nt">size</span><span class="o">=</span><span class="s2">&#34;1&#34;</span><span class="o">]</span> <span class="p">{</span>
-          <span class="nt">padding-right</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-select-feedback-icon-padding-end</span><span class="p">;</span>
-          <span class="nt">background-image</span><span class="nd">:</span> <span class="nt">escape-svg</span><span class="o">(</span><span class="err">$</span><span class="nt">form-select-indicator</span><span class="o">),</span> <span class="nt">escape-svg</span><span class="o">(</span><span class="err">$</span><span class="nt">icon</span><span class="o">)</span><span class="p">;</span>
-          <span class="nt">background-position</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-select-bg-position</span><span class="o">,</span> <span class="err">$</span><span class="nt">form-select-feedback-icon-position</span><span class="p">;</span>
-          <span class="nt">background-size</span><span class="nd">:</span> <span class="err">$</span><span class="nt">form-select-bg-size</span><span class="o">,</span> <span class="err">$</span><span class="nt">form-select-feedback-icon-size</span><span class="p">;</span>
+        <span class="na">&amp;</span><span class="o">:</span><span class="nf">not</span><span class="p">([</span><span class="n">multiple</span><span class="p">])</span><span class="o">:</span><span class="nf">not</span><span class="p">([</span><span class="n">size</span><span class="p">])</span><span class="o">,</span>
+        <span class="o">&amp;:</span><span class="nf">not</span><span class="p">([</span><span class="n">multiple</span><span class="p">])[</span><span class="n">size</span><span class="o">=</span><span class="s2">&#34;1&#34;</span><span class="p">]</span> <span class="p">{</span>
+          <span class="na">padding-right</span><span class="o">:</span> <span class="nv">$form-select-feedback-icon-padding-end</span><span class="p">;</span>
+          <span class="na">background-image</span><span class="o">:</span> <span class="nf">escape-svg</span><span class="p">(</span><span class="nv">$form-select-indicator</span><span class="p">)</span><span class="o">,</span> <span class="nf">escape-svg</span><span class="p">(</span><span class="nv">$icon</span><span class="p">);</span>
+          <span class="na">background-position</span><span class="o">:</span> <span class="nv">$form-select-bg-position</span><span class="o">,</span> <span class="nv">$form-select-feedback-icon-position</span><span class="p">;</span>
+          <span class="na">background-size</span><span class="o">:</span> <span class="nv">$form-select-bg-size</span><span class="o">,</span> <span class="nv">$form-select-feedback-icon-size</span><span class="p">;</span>
         <span class="p">}</span>
       <span class="p">}</span>
 
       <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
-        <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
-        <span class="nt">box-shadow</span><span class="nd">:</span> <span class="err">$</span><span class="nt">focus-box-shadow</span><span class="p">;</span>
+        <span class="na">border-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
+        <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$focus-box-shadow</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
   <span class="nc">.form-check-input</span> <span class="p">{</span>
     <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nt">border-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+      <span class="na">border-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
 
       <span class="k">&amp;</span><span class="nd">:checked</span> <span class="p">{</span>
-        <span class="nt">background-color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+        <span class="na">background-color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
       <span class="p">}</span>
 
       <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
-        <span class="nt">box-shadow</span><span class="nd">:</span> <span class="err">$</span><span class="nt">focus-box-shadow</span><span class="p">;</span>
+        <span class="na">box-shadow</span><span class="o">:</span> <span class="nv">$focus-box-shadow</span><span class="p">;</span>
       <span class="p">}</span>
 
       <span class="o">~</span> <span class="nc">.form-check-label</span> <span class="p">{</span>
-        <span class="nt">color</span><span class="nd">:</span> <span class="err">$</span><span class="nt">color</span><span class="p">;</span>
+        <span class="na">color</span><span class="o">:</span> <span class="nv">$color</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
   <span class="nc">.form-check-inline</span> <span class="nc">.form-check-input</span> <span class="p">{</span>
     <span class="o">~</span> <span class="nc">.</span><span class="si">#{</span><span class="nv">$state</span><span class="si">}</span><span class="nc">-feedback</span> <span class="p">{</span>
-      <span class="nt">margin-left</span><span class="nd">:</span> <span class="nc">.5em</span><span class="p">;</span>
+      <span class="na">margin-left</span><span class="o">:</span> <span class="mf">.5</span><span class="kt">em</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
@@ -1165,12 +1164,12 @@
   <span class="nc">.input-group</span> <span class="nc">.form-select</span> <span class="p">{</span>
     <span class="k">@include</span><span class="nd"> form-validation-state-selector</span><span class="p">(</span><span class="nv">$state</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">@if</span> <span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;valid&#34;</span> <span class="p">{</span>
-        <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">1</span><span class="p">;</span>
-      <span class="p">}</span> <span class="k">@else</span> <span class="nt">if</span> <span class="err">$</span><span class="nt">state</span> <span class="o">==</span> <span class="s2">&#34;invalid&#34;</span> <span class="p">{</span>
-        <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">2</span><span class="p">;</span>
+        <span class="na">z-index</span><span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">@else if</span> <span class="nv">$state</span> <span class="o">==</span> <span class="s2">&#34;invalid&#34;</span> <span class="p">{</span>
+        <span class="na">z-index</span><span class="o">:</span> <span class="mi">2</span><span class="p">;</span>
       <span class="p">}</span>
       <span class="k">&amp;</span><span class="nd">:focus</span> <span class="p">{</span>
-        <span class="nt">z-index</span><span class="nd">:</span> <span class="nt">3</span><span class="p">;</span>
+        <span class="na">z-index</span><span class="o">:</span> <span class="mi">3</span><span class="p">;</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -1192,7 +1191,7 @@
 <p><code>$form-validation-states</code> 맵에는 툴팁이나 포커스 스타일을 덮어쓸수 있는 세 가지 옵션의 파라미터를 포함할 수 있습니다.</p>
 <h3 id="loop">Loop</h3>
 <p>유효성 검사 스타일을 만들기 위해<code>$form-validation-states</code> 맵의 값을 반복 처리하기 위해 사용합니다. 위의 Sass맵에 변경이 있을 경우 이 반복문을 통해 컴파일되어 CSS에 반영됩니다.</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="err">$</span><span class="nt">state</span><span class="o">,</span> <span class="err">$</span><span class="nt">data</span> <span class="nt">in</span> <span class="err">$</span><span class="nt">form-validation-states</span> <span class="p">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$state</span><span class="o">,</span> <span class="nv">$data</span> <span class="ow">in</span> <span class="nv">$form-validation-states</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> form-validation-state</span><span class="p">(</span><span class="nv">$state</span><span class="o">,</span> <span class="nv">$data</span><span class="o">...</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -1216,7 +1215,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -1263,7 +1262,7 @@
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

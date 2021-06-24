@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="CSS3를 사용한 애니메이션이나 data-bs-attributes를 사용한 CSS와 JavaScript로 사용자 정의 Bootstrap의 툴팁을 추가하기 위한 문서와 예시입니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -429,6 +428,7 @@
             <li><a href="#toggleenabled">toggleEnabled</a></li>
             <li><a href="#update">update</a></li>
             <li><a href="#getinstance">getInstance</a></li>
+            <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
         <li><a href="#events">Events</a></li>
@@ -519,8 +519,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="nv">$tooltip-bg</span><span class="o">:</span>                        <span class="nv">$black</span><span class="p">;</span>
 <span class="nv">$tooltip-border-radius</span><span class="o">:</span>             <span class="nv">$border-radius</span><span class="p">;</span>
 <span class="nv">$tooltip-opacity</span><span class="o">:</span>                   <span class="mf">.9</span><span class="p">;</span>
-<span class="nv">$tooltip-padding-y</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
-<span class="nv">$tooltip-padding-x</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nv">$tooltip-padding-y</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.25</span><span class="p">;</span>
+<span class="nv">$tooltip-padding-x</span><span class="o">:</span>                 <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$tooltip-margin</span><span class="o">:</span>                    <span class="mi">0</span><span class="p">;</span>
 
 <span class="nv">$tooltip-arrow-width</span><span class="o">:</span>               <span class="mf">.8</span><span class="kt">rem</span><span class="p">;</span>
@@ -534,7 +534,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span>
 </code></pre></div><div class="bd-callout bd-callout-warning">
 <h5 id="overflow-auto-and-scroll">Overflow <code>auto</code> and <code>scroll</code></h5>
-<p><strong>부모 컨테이너</strong>가 <code>.table-responsive</code>처럼 <code>overflow: auto</code> 혹은 <code>overflow: scroll</code>로 되어 있으면 툴팁의 위치가 자동으로 변경되려고는 하지만, 위치는 원래대로 유지되고 있습니다. 그것을 해결하기 위해서는, <a href="https://popper.js.org/docs/v2/modifiers/flip/#boundary"><code>boundary</code> option</a> (<code>popperConfig</code> 옵션을 사용한 flip modifier의 경우)을 기본값으로 가지고 있는 <code>'clippingParents'</code>를 임의의 HTML 요소, 예를 들어 <code>document.body</code>등으로 오버라이드하여 설정하면 됩니다:</p>
+<p><strong>부모 컨테이너</strong>가 <code>.table-responsive</code>처럼 <code>overflow: auto</code> 혹은 <code>overflow: scroll</code>로 되어 있으면 툴팁의 위치가 자동으로 변경되려고는 하지만, 위치는 원래대로 유지되고 있습니다. 그것을 해결하기 위해서는, <a href="https://popper.js.org/docs/v2/modifiers/flip/#boundary"><code>boundary</code> option</a> (<code>popperConfig</code> 옵션을 사용한 flip 제어자의 경우)을 기본값으로 가지고 있는 <code>'clippingParents'</code>를 임의의 HTML 요소, 예를 들어 <code>document.body</code>등으로 오버라이드하여 설정하면 됩니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">exampleEl</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">boundary</span><span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span> <span class="c1">// or document.querySelector(&#39;#boundary&#39;)
@@ -661,7 +661,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td><code>'hover focus'</code></td>
       <td>
         <p>툴팁의 트리거 방법 - click | hover | focus | manual. 여러 트리거를 전달할 수 있습니다.</p>
-        <p><code>'manual'</code>은 <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> 그리고 <code>.tooltip('toggle')</code> 메소드를 통해 프로그램으로 트리거 되는 것을 나타냅니다. 이 값은 다른 트리거와 조합할 수 없습니다.</p>
+        <p><code>'manual'</code>은 <code>.show()</code>, <code>.hide()</code>, <code>.toggle()</code> 메소드를 통해 프로그램으로 트리거 되는 것을 나타냅니다. 이 값은 다른 트리거와 조합할 수 없습니다.</p>
         <p><code>'hover'</code>를 단독으로 사용하면, 키보드를 통해 트리거 할 수 없는 툴팁이 되며, 키보드 사용자에게 동일한 정보를 전달하기 위한 대체수단이 존재할 경우에만 사용해야 합니다.</p>
       </td>
     </tr>
@@ -675,7 +675,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td><code>boundary</code></td>
       <td>string | element</td>
       <td><code>'clippingParents'</code></td>
-      <td>툴팁의 오버플로 제약 경계(Popper의 preventOverflow modifier에만 적용). 기본적으로 <code>'clippingParents'</code>로 HTMLElement의 참조를 받을 수 있습니다.(JavaScript만). 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>를 참조해 주세요.</td>
+      <td>툴팁의 오버플로 제약 경계(Popper의 preventOverflow 제어자에만 적용). 기본적으로 <code>'clippingParents'</code>로 HTMLElement의 참조를 받을 수 있습니다.(JavaScript만). 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/utils/detect-overflow/#boundary">detectOverflow docs</a>를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>customClass</code></td>
@@ -774,6 +774,10 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p>DOM 요소와 연관된 툴팁의 인스턴스를 취득하는 <em>Static</em> 메소드</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tooltip instance
+</span></code></pre></div><h4 id="getorcreateinstance">getOrCreateInstance</h4>
+<p><em>Static</em> method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialised</p>
+<div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tooltip instance
 </span></code></pre></div><h3 id="events">Events</h3>
 <table class="table">
   <thead>
@@ -830,7 +834,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -877,7 +881,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

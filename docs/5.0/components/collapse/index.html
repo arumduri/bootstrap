@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="몇 가지 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체 콘텐츠의 표시 방식을 전환합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -521,19 +520,19 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p>Bootstrap의 현재 구현은, <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion">WAI-ARIA Authoring Practices 1.1 accordion pattern</a>에 설명되어 있는 여러 가지 <em>optional</em> 키보드 인터랙션을 커버하고 있지 않음을 주의해 주십시오. - 사용자 정의 JavaScript로 이것들을 직접 포함해야 합니다.</p>
 <h2 id="sass">Sass</h2>
 <h3 id="variables">Variables</h3>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$transition-collapse</span><span class="o">:</span>         <span class="no">height</span> <span class="mf">.35</span><span class="kt">s</span> <span class="n">ease</span><span class="p">;</span>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$transition-collapse</span><span class="o">:</span>         <span class="n">height</span> <span class="mf">.35</span><span class="kt">s</span> <span class="ni">ease</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="classes">Classes</h3>
 <p>콜랩스 트랜지션 클래스는 다른 컴포넌트와 함께 사용되고 있기 때문에 <code>scss/_transitions.scss</code>에 들어있습니다. (콜랩스와 아코디언).</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.collapse</span> <span class="p">{</span>
   <span class="k">&amp;</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.show</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nt">display</span><span class="nd">:</span> <span class="nt">none</span><span class="p">;</span>
+    <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="nc">.collapsing</span> <span class="p">{</span>
-  <span class="nt">height</span><span class="nd">:</span> <span class="nt">0</span><span class="p">;</span>
-  <span class="nt">overflow</span><span class="nd">:</span> <span class="nt">hidden</span><span class="p">;</span>
+  <span class="na">height</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="na">overflow</span><span class="o">:</span> <span class="ni">hidden</span><span class="p">;</span>
   <span class="k">@include</span><span class="nd"> transition</span><span class="p">(</span><span class="nv">$transition-collapse</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -619,8 +618,21 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td>요소의 콜랩스를 처리합니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다)</td>
     </tr>
     <tr>
-      <td><code>getInstance</code></td>
-      <td>DOM 요소와 관련된 콜랩스 인스턴스를 가져오는 Static 메소드입니다.</td>
+      <td>
+        <code>getInstance</code>
+      </td>
+      <td>
+        Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: <code>bootstrap.Collapse.getInstance(element)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>getOrCreateInstance</code>
+      </td>
+      <td>
+        Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn't initialised.
+        You can use it like this: <code>bootstrap.Collapse.getOrCreateInstance(element)</code>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -673,7 +685,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -720,7 +732,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

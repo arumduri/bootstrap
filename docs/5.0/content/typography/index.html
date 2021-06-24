@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.">
+<meta name="description" content="전역 설정, 제목, 본문 텍스트, 목록 등을 포함하여 Bootstrap 타이포그래피에 대한 문서 및 예제입니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>Typography · Bootstrap v5.0</title>
+<title>Typography(타이포그래피) · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/content/typography/">
 
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Typography">
-<meta name="twitter:description" content="Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.">
+<meta name="twitter:title" content="Typography(타이포그래피)">
+<meta name="twitter:description" content="전역 설정, 제목, 본문 텍스트, 목록 등을 포함하여 Bootstrap 타이포그래피에 대한 문서 및 예제입니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/content/typography/">
-<meta property="og:title" content="Typography">
-<meta property="og:description" content="Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.">
+<meta property="og:title" content="Typography(타이포그래피)">
+<meta property="og:description" content="전역 설정, 제목, 본문 텍스트, 목록 등을 포함하여 Bootstrap 타이포그래피에 대한 문서 및 예제입니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -389,9 +388,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/content/typography.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">Typography</h1>
+          <h1 class="bd-title" id="content">Typography(타이포그래피)</h1>
         </div>
-        <p class="bd-lead">Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.</p>
+        <p class="bd-lead">전역 설정, 제목, 본문 텍스트, 목록 등을 포함하여 Bootstrap 타이포그래피에 대한 문서 및 예제입니다.</p>
         
 
       </div>
@@ -441,17 +440,17 @@
         
 
         <h2 id="global-settings">Global settings</h2>
-<p>Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the <a href="/docs/5.0/utilities/text/">textual utility classes</a>.</p>
+<p>Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 설정합니다. 더 많은 제어가 필요한 경우 <a href="/docs/5.0/utilities/text/">텍스트 유틸리티 클래스</a>를 확인해보세요.</p>
 <ul>
-<li>Use a <a href="/docs/5.0/content/reboot/#native-font-stack">native font stack</a> that selects the best <code>font-family</code> for each OS and device.</li>
-<li>For a more inclusive and accessible type scale, we use the browser&rsquo;s default root <code>font-size</code> (typically 16px) so visitors can customize their browser defaults as needed.</li>
-<li>Use the <code>$font-family-base</code>, <code>$font-size-base</code>, and <code>$line-height-base</code> attributes as our typographic base applied to the <code>&lt;body&gt;</code>.</li>
-<li>Set the global link color via <code>$link-color</code>.</li>
-<li>Use <code>$body-bg</code> to set a <code>background-color</code> on the <code>&lt;body&gt;</code> (<code>#fff</code> by default).</li>
+<li>각 OS 및 기기에 가장 적합한 <code>font-family</code>를 선택하는 <a href="/docs/5.0/content/reboot/#native-font-stack">기본 글꼴 스택</a>을 사용합니다.</li>
+<li>보다 포괄적이고 접근 가능한 유형 척도를 위해 브라우저의 기본 루트 <code>font-size</code> (일반적으로 16px)를 사용하여 방문자가 필요에 따라 브라우저 기본값을 사용자 지정할 수 있습니다.</li>
+<li><code>&lt;body&gt;</code>에 적용된 타이포그래피 기반으로 <code>$font-family-base</code>, <code>$font-size-base</code> 및<code>$line-height-base</code> 속성을 사용합니다.</li>
+<li><code>$link-color</code>를 통해 글로벌 링크 색상을 설정합니다.</li>
+<li><code>$body-bg</code>를 사용하여 <code>&lt;body&gt;</code>에 <code>background-color</code>를 설정합니다 (기본적으로 <code>#fff</code>).</li>
 </ul>
-<p>These styles can be found within <code>_reboot.scss</code>, and the global variables are defined in <code>_variables.scss</code>. Make sure to set <code>$font-size-base</code> in <code>rem</code>.</p>
+<p>이러한 스타일은 <code>_reboot.scss</code>에서 찾을 수 있으며 전역 변수는 <code>_variables.scss</code>에서 정의됩니다. <code>rem</code>에 <code>$ font-size-base</code>를 설정해야 합니다.</p>
 <h2 id="headings">Headings</h2>
-<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available.</p>
+<p><code>&lt;h1&gt;</code>부터 <code>&lt;h6&gt;</code>까지의 모든 제목을 사용할 수 있습니다.</p>
 <table class="table">
   <thead>
     <tr>
@@ -504,7 +503,7 @@
 <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>h4. Bootstrap heading<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>h5. Bootstrap heading<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>h6. Bootstrap heading<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
-</code></pre></div><p><code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
+</code></pre></div><p>제목의 글꼴 스타일과 일치시키고 싶지만 관련 HTML 요소를 사용할 수 없는 경우 <code>.h1</code>부터 <code>.h6</code> 클래스도 사용할 수 있습니다.</p>
 <div class="bd-example">
 <p class="h1">h1. Bootstrap heading</p>
 <p class="h2">h2. Bootstrap heading</p>
@@ -519,7 +518,7 @@
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h5&#34;</span><span class="p">&gt;</span>h5. Bootstrap heading<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;h6&#34;</span><span class="p">&gt;</span>h6. Bootstrap heading<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="customizing-headings">Customizing headings</h3>
-<p>Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.</p>
+<p>포함된 유틸리티 클래스를 사용하여 Bootstrap 3에서의 작은 보조 제목 텍스트를 다시 만듭니다.</p>
 <div class="bd-example">
 <h3>
   Fancy display heading
@@ -530,7 +529,7 @@
   <span class="p">&lt;</span><span class="nt">small</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-muted&#34;</span><span class="p">&gt;</span>With faded secondary text<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="display-headings">Display headings</h2>
-<p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a <strong>display heading</strong>—a larger, slightly more opinionated heading style.</p>
+<p>기존 제목 요소는 페이지 콘텐츠의 핵심에서 가장 잘 작동하도록 설계되었습니다. 눈에 띄는 제목이 필요한 경우 <strong>표시 제목</strong>을 사용하는 것이 좋습니다. 이 제목은 좀 더 크고 약간 더 독선적인 제목 스타일입니다.</p>
 <div class="bd-example">
   <div class="display-1 pb-3 mb-3 border-bottom">Display 1</div>
   <div class="display-2 pb-3 mb-3 border-bottom">Display 2</div>
@@ -545,21 +544,21 @@
 <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;display-4&#34;</span><span class="p">&gt;</span>Display 4<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;display-5&#34;</span><span class="p">&gt;</span>Display 5<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;display-6&#34;</span><span class="p">&gt;</span>Display 6<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</code></pre></div><p>Display headings are configured via the <code>$display-font-sizes</code> Sass map and two variables, <code>$display-font-weight</code> and <code>$display-line-height</code>.</p>
+</code></pre></div><p>디스플레이 제목은 <code>$display-font-sizes</code> Sass 맵과 두 개의 변수 <code>$display-font-weight</code> 및 <code>$display-line-height</code>를 통해 구성됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$display-font-sizes</span><span class="o">:</span> <span class="p">(</span>
-  <span class="mi">1</span><span class="o">:</span> <span class="mi">5</span><span class="kt">rem</span><span class="o">,</span>
-  <span class="mi">2</span><span class="o">:</span> <span class="mi">4</span><span class="mf">.5</span><span class="kt">rem</span><span class="o">,</span>
-  <span class="mi">3</span><span class="o">:</span> <span class="mi">4</span><span class="kt">rem</span><span class="o">,</span>
-  <span class="mi">4</span><span class="o">:</span> <span class="mi">3</span><span class="mf">.5</span><span class="kt">rem</span><span class="o">,</span>
-  <span class="mi">5</span><span class="o">:</span> <span class="mi">3</span><span class="kt">rem</span><span class="o">,</span>
-  <span class="mi">6</span><span class="o">:</span> <span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span>
+  <span class="na">1</span><span class="o">:</span> <span class="mi">5</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">2</span><span class="o">:</span> <span class="mi">4</span><span class="mf">.5</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">3</span><span class="o">:</span> <span class="mi">4</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">4</span><span class="o">:</span> <span class="mi">3</span><span class="mf">.5</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">5</span><span class="o">:</span> <span class="mi">3</span><span class="kt">rem</span><span class="o">,</span>
+  <span class="na">6</span><span class="o">:</span> <span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span>
 <span class="p">);</span>
 
 <span class="nv">$display-font-weight</span><span class="o">:</span> <span class="mi">300</span><span class="p">;</span>
 <span class="nv">$display-line-height</span><span class="o">:</span> <span class="nv">$headings-line-height</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="lead">Lead</h2>
-<p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+<p><code>.lead</code>를 추가하여 단락을 눈에 띄게 만드십시오.</p>
 <div class="bd-example">
 <p class="lead">
   This is a lead paragraph. It stands out from regular paragraphs.
@@ -568,7 +567,7 @@
   This is a lead paragraph. It stands out from regular paragraphs.
 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="inline-text-elements">Inline text elements</h2>
-<p>Styling for common inline HTML5 elements.</p>
+<p>일반적인 인라인 HTML5 요소의 스타일링입니다.</p>
 <div class="bd-example">
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
 <p><del>This line of text is meant to be treated as deleted text.</del></p>
@@ -586,33 +585,33 @@
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">small</span><span class="p">&gt;</span>This line of text is meant to be treated as fine print.<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>This line rendered as bold text.<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>This line rendered as italicized text.<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
-<p>Beware that those tags should be used for semantic purpose:</p>
+<p>이러한 태그는 시맨틱 목적으로 사용되어야합니다:</p>
 <ul>
-<li><code>&lt;mark&gt;</code> represents text which is marked or highlighted for reference or notation purposes.</li>
-<li><code>&lt;small&gt;</code> represents side-comments and small print, like copyright and legal text.</li>
-<li><code>&lt;s&gt;</code> represents element that are no longer relevant or no longer accurate.</li>
-<li><code>&lt;u&gt;</code> represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.</li>
+<li><code>&lt;mark&gt;</code>는 참조 또는 표기 목적으로 표시되거나 강조된 텍스트를 나타냅니다.</li>
+<li><code>&lt;small&gt;</code>은 저작권 및 법적 텍스트와 같은 부가적인 댓글과 작은 글씨를 나타냅니다.</li>
+<li><code>&lt;s&gt;</code>는 더 이상 관련이 없거나 더 이상 정확하지 않은 요소를 나타냅니다.</li>
+<li><code>&lt;u&gt;</code>는 텍스트가 아닌 주석이 있음을 나타내는 방식으로 렌더링되어야 하는 인라인 텍스트의 범위를 나타냅니다.</li>
 </ul>
-<p>If you want to style your text, you should use the following classes instead:</p>
+<p>텍스트 스타일을 지정해야 된다면 다음 클래스를 사용할 수도 있습니다.</p>
 <ul>
-<li><code>.mark</code> will apply the same styles as <code>&lt;mark&gt;</code>.</li>
-<li><code>.small</code> will apply the same styles as <code>&lt;small&gt;</code>.</li>
-<li><code>.text-decoration-underline</code> will apply the same styles as <code>&lt;u&gt;</code>.</li>
-<li><code>.text-decoration-line-through</code> will apply the same styles as <code>&lt;s&gt;</code>.</li>
+<li><code>.mark</code>는 <code>&lt;mark&gt;</code>와 동일한 스타일을 적용합니다.</li>
+<li><code>.small</code>은 <code>&lt;small&gt;</code>과 동일한 스타일을 적용합니다.</li>
+<li><code>.text-decoration-underline</code>은 <code>&lt;u&gt;</code>와 동일한 스타일을 적용합니다.</li>
+<li><code>.text-decoration-line-through</code>는 <code>&lt;s&gt;</code>와 동일한 스타일을 적용합니다.</li>
 </ul>
-<p>While not shown above, feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance, while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
+<p>위에는 표시되지 않았지만 HTML5에서 <code>&lt;b&gt;</code> 및 <code>&lt;i&gt;</code>를 자유롭게 사용하세요. <code>&lt;b&gt;</code>는 추가 중요성을 전달하지 않고 단어나 구문을 강조하는 반면 <code>&lt;i&gt;</code>는 대부분 음성, 기술 용어 등에 사용됩니다.</p>
 <h2 id="text-utilities">Text utilities</h2>
-<p>Change text alignment, transform, style, weight, line-height, decoration and color with our <a href="/docs/5.0/utilities/text/">text utilities</a> and <a href="/docs/5.0/utilities/colors/">color utilities</a>.</p>
+<p><a href="/docs/5.0/utilities/text/">텍스트 유틸리티</a> 및 <a href="/docs/5.0/utilities/colors/">색상 유틸리티</a>를 사용하여 텍스트 정렬, 변형, 스타일, 두께, 선 높이, 장식 및 색상을 변경하십시오.</p>
 <h2 id="abbreviations">Abbreviations</h2>
-<p>Stylized implementation of HTML&rsquo;s <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
-<p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
+<p>약어 및 두문자어에 대한 HTML의 <code>&lt;abbr&gt;</code> 요소를 스타일링하여 마우스 오버시 확장된 버전을 표시합니다. 약어에는 기본 밑줄이 있으며 도움말 커서를 통해 마우스 오버 시 및 보조 기술 사용자에게 추가 컨텍스트를 제공합니다.</p>
+<p>약간 더 작은 글꼴 크기의 약어에 <code>.initialism</code>을 추가합니다.</p>
 <div class="bd-example">
 <p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;attribute&#34;</span><span class="p">&gt;</span>attr<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">abbr</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;HyperText Markup Language&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;initialism&#34;</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">abbr</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="blockquotes">Blockquotes</h2>
-<p>For quoting blocks of content from another source within your document. Wrap <code>&lt;blockquote class=&quot;blockquote&quot;&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.</p>
+<p>문서 내의 다른 소스에서 콘텐츠 블록을 인용합니다. <abbr title="HyperText Markup Language">HTML</abbr>을 인용문으로 <code>&lt;blockquote class=&quot;blockquote&quot;&gt;</code>로 감쌉니다.</p>
 <div class="bd-example">
 <blockquote class="blockquote">
   <p>A well-known quote, contained in a blockquote element.</p>
@@ -621,7 +620,7 @@
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A well-known quote, contained in a blockquote element.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="naming-a-source">Naming a source</h3>
-<p>The HTML spec requires that blockquote attribution be placed outside the <code>&lt;blockquote&gt;</code>. When providing attribution, wrap your <code>&lt;blockquote&gt;</code> in a <code>&lt;figure&gt;</code> and use a <code>&lt;figcaption&gt;</code> or a block level element (e.g., <code>&lt;p&gt;</code>) with the <code>.blockquote-footer</code> class. Be sure to wrap the name of the source work in <code>&lt;cite&gt;</code> as well.</p>
+<p>HTML 사양에서는 인용구 속성이 <code>&lt;blockquote&gt;</code>외부에 배치되어야 합니다. 어트리뷰션을 제공할 때 <code>&lt;blockquote&gt;</code>를 <code>&lt;figure&gt;</code>로 감싸고 <code>&lt;figcaption&gt;</code> 또는 블록 레벨 요소 (예: <code>&lt;p&gt;</code>)를 <code>.blockquote-footer</code> 클래스와 함께 사용하세요. 소스 작품의 이름도 <code>&lt;cite&gt;</code>로 감싸야 합니다.</p>
 <div class="bd-example">
 <figure>
   <blockquote class="blockquote">
@@ -640,7 +639,7 @@
   <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="alignment">Alignment</h3>
-<p>Use text utilities as needed to change the alignment of your blockquote.</p>
+<p>인용구의 정렬을 변경하려면 필요에 따라 텍스트 유틸리티를 사용하십시오.</p>
 <div class="bd-example">
 <figure class="text-center">
   <blockquote class="blockquote">
@@ -677,7 +676,7 @@
 <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="lists">Lists</h2>
 <h3 id="unstyled">Unstyled</h3>
-<p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
+<p>기본 <code>list-style</code>과 목록 항목의 왼쪽 여백을 제거합니다 (직계 자식만 해당). <strong>이 부분은 직속 하위 목록 항목에만 적용됩니다</strong>. 즉, 중첩된 목록에 대해서도 클래스를 추가해야 합니다.</p>
 <div class="bd-example">
 <ul class="list-unstyled">
   <li>This is a list.</li>
@@ -708,7 +707,7 @@
   <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>This may still come in handy in some situations.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="inline">Inline</h3>
-<p>Remove a list&rsquo;s bullets and apply some light <code>margin</code> with a combination of two classes, <code>.list-inline</code> and <code>.list-inline-item</code>.</p>
+<p>목록의 글 머리 기호를 제거하고 <code>.list-inline</code>과 <code>.list-inline-item</code>의 두 클래스 조합으로 약간의 <code>margin</code>을 적용합니다.</p>
 <div class="bd-example">
 <ul class="list-inline">
   <li class="list-inline-item">This is a list item.</li>
@@ -721,7 +720,7 @@
   <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;list-inline-item&#34;</span><span class="p">&gt;</span>But they&#39;re displayed inline.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="description-list-alignment">Description list alignment</h3>
-<p>Align terms and descriptions horizontally by using our grid system&rsquo;s predefined classes (or semantic mixins). For longer terms, you can optionally add a <code>.text-truncate</code> class to truncate the text with an ellipsis.</p>
+<p>그리드 시스템의 사전 정의된 클래스 (또는 시맨틱 믹스인)를 사용하여 용어와 설명을 수평으로 정렬합니다. 더 긴 용어의 경우 선택적으로 <code>.text-truncate</code> 클래스를 추가하여 줄임표로 텍스트를 자를 수 있습니다.</p>
 <div class="bd-example">
 <dl class="row">
   <dt class="col-sm-3">Description lists</dt>
@@ -772,18 +771,18 @@
   <span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="responsive-font-sizes">Responsive font sizes</h2>
-<p>In Bootstrap 5, we&rsquo;ve enabled responsive font sizes by default, allowing text to scale more naturally across device and viewport sizes. Have a look at the <a href="/docs/5.0/getting-started/rfs/">RFS page</a> to find out how this works.</p>
+<p>Bootstrap 5에서는 기본적으로 반응형 글꼴 크기를 활성화하여 텍스트가 장치 및 뷰포트 크기에 따라 더 자연스럽게 확장될 수 있도록 했습니다. 어떻게 작동하는지 알아보려면 <a href="/docs/5.0/getting-started/rfs/">RFS 페이지</a>를 살펴보십시오.</p>
 <h2 id="sass">Sass</h2>
 <h3 id="variables">Variables</h3>
-<p>Headings have some dedicated variables for sizing and spacing.</p>
-<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$headings-margin-bottom</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+<p>제목에는 크기 및 간격에 대한 전용 변수가 있습니다.</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$headings-margin-bottom</span><span class="o">:</span>      <span class="nv">$spacer</span> <span class="o">*</span> <span class="mf">.5</span><span class="p">;</span>
 <span class="nv">$headings-font-family</span><span class="o">:</span>        <span class="n">null</span><span class="p">;</span>
 <span class="nv">$headings-font-style</span><span class="o">:</span>         <span class="n">null</span><span class="p">;</span>
 <span class="nv">$headings-font-weight</span><span class="o">:</span>        <span class="mi">500</span><span class="p">;</span>
 <span class="nv">$headings-line-height</span><span class="o">:</span>        <span class="mi">1</span><span class="mf">.2</span><span class="p">;</span>
 <span class="nv">$headings-color</span><span class="o">:</span>              <span class="n">null</span><span class="p">;</span>
 </code></pre></div>
-<p>Miscellaneous typography elements covered here and in <a href="/docs/5.0/content/reboot/">Reboot</a> also have dedicated variables.</p>
+<p>여기와 <a href="/docs/5.0/content/reboot/">Reboot</a>에서 다루는 기타 타이포그래피 요소에도 전용 변수가 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$lead-font-size</span><span class="o">:</span>              <span class="nv">$font-size-base</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span>
 <span class="nv">$lead-font-weight</span><span class="o">:</span>            <span class="mi">300</span><span class="p">;</span>
 
@@ -801,7 +800,7 @@
 <span class="nv">$blockquote-footer-font-size</span><span class="o">:</span> <span class="nv">$small-font-size</span><span class="p">;</span>
 
 <span class="nv">$hr-margin-y</span><span class="o">:</span>                 <span class="nv">$spacer</span><span class="p">;</span>
-<span class="nv">$hr-color</span><span class="o">:</span>                    <span class="no">inherit</span><span class="p">;</span>
+<span class="nv">$hr-color</span><span class="o">:</span>                    <span class="ni">inherit</span><span class="p">;</span>
 <span class="nv">$hr-height</span><span class="o">:</span>                   <span class="nv">$border-width</span><span class="p">;</span>
 <span class="nv">$hr-opacity</span><span class="o">:</span>                  <span class="mf">.25</span><span class="p">;</span>
 
@@ -820,7 +819,7 @@
 <span class="nv">$mark-bg</span><span class="o">:</span>                     <span class="mh">#fcf8e3</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="mixins">Mixins</h3>
-<p>There are no dedicated mixins for typography, but Bootstrap does use <a href="/docs/5.0/getting-started/rfs/">Responsive Font Sizing (RFS)</a>.</p>
+<p>타이포그래피 전용 믹스인은 없지만 Bootstrap은 <a href="/docs/5.0/getting-started/rfs/">반응형 글꼴 크기 (Responsive Font Sizing, RFS)</a>을 사용합니다.</p>
 
       </div>
     </main>
@@ -838,7 +837,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -885,7 +884,7 @@
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="유틸리티 API는 유틸리티 클래스를 생성하기 위한 Sass 기반 도구입니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -417,11 +416,13 @@
         <li><a href="#print-utilities">Print utilities</a></li>
       </ul>
     </li>
+    <li><a href="#importance">Importance</a></li>
     <li><a href="#using-the-api">Using the API</a>
       <ul>
         <li><a href="#add-utilities">Add utilities</a></li>
         <li><a href="#modify-utilities">Modify utilities</a>
           <ul>
+            <li><a href="#enable-responsive">Enable responsive</a></li>
             <li><a href="#rename-utilities">Rename utilities</a></li>
           </ul>
         </li>
@@ -441,7 +442,7 @@
         
 
         <p>부트 스트랩 유틸리티는 유틸리티 API로 생성되며 Sass를 통해 기본 유틸리티 클래스 세트를 수정하거나 확장하는 데 사용할 수 있습니다. 저희 유틸리티 API는 다양한 옵션으로 클래스 패밀리를 생성하기 위한 일련의 Sass맵 및 함수를 기반으로 합니다. Sass맵에 익숙하지 않은 경우 <a href="https://sass-lang.com/documentation/values/maps">official Sass docs</a> 를 읽고 시작해 보세요.</p>
-<p><code>$utilities</code> 맵에는 우리의 모든 유틸리티가 포함되어 나중에는 사용자정의 <code>$utilities</code> 와 통합(파일이 있을경우)됩니다. 유틸리티 맵에는 다음 옵션을 허용할 수 있는 유틸리티 그룹의 키 목록이 포함되어 있습니다.:</p>
+<p><code>$utilities</code> 맵에는 우리의 모든 유틸리티가 포함되어 나중에는 사용자정의 <code>$utilities</code> 와 통합(파일이 있을 경우)됩니다. 유틸리티 맵에는 다음 옵션을 허용할 수 있는 유틸리티 그룹의 키 목록이 포함되어 있습니다.:</p>
 <table class="table text-start">
 <thead>
 <tr>
@@ -498,13 +499,13 @@
 <p>모든 유틸리티 변수는 <code>_utilities.scss</code> 스타일 시트의 <code>$utilities</code> 변수에 추가됩니다. 각 유틸리티 그룹은 다음과 같습니다.:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
-    <span class="n">property</span><span class="o">:</span> <span class="no">opacity</span><span class="o">,</span>
-    <span class="n">values</span><span class="o">:</span> <span class="p">(</span>
-      <span class="mi">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-      <span class="mi">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
-      <span class="mi">50</span><span class="o">:</span> <span class="mf">.5</span><span class="o">,</span>
-      <span class="mi">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
-      <span class="mi">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
+    <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
+    <span class="na">values</span><span class="o">:</span> <span class="p">(</span>
+      <span class="na">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+      <span class="na">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
+      <span class="na">50</span><span class="o">:</span> <span class="mf">.5</span><span class="o">,</span>
+      <span class="na">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
+      <span class="na">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
     <span class="p">)</span>
   <span class="p">)</span>
  <span class="p">);</span>
@@ -518,14 +519,14 @@
 <p>컴파일 된 CSS에서 사용되는 클래스 접두사를 변경하려면 <code>class</code> 옵션을 사용하세요.:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
-    <span class="n">property</span><span class="o">:</span> <span class="no">opacity</span><span class="o">,</span>
-    <span class="n">class</span><span class="o">:</span> <span class="n">o</span><span class="o">,</span>
-    <span class="n">values</span><span class="o">:</span> <span class="p">(</span>
-      <span class="mi">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-      <span class="mi">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
-      <span class="mi">50</span><span class="o">:</span> <span class="mf">.5</span><span class="o">,</span>
-      <span class="mi">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
-      <span class="mi">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
+    <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
+    <span class="na">class</span><span class="o">:</span> <span class="n">o</span><span class="o">,</span>
+    <span class="na">values</span><span class="o">:</span> <span class="p">(</span>
+      <span class="na">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+      <span class="na">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
+      <span class="na">50</span><span class="o">:</span> <span class="mf">.5</span><span class="o">,</span>
+      <span class="na">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
+      <span class="na">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
     <span class="p">)</span>
   <span class="p">)</span>
  <span class="p">);</span>
@@ -542,124 +543,126 @@
 <p>여러 개의 가상 클래스가 필요하십니까? <code>state : hover focus</code>와 같이 공백으로 구분 된 상태 목록을 사용하세요.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
-    <span class="n">property</span><span class="o">:</span> <span class="no">opacity</span><span class="o">,</span>
-    <span class="n">class</span><span class="o">:</span> <span class="no">opacity</span><span class="o">,</span>
-    <span class="n">state</span><span class="o">:</span> <span class="n">hover</span><span class="o">,</span>
-    <span class="n">values</span><span class="o">:</span> <span class="p">(</span>
-      <span class="mi">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-      <span class="mi">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
-      <span class="mi">50</span><span class="o">:</span> <span class="mf">.5</span><span class="o">,</span>
-      <span class="mi">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
-      <span class="mi">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
+    <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
+    <span class="na">class</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
+    <span class="na">state</span><span class="o">:</span> <span class="n">hover</span><span class="o">,</span>
+    <span class="na">values</span><span class="o">:</span> <span class="p">(</span>
+      <span class="na">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+      <span class="na">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
+      <span class="na">50</span><span class="o">:</span> <span class="mf">.5</span><span class="o">,</span>
+      <span class="na">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
+      <span class="na">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
 </code></pre></div><p>출력 결과:</p>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">opacity-0-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-25-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-50-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-75-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-100-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">opacity-0-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-25-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-50-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-75-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-100-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div><h3 id="responsive-utilities">Responsive utilities</h3>
 <p><a href="/docs/5.0/layout/breakpoints/">all breakpoints</a>에서 반응 형 유틸리티 (예 : <code>.opacity-md-25</code> )를 생성하려면 <code>responsive</code> 불리언을 추가합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
-    <span class="n">property</span><span class="o">:</span> <span class="no">opacity</span><span class="o">,</span>
-    <span class="n">responsive</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
-    <span class="n">values</span><span class="o">:</span> <span class="p">(</span>
-      <span class="mi">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-      <span class="mi">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
-      <span class="mi">50</span><span class="o">:</span> <span class="mf">.5</span><span class="o">,</span>
-      <span class="mi">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
-      <span class="mi">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
+    <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
+    <span class="na">responsive</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
+    <span class="na">values</span><span class="o">:</span> <span class="p">(</span>
+      <span class="na">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+      <span class="na">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
+      <span class="na">50</span><span class="o">:</span> <span class="mf">.5</span><span class="o">,</span>
+      <span class="na">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
+      <span class="na">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
     <span class="p">)</span>
   <span class="p">)</span>
  <span class="p">);</span>
 </code></pre></div><p>출력 결과:</p>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">opacity-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">opacity-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 
 <span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">576px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="p">.</span><span class="nc">opacity-sm-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-sm-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-sm-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-sm-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-sm-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-sm-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-sm-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-sm-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-sm-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-sm-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="p">.</span><span class="nc">opacity-md-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-md-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-md-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-md-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-md-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-md-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-md-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-md-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-md-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-md-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">992px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="p">.</span><span class="nc">opacity-lg-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-lg-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-lg-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-lg-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-lg-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-lg-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-lg-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-lg-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-lg-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-lg-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1200px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="p">.</span><span class="nc">opacity-xl-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-xl-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-xl-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-xl-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-xl-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-xl-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-xl-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-xl-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-xl-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-xl-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1400px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="p">.</span><span class="nc">opacity-xxl-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-xxl-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-xxl-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-xxl-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-xxl-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-xxl-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-xxl-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-xxl-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-xxl-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-xxl-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div><h3 id="changing-utilities">Changing utilities</h3>
 <p>동일한 키를 사용하여 기존 유틸리티를 대체하십시오. 예를 들어 추가 반응형 오버플로 유틸리티 클래스를 원할 경우 다음을 수행 할 수 있습니다.:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;overflow&#34;</span><span class="o">:</span> <span class="p">(</span>
-    <span class="n">responsive</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
-    <span class="n">property</span><span class="o">:</span> <span class="no">overflow</span><span class="o">,</span>
-    <span class="n">values</span><span class="o">:</span> <span class="no">visible</span> <span class="no">hidden</span> <span class="no">scroll</span> <span class="no">auto</span><span class="o">,</span>
+    <span class="na">responsive</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
+    <span class="na">property</span><span class="o">:</span> <span class="n">overflow</span><span class="o">,</span>
+    <span class="na">values</span><span class="o">:</span> <span class="ni">visible</span> <span class="ni">hidden</span> <span class="ni">scroll</span> <span class="ni">auto</span><span class="o">,</span>
   <span class="p">)</span><span class="o">,</span>
 <span class="p">);</span>
 </code></pre></div><h3 id="print-utilities">Print utilities</h3>
 <p><code>print</code> 옵션을 활성화하면 ** 또한 ** 인쇄용 유틸리티 클래스가 생성되며, 이는 <code>@media print {...}</code> 미디어 쿼리 내에서만 적용됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
-    <span class="n">property</span><span class="o">:</span> <span class="no">opacity</span><span class="o">,</span>
-    <span class="n">print</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
-    <span class="n">values</span><span class="o">:</span> <span class="p">(</span>
-      <span class="mi">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
-      <span class="mi">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
-      <span class="mi">50</span><span class="o">:</span> <span class="mf">.5</span><span class="o">,</span>
-      <span class="mi">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
-      <span class="mi">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
+    <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
+    <span class="na">print</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
+    <span class="na">values</span><span class="o">:</span> <span class="p">(</span>
+      <span class="na">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+      <span class="na">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
+      <span class="na">50</span><span class="o">:</span> <span class="mf">.5</span><span class="o">,</span>
+      <span class="na">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
+      <span class="na">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
     <span class="p">)</span>
   <span class="p">)</span>
  <span class="p">);</span>
 </code></pre></div><p>출력 결과물:</p>
-<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">opacity-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">.</span><span class="nc">opacity-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">opacity-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">opacity-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 
 <span class="p">@</span><span class="k">media</span> <span class="nt">print</span> <span class="p">{</span>
-  <span class="p">.</span><span class="nc">opacity-print-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-print-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-print-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-print-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
-  <span class="p">.</span><span class="nc">opacity-print-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-print-0</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-print-25</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.25</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-print-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-print-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">opacity-print-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h2 id="using-the-api">Using the API</h2>
+</code></pre></div><h2 id="importance">Importance</h2>
+<p>All utilities generated by the API include <code>!important</code> to ensure they override components and modifier classes as intended. You can toggle this setting globally with the <code>$enable-important-utilities</code> variable (defaults to <code>true</code>).</p>
+<h2 id="using-the-api">Using the API</h2>
 <p>이제 유틸리티 API의 작동 방식에 익숙해 졌으므로 사용자 지정 클래스를 추가하고 기본 유틸리티를 수정하는 방법을 배워 봅시다.</p>
 <h3 id="add-utilities">Add utilities</h3>
 <p><code>map-merge</code>를 사용하면 새로운 유틸리티를 기본 <code>$utilities</code> 맵에 추가할 수 있습니다. 먼저 <code>_utilities.scss</code>를 가져왔는지 확인한 다음 <code>map-merge</code>를 이용하여 새로운 유틸리티를 추가하십시오. 다음 예시는 세 개의 값이 있는 반응형 <code>cursor</code> 유틸리티를 추가하는 방법입니다.</p>
@@ -671,10 +674,10 @@
   <span class="nv">$utilities</span><span class="o">,</span>
   <span class="p">(</span>
     <span class="s2">&#34;cursor&#34;</span><span class="o">:</span> <span class="p">(</span>
-      <span class="n">property</span><span class="o">:</span> <span class="no">cursor</span><span class="o">,</span>
-      <span class="n">class</span><span class="o">:</span> <span class="no">cursor</span><span class="o">,</span>
-      <span class="n">responsive</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
-      <span class="n">values</span><span class="o">:</span> <span class="no">auto</span> <span class="no">pointer</span> <span class="n">grab</span><span class="o">,</span>
+      <span class="na">property</span><span class="o">:</span> <span class="n">cursor</span><span class="o">,</span>
+      <span class="na">class</span><span class="o">:</span> <span class="n">cursor</span><span class="o">,</span>
+      <span class="na">responsive</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
+      <span class="na">values</span><span class="o">:</span> <span class="ni">auto</span> <span class="ni">pointer</span> <span class="ni">grab</span><span class="o">,</span>
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span> 
@@ -691,14 +694,56 @@
     <span class="s2">&#34;width&#34;</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
       <span class="nf">map-get</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;width&#34;</span><span class="p">)</span><span class="o">,</span>
       <span class="p">(</span>
-        <span class="n">values</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
+        <span class="na">values</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
           <span class="nf">map-get</span><span class="p">(</span><span class="nf">map-get</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;width&#34;</span><span class="p">)</span><span class="o">,</span> <span class="s2">&#34;values&#34;</span><span class="p">)</span><span class="o">,</span>
-          <span class="p">(</span><span class="mi">10</span><span class="o">:</span> <span class="mi">10</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span>
+          <span class="p">(</span><span class="na">10</span><span class="o">:</span> <span class="mi">10</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span>
         <span class="p">)</span><span class="o">,</span>
       <span class="p">)</span><span class="o">,</span>
     <span class="p">)</span><span class="o">,</span>
   <span class="p">)</span>
 <span class="p">);</span>
+</code></pre></div><h4 id="enable-responsive">Enable responsive</h4>
+<p>You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the <code>border</code> classes responsive:</p>
+<div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities&#34;</span><span class="p">;</span>
+
+<span class="nv">$utilities</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
+  <span class="nv">$utilities</span><span class="o">,</span> <span class="p">(</span>
+    <span class="s2">&#34;border&#34;</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
+      <span class="nf">map-get</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;border&#34;</span><span class="p">)</span><span class="o">,</span>
+      <span class="p">(</span> <span class="na">responsive</span><span class="o">:</span> <span class="n">true</span> <span class="p">)</span><span class="o">,</span>
+    <span class="p">)</span><span class="o">,</span>
+  <span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div><p>This will now generate responsive variations of <code>.border</code> and <code>.border-0</code> for each breakpoint. Your generated CSS will look like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">border</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+<span class="p">.</span><span class="nc">border-0</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+
+<span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">576px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nc">border-sm</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">border-sm-0</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nc">border-md</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">border-md-0</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">992px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nc">border-lg</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">border-lg-0</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1200px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nc">border-xl</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">border-xl-0</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1400px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nc">border-xxl</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+  <span class="p">.</span><span class="nc">border-xxl-0</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div><h4 id="rename-utilities">Rename utilities</h4>
 <p>이전 v4 유틸리티가 그립거나 다른 명명 규칙을 사용 하고 싶습니까? 유틸리티 API는 주어진 유틸리티의 결과 <code>class</code> 를 재정의 하는데 사용할 수 있습니다. 예를 들어 <code>.ms- *</code> 유틸리티의 이름을 오래된 <code>.ml- *</code> 로 바꿀 경우 다음과 같이 할 수 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
@@ -709,7 +754,7 @@
   <span class="nv">$utilities</span><span class="o">,</span> <span class="p">(</span>
     <span class="s2">&#34;margin-start&#34;</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
       <span class="nf">map-get</span><span class="p">(</span><span class="nv">$utilities</span><span class="o">,</span> <span class="s2">&#34;margin-start&#34;</span><span class="p">)</span><span class="o">,</span>
-      <span class="p">(</span> <span class="n">class</span><span class="o">:</span> <span class="n">ml</span> <span class="p">)</span><span class="o">,</span>
+      <span class="p">(</span> <span class="na">class</span><span class="o">:</span> <span class="n">ml</span> <span class="p">)</span><span class="o">,</span>
     <span class="p">)</span><span class="o">,</span>
   <span class="p">)</span>
 <span class="p">);</span>
@@ -729,10 +774,10 @@
 <p>아랍어 줄 바꿈과 같은 일부 예외적 인 경우는 <a href="https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl">RTL styling difficult</a> 를 합니다(스타일 지정을 어렵게 만든다는 뜻). 따라서 <code>rtl</code> 옵션을 <code>false</code> 로 설정하여 RTL 출력에서 유틸리티를 삭제할 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;word-wrap&#34;</span><span class="o">:</span> <span class="p">(</span>
-    <span class="n">property</span><span class="o">:</span> <span class="no">word-wrap</span> <span class="no">word-break</span><span class="o">,</span>
-    <span class="n">class</span><span class="o">:</span> <span class="no">text</span><span class="o">,</span>
-    <span class="n">values</span><span class="o">:</span> <span class="p">(</span><span class="n">break</span><span class="o">:</span> <span class="n">break-word</span><span class="p">)</span><span class="o">,</span>
-    <span class="n">rtl</span><span class="o">:</span> <span class="n">false</span>
+    <span class="na">property</span><span class="o">:</span> <span class="n">word-wrap</span> <span class="n">word-break</span><span class="o">,</span>
+    <span class="na">class</span><span class="o">:</span> <span class="ni">text</span><span class="o">,</span>
+    <span class="na">values</span><span class="o">:</span> <span class="p">(</span><span class="na">break</span><span class="o">:</span> <span class="ni">break-word</span><span class="p">)</span><span class="o">,</span>
+    <span class="na">rtl</span><span class="o">:</span> <span class="n">false</span>
   <span class="p">)</span><span class="o">,</span>
 <span class="p">);</span>
 </code></pre></div><p>결과물:</p>
@@ -760,7 +805,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -807,7 +852,7 @@
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

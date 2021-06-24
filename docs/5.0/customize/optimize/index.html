@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.">
+<meta name="description" content="프로젝트를 단순하고, 대응력이 뛰어나며, 유지 관리할 수 있도록 하여 최고의 경험을 제공하고 보다 중요한 일에 집중할 수 있습니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.83.1">
+<meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
@@ -17,7 +17,7 @@
 
 
 <!-- Bootstrap core CSS -->
-<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <link href="/docs/5.0/assets/css/docs.css" rel="stylesheet">
 
@@ -35,13 +35,13 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Optimize">
-<meta name="twitter:description" content="Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.">
+<meta name="twitter:description" content="프로젝트를 단순하고, 대응력이 뛰어나며, 유지 관리할 수 있도록 하여 최고의 경험을 제공하고 보다 중요한 일에 집중할 수 있습니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/customize/optimize/">
 <meta property="og:title" content="Optimize">
-<meta property="og:description" content="Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.">
+<meta property="og:description" content="프로젝트를 단순하고, 대응력이 뛰어나며, 유지 관리할 수 있도록 하여 최고의 경험을 제공하고 보다 중요한 일에 집중할 수 있습니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -55,7 +55,6 @@
   ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<script defer src="https://cdn.usefathom.com/script.js" data-site="TAXRUMOF"></script>
 
 
   </head>
@@ -391,7 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/customize/optimize.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">Optimize</h1>
         </div>
-        <p class="bd-lead">Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.</p>
+        <p class="bd-lead">프로젝트를 단순하고, 대응력이 뛰어나며, 유지 관리할 수 있도록 하여 최고의 경험을 제공하고 보다 중요한 일에 집중할 수 있습니다.</p>
         
 
       </div>
@@ -417,7 +416,7 @@
         
 
         <h2 id="lean-sass-imports">Lean Sass imports</h2>
-<p>When using Sass in your asset pipeline, make sure you optimize Bootstrap by only <code>@import</code>ing the components you need. Your largest optimizations will likely come from the <code>Layout &amp; Components</code> section of our <code>bootstrap.scss</code>.</p>
+<p>asset pipeline에서 Sass를 사용하는 경우, 필요한 컴포넌트만 <code>@import</code>해서 Bootstrap을 최적화 하십시오. 가장 큰 최적화는 <code>bootstrap.scss</code> 섹션의 <code>Layout &amp; Components</code>에서 얻을 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Configuration
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;variables&#34;</span><span class="p">;</span>
@@ -462,10 +461,10 @@
 <span class="c1">// Utilities
 </span><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;utilities/api&#34;</span><span class="p">;</span>
 </code></pre></div>
-<p>If you&rsquo;re not using a component, comment it out or delete it entirely. For example, if you&rsquo;re not using the carousel, remove that import to save some file size in your compiled CSS. Keep in mind there are some dependencies across Sass imports that may make it more difficult to omit a file.</p>
+<p>컴포넌트를 사용하지 않을 때는 주석 처리를 하거나 완전히 삭제해 주세요. 예를 들어, 캐러셀(carousel)을 사용하지 않을 경우 해당 import를 삭제하여 컴파일한 CSS의 파일 크기를 절약할 수 있습니다. Sass import에는 몇 가지 의존 관계가 있어 파일을 생략하기가 어려울 수도 있으니 주의해 주세요.</p>
 <h2 id="lean-javascript">Lean JavaScript</h2>
-<p>Bootstrap&rsquo;s JavaScript includes every component in our primary dist files (<code>bootstrap.js</code> and <code>bootstrap.min.js</code>), and even our primary dependency (Popper) with our bundle files (<code>bootstrap.bundle.js</code> and <code>bootstrap.bundle.min.js</code>). While you&rsquo;re customizing via Sass, be sure to remove related JavaScript.</p>
-<p>For instance, assuming you&rsquo;re using your own JavaScript bundler like Webpack or Rollup, you&rsquo;d only import the JavaScript you plan on using. In the example below, we show how to just include our modal JavaScript:</p>
+<p>Bootstrap의 JavaScript는 기본적인 dist 파일(<code>bootstrap.js</code>와 <code>bootstrap.min.js</code>)안에 모든 컴포넌트를 포함하고 있으며, 번들 파일(<code>bootstrap.bundle.js</code>와 <code>bootstrap.bundle.min.js</code>)안의 기본 의존 관계(Popper)도 제공합니다. Sass를 통해 재정의 하는 동안에는 반드시 관련된 JavaScript는 삭제해 주세요.</p>
+<p>예를 들어, Webpack이나 Rollup과 같은 자체 JavaScript 번들러를 사용하고 있다면 사용할 JavaScript만 포함하면 됩니다. 아래의 예시에서는, 모달의 JavaScript를 포함하는 방법을 보여주고 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Import just what we need
 </span><span class="c1"></span>
 <span class="c1">// import &#39;bootstrap/js/dist/alert&#39;;
@@ -479,10 +478,10 @@
 </span><span class="c1">// import &#39;bootstrap/js/dist/tab&#39;;
 </span><span class="c1">// import &#39;bootstrap/js/dist/toast&#39;;
 </span><span class="c1">// import &#39;bootstrap/js/dist/tooltip&#39;;
-</span></code></pre></div><p>This way, you&rsquo;re not including any JavaScript you don&rsquo;t intend to use for components like buttons, carousels, and tooltips. If you&rsquo;re importing dropdowns, tooltips or popovers, be sure to list the Popper dependency in your <code>package.json</code> file.</p>
+</span></code></pre></div><p>이렇게 하면 버튼, 캐러셀, 툴팁과 같은 사용할 예정이 없는 컴포넌트에 JavaScript를 포함하지 않도록 할 수 있습니다. 드롭다운, 툴팁, 팝오버를 포함하는 경우에는 반드시 <code>package.json</code> 파일에 Popper의 의존 관계를 기술해 주세요.</p>
 <div class="bd-callout bd-callout-info">
 <h3 id="default-exports">Default Exports</h3>
-<p>Files in <code>bootstrap/js/dist</code> use the <strong>default export</strong>, so if you want to use one of them you have to do the following:</p>
+<p><code>bootstrap/js/dist</code>에 있는 파일은 <strong>default export</strong>를 사용하고 있기 때문에, 그 중 하나를 사용하고 싶다면 아래와 같이 해야 합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">Modal</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap/js/dist/modal&#39;</span>
 
 <span class="kr">const</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Modal</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myModal&#39;</span><span class="p">))</span>
@@ -490,30 +489,30 @@
 </div>
 
 <h2 id="autoprefixer-browserslistrc">Autoprefixer .browserslistrc</h2>
-<p>Bootstrap depends on Autoprefixer to automatically add browser prefixes to certain CSS properties. Prefixes are dictated by our <code>.browserslistrc</code> file, found in the root of the Bootstrap repo. Customizing this list of browsers and recompiling the Sass will automatically remove some CSS from your compiled CSS, if there are vendor prefixes unique to that browser or version.</p>
+<p>Bootstrap은 특정 CSS 속성에 브라우저 접두사(prefixes)를 자동으로 추가하기 위해 Autoprefixer에 의존합니다. 접두사는 Bootstrap의 루트에 있는 <code>.browserslistrc</code> 파일에 의해 결정됩니다. 브라우저의 이 목록을 재정의하여 Sass를 컴파일하면 해당 브라우저나 버전에 고유한 벤터 접두사가 있는 경우 컴파일된 CSS에서 일부 CSS가 자동으로 삭제됩니다.</p>
 <h2 id="unused-css">Unused CSS</h2>
-<p><em>Help wanted with this section, please consider opening a PR. Thanks!</em></p>
-<p>While we don&rsquo;t have a prebuilt example for using <a href="https://github.com/FullHuman/purgecss">PurgeCSS</a> with Bootstrap, there are some helpful articles and walkthroughs that the community has written. Here are some options:</p>
+<p><em>이 부분은 여러분의 도움이 필요합니다. PR을 만들어 주세요. 감사합니다!</em></p>
+<p><a href="https://github.com/FullHuman/purgecss">PurgeCSS</a>를  Bootstrap과 함께 사용하기 위한 사전 빌드된 예시는 없지만, 커뮤니티에 올라온 글 중 도움이 되는 기사나 공략 글을 소개합니다. 몇 가지의 선택지가 있으니 확인해 주세요:</p>
 <ul>
 <li><a href="https://medium.com/dwarves-foundation/remove-unused-css-styles-from-bootstrap-using-purgecss-88395a2c5772">https://medium.com/dwarves-foundation/remove-unused-css-styles-from-bootstrap-using-purgecss-88395a2c5772</a></li>
 <li><a href="https://lukelowrey.com/automatically-removeunused-css-from-bootstrap-or-other-frameworks/">https://lukelowrey.com/automatically-removeunused-css-from-bootstrap-or-other-frameworks/</a></li>
 </ul>
-<p>Lastly, this <a href="https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/">CSS Tricks article on unused CSS</a> shows how to use PurgeCSS and other similar tools.</p>
+<p>마지막으로, <a href="https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/">사용되지 않은 CSS에 대한 CSS Tricks 문서</a>에서는 PurgeCSS나 다른 유사한 도구를 사용하는 방법을 소개하고 있습니다.</p>
 <h2 id="minify-and-gzip">Minify and gzip</h2>
-<p>Whenever possible, be sure to compress all the code you serve to your visitors. If you&rsquo;re using Bootstrap dist files, try to stick to the minified versions (indicated by the <code>.min.css</code> and <code>.min.js</code> extensions). If you&rsquo;re building Bootstrap from the source with your own build system, be sure to implement your own minifiers for HTML, CSS, and JS.</p>
+<p>가능한 한 방문자에게 제공하는 모든 코드를 압축해야 합니다. Bootstrap의 dist 파일을 사용하는 경우에는, 최소화 된 버전(<code>.min.css</code>와 <code>.min.js</code> 확장자로 표시)을 고수해 주세요. 자체 빌드 시스템으로 소스에서 Bootstrap을 빌드하는 경우 HTML, CSS, JS용으로 자체 압축 파일을 빌드해야 합니다.</p>
 <h2 id="nonblocking-files">Nonblocking files</h2>
-<p>While minifying and using compression might seem like enough, making your files nonblocking ones is also a big step in making your site well-optimized and fast enough.</p>
-<p>If you are using a <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> plugin in Google Chrome, you may have stumbled over FCP. <a href="https://web.dev/fcp/">The First Contentful Paint</a> metric measures the time from when the page starts loading to when any part of the page&rsquo;s content is rendered on the screen.</p>
-<p>You can improve FCP by deferring non-critical JavaScript or CSS. What does that mean? Simply, JavaScript or stylesheets that don&rsquo;t need to be present on the first paint of your page should be marked with <code>async</code> or <code>defer</code> attributes.</p>
-<p>This ensures that the less important resources are loaded later and not blocking the first paint. On the other hand, critical resources can be included as inline scripts or styles.</p>
-<p>If you want to learn more about this, there are already a lot of great articles about it:</p>
+<p>압축을 최소화해 사용하는 것만으로도 충분할 수 있지만, 파일을 차단하지 않고 만드는 데 있어 사이트를 최적화하고 빠르게 만드는데 있어 아주 중요합니다.</p>
+<p>구글 크롬에서 <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> 플러그인을 사용하고 있다면 FCP를 잘 아실 것입니다. <a href="https://web.dev/fcp/">The First Contentful Paint</a> 라는 지표는 페이지를 불러오기 시작한 후 페이지의 콘텐츠 일부가 화면에 표시될 때까지의 시간을 측정합니다.</p>
+<p>중요하지 않은 JavaScript나 CSS를 늦게 호출함으로써 FCP를 개선할 수 있습니다. 이게 무슨 의미일까요? 간단히 말하면 첫 화면에 굳이 필요하지 않은 JavaScript나 스타일 시트에는 <code>async</code>나 <code>defer</code> 속성을 붙여야 합니다.</p>
+<p>이렇게 되면 덜 중요한 자원은 나중에 읽혀 첫 화면을 그리는 데 방해를 하지 않습니다. 한편 중요한 자원은 인라인의 스크립트나 스타일로서 포함할 수 있습니다.</p>
+<p>이것에 대해 좀 더 자세히 알고 싶다면 이미 훌륭한 기사들이 많이 있습니다:</p>
 <ul>
 <li><a href="https://web.dev/render-blocking-resources/">https://web.dev/render-blocking-resources/</a></li>
 <li><a href="https://web.dev/defer-non-critical-css/">https://web.dev/defer-non-critical-css/</a></li>
 </ul>
 <h2 id="always-use-https">Always use HTTPS</h2>
-<p>Your website should only be available over HTTPS connections in production. HTTPS improves the security, privacy, and availability of all sites, and <a href="https://https.cio.gov/everything/">there is no such thing as non-sensitive web traffic</a>. The steps to configure your website to be served exclusively over HTTPS vary widely depending on your architecture and web hosting provider, and thus are beyond the scope of these docs.</p>
-<p>Sites served over HTTPS should also access all stylesheets, scripts, and other assets over HTTPS connections. Otherwise, you&rsquo;ll be sending users <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content">mixed active content</a>, leading to potential vulnerabilities where a site can be compromised by altering a dependency. This can lead to security issues and in-browser warnings displayed to users. Whether you&rsquo;re getting Bootstrap from a CDN or serving it yourself, ensure that you only access it over HTTPS connections.</p>
+<p>실제 환경에서 웹사이트는 HTTPS 접속으로만 이용하도록 해 주세요. HTTPS는, 모든 사이트의 보안, 개인 정보 보호 및 가용성을 향상시키며, <a href="https://https.cio.gov/everything/">민감하지 않은 웹 트래픽은 없습니다</a>. 웹 사이트가 HTTPS에서만 제공되도록 설정하는 순서는 아키텍처나 웹 호스팅 공급자에 따라 크게 다르기 때문에 이 문서에서는 설명하지 않습니다.</p>
+<p>HTTPS를 통해 제공되는 사이트도 HTTPS 연결을 통해 모든 스타일 시트, 스크립트, 그 외 기타 어셋에 접근해야 합니다. 그렇지 않으면 사용자에게 <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content">혼합된 활성 콘텐츠</a>를 보내 종속성을 변경하여 사이트가 위험에 노출되는 잠재적인 취약성이 발생합니다. 이로 인해 사용자에게 보안 문제나 브라우저 내의 경고로 표시될 수 있습니다. CDN에서 Bootstrap을 호출하든 직접 제공하든 관계없이 HTTPS를 통해서만 접근해 주세요.</p>
 
       </div>
     </main>
@@ -531,7 +530,7 @@
         <ul class="list-unstyled small text-muted">
           <li class="mb-2"> <a href="/docs/5.0/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.0.1입니다.</li>
+          <li class="mb-2">현재 v5.0.2입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -578,7 +577,7 @@
   </div>
 </footer>
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
