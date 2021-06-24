@@ -192,4 +192,4 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 [float]:   {{< docsref "/utilities/float" >}}
 [margin]:  {{< docsref "/utilities/spacing" >}}
 [sizing]:  {{< docsref "/utilities/sizing" >}}
-[text]:    {{< docsref "/content/typography" >}}
+[text]:    {{< docsref "/utilities/text" >}}

@@ -45,7 +45,7 @@ toc: true
 
 아래의 버튼을 클릭하면 `.hide`를 사용해 기본적으로 숨겨져 있던 (유틸리티를 사용해 오른쪽 아래에 배치한)토스트가 표시됩니다.
 
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       {{< placeholder width="20" height="20" background="#007aff" class="rounded me-2" text="false" title="false" >}}
@@ -66,7 +66,7 @@ toc: true
 ```html
 <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
 
-<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <img src="..." class="rounded me-2" alt="...">
@@ -389,6 +389,24 @@ toast.hide()
 
 ```js
 toast.dispose()
+```
+
+#### getInstance
+
+*Static* method which allows you to get the scrollspy instance associated with a DOM element
+
+```js
+var myToastEl = document.getElementById('myToastEl')
+var myToast = bootstrap.Toast.getInstance(myToastEl) // Returns a Bootstrap toast instance
+```
+
+#### getOrCreateInstance
+
+*Static* method which allows you to get the scrollspy instance associated with a DOM element, or create a new one in case it wasn't initialised
+
+```js
+var myToastEl = document.getElementById('myToastEl')
+var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Returns a Bootstrap toast instance
 ```
 
 ### Events

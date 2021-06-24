@@ -109,7 +109,7 @@ var dropdown = new bootstrap.Dropdown('[data-bs-toggle="dropdown"]')
 트랜지션이 완료된 후 작업을 실행하기 위해 해당 이베트를 수신할 수 있습니다.
 
 ```js
-var myCollapseEl = document.getElementById('#myCollapse')
+var myCollapseEl = document.getElementById('myCollapse')
 
 myCollapseEl.addEventListener('shown.bs.collapse', function (event) {
   // Action to execute once the collapsible area is expanded

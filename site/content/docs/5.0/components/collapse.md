@@ -187,8 +187,21 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
       <td>요소의 콜랩스를 처리합니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다)</td>
     </tr>
     <tr>
-      <td><code>getInstance</code></td>
-      <td>DOM 요소와 관련된 콜랩스 인스턴스를 가져오는 Static 메소드입니다.</td>
+      <td>
+        <code>getInstance</code>
+      </td>
+      <td>
+        Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: <code>bootstrap.Collapse.getInstance(element)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>getOrCreateInstance</code>
+      </td>
+      <td>
+        Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn't initialised.
+        You can use it like this: <code>bootstrap.Collapse.getOrCreateInstance(element)</code>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -6,9 +6,11 @@ group: components
 toc: true
 ---
 
-## Example
+## Examples
 
 부모 요소의 크기에 일치하도록 상대적인 폰트 크기 `em`을 사용하고 있습니다. v5 이후, 배지에는 더 이상 링크에 대한 포커스나 호버 스타일은 없습니다.
+
+### Headings
 
 {{< example >}}
 <h1>Example heading <span class="badge bg-secondary">New</span></h1>
@@ -19,7 +21,9 @@ toc: true
 <h6>Example heading <span class="badge bg-secondary">New</span></h6>
 {{< /example >}}
 
-배지는, 카운터를 제공하기 위해 링크나 버튼의 일부로 사용될 수 있습니다.
+### Buttons
+
+배지는 카운터를 제공하기 위해 링크나 버튼의 일부로 사용될 수 있습니다.
 
 {{< example >}}
 <button type="button" class="btn btn-primary">
@@ -31,10 +35,28 @@ toc: true
 
 문맥이 명확하지 않은 경우("Notifications" 의 예처럼, "4" 가 알림 숫자라고 이해되는 경우), 시각적으로 숨겨진 추가 문자 부분에 추가 문맥을 포함하는 것을 검토해 주세요.
 
+### Positioned
+
+Use utilities to modify a `.badge` and position it in the corner of a link or button.
+
 {{< example >}}
-<button type="button" class="btn btn-primary">
-  Profile <span class="badge bg-secondary">9</span>
-  <span class="visually-hidden">unread messages</span>
+<button type="button" class="btn btn-primary position-relative">
+  Inbox
+  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    99+
+    <span class="visually-hidden">unread messages</span>
+  </span>
+</button>
+{{< /example >}}
+
+You can also replace the `.badge` class with a few more utilities without a count for a more generic indicator.
+
+{{< example >}}
+<button type="button" class="btn btn-primary position-relative">
+  Profile
+  <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+    <span class="visually-hidden">New alerts</span>
+  </span>
 </button>
 {{< /example >}}
 

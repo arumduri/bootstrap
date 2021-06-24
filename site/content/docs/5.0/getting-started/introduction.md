@@ -155,7 +155,7 @@ CSS에서 보다 간단한 크기 조절을 위해서 우리는 `content-box`에
 
 - [공식 Bootstrap 블로그]({{< param blog >}})를 읽고 구독해 보세요.
 - [공식 Slack 방]({{< param slack >}})에 참가해 보세요.
-- 다른 Bootstrap 유저들과 IRC에서 대화해 보세요. `irc.freenode.net` 서버의 `##bootstrap` 채널에서 만나실 수 있습니다.
+- 다른 Bootstrap 유저들과 IRC에서 대화해 보세요. `irc.libera.chat` 서버의 `#bootstrap` 채널에서 만나실 수 있습니다.
 - 구현 방법에 대한 도움을 Stack Overflow (태그는 [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5))에서 받으실 수 있습니다.
 - 개발자 분들은 [npm](https://www.npmjs.com/search?q=keywords:bootstrap) 또는 비슷한 전송 매커니즘에서 Bootstrap 수정 패키지 또는 기능 추가 패키지에서 `bootstrap` 단어를 사용해서 찾기 쉽도록 해주셔야 합니다.
 

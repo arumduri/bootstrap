@@ -625,6 +625,15 @@ var triggerEl = document.querySelector('#trigger')
 var tab = bootstrap.Tab.getInstance(triggerEl) // Returns a Bootstrap tab instance
 ```
 
+#### getOrCreateInstance
+
+*Static* method which allows you to get the tab instance associated with a DOM element, or create a new one in case it wasn't initialised
+
+```js
+var triggerEl = document.querySelector('#trigger')
+var tab = bootstrap.Tab.getOrCreateInstance(triggerEl) // Returns a Bootstrap tab instance
+```
+
 ### Events
 
 새로운 탭을 표시할 때, 아래의 순서대로 이벤트가 발생합니다.

@@ -80,7 +80,7 @@ Bootstrap의 모든 Sass 변수에는 `!default` 플래그가 포함되어 있�
 
 Bootstrap 변수의 전체 목록은 `scss/_variables.scss`에 있습니다. 몇 가지 변수는 `null`로 설정되어 있어, 이러한 변수는 설정에서 재정의되지 않는 한, 속성을 출력하지 않습니다.
 
-변수의 재정의는 함수와 변수, 믹스인을 가져온 이후 나머지를 가져오기 전에 수행해야 합니다.
+변수의 재정의는 함수를 가져온 이후 나머지를 가져오기 전에 수행해야 합니다.
 
 여기에서는 npm으로 가져온 Bootstrap을 컴파일 할 때에,`<body>`의 `background-color`와 `color`를 변경하는 예시를 보여주고 있습니다.
 
@@ -95,8 +95,6 @@ $body-color: #111;
 // Required
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
-
-// Bootstrap and its default variables
 
 // Optional Bootstrap components here
 @import "../node_modules/bootstrap/scss/root";

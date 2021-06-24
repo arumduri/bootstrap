@@ -397,7 +397,7 @@ Header 나 footer와 같이, 카드에는 카드의 상부와 하부의 "image c
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-      {{< placeholder width="100%" height="250" text="Image" >}}
+      {{< placeholder width="100%" height="250" text="Image" class="img-fluid rounded-start" >}}
     </div>
     <div class="col-md-8">
       <div class="card-body">

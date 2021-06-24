@@ -297,6 +297,15 @@ var scrollSpyContentEl = document.getElementById('content')
 var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl) // Returns a Bootstrap scrollspy instance
 ```
 
+#### getOrCreateInstance
+
+*Static* method which allows you to get the scrollspy instance associated with a DOM element, or create a new one in case it wasn't initialised
+
+```js
+var scrollSpyContentEl = document.getElementById('content')
+var scrollSpy = bootstrap.ScrollSpy.getOrCreateInstance(scrollSpyContentEl) // Returns a Bootstrap scrollspy instance
+```
+
 ### Options
 
 옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성인 경우는 `data-bs-offset=""` 처럼 `data-bs-`에 옵션 명을 추가합니다.

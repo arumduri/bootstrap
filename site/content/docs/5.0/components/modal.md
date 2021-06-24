@@ -827,7 +827,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 
 ## Usage
 
-모달 플러그인은, data 속성이나 JavaScript를 사용하고, 필요에 따라 숨겨서 콘텐츠를 바꿉니다. 또한 기본 스크롤 동작을 덮어쓰기 위해서 `.modal-open`을 `<body>`에 추가하고, 모달의 바깥쪽을 클릭했을 때 표시된 모달을 삭제하기 위한 클릭 영역을 제공하기 위해서 `.modal-backdrop`을 생성합니다.
+모달 플러그인은, data 속성이나 JavaScript를 사용하고, 필요에 따라 숨겨서 콘텐츠를 바꿉니다. 또한 기본 스크롤 동작을 덮어쓰고 모달의 바깥쪽을 클릭했을 때 표시된 모달을 삭제하기 위한 클릭 영역을 제공하기 위해서 `.modal-backdrop`을 생성합니다.
 
 ### Via data attributes
 
@@ -950,6 +950,15 @@ DOM 요소와 연관된 모달 인스턴스를 취득하는 *Static* 메소드 �
 ```js
 var myModalEl = document.getElementById('myModal')
 var modal = bootstrap.Modal.getInstance(myModalEl) // Returns a Bootstrap modal instance
+```
+
+#### getOrCreateInstance
+
+*Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialised
+
+```js
+var myModalEl = document.querySelector('#myModal')
+var modal = bootstrap.Modal.getOrCreateInstance(myModalEl) // Returns a Bootstrap modal instance
 ```
 
 ### Events

@@ -241,6 +241,7 @@ var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
 | `show` | 오프캔버스 요소를 표시합니다. **실제로 표시되기 전의 오프캔버스 요소로 돌아갑니다** (즉, `shown.bs.offcanvas` 이벤트가 발생하기 전).|
 | `hide` | 오프캔버스 요소를 숨깁니다. **실제로 숨겨지기전의 오픈캔버스 요소로 돌아갑니다.** (즉, `hidden.bs.offcanvas` 이벤트가 발생하기 전).|
 | `getInstance` | DOM 요소와 연관된 오프캔버스 인스턴스를 얻기 위한 *Static* 메서드입니다. |
+| `getOrCreateInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialised |
 {{< /bs-table >}}
 
 ### Events

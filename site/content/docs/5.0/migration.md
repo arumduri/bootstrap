@@ -45,7 +45,11 @@ toc: true
   - `$yiq-contrasted-threshold`는 `$min-contrast-ratio`로 변경.
   - `$yiq-text-dark`와 `$yiq-text-light`는 각각 `$color-contrast-dark`와 `$color-contrast-light`로 변경.
 
-- <span class="badge bg-danger">Breaking</span> 인쇄 클래스와 `$enable-print-styles` 변수를 삭제하였습니다. 인쇄 표시 클래스는 아직 남아 있습니다.[#28339](https://github.com/twbs/bootstrap/pull/28339).
+- <span class="badge bg-danger">Breaking</span> Media query mixins parameters have changed for a more logical approach.
+  - `media-breakpoint-down()` uses the breakpoint itself instead of the next breakpoint (e.g., `media-breakpoint-down(lg)` instead of `media-breakpoint-down(md)` targets viewports smaller than `lg`).
+  - Similarly, the second parameter in `media-breakpoint-between()` also uses the breakpoint itself instead of the next breakpoint (e.g., `media-between(sm, lg)` instead of `media-breakpoint-between(sm, md)` targets viewports between `sm` and `lg`).
+
+- <span class="badge bg-danger">Breaking</span> 인쇄 클래스와 `$enable-print-styles` 변수를 삭제하였습니다. 인쇄 표시 클래스는 아직 남아 있습니다. [#28339](https://github.com/twbs/bootstrap/pull/28339).
 
 - <span class="badge bg-danger">Breaking</span> `color()`, `theme-color()`, 그리고 `gray()` 의 함수를 폐지하고 변수를 사용하도록 하였습니다.[#29083](https://github.com/twbs/bootstrap/pull/29083).
 
@@ -195,9 +199,9 @@ toc: true
 
 ### Buttons
 
-- <span class="badge bg-danger">Breaking</span> **체크 박스나 라디오 버튼에 있는 [토글 버튼](http://getbootstrap.com/docs/5.0/forms/checks-radios/#toggle-buttons)은, JavaScript가 필요없는 새로운 마크업을 채용하고 있습니다.** 더 이상 감싸는 요소는 필요하지 않고, 바로 `<input>`에 `.btn-check`를 추가해 `.btn` 클래스의 `<label>`과 조합 합니다. [#30650](https://github.com/twbs/bootstrap/pull/30650). _이 건에 관한 문서는 버튼 페이지에서 폼 섹션으로 이동하였습니다._
+- <span class="badge bg-danger">Breaking</span> **체크 박스나 라디오 버튼에 있는 [토글 버튼](https://getbootstrap.com/docs/5.0/forms/checks-radios/#toggle-buttons)은, JavaScript가 필요없는 새로운 마크업을 채용하고 있습니다.** 더 이상 감싸는 요소는 필요하지 않고, 바로 `<input>`에 `.btn-check`를 추가해 `.btn` 클래스의 `<label>`과 조합 합니다. [#30650](https://github.com/twbs/bootstrap/pull/30650). _이 건에 관한 문서는 버튼 페이지에서 폼 섹션으로 이동하였습니다._
 
-- <span class="badge bg-danger">Breaking</span> **유틸리티용 `.btn-block`를 삭제.** `.btn`에 `.btn-block`을 사용하는 대신에, 버튼을 `.d-grid`와 `.gap-*` 유틸리티로 감싸고 필요에 따라 여백을 위한 클래스를 사용합니다. 보다 강력한 컨트롤을 위해 반응형 클래스로 전환 합니다. [몇 가지 예시에 대해서는 문서를 참조해 주세요](http://getbootstrap.com/docs/5.0/components/buttons/#block-buttons)
+- <span class="badge bg-danger">Breaking</span> **유틸리티용 `.btn-block`를 삭제.** `.btn`에 `.btn-block`을 사용하는 대신에, 버튼을 `.d-grid`와 `.gap-*` 유틸리티로 감싸고 필요에 따라 여백을 위한 클래스를 사용합니다. 보다 강력한 컨트롤을 위해 반응형 클래스로 전환 합니다. [몇 가지 예시에 대해서는 문서를 참조해 주세요](https://getbootstrap.com/docs/5.0/components/buttons/#block-buttons)
 
 - 추가 매개 변수를 지원하기 위해 `button-variant()`와 `button-outline-variant()` 믹스인을 업데이트 했습니다.
 

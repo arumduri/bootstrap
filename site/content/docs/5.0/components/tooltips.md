@@ -255,7 +255,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>'hover focus'</code></td>
       <td>
         <p>툴팁의 트리거 방법 - click | hover | focus | manual. 여러 트리거를 전달할 수 있습니다.</p>
-        <p><code>'manual'</code>은 <code>.tooltip('show')</code>, <code>.tooltip('hide')</code> 그리고 <code>.tooltip('toggle')</code> 메소드를 통해 프로그램으로 트리거 되는 것을 나타냅니다. 이 값은 다른 트리거와 조합할 수 없습니다.</p>
+        <p><code>'manual'</code>은 <code>.show()</code>, <code>.hide()</code>, <code>.toggle()</code> 메소드를 통해 프로그램으로 트리거 되는 것을 나타냅니다. 이 값은 다른 트리거와 조합할 수 없습니다.</p>
         <p><code>'hover'</code>를 단독으로 사용하면, 키보드를 통해 트리거 할 수 없는 툴팁이 되며, 키보드 사용자에게 동일한 정보를 전달하기 위한 대체수단이 존재할 경우에만 사용해야 합니다.</p>
       </td>
     </tr>
@@ -415,6 +415,15 @@ DOM 요소와 연관된 툴팁의 인스턴스를 취득하는 *Static* 메소�
 ```js
 var exampleTriggerEl = document.getElementById('example')
 var tooltip = bootstrap.Tooltip.getInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
+```
+
+#### getOrCreateInstance
+
+*Static* method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialised
+
+```js
+var exampleTriggerEl = document.getElementById('example')
+var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
 ```
 
 ### Events

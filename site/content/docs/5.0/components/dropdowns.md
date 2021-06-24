@@ -585,7 +585,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 
 ## Menu items
 
-역사적으로 드롭다운 메뉴의 내용은 링크가 되어야 했는데, v4에서는 그렇지 않았습니다. 드롭다운에서는 `<a>` 대신에 `<button>` 요소를 사용할 수 있게 되었습니다.
+You can use `<a>` or `<button>` elements as dropdown items.
 
 {{< example >}}
 <div class="dropdown">
@@ -1138,9 +1138,20 @@ var dropdown = new bootstrap.Dropdown(element, {
       </td>
     </tr>
     <tr>
-      <td><code>getInstance</code></td>
       <td>
-        DOM 요소에 관련 지어진 드롭다운의 인스턴스를 취득하는 Static 메소드.
+        <code>getInstance</code>
+      </td>
+      <td>
+        Static method which allows you to get the dropdown instance associated to a DOM element, you can use it like this: <code>bootstrap.Dropdown.getInstance(element)</code>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>getOrCreateInstance</code>
+      </td>
+      <td>
+        Static method which returns a dropdown instance associated to a DOM element or create a new one in case it wasn't initialised.
+        You can use it like this: <code>bootstrap.Dropdown.getOrCreateInstance(element)</code>
       </td>
     </tr>
   </tbody>
