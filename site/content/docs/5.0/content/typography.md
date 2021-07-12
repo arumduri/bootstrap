@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Typography(타이포그래피)
+title: 타이포그래피
+title_en: Typography
 description: 전역 설정, 제목, 본문 텍스트, 목록 등을 포함하여 Bootstrap 타이포그래피에 대한 문서 및 예제입니다.
 group: content
 toc: true

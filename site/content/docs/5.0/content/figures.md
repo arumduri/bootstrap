@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Figures(피규어)
+title: 피규어
+title_en: Figures
 description: Bootstrap에서 피규어 컴포넌트를 사용하여 관련 이미지 및 텍스트를 표시하기 위한 문서 및 예제입니다.
 group: content
 toc: true

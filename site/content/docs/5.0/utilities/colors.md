@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Colors(색상)
+title: 색상
+title_en: Colors
 description: 색상 유틸리티 클래스를 사용하여 `color` (색상)을 통해 의미를 전달합니다. 호버 상태의 링크 스타일링에 대한 지원도 포함합니다.
 group: utilities
 toc: true

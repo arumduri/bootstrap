@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Build tools(빌드 도구)
+title: 빌드 도구
+title_en: Build tools
 description: 문서 빌드, 소스 코드 컴파일, 테스트 실행 등을 할 수 있는 Bootstrap에 포함된 npm 스크립트를 사용하는 방법에 대해서 알아보세요. 
 group: getting-started
 toc: true

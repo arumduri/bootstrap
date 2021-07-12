@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Icons(아이콘)
+title: 아이콘
+title_en: Icons
 description: Bootstrap과 함께 외부 아이콘 라이브러리를 사용하기 위한 지침 및 제안입니다.
 group: extend
 ---

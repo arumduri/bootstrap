@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Migrating to v5
+title: v5으로 마이그레이션
+title_en: Migrating to v5
 description: Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인 리뷰함으로써 v4에서 v5로의 변경을 지원합니다.
 group: migration
 aliases: "/migration/"

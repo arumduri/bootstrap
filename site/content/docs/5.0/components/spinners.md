@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Spinners(스피너)
+title: 스피너
+title_en: Spinners
 description: HTML, CSS, JavaScript를 사용하지 않고 완전히 구축된 Bootstrap 스피너를 사용하여 컴포넌트나 페이지의 로딩 상태를 표시합니다.
 group: components
 toc: true

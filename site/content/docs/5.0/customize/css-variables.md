@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: CSS variables
+title: CSS 변수
+title_en: CSS variables
 description: 빠르고 미래 지향적인 설계와 개발을 위해 Bootstrap의 CSS 사용자 정의를 사용합니다.
 group: customize
 toc: true

@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Scrollspy(스크롤 스파이)
+title: 스크롤스파이
+title_en: Scrollspy
 description: 스크롤 위치에 따라 Bootstrap 내비게이션 또는 목록 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.
 group: components
 toc: true

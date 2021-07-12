@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Ratios (비율)
+title: 비율
+title_en: Ratios
 description: 생성된 가상 요소를 사용하여 요소가 선택한 가로세로 비율을 유지하도록 합니다. 부모의 너비에 따라 비디오 또는 슬라이드 쇼 내용물을 반응형으로 처리하는 데에 적합합니다.
 group: helpers
 toc: true

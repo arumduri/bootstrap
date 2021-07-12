@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Close button(닫기 버튼)
+title: 닫기 버튼
+title_en: Close button
 description: 모달이나 경고창 등의 콘텐츠를 닫기 위한 범용적인 닫기 버튼입니다.
 group: components
 toc: true

@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Customize
+title: 커스터마이징
+title_en: Customize
 description: Sass를 사용하여 테마 지정 및 Bootstrap 확장과 사용자 정의 방법, 풍부한 글로벌 옵션, 광범위한 컬러 시스템 등을 소개합니다.
 group: customize
 toc: false

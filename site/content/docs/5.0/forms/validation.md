@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Validation(유효성 검사)
+title: 유효성 검사
+title_en: Validation
 description: HTML5 폼 유효성 검사에서는 브라우저의 기본 동작이나 사용자 정의 스타일과 JavaScript를 이용해 사용자에게 가치있고 실용적인 전달을 제공합니다.
 group: forms
 toc: true

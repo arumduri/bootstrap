@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Visibility
+title: 가시성
+title_en: Visibility
 description: Control the visibility of elements, without modifying their display, with visibility utilities.
 group: utilities
 ---

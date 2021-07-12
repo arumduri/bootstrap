@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Breadcrumb(브레드크럼)
+title: 브레드크럼
+title_en: Breadcrumb
 description: CSS로 구분자를 자동으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.
 group: components
 toc: true

@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Select(셀렉트)
+title: 셀렉트
+title_en: Select
 description: 브라우저의 기본 `<select>`를 사용자 정의 CSS로 만들어 요소의 초기 표시를 변경할 수 있습니다.
 group: forms
 toc: true

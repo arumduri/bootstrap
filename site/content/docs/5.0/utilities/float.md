@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Float (플로트)
+title: 플로트
+title_en: Float
 description: 반응형 float 유틸리티를 사용하여 모든 중단 점에서 모든 요소에서 float을 전환합니다.
 group: utilities
 toc: true

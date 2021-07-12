@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Brand guidelines(브랜드 가이드라인)
+title: 브랜드 가이드라인
+title_en: Brand guidelines
 description: Bootstrap의 로고와 브랜드 사용 가이드라인에 관한 문서와 예제입니다.
 group: about
 toc: true

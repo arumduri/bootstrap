@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Form controls(폼 컨트롤)
+title: 폼 컨트롤
+title_en: Form controls
 description: 문자 형식의 `<input>`이나 `<textarea>`과 같은 폼 컨트롤에 사용자 정의 스타일, 크기 조정, 포커스 상태등의 업그레이드를 실시할 수 있습니다.
 group: forms
 toc: true

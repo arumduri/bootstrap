@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Team(팀)
+title: 팀
+title_en: Team
 description: Bootstrap 초기 팀과 핵심 기여자들에 대한 요약입니다.
 group: about
 ---

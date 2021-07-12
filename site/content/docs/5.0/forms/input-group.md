@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Input group(입력 그룹)
+title: 입력 그룹
+title_en: Input group
 description: 문자 입력, 사용자 정의 셀렉트, 사용자 파일 입력 등의 폼의 좌우에 문자, 버튼 혹은 버튼 그룹을 추가해 폼 컨트롤을 간단하게 확장할 수 있습니다.
 group: forms
 toc: true

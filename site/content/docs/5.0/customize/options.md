@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Options
+title: 옵션
+title_en: Options
 description: 내장된 변수를 사용하여 Bootstrap을 신속하게 사용자 정의하여 스타일 및 동작을 제어하기 위한 글로벌 CSS 설정을 쉽게 전환할 수 있습니다.
 group: customize
 ---

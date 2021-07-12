@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Browsers and devices(브라우저 및 기기)
+title: 브라우저 및 기기
+title_en: Browsers and devices
 description: 각각의 알려진 특성과 버그를 포함하여 Bootstrap에서 지원하는 구버전부터 최신버전까지의 브라우저와 장치들에 대해 알아 봅시다.
 group: getting-started
 toc: true

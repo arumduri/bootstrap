@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Visually hidden
+title: 시각적으로 숨기기
+title_en: Visually hidden
 description: 이러한 도우미를 사용하여 요소를 시각적으로 숨기되 보조 기술이 접근할 수 있도록 유지해 보세요.
 group: helpers
 aliases: "/docs/5.0/helpers/screen-readers/"
