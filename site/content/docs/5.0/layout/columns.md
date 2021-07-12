@@ -1,26 +1,26 @@
 ---
 layout: docs
-title: Columns
-description: Learn how to modify columns with a handful of options for alignment, ordering, and offsetting thanks to our flexbox grid system. Plus, see how to use column classes to manage widths of non-grid elements.
+title: Columns(열)
+description: flexbox 그리드 시스템을 통해 정렬, 순서 지정 및 오프셋을 위한 소수의 옵션으로 열을 수정하는 방법을 알아보세요. 또한 column 클래스를 사용하여 그리드가 아닌 요소의 너비를 관리하는 방법을 알아보세요.
 group: layout
 toc: true
 ---
 
 {{< callout info >}}
-**Heads up!** Be sure to [read the Grid page]({{< docsref "/layout/grid" >}}) first before diving into how to modify and customize your grid columns.
+**주의!** 그리드 열을 수정하고 커스터마이징하는 방법에 대해 자세히 알아보기 전에 먼저 [그리드 페이지를 읽어보세요]({{< docsref "/layout/grid" >}}).
 {{< /callout >}}
 
 ## How they work
 
-- **Columns build on the grid's flexbox architecture.** Flexbox means we have options for changing individual columns and [modifying groups of columns at the row level]({{< docsref "/layout/grid#row-columns" >}}). You choose how columns grow, shrink, or otherwise change.
+- **열은 그리드의 flexbox 아키텍처를 기반으로 합니다.** flexbox는 개별 열을 변경하고 [행 수준에서 열 그룹을 수정하는 옵션]({{< docsref "/layout/grid#row-columns" >}})이 있음을 의미합니다. 열이 커지거나 줄어들거나 변경되는 방식을 선택할 수 있습니다.
 
-- **When building grid layouts, all content goes in columns.** The hierarchy of Bootstrap's grid goes from [container]({{< docsref "/layout/containers" >}}) to row to column to your content. On rare occasions, you may combine content and column, but be aware there can be unintended consequences.
+- **그리드 레이아웃을 만들 때 모든 콘텐츠는 열에 들어갑니다.** Bootstrap 그리드의 계층 구조는 [컨테이너]({{< docsref "/layout/containers" >}})에서 행, 열, 콘텐츠로 이동합니다. 흔치 않은 상황에서 콘텐츠와 열을 합칠 수는 있지만 의도하지 않은 결과가 발생할 수도 있습니다.
 
-- **Bootstrap includes predefined classes for creating fast, responsive layouts.** With [six breakpoints]({{< docsref "/layout/breakpoints" >}}) and a dozen columns at each grid tier, we have dozens of classes already built for you to create your desired layouts. This can be disabled via Sass if you wish.
+- **Bootstrap에는 빠른 반응형 레이아웃을 만들기 위한 미리 정의된 클래스가 포함되어 있습니다.** [6개의 중단점]({{< docsref "/layout/breakpoints" >}}) 및 각 그리드 계층의 12개의 열에 원하는 레이아웃을 생성할 수 있도록 이미 수십 개의 클래스가 구축되어 있습니다. 원하는 경우 Sass를 통해 비활성화할 수 있습니다.
 
 ## Alignment
 
-Use flexbox alignment utilities to vertically and horizontally align columns.
+flexbox 정렬 유틸리티를 사용하여 가로나 세로로 열을 정렬합니다.
 
 ### Vertical alignment
 
@@ -135,7 +135,7 @@ Use flexbox alignment utilities to vertically and horizontally align columns.
 
 ### Column wrapping
 
-If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.
+단일 행에 12개 이상의 열이 있는 경우 추가 열의 각 그룹은 하나의 단위로 새 줄로 줄바꿈됩니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -149,7 +149,7 @@ If more than 12 columns are placed within a single row, each group of extra colu
 
 ### Column breaks
 
-Breaking columns to a new line in flexbox requires a small hack: add an element with `width: 100%` wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple `.row`s, but not every implementation method can account for this.
+flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있습합니다. 열을 새 줄로 묶고 싶은 곳에 `width: 100%` 요소를 추가하세요. 일반적으로 이건 여러 `.row`로 수행되지만 모든 구현 방법이 이를 지원하지는 않습니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -166,7 +166,7 @@ Breaking columns to a new line in flexbox requires a small hack: add an element 
 </div>
 {{< /example >}}
 
-You may also apply this break at specific breakpoints with our [responsive display utilities]({{< docsref "/utilities/display" >}}).
+[반응형 디스플레이 유틸리티]({{< docsref "/utilities/display" >}})를 사용하여 특정 중단점에 이 중단을 적용할 수도 있습니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -187,7 +187,7 @@ You may also apply this break at specific breakpoints with our [responsive displ
 
 ### Order classes
 
-Use `.order-` classes for controlling the **visual order** of your content. These classes are responsive, so you can set the `order` by breakpoint (e.g., `.order-1.order-md-2`). Includes support for `1` through `5` across all six grid tiers.
+콘텐츠의 **시각적 순서**를 제어하려면 `.order-` 클래스를 사용하세요. 이러한 클래스는 반응형이므로 중단점으로 `order`를 설정할 수 있습니다 (예: `.order-1.order-md-2`). 여기에는 6개의 모든 그리드 계층에서 `1`부터 `5`까지에 대한 지원이 포함됩니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -205,7 +205,7 @@ Use `.order-` classes for controlling the **visual order** of your content. Thes
 </div>
 {{< /example >}}
 
-There are also responsive `.order-first` and `.order-last` classes that change the `order` of an element by applying `order: -1` and `order: 6`, respectively. These classes can also be intermixed with the numbered `.order-*` classes as needed.
+또한 각각 `order: -1`과 `order: 6`을 적용하여 요소의 `order`를 변경하는 반응형 `.order-first` 및 `.order-last` 클래스가 있습니다. 이러한 클래스는 필요에 따라 번호가 매겨진 `.order-*` 클래스와 섞어서 사용할 수도 있습니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -225,11 +225,11 @@ There are also responsive `.order-first` and `.order-last` classes that change t
 
 ### Offsetting columns
 
-You can offset grid columns in two ways: our responsive `.offset-` grid classes and our [margin utilities]({{< docsref "/utilities/spacing" >}}). Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.
+반응형 `.offset-` 그리드 클래스와 [여백 유틸리티]({{< docsref "/utilities/spacing" >}})의 두 가지 방법으로 그리드 열을 오프셋할 수 있습니다. 그리드 클래스는 열과 일치하도록 크기가 조정되는 반면 여백은 오프셋 너비가 가변적인 빠른 레이아웃에 더 유용합니다.
 
 #### Offset classes
 
-Move columns to the right using `.offset-md-*` classes. These classes increase the left margin of a column by `*` columns. For example, `.offset-md-4` moves `.col-md-4` over four columns.
+`.offset-md-*` 클래스를 사용하여 열을 오른쪽으로 이동합니다. 이 클래스는 열의 왼쪽 여백을 `*` 열만큼 늘립니다. 예를 들어 `.offset-md-4`는 `.col-md-4`를 4개의 열로 이동합니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -247,7 +247,7 @@ Move columns to the right using `.offset-md-*` classes. These classes increase t
 </div>
 {{< /example >}}
 
-In addition to column clearing at responsive breakpoints, you may need to reset offsets. See this in action in [the grid example]({{< docsref "/examples/grid" >}}).
+반응형 중단점에서 열 지우기 외에도 오프셋을 재설정해야 할 수 있습니다. [그리드 예제]({{< docsref "/examples/grid" >}})에서 실제 동작을 확인해보세요.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -264,7 +264,7 @@ In addition to column clearing at responsive breakpoints, you may need to reset 
 
 #### Margin utilities
 
-With the move to flexbox in v4, you can use margin utilities like `.me-auto` to force sibling columns away from one another.
+v4에서 flexbox으로 이동하면서 `.me-auto`와 같은 여백 유틸리티를 사용하여 맞닿아 있는 열을 강제로 서로 멀리 떨어뜨릴 수 있습니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -285,7 +285,7 @@ With the move to flexbox in v4, you can use margin utilities like `.me-auto` to 
 
 ## Standalone column classes
 
-The `.col-*` classes can also be used outside a `.row` to give an element a specific width. Whenever column classes are used as non direct children of a row, the paddings are omitted.
+`.col-*` 클래스를 `.row` 외부에서 사용하여 요소에 특정 너비를 지정할 수도 있습니다. 열 클래스가 행의 직계가 아닌 자식으로 사용될 때마다 패딩이 생략됩니다.
 
 {{< example >}}
 <div class="col-3 bg-light p-3 border">
@@ -296,7 +296,7 @@ The `.col-*` classes can also be used outside a `.row` to give an element a spec
 </div>
 {{< /example >}}
 
-The classes can be used together with utilities to create responsive floated images. Make sure to wrap the content in a [`.clearfix`]({{< docsref "/helpers/clearfix" >}}) wrapper to clear the float if the text is shorter.
+클래스를 유틸리티와 함께 ​​사용하여 반응형 float 이미지를 만들 수 있습니다. 텍스트가 더 짧은 경우 float를 지우려면 내용을 [`.clearfix`]({{< docsref "/helpers/clearfix" >}}) 래퍼로 감싸야 합니다.
 
 {{< example >}}
 <div class="clearfix">
