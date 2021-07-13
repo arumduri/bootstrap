@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Position (위치)
+title: 위치
+title_en: Position
 description: 요소들의 위치를 신속하게 구성하기 위해 이 도우미를 사용해 보세요.
 group: helpers
 toc: true

@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Navs and tabs(내비와 탭)
+title: 내비게이션과 탭
+title_en: Navs and tabs
 description: Bootstrap에 포함된 내비게이션 컴포넌트를 어떻게 사용하는지 문서와 예시입니다.
 group: components
 aliases: "/docs/5.0/components/navs/"

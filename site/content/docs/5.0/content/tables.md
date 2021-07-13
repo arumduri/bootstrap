@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Tables(표)
+title: 표
+title_en: Tables
 description: Bootstrap을 사용한 테이블의 opt-in 스타일에 대한 문서 및 예제 (JavaScript 플러그인에서 널리 사용됨)입니다.
 group: content
 toc: true

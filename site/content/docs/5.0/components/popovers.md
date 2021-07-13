@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Popovers(팝오버)
+title: 팝오버
+title_en: Popovers
 description: iOS에서 볼수 있는 Bootstrap 팝오버를 사이트 임의의 요소에 추가하기 위한 문서와 예시입니다.
 group: components
 toc: true

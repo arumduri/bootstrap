@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Columns(열)
+title: 열
+title_en: Columns
 description: flexbox 그리드 시스템을 통해 정렬, 순서 지정 및 오프셋을 위한 소수의 옵션으로 열을 수정하는 방법을 알아보세요. 또한 column 클래스를 사용하여 그리드가 아닌 요소의 너비를 관리하는 방법을 알아보세요.
 group: layout
 toc: true

@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Spacing (간격)
+title: 간격
+title_en: Spacing
 description: 부트스트랩에는 요소의 모양을 수정하기 위한 광범위한 반응형 gap, padding 및 margin 유틸리티 클래스가 포함되어 있습니다.
 group: utilities
 toc: true

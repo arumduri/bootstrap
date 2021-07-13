@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: About(소개)
+title: 소개
+title_en: About
 description: Bootstrap을 관리하는 팀과 우리가 왜 이 프로젝트를 시작했는지, 그리고 어떻게 참여할 수 있는지에 대해서 알아보세요.
 group: about
 aliases:

@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Toasts(토스트)
+title: 토스트
+title_en: Toasts
 description: 가볍고 쉽게 재정의할 수 있는 알림메시로 푸시 알림을 보냅니다.
 group: components
 toc: true

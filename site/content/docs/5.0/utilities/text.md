@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Text
+title: 글자
+title_en: Text
 description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
 group: utilities
 toc: true

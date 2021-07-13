@@ -2,125 +2,220 @@
 # The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
 
 - title: Getting started
+  title_ko: 시작하기
   pages:
     - title: Introduction
+      title_ko: 시작하기
     - title: Download
+      title_ko: 다운로드
     - title: Contents
+      title_ko: 구성 요소
     - title: Browsers & devices
+      title_ko: 브라우저 & 기기
     - title: JavaScript
     - title: Build tools
+      title_ko: 빌드 도구
     - title: Webpack
+      title_ko: 웹팩
     - title: Parcel
     - title: Accessibility
+      title_ko: 접근성
     - title: RFS
     - title: RTL
 
 - title: Customize
+  title_ko: 커스터마이징
   pages:
     - title: Overview
+      title_ko: 개요
     - title: Sass
     - title: Options
+      title_ko: 옵션
     - title: Color
+      title_ko: 색상
     - title: Components
+      title_ko: 컴포넌트
     - title: CSS variables
+      title_ko: CSS 변수
     - title: Optimize
+      title_ko: 최적화
 
 - title: Layout
+  title_ko: 레이아웃
   pages:
     - title: Breakpoints
+      title_ko: 중단점
     - title: Containers
+      title_ko: 컨테이너
     - title: Grid
+      title_ko: 그리드
     - title: Columns
+      title_ko: 컬럼
     - title: Gutters
+      title_ko: 거터
     - title: Utilities
+      title_ko: 유틸리티
     - title: Z-index
 
 - title: Content
+  title_ko: 컨텐츠
   pages:
     - title: Reboot
     - title: Typography
+      title_ko: 타이포그래피
     - title: Images
+      title_ko: 이미지
     - title: Tables
+      title_ko: 표
     - title: Figures
+      title_ko: 피규어
 
 - title: Forms
+  title_ko: 폼
   pages:
     - title: Overview
+      title_ko: 개요
     - title: Form control
+      title_ko: 폼 컨트롤
     - title: Select
+      title_ko: 셀렉트
     - title: Checks & radios
+      title_ko: 체크박스 & 라디오버튼
     - title: Range
+      title_ko: 범위
     - title: Input group
+      title_ko: 입력 그룹
     - title: Floating labels
+      title_ko: 플로팅 라벨
     - title: Layout
+      title_ko: 레이아웃
     - title: Validation
+      title_ko: 유효성 검사
 
 - title: Components
+  title_ko: 컴포넌트
   pages:
     - title: Accordion
+      title_ko: 아코디언
     - title: Alerts
+      title_ko: 경고창
     - title: Badge
+      title_ko: 배지
     - title: Breadcrumb
+      title_ko: 브레드크럼
     - title: Buttons
+      title_ko: 버튼
     - title: Button group
+      title_ko: 버튼 그룹
     - title: Card
+      title_ko: 카드
     - title: Carousel
+      title_ko: 캐러셀
     - title: Close button
+      title_ko: 닫기 버튼
     - title: Collapse
+      title_ko: 콜랩스
     - title: Dropdowns
+      title_ko: 드롭다운
     - title: List group
+      title_ko: 목록 그룹
     - title: Modal
+      title_ko: 모달
     - title: Navs & tabs
+      title_ko: 내비게이션 & 탭
     - title: Navbar
+      title_ko: 내비게이션 바
     - title: Offcanvas
+      title_ko: 오프캔버스
     - title: Pagination
+      title_ko: 페이지네이션
     - title: Popovers
+      title_ko: 팝오버
     - title: Progress
+      title_ko: 프로그레스
     - title: Scrollspy
+      title_ko: 스크롤스파이
     - title: Spinners
+      title_ko: 스피너
     - title: Toasts
+      title_ko: 토스트
     - title: Tooltips
+      title_ko: 툴팁
 
 - title: Helpers
+  title_ko: 도우미
   pages:
     - title: Clearfix
+      title_ko: 클리어픽스
     - title: Colored links
+      title_ko: 컬러 링크
     - title: Ratio
+      title_ko: 비율
     - title: Position
+      title_ko: 위치
     - title: Visually hidden
+      title_ko: 시각적으로 숨기기
     - title: Stretched link
+      title_ko: 확장형 링크
     - title: Text truncation
+      title_ko: 말줄임표
 
 - title: Utilities
+  title_ko: 유틸리티
   pages:
     - title: API
     - title: Background
+      title_ko: 배경색
     - title: Borders
+      title_ko: 테두리
     - title: Colors
+      title_ko: 색상
     - title: Display
+      title_ko: 디스플레이
     - title: Flex
+      title_ko: 플렉스
     - title: Float
+      title_ko: 플로트
     - title: Interactions
+      title_ko: 상호작용
     - title: Overflow
+      title_ko: 오버플로우
     - title: Position
+      title_ko: 위치
     - title: Shadows
+      title_ko: 그림자
     - title: Sizing
+      title_ko: 크기 조절
     - title: Spacing
+      title_ko: 간격
     - title: Text
+      title_ko: 글자
     - title: Vertical align
+      title_ko: 수직 정렬
     - title: Visibility
+      title_ko: 가시성
 
 - title: Extend
+  title_ko: 확장
   pages:
     - title: Approach
+      title_ko: 접근
     - title: Icons
+      title_ko: 아이콘
 
 - title: About
+  title_ko: 소개
   pages:
     - title: Overview
+      title_ko: 개요
     - title: Team
+      title_ko: 팀
     - title: Brand
+      title_ko: 브랜드
     - title: License
+      title_ko: 라이선스
     - title: Translations
+      title_ko: 번역
 
 - title: Migration
+  title_ko: 마이그레이션

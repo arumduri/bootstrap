@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Vertical alignment
+title: 수직 정렬
+title_en: Vertical alignment
 description: Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.
 group: utilities
 ---

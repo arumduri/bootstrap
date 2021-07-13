@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Text truncation(말 줄임표)
+title: 말 줄임표
+title_en: Text truncation
 description: 줄임표를 사용하여 긴 문자의 문자열을 자릅니다.
 group: helpers
 toc: false

@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Interactions
+title: 상호작용
+title_en: Interactions
 description: 사용자가 웹 사이트의 콘텐츠와 상호 작용하는 방식을 변경하는 유틸리티 클래스입니다.
 group: utilities
 toc: false

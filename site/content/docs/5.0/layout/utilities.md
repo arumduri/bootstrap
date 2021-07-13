@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: 레이아웃용 유틸리티
+title_en: Utilities for layout
 description: Bootstrap에서는 더  빠른 모바일 친화적 반응형 개발을 위해서 콘텐츠 표시, 숨기기, 정렬, 간격 조정을 위한 수십 개의 유틸리티 클래스가 포함되어 있습니다.
 group: layout
 toc: true

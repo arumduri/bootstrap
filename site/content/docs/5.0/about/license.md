@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: License FAQs(라이선스 FAQ)
+title: 라이선스 FAQ
+title_en: License FAQs
 description: Bootstrap의 오픈 소스 라이선스에 대해서 자주 묻는 질문입니다.
 group: about
 ---

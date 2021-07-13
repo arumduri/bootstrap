@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Approach(접근)
+title: 접근
+title_en: Approach
 description: Bootstrap을 구축하고 유지 관리하는 데에 사용되는 기본 원칙, 전략 및 기술에 대해 알아본 다음 직접 커스터마이징하고 확장해보세요.
 group: extend
 aliases:

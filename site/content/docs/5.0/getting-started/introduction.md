@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Introduction(시작하기)
+title: 시작하기
+title_en: Introduction
 description: 세계에서 가장 인기있는 프레임워크인 Bootstrap으로 반응형, 모바일 우선 사이트를 jsDelivr와 스타터 페이지 템플릿을 통해 시작해보세요.
 group: getting-started
 aliases:

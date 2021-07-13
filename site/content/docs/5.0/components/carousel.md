@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Carousel(캐러셀)
+title: 캐러셀
+title_en: Carousel
 description: 캐러셀은 이미지나 문자의 슬라이드를 가로로 슬라이드시켜 여러 개를 표시하는 컴포넌트입니다.
 toc: true
 ---

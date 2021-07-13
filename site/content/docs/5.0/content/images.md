@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Images(이미지)
+title: 이미지
+title_en: Images
 description: 이미지를 반응형 동작으로 선택하고 (상위 요소보다 커지지 않도록) 클래스를 통해 경량 스타일을 추가하는 문서 및 예제입니다.
 group: content
 toc: true

@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Checks and radios(체크 박스와 라디오 버튼)
+title: 체크박스와 라디오버튼
+title_en: Checks and radios
 description: 완전히 새로워 진 체크 컴포넌트를 사용해 크로스 브라우저와 크로스 기기로 일관된 체크 박스와 라디오 버튼을 만들 수 있습니다.
 group: forms
 aliases: "/docs/5.0/forms/checks/"

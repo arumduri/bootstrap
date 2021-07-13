@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Offcanvas(오프캔버스)
+title: 오프캔버스
+title_en: Offcanvas
 description: 몇 가지의 클래스와 JavaScript 플러그인을 사용해 네비게이션이나 쇼핑카트 등에 유용한 숨겨진 사이드바를 사용할 수 있습니다.
 group: components
 toc: true

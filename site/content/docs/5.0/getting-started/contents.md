@@ -1,6 +1,7 @@
 ---
 layout: docs
-title: Contents(구성 요소)
+title: 구성 요소
+title_en: Contents
 description: 사전 컴파일 및 소스 코드 버전을 포함해서 Bootstrap에 무엇이 포함되어 있는지 알아보세요.
 group: getting-started
 toc: true
