@@ -1,24 +1,25 @@
 ---
 layout: docs
-title: Containers
-description: Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.
+title: 컨테이너
+title_en: Containers
+description: 컨테이너는 지정된 기기 또는 뷰포트 내에서 콘텐츠를 포함하고 채우고 정렬하는 Bootstrap의 기본 구성 요소입니다.
 group: layout
 toc: true
 ---
 
 ## How they work
 
-Containers are the most basic layout element in Bootstrap and are **required when using our default grid system**. Containers are used to contain, pad, and (sometimes) center the content within them. While containers *can* be nested, most layouts do not require a nested container.
+컨테이너는 Bootstrap에서 가장 기본적인 레이아웃 요소이며 **기본 그리드 시스템을 사용할 때 필요합니다**. 컨테이너는 내용을 포함하고 채우고 (때로는) 내용을 중앙 정렬하는 데에 사용됩니다. 컨테이너는 &*중첩될 수 있지만* 대부분의 레이아웃에는 중첩된 컨테이너가 필요하지 않습니다.
 
-Bootstrap comes with three different containers:
+Bootstrap에는 세 가지 다른 컨테이너가 있습니다:
 
-- `.container`, which sets a `max-width` at each responsive breakpoint
-- `.container-fluid`, which is `width: 100%` at all breakpoints
-- `.container-{breakpoint}`, which is `width: 100%` until the specified breakpoint
+- 각 반응형 중단점에 `max-width`를 설정하는 `.container`
+- 모든 중단점에 `width: 100%`를 설정하는 `.container-fluid`
+- 정의된 중단점까지 `width: 100%`를 설정하는 `.container-{breakpoint}`
 
-The table below illustrates how each container's `max-width` compares to the original `.container` and `.container-fluid` across each breakpoint.
+아래 표는 각 중단점에서 각 컨테이너의 `max-width`가 원래 `.container`와 '.container-fluid'가 어떻게 비교되는지 보여줍니다.
 
-See them in action and compare them in our [Grid example]({{< docsref "/examples/grid#containers" >}}).
+[그리드 예제]({{< docsref "/examples/grid#containers" >}})에서 실제로 보고 비교헤보세요.
 
 <table class="table">
   <thead>
@@ -119,7 +120,7 @@ See them in action and compare them in our [Grid example]({{< docsref "/examples
 
 ## Default container
 
-Our default `.container` class is a responsive, fixed-width container, meaning its `max-width` changes at each breakpoint.
+기본 `.container` 클래스는 반응형 고정 너비 컨테이너입니다. 즉, `max-width`가 각 중단점에서 변경됩니다.
 
 ```html
 <div class="container">
@@ -129,7 +130,7 @@ Our default `.container` class is a responsive, fixed-width container, meaning i
 
 ## Responsive containers
 
-Responsive containers allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply `max-width`s for each of the higher breakpoints. For example, `.container-sm` is 100% wide to start until the `sm` breakpoint is reached, where it will scale up with `md`, `lg`, `xl`, and `xxl`.
+반응형 컨테이너를 사용하면 지정된 중단점에 도달할 때까지 너비가 100%인 클래스를 지정할 수 있으며, 그 이후에는 더 높은 각 중단점에 대해 `max-width`를 적용합니다. 예를 들어, `.container-sm`은 `md`, `lg`, `xl` 및 `xxl`로 확장되는 `sm` 중단점에 도달할 때까지 시작하는 너비가 100%입니다.
 
 ```html
 <div class="container-sm">100% wide until small breakpoint</div>
@@ -141,7 +142,7 @@ Responsive containers allow you to specify a class that is 100% wide until the s
 
 ## Fluid containers
 
-Use `.container-fluid` for a full width container, spanning the entire width of the viewport.
+뷰포트의 전체 너비에 걸쳐 있는 전체 너비 컨테이너에 `.container-fluid`를 사용합니다.
 
 ```html
 <div class="container-fluid">
@@ -151,11 +152,11 @@ Use `.container-fluid` for a full width container, spanning the entire width of 
 
 ## Sass
 
-As shown above, Bootstrap generates a series of predefined container classes to help you build the layouts you desire. You may customize these predefined container classes by modifying the Sass map (found in `_variables.scss`) that powers them:
+위에 나와있는 것처럼 Bootstrap은 원하는 레이아웃을 빌드하는 데 도움이 되는 일련의 미리 정의된 컨테이너 클래스를 생성합니다. 다음과 같이 미리 정의된 컨테이너 클래스를 강화하는 Sass 맵(`_variables.scss`에 있음)을 수정하여 커스터마이징할 수 있습니다:
 
 {{< scss-docs name="container-max-widths" file="scss/_variables.scss" >}}
 
-In addition to customizing the Sass, you can also create your own containers with our Sass mixin.
+Sass를 커스터마이징하는 것 외에도 Sass 믹스인을 사용하여 고유한 컨테이너를 만들 수도 있습니다.
 
 ```scss
 // Source mixin
@@ -173,4 +174,4 @@ In addition to customizing the Sass, you can also create your own containers wit
 }
 ```
 
-For more information and examples on how to modify our Sass maps and variables, please refer to [the Sass section of the Grid documentation]({{< docsref "/layout/grid#sass" >}}).
+Sass 맵 및 변수를 수정하는 방법에 대한 자세한 내용과 예제는 [그리드 문서의 Sass 부분]({{< docsref "/layout/grid#sass" >}})을 참조하세요.
