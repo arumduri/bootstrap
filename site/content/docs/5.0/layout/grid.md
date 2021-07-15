@@ -1,17 +1,18 @@
 ---
 layout: docs
-title: Grid system
-description: Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, six default responsive tiers, Sass variables and mixins, and dozens of predefined classes.
+title: 그리드 시스템
+title_en: Grid system
+description: 강력한 모바일 우선 flexbox 그리드를 사용하여 12개의 열 시스템, 6개의 기본 반응형 계층, Sass 변수 및 믹스인, 수십 개의 사전 정의된 클래스 덕분에 모든 모양과 크기의 레이아웃을 빌드할 수 있습니다.
 group: layout
 toc: true
 ---
 
 ## Example
 
-Bootstrap's grid system uses a series of containers, rows, and columns to layout and align content. It's built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) and is fully responsive. Below is an example and an in-depth explanation for how the grid system comes together.
+Bootstrap의 그리드 시스템은 일련의 컨테이너, 행, 열을 사용하여 콘텐츠를 레이아웃하고 정렬합니다. [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)로 빌드되었으며 완전한 반응형입니다. 다음은 그리드 시스템이 함께 제공되는 방법에 대한 예와 자세한 설명입니다.
 
 {{< callout info >}}
-**New to or unfamiliar with flexbox?** [Read this CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and code snippets.
+**flexbox를 처음 사용하거나 익숙하지 않나요?** [CSS Tricks flexbox 가이드에서](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) 배경, 철학, 가이드라인, 코드 스니펫에 대해 읽어보세요.
 {{< /callout >}}
 
 {{< example class="bd-example-row" >}}
@@ -30,29 +31,29 @@ Bootstrap's grid system uses a series of containers, rows, and columns to layout
 </div>
 {{< /example >}}
 
-The above example creates three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent `.container`.
+위의 예에서는 사전 정의된 그리드 클래스를 사용하여 모든 기기와 뷰포트에 동일한 너비의 열 3개를 만듭니다. 이러한 열은 부모 `.container`가 있는 페이지 중앙에 있습니다.
 
 ## How it works
 
-Breaking it down, here's how the grid system comes together:
+이를 세분화하면 그리드 시스템이 함께 제공되는 방법은 다음과 같습니다:
 
-- **Our grid supports [six responsive breakpoints]({{< docsref "/layout/breakpoints" >}}).**  Breakpoints are based on `min-width` media queries, meaning they affect that breakpoint and all those above it (e.g., `.col-sm-4` applies to `sm`, `md`, `lg`, `xl`, and `xxl`). This means you can control container and column sizing and behavior by each breakpoint.
+- **우리 그리드는 [여섯 개의 반응형 중단점]({{< docsref "/layout/breakpoints" >}}).**  중단점은 `min-width` 미디어 쿼리를 기반으로 합니다. 즉, 중단점과 그 위에 있는 모든 중단점에 영향을 미칩니다 (예: `.col-sm-4`는 `sm`, `md`, `lg`, `xl`, `xxl`에 적용됨). 즉, 각 중단점별로 컨테이너 및 열 크기 및 동작을 제어할 수 있습니다.
 
-- **Containers center and horizontally pad your content.** Use `.container` for a responsive pixel width, `.container-fluid` for `width: 100%` across all viewports and devices, or a responsive container (e.g., `.container-md`) for a combination of fluid and pixel widths.
+- **컨테이너는 콘텐츠를 중앙에 놓고 가로로 채웁니다.** 반응형 픽셀 너비에는 `.container`를, 모든 뷰포트 및 디바이스에서 `width: 100%`에는 `.container-fluid`를, 유동 및 픽셀 폭의 조합에는 반응형 컨테이너 (예: `.container-md`)를 사용합니다.
 
-- **Rows are wrappers for columns.** Each column has horizontal `padding` (called a gutter) for controlling the space between them. This `padding` is then counteracted on the rows with negative margins to ensure the content in your columns is visually aligned down the left side. Rows also support modifier classes to [uniformly apply column sizing](#row-columns) and [gutter classes]({{< docsref "/layout/gutters" >}}) to change the spacing of your content.
+- **행은 열의 래퍼입니다.** 각 열에는 열 사이의 공간을 제어하기 위한 수평 `padding` (거터라고 함)이 있습니다. 그런 다음 이 `padding`은 여백이 마이너스인 행에서 상쇄되어 열의 콘텐츠가 좌측 하단으로 시각적으로 정렬되도록 합니다. 또한 행은 [열 크기를 균일하게 적용하고](#row-columns) [거터 클래스]({{< docsref "/layout/gutters" >}})를 통해 콘텐츠의 간격을 변경하는 수정자 클래스를 지원합니다.
 
-- **Columns are incredibly flexible.** There are 12 template columns available per row, allowing you to create different combinations of elements that span any number of columns. Column classes indicate the number of template columns to span (e.g., `col-4` spans four). `width`s are set in percentages so you always have the same relative sizing.
+- **열은 매우 유연합니다.** 행 당 12개의 템플릿 열을 사용할 수 있으므로 여러 열에 걸쳐 있는 다양한 요소 조합을 만들 수 있습니다. 열 클래스는 확장할 템플릿 열의 수를 나타냅니다 (예: `col-4`는 4개 확장). `width`는 백분율로 설정되므로 항상 상대적인 크기가 동일합니다.
 
-- **Gutters are also responsive and customizable.** [Gutter classes are available]({{< docsref "/layout/gutters" >}}) across all breakpoints, with all the same sizes as our [margin and padding spacing]({{< docsref "/utilities/spacing" >}}). Change horizontal gutters with `.gx-*` classes, vertical gutters with `.gy-*`, or all gutters with `.g-*` classes. `.g-0` is also available to remove gutters.
+- **또한 거터는 반응형이고 사용자 정의가 가능합니다.** [거터 클래스]({{< docsref "/layout/gutters" >}})는 모든 중단점에서 사용할 수 있고, [마진 및 패딩 간격]({{< docsref "/utilities/spacing" >}})과 같은 크기입니다. 수평 거터는 `.gx-*` 클래스로, 수직 거터는 `.gy-*`로, 모든 거터는 `g-*` 클래스로 변경하세요. `.g-0`은 거터를 제거하는 데에 사용할 수도 있습니다.
 
-- **Sass variables, maps, and mixins power the grid.** If you don't want to use the predefined grid classes in Bootstrap, you can use our [grid's source Sass](#sass) to create your own with more semantic markup. We also include some CSS custom properties to consume these Sass variables for even greater flexibility for you.
+- **Sass 변수, 맵, 믹스인은 그리드를 구동합니다.** Bootstrap에서 미리 정의된 그리드 클래스를 사용하지 않으려면 [그리드의 Sass 소스](#sass)를 사용하여 추가적인 시멘틱 마크업으로 직접 생성할 수 있습니다. 또한 더 큰 유연성을 위해 이러한 Sass 변수를 사용하는 일부 CSS 사용자 정의 속성도 포함합니다.
 
-Be aware of the limitations and [bugs around flexbox](https://github.com/philipwalton/flexbugs), like the [inability to use some HTML elements as flex containers](https://github.com/philipwalton/flexbugs#flexbug-9).
+제한 사항 및 [flexbox 관련 버그](https://github.com/philipwalton/flexbugs), [일부 HTML 요소를 플렉스 컨테이너로 사용할 수 없음](https://github.com/philipwalton/flexbugs#flexbug-9)에 주의하세요.
 
 ## Grid options
 
-Bootstrap's grid system can adapt across all six default breakpoints, and any breakpoints you customize. The six default grid tiers are as follow:
+Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의한 모든 중단점에 걸쳐 적응할 수 있습니다. 6개의 기본 그리드 계층은 다음과 같습니다:
 
 - Extra small (xs)
 - Small (sm)
@@ -61,7 +62,7 @@ Bootstrap's grid system can adapt across all six default breakpoints, and any br
 - Extra large (xl)
 - Extra extra large (xxl)
 
-As noted above, each of these breakpoints have their own container, unique class prefix, and modifiers. Here's how the grid changes across these breakpoints:
+위에서 언급했듯이 이러한 각 중단점에는 고유한 컨테이너, 고유한 클래스 접두사, 수정자가 있습니다. 다음은 이러한 중단점에서 그리드가 변경되는 방식입니다:
 
 <table class="table mb-4">
   <thead>
@@ -95,8 +96,8 @@ As noted above, each of these breakpoints have their own container, unique class
   </thead>
   <tbody>
     <tr>
-      <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
-      <td>None (auto)</td>
+      <th class="text-nowrap" scope="row">컨테이너 <code class="fw-normal">max-width</code></th>
+      <td>없음 (자동)</td>
       <td>540px</td>
       <td>720px</td>
       <td>960px</td>
@@ -104,7 +105,7 @@ As noted above, each of these breakpoints have their own container, unique class
       <td>1320px</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Class prefix</th>
+      <th class="text-nowrap" scope="row">클래스 접두어</th>
       <td><code>.col-</code></td>
       <td><code>.col-sm-</code></td>
       <td><code>.col-md-</code></td>
@@ -113,35 +114,35 @@ As noted above, each of these breakpoints have their own container, unique class
       <td><code>.col-xxl-</code></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row"># of columns</th>
+      <th class="text-nowrap" scope="row">열 개수</th>
       <td colspan="6">12</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Gutter width</th>
-      <td colspan="6">1.5rem (.75rem on left and right)</td>
+      <th class="text-nowrap" scope="row">거터 너비</th>
+      <td colspan="6">1.5rem (좌우로 각각 .75rem)</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Custom gutters</th>
-      <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
+      <th class="text-nowrap" scope="row">사용자 정의 거터</th>
+      <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">가능</a></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Nestable</th>
-      <td colspan="6"><a href="#nesting">Yes</a></td>
+      <th class="text-nowrap" scope="row">중첩</th>
+      <td colspan="6"><a href="#nesting">가능</a></td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">Column ordering</th>
-      <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
+      <th class="text-nowrap" scope="row">열 정렬</th>
+      <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">가능</a></td>
     </tr>
   </tbody>
 </table>
 
 ## Auto-layout columns
 
-Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like `.col-sm-6`.
+`.col-sm-6`과 같이 명시적인 번호가 매겨진 클래스 없이 간편한 열 크기 조정을 위해 중단점별 열 클래스를 활용합니다.
 
 ### Equal-width
 
-For example, here are two grid layouts that apply to every device and viewport, from `xs` to `xxl`. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
+예를 들어서 `xs`에서 `xxl`까지 모든 기기와 뷰포트에 적용되는 두 가지 그리드 레이아웃이 있습니다. 필요한 각 중단점에 대해 단위 없는 클래스를 원하는 수만큼 추가하면 모든 열의 너비가 동일합니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -169,7 +170,7 @@ For example, here are two grid layouts that apply to every device and viewport, 
 
 ### Setting one column width
 
-Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.
+flexbox 그리드 열에 대한 자동 레이아웃은 또한 한 열의 너비를 설정하고 형제 열이 주위에서 자동으로 크기를 조정하도록 할 수 있음을 의미합니다. 미리 정의된 그리드 클래스 (아래에 표시되어 있음), 그리드 믹스인 또는 인라인 너비를 사용할 수 있습니다. 다른 열은 중앙 열의 너비에 관계없이 크기가 조정됩니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -200,7 +201,7 @@ Auto-layout for flexbox grid columns also means you can set the width of one col
 
 ### Variable width content
 
-Use `col-{breakpoint}-auto` classes to size columns based on the natural width of their content.
+`col-{breakpoint}-auto` 클래스를 사용하여 콘텐츠의 자연스러운 너비에 따라 열의 크기를 조정합니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -230,12 +231,11 @@ Use `col-{breakpoint}-auto` classes to size columns based on the natural width o
 {{< /example >}}
 
 ## Responsive classes
-
-Bootstrap's grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.
+Bootstrap의 그리드에는 복잡한 반응형 레이아웃을 구축하기 위한 6개 계층의 사전 정의된 클래스가 포함되어 있습니다. small, small, medium, large, extra large 기기에서 열의 크기를 원하는 대로 사용자 정의하세요.
 
 ### All breakpoints
 
-For grids that are the same from the smallest of devices to the largest, use the `.col` and `.col-*` classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to `.col`.
+가장 작은 기기에서 가장 큰 기기까지 동일한 그리드의 경우 `.col` 및 `.col-*` 클래스를 사용합니다. 특정 크기의 열이 필요한 경우 번호가 지정된 클래스를 지정하세요. 그렇지 않으면 `.col`을 계속 사용하시면 됩니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -254,7 +254,7 @@ For grids that are the same from the smallest of devices to the largest, use the
 
 ### Stacked to horizontal
 
-Using a single set of `.col-sm-*` classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (`sm`).
+단일 세트의 `.col-sm-*` 클래스를 사용하여 스택에서 시작하여 작은 중단점(`sm`)에서 수평이 되는 기본 그리드 시스템을 만들 수 있습니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -272,7 +272,7 @@ Using a single set of `.col-sm-*` classes, you can create a basic grid system th
 
 ### Mix and match
 
-Don't want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.
+열이 일부 그리드 계층에 쌓이는 것을 원하지 않으시나요? 필요에 따라 각 계층에 대해 서로 다른 클래스를 조합하여 사용하세요. 모든 작동 방식에 대한 더 나은 아이디어는 아래 예를 참조하세요.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -299,9 +299,9 @@ Don't want your columns to simply stack in some grid tiers? Use a combination of
 
 ### Row columns
 
-Use the responsive `.row-cols-*` classes to quickly set the number of columns that best render your content and layout. Whereas normal `.col-*` classes apply to the individual columns (e.g., `.col-md-4`), the row columns classes are set on the parent `.row` as a default for contained columns. With `.row-cols-auto` you can give the columns their natural width.
+반응형 `.row-cols-*` 클래스를 사용하여 콘텐츠와 레이아웃을 가장 잘 렌더링하는 열 수를 빠르게 설정하세요. 일반 `.col-*` 클래스는 개별 열 (예: `.col-md-4`)에 적용되지만 행 열 클래스는 포함된 열의 기본값으로 상위 `.row`에 설정됩니다. `.row-cols-auto`를 사용하면 열에 자연스러운 너비를 지정할 수 있습니다.
 
-Use these row columns classes to quickly create basic grid layouts or to control your card layouts and override when needed at the column level.
+이러한 행 열 클래스를 사용하여 기본 그리드 레이아웃을 빠르게 생성하거나 카드 레이아웃을 제어하고 필요할 때 열 수준에서 재정의할 수 있습니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -388,7 +388,7 @@ Use these row columns classes to quickly create basic grid layouts or to control
 </div>
 {{< /example >}}
 
-You can also use the accompanying Sass mixin, `row-cols()`:
+함께 제공되는 Sass 믹스인 `row-cols()`를 사용할 수도 있습니다:
 
 ```scss
 .element {
@@ -404,7 +404,7 @@ You can also use the accompanying Sass mixin, `row-cols()`:
 
 ## Nesting
 
-To nest your content with the default grid, add a new `.row` and set of `.col-sm-*` columns within an existing `.col-sm-*` column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
+기본 그리드로 콘텐츠를 중첩하려면 기존 `.col-sm-*` 열 내에 새로운 `.row`와 `.col-sm-*` 열 세트를 추가하세요. 중첩된 행에는 최대 12개 이하의 열을 추가하는 열 집합이 포함되어야 합니다 (사용 가능한 열 12개를 모두 사용할 필요는 없음).
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -428,11 +428,11 @@ To nest your content with the default grid, add a new `.row` and set of `.col-sm
 
 ## Sass
 
-When using Bootstrap's source Sass files, you have the option of using Sass variables and mixins to create custom, semantic, and responsive page layouts. Our predefined grid classes use these same variables and mixins to provide a whole suite of ready-to-use classes for fast responsive layouts.
+Bootstrap의 Sass 파일 소스를 사용할 때 Sass 변수와 믹스인을 사용하여 사용자 정의, 의미 체계 및 반응형 페이지 레이아웃을 생성할 수 있는 옵션이 있습니다. 사전 정의된 그리드 클래스는 이러한 동일한 변수와 믹스인을 사용하여 빠른 반응형 레이아웃을 위해 즉시 사용할 수 있는 전체 클래스 모음을 제공합니다.
 
 ### Variables
 
-Variables and maps determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.
+변수와 맵은 열 수, 여백 너비 및 부동 열을 시작할 미디어 쿼리 지점을 결정합니다. 우리는 이것을 사용하여 위에 설명된 미리 정의된 그리드 클래스와 아래에 나열된 사용자 지정 믹스인을 생성합니다.
 
 ```scss
 $grid-columns:      12;
@@ -445,7 +445,7 @@ $grid-gutter-width: 1.5rem;
 
 ### Mixins
 
-Mixins are used in conjunction with the grid variables to generate semantic CSS for individual grid columns.
+믹스인은 개별 그리드 열에 대한 시멘틱 CSS를 생성하기 위해 그리드 변수와 함께 사용됩니다.
 
 ```scss
 // Creates a wrapper for a series of columns
@@ -464,7 +464,7 @@ Mixins are used in conjunction with the grid variables to generate semantic CSS 
 
 ### Example usage
 
-You can modify the variables to your own custom values, or just use the mixins with their default values. Here's an example of using the default settings to create a two-column layout with a gap between.
+변수를 사용자 정의 값으로 수정하거나 기본값과 함께 믹스인을 사용할 수 있습니다. 다음은 기본 설정을 사용하여 간격이 있는 2열 레이아웃을 만드는 예입니다.
 
 ```scss
 .example-container {
@@ -512,11 +512,11 @@ You can modify the variables to your own custom values, or just use the mixins w
 
 ## Customizing the grid
 
-Using our built-in grid Sass variables and maps, it's possible to completely customize the predefined grid classes. Change the number of tiers, the media query dimensions, and the container widths—then recompile.
+내장된 그리드 Sass 변수와 맵을 사용하여 사전 정의된 그리드 클래스를 완전히 사용자 정의할 수 있습니다. 계층 수, 미디어 쿼리 크기 및 컨테이너 너비를 변경한 다음 다시 컴파일하면 됩니다.
 
 ### Columns and gutters
 
-The number of grid columns can be modified via Sass variables. `$grid-columns` is used to generate the widths (in percent) of each individual column while `$grid-gutter-width` sets the width for the column gutters.
+그리드 열의 수는 Sass 변수를 통해 수정할 수 있습니다. `$grid-columns`는 각 개별 열의 너비 (백분율)를 생성하는 데에 사용되는 반면 `$grid-gutter-width`는 열 거터의 너비를 설정합니다.
 
 ```scss
 $grid-columns: 12 !default;
@@ -525,7 +525,7 @@ $grid-gutter-width: 1.5rem !default;
 
 ### Grid tiers
 
-Moving beyond the columns themselves, you may also customize the number of grid tiers. If you wanted just four grid tiers, you'd update the `$grid-breakpoints` and `$container-max-widths` to something like this:
+열 자체를 넘어 그리드 계층의 수를 사용자 정의할 수도 있습니다. 4개의 그리드 계층만 필요하다면 `$grid-breakpoints` 및 `$container-max-widths`를 다음과 같이 업데이트하면 됩니다:
 
 ```scss
 $grid-breakpoints: (
@@ -542,4 +542,4 @@ $container-max-widths: (
 );
 ```
 
-When making any changes to the Sass variables or maps, you'll need to save your changes and recompile. Doing so will output a brand new set of predefined grid classes for column widths, offsets, and ordering. Responsive visibility utilities will also be updated to use the custom breakpoints. Make sure to set grid values in `px` (not `rem`, `em`, or `%`).
+Sass 변수 또는 맵을 변경할 때 변경 사항을 저장하고 다시 컴파일해야 합니다. 그렇게 하면 열 너비, 오프셋 및 순서에 대한 사전 정의된 그리드 클래스의 새로운 세트가 출력됩니다. 반응형 가시성 유틸리티도 사용자 지정 중단점을 사용하도록 업데이트됩니다. 그리드 값이 `px`로 설정되어 있는지 확인해주세요 (`rem`, `em`, `%`는 사용할 수 없음).
