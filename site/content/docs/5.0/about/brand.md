@@ -30,7 +30,7 @@ Bootstrap을 언급할 때에는 우리의 로고 상표를 사용해주세요. 
 
 ## 이름
 
-Bootstrap은 그냥 **Bootstrap**으로만 언급되어야 합니다. 앞에 Twitter를 붙이거나 _s_를 대텍스트로 바꾸지 마세요.
+Bootstrap은 그냥 **Bootstrap**으로만 언급되어야 합니다. 앞에 Twitter를 붙이거나 _s_를 대문자로 바꾸지 마세요.
 
 <div class="bd-brand-logos d-sm-flex text-center bg-light rounded-lg overflow-hidden w-100 mb-3">
   <div class="bd-brand-item w-100 p-3">
