@@ -3,6 +3,7 @@ layout: docs
 title: 캐러셀
 title_en: Carousel
 description: 캐러셀은 이미지나 텍스트의 슬라이드를 가로로 슬라이드시켜 여러 개를 표시하는 컴포넌트입니다.
+group: components
 toc: true
 ---
 
@@ -44,7 +45,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### 컨트
+### 컨트롤 포함
 
 이전/다음의 컨트롤을 추가할 때 권장하는 것은 `<button>` 요소지만, `role="button"`을 사용한 `<a>` 요소를 사용할 수도 있습니다.
 
@@ -72,7 +73,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### 인디케이터
+### 인디케이터 포함
 
 그리고, 캐러셀에는 컨트롤과 함께 위치 표시(인디게이터, indicator)를 추가할 수도 있습니다.
 
@@ -105,7 +106,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### 설명문
+### 설명문 포함
 
 `.carousel-item` 안의 `.carousel-caption` 요소를 사용해, 슬라이드에 설명문 (캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 [디스플레이 유틸리티]({{< docsref "/utilities/display" >}}) 를 사용함으로써, 보다 작은 뷰포트에서 간단하게 설명문 (캡션, caption)을 감추는 것도 가능합니다. 처음에는 `.d-none` 로 비표시하고, 중형 기기에서는 `.d-md-block`으로 다시 표시합니다.
 
@@ -150,7 +151,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### Crossfade
+### 덮어씌우기
 
 `.carousel-fade`를 캐러셀에 추가하면, 슬라이드 대신에 fade 트랜지션으로 슬라이드를 애니메이션화 시킬 수 있습니다.
 
@@ -178,7 +179,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### Individual `.carousel-item` interval
+### 독립 `.carousel-item` 지연 시간
 
 다음 아이템으로 자동으로 바뀔 때까지의 지연 시간을 변경하려면 `.carousel-item`에 `data-bs-interval=""`을 추가합니다.
 
@@ -206,7 +207,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### Disable touch swiping
+### 터치 스와이프 비활성화
 
 캐러셀은 터치 스크린 단말기에서의 좌우 스와이프에 의한 슬라이드 간 이동을 지원합니다. 이것은 `data-bs-touch` 속성을 사용해 비활성화시킬 수 있습니다. 아래의 예시는 자동 재생시키지 않기 위해 `data-bs-ride` 속성을 포함하지 않고 `data-bs-interval="false"`로 하였습니다.
 
@@ -234,7 +235,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Dark variant
+## 검은색 변형
 
 컨트롤, 위치 표시(인디게이터, indicator) 혹은 설명문(캡션, caption)을 어둡게 하기 위해서 `.carousel-dark`를 `.carousel`에 추가했습니다. 컨트롤은 `filter` CSS 속성으로 기본 흰색으로 칠해진 것이 반전됩니다. 설명문(캡션, caption)과 컨트롤에는 `color`와 `background-color`를 재정의하는 Sass 변수가 추가되었습니다.
 
@@ -279,7 +280,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Custom transition
+## 사용자 지정 트랜지션
 
 `.carousel-item`의 트랜지션의 지속시간은 컴파일 전의 Sass 변수인 `$carousel-transition-duration`이나, 컴파일된 CSS를 사용하는 경우의 사용자 정의 스타일로 변경할 수 있습니다. 여러 개의 트랜지션이 적용되는 경우 트랜스폼 트랜지션이 맨 앞에 정의되어 있는지 확인해 주세요(예를 들어, `transition: transform 2s ease, opacity .5s ease-out`).
 
@@ -289,15 +290,15 @@ toc: true
 
 {{< scss-docs name="carousel-variables" file="scss/_variables.scss" >}}
 
-## Usage
+## 사용 예시
 
-### Via data attributes
+### 데이터 속성 사용하기
 
 캐러셀의 위치를 간단히 제어하려면, data 속성을 사용합니다. `data-bs-slide`는 키워드 `prev`나 `next`를 받아, 현재의 위치에 대한 슬라이드의 위치를 변경합니다. 혹은 `data-bs-slide-to`를 사용해 가공되지 않은 슬라이드 인덱스를 캐러셀에게 건네주면 `data-bs-slide-to="2"`가 되어, 슬라이드의 위치를 `0`에서 시작하는 특정의 인덱스로 이동시킵니다.
 
 `data-bs-ride="carousel"` 속성은, 페이지 로드 시 캐러셀을 애니메이션화 시키는데 사용됩니다. 캐러셀의 초기화에 `data-bs-ride="carousel"`를 사용하지 않는 경우에는, 스스로 초기화할 필요가 있습니다. **같은 캐러셀의 명시적인 JavaScript의 초기화(장황하고 불필요한)와 동시 사용은 할 수 없습니다.**
 
-### Via JavaScript
+### JavaScript 사용하기
 
 캐러셀을 수동으로 부르는 경우 :
 
@@ -306,7 +307,7 @@ var myCarousel = document.querySelector('#myCarousel')
 var carousel = new bootstrap.Carousel(myCarousel)
 ```
 
-### Options
+### 옵션
 
 옵션은, data 속성 혹은 JavaScript로 줄 수 있습니다. data 속성의 경우, `data-bs-interval=""`과 같이, `data-bs-`에 옵션명을 추가합니다.
 
