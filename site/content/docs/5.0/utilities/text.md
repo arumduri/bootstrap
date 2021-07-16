@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 글자
+title: 텍스트
 title_en: Text
 description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
 group: utilities
@@ -138,7 +138,7 @@ Decorate text in components with text decoration classes.
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="font-variables" file="scss/_variables.scss" >}}
 

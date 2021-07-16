@@ -7,7 +7,7 @@ group: components
 toc: true
 ---
 
-## How it works
+## 작동 원리
 
 스크롤 스파이가 제대로 동작하기 위해서는 몇 가지 조건이 있습니다:
 
@@ -22,7 +22,7 @@ toc: true
 스크롤 가능한 컨테이너(`<body>` 이외의 )를 작성할 경우에는 반드시 `height`를 설정하고 키보드로 부터의 접근을 확실히 하기 위해서 `tabindex="0"`와 함께 `overflow-y: scroll;`을 적용하십시오.
 {{< /callout >}}
 
-## Example in navbar
+## navbar 예시
 
 내비게이션 바 아래 영역을 스크롤하여 활성화된 클래스의 변화를 살펴보세요. 드롭다운 아이템도 같이 강조 표시됩니다.
 
@@ -96,9 +96,9 @@ toc: true
 </div>
 ```
 
-## Example with nested nav
+## nested nav 예시
 
-스크롤 스파이는 중첩된 `.nav` 에서도 동작합니다. 중첩 된 `.nav`가 `.active`인 경우, 그 부모도 `.active`가 됩니다. 내비게이션 바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.
+스크롤 스파이는 중첩된 `.nav`에서도 동작합니다. 중첩 된 `.nav`가 `.active`인 경우, 그 부모도 `.active`가 됩니다. 내비게이션 바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.
 
 <div class="bd-example">
   <div class="row">
@@ -177,7 +177,7 @@ toc: true
 </div>
 ```
 
-## Example with list-group
+## list-group 예시
 
 스크롤 스파이는 `.list-group`에서도 동작합니다. 목록 그룹 옆의 영역을 스크롤해서 활성화 된 클래스가 변화하는 것을 보겠습니다.
 
@@ -229,7 +229,7 @@ toc: true
 
 ### Via data attributes
 
-topbar 내비게이션에 스크롤 스파이 동작을 간단하게 추가하려면, 스크롤 스파이 하고 싶은 요소에 `data-bs-spy="scroll"`를 추가합니다(가장 전형적으로는 `<body>`입니다). 그 다음에 `data-bs-target` 속성에 임의의 Bootstrap `.nav` 컴포넌트의 부모 요소의 ID 또는 클래스를 추가합니다.
+topbar 내비게이션에 스크롤 스파이 동작을 간단하게 추가하려면, 스크롤 스파이 하고 싶은 요소에 `data-bs-spy="scroll"`를 추가합니다 (가장 전형적으로는 `<body>`입니다). 그 다음에 `data-bs-target` 속성에 임의의 Bootstrap `.nav` 컴포넌트의 부모 요소의 ID 또는 클래스를 추가합니다.
 
 ```css
 body {
@@ -271,7 +271,7 @@ Navbar 링크는 해결 가능한 id 타깃을 가져야 합니다. 예를 들�
 표시되지 않는 타깃 요소는 무시되며 대응 nav 아이템은 강조 표시되지 않습니다.
 {{< /callout >}}
 
-### Methods
+### 메소드
 
 #### refresh
 
@@ -309,7 +309,7 @@ var scrollSpy = bootstrap.ScrollSpy.getOrCreateInstance(scrollSpyContentEl) // R
 
 ### Options
 
-옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성인 경우는 `data-bs-offset=""` 처럼 `data-bs-`에 옵션 명을 추가합니다.
+옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성인 경우는 `data-bs-offset=""` 처럼 `data-bs-`에 옵션명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -342,7 +342,7 @@ var scrollSpy = bootstrap.ScrollSpy.getOrCreateInstance(scrollSpyContentEl) // R
   </tbody>
 </table>
 
-### Events
+### 이벤트
 
 <table class="table">
   <thead>

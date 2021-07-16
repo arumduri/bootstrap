@@ -7,15 +7,15 @@ group: components
 toc: true
 ---
 
-## How it works
+## 작동 원리
 
-Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에 사용됩니다. 버튼과 앵커는, 토글 하는 특정 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 `height` 가 기존 값에서 `0`으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 고려하면, `.collapse` 요소에 `padding`을 사용할 수 없습니다. 대신, 이 클래스를 독립된 래핑 요소로 사용합니다.
+Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에 사용됩니다. 버튼과 앵커는, 토글 하는 특정 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 `height`가 기존 값에서 `0`으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 고려하면, `.collapse` 요소에 `padding`을 사용할 수 없습니다. 대신, 이 클래스를 독립된 줄바꿈 요소로 사용합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Example
+## 예시
 
 아래의 버튼을 클릭하면, 클래스 변경에 따라 다른 요소의 표시 및 숨김을 전환할 수 있습니다.
 
@@ -70,7 +70,7 @@ Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에
 </div>
 {{< /example >}}
 
-## Accessibility
+## 접근성
 
 컨트롤 요소에 `aria-expanded`를 반드시 추가해 주세요. 이 속성은 컨트롤에 연결된 접을 수 있는 요소의 현재 상태를 스크린 리더나 동일한 지원 기술에 명시적으로 전달합니다. 접을 수 있는 요소가 기본적으로 닫혀있는 경우, 컨트롤 요소의 속성값은 `aria-expanded="false"` 이어야 합니다. `show` 클래스를 사용해 접을 수 있는 요소를 기본으로 열도록 설정한 경우에는, 대신 컨트롤에 `aria-expanded="true"` 로 설정해 주십시오. 플러그인은 접을 수 있는 요소가 열려 있는지 닫혀 있는지에 따라(JavaScript를 통해 사용자가 접을 수 있는 요소와 관련된 별도의 요소를 트리거 했기 때문에) 컨트롤 상에서 이 속성을 자동으로 바꿉니다. 컨트롤 요소의 HTML 요소가 버튼이 아닌 경우(예를 들어 `<a>` 나 `<div>` 등) 요소에 `role="button"` 속성을 추가해야 합니다.
 
@@ -80,7 +80,7 @@ Bootstrap의 현재 구현은, [WAI-ARIA Authoring Practices 1.1 accordion patte
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="collapse-transition" file="scss/_variables.scss" >}}
 
@@ -119,7 +119,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
 
 ### Options
 
-옵션은 JavaScript나 데이터 속성으로 줄 수 있습니다. 데이터 속성의 경우는 `data-bs-parent=""` 처럼 `data-bs-` 에 옵션 명을 추가합니다.
+옵션은 JavaScript나 데이터 속성으로 줄 수 있습니다. 데이터 속성의 경우는 `data-bs-parent=""` 처럼 `data-bs-`에 옵션명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -135,7 +135,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
       <td><code>parent</code></td>
       <td>selector | jQuery object | DOM element </td>
       <td><code>false</code></td>
-      <td>parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다(기존 accordion(아코디언) 동작과 비슷합니다. - 이것은 <code>card</code> 클래스에 의존합니다). 속성은 접을 수 있는 타깃 영역으로 설정해야 합니다.</td>
+      <td>parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될 때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다 (기존 아코디언 동작과 비슷하며 <code>card</code> 클래스에 의존합니다). 속성은 접을 수 있는 타깃 영역으로 설정해야 합니다.</td>
     </tr>
     <tr>
       <td><code>toggle</code></td>
@@ -146,7 +146,7 @@ var collapseList = collapseElementList.map(function (collapseEl) {
   </tbody>
 </table>
 
-### Methods
+### 메소드
 
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
@@ -207,7 +207,7 @@ var bsCollapse = new bootstrap.Collapse(myCollapse, {
   </tbody>
 </table>
 
-### Events
+### 이벤트
 
 Bootstrap의 콜랩스 클래스는, 콜랩스 기능을 후킹하기 위한 몇 가지 이벤트를 공개하고 있습니다.
 
@@ -225,7 +225,7 @@ Bootstrap의 콜랩스 클래스는, 콜랩스 기능을 후킹하기 위한 몇
     </tr>
     <tr>
       <td><code>shown.bs.collapse</code></td>
-      <td>이 이벤트는 collapse 요소가 사용자에게 보여질 때 발생합니다(CSS 트랜지션이 완료되는 것을 기다립니다).</td>
+      <td>이 이벤트는 collapse 요소가 사용자에게 보여질 때 발생합니다 (CSS 트랜지션이 완료되는 것을 기다립니다).</td>
     </tr>
     <tr>
       <td><code>hide.bs.collapse</code></td>
@@ -233,7 +233,7 @@ Bootstrap의 콜랩스 클래스는, 콜랩스 기능을 후킹하기 위한 몇
     </tr>
     <tr>
       <td><code>hidden.bs.collapse</code></td>
-      <td>이 이벤트는 collapse 요소가 사용자에게 숨겨졌을 때 발생합니다(CSS 트랜지션이 완료될 때까지 기다립니다).</td>
+      <td>이 이벤트는 collapse 요소가 사용자에게 숨겨졌을 때 발생합니다 (CSS 트랜지션이 완료될 때까지 기다립니다).</td>
     </tr>
   </tbody>
 </table>

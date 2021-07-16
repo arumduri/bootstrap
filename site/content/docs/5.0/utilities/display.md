@@ -7,13 +7,13 @@ group: utilities
 toc: true
 ---
 
-## How it works
+## 작동 원리
 
-반응형 디스플레이 유틸리티 클래스를 사용하여 [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)의 값을 변경합니다. 의도적으로 `디스플레이` 에 대해 가능한 모든 값의 하위 집합만 지원합니다. 클래스는 다양한 효과를 위해 필요에 따라 결합 시킬 수 있습니다.
+반응형 디스플레이 유틸리티 클래스를 사용하여 [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)의 값을 변경합니다. 의도적으로 `디스플레이`에 대해 가능한 모든 값의 자식 집합만 지원합니다. 클래스는 다양한 효과를 위해 필요에 따라 결합 시킬 수 있습니다.
 
 ## Notation
 
- `xs` 에서 `xxl` 까지 모든 [breakpoints]({{< docsref "/layout/breakpoints" >}})에 적용되는 디스플레이 유틸리티 클래스에는 중단 점 축약어가 없습니다. 이는 해당 클래스가 `min-width: 0;` 에서 적용되기 때문입니다. 따라서 미디어 쿼리에 의해 제한되지 않습니다. 그러나 나머지 중단 점에는 중단 점 축약어가 포함됩니다.
+ `xs`에서 `xxl` 까지 모든 [breakpoints]({{< docsref "/layout/breakpoints" >}})에 적용되는 디스플레이 유틸리티 클래스에는 중단 점 축약어가 없습니다. 이는 해당 클래스가 `min-width: 0;`에서 적용되기 때문입니다. 따라서 미디어 쿼리에 의해 제한되지 않습니다. 그러나 나머지 중단 점에는 중단 점 축약어가 포함됩니다.
 
 따라서 클래스는 다음 형식을 사용하여 이름이 지정됩니다.
 
@@ -37,7 +37,7 @@ toc: true
 
 미디어 쿼리는 지정된 중단 점 **보다 큰** 화면 너비에 영향을 줍니다. 예를 들어, `.d-lg-none` 설정은 `lg` 뿐만 아니라 `xl` 그리고 `xxl` 화면을 `display: none;` 합니다. 
 
-## Examples
+## 예시
 
 {{< example >}}
 <div class="d-inline p-2 bg-primary text-white">d-inline</div>
@@ -156,6 +156,6 @@ toc: true
 
 ### Utilities API
 
-디스플레이 유틸리티는 `scss / _utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
+디스플레이 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-display" file="scss/_utilities.scss" >}}

@@ -1,16 +1,16 @@
 ---
 layout: docs
 title: RTL
-description: 레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 문자의 지원을 활성화하는 방법을 알아보세요.
+description: 레이아웃, 구성 요소 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 텍스트의 지원을 활성화하는 방법을 알아보세요.
 group: getting-started
 toc: true
 ---
 
-## Get familiar
+## 익숙해지기
 
-먼저 [시작하기 페이지]를 읽고 Bootstrap에 익숙해지는 것이 좋습니다. 어느정도 읽어보았다면 RTL을 활성화하는 방법에 대해 계속 읽어보세요.
+먼저 [시작하기 페이지]({{< docsref "/getting-started/introduction" >}})를 읽고 Bootstrap에 익숙해지는 것이 좋습니다. 어느정도 읽어보았다면 RTL을 활성화하는 방법에 대해 계속 읽어보세요.
 
-우리가 RTL에 접근하는 방식을 강화하는 [RTLCSS 프로젝트]에 대해서 읽어볼 수도 있습니다.
+우리가 RTL에 접근하는 방식을 강화하는 [RTLCSS 프로젝트](https://rtlcss.com/)에 대해서 읽어볼 수도 있습니다.
 
 {{< callout warning >}}
 ### 실험적 기능
@@ -18,7 +18,7 @@ toc: true
 RTL 기능은 아직 **실험적이며** 사용자 피드백에 따라 발전할 것입니다. 무언가를 발견했거나 개선할 점이 있나요? [이슈를 열어서]({{< param repo >}}/issues/new) 여러분들의 의견을 알려주세요.
 {{< /callout >}}
 
-## Required HTML
+## HTML 요구 사항
 
 현재 Bootstrap 기반 페이지에서 RTL을 활성화하기 위한 두 가지 엄격한 요구 사항이 있습니다.
 
@@ -31,7 +31,7 @@ RTL 기능은 아직 **실험적이며** 사용자 피드백에 따라 발전할
 <link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
 ```
 
-### Starter template
+### 스타터 템플릿
 
 수정된 RTL 스타터 템플릿에 상기된 요구사항이 반영되어 있음을 알 수 있습니다.
 
@@ -65,11 +65,11 @@ RTL 기능은 아직 **실험적이며** 사용자 피드백에 따라 발전할
 </html>
 ```
 
-### RTL examples
+### RTL 예시
 
-여러 [RTL 예제]({{< docsref "/examples/#rtl" >}}) 중 하나로 시작하세요.
+여러 [RTL 예시]({{< docsref "/examples/#rtl" >}}) 중 하나로 시작하세요.
 
-## Approach
+## 접근
 
 RTL 지원을 Bootstrap에 구축하는 방법에는 CSS를 작성하고 사용하는 방법에 영향을 주는 두 가지 중요한 결정사항이 있습니다:
 
@@ -81,10 +81,10 @@ RTL 지원을 Bootstrap에 구축하는 방법에는 CSS를 작성하고 사용�
 
 Sass 소스 또는 컴파일된 CSS를 통한 RTL 작업은 기본 LTR과 크게 다르지 않습니다.
 
-## Customize from source
-커스터마이제이션과({{< docsref "/customize/sass" >}}) 관련하여 선호되는 방법은 변수, 맵 및 믹스인을 활용하는 것입니다. 이 접근 방식은 [RTLCSS가 작동하는 방식]((https://rtlcss.com/learn/getting-started/why-rtlcss/)) 덕분에 컴파일된 파일에서 사후 처리 되더라도 RTL에 대해 동일하게 작동합니다.
+## 사용자 지정 소스
+[사용자 지정]({{< docsref "/customize/sass" >}})과 관련하여 선호되는 방법은 변수, 맵 및 믹스인을 활용하는 것입니다. 이 접근 방식은 [RTLCSS가 작동하는 방식]((https://rtlcss.com/learn/getting-started/why-rtlcss/)) 덕분에 컴파일된 파일에서 사후 처리 되더라도 RTL에 대해 동일하게 작동합니다.
 
-### Custom RTL values
+### 사용자 지정 RTL 값
 
 RTLCSS 값 지시문을 사용하여 변수 출력을 RTL에 대해 다른 값으로 만들 수 있습니다. 예를 들어, 코드베이스 전체에서 `$font-weight-bold`의 가중치를 줄이려면 `/*rtl: {value}*/` 구문을 사용할 수 있습니다:
 
@@ -106,7 +106,7 @@ dt {
 }
 ```
 
-### Alternative font stack
+### 대체 글꼴 스택
 
 맞춤 글꼴을 사용하는 경우 모든 글꼴이 라틴어가 아닌 알파벳을 지원하는 것은 아닙니다. 범유럽 계열에서 아랍어 계열로 전환하려면 글꼴 스택에서 `/*rtl:insert: {value}*/`를 사용하여 글꼴 계열의 이름을 수정해야 할 수 있습니다.
 
@@ -135,9 +135,9 @@ $font-family-sans-serif:
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 
-### LTR and RTL at the same time
+### LTR과 RTL을 동시에 사용하기
 
-동일한 페이지에 LTR과 RTL이 모두 필요하신가요? [RTLCSS String Maps](https://rtlcss.com/learn/usage-guide/string-map/) 덕분에 이것은 매우 간단합니다. `@import`를 클래스로 래핑하고 RTLCSS에 대한 커스텀 이름 바꾸기 규칙을 다음과 같이 설정하면 됩니다:
+동일한 페이지에 LTR과 RTL이 모두 필요하신가요? [RTLCSS String Maps](https://rtlcss.com/learn/usage-guide/string-map/) 덕분에 이것은 매우 간단합니다. `@import`를 클래스로 줄바꿈하고 RTLCSS에 대한 커스텀 이름 바꾸기 규칙을 다음과 같이 설정하면 됩니다:
 
 ```scss
 /* rtl:begin:options: {
@@ -162,7 +162,7 @@ $font-family-sans-serif:
 Sass를 실행한 다음 RTLCSS를 실행하면 CSS 파일의 각 선택자에 `.ltr`이 추가되고 RTL 파일의 경우 `.rtl`이 추가됩니다. 이제 동일한 페이지에서 두 파일을 모두 사용할 수 있으며 컴포넌트 래퍼에서 .ltr 또는 .rtl을 사용하여 둘 중 하나의 방향을 사용할 수 있습니다.
 
 {{< callout warning >}}
-#### Edge cases and known limitations
+#### 경계 조건과 알려진 한계
 
 이러한 접근은 이해 가능하지만 다음 사항을 주의해주셔야 합니다:
 
@@ -171,11 +171,11 @@ Sass를 실행한 다음 RTLCSS를 실행하면 CSS 파일의 각 선택자에 `
 3. 이런 식으로 스타일을 중첩하면 `form-validation-state()` 믹스인이 의도한 대로 작동하지 않음으로 어느정도 직접 조정이 필요합니다. [#31223을 참고](https://github.com/twbs/bootstrap/issues/31223)해주세요.
 {{< /callout >}}
 
-## The breadcrumb case
+## 브레드크럼
 
 브레드크럼 구분자는 `$breadcrumb-divider-flipped`라는 고유한 새로운 변수가 필요한 유일한 경우이며 기본값은 `$breadcrumb-divider`입니다.
 
-## Additional resources
+## 추가 자료
 
 - [RTLCSS](https://rtlcss.com/)
 - [RTL 스타일링 기초 과정](https://rtlstyling.com/posts/rtl-styling)

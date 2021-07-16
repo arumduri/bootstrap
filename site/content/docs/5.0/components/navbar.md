@@ -7,7 +7,7 @@ group: components
 toc: true
 ---
 
-## How it works
+## 작동 원리
 
 내비게이션 바를 시작하기 전에 알아야 할 것들을 설명하겠습니다:
 
@@ -22,19 +22,19 @@ toc: true
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Supported content
+## 지원 콘텐츠
 
 내비게이션에는 몇 가지의 서브 컴포넌트의 지원이 포함되어 있습니다. 필요에 따라, 아래에서 선택해 주세요.:
 
 - `.navbar-brand`으로 회사명이나 제품명, 프로젝틈명 등.
-- `.navbar-nav` 으로 full-height와 보다 가벼운 네비게이션(드롭다운을 위한 지원 포함)을 실현.
+- `.navbar-nav`으로 full-height와 보다 가벼운 네비게이션(드롭다운을 위한 지원 포함)을 실현.
 - `.navbar-toggler`은 콜랩스 플러그인과 다른 [navigation toggling](#responsive-behaviors)행동에 사용.
 - 모든 폼 컨트롤과 액션을 위한 flex와 spacing 유틸리티.
-- 수직 방향으로 센터링된 문자열을 추가하기 위한 `.navbar-text`.
-- `.collapse.navbar-collapse` 으로 부모 브레이크 포인트에 따라 내비바의 콘텐츠를 그룹화하거나 감출수 있음.
+- 수직 방향으로 센터링된 텍스트열을 추가하기 위한 `.navbar-text`.
+- `.collapse.navbar-collapse`으로 부모 중단점에 따라 내비바의 콘텐츠를 그룹화하거나 감출수 있음.
 - 옵션으로 `.navbar-scroll`를 추가해 `max-height`와 [scroll expanded navbar content](#scrolling)이 가능.
 
-여기서는 `lg` (large) 브레이크 포인트에서 자동으로 접히는 'light' 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.
+여기서는 `lg` (large) 중단점에서 자동으로 접히는 'light' 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -103,7 +103,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-lig
 
 #### Image
 
-`.navbar-brand` 안에 문자 대신 `<img>`를 사용할 수 있습니다.
+`.navbar-brand` 안에 텍스트 대신 `<img>`를 사용할 수 있습니다.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
@@ -117,7 +117,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-lig
 
 #### Image and text
 
-또한 몇 가지 추가 유틸리티를 이용하여 이미지와 문자를 동시에 추가할 수 있습니다. `<img>`에 `.d-inline-block`과 `.align-text-top`을 추가하고 있다는 사실에 주목해 주세요.
+또한 몇 가지 추가 유틸리티를 이용하여 이미지와 텍스트를 동시에 추가할 수 있습니다. `<img>`에 `.d-inline-block`과 `.align-text-top`을 추가하고 있다는 사실에 주목해 주세요.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
@@ -188,7 +188,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-lig
 {{< /example >}}
 
 내비게이션 바에서 드롭다운을 사용할 수도 있습니다.
-드롭다운 메뉴는 배치를 위한 랩핑 된 요소가 필요하기 때문에 아래와 같이 `.nav-item`과 `.nav-link` 과는 다른 중첩 된 요소로 분리해 사용해 주세요.
+드롭다운 메뉴는 배치를 위한 줄바꿈 된 요소가 필요하기 때문에 아래와 같이 `.nav-item`과 `.nav-link` 과는 다른 중첩 된 요소로 분리해 사용해 주세요.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -239,7 +239,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-lig
 </nav>
 {{< /example >}}
 
-`.navbar` 의 바로 다음 자식 요소는 flex 레이아웃을 사용하며 기본값은 `justify-content: space-between` 입니다. 이 동작을 조정하려면 필요에 따라 추가적인 [flex utilities]({{< docsref "/utilities/flex" >}})를 사용하십시오.
+`.navbar`의 바로 다음 자식 요소는 flex 레이아웃을 사용하며 기본값은 `justify-content: space-between` 입니다. 이 동작을 조정하려면 필요에 따라 추가적인 [flex utilities]({{< docsref "/utilities/flex" >}})를 사용하십시오.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
@@ -279,7 +279,7 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 
 ### Text
 
-문자열의 수직 방향과 수평 간격을 조정하는 `.navbar-text`를 포함할 수 있습니다.
+텍스트열의 수직 방향과 수평 간격을 조정하는 `.navbar-text`를 포함할 수 있습니다.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light">
@@ -320,9 +320,9 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 </nav>
 {{< /example >}}
 
-## Color schemes
+## 색상 스키마
 
-테마 설정 클래스와 `background-color` 유틸리티의 조합으로 내비게이션 바의 테마 설정이 더욱 간단해졌습니다. 밝은 배경색에는 `.navbar-light`, 어두운 배경색에는 `.navbar-dark`를 선택합니다. 그 다음, `.bg-*` 유틸리티를 사용하여 커스터마이징합니다.
+테마 설정 클래스와 `background-color` 유틸리티의 조합으로 내비게이션 바의 테마 설정이 더욱 간단해졌습니다. 밝은 배경색에는 `.navbar-light`, 어두운 배경색에는 `.navbar-dark`를 선택합니다. 그 다음, `.bg-*` 유틸리티를 사용하여 사용자 지정합니다.
 
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -429,7 +429,7 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 
 ## Containers
 
-필수는 아니지만, 내비게이션 바를 `.container` 로 감싸 페이지 중앙에 배치할 수도 있지만 내부의 컨테이너가 필요하게 된다는 점을 주의해 주세요. 혹은, `.navbar` 의 내부에 컨테이너를 추가하고 [fixed 혹은 static top navbar](#placement) 의 내용만을 중앙에 배치할 수도 있습니다.
+필수는 아니지만, 내비게이션 바를 `.container` 로 감싸 페이지 중앙에 배치할 수도 있지만 내부의 컨테이너가 필요하게 된다는 점을 주의해 주세요. 혹은, `.navbar`의 내부에 컨테이너를 추가하고 [fixed 혹은 static top navbar](#placement) 의 내용만을 중앙에 배치할 수도 있습니다.
 
 {{< example >}}
 <div class="container">
@@ -453,7 +453,7 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 
 ## Placement
 
-[Position utilities]({{< docsref "/utilities/position" >}}) 를 사용하여 내비게이션 바를 정적이지 않은 위치에 배치할 수 있습니다. 상단고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단고정을 할지 선택할 수 있습니다. 고정 내비게이션 바는 `position: fixed`를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 사용자 정의 CSS(예를 들어, `<body>` 의 `padding-top` 등)가 필요할 수 있습니다.
+[Position utilities]({{< docsref "/utilities/position" >}}) 를 사용하여 내비게이션 바를 정적이지 않은 위치에 배치할 수 있습니다. 상단고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단고정을 할지 선택할 수 있습니다. 고정 내비게이션 바는 `position: fixed`를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 사용자 정의 CSS(예를 들어, `<body>`의 `padding-top` 등)가 필요할 수 있습니다.
 
 또한, **`.sticky-top`은 `position: sticky`를 사용하고 있는데 [모든 브라우저에서 완벽하게 지원되는 것은 아닙니다](https://caniuse.com/css-sticky)**
 
@@ -546,7 +546,7 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 
 내비게이션 바의 토글은 기본적으로 왼쪽 정렬이지만 `.navbar-brand`와 같은 형제 요소와 연결되는 경우는 자동으로 오른쪽 정렬이 됩니다. 마크업을 거꾸로 하면 토글의 배치도 반대로 바뀝니다. 아래는 색다른 토글 스타일의 예입니다.
 
-아래의 예시를 가장 작은 브레이크 포인트로 확인해 보세요.
+아래의 예시를 가장 작은 중단점로 확인해 보세요.
 `.navbar-brand`가 표시되지 않습니다:
 
 {{< example >}}
@@ -661,7 +661,7 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
 

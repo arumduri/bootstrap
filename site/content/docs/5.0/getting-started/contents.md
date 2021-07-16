@@ -7,7 +7,7 @@ group: getting-started
 toc: true
 ---
 
-## Precompiled Bootstrap
+## 사전 컴파일된 Bootstrap
 
 다운로드 한 후 압축을 해제하면 다음과 같은 것들을 확인하실 수 있습니다:
 
@@ -65,7 +65,7 @@ bootstrap/
 
 이것은 어떤 웹 프로젝트에서도 빠르게 사용할 수 있는 Bootstrap의 가장 기본적인 형태인 프리 컴파일된 파일입니다. 우리는 컴파일된 CSS와 JS (`bootstrap.*`), 그리고 컴파일 및 경량화된 primevideoCSS와 JS (`bootstrap.min.*`)도 제공합니다. [소스 맵](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`)은 몇몇 브라우저의 개발자 도구에서 사용할 수 있습니다. 번들된 JS 파일 (`bootstrap.bundle.js` 및 경량화된 `bootstrap.bundle.min.js`)에는 [Popper](https://popper.js.org/)가 포함되어 있습니다.
 
-## CSS files
+## CSS 파일
 
 Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 몇 가지 선택지가 포함되어 있습니다.
 
@@ -131,7 +131,7 @@ Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 
   </tbody>
 </table>
 
-## JS files
+## JS 파일
 
 마찬가지로 컴파일된 JavaScript의 일부 또는 전체를 포함할 수 있는 선택지가 있습니다.
 
@@ -160,7 +160,7 @@ Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 
   </tbody>
 </table>
 
-## Bootstrap source code
+## Bootstrap 소스 코드
 
 Bootstrap 소스코드 다운로드에는 사전 컴파일된 CSS 및 JavaScript 에셋, Sass 소스, JavaScript 및 문서가 포함되어 있습니다. 구체적으로는 다음에 나와있는 것 외에도 추가적인 것들이 포함되어 있습니다:
 
@@ -178,4 +178,4 @@ bootstrap/
 └── scss/
 ```
 
-`scss/` 및 `js/`는 우리 CSS 및 JavaScript의 소스 코드입니다. `dist/` 폴더에는 사전 컴파일 다운로드 부분에 나와있는 모든 것들이 포함되어 있습니다. `site/docs/` 폴더에는 문서의 소스 코드가 포함되어 있으며, `examples/`에는 Bootstrap의 사용 예제가 있습니다. 그 밖의 다른 파일에는 패키지 지원, 라이선스 정보, 그리고 개발 관련을 제공합니다.
+`scss/` 및 `js/`는 우리 CSS 및 JavaScript의 소스 코드입니다. `dist/` 폴더에는 사전 컴파일 다운로드 부분에 나와있는 모든 것들이 포함되어 있습니다. `site/docs/` 폴더에는 문서의 소스 코드가 포함되어 있으며, `examples/`에는 Bootstrap의 사용 예시가 있습니다. 그 밖의 다른 파일에는 패키지 지원, 라이선스 정보, 그리고 개발 관련을 제공합니다.

@@ -7,9 +7,9 @@ group: components
 toc: true
 ---
 
-## Example
+## 예시
 
-`.btn-close`를 사용해 컴포넌트를 닫는 옵션을 제공합니다. 기본 스타일은 제한되어 있지만, 재정의가 가능합니다. Sass 변수를 변경해, 기본 `background-image`를 바꿉니다. **`aria-label`과 같은 스크린 리더용의 문자를 꼭 넣어 주십시오.**
+`.btn-close`를 사용해 컴포넌트를 닫는 옵션을 제공합니다. 기본 스타일은 제한되어 있지만, 재정의가 가능합니다. Sass 변수를 변경해, 기본 `background-image`를 바꿉니다. **`aria-label`과 같은 스크린 리더용의 텍스트를 꼭 넣어 주십시오.**
 
 
 {{< example >}}
@@ -35,6 +35,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="close-variables" file="scss/_variables.scss" >}}

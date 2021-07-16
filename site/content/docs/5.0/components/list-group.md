@@ -7,7 +7,7 @@ group: components
 toc: true
 ---
 
-## Basic example
+## 기본 예시
 
 가장 기본적인 목록 그룹은 목록 아이템과 적절한 클래스를 가진 순서 없는 목록입니다. 이하의 옵션을 사용해, 혹은 필요에 따라서 독자적인 CSS를 사용해 만듭니다.
 
@@ -21,9 +21,9 @@ toc: true
 </ul>
 {{< /example >}}
 
-## Active items
+## 활성화된 항목
 
-현재 활성화 된 선택 범위를 나타내기 위해 `.list-group-item` 에 `.active`를 추가합니다.
+현재 활성화 된 선택 범위를 나타내기 위해 `.list-group-item`에 `.active`를 추가합니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -35,9 +35,9 @@ toc: true
 </ul>
 {{< /example >}}
 
-## Disabled items
+## 비활성화된 항목
 
-`.list-group-item` 에 `.disabled`를 추가하면, 비활성화되어 있는 것처럼 보입니다. `.disabled`를 가진 요소 중에는 클릭 이벤트(링크 등)를 완전히 비활성화하기 위해 사용자 정의 JavaScript를 사용해야 합니다.
+`.list-group-item`에 `.disabled`를 추가하면, 비활성화되어 있는 것처럼 보입니다. `.disabled`를 가진 요소 중에는 클릭 이벤트(링크 등)를 완전히 비활성화하기 위해 사용자 정의 JavaScript를 사용해야 합니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -51,7 +51,7 @@ toc: true
 
 ## Links and buttons
 
-_actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`을 사용하고, `.list-group-item-action` 을 추가합니다. 비 인터랙티브한 요소(`<li>` 혹은 `<div>`와 같은)로 만들어진 목록 그룹이 클릭이나 탭 어포던스를 제공하지 않도록, 이러한 가상 클래스를 분리하고 있습니다.
+_actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`을 사용하고, `.list-group-item-action`을 추가합니다. 비 인터랙티브한 요소(`<li>` 혹은 `<div>`와 같은)로 만들어진 목록 그룹이 클릭이나 탭 어포던스를 제공하지 않도록, 이러한 가상 클래스를 분리하고 있습니다.
 
 여기에서는 **표준의 `.btn` 클래스를 사용하지 않도록 주의해 주세요**.
 
@@ -67,7 +67,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 </div>
 {{< /example >}}
 
-`<button>` 에서는 `.disabled` 클래스 대신에 `disabled` 속성을 사용할 수도 있습니다. 유감스럽게도, `<a>` 는 disabled 속성을 지원하지 않습니다.
+`<button>`에서는 `.disabled` 클래스 대신에 `disabled` 속성을 사용할 수도 있습니다. 유감스럽게도, `<a>` 는 disabled 속성을 지원하지 않습니다.
 
 {{< example >}}
 <div class="list-group">
@@ -139,7 +139,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## Horizontal
 
-목록 그룹의 아이템 레이아웃을 모든 브레이크 포인트에서 수직에서 수평으로 변경하려면 `.list-group-horizontal`를 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}`를 선택하고 브레이크 포인트의 `min-width`로 시작하는 목록 그룹을 수평으로 합니다. 현재 **수평 목록 그룹을 flush 목록 그룹과 조합할 수 없습니다.**
+목록 그룹의 아이템 레이아웃을 모든 중단점에서 수직에서 수평으로 변경하려면 `.list-group-horizontal`를 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}`를 선택하고 중단점의 `min-width`로 시작하는 목록 그룹을 수평으로 합니다. 현재 **수평 목록 그룹을 flush 목록 그룹과 조합할 수 없습니다.**
 
 **꿀팁:** 목록 그룹의 아이템을 수평 방향의 동일한 너비로 하고 싶을 경우, 목록 그룹의 각 아이템에 `.flex-fill`을 추가합니다.
 
@@ -157,7 +157,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## Contextual classes
 
-상황별 클래스를 사용하여, 스테이트풀(stateful)한 배경색과 글자색으로 목록 아이템을 꾸밉니다.
+상황별 클래스를 사용하여, 스테이트풀(stateful)한 배경색과 텍스트색으로 목록 아이템을 꾸밉니다.
 
 {{< example >}}
 <ul class="list-group">
@@ -299,11 +299,11 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="list-group-variables" file="scss/_variables.scss" >}}
 
-### Mixins
+### 믹스인
 
 `.list-group-item`의 [contextual variant classes](#contextual-classes)를 생성하기 위해 `$theme-colors`와 조합하여 사용됩니다.
 
@@ -421,7 +421,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### Fade effect
 
-탭 판넬을 페이드인 시키려면 `.tab-pane` 에 `.fade`를 추가합니다. 첫번째 탭 판넬에는 첫번째 콘텐츠를 표시하기 위해서 `.show`를 추가 할 필요가 있습니다.
+탭 판넬을 페이드인 시키려면 `.tab-pane`에 `.fade`를 추가합니다. 첫번째 탭 판넬에는 첫번째 콘텐츠를 표시하기 위해서 `.show`를 추가 할 필요가 있습니다.
 
 ```html
 <div class="tab-content">
@@ -432,11 +432,11 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 </div>
 ```
 
-### Methods
+### 메소드
 
 #### constructor
 
-목록 아이템 요소와 콘텐츠 컨테이너를 활성화합니다. 탭에는 DOM 내의 컨테이너 노드를 타깃으로 하는 `data-bs-target` 또는 `href` 가 필요합니다.
+목록 아이템 요소와 콘텐츠 컨테이너를 활성화합니다. 탭에는 DOM 내의 컨테이너 노드를 타깃으로 하는 `data-bs-target` 또는 `href`가 필요합니다.
 
 ```html
 <div class="list-group" id="myList" role="tablist">
@@ -463,7 +463,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 #### show
 
-지정된 목록 아이템을 선택하고 관련 판넬을 표시합니다. 이전에 선택되었던 다른 목록 아이템은 선택되지 않은 상태로 돌아가고, 관련된 판넬은 숨김이 됩니다. 탭 판넬이 실제로 표시되기 전에 호출한 곳으로 돌아갑니다(예를 들어, `shown.bs.tab` 이벤트가 발생하기 전 등)
+지정된 목록 아이템을 선택하고 관련 판넬을 표시합니다. 이전에 선택되었던 다른 목록 아이템은 선택되지 않은 상태로 돌아가고, 관련된 판넬은 숨김이 됩니다. 탭 판넬이 실제로 표시되기 전에 호출한 곳으로 돌아갑니다 (예를 들어, `shown.bs.tab` 이벤트가 발생하기 전 등)
 
 ```js
   var someListItemEl = document.querySelector('#someListItem')
@@ -494,7 +494,7 @@ var triggerEl = document.querySelector('#trigger')
 var tab = bootstrap.Tab.getOrCreateInstance(triggerEl) // Returns a Bootstrap tab instance
 ```
 
-### Events
+### 이벤트
 
 새로운 탭을 표시하면, 아래의 순서대로 이벤트가 발생합니다:
 
@@ -527,7 +527,7 @@ var tab = bootstrap.Tab.getOrCreateInstance(triggerEl) // Returns a Bootstrap ta
     </tr>
     <tr>
       <td><code>hidden.bs.tab</code></td>
-      <td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다(따라서 이전 활성화 탭은 숨겨집니다). <code>event.target</code> 과 <code>event.relatedTarget</code> 를 사용하여 각각 이전 활성화 탭과 새로운 활성화 탭을 타깃으로 합니다.</td>
+      <td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다 (따라서 이전 활성화 탭은 숨겨집니다). <code>event.target</code> 과 <code>event.relatedTarget</code> 를 사용하여 각각 이전 활성화 탭과 새로운 활성화 탭을 타깃으로 합니다.</td>
     </tr>
   </tbody>
 </table>

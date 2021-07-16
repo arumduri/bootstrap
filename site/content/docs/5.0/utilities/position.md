@@ -51,7 +51,7 @@ Where *position* is one of:
 
 ## Center elements
 
-또한 변환 유틸리티 클래스 `.translate-middle` 을 사용하여 요소를 중앙에 배치 할 수도 있습니다.
+또한 변환 유틸리티 클래스 `.translate-middle`을 사용하여 요소를 중앙에 배치 할 수도 있습니다.
 
 이 클래스는 요소에 `translateX (-50 %)` 및 `translateY (-50 %)` 변환을 요소에 적용하여 edge positioning 유틸리티와 함께 요소를 absolute center 로 지정 할 수 있습니다.
 
@@ -85,7 +85,7 @@ Where *position* is one of:
 </div>
 {{< /example >}}
 
-## Examples
+## 예시
 
 다음은 해당 클래스의 실제 예시입니다.
 
@@ -120,12 +120,12 @@ Where *position* is one of:
 
 ### Maps
 
-기본 Position 유틸리티 값은 Sass 맵에 선언 된 다음 유틸리티를 생성하는 데 사용됩니다.
+기본 Position 유틸리티 값은 Sass 맵에 선언된 다음 유틸리티를 생성하는 데 사용됩니다.
 
 {{< scss-docs name="position-map" file="scss/_variables.scss" >}}
 
 ### Utilities API
 
-Position 유틸리티는 `scss/_utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Position 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-position" file="scss/_utilities.scss" >}}

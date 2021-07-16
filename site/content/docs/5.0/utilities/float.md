@@ -7,9 +7,9 @@ group: utilities
 toc: true
 ---
 
-## Overview
+## 개요
 
-이러한 유틸리티 클래스는 [CSS `float` 속성](https://developer.mozilla.org/en-US/docs/Web/CSS/float)을 사용하여 현재 뷰포트 크기에 따라 요소를 왼쪽 또는 오른쪽으로 플로팅하거나 플로팅을 비활성화합니다. 특이점 문제를 피하기 위해 `! important` 가 포함됩니다. 그리드 시스템과 동일한 뷰포트 중단 점을 사용합니다. float 유틸리티는 flex 항목에 영향을 미치지 않습니다.
+이러한 유틸리티 클래스는 [CSS `float` 속성](https://developer.mozilla.org/en-US/docs/Web/CSS/float)을 사용하여 현재 뷰포트 크기에 따라 요소를 왼쪽 또는 오른쪽으로 플로팅하거나 플로팅을 비활성화합니다. 특이점 문제를 피하기 위해 `! important`가 포함됩니다. 그리드 시스템과 동일한 뷰포트 중단 점을 사용합니다. float 유틸리티는 flex 항목에 영향을 미치지 않습니다.
 
 {{< example >}}
 <div class="float-start">Float start on all viewport sizes</div><br>
@@ -44,6 +44,6 @@ toc: true
 
 ### Utilities API
 
-Float 유틸리티는 `scss/_utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+Float 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-float" file="scss/_utilities.scss" >}}

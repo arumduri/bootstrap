@@ -2,15 +2,15 @@
 layout: docs
 title: 캐러셀
 title_en: Carousel
-description: 캐러셀은 이미지나 문자의 슬라이드를 가로로 슬라이드시켜 여러 개를 표시하는 컴포넌트입니다.
+description: 캐러셀은 이미지나 텍스트의 슬라이드를 가로로 슬라이드시켜 여러 개를 표시하는 컴포넌트입니다.
 toc: true
 ---
 
-## How it works
+## 작동 원리
 
-캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript로 만들어진, 일련의 콘텐츠를 순환시키기 위한 슬라이드쇼입니다. 일련의 이미지, 문자, 혹은 사용자 정의 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
+캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript로 만들어진, 일련의 콘텐츠를 순환시키기 위한 슬라이드쇼입니다. 일련의 이미지, 텍스트, 혹은 사용자 정의 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
 
-[Page Visibility API](https://www.w3.org/TR/page-visibility/) 가 지원되고 있는 브라우저에서는, 웹 페이지가 사용자에게 보이지 않을 때(브라우저 탭이 활성화되지 않았거나, 브라우저 윈도 크기가 최소화되어 있을 때 등등), 캐러셀은 동작하지 않습니다.
+[Page Visibility API](https://www.w3.org/TR/page-visibility/)가 지원되고 있는 브라우저에서는, 웹 페이지가 사용자에게 보이지 않을 때(브라우저 탭이 활성화되지 않았거나, 브라우저 윈도 크기가 최소화되어 있을 때 등등), 캐러셀은 동작하지 않습니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -18,13 +18,13 @@ toc: true
 
 중첩된 캐러셀은 지원되고 있지 않고, 캐러셀은 일반적으로 접근성(accessibility) 기준에 의거하고 있지 않다는 것에 주의해 주세요.
 
-## Example
+## 예시
 
 캐러셀은, 슬라이드의 치수를 자동으로 정규화하지 않습니다. 그 때문에, 콘텐츠의 크기를 적절하게 조정하기 위해, 추가의 유틸리티나 사용자 정의 스타일을 사용할 필요가 있는 떄가 있습니다. 캐러셀은 이전/다음의 컨트롤과 위치 표시(인디게이터, indicator)를 지원하고 있지만, 명시적으로 필수는 아닙니다. 자유롭게 추가하여 재정의해 주세요.
 
 **어느 쪽이든 슬라이드에 `.active` 클래스를 추가할 필요가 있습니다.** 그렇지 않으면 캐러셀은 표시되지 않습니다, 그리고 특히, 1개의 페이지에서 복수의 캐러셀을 사용하고 있는 경우에는, 옵션의 컨트롤용으로 `.carousel`로 유니크한 `id`를 설정해 주세요. 컨트롤이나 인디게이터의 요소는 `.carousel` 요소의 `id`에 매치하는 `data-bs-target` 속성(링크의 경우는 `href`)을 가져야 합니다.
 
-### Slides only
+### 슬라이드만
 
 슬라이드만 사용하는 캐러셀입니다. 캐러셀 이미지에 `.d-block`과 `.w-100` 이 있는 것을 주의해 주세요.
 
@@ -44,7 +44,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### With controls
+### 컨트
 
 이전/다음의 컨트롤을 추가할 때 권장하는 것은 `<button>` 요소지만, `role="button"`을 사용한 `<a>` 요소를 사용할 수도 있습니다.
 
@@ -72,7 +72,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### With indicators
+### 인디케이터
 
 그리고, 캐러셀에는 컨트롤과 함께 위치 표시(인디게이터, indicator)를 추가할 수도 있습니다.
 
@@ -105,9 +105,9 @@ toc: true
 </div>
 {{< /example >}}
 
-### With captions
+### 설명문
 
-`.carousel-item` 안의 `.carousel-caption` 요소를 사용해, 슬라이드에 설명문(캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 [display utilities]({{< docsref "/utilities/display" >}}) 를 사용함으로써, 보다 작은 뷰포트에서 간단하게 설명문(캡션, caption)을 감추는 것도 가능합니다. 처음에는 `.d-none` 로 비표시하고, 중형 기기에서는 `.d-md-block` 으로 다시 표시합니다.
+`.carousel-item` 안의 `.carousel-caption` 요소를 사용해, 슬라이드에 설명문 (캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 [디스플레이 유틸리티]({{< docsref "/utilities/display" >}}) 를 사용함으로써, 보다 작은 뷰포트에서 간단하게 설명문 (캡션, caption)을 감추는 것도 가능합니다. 처음에는 `.d-none` 로 비표시하고, 중형 기기에서는 `.d-md-block`으로 다시 표시합니다.
 
 {{< example >}}
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -180,7 +180,7 @@ toc: true
 
 ### Individual `.carousel-item` interval
 
-다음 아이템으로 자동으로 바뀔 때까지의 지연 시간을 변경하려면 `.carousel-item` 에 `data-bs-interval=""` 을 추가합니다.
+다음 아이템으로 자동으로 바뀔 때까지의 지연 시간을 변경하려면 `.carousel-item`에 `data-bs-interval=""`을 추가합니다.
 
 {{< example >}}
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -285,7 +285,7 @@ toc: true
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="carousel-variables" file="scss/_variables.scss" >}}
 
@@ -308,7 +308,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
 
 ### Options
 
-옵션은, data 속성 혹은 JavaScript로 줄 수 있습니다. data 속성의 경우, `data-bs-interval=""`과 같이, `data-bs-`에 옵션 명을 추가합니다.
+옵션은, data 속성 혹은 JavaScript로 줄 수 있습니다. data 속성의 경우, `data-bs-interval=""`과 같이, `data-bs-`에 옵션명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -360,7 +360,7 @@ var carousel = new bootstrap.Carousel(myCarousel)
   </tbody>
 </table>
 
-### Methods
+### 메소드
 
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
@@ -432,7 +432,7 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   </tbody>
 </table>
 
-### Events
+### 이벤트
 
 Bootstrap의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 두 가지 이벤트를 제공하고 있습니다. 두 가지 이벤트는 다음과 같은 추가 속성을 가지고 있습니다:
 

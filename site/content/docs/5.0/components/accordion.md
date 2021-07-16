@@ -10,15 +10,15 @@ aliases:
 toc: true
 ---
 
-## How it works
+## 작동 원리
 
-아코디언은 내부적으로 [collapse]({{< docsref "/components/collapse" >}}) 를 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 렌더링을 하려면, `.accordion` 에 `.open` 클래스를 추가해야 합니다.
+아코디언은 내부적으로 [collapse]({{< docsref "/components/collapse" >}}) 를 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 렌더링을 하려면, `.accordion`에 `.open` 클래스를 추가해야 합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Example
+## 예시
 
 아래의 아코디언을 클릭하면, 아코디언의 내용을 접기/펼치기가 가능합니다.
 
@@ -63,9 +63,9 @@ toc: true
 </div>
 {{< /example >}}
 
-### Flush
+### 채우기
 
-`.accordion-flush`를 추가하여, 기본 `background-color`와 몇 개의 외곽선, 그리고 몇 개의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge로 렌더링합니다.
+`.accordion-flush`를 추가하여, 기본 `background-color`와 몇 개의 테두리, 그리고 몇 개의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge로 렌더링합니다.
 
 {{< example class="bg-light" >}}
 <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -102,7 +102,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### Always open
+### 항상 열기
 
 다른 항목이 열렸을 때도 이전 아코디언 항목이 열린 상태로 유지되게 하고 싶으면 각 `.accordion-collapse`의 `data-bs-parent` 속성을 생략하면 됩니다.
 
@@ -147,12 +147,12 @@ toc: true
 </div>
 {{< /example >}}
 
-## Accessibility
+## 접근성
 
 자세한 내용은 [collapse accessibility section]({{< docsref "/components/collapse#accessibility" >}}) 을 참고해 주세요.
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="accordion-variables" file="scss/_variables.scss" >}}

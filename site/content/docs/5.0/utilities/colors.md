@@ -7,9 +7,9 @@ group: utilities
 toc: true
 ---
 
-## Colors
+## 색상
 
-색상 유틸리티를 사용하여 문자를 색상화 합니다. 링크에 색을 입히려면 `: hover` 및 `: focus` 상태가 있는 [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}})를 사용할 수 있습니다.
+색상 유틸리티를 사용하여 텍스트를 색상화 합니다. 링크에 색을 입히려면 `: hover` 및 `: focus` 상태가 있는 [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}})를 사용할 수 있습니다.
 
 {{< example >}}
 {{< colors.inline >}}
@@ -36,7 +36,7 @@ toc: true
 
 다음 Sass 기능 외에도 색상 등에 대해 포함 된 [CSS 사용자 정의 속성]({{< docsref "/customize/css-variables" >}}) (일명 CSS 변수)에 대해 읽어보십시오.
 
-### Variables
+### 변수
 
 
 대부분의 `color` 유틸리티는 일반 색상 팔레트 변수에서 재할당 된 테마 색상에 의해 생성됩니다.
@@ -45,7 +45,7 @@ toc: true
 
 {{< scss-docs name="theme-color-variables" file="scss/_variables.scss" >}}
 
-그레이 스케일 색상도 사용할 수 있지만 유틸리티를 생성하는 데 하위 집합 만 사용됩니다.
+그레이 스케일 색상도 사용할 수 있지만 유틸리티를 생성하는 데 자식 집합 만 사용됩니다.
 
 {{< scss-docs name="gray-color-variables" file="scss/_variables.scss" >}}
 
@@ -61,6 +61,6 @@ toc: true
 
 ### Utilities API
 
-색상 유틸리티는`scss / _utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
+색상 유틸리티는`scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-color" file="scss/_utilities.scss" >}}

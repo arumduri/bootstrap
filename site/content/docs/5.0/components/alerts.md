@@ -7,8 +7,8 @@ group: components
 toc: true
 ---
 
-## Examples
-문자 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를 들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing) 을 사용합니다.
+## 예시
+텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를 들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing) 을 사용합니다.
 
 {{< example >}}
 {{< alerts.inline >}}
@@ -23,7 +23,7 @@ toc: true
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-### Link color
+### 링크 색상
 
 `.alert-link` 클래스를 사용하면, 경고창에 어울리는 색의 링크를 사용할 수 있습니다.
 
@@ -36,7 +36,7 @@ toc: true
 {{< /alerts.inline >}}
 {{< /example >}}
 
-### Additional content
+### 추가 콘텐츠
 경고창에는 제목, 단락 및 구분선 등과 같은 HTML 요소를 포함할 수도 있습니다.
 
 {{< example >}}
@@ -48,9 +48,9 @@ toc: true
 </div>
 {{< /example >}}
 
-### Icons
+### 아이콘
 
-마찬가지로 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 와 [Bootstrap Icons]({{< param icons >}}) 을 이용하여 경고창을 만들 수 있습니다. 아이콘이나 콘텐츠에 따라서는 유틸리티나 사용자 정의 스타일을 더 추가할 수도 있습니다.
+마찬가지로 [flexbox 유틸리티]({{< docsref "/utilities/flex" >}}) 와 [Bootstrap Icons]({{< param icons >}}) 을 이용하여 경고창을 만들 수 있습니다. 아이콘이나 콘텐츠에 따라서는 유틸리티나 사용자 정의 스타일을 더 추가할 수도 있습니다.
 
 {{< example >}}
 <div class="alert alert-primary d-flex align-items-center" role="alert">
@@ -104,13 +104,13 @@ toc: true
 </div>
 {{< /example >}}
 
-### Dismissing
+### 무시
 경고창의 JavaScript 플러그인을 사용하면, 경고창을 인라인으로 닫을 수 있습니다.
 
 - JavaScript 플러그인 또는 Bootstrap JavaScript를 가지고 옵니다.
-- [close button]({{< docsref "/components/close-button" >}}) 에 `.alert-dismissible` 의 클래스를 추가하면 경고창의 오른쪽에 여백이 추가되고, 닫기 버튼의 위치가 결정됩니다.
+- [close button]({{< docsref "/components/close-button" >}}) 에 `.alert-dismissible`의 클래스를 추가하면 경고창의 오른쪽에 여백이 추가되고, 닫기 버튼의 위치가 결정됩니다.
 - 닫기 버튼에 `data-bs-dismiss="alert"` 속성을 추가합니다. 그러면 JavaScript 기능이 트리거 됩니다. 모든 기기에서 올바르게 동작시키려면 반드시 `<button>` 요소를 사용해 주세요.
-- 경고창을 닫을 때 애니메이션을 적용하려면, 반드시 `.fade`와 `.show` 의 클래스를 추가해 주세요.
+- 경고창을 닫을 때 애니메이션을 적용하려면, 반드시 `.fade`와 `.show`의 클래스를 추가해 주세요.
 
 실시간 데모로 확인할 수 있습니다:
 
@@ -122,30 +122,30 @@ toc: true
 {{< /example >}}
 
 {{< callout warning >}}
-경고창이 해제되면 해당 요소는 페이지 구조에서 완전히 제거됩니다. 키보드 사용자가 닫기 버튼을 통해 경고창을 해제하면 포커스가 갑자기 사라지고 브라우저에 따라서는 페이지나 문서의 선두에 리셋됩니다. 그래서 `closed.bs.alert` 이벤트를 리슨하고 `focus()`를 페이지 내의 가장 적절한 위치에 프로그램적으로 설정하는 JavaScript를 추가할 것을 권장합니다. 보통은 포커스를 받지 않는 상호 작용할 수 없는 요소에 포커스를 이동시키는 경우는, 그 요소에 `tabindex="-1"` 을 추가하도록 해 주세요.
+경고창이 해제되면 해당 요소는 페이지 구조에서 완전히 제거됩니다. 키보드 사용자가 닫기 버튼을 통해 경고창을 해제하면 포커스가 갑자기 사라지고 브라우저에 따라서는 페이지나 문서의 선두에 리셋됩니다. 그래서 `closed.bs.alert` 이벤트를 리슨하고 `focus()`를 페이지 내의 가장 적절한 위치에 프로그램적으로 설정하는 JavaScript를 추가할 것을 권장합니다. 보통은 포커스를 받지 않는 상호 작용할 수 없는 요소에 포커스를 이동시키는 경우는, 그 요소에 `tabindex="-1"`을 추가하도록 해 주세요.
 {{< /callout >}}
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="alert-variables" file="scss/_variables.scss" >}}
 
-### Variant mixin
+### 변형 믹스인
 
 `$theme-colors`와 조합하여 알림 경고창의 제어자 클래스를 생성합니다.
 
 {{< scss-docs name="alert-variant-mixin" file="scss/mixins/_alert.scss" >}}
 
-### Loop
+### 루프
 
 믹스인 `alert-variant()`에서 제어자 클래스를 생성하는 반복문입니다.
 
 {{< scss-docs name="alert-modifiers" file="scss/_alert.scss" >}}
 
-## JavaScript behavior
+## JavaScript 비헤이비어
 
-### Triggers
+### 트리거
 JavaScript를 통해 경고창을 닫습니다.
 
 ```js
@@ -163,7 +163,7 @@ alertList.forEach(function (alert) {
 
 경고창을 닫으면 DOM에서 제거되는 점을 주의하세요.
 
-### Methods
+### 메소드
 
 경고창의 생성자를 사용해 경고창의 인스턴스를 만들 수 있습니다. 예를 들어:
 
@@ -172,7 +172,7 @@ var myAlert = document.getElementById('myAlert')
 var bsAlert = new bootstrap.Alert(myAlert)
 ```
 
-이렇게 하면 `data-bs-dismiss="alert"` 의 속성이 있는 하위 요소에서 클릭 이벤트를 상위의 경고창에서 알 수 있습니다. (data-api 의 자동 초기화를 사용할 때에는 필요 없습니다.)
+이렇게 하면 `data-bs-dismiss="alert"`의 속성이 있는 자식 요소에서 클릭 이벤트를 부모의 경고창에서 알 수 있습니다. (data-api 의 자동 초기화를 사용할 때에는 필요 없습니다.)
 
 <table class="table">
   <thead>
@@ -224,7 +224,7 @@ var alert = bootstrap.Alert.getInstance(alertNode)
 alert.close()
 ```
 
-### Events
+### 이벤트
 Bootstrap 경고창 플러그인은, 경고창 기능에 연결하기 위한 몇 가지의 이벤트를 제공합니다.
 
 <table class="table">

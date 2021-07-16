@@ -7,11 +7,11 @@ group: components
 toc: true
 ---
 
-## About
+## 소개
 
 Bootstrap "스피너"는 프로젝트의 로딩 상태를 표시하기 위해 사용할 수 있습니다. 이것은 HTML과 CSS로 만들어져 있기 때문에 JavaScript를 필요로 하지 않습니다. 그러나 가시성을 바꾸기 위해 몇 가지의 사용자 정의 JavaScript가 필요합니다. 이러한 외형, 배치, 크기는 유틸리티 클래스를 통해 간단하게 재정의할 수 있습니다.
 
-접근성을 위해, 여기에서의 각 loader 는 `role="status"` 과 `<span class="visually-hidden">Loading...</span>` 을 포함하고 있습니다.
+접근성을 위해, 여기에서의 각 loader 는 `role="status"` 과 `<span class="visually-hidden">Loading...</span>`을 포함하고 있습니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -27,9 +27,9 @@ Border 스피너를 사용해 가벼운 로딩 인디게이터를 실현합니�
 </div>
 {{< /example >}}
 
-### Colors
+### 색상
 
-Border 스피너는 `border-color` 에 `currentColor` 을 사용합니다. 표준 스피너에서는 [text color utilities][color] 를 사용할 수 있습니다.
+Border 스피너는 `border-color`에 `currentColor`을 사용합니다. 표준 스피너에서는 [text color utilities][color] 를 사용할 수 있습니다.
 
 {{< example >}}
 {{< spinner.inline >}}
@@ -124,7 +124,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 
 ## Size
 
-`.spinner-border-sm` 과 `.spinner-grow-sm` 을 추가해서 다른 컴포넌트 안에서 바로 사용할 수 있는 작은 스피너를 만들 수 있습니다.
+`.spinner-border-sm` 과 `.spinner-grow-sm`을 추가해서 다른 컴포넌트 안에서 바로 사용할 수 있는 작은 스피너를 만들 수 있습니다.
 
 {{< example >}}
 <div class="spinner-border spinner-border-sm" role="status">
@@ -148,7 +148,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 
 ## Buttons
 
-버튼 중 스피너를 사용하여 액션이 현재 처리 중이거나 실행 중임을 나타냅니다. 또한 스피너 밖에 있는 문자를 교체하여 필요에 따라 버튼 문자를 이용할 수 있습니다.
+버튼 중 스피너를 사용하여 액션이 현재 처리 중이거나 실행 중임을 나타냅니다. 또한 스피너 밖에 있는 텍스트를 교체하여 필요에 따라 버튼 텍스트를 이용할 수 있습니다.
 
 {{< example >}}
 <button class="btn btn-primary" type="button" disabled>
@@ -174,7 +174,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex` 로 구축
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="spinner-variables" file="scss/_variables.scss" >}}
 

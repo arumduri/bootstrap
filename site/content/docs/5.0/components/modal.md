@@ -7,11 +7,11 @@ group: components
 toc: true
 ---
 
-## How it works
+## 작동 원리
 
 모달 컴포넌트의 메뉴 옵션이 최근 변경되었으니 사용하기 전에 아래 내용을 꼭 읽어보시기 바랍니다.
 
-- 모달은 HTML, CSS, 그리고 JavaScript로 구축됩니다. 모달은 문서 내의 다른 모든 것 위에 배치되어 `<body>` 의 스크롤을 제거하고 모달의 콘텐츠가 스크롤 되도록 합니다.
+- 모달은 HTML, CSS, 그리고 JavaScript로 구축됩니다. 모달은 문서 내의 다른 모든 것 위에 배치되어 `<body>`의 스크롤을 제거하고 모달의 콘텐츠가 스크롤 되도록 합니다.
 - 모달의 "배경" 을 클릭하면 자동으로 모달이 닫힙니다.
 - Bootstrap은 한번에 하나의 모달을 지원합니다. 중첩된 모달은 지원되지 않습니다.
 - 모달은 `position: fixed`를 사용합니다. 가능한 다른 요소와의 간섭을 피하기 위해, 모달 HTML을 최상단의 위치에 넣어 주세요. 다른 고정 요소안에 `.modal`을 중첩해 넣으면 문제가 발생할 가능성이 높습니다.
@@ -33,9 +33,9 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 데모와 사용 가이드를 계속해서 읽어 주세요.
 
-## Examples
+## 예시
 
-### Modal components
+### 모달 컴포넌트
 
 아래는 _static_ 모달의 예입니다. (즉, `position`과 `display`가 오버라이드 되는 것을 의미합니다) 여기에는 모달 header, 모달 body(`padding` 때문에 필요), 모달 footer(선택사항)가 포함되어 있습니다. 가능한 한 모달을 닫을 수 있는 것을 포함시키거나 닫을 수 있는 다른 명시적인 요소를 제공하도록 부탁드립니다.
 
@@ -539,9 +539,9 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 ### Change animation
 
-`$modal-fade-transform` 변수는 모달 페이드인 애니메이션 이전 `.modal-dialog` 의 전환 상태를 결정하고, `$modal-show-transform` 변수는 모달 페이드인 애니메이션 종료시 `.modal-dialog` 의 전환 상태를 결정합니다.
+`$modal-fade-transform` 변수는 모달 페이드인 애니메이션 이전 `.modal-dialog`의 전환 상태를 결정하고, `$modal-show-transform` 변수는 모달 페이드인 애니메이션 종료시 `.modal-dialog`의 전환 상태를 결정합니다.
 
-예를 들어, zoom-in애니메이션을 만들고 싶다면 `$modal-fade-transform: scale(.8)` 을 설정합니다.
+예를 들어, zoom-in애니메이션을 만들고 싶다면 `$modal-fade-transform: scale(.8)`을 설정합니다.
 
 ### Remove animation
 
@@ -557,7 +557,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 모달이 열려있는데 높이가 변경된 경우에는 스크롤바가 표시되었을 때 모달의 위치를 재조정하기 위해 `myModal.handleUpdate()`를 호출해야 합니다.
 
-### Accessibility
+### 접근성
 
 반드시 `.modal`에 모달 타이틀을 참조하는 `aria-labelledby="..."`를 추가해 주세요. 게다가 `.modal`에 `aria-describedby`를 추가하는 것으로, 모달 다이얼로그의 설명을 줄 수 있습니다. JavaScript로 이미 추가하고 있음으로 `role="dialog"`를 추가할 필요가 없다는 점에 주의해 주세요.
 
@@ -567,7 +567,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 
 ## Optional sizes
 
-모달에는 3개의 옵션 크기가 있어, 제어자 클래스를 통해 `.modal-dialog`로 배치할 수 있습니다. 이들 크기는 좁은 뷰포트에서의 가로 스크롤 바를 피하기 위해 특정 브레이크 포인트에서 유효하게 됩니다.
+모달에는 3개의 옵션 크기가 있어, 제어자 클래스를 통해 `.modal-dialog`로 배치할 수 있습니다. 이들 크기는 좁은 뷰포트에서의 가로 스크롤 바를 피하기 위해 특정 중단점에서 유효하게 됩니다.
 
 <table class="table">
   <thead>
@@ -816,7 +816,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="modal-variables" file="scss/_variables.scss" >}}
 
@@ -848,7 +848,7 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 
 ### Options
 
-옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우는 `data-bs-backdrop=""`처럼 `data-bs-`에 옵션 명을 추가합니다.
+옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우는 `data-bs-backdrop=""`처럼 `data-bs-`에 옵션명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -881,7 +881,7 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
   </tbody>
 </table>
 
-### Methods
+### 메소드
 
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
@@ -930,7 +930,7 @@ myModal.hide()
 
 #### handleUpdate
 
-열려 있는 동안에 모달의 높이가 바뀌었을 경우, 모달의 위치를 수동으로 재조정합니다(즉, 스크롤 바가 표시되어 있는 경우 등).
+열려 있는 동안에 모달의 높이가 바뀌었을 경우, 모달의 위치를 수동으로 재조정합니다 (즉, 스크롤 바가 표시되어 있는 경우 등).
 
 ```js
 myModal.handleUpdate()
@@ -962,7 +962,7 @@ var myModalEl = document.querySelector('#myModal')
 var modal = bootstrap.Modal.getOrCreateInstance(myModalEl) // Returns a Bootstrap modal instance
 ```
 
-### Events
+### 이벤트
 
 Bootstrap의 모달 클래스는 모달 기능으로 연결하기 위한 몇 가지 이벤트를 공개하고 있습니다. 모든 모달 이벤트는, 모달 자체(즉, `<div class="modal">`)에서 발생합니다.
 

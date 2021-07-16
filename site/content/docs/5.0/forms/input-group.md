@@ -2,12 +2,12 @@
 layout: docs
 title: 입력 그룹
 title_en: Input group
-description: 문자 입력, 사용자 정의 셀렉트, 사용자 파일 입력 등의 폼의 좌우에 문자, 버튼 혹은 버튼 그룹을 추가해 폼 컨트롤을 간단하게 확장할 수 있습니다.
+description: 텍스트 입력, 사용자 정의 셀렉트, 사용자 파일 선택 등의 폼의 좌우에 텍스트, 버튼 혹은 버튼 그룹을 추가해 폼 컨트롤을 간단하게 확장할 수 있습니다.
 group: forms
 toc: true
 ---
 
-## Basic example
+## 기본 예시
 
 추가 기능(add-on) 이나 버튼을 입력의 한쪽 혹은 양쪽에 배치할 수 있습니다. `<label>`은 입력 그룹 밖에 작성해야 합니다.
 
@@ -46,7 +46,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Wrapping
+## 줄 바꿈
 
 입력 그룹은 입력 그룹 내의 사용자 정의 폼 유효성 검사에 대응하기 위해 기본적으로 `flex-wrap: wrap`으로 감싸고 있습니다. 이것을 비활성화하려면 `.flex-nowrap`을 추가하여 사용합니다.
 
@@ -57,9 +57,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## Sizing
+## 크기 조절
 
-상대적으로 사이즈를 조정해 주는 클래스를 `.input-group`이 있는 곳에 추가하면, 그 안의 콘텐츠가 자동으로 재조정됩니다. 각 요소에 폼 컨트롤 크기 조정 클래스를 추가할 필요가 없습니다
+상대적으로 크기를 조정해 주는 클래스를 `.input-group`이 있는 곳에 추가하면, 그 안의 콘텐츠가 자동으로 재조정됩니다. 각 요소에 폼 컨트롤 크기 조정 클래스를 추가할 필요가 없습니다
 
 **각각의 입력 그룹 요소의 크기 변경은 지원하지 않습니다.**
 
@@ -80,9 +80,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## Checkboxes and radios
+## 체크박스와 라디오버튼
 
-입력 그룹의 추가 기능 자리에 문자 대신 체크 박스나 라디오 버튼 같은 옵션을 배치할 수 있습니다. 우리는 입력 부분에 표시되는 문자가 없는 경우 `.form-check-input`에 `.mt-0`을 추가하는 것을 권장합니다.
+입력 그룹의 추가 기능 자리에 텍스트 대신 체크 박스나 라디오 버튼 같은 옵션을 배치할 수 있습니다. 우리는 입력 부분에 표시되는 텍스트가 없는 경우 `.form-check-input`에 `.mt-0`을 추가하는 것을 권장합니다.
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -100,7 +100,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Multiple inputs
+## 복수 입력
 
 복수의 `<input>`은 시각적으로 지원되고 있지만, 유효성 검사 확인을 사용할 때에는 하나의 `<input>`을 가진 입력 그룹에서만 사용 가능합니다.
 
@@ -112,7 +112,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Multiple addons
+## 복수 애드온
 
 복수의 추가 기능을 지원하고 있어 체크 박스나 라디오 버튼과 함께 사용할 수 있습니다.
 
@@ -130,7 +130,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Button addons
+## 버튼 애드온
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -156,7 +156,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Buttons with dropdowns
+## 드롭다운이 있는 버튼
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -204,7 +204,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Segmented buttons
+## 분할 버튼
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -238,11 +238,11 @@ toc: true
 </div>
 {{< /example >}}
 
-## Custom forms
+## 사용자 지정 폼
 
-입력 그룹에는 사용자 정의 셀렉트 및 사용자 정의 파일 입력 지원이 표함되어 있습니다. 브라우저의 기본 버전에서는 이러한 기능은 지원되지 않습니다.
+입력 그룹에는 사용자 정의 셀렉트 및 사용자 정의 파일 선택 지원이 표함되어 있습니다. 브라우저의 기본 버전에서는 이러한 기능은 지원되지 않습니다.
 
-### Custom select
+### 사용자 지정 셀렉트
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -286,7 +286,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### Custom file input
+### 사용자 지정 파일 선택
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -312,6 +312,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="input-group-variables" file="scss/_variables.scss" >}}

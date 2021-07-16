@@ -40,7 +40,7 @@ toc: true
 
 다음 Sass 기능 외에도 색상 등이 포함 된 [CSS 사용자 정의 속성]({{< docsref "/customize/css-variables" >}}) (일명 CSS 변수)에 대해 읽어보십시오.
 
-### Variables
+### 변수
 
 대부분의 `background-color` 유틸리티는 테마 색상에 의해 생성되며 일반 색상 팔레트 변수에서 재 지정됩니다.
 
@@ -64,7 +64,7 @@ Grayscale colors are also available as a Sass map. **This map is not used to gen
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
 
-### Mixins
+### 믹스인
 
 ** 배경 유틸리티를 생성하는 데 믹스 인이 사용되지는 않지만 **, 자신만의 그라데이션을 만들고 싶은 다른 상황을 위한 몇가지 추가 믹스 인이 있습니다.
 
@@ -74,6 +74,6 @@ Grayscale colors are also available as a Sass map. **This map is not used to gen
 
 ### Utilities API
 
-백그라운드 유틸리티는 `scss / _utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+백그라운드 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-bg-color" file="scss/_utilities.scss" >}}

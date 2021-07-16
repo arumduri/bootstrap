@@ -9,7 +9,7 @@ toc: true
 
 토스트는 모바일 및 데스크톱 운영 체제에서 보급된 푸시 알림을 모방하여 설계된 가벼운 알림창 입니다. Flexbox로 만들어져 있어 위치 조정 및 배치가 간단합니다.
 
-## Overview
+## 개요
 
 토스트 플러그인을 사용할 때 알아두어야 할 사항:
 
@@ -20,7 +20,7 @@ toc: true
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Examples
+## 예시
 
 ### Basic
 
@@ -161,7 +161,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### Color schemes
+### 색상 스키마
 
 위의 예시를 바탕으로 [color]({{< docsref "/utilities/colors" >}})와 [background]({{< docsref "/utilities/background" >}}) 유틸리티를 사용해 다른 토스트의 색상 배합을 만들 수 있습니다. 여기에서는 `.toast`에 `.bg-primary`와 `.text-white`를 추가하고, 닫기 버튼에는 `.btn-close-white`를 추가하고 있습니다. 선명한 모서리를 보여주기 위해 `.border-0`을 추가해 기본으로 제공한 모서리를 삭제하고 있습니다.
 
@@ -273,13 +273,13 @@ toc: true
 </div>
 {{< /example >}}
 
-## Accessibility
+## 접근성
 
-토스트는 방문자가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 `aria-atomic="true"`를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 콘텐츠 일부만을 갱신한 경우나 같은 토스트의 콘텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용해 주세요.
+토스트는 방텍스트가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 `aria-atomic="true"`를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 콘텐츠 일부만을 갱신한 경우나 같은 토스트의 콘텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용해 주세요.
 
 토스트가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두 가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
 
-그리고, 내용에 따라 `role` 과 `aria-live` 의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
+그리고, 내용에 따라 `role` 과 `aria-live`의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
 
 보여지는 콘텐츠가 바뀌면 사용자가 토스트를 읽기에 충분한 시간이 필요하므로 [`delay` timeout](#options)을 반드시 업데이트 해 주세요.
 
@@ -309,7 +309,7 @@ toc: true
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="toast-variables" file="scss/_variables.scss" >}}
 
@@ -326,7 +326,7 @@ var toastList = toastElList.map(function (toastEl) {
 
 ### Options
 
-옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우 `data-bs-animation=""`처럼 `data-bs-` 에 옵션 명을 추가합니다.
+옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우 `data-bs-animation=""`처럼 `data-bs-`에 옵션명을 추가합니다.
 
 <table class="table">
   <thead>
@@ -361,7 +361,7 @@ var toastList = toastElList.map(function (toastEl) {
   </tbody>
 </table>
 
-### Methods
+### 메소드
 
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
@@ -410,7 +410,7 @@ var myToastEl = document.getElementById('myToastEl')
 var myToast = bootstrap.Toast.getOrCreateInstance(myToastEl) // Returns a Bootstrap toast instance
 ```
 
-### Events
+### 이벤트
 
 <table class="table">
   <thead>

@@ -7,7 +7,7 @@ group: forms
 toc: true
 ---
 
-## Default
+## 기본값
 
 사용자 정의의 `<select>`를 사용하기 위해 필요한 클래스는 `.form-select`입니다. 이 스타일은 브러우저 제한으로 `<select>`의 처음 외형만 변경할 수 있고 그 안에 있는 `<option>` 들의 스타일 변경은 불가능합니다.
 
@@ -20,9 +20,9 @@ toc: true
 </select>
 {{< /example >}}
 
-## Sizing
+## 크기 조절
 
-같은 크기의 문자 입력에 맞춰 크고 작은 사용자 정의 셀렉트를 선택해 사용할 수 있습니다.
+같은 크기의 텍스트 입력에 맞춰 크고 작은 사용자 정의 셀렉트를 선택해 사용할 수 있습니다.
 
 {{< example >}}
 <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
@@ -62,7 +62,7 @@ toc: true
 </select>
 {{< /example >}}
 
-## Disabled
+## 비활성화
 
 불리언 속성인 `disabled`를 셀렉트에 추가하면 비활성화된 외형으로 표시되며 포인터 이벤트가 삭제됩니다.
 
@@ -77,6 +77,6 @@ toc: true
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="form-select-variables" file="scss/_variables.scss" >}}

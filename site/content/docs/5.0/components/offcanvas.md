@@ -7,7 +7,7 @@ group: components
 toc: true
 ---
 
-## How it works
+## 작동 원리
 
 오프캔버스는 JavaScript로 뷰포트의 왼쪽, 오른쪽, 혹은 아래쪽에서 표시되는 사이드바 컴포넌트입니다. 버튼이나 앵커는 토글하는 특정 요소에 붙여지는 트리거로 사용되며 `data` 속성은 JavaScript를 호출하기 위해 사용됩니다.
 
@@ -22,7 +22,7 @@ toc: true
 {{< partial "callout-info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Examples
+## 예시
 
 ### Offcanvas components
 
@@ -84,7 +84,7 @@ toc: true
 
 오프캔버스 컴포넌트의 기본 배치는 없으므로 아래 제어자 클래스 중 하나를 추가해야 합니다:
 
-- `.offcanvas-start`는 오프캔버스를 뷰포트의 왼쪽에 배치합니다(위의 예시로 확인)
+- `.offcanvas-start`는 오프캔버스를 뷰포트의 왼쪽에 배치합니다 (위의 예시로 확인)
 - `.offcanvas-end`는 오프캔버스를 뷰포트의 오른쪽에 배치합니다.
 - `.offcanvas-top`은 뷰포트의 맨 위에 오프캔버스를 배치합니다.
 - `.offcanvas-bottom`은 뷰포트의 맨 아래에 오프캔버스를 배치합니다.
@@ -171,13 +171,13 @@ toc: true
 </div>
 {{< /example >}}
 
-## Accessibility
+## 접근성
 
 개념적으로 오프캔버스 패널은 모달 dialog여서, 반드시 `.offcanvas`에 `aria-labelledby="..."`라는 오프캔버스의 타이틀을 참조하는 기술을 추가해 주세요. 덧붙여 `role="dialog"`는 이미 JavaScript로 추가되고 있기 때문에 따로 추가할 필요는 없습니다.
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="offcanvas-variables" file="scss/_variables.scss" >}}
 
@@ -210,7 +210,7 @@ var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
 
 ### Options
 
-data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성의 경우, `data-bs-backdrop=""`처럼 ` data-bs-`에 옵션 명을 추가해 사용합니다.
+data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성의 경우, `data-bs-backdrop=""`처럼 ` data-bs-`에 옵션명을 추가해 사용합니다.
 
 {{< bs-table "table" >}}
 | Name | Type | Default | Description |
@@ -220,7 +220,7 @@ data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성�
 | `scroll` | boolean | `false` | 오프캔버스를 여는 동안 body 스크롤링을 허용합니다. |
 {{< /bs-table >}}
 
-### Methods
+### 메소드
 
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
@@ -245,7 +245,7 @@ var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
 | `getOrCreateInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialised |
 {{< /bs-table >}}
 
-### Events
+### 이벤트
 
 Bootstrap의 오프캔버스 클래스는 오프캔버스 기능에 연결하기 위한 몇 가지 이벤트를 공개하고 있습니다.
 
@@ -253,9 +253,9 @@ Bootstrap의 오프캔버스 클래스는 오프캔버스 기능에 연결하기
 | Event type | Description |
 | --- | --- |
 | `show.bs.offcanvas` | 이 이벤트는 `show` 인스턴스 메서드가 호출되면 즉시 발생합니다. |
-| `shown.bs.offcanvas` | 이 이벤트는 오프캔버스 요소가 사용자에게 보일 때 발생합니다(CSS 트랜지션이 완료될 때까지 기다립니다). |
+| `shown.bs.offcanvas` | 이 이벤트는 오프캔버스 요소가 사용자에게 보일 때 발생합니다 (CSS 트랜지션이 완료될 때까지 기다립니다). |
 | `hide.bs.offcanvas` | 이 이벤트는 `hide` 메서드가 호출되면 즉시 발생합니다. |
-| `hidden.bs.offcanvas` | 이 이벤트는 오프캔버스 요소가 사용자로부터 없어졌을때 발생합니다(CSS 트랜지션이 완료되기를 기다립니다). |
+| `hidden.bs.offcanvas` | 이 이벤트는 오프캔버스 요소가 사용자로부터 없어졌을때 발생합니다 (CSS 트랜지션이 완료되기를 기다립니다). |
 {{< /bs-table >}}
 
 ```js

@@ -8,10 +8,10 @@ toc: true
 ---
 
 {{< callout info >}}
-**주의!** 그리드 열을 수정하고 커스터마이징하는 방법에 대해 자세히 알아보기 전에 먼저 [그리드 페이지를 읽어보세요]({{< docsref "/layout/grid" >}}).
+**주의!** 그리드 열을 수정하고 사용자 지정하는 방법에 대해 자세히 알아보기 전에 먼저 [그리드 페이지를 읽어보세요]({{< docsref "/layout/grid" >}}).
 {{< /callout >}}
 
-## How they work
+## 작동 원리
 
 - **열은 그리드의 flexbox 아키텍처를 기반으로 합니다.** flexbox는 개별 열을 변경하고 [행 수준에서 열 그룹을 수정하는 옵션]({{< docsref "/layout/grid#row-columns" >}})이 있음을 의미합니다. 열이 커지거나 줄어들거나 변경되는 방식을 선택할 수 있습니다.
 
@@ -19,11 +19,11 @@ toc: true
 
 - **Bootstrap에는 빠른 반응형 레이아웃을 만들기 위한 미리 정의된 클래스가 포함되어 있습니다.** [6개의 중단점]({{< docsref "/layout/breakpoints" >}}) 및 각 그리드 계층의 12개의 열에 원하는 레이아웃을 생성할 수 있도록 이미 수십 개의 클래스가 구축되어 있습니다. 원하는 경우 Sass를 통해 비활성화할 수 있습니다.
 
-## Alignment
+## 정렬
 
 flexbox 정렬 유틸리티를 사용하여 가로나 세로로 열을 정렬합니다.
 
-### Vertical alignment
+### 수직 정렬
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container">
@@ -79,7 +79,7 @@ flexbox 정렬 유틸리티를 사용하여 가로나 세로로 열을 정렬합
 </div>
 {{< /example >}}
 
-### Horizontal alignment
+### 수평 정렬
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -134,7 +134,7 @@ flexbox 정렬 유틸리티를 사용하여 가로나 세로로 열을 정렬합
 </div>
 {{< /example >}}
 
-### Column wrapping
+### 열 줄바꿈
 
 단일 행에 12개 이상의 열이 있는 경우 추가 열의 각 그룹은 하나의 단위로 새 줄로 줄바꿈됩니다.
 
@@ -148,7 +148,7 @@ flexbox 정렬 유틸리티를 사용하여 가로나 세로로 열을 정렬합
 </div>
 {{< /example >}}
 
-### Column breaks
+### 열 분할
 
 flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있습합니다. 열을 새 줄로 묶고 싶은 곳에 `width: 100%` 요소를 추가하세요. 일반적으로 이건 여러 `.row`로 수행되지만 모든 구현 방법이 이를 지원하지는 않습니다.
 
@@ -184,9 +184,9 @@ flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있
 </div>
 {{< /example >}}
 
-## Reordering
+## 재정렬
 
-### Order classes
+### 정렬 클래스
 
 콘텐츠의 **시각적 순서**를 제어하려면 `.order-` 클래스를 사용하세요. 이러한 클래스는 반응형이므로 중단점으로 `order`를 설정할 수 있습니다 (예: `.order-1.order-md-2`). 여기에는 6개의 모든 그리드 계층에서 `1`부터 `5`까지에 대한 지원이 포함됩니다.
 
@@ -224,11 +224,11 @@ flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있
 </div>
 {{< /example >}}
 
-### Offsetting columns
+### 열 오프셋
 
 반응형 `.offset-` 그리드 클래스와 [여백 유틸리티]({{< docsref "/utilities/spacing" >}})의 두 가지 방법으로 그리드 열을 오프셋할 수 있습니다. 그리드 클래스는 열과 일치하도록 크기가 조정되는 반면 여백은 오프셋 너비가 가변적인 빠른 레이아웃에 더 유용합니다.
 
-#### Offset classes
+#### 오프셋 클래스
 
 `.offset-md-*` 클래스를 사용하여 열을 오른쪽으로 이동합니다. 이 클래스는 열의 왼쪽 여백을 `*` 열만큼 늘립니다. 예를 들어 `.offset-md-4`는 `.col-md-4`를 4개의 열로 이동합니다.
 
@@ -248,7 +248,7 @@ flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있
 </div>
 {{< /example >}}
 
-반응형 중단점에서 열 지우기 외에도 오프셋을 재설정해야 할 수 있습니다. [그리드 예제]({{< docsref "/examples/grid" >}})에서 실제 동작을 확인해보세요.
+반응형 중단점에서 열 지우기 외에도 오프셋을 재설정해야 할 수 있습니다. [그리드 예시]({{< docsref "/examples/grid" >}})에서 실제 동작을 확인해보세요.
 
 {{< example class="bd-example-row" >}}
 <div class="container">
@@ -263,7 +263,7 @@ flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있
 </div>
 {{< /example >}}
 
-#### Margin utilities
+#### 여백 유틸리티
 
 v4에서 flexbox으로 이동하면서 `.me-auto`와 같은 여백 유틸리티를 사용하여 맞닿아 있는 열을 강제로 서로 멀리 떨어뜨릴 수 있습니다.
 
@@ -284,7 +284,7 @@ v4에서 flexbox으로 이동하면서 `.me-auto`와 같은 여백 유틸리티�
 </div>
 {{< /example >}}
 
-## Standalone column classes
+## 독립 열 클래스
 
 `.col-*` 클래스를 `.row` 외부에서 사용하여 요소에 특정 너비를 지정할 수도 있습니다. 열 클래스가 행의 직계가 아닌 자식으로 사용될 때마다 패딩이 생략됩니다.
 

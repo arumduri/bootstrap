@@ -7,7 +7,7 @@ group: components
 toc: true
 ---
 
-## Basic example
+## 기본 예시
 
 `.btn-group`으로 `.btn`요소를 포장합니다.
 
@@ -37,7 +37,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Mixed styles
+## 혼합 스타일
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
@@ -47,7 +47,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Outlined styles
+## 테두리 스타일
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic outlined example">
@@ -57,7 +57,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Checkbox and radio button groups
+## 체크박스와 라디오버튼 그룹
 
 버튼과 같은 체크 박스와 라디오 [toggle buttons]({{< docsref "/forms/checks-radios" >}}) 을 조합하여 아주 매끄러운 외형의 버튼 그룹을 만듭니다.
 
@@ -87,7 +87,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Button toolbar
+## 버튼 툴바
 
 버튼 그룹의 세트를 버튼 툴바와 결합해, 더욱 복잡한 컴포넌트를 만들 수 있습니다. 필요에 따라서 유틸리티 클래스를 사용해 그룹과 버튼 등에 여백을 줄 수 있습니다.
 
@@ -140,7 +140,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Sizing
+## 크기 조절
 
 그룹 내의 모든 버튼에 버튼 크기 클래스를 적용하는 대신에, 각각의 버튼을 포함한 `.btn-group`에 `.btn-group-*`을 추가하면 됩니다.
 
@@ -170,7 +170,7 @@ toc: true
 <div class="btn-group btn-group-sm" role="group" aria-label="...">...</div>
 ```
 
-## Nesting
+## 중첩
 
 드롭다운과 버튼 그룹을 조합하는 경우는 다른 `.btn-group` 안에 `.btn-group`을 배치합니다.
 
@@ -191,9 +191,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## Vertical variation
+## 수직 변수
 
-버튼 세트를 수평 방향이 아닌 수직 방향으로 표시합니다. **Split button dropdown 은 여기에서는 지원되지 않습니다**
+버튼 세트를 수평 방향이 아닌 수직 방향으로 표시합니다. **Split button dropdown은 여기에서는 지원되지 않습니다.**
 
 <div class="bd-example">
   <div class="btn-group-vertical" role="group" aria-label="Vertical button group">

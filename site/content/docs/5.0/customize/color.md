@@ -7,9 +7,9 @@ group: customize
 toc: true
 ---
 
-## Theme colors
+## 테마 색상
 
-모든 색상의 하위 집합을 사용하여 색 구성표를 만들기 위한 더 작은 색상 팔레트를 만들며, Sass 변수와 Bootstrap의 `scss/_variables.scss` 파일의 Sass 맵으로도 사용할 수 있습니다.
+모든 색상의 자식 집합을 사용하여 색 구성표를 만들기 위한 더 작은 색상 팔레트를 만들며, Sass 변수와 Bootstrap의 `scss/_variables.scss` 파일의 Sass 맵으로도 사용할 수 있습니다.
 
 <div class="row">
   {{< theme-colors.inline >}}
@@ -27,11 +27,11 @@ toc: true
 
 이 색상을 변경하는 방법은 [Sass 맵과 반복 문서]({{< docsref "/customize/sass#maps-and-loops" >}})를 확인해 주세요.
 
-## All colors
+## 모든 색상
 
-모든 Bootstrap 색상은 `scss/_variables.scss` 파일의 Sass 변수와 Sass 맵으로 이용할 수 있습니다. 파일 크기 증가를 막기 위해서 이런 변수마다 문자나 배경 색상 클래스를 만들지 않습니다. 그 대신에, 이런 색의 하위 집합을 [theme palette](#theme-colors)로 선택하고 있습니다.
+모든 Bootstrap 색상은 `scss/_variables.scss` 파일의 Sass 변수와 Sass 맵으로 이용할 수 있습니다. 파일 크기 증가를 막기 위해서 이런 변수마다 텍스트나 배경 색상 클래스를 만들지 않습니다. 그 대신에, 이런 색의 자식 집합을 [theme palette](#theme-colors)로 선택하고 있습니다.
 
-색을 재정의 할 때는, 색 대비에 주의해 주세요. 아래 표시된 것처럼 메인 색상에 - 현재 색상에 대해, 흰색에 대해, 검은색에 대해 - 각각 세 가지 대비 비율을 추가했습니다.
+색을 재정의 할 때는, 색상 대비에 주의해 주세요. 아래 표시된 것처럼 메인 색상에 - 현재 색상에 대해, 흰색에 대해, 검은색에 대해 - 각각 세 가지 대비 비율을 추가했습니다.
 
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
@@ -72,7 +72,7 @@ toc: true
   </div>
 </div>
 
-### Notes on Sass
+### Sass 참고 사항
 
 Sass는 프로그램적으로 변수를 만들 수 없어서 모든 색상을 위한 변수를 수동으로 만듭니다. 중간 값을 지정하고 (예를 들어, `$blue-500`), Sass의 `mix()` 색상 함수로 색조(밝게) 혹은 음영(어둡게)의 사용자 정의 색상 함수를 사용하고 있습니다.
 
@@ -80,7 +80,7 @@ Sass는 프로그램적으로 변수를 만들 수 없어서 모든 색상을 �
 
 `tint-color()` 및 `shade-color()` 함수에서는 `mix()`를 `$theme-color-interval` 변수와 함께 사용합니다. 전체 소스 코드는 `scss/_functions.scss`와 `scss/_variables.scss` 파일을 참조해 주세요.
 
-## Color Sass maps
+## 색상 Sass 맵
 
 Bootstrap의 소스 Sass 파일에는 색상과 그 16진수 값의 목록을 빠르고 쉽게 반복하기 위한 세가지 맵이 포함되어 있습니다.
 
@@ -94,7 +94,7 @@ Bootstrap의 소스 Sass 파일에는 색상과 그 16진수 값의 목록을 �
 
 맵에서 값을 추가, 삭제, 수정하여 다른 많은 컴포넌트에서의 값을 사용하는 방법을 업데이트합니다. 안타깝게도 현시점에서는 _모든_ 컴포넌트가 이 Sass 맵을 이용하고 있는 것은 아닙니다. 추후 업데이트 시, 이 점을 개선하도록 노력하겠습니다. 그때까지는 Sass 맵과 `${color}` 변수를 이용해 주세요.
 
-### Example
+### 예시
 
 당신의 Sass에서 이를 사용하는 방법입니다:
 

@@ -8,7 +8,7 @@ aliases: "/docs/5.0/components/navs/"
 toc: true
 ---
 
-## Base nav
+## 기본 내비게이션
 
 Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스부터 활성화 상태와 비활성화 상태까지 일반적인 마크업과 스타일을 공유합니다. 각각의 스타일을 바꾸기 위해서 제어자 클래스를 교체합니다.
 
@@ -37,7 +37,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 `<ul>` 을 사용하거나, 아이템의 순서가 중요한 경우에는 `<ol>`를 사용하거나, `<nav>` 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. `.nav` 는 `display: flex`를 사용하고 있기 때문에, nav-link는 따로 추가적인 마크업 없이, nav-item과 동일하게 동작합니다.
+클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 `<ul>`을 사용하거나, 아이템의 순서가 중요한 경우에는 `<ol>`를 사용하거나, `<nav>` 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. `.nav` 는 `display: flex`를 사용하고 있기 때문에, nav-link는 따로 추가적인 마크업 없이, nav-item과 동일하게 동작합니다.
 
 {{< example >}}
 <nav class="nav">
@@ -48,11 +48,11 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </nav>
 {{< /example >}}
 
-## Available styles
+## 사용 가능한 스타일
 
 `.nav` 컴포넌트 스타일을 제어자와 유틸리티로 변경할 수 있습니다. 필요에 따라서 조합해 사용하는 것도 가능하며, 독자적인 스타일을 만드는것도 가능합니다.
 
-### Horizontal alignment
+### 수직 정렬
 
 [flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}}) 를 사용해, 내비게이션의 수평 방향의 배치를 변경합니다. 내비게이션의 기본은 왼쪽 정렬이지만, 쉽게 가운데 혹은 오른쪽 정렬로 변경 가능합니다.
 
@@ -94,7 +94,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-### Vertical
+### 수직
 
 `.flex-column` 유틸리티를 사용해 flex item(플렉스 아이템)의 방향을 변경해 내비게이션을 세로로 만들 수 있습니다. 일부 뷰포트에서는 세로로, 또 다른 뷰포트에서는 세로로 하고 싶지 않을 경우, `.flex-sm-column`을 사용해 주세요.
 
@@ -126,7 +126,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </nav>
 {{< /example >}}
 
-### Tabs
+### 탭
 
 `.nav-tabs` 클래스를 추가해 탭이 있는 인터페이스를 만들 수 있습니다. [tab JavaScript plugin](#javascript-behavior) 으로 탭 가능한 영역을 만듭니다。
 
@@ -147,9 +147,9 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-### Pills
+### 필
 
-동일한 HTML로, `.nav-pills` 도 사용할 수 있습니다.
+동일한 HTML로, `.nav-pills`도 사용할 수 있습니다.
 
 {{< example >}}
 <ul class="nav nav-pills">
@@ -170,7 +170,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### Fill and justify
 
-`.nav` 가로 폭을 100% 사용하게 합니다. `.nav-item`에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill`을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.
+`.nav`가로 폭을 100% 사용하게 합니다. `.nav-item`에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill`을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.
 
 {{< example >}}
 <ul class="nav nav-pills nav-fill">
@@ -189,7 +189,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-`<nav>` 베이스의 내비게이션을 사용할 경우, `<a>` 요소의 스타일 설정에 필요한 것은 `.nav-link` 뿐이므로, `.nav-item` 을 생략할 수 있습니다.
+`<nav>` 베이스의 내비게이션을 사용할 경우, `<a>` 요소의 스타일 설정에 필요한 것은 `.nav-link` 뿐이므로, `.nav-item`을 생략할 수 있습니다.
 
 {{< example >}}
 <nav class="nav nav-pills nav-fill">
@@ -219,7 +219,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-`<nav>` 에 `.nav-fill` 을 적용한 경우는
+`<nav>`에 `.nav-fill`을 적용한 경우는
 
 {{< example >}}
 <nav class="nav nav-pills nav-justified">
@@ -232,7 +232,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 {{< /example >}}
 ## Working with flex utilities
 
-반응형 내비게이션의 변화가 필요한 경우에는 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 를 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 브레이크 포인트 간에 더 많은 커스터마이징이 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
+반응형 내비게이션의 변화가 필요한 경우에는 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 를 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 중단점 간에 더 많은 사용자 지정이 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
 
 {{< example >}}
 <nav class="nav nav-pills flex-column flex-sm-row">
@@ -245,16 +245,16 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ## Regarding accessibility
 
-내비게이션바를 제공하기 위해 내비게이션을 사용하고 있는 경우, `<ul>` 의 부모 컨테이너에 `role="navigation"` 을 추가하거나, `<nav>` 요소를 내비게이션 전체에 감싸주세요. role을 `<ul>` 자체에 추가하지 마십시오.
+내비게이션바를 제공하기 위해 내비게이션을 사용하고 있는 경우, `<ul>`의 부모 컨테이너에 `role="navigation"`을 추가하거나, `<nav>` 요소를 내비게이션 전체에 감싸주세요. role을 `<ul>` 자체에 추가하지 마십시오.
 
 내비게이션바는, `.nav-tabs`에서 시각적으로는 탭으로 보여지게 되있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior) 를 참조해 주십시오. JavaScript는 활성화된 탭에 `aria-selected="true"`를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하지 않습니다.
 
-## Using dropdowns
+## 드롭다운 사용하기
 
 dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}) 으로 드롭다운 메뉴를 추가합니다.
 
 
-### Tabs with dropdowns
+### 드롭다운이 있는 탭
 
 {{< example >}}
 <ul class="nav nav-tabs">
@@ -280,7 +280,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 </ul>
 {{< /example >}}
 
-### Pills with dropdowns
+### 드롭다운이 있는 필
 
 {{< example >}}
 <ul class="nav nav-pills">
@@ -308,11 +308,11 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="nav-variables" file="scss/_variables.scss" >}}
 
-## JavaScript behavior
+## JavaScript 행동
 
 `bootstrap.js`파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 콘텐츠의 탭 가능한 창을 만들 수 있습니다.
 
@@ -492,7 +492,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 </div>
 ```
 
-### Using data attributes
+### 데이터 속성 사용하기
 
 요소에 `data-bs-toggle="tab"` 혹은 `data-bs-toggle="pill"`를 지정하는것 만으로, JavaScript를 쓰지 않고도 탭이나 pill의 내비게이션을 활성화 시킬 수 있습니다. 이러한 data 속성은 `.nav-tabs`나 `.nav-pills`로 사용합니다.
 
@@ -522,9 +522,9 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 </div>
 ```
 
-### Via JavaScript
+### JavaScript를 통해 사용하기
 
-JavaScript로 탭 가능한 탭을 유효하게 합니다(각 탭을 개별적으로 유효하게 할 필요가 있습니다).
+JavaScript로 탭 가능한 탭을 유효하게 합니다 (각 탭을 개별적으로 유효하게 할 필요가 있습니다).
 
 ```js
 var triggerTabList = [].slice.call(document.querySelectorAll('#myTab a'))
@@ -561,7 +561,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 </div>
 ```
 
-### Methods
+### 메소드
 
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
@@ -635,7 +635,7 @@ var triggerEl = document.querySelector('#trigger')
 var tab = bootstrap.Tab.getOrCreateInstance(triggerEl) // Returns a Bootstrap tab instance
 ```
 
-### Events
+### 이벤트
 
 새로운 탭을 표시할 때, 아래의 순서대로 이벤트가 발생합니다.
 

@@ -7,18 +7,18 @@ group: helpers
 toc: true
 ---
 
-## About
+## 소개
 
-비율 도우미를 사용하여 `<iframe>`, `<embed>`, `<video>`, 그리고 `<object>`와 같은 외부 콘텐츠의 가로세로 비율을 관리할 수 있습니다. 이 도우미는 모든 표준 HTML 하위 요소에도 사용 할 수 있습니다 (예를 들어, `<div>` 또는 `<img>`). 스타일은 부모 `.ratio` 클래스에서 하위 요소로 직접 적용 됩니다.
+비율 도우미를 사용하여 `<iframe>`, `<embed>`, `<video>`, 그리고 `<object>`와 같은 외부 콘텐츠의 가로세로 비율을 관리할 수 있습니다. 이 도우미는 모든 표준 HTML 자식 요소에도 사용 할 수 있습니다 (예를 들어, `<div>` 또는 `<img>`). 스타일은 부모 `.ratio` 클래스에서 자식 요소로 직접 적용 됩니다.
 
 가로세로 비율은 Sass 맵에서 선언되고 CSS 변수를 통해 각 클래스에 적용되므로 [사용자 정의 가로세로 비율](#custom-ratios) 도 사용 할 수 있습니다.
 
 {{< callout info >}}
-**꿀팁!** [Reboot]({{< docsref "/content/reboot" >}})에서 자동으로 재정의하기 때문에 `<iframe>` 에서 `frameborder="0"` 은 사용하지 않아도 됩니다.
+**꿀팁!** [Reboot]({{< docsref "/content/reboot" >}})에서 자동으로 재정의하기 때문에 `<iframe>`에서 `frameborder="0"` 은 사용하지 않아도 됩니다.
 {{< /callout >}}
 
-## Example
-부모요소에 `.ratio`와 가로세로 비율 클래스를 사용해 `<iframe>` 같은 요소를 감싸보세요. 범용 선택기 `.ratio > *` 덕분에 직계 하위 요소는 사이즈가 자동으로 조정 됩니다.
+## 예시
+부모요소에 `.ratio`와 가로세로 비율 클래스를 사용해 `<iframe>` 같은 요소를 감싸보세요. 범용 선택기 `.ratio > *` 덕분에 직계 자식 요소는 크기가 자동으로 조정 됩니다.
   
 {{< example >}}
 <div class="ratio ratio-16x9">
@@ -49,7 +49,7 @@ toc: true
 
 각 `.ratio-*` 클래스는 선택기에 CSS 사용자 정의 속성 (또는 CSS 변수)이 내장되어 있습니다. 이 CSS 변수를 재정의하여 사용자전용 가로세로 비율을 즉석에서 만들 수 있습니다. 
 
-예를 들어 2x1 가로세로 비율을 만들려면 `.ratio` 에서 `--bs-aspect-ratio: 50%`를 설정합니다.
+예를 들어 2x1 가로세로 비율을 만들려면 `.ratio`에서 `--bs-aspect-ratio: 50%`를 설정합니다.
 
 {{< example class="bd-example-ratios" >}}
 <div class="ratio" style="--bs-aspect-ratio: 50%;">
@@ -76,6 +76,6 @@ toc: true
 
 ## Sass map
 
-`_variables.scss` 에서 사용하고자 하는 가로세로 비율을 변경 할 수 있습니다. 다음은 기본 `$ratio-aspect-ratios` 맵 코드 입니다. 원하시는대로 맵 코드를 수정하시고 Sass를 사용하기 위해 다시 컴파일 하세요.
+`_variables.scss`에서 사용하고자 하는 가로세로 비율을 변경 할 수 있습니다. 다음은 기본 `$ratio-aspect-ratios` 맵 코드 입니다. 원하시는대로 맵 코드를 수정하시고 Sass를 사용하기 위해 다시 컴파일 하세요.
 
 {{< scss-docs name="aspect-ratios" file="scss/_variables.scss" >}}
