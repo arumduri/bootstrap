@@ -105,7 +105,7 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
       <td>1320px</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">클래스 접두어</th>
+      <th class="text-nowrap" scope="row">클래스 접두사</th>
       <td><code>.col-</code></td>
       <td><code>.col-sm-</code></td>
       <td><code>.col-md-</code></td>

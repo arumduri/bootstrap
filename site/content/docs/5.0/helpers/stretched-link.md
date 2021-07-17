@@ -8,7 +8,7 @@ group: helpers
 
 링크에 `.stretched-link` 클래스를 추가하여 `:: after` 가상 요소를 통해 [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block)을 클릭할 수 있도록 만듭니다. 대부분의 경우 이는 링크에 `.stretched-link` 클래스가 포함되어 있고 이를 감싸고있는 `position : relative;` 상태의 요소를 클릭할 수 있음을 의미합니다. [CSS `position`이작동하는 방식](https://www.w3.org/TR/CSS21/visuren.html#propdef-position)을 고려하면 `.stretched-link` 는 대부분의 테이블 요소와 혼합할 수 없습니다.
 
-Bootstrap에서 card는 기본적으로 `position: relative` 상태를 갖고 있습니다, 그렇기 때문에 이 경우 사용자가 별도의 HTML 변경없이 `.stretched-link` 클래스를 안전하게 카드의 a링크 부분에 추가 할 수 있습니다.
+Bootstrap에서 card는 기본적으로 `position: relative` 상태를 갖고 있습니다, 그렇기 때문에 이 경우 사용자가 별도의 HTML 변경없이 `.stretched-link` 클래스를 안전하게 카드의 a링크 부분에 추가할 수 있습니다.
 
 확장형 링크에 탭 대상 및 다중링크 사용은 권장하지 않습니다. 그러나, 사용이 필요한 경우 `position` 그리고 `z-index` 스타일이 도움이 될 수 있습니다.
 

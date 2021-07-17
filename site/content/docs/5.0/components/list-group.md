@@ -421,7 +421,7 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 
 ### 페이드 효과
 
-탭 판넬을 페이드인 시키려면 `.tab-pane`에 `.fade`를 추가합니다. 첫번째 탭 판넬에는 첫번째 콘텐츠를 표시하기 위해서 `.show`를 추가 할 필요가 있습니다.
+탭 판넬을 페이드인 시키려면 `.tab-pane`에 `.fade`를 추가합니다. 첫번째 탭 판넬에는 첫번째 콘텐츠를 표시하기 위해서 `.show`를 추가할 필요가 있습니다.
 
 ```html
 <div class="tab-content">

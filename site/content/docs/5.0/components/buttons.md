@@ -232,7 +232,7 @@ buttons.forEach(function (button) {
 
 ### 믹스인
 
-버튼에는 3개의 믹스인이 있습니다.: 버튼과 버튼 아웃라인 변수 믹스인(양쪽 다 `$theme-colors`를 기반으로 사용), 그리고 버튼 크기 믹스인.
+버튼에는 3개의 믹스인이 있습니다: 버튼과 버튼 아웃라인 변수 믹스인(양쪽 다 `$theme-colors`를 기반으로 사용), 그리고 버튼 크기 믹스인.
 
 {{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 

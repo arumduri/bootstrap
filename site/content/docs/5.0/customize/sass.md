@@ -10,7 +10,7 @@ toc: true
 
 ## 파일 구조
 
-가능한 한, Bootstrap의 핵심 파일은 수정하지 마세요. Sass에서는 Bootstrap을 가져와 자체 스타일 시트를 생성함으로써 Bootstrap을 수정하고 확장할 수 있습니다. npm과 같은 패키지 매니저를 사용하는 경우 다음과 같은 파일 구조가 됩니다.:
+가능한 한, Bootstrap의 핵심 파일은 수정하지 마세요. Sass에서는 Bootstrap을 가져와 자체 스타일 시트를 생성함으로써 Bootstrap을 수정하고 확장할 수 있습니다. npm과 같은 패키지 매니저를 사용하는 경우 다음과 같은 파일 구조가 됩니다:
 
 ```text
 your-project/

@@ -28,7 +28,7 @@ toc: true
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## Specificity
+## 상황별
 
 다른 선택자의 특수성으로 인해 상황별 클래스를 적용 할 수 없는 경우가 있습니다. 해결 방법은 요소의 컨텐츠를  `<div>` 또는 원하는 클래스의 의미 요소로 감싸는 것입니다.
 
@@ -49,7 +49,7 @@ toc: true
 
 {{< scss-docs name="gray-color-variables" file="scss/_variables.scss" >}}
 
-### Map
+### 맵
 
 테마 색상은 Sass 맵에 배치되어 유틸리티, 구성 요소 수정자 등을 생성하기 위해 반복 할 수 있습니다.
 
@@ -59,7 +59,7 @@ toc: true
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
 
-### Utilities API
+### 유틸리티 API
 
 색상 유틸리티는`scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
 

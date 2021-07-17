@@ -7,14 +7,13 @@ group: utilities
 toc: true
 ---
 
-## Margin and padding
+## 마진과 패딩
 
-속기 클래스를 사용하여 요소 또는 측면의 자식 집합에 반응형 `margin` 또는 `padding` 값을 할당합니다. 개별 속성, 모든 속성, 수직 및 수평 속성에 대한 지원이 포함됩니다. 클래스는 `.25rem`에서 `3rem` 범위의 기본 Sass 맵에서 빌드됩니다.
+약칭 클래스를 사용하여 요소 또는 측면의 자식 집합에 반응형 `margin` 또는 `padding` 값을 할당합니다. 개별 속성, 모든 속성, 수직 및 수평 속성에 대한 지원이 포함됩니다. 클래스는 `.25rem`에서 `3rem` 범위의 기본 Sass 맵에서 빌드됩니다.
 
 CSS 그리드 시스템 모듈을 사용하십니까? 그렇다면 [the gap utility](#gap) 사용을 고려해보세요.
 
-### Notation
-
+### 표기
 
 `xs`에서`xxl`까지 모든 중단점에 적용되는 간격 유틸리티에는 별도의 중단점 약어가 없습니다. 이는 이러한 클래스가 `min-width : 0` 이상에서 적용되므로 미디어 쿼리에 의해 바인딩되지 않기 때문입니다. 그러나 나머지 중단점에는 중단점 약어가 포함됩니다.
 
@@ -45,7 +44,7 @@ Where *size* is one of:
 - `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3`
 - `auto` - for classes that set the `margin` to auto
 
-(`$ spacers` Sass 맵 변수에 항목을 추가하면 더 많은 크기를 추가 할 수 있습니다.)
+(`$ spacers` Sass 맵 변수에 항목을 추가하면 더 많은 크기를 추가할 수 있습니다.)
 
 ### 예시
 
@@ -70,7 +69,7 @@ Where *size* is one of:
 }
 ```
 
-### Horizontal centering
+### 세로 중앙
 
 Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
 
@@ -86,7 +85,7 @@ Additionally, Bootstrap also includes an `.mx-auto` class for horizontally cente
 </div>
 ```
 
-## Negative margin
+## 음수 마진
 
 CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding` 은 사용할 수 없음). 이러한 음수 여백은 **기본적으로 사용 중지** 되지만 `$ enable-negative-margins : true`를 설정하여 Sass에서 사용하도록 설정할 수 있습니다.
 
@@ -98,9 +97,9 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 }
 ```
 
-## Gap
+## 갭
 
-`display : grid`를 사용할 때 부모 그리드 컨테이너에서 `gap` 유틸리티를 사용할 수 있습니다. 이렇게하면 개별 그리드 항목 (`display : grid` 컨테이너의 자식 항목)에 여백 유틸리티를 추가 할 필요가 없습니다. 간격 유틸리티는 기본적으로 반응형이며 `$ spacers` Sass 맵을 기반으로 유틸리티 API를 통해 생성됩니다.
+`display : grid`를 사용할 때 부모 그리드 컨테이너에서 `gap` 유틸리티를 사용할 수 있습니다. 이렇게하면 개별 그리드 항목 (`display : grid` 컨테이너의 자식 항목)에 여백 유틸리티를 추가할 필요가 없습니다. 간격 유틸리티는 기본적으로 반응형이며 `$ spacers` Sass 맵을 기반으로 유틸리티 API를 통해 생성됩니다.
 
 {{< example html >}}
 <div class="d-grid gap-3">
@@ -114,13 +113,13 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 
 ## Sass
 
-### Maps
+### 맵
 
 Spacing 유틸리티는 Sass 맵을 통해 선언된 다음 유틸리티 API로 생성됩니다.
 
 {{< scss-docs name="spacer-variables-maps" file="scss/_variables.scss" >}}
 
-### Utilities API
+### 유틸리티 API
 
 Spacing 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

@@ -42,7 +42,7 @@ With table cells:
 
 ## Sass
 
-### Utilities API
+### 유틸리티 API
 
 Vertical align utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

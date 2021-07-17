@@ -7,7 +7,7 @@ group: utilities
 toc: true
 ---
 
-## Relative to the parent
+## 부모 상대적
 
 너비 및 높이 유틸리티는 `_utilities.scss`의 유틸리티 API에서 생성됩니다. 기본적으로 `25 %` , `50 %` , `75 %` , `100 %` 및 `auto`에 대한 지원을 포함합니다. 여기에서 다른 유틸리티를 생성 해야하므로 해당 값을 수정하십시오.
 
@@ -41,7 +41,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Relative to the viewport
+## 뷰포트 상대적
 
 유틸리티를 사용하여 뷰포트에 상대적인 너비와 높이를 설정 할 수 있습니다.
 
@@ -54,7 +54,7 @@ toc: true
 
 ## Sass
 
-### Utilities API
+### 유틸리티 API
 
 Sizing 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

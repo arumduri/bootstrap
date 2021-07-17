@@ -623,7 +623,7 @@ _아무_ 스타일이 중첩 테이블로 유출되는 것을 방지하기 위�
 
 ### 항상 반응형
 
-모든 중단 점에서 표 수평 스크롤에 `.table-responsive`를 사용합니다.
+모든 중단점에서 표 수평 스크롤에 `.table-responsive`를 사용합니다.
 
 <div class="bd-example">
   <div class="table-responsive">

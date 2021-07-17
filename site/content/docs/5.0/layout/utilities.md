@@ -15,7 +15,7 @@ toc: true
 
 Bootstrap은 flexbox로 빌드되었지만 모든 요소의 `display`가 `display: flex`로 변경되지는 않았습니다. 불필요한 재정의가 많이 추가되고 예기치 않게 주요 브라우저 동작이 변경되기 때문입니다. 대부분의 [컴포넌트]({{< docsref "/components/alerts" >}})는 flexbox가 활성화된 상태로 만들어졌습니다.
 
-요소에 `display: flex`를 추가해야하는 경우 `.d-flex` 또는 반응형 변수 중 하나 (예 : `.d-sm-flex`)를 사용하여 추가합니다. 크기 조정, 정렬, 간격 등에 대한 추가 [flexbox 유틸리티]({{< docsref "/utilities/flex" >}})를 사용하려면 이 클래스 또는 `display` 값이 필요합니다.
+요소에 `display: flex`를 추가해야하는 경우 `.d-flex` 또는 반응형 변수 중 하나 (예: `.d-sm-flex`)를 사용하여 추가합니다. 크기 조정, 정렬, 간격 등에 대한 추가 [flexbox 유틸리티]({{< docsref "/utilities/flex" >}})를 사용하려면 이 클래스 또는 `display` 값이 필요합니다.
 
 ## 마진과 패딩
 

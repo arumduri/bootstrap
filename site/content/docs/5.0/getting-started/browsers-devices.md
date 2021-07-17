@@ -21,7 +21,7 @@ Bootstrap은 모든 주요 브라우저 및 플랫폼의 **최신 및 안정 버
 {{< /rf.inline >}}
 ```
 
-우리는 CSS 접두어를 통해 의도한 브라우저 지원을 처리하기 위해서 [Autoprefixer](https://github.com/postcss/autoprefixer)를 사용하며 [Browserslist](https://github.com/browserslist/browserslist)를 통해 브라우저 버전을 관리합니다. 이러한 도구를 프로젝트에 통합하는 방법은 해당 문서를 참고해주세요.
+우리는 CSS 접두사를 통해 의도한 브라우저 지원을 처리하기 위해서 [Autoprefixer](https://github.com/postcss/autoprefixer)를 사용하며 [Browserslist](https://github.com/browserslist/browserslist)를 통해 브라우저 버전을 관리합니다. 이러한 도구를 프로젝트에 통합하는 방법은 해당 문서를 참고해주세요.
 
 ### 모바일 기기
 

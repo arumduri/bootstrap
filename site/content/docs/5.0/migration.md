@@ -152,7 +152,7 @@ toc: true
   - `.custom-range`는 `.form-range`로 변경.
   - 네이티브 `.form-control-file`과 `.form-control-range`는 삭제.
 
-- <span class="badge bg-danger">Breaking</span> `.input-group-append`와 `.input-group-prepend`는 삭제. 입력 그룹의 직접 자식 요소로서 버튼과 `.input-group-text`를 추가 할 수 있게 되었습니다.
+- <span class="badge bg-danger">Breaking</span> `.input-group-append`와 `.input-group-prepend`는 삭제. 입력 그룹의 직접 자식 요소로서 버튼과 `.input-group-text`를 추가할 수 있게 되었습니다.
 
 - 오랫동안 지속 되었던 [유효성 검사를 사용할때 입력 그룹에서 반원 경계선이 누락되는 버그](https://github.com/twbs/bootstrap/issues/25110)는 유효성 검사 폼에 포함된 입력 그룹에 `.has-validation` 클래스를 추가하는 것으로 겨우 수정 되었습니다.
 

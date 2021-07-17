@@ -439,7 +439,7 @@ Header나 footer와 같이, 카드에는 카드의 상부와 하부의 "image ca
 
 ### 테두리
 
-카드의 `border-color` 만 변경하려면, [border utilities]({{< docsref "/utilities/borders" >}})를 사용합니다. 아래와 같이, `.text-{color}` 클래스를 부모의 `.card` 나 카드 내용의 서브 세트에 배치할 수 있습니다.
+카드의 `border-color`만 변경하려면, [border utilities]({{< docsref "/utilities/borders" >}})를 사용합니다. 아래와 같이, `.text-{color}` 클래스를 부모의 `.card` 나 카드 내용의 서브 세트에 배치할 수 있습니다.
 
 {{< example >}}
 {{< card.inline >}}

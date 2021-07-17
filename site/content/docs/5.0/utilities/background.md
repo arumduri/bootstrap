@@ -7,7 +7,7 @@ group: utilities
 toc: true
 ---
 
-## Background color
+## 배경색
 
 상황별 텍스트 색상 클래스와 비슷하게 요소의 배경을 상황별 클래스로 설정합니다. background 유틸리티는 ** `color` 는 세팅하지 않습니다 **. 따라서 경우에 따라 `.text- *` [색상 유틸리티]({{< docsref "/utilities/colors" >}})를 사용하는 것이 좋습니다.
 
@@ -22,11 +22,11 @@ toc: true
 <div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
 {{< /example >}}
 
-## Background gradient
+## 배경 그라데이션
 
-`.bg-gradient` 클래스를 추가하면 선형 그래디언트가 배경 이미지로 추가됩니다. 이 그라데이션은 아래쪽으로 희미 해지는 반투명 흰색으로 시작됩니다.
+`.bg-gradient` 클래스를 추가하면 선형 그라데이션이 배경 이미지로 추가됩니다. 이 그라데이션은 아래쪽으로 희미 해지는 반투명 흰색으로 시작됩니다.
 
-사용자 정의 CSS에 그라디언트가 필요합니까? `background-image : var (-bs-gradient);` 만 추가하면 됩니다.
+사용자 정의 CSS에 그라데이션이 필요하신가요? `background-image : var (-bs-gradient);`만 추가하면 됩니다.
 
 {{< markdown >}}
 {{< colors.inline >}}
@@ -54,7 +54,7 @@ Grayscale colors are also available, but only a subset are used to generate any 
 
 {{< scss-docs name="gray-color-variables" file="scss/_variables.scss" >}}
 
-### Map
+### 맵
 
 그런 다음 테마 색상은 Sass 맵에 배치되어 유틸리티, 구성 요소 수정자 등을 생성하기 위해 반복 할 수 있습니다.
 
@@ -72,7 +72,7 @@ Grayscale colors are also available as a Sass map. **This map is not used to gen
 
 {{< scss-docs name="gradient-mixins" file="scss/mixins/_gradients.scss" >}}
 
-### Utilities API
+### 유틸리티 API
 
 백그라운드 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
