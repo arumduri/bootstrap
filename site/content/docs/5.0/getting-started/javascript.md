@@ -6,13 +6,13 @@ group: getting-started
 toc: true
 ---
 
-## Individual or compiled
+## 개별 또는 컴파일
 
 (Bootstrap의 독립된 `js/dist/*.js`를 이용해서) 플러그인을 별도로 포함시키거나, `bootstrap.js` 또는 경량화된 `bootstrap.min.js` (둘 다 포함하면 안됨)을 이용해서 한 번에 포함하세요.
 
-번들러 (웹팩, Rollup...)를 사용한다면 UMD를 위해서 준비된 `/js/dist/*.js`을 사용할 수도 있습니다.
+번들러 (webpack, Rollup...)를 사용한다면 UMD를 위해서 준비된 `/js/dist/*.js`을 사용할 수도 있습니다.
 
-## Using Bootstrap as a module
+## Bootstrap을 모듈로 사용하기
 
 [타게팅하려는 브라우저가 지원하는 경우](https://caniuse.com/es6-module) 브라우저에서 Bootstrap를 모듈로 사용할 수 있도록 `ESM` (`bootstrap.esm.js` 및 `bootstrap.esm.min.js`)으로 빌드된 버전을 제공합니다.
 
@@ -31,17 +31,17 @@ toc: true
 브라우저 제한으로 인해 드롭다운, 툴팁 및 팝오버 플러그인과 같은 일부 플러그인은 Popper에 의존하기 때문에 `module` 유형이 있는 `<script>` 태그에서 사용할 수 없습니다. 이 문제에 대해 자세히 알아보려면 [여기](https://v8.dev/features/modules#specifiers)를 참고해주세요.
 {{< /callout >}}
 
-## Dependencies
+## 의존성
 
 일부 플러그인 및 CSS 컴포넌트는 다른 플러그인에 의존합니다. 플러그인을 개별적으로 포함하려면 문서에서 이러한 종속성을 확인해주세요
 
 드롭다운, 팝오버, 툴팁도 [Popper](https://popper.js.org/)에 의존하고 있습니다.
 
-## Still want to use jQuery? It's possible!
+## jQuery를 계속 사용하고 싶으신가요? 가능합니다!
 
 Bootstrap 5는 jQuery 없이도 사용할 수 있게 설계되었지만 여전히 jQuery와 함께 컴포넌트를 사용할 수 있습니다. **Bootstrap이 `window` 객체에서 `jQuery`를 감지하면** jQuery의 플러그인 시스템에 모든 컴포넌트를 추가합니다. 즉, 툴팁을 활성화하기 위해서 `$('[data-bs-toggle="tooltip"]').tooltip()`를 사용할 수 있게 됩니다. 이는 다른 컴포넌트에도 적용됩니다.
 
-## Data attributes
+## 데이터 속성
 
 거의 모든 Bootstrap 플러그인은 데이터 속성 (JavaScript 기능을 사용하는 권장 방법)과 함께 HTML을 통해서만 활성화 및 구성할 수 있습니다. **단일 요소의 한 세트의 데이터 속성만 사용해야 합니다.** (예: 동일한 버튼으로 툴팁과 모달을 트리거할 수 없음)
 
@@ -52,7 +52,7 @@ Bootstrap 5는 jQuery 없이도 사용할 수 있게 설계되었지만 여전�
 `collapse:Example`와 같은 특수 선택자를 사용하는 경우 이스케이프를 해주셔야 합니다.
 {{< /callout >}}
 
-## Events
+## 이벤트
 
 Bootstrap은 대부분의 플러그인 고유 작업에 대한 사용자 지정 이벤트를 제공합니다. 일반적으로 이것들은 부정사 (infinitive) 및 과거분사 (past participle)의 형태로 제공됩니다. 부정사 (예: `show`)는 이벤트가 시작될 때 트리거되고 과거분사 (예: `shown`)는 동작이 완료될 때 트리거됩니다.
 
@@ -80,7 +80,7 @@ $('#myTab a').on('shown.bs.tab', function () {
 ```
 {{< /callout >}}
 
-## Programmatic API
+## 프로그래매틱 API
 
 모든 생성자는 선택적 옵션 객체를 허용하거나 (기본 동작으로 플러그인을 시작한다면) 아무것도 허용하지 않습니다:
 
@@ -93,7 +93,7 @@ var modal = new bootstrap.Modal(myModalEl, { keyboard: false }) // initialized w
 
 특정 플러그인 인스턴스를 가져오려면 각 플러그인이 `getInstance` 메서드를 노출합니다. 요소에서 직접 가져오려면 `bootstrap.Popover.getInstance(myPopoverEl)`를 사용해주세요.
 
-### CSS selectors in constructors
+### 생성자에서의 CSS 선택자
 
 플러그인을 초기화하기 위해 DOM 요소 대신 CSS 선택자를 첫 번째 인수로 사용할 수도 있습니다. 현재 플러그인의 요소는 단일 요소만 지원하므로 `querySelector` 메소드에 의해 발견됩니다.
 
@@ -102,7 +102,7 @@ var modal = new bootstrap.Modal('#myModal')
 var dropdown = new bootstrap.Dropdown('[data-bs-toggle="dropdown"]')
 ```
 
-### Asynchronous functions and transitions
+### 비동기 기능 및 트랜지션
 
 모든 프로그래밍 가능한 API 메서드는 **비동기적**이며 트랜지션이 시작되고 **종료되기 전에** 호출자에게 반환됩니다.
 
@@ -130,7 +130,7 @@ carousel.to('1') // Will start sliding to the slide 1 and returns to the caller
 carousel.to('2') // !! Will be ignored, as the transition to the slide 1 is not finished !!
 ```
 
-### Default settings
+### 기본 설정값
 
 플러그인의 `Contsructor.Default` 객체를 수정하여 플러그인의 기본 설정을 변경할 수 있습니다:
 
@@ -139,7 +139,7 @@ carousel.to('2') // !! Will be ignored, as the transition to the slide 1 is not 
 bootstrap.Modal.Default.keyboard = false
 ```
 
-## No conflict (only if you use jQuery)
+## 충돌 방지 (jQuery를 사용하는 경우에만)
 
 가끔 다른 UI 프레임워크와 함께 Bootstrap을 사용해야 할 수도 있습니다. 이런 경우 네임스페이스 충돌이 발생할 수도 있습니다. 이러한 문제가 발생할 경우 값을 되돌리려는 플러그인에 `.noConflict` 값을 호출할 수 있습니다.
 
@@ -148,7 +148,7 @@ var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previous
 $.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap functionality
 ```
 
-## Version numbers
+## 버전 번호
 Bootstrap 플러그인의 각 버전은 `VERSION` 속성
 각 Bootstrap 플러그인 버전은 플러그인 생성자의 `VERSION` 속성을 통해 접근할 수 있습니다. 툴팁 플러그인을 예로 들자면 다음과 같습니다:
 
@@ -156,13 +156,13 @@ Bootstrap 플러그인의 각 버전은 `VERSION` 속성
 bootstrap.Tooltip.VERSION // => "{{< param current_version >}}"
 ```
 
-## No special fallbacks when JavaScript is disabled
+## JavaScript가 비활성화된 경우 특별한 폴백 없음
 
 Bootstrap의 플러그인은 JavaScript가 비활성화되어있을 때 특히 멋있게 폴백되지 않습니다. 이 경우 사용자 경험에 관심이 있다면 [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)를 사용해서 상황 (및 JavaScript를 다시 활성화하는 방법)을 사용자에게 설명하거나 직접 만든 폴백을 추가하세요.
 
 {{< callout warning >}}
-##### 서드파티 라이브러리
-Bootstrap은 Prototype 또는 jQuery UI 같은 **서드파티 라이브러리를 공식적으로 지원하지 않습니다.**  `.noConflict` 및 네임스페이스 이벤트가 있긴 하지만 직접 수정해야하는 호환성 문제가 있을 수도 있습니다.
+##### 서드 파티 라이브러리
+Bootstrap은 Prototype 또는 jQuery UI 같은 **서드 파티 라이브러리를 공식적으로 지원하지 않습니다.**  `.noConflict` 및 네임스페이스 이벤트가 있긴 하지만 직접 수정해야하는 호환성 문제가 있을 수도 있습니다.
 {{< /callout >}}
 
 ## Sanitizer

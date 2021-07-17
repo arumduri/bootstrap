@@ -7,17 +7,17 @@ group: components
 toc: true
 ---
 
-## Overview
+## 개요
 
 툴팁 플러그인을 사용할 때 알아두어야 할 점:
 
-- 툴팁의 배치는 [Popper](https://popper.js.org/)에 의존하고 있습니다. bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 를 사용하거나, 툴팁을 동작시키기 위해 팝오버를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`를 사용해야 합니다.
+- 툴팁의 배치는 [Popper](https://popper.js.org/)에 의존하고 있습니다. bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}})를 사용하거나, 툴팁을 동작시키기 위해 팝오버를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`를 사용해야 합니다.
 - 툴팁은 퍼포먼스를 위해 opt-in 되어 있기 때문에 **스스로 초기화를 해야 합니다.**
 - 길이가 0의 타이틀을 가진 툴팁은 표시되지 않습니다.
 - 더 복잡한 컴포넌트(input group, button groups 등)의 렌더링 문제를 피하기 위해 `container: 'body'`를 지정해 주십시오.
 - 숨겨진 요소에서 툴팁을 트리거 해도 제 기능을 하지 않습니다.
 - `.disabled`나 `disabled` 요소의 툴팁은 그 위(바깥) 요소에서 트리거 해야 합니다.
-- 여러 라인에 걸쳐 있는 하이퍼링크에서 트리거된 툴팁은 중앙에 배치됩니다. 이 동작을 피하기 위해서는 `<a>`에 `white-space: nowrap;` 을 사용해 주십시오.
+- 여러 라인에 걸쳐 있는 하이퍼링크에서 트리거된 툴팁은 중앙에 배치됩니다. 이 동작을 피하기 위해서는 `<a>`에 `white-space: nowrap;`을 사용해 주십시오.
 - 툴팁은 대응 요소가 DOM에서 삭제되기 전에 숨겨야 합니다.
 - 툴팁은 shadow DOM 내의 요소 덕분에 트리거할 수 있습니다.
 
@@ -31,7 +31,7 @@ toc: true
 
 몇 가지 예를 들어보겠습니다.
 
-## Example: Enable tooltips everywhere
+## 예시: 모든 곳에서 툴팁 활성화
 
 페이지 상의 모든 툴팁을 초기화 하는 방법 중 하나는 `data-bs-toggle` 속성으로 선택하는 것입니다:
 
@@ -42,7 +42,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 })
 ```
 
-## Examples
+## 예시
 
 아래 링크에 커서를 맞추면 툴팁이 나타납니다:
 
@@ -99,11 +99,11 @@ SVG 와 함께:
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="tooltip-variables" file="scss/_variables.scss" >}}
 
-## Usage
+## 사용 방법
 
 툴팁 플러그인은 필요에 따라 콘텐츠와 마크업을 생성하고 기본 값으로는 트리거 요소 뒤에 툴팁을 배치합니다.
 
@@ -127,14 +127,14 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 ```
 {{< /callout >}}
 
-### Markup
+### 마크업
 
-툴팁에 필요한 마크업은 툴팁을 작성하고자 하는 HTML 요소의 `data` 속성과 `title` 뿐입니다. 툴팁 마크업은 단순하지만 위치를 지정해야 합니다 (플러그인에 의해 기본 `top` 이 설정되어 있습니다).
+툴팁에 필요한 마크업은 툴팁을 작성하고자 하는 HTML 요소의 `data` 속성과 `title` 뿐입니다. 툴팁 마크업은 단순하지만 위치를 지정해야 합니다 (플러그인에 의해 기본 `top`이설정되어 있습니다).
 
 {{< callout warning >}}
-##### Making tooltips work for keyboard and assistive technology users
+##### 키보드 및 보조 기술 사용자를 위한 툴팁 만들기
 
-툴팁을 추가해야 하는 부분은 키보드로 포커스가 가능하고 상호작용이 가능한 HTML 요소(링크나 폼 컨트롤 등)뿐 입니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가하여 포커스가 가능하게 할 수 있지만 이는 키보드 사용자에게 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 키보드 사용자를 곤란하게 하거나 혼란스럽게 할 수 있으며 현재 대부분의 스크린 리더는 이러한 상황에서 툴팁을 제공하지 않습니다. 게다가 툴팁의 트리거로서 `hover` 에만 의지해서는 안됩니다. 이것은 키보드 사용자가 툴팁을 트리거 할 수 없게 되기 때문입니다.
+툴팁을 추가해야 하는 부분은 키보드로 포커스가 가능하고 상호작용이 가능한 HTML 요소(링크나 폼 컨트롤 등)뿐 입니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가하여 포커스가 가능하게 할 수 있지만 이는 키보드 사용자에게 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 키보드 사용자를 곤란하게 하거나 혼란스럽게 할 수 있으며 현재 대부분의 스크린 리더는 이러한 상황에서 툴팁을 제공하지 않습니다. 게다가 툴팁의 트리거로서 `hover`에만 의지해서는 안됩니다. 이것은 키보드 사용자가 툴팁을 트리거 할 수 없게 되기 때문입니다.
 {{< /callout >}}
 
 ```html
@@ -150,9 +150,9 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 </div>
 ```
 
-### Disabled elements
+### 비활성화 요소
 
-`disabled` 속성을 갖는 요소는 상호작용할 수 없습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁 (혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 `<div>` 나 `<span>` 으로 툴팁을 트리거하여, 이상적으로 `tabindex="0"`을 사용해서 키보드로 포커스가 가능하도록 해야합니다.
+`disabled` 속성을 갖는 요소는 상호작용할 수 없습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁 (혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 `<div>` 나 `<span>`으로 툴팁을 트리거하여, 이상적으로 `tabindex="0"`을 사용해서 키보드로 포커스가 가능하도록 해야합니다.
 
 <div class="tooltip-demo">
 {{< example >}}
@@ -162,9 +162,9 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 {{< /example >}}
 </div>
 
-### Options
+### 옵션
 
-옵션은 data 속성이나 JavaScript로 전달할 수 있습니다. data 속성의 경우는, `data-bs-animation=""`과 같이 `data-bs-`에 옵션 명을 추가합니다. data 속성으로 옵션을 전달하려면 옵션 명의 대문자와 소문자를 캐멀케이스(camelCase)에서 케밥케이스(kebab-case)로 변경해 주세요. 예를 들어 `data-bs-customClass="beautifier"`가 아니라 `data-bs-custom-class="beautifier"`로 해야 합니다.
+옵션은 data 속성이나 JavaScript로 전달할 수 있습니다. data 속성의 경우는, `data-bs-animation=""`과 같이 `data-bs-`에 옵션명을 추가합니다. data 속성으로 옵션을 전달하려면 옵션명의 대문자와 소텍스트를 캐멀케이스(camelCase)에서 케밥케이스(kebab-case)로 변경해 주세요. 예를 들어 `data-bs-customClass="beautifier"`가 아니라 `data-bs-custom-class="beautifier"`로 해야 합니다.
 
 
 {{< callout warning >}}
@@ -212,7 +212,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td>
         <p>툴팁내의 HTML을 허용합니다.</p>
         <p>true의 경우, 툴팁의 <code>title</code>에 있는 HTML 태그가 툴팁에 나타납니다. false 의 경우는, <code>innerText</code> 속성이 DOM에 콘텐츠를 삽입하기 위해 사용됩니다.</p>
-        <p>XSS 공격이 걱정된다면 문자를 사용하세요.</p>
+        <p>XSS 공격이 걱정된다면 텍스트를 사용하세요.</p>
       </td>
     </tr>
     <tr>
@@ -228,7 +228,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>셀렉타가 제공되는 경우 툴팁 객체는 지정된 타깃으로 이양됩니다. 실제로는 동적으로 추가된 DOM 요소에 툴팁을 적용하기 위해서도 사용됩니다.(<code>jQuery.on</code> 지원). <a href="{{< param repo >}}/issues/4215">this</a> 와 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
+      <td>셀렉터가 제공되는 경우 툴팁 객체는 지정된 타깃으로 이양됩니다. 실제로는 동적으로 추가된 DOM 요소에 툴팁을 적용하기 위해서도 사용됩니다.(<code>jQuery.on</code> 지원). <a href="{{< param repo >}}/issues/4215">this</a> 와 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>template</code></td>
@@ -264,7 +264,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
       <td><code>fallbackPlacements</code></td>
       <td>array</td>
       <td><code>['top', 'right', 'bottom', 'left']</code></td>
-      <td>폴백 배치를 정의하려면 배치 목록을 배열로 지정합니다(우선순위 순서). 자세한 내용은 팝오버의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a>를 참조해 주세요.</td>
+      <td>폴백 배치를 정의하려면 배치 목록을 배열로 지정합니다 (우선순위 순서). 자세한 내용은 팝오버의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a>를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
@@ -327,7 +327,7 @@ var tooltip = new bootstrap.Tooltip(exampleEl, {
 개별 툴팁 옵션은 위에서 설명한 것처럼 data 속성을 사용해 지정할 수도 있습니다.
 {{< /callout >}}
 
-#### Using function with `popperConfig`
+#### `popperConfig`으로 기능 사용하기
 
 ```js
 var tooltip = new bootstrap.Tooltip(element, {
@@ -339,7 +339,7 @@ var tooltip = new bootstrap.Tooltip(element, {
 })
 ```
 
-### Methods
+### 메소드
 
 {{< callout danger >}}
 {{< partial "callout-danger-async-methods.md" >}}
@@ -371,7 +371,7 @@ tooltip.toggle()
 
 #### dispose
 
-요소의 툴팁을 숨기고 업앱니다(DOM 요소에 보존되어 있는 데이터를 삭제). 위임을 사용하는 툴팁([the `selector` option](#options) 을 사용하여 작성된 것)은 후손의 트리거 요소상에서 개별적으로 없앨수 없습니다.
+요소의 툴팁을 숨기고 업앱니다 (DOM 요소에 보존되어 있는 데이터를 삭제). 위임을 사용하는 툴팁([the `selector` option](#options)을 사용하여 작성된 것)은 후손의 트리거 요소상에서 개별적으로 없앨수 없습니다.
 
 ```js
 tooltip.dispose()
@@ -427,7 +427,7 @@ var exampleTriggerEl = document.getElementById('example')
 var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns a Bootstrap tooltip instance
 ```
 
-### Events
+### 이벤트
 
 <table class="table">
   <thead>
@@ -443,7 +443,7 @@ var tooltip = bootstrap.Tooltip.getOrCreateInstance(exampleTriggerEl) // Returns
     </tr>
     <tr>
       <td><code>shown.bs.tooltip</code></td>
-      <td>이 이벤트는 툴팁이 사용자에게 보일 때 발생합니다(CSS 트렌지션이 완료되기를 기다립니다).</td>
+      <td>이 이벤트는 툴팁이 사용자에게 보일 때 발생합니다 (CSS 트렌지션이 완료되기를 기다립니다).</td>
     </tr>
     <tr>
       <td><code>hide.bs.tooltip</code></td>

@@ -7,11 +7,11 @@ group: utilities
 toc: true
 ---
 
-## Border
+## 테두리
 
 테두리 유틸리티를 사용하여 요소에 테두리를 추가하거나 제거합니다. 모든 테두리를 선택하거나 한 번에 하나씩 선택 하세요.
 
-### Additive
+### 테두리 방향
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border"></span>
@@ -21,7 +21,7 @@ toc: true
 <span class="border-start"></span>
 {{< /example >}}
 
-### Subtractive
+### 반전 방향
 
 {{< example class="bd-example-border-utils bd-example-border-utils-0" >}}
 <span class="border-0"></span>
@@ -31,7 +31,7 @@ toc: true
 <span class="border-start-0"></span>
 {{< /example >}}
 
-## Border color
+## 테두리 색상
 
 테마 색상에 사전정의된 유틸리티를 사용하여 테두리 색상을 변경하십시오.
 
@@ -44,7 +44,7 @@ toc: true
 <span class="border border-white"></span>
 {{< /example >}}
 
-## Border-width
+## 테두리 두깨
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-1"></span>
@@ -54,7 +54,7 @@ toc: true
 <span class="border border-5"></span>
 {{< /example >}}
 
-## Border-radius
+## 테두리 모서리
 
 요소에 클래스를 추가하여 모서리를 쉽게 둥근형태로 만듭니다.
 
@@ -68,9 +68,9 @@ toc: true
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
 {{< /example >}}
 
-### Sizes
+### 크기
 
-스케일링 클래스를 사용해 더 둥글거나 덜 둥근 모서리로 지정합니다.  `0` 에서 `3` 까지 지정할 수 있으며 유틸리티 API를 수정하여 구성 할 수 있습니다.
+스케일링 클래스를 사용해 더 둥글거나 덜 둥근 모서리로 지정합니다.  `0`에서 `3` 까지 지정할 수 있으며 유틸리티 API를 수정하여 구성 할 수 있습니다.
 
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image" >}}
@@ -81,19 +81,19 @@ toc: true
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="border-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
 
-### Mixins
+### 믹스인
 
 {{< scss-docs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" >}}
 
-### Utilities API
+### 유틸리티 API
 
-Border유틸리티는 `scss / _utilities.scss` 의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기] ({{< docsref "/utilities/api # using-the-api" >}})
+테두리 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기] ({{< docsref "/utilities/api # using-the-api" >}})
 
 {{< scss-docs name="utils-borders" file="scss/_utilities.scss" >}}
 

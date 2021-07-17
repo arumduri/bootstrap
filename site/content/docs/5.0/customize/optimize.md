@@ -7,7 +7,7 @@ group: customize
 toc: true
 ---
 
-## Lean Sass imports
+## Sass 불러오기 경량화
 
 asset pipeline에서 Sass를 사용하는 경우, 필요한 컴포넌트만 `@import`해서 Bootstrap을 최적화 하십시오. 가장 큰 최적화는 `bootstrap.scss` 섹션의 `Layout & Components`에서 얻을 수 있습니다.
 
@@ -16,7 +16,7 @@ asset pipeline에서 Sass를 사용하는 경우, 필요한 컴포넌트만 `@im
 
 컴포넌트를 사용하지 않을 때는 주석 처리를 하거나 완전히 삭제해 주세요. 예를 들어, 캐러셀(carousel)을 사용하지 않을 경우 해당 import를 삭제하여 컴파일한 CSS의 파일 크기를 절약할 수 있습니다. Sass import에는 몇 가지 의존 관계가 있어 파일을 생략하기가 어려울 수도 있으니 주의해 주세요.
 
-## Lean JavaScript
+## JavaScript 경량화
 
 Bootstrap의 JavaScript는 기본적인 dist 파일(`bootstrap.js`와 `bootstrap.min.js`)안에 모든 컴포넌트를 포함하고 있으며, 번들 파일(`bootstrap.bundle.js`와 `bootstrap.bundle.min.js`)안의 기본 의존 관계(Popper)도 제공합니다. Sass를 통해 재정의 하는 동안에는 반드시 관련된 JavaScript는 삭제해 주세요.
 
@@ -41,7 +41,7 @@ import 'bootstrap/js/dist/modal';
 이렇게 하면 버튼, 캐러셀, 툴팁과 같은 사용할 예정이 없는 컴포넌트에 JavaScript를 포함하지 않도록 할 수 있습니다. 드롭다운, 툴팁, 팝오버를 포함하는 경우에는 반드시 `package.json` 파일에 Popper의 의존 관계를 기술해 주세요.
 
 {{< callout info >}}
-### Default Exports
+### Default Export
 
 `bootstrap/js/dist`에 있는 파일은 **default export**를 사용하고 있기 때문에, 그 중 하나를 사용하고 싶다면 아래와 같이 해야 합니다:
 
@@ -56,7 +56,7 @@ const modal = new Modal(document.getElementById('myModal'))
 
 Bootstrap은 특정 CSS 속성에 브라우저 접두사(prefixes)를 자동으로 추가하기 위해 Autoprefixer에 의존합니다. 접두사는 Bootstrap의 루트에 있는 `.browserslistrc` 파일에 의해 결정됩니다. 브라우저의 이 목록을 재정의하여 Sass를 컴파일하면 해당 브라우저나 버전에 고유한 벤터 접두사가 있는 경우 컴파일된 CSS에서 일부 CSS가 자동으로 삭제됩니다.
 
-## Unused CSS
+## 사용되지 않은 CSS
 
 _이 부분은 여러분의 도움이 필요합니다. PR을 만들어 주세요. 감사합니다!_
 
@@ -67,11 +67,11 @@ _이 부분은 여러분의 도움이 필요합니다. PR을 만들어 주세요
 
 마지막으로, [사용되지 않은 CSS에 대한 CSS Tricks 문서](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/)에서는 PurgeCSS나 다른 유사한 도구를 사용하는 방법을 소개하고 있습니다.
 
-## Minify and gzip
+## 경량화와 gzip
 
-가능한 한 방문자에게 제공하는 모든 코드를 압축해야 합니다. Bootstrap의 dist 파일을 사용하는 경우에는, 최소화 된 버전(`.min.css`와 `.min.js` 확장자로 표시)을 고수해 주세요. 자체 빌드 시스템으로 소스에서 Bootstrap을 빌드하는 경우 HTML, CSS, JS용으로 자체 압축 파일을 빌드해야 합니다.
+가능한 한 방텍스트에게 제공하는 모든 코드를 압축해야 합니다. Bootstrap의 dist 파일을 사용하는 경우에는, 경량화된 버전(`.min.css`와 `.min.js` 확장자로 표시)을 고수해 주세요. 자체 빌드 시스템으로 소스에서 Bootstrap을 빌드하는 경우 HTML, CSS, JS용으로 자체 압축 파일을 빌드해야 합니다.
 
-## Nonblocking files
+## 파일을 차단하지 않기
 
 압축을 최소화해 사용하는 것만으로도 충분할 수 있지만, 파일을 차단하지 않고 만드는 데 있어 사이트를 최적화하고 빠르게 만드는데 있어 아주 중요합니다.
 
@@ -86,7 +86,7 @@ _이 부분은 여러분의 도움이 필요합니다. PR을 만들어 주세요
 - <https://web.dev/render-blocking-resources/>
 - <https://web.dev/defer-non-critical-css/>
 
-## Always use HTTPS
+## 항상 HTTPS 사용하기
 
 실제 환경에서 웹사이트는 HTTPS 접속으로만 이용하도록 해 주세요. HTTPS는, 모든 사이트의 보안, 개인 정보 보호 및 가용성을 향상시키며, [민감하지 않은 웹 트래픽은 없습니다](https://https.cio.gov/everything/). 웹 사이트가 HTTPS에서만 제공되도록 설정하는 순서는 아키텍처나 웹 호스팅 공급자에 따라 크게 다르기 때문에 이 문서에서는 설명하지 않습니다.
 

@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: 글자
+title: 텍스트
 title_en: Text
 description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
 group: utilities
 toc: true
 ---
 
-## Text alignment
+## 텍스트 정렬
 
 Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
 
@@ -26,7 +26,7 @@ Easily realign text to components with text alignment classes. For start, end, a
 Note that we don't provide utility classes for justified text. While, aesthetically, justified text might look more appealing, it does make word-spacing more random and therefore harder to read.
 {{< /callout >}}
 
-## Text wrapping and overflow
+## 텍스트 줄바꿈과 오버플로우
 
 Wrap text with a `.text-wrap` class.
 
@@ -44,7 +44,7 @@ Prevent text from wrapping with a `.text-nowrap` class.
 </div>
 {{< /example >}}
 
-## Word break
+## 단어 기준 줄바꿈
 
 Prevent long strings of text from breaking your components' layout by using `.text-break` to set `word-wrap: break-word` and `word-break: break-word`. We use `word-wrap` instead of the more common `overflow-wrap` for wider browser support, and add the deprecated `word-break: break-word` to avoid issues with flex containers.
 
@@ -53,10 +53,10 @@ Prevent long strings of text from breaking your components' layout by using `.te
 {{< /example >}}
 
 {{< callout warning >}}
-Note that [breaking words isn't possible in Arabic](https://rtlstyling.com/posts/rtl-styling#3.-line-break), which is the most used RTL language. Therefore `.text-break` is removed from our RTL compiled CSS.
+가장 많이 사용되는 RTL 언어인 [아랍어에서는 단어 기준 줄바꿈이 불가능하다는 점](https://rtlstyling.com/posts/rtl-styling#3.-line-break)을 유의해주세요. 따라서 RTL 컴파일 CSS에서는 `.text-break`가 제거되었습니다.
 {{< /callout >}}
 
-## Text transform
+## 텍스트 대소문자
 
 Transform text in components with text capitalization classes.
 
@@ -68,7 +68,7 @@ Transform text in components with text capitalization classes.
 
 Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected.
 
-## Font size
+## 글꼴 크기
 
 Quickly change the `font-size` of text. While our heading classes (e.g., `.h1`–`.h6`) apply `font-size`, `font-weight`, and `line-height`, these utilities _only_ apply `font-size`. Sizing for these utilities matches HTML's heading elements, so as the number increases, their size decreases.
 
@@ -83,7 +83,7 @@ Quickly change the `font-size` of text. While our heading classes (e.g., `.h1`�
 
 Customize your available `font-size`s by modifying the `$font-sizes` Sass map.
 
-## Font weight and italics
+## 글꼴 굵기와 기울임체
 
 Quickly change the `font-weight` or `font-style` of text with these utilities. `font-style` utilities are abbreviated as `.fst-*` and `font-weight` utilities are abbreviated as `.fw-*`.
 
@@ -97,7 +97,7 @@ Quickly change the `font-weight` or `font-style` of text with these utilities. `
 <p class="fst-normal">Text with normal font style</p>
 {{< /example >}}
 
-## Line height
+## 행간
 
 Change the line height with `.lh-*` utilities.
 
@@ -108,7 +108,7 @@ Change the line height with `.lh-*` utilities.
 <p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
 {{< /example >}}
 
-## Monospace
+## 고정폭
 
 Change a selection to our monospace font stack with `.font-monospace`.
 
@@ -116,9 +116,9 @@ Change a selection to our monospace font stack with `.font-monospace`.
 <p class="font-monospace">This is in monospace</p>
 {{< /example >}}
 
-## Reset color
+## 색상 재설정
 
-Reset a text or link's color with `.text-reset`, so that it inherits the color from its parent.
+부모 항목의 색상을 상속하도록 `.text-reset`로 텍스트나 링크의 색상을 초기화하세요.
 
 {{< example >}}
 <p class="text-muted">
@@ -126,7 +126,7 @@ Reset a text or link's color with `.text-reset`, so that it inherits the color f
 </p>
 {{< /example >}}
 
-## Text decoration
+## 텍스트 꾸미기
 
 Decorate text in components with text decoration classes.
 
@@ -138,17 +138,17 @@ Decorate text in components with text decoration classes.
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="font-variables" file="scss/_variables.scss" >}}
 
-### Maps
+### 맵
 
 Font-size utilities are generated from this map, in combination with our utilities API.
 
 {{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
 
-### Utilities API
+### 유틸리티 API
 
 Font and text utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 

@@ -16,7 +16,6 @@
     - title: Build tools
       title_ko: 빌드 도구
     - title: Webpack
-      title_ko: 웹팩
     - title: Parcel
     - title: Accessibility
       title_ko: 접근성
@@ -24,7 +23,7 @@
     - title: RTL
 
 - title: Customize
-  title_ko: 커스터마이징
+  title_ko: 사용자 지정
   pages:
     - title: Overview
       title_ko: 개요
@@ -50,7 +49,7 @@
     - title: Grid
       title_ko: 그리드
     - title: Columns
-      title_ko: 컬럼
+      title_ko: 열
     - title: Gutters
       title_ko: 거터
     - title: Utilities
@@ -189,7 +188,7 @@
     - title: Spacing
       title_ko: 간격
     - title: Text
-      title_ko: 글자
+      title_ko: 텍스트
     - title: Vertical align
       title_ko: 수직 정렬
     - title: Visibility

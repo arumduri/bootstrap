@@ -1,1 +1,1 @@
-**Get started with Bootstrap via npm with our starter project!** Head to the [twbs/bootstrap-npm-starter](https://github.com/twbs/bootstrap-npm-starter) template repository to see how to build and customize Bootstrap in your own npm project. Includes Sass compiler, Autoprefixer, Stylelint, PurgeCSS, and Bootstrap Icons.
+**스타터 프로젝트로 npm을 통해 Bootstrap을 시작하세요!** [twbs/bootstrap-npm-starter](https://github.com/twbs/bootstrap-npm-starter) 템플릿 저장소에서 자신의 npm 프로젝트에서 Bootstrap을 빌드하고 사용자 정의하는 방법을 확인해보세요. Sass 컴파일러, Autoprefixer, Stylelint, PurgeCSS,Bootstrap 아이콘이 포함되어 있습니다.

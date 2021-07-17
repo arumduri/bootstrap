@@ -7,7 +7,7 @@ group: helpers
 aliases: "/docs/5.0/helpers/screen-readers/"
 ---
 
-`.visually-hidden` 을 사용하여 요소가 화면 판독기와 같은 보조 기술에 노출되도록 하면서 시각적으로는 보이지 않게 숨길 수 있습니다. `.visually-hidden-focusable` 을 사용하면 요소를 시각적으로 숨긴상태가 기본이지만 초점이 맞춰질 때는 표시 (예: 키보드 전용 사용자)됩니다. `.visually-hidden-focusable` 은 컨테이너에도 적용 할 수 있습니다. `: focus-within` 덕분에 컨테이너의 자식 요소가 focus 될 때 컨테이너가 나타납니다.
+`.visually-hidden`을 사용하여 요소가 화면 판독기와 같은 보조 기술에 노출되도록 하면서 시각적으로는 보이지 않게 숨길 수 있습니다. `.visually-hidden-focusable`을 사용하면 요소를 시각적으로 숨긴상태가 기본이지만 초점이 맞춰질 때는 표시 (예: 키보드 전용 사용자)됩니다. `.visually-hidden-focusable` 은 컨테이너에도 적용 할 수 있습니다. `: focus-within` 덕분에 컨테이너의 자식 요소가 focus 될 때 컨테이너가 나타납니다.
 
 {{< example >}}
 <h2 class="visually-hidden">Title for screen readers</h2>

@@ -7,7 +7,7 @@ group: getting-started
 toc: true
 ---
 
-## Compiled CSS and JS
+## 컴파일된 CSS와 JS
 
 바로 사용할 수 있는 컴파일된 **Bootstrap v{{< param current_version >}}** 코드를 다운로드해서 프로젝트에 포함시킬 수 있습니다. 다음이 포함되어 있습니다:
 
@@ -18,7 +18,7 @@ toc: true
 
 <a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">다운로드</a>
 
-## Source files
+## 소스 파일
 Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 파이프라인을 사용해서 BootStrap를 컴파일할 수 있습니다. 이를 위해서는 다음 도구들이 필요합니다:
 
 - CSS 컴파일을 위한 Sass 컴파일러 (Libsass 또는 Ruby Sass도 지원함).
@@ -31,13 +31,13 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 
 <a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">소스 다운로드</a>
 
-## Examples
+## 예시
 
-[예제]({{< docsref "/examples" >}})를 다운로드하고 확인하고 싶다면 이미 만들어진 예제를 사용해 볼 수도 있습니다:
+[예시]({{< docsref "/examples" >}})를 다운로드하고 확인하고 싶다면 이미 만들어진 예시를 사용해 볼 수도 있습니다:
 
-<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">예제 다운로드</a>
+<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">예시 다운로드</a>
 
-## CDN via jsDelivr
+## jsDelivr를 통한 CDN
 
 [jsDelivr](https://www.jsdelivr.com/)를 사용해서 다운로드하지 않고 Bootstrap의 컴파일된 CSS와 JS의 캐시 버전을 프로젝트에 전달하세요.
 
@@ -53,7 +53,7 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-## Package managers
+## 패키지 관리자
 
 Bootstrap의 **소스 파일**을 유명한 패키지 관리자들을 사용해서 거의 모든 프로젝트에 Bootstrap을 사용할 수 있습니다. 패키지 관리자와 상관없이 Bootstrap은 공식 컴파일된 버전과 일치하는 구성을 위해 **[Sass 컴파일러]({{< docsref "/getting-started/build-tools#sass" >}})와 [Autoprefixer](https://github.com/postcss/autoprefixer)를 필요로 합니다**.
 
@@ -66,7 +66,7 @@ npm install bootstrap
 ```
 
 `const bootstrap = require('bootstrap')` 또는 `import bootstrap from 'bootstrap'`는 `bootstrap` 객체에 모든 Bootstrap의 플러그인을 불러옵니다.
-`bootstrap` 모듈은 자체에서 모든 플러그인을 내보냅니다. 패키지 최상위 디렉토리 아래에 있는 `/js/dist/*.js` 파일을 불러옴으로서 Bootstrap의 플러그인을 직접 독립적으로 불러올 수 있습니다.
+`bootstrap` 모듈은 자체에서 모든 플러그인을 내보냅니다. 패키지 최부모 디렉토리 아래에 있는 `/js/dist/*.js` 파일을 불러옴으로서 Bootstrap의 플러그인을 직접 독립적으로 불러올 수 있습니다.
 
 Bootstrap의 `package.json`에는 다음 키에 몇몇 메타데이터가 포함되어 있습니다:
 

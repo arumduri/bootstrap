@@ -7,9 +7,9 @@ group: forms
 toc: true
 ---
 
-## Example
+## 예시
 
-`<input class="form-control">`과 `<label>` 요소를 함께 `.form-floating`으로 감싸면, Bootstrap의 문자 형식의 폼 필드에서 플로팅 라벨 사용이 가능합니다. CSS만으로 플로팅 라벨을 실현하는 방법은 `:placeholder-shown` 가상 요소를 사용하기 때문에 각 `<input>`에는 `placeholder`가 필요합니다. 또한 형제 셀렉타(예를 들어, `~`)를 사용하기 때문에 `<input>`이 처음에 와야 하는 순서에 주의해 주세요.
+`<input class="form-control">`과 `<label>` 요소를 함께 `.form-floating`으로 감싸면, Bootstrap의 텍스트 형식의 폼 필드에서 플로팅 라벨 사용이 가능합니다. CSS만으로 플로팅 라벨을 실현하는 방법은 `:placeholder-shown` 가상 요소를 사용하기 때문에 각 `<input>`에는 `placeholder`가 필요합니다. 또한 형제 셀렉터(예를 들어, `~`)를 사용하기 때문에 `<input>`이 처음에 와야 하는 순서에 주의해 주세요.
 
 {{< example >}}
 <div class="form-floating mb-3">
@@ -40,7 +40,7 @@ toc: true
 </form>
 {{< /example >}}
 
-## Textareas
+## Textarea
 
 기본적으로, `.form-control`을 사용하는 `<textarea>`는 `<input>`의 높이와 동일합니다.
 
@@ -60,9 +60,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## Selects
+## 셀렉트
 
-`.form-control` 이외에서의 플로팅 라벨은 `.form-select` 에서만 사용할 수 있습니다. 이들은 똑같이 동작하지만, `<input>`과는 다르게 `<label>`이 항상 플로팅 된 상태로 표시됩니다. **`size`와 `multiple` 선택자는 지원되지 않습니다.**
+`.form-control` 이외에서의 플로팅 라벨은 `.form-select`에서만 사용할 수 있습니다. 이들은 똑같이 동작하지만, `<input>`과는 다르게 `<label>`이 항상 플로팅 된 상태로 표시됩니다. **`size`와 `multiple` 선택자는 지원되지 않습니다.**
 
 {{< example >}}
 <div class="form-floating">
@@ -76,7 +76,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Layout
+## 레이아웃
 
 Bootstrap 그리드 시스템을 사용할 경우, 폼 요소는 반드시 컬럼 클래스 내에 배치해야 합니다.
 
@@ -104,6 +104,6 @@ Bootstrap 그리드 시스템을 사용할 경우, 폼 요소는 반드시 컬�
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="form-floating-variables" file="scss/_variables.scss" >}}

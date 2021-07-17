@@ -8,14 +8,14 @@ aliases: "/migration/"
 toc: true
 ---
 
-## Dependencies
+## 의존성
 
-- jQuery 폐지.
+- 더 이상 jQuery를 사용하지 않음.
 - Popper v1.x에서 Popper v2.x로 업그레이드.
 - Libsass가 권장되지 않아 Dart Sass로 Sass 컴파일러 변경.
 - 문서 작성을 위해 Jekyll에서 Hugo로 이동.
 
-## Browser support
+## 브라우저 지원
 
 - Internet Explorer 10 및 11 지원 종료
 - Microsoft Edge 16 미만 (Legacy Edge) 지원 종료
@@ -26,7 +26,7 @@ toc: true
 
 <hr class="my-5">
 
-## Documentation changes
+## 문서 변경사항
 
 - 첫페이지, 문서 레이아웃과 하단의 디자인 변경.
 - [new Parcel guide](https://getbootstrap.com/docs/5.0/getting-started/parcel/) 추가.
@@ -52,7 +52,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> 인쇄 클래스와 `$enable-print-styles` 변수를 삭제하였습니다. 인쇄 표시 클래스는 아직 남아 있습니다. [#28339](https://github.com/twbs/bootstrap/pull/28339).
 
-- <span class="badge bg-danger">Breaking</span> `color()`, `theme-color()`, 그리고 `gray()` 의 함수를 폐지하고 변수를 사용하도록 하였습니다.[#29083](https://github.com/twbs/bootstrap/pull/29083).
+- <span class="badge bg-danger">Breaking</span> `color()`, `theme-color()`, 그리고 `gray()`의 함수를 폐지하고 변수를 사용하도록 하였습니다.[#29083](https://github.com/twbs/bootstrap/pull/29083).
 
 - <span class="badge bg-danger">Breaking</span> `theme-color-level()` 함수를 `color-level()`로 변경하고, `$theme-color`의 색상뿐만 아니라 임의의 색을 받을수 있게 변경하였습니다. [#29083](https://github.com/twbs/bootstrap/pull/29083) **주의:** `v5.0.0-alpha3` 이후 `color-level()`은 삭제되었습니다.
 
@@ -76,19 +76,19 @@ toc: true
 
 - `border-radius()` 믹스인에 기본 값이 설정 되었습니다.
 
-## Color system
+## 색상 시스템
 
 - `color-level()`과 `$theme-color-interval`로 동작하던 컬러 시스템이 삭제되고 새로운 컬러 시스템이 채택 되었습니다. 기본적으로 모든 코드에 사용된 `lighten()`과 `darken()` 함수는 `tint-color()`와 `shade-color()`로 대체 되었습니다. 이 함수는 색의 명도를 일정량 변경하는 대신, 그 색에 흰색이나 검은색을 혼합 합니다. `shift-color()`는 양수 혹은 음수의 weight 매개 변수에 따라 색상을 바꾸거나 음영을 주기도 합니다. [#30622](https://github.com/twbs/bootstrap/pull/30622).
 
 - 새로운 Sass 변수로서, 모든 색상에 새로운 색조와 음영을 추가해 각 기본 색상에 9개의 별도 색상을 제공합니다.
 
-- 색 대비(color contrast)를 개선하였습니다. 색 대비 비율을 3:1에서 4.5:1로 변경하고 WCAG 2.1 AA contrast를 확보하기 위해 blue, green, cyan, pink 색상을 수정하였습니다. 그리고 색 대비에서 사용하는 어두운 색($color-contrast-dark)을 `$gray-900`에서 `$black`으로 변경하였습니다.
+- 색상 대비(color contrast)를 개선하였습니다. 색상 대비 비율을 3:1에서 4.5:1로 변경하고 WCAG 2.1 AA contrast를 확보하기 위해 blue, green, cyan, pink 색상을 수정하였습니다. 그리고 색상 대비에서 사용하는 어두운 색($color-contrast-dark)을 `$gray-900`에서 `$black`으로 변경하였습니다.
 
 - 색상을 적절하게 혼합한 새로운 사용자 정의 `tint-color()`와 `shade-color()` 함수를 사용해 컬러 시스템을 지원합니다.
 
-## Grid updates
+## 그리드 업데이트
 
-- **새로운 브레이크 포인트!** `1400px` 이상의 경우, 새로운 `xxl` 브레이크 포인트를 추가. 다른 브레이크 포인트는 변경 없이 그대로.
+- **새로운 중단점!** `1400px` 이상의 경우, 새로운 `xxl` 중단점를 추가. 다른 중단점는 변경 없이 그대로.
 
 - **개선된 거터.** 거터는 rem 단위로 설정되어, v4 보다 좁아졌습니다 (`1.5rem`, 혹은 약 `24px`, `30px`에서 감소). 이로 그리드 시스템의 거터가 여백 유틸리티와 일치 되었습니다.
   - 수평/수직 거터, 수평 거터, 그리고 수직 거터를 제어하는 새로운 [gutter class](https://getbootstrap.com/docs/5.0/layout/gutters/)(`.g-*`, `.gx-*`, 그리고 `.gy-*`)가 추가 되었습니다.
@@ -104,9 +104,9 @@ toc: true
 
 - `$enable-grid-classes`에서는 컨테이너 클래스의 생성을 비활성화 시키지 않습니다. [#29146.](https://github.com/twbs/bootstrap/pull/29146)
 
-- 사이즈를 지정하지 않아도 기본적으로 균등한 열이 되도록 `make-col` 믹스인을 업데이드 하였습니다.
+- 크기를 지정하지 않아도 기본적으로 균등한 열이 되도록 `make-col` 믹스인을 업데이드 하였습니다.
 
-## Content, Reboot, etc
+## 콘텐츠, Reboot 등
 
 - **[RFS]({{< docsref "/getting-started/rfs" >}})가 기본으로 활성화 되었습니다.** Headings using the `font-size()` 믹스인을 사용한 제목은 뷰포트에 맞추어 자동적으로 `font-size`를 조정합니다. _이 기능은 이전에 v4에서 옵트인 이었습니다._
 
@@ -152,7 +152,7 @@ toc: true
   - `.custom-range`는 `.form-range`로 변경.
   - 네이티브 `.form-control-file`과 `.form-control-range`는 삭제.
 
-- <span class="badge bg-danger">Breaking</span> `.input-group-append`와 `.input-group-prepend`는 삭제. 입력 그룹의 직접 하위 요소로서 버튼과 `.input-group-text`를 추가 할 수 있게 되었습니다.
+- <span class="badge bg-danger">Breaking</span> `.input-group-append`와 `.input-group-prepend`는 삭제. 입력 그룹의 직접 자식 요소로서 버튼과 `.input-group-text`를 추가할 수 있게 되었습니다.
 
 - 오랫동안 지속 되었던 [유효성 검사를 사용할때 입력 그룹에서 반원 경계선이 누락되는 버그](https://github.com/twbs/bootstrap/issues/25110)는 유효성 검사 폼에 포함된 입력 그룹에 `.has-validation` 클래스를 추가하는 것으로 겨우 수정 되었습니다.
 
@@ -160,7 +160,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> 폼 레벨에는 `.form-label`이 필요합니다.
 
-- <span class="badge bg-danger">Breaking</span> `.form-text`는 삭제되어 `display` 되지 않으므로, HTML 요소를 변경하는 것으로 인라인 혹은 블록 도움말 문자를 자유롭게 만들 수 있습니다.
+- <span class="badge bg-danger">Breaking</span> `.form-text`는 삭제되어 `display` 되지 않으므로, HTML 요소를 변경하는 것으로 인라인 혹은 블록 도움말 텍스트를 자유롭게 만들 수 있습니다.
 
 - 유효성 검증 아이콘은 더 이상 `multiple<select>`에 적용되지 않습니다.
 
@@ -168,21 +168,21 @@ toc: true
 
 <hr class="my-5">
 
-## Components
+## 컴포넌트
 
 - 경고창, 브레드크럼, 카드, 드롭다운, 목록 그룹, 모달, 팝오버 그리고 툴팁의 `padding` 값을 `$spacer` 변수를 기반으로 통일. [#30564](https://github.com/twbs/bootstrap/pull/30564).
 
-### Accordion
+### 아코디언
 
 - [새로운 아코디언 컴포넌트]({{< docsref "/components/accordion" >}}) 추가.
 
-### Alerts
+### 경고창
 
 - 경고창에 [아이콘 사용한 예시]({{< docsref "/components/alerts#icons" >}})를 추가.
 
 - 각 경고창에서 `currentColor`를 사용하게 되어 `<hr>` 사용자 정의 스타일은 삭제.
 
-### Badges
+### 배지
 
 - <span class="badge bg-danger">Breaking</span> 배경 유틸리티의 모든 `.badge-*` 색상 클래스 삭제 (예를 들어, `.badge-primary` 대신 `.bg-primary` 사용).
 
@@ -190,15 +190,15 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> `<a>`와 `<button>` 요소에 호버와 포커스 스타일 삭제.
 
-- 배지의 기본 패딩을`.25em`/`.5em` 에서 `.35em`/`.65em`으로 변경.
+- 배지의 기본 패딩을`.25em`/`.5em`에서 `.35em`/`.65em`으로 변경.
 
-### Breadcrumbs
+### 브레드크럼
 
-- `padding`, `background-color`, 그리고 `border-radius`를 제거하여 브레드크럼의 기본 모양을 단순화 했습니다.
+- `padding`, `background-color`, 그리고 `border-radius`를 제거하여 브레드크럼의 기본 모양을 단순화했습니다.
 
 - CSS를 다시 컴파일할 필요 없이 쉽게 재정의 할 수 있도록 새로운 CSS 사용자 정의 속성인 `--bs-breadcrumb-divider`를 추가했습니다.
 
-### Buttons
+### 버튼
 
 - <span class="badge bg-danger">Breaking</span> **체크 박스나 라디오 버튼에 있는 [토글 버튼](https://getbootstrap.com/docs/5.0/forms/checks-radios/#toggle-buttons)은, JavaScript가 필요없는 새로운 마크업을 채용하고 있습니다.** 더 이상 감싸는 요소는 필요하지 않고, 바로 `<input>`에 `.btn-check`를 추가해 `.btn` 클래스의 `<label>`과 조합 합니다. [#30650](https://github.com/twbs/bootstrap/pull/30650). _이 건에 관한 문서는 버튼 페이지에서 폼 섹션으로 이동하였습니다._
 
@@ -210,7 +210,7 @@ toc: true
 
 - 비활성화 버튼은 `pointer-events: none;` 되었습니다.
 
-### Card
+### 카드
 
 - <span class="badge bg-danger">Breaking</span> 그리드에 유리하게 `.card-deck`을 삭제. card decks 재현을 위해 부모에 `.row-cols-*` 컨테이너를 추가하고 카드를 column 클래스로 감쌉니다. (반응형 정렬을 보다 효과적으로 제어할 수 있습니다).
 
@@ -218,13 +218,13 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> `.card` 기반의 아코디언을 [새로운 아코디언 컴포넌트]({{< docsref "/components/accordion" >}})로 교체히였습니다.
 
-### Carousel
+### 캐러셀
 
-- 진한 문자, 컨트롤과 기호(밝은 배경에 최적) 표시를 위해 [`.carousel-dark`]({{< docsref "/components/carousel#dark-variant" >}})가 추가되었습니다.
+- 진한 텍스트, 컨트롤과 기호(밝은 배경에 최적) 표시를 위해 [`.carousel-dark`]({{< docsref "/components/carousel#dark-variant" >}})가 추가되었습니다.
 
 - 캐러셀의 chevron 아이콘을 [Bootstrap Icons]({{< param "icons" >}})의 새로운 SVG로 대체하였습니다.
 
-### Close button
+### 닫기 버튼
 
 - <span class="badge bg-danger">Breaking</span> `.close`에서 보다 일반적인 이름인 `.btn-close`으로 변경되었습니다.
 
@@ -232,21 +232,21 @@ toc: true
 
 - 어두운 배경에서 고대비 닫기 아이콘을 활성화하려고 `filter: invert(1)`를 사용한 새로운 `.btn-close-white` 변형 클래스가 추가되었습니다.
 
-### Collapse
+### 콜랩스
 
 - 아코디언에 스크롤 고정 장치가 삭제 되었습니다.
 
-### Dropdowns
+### 드롭다운
 
 - 어두운 드롭다운을 위해 새로운 `.dropdown-menu-dark` 변형 클래스와 관련된 변수를 추가하였습니다.
 
 - 새로운 `$dropdown-padding-x` 변수를 추가하였습니다.
 
-- 드롭다운의 구분자를 진하게 해 색 대비를 개선하였습니다.
+- 드롭다운의 구분자를 진하게 해 색상 대비를 개선하였습니다.
 
 - <span class="badge bg-danger">Breaking</span> 드롭다운의 모든 이벤트는 드롭다운 토글 버튼으로 트리거 되어 이후 부모 요소에 버블링 됩니다.
 
-- 드롭다운 메뉴에는 위치가 정적일때 `data-bs-popper="static"` 속성이 설정되며, 드롭다운이 내비바에 있을 때에는 `data-bs-popper="none"`으로 설정됩니다. 이것은 JavaScript를 통해 추가되며 Popper의 배치에 간섭하지 않고 사용자 정의 위치 스타일을 사용하는데 도움이 됩니다.
+- 드롭다운 메뉴에는 위치가 정적일때 `data-bs-popper="static"` 속성이 설정되며, 드롭다운이 내비게이션 바에 있을 때에는 `data-bs-popper="none"`으로 설정됩니다. 이것은 JavaScript를 통해 추가되며 Popper의 배치에 간섭하지 않고 사용자 정의 위치 스타일을 사용하는데 도움이 됩니다.
 
 - <span class="badge bg-danger">Breaking</span> 드롭다운 플러그인에 대한 `flip` 옵션을 삭제하고 Popper의 네이티브 설정으로 변경되었습니다. [flip](https://popper.js.org/docs/v2/modifiers/flip/) 제어자의 [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements)의 빈 배열을 통해서 플립 동작을 비활성화 할 수 있습니다.
 
@@ -254,45 +254,45 @@ toc: true
 
 - 드롭다운이 이제 `<li>`에 싸여진 `.dropdown-item`를 지원합니다.
 
-### Jumbotron
+### 점보트론
 
 - <span class="badge bg-danger">Breaking</span> 유틸리티로 만들수 있기 때문에 점보트론 컴포넌트는 삭제되었습니다. [데모로 새로운 점보트론의 사용을 확인해 주세요.](https://getbootstrap.com/docs/5.0/examples/jumbotron/)
 
-### List group
+### 목록 그룹
 
 - 목록 그룹에 새로운 [`.list-group-numbered` 제어자 클래스]({{< docsref "/components/list-group#numbered" >}})가 추가되었습니다.
 
-### Navs and tabs
+### 내비게이션과 탭
 
 - `.nav-link` 클래스에 `font-size`, `font-weight`, `color`, `:hover` `color`에 대한 새로운 변수 `null`을 추가했습니다.
 
-### Navbars
+### 내비게이션 바
 
-- <span class="badge bg-danger">Breaking</span> 내비바는 컨테이너가 필요하게 되어 간격 요건이나 필요한 CSS가 대폭 간소화되었습니다.
+- <span class="badge bg-danger">Breaking</span> 내비게이션 바는 컨테이너가 필요하게 되어 간격 요건이나 필요한 CSS가 대폭 간소화되었습니다.
 
-### Offcanvas
+### 오프캔버스
 
-- 새로운 [offcanvas 컴포넌트]({{< docsref "/components/offcanvas" >}})가 추가되었습니다.
+- 새로운 [오프캔버스 컴포넌트]({{< docsref "/components/offcanvas" >}})가 추가되었습니다.
 
-### Pagination
+### 페이지네이션
 
 - 페이지네이션 링크의 `margin-left`를 재정의할 수 있게 되어, 떨어져 있을 때 모든 모서리가 다이내믹하게 둥글어지게 되었습니다.
 
 - 페이지네이션 링크에 `트랜지션`을 추가하였습니다.
 
-### Popovers
+### 팝오버
 
 - <span class="badge bg-danger">Breaking</span> 기본 팝오버 템플릿의 `.arrow` 이름을 `.popover-arrow`로 변경하였습니다.
 
-- `whiteList` 옵션 명을 `allowList`로 변경하였습니다.
+- `whiteList` 옵션명을 `allowList`로 변경하였습니다.
 
-### Spinners
+### 스피너
 
 - 스피너의 애니메이션의 속도를 줄임으로써 `prefers-reduced-motion: reduce`를 존중하게 되었습니다. [#31882](https://github.com/twbs/bootstrap/pull/31882).
 
 - 스피너의 수직 방향 배치를 개선하였습니다.
 
-### Toasts
+### 토스트
 
 - [위치 지정 유틸리티]({{< docsref "/utilities/position" >}})를 사용하여 `.toast-container` 안의 토스트를 [배치]({{< docsref "/components/toasts#placement" >}})시킬 수 있게 되었습니다.
 
@@ -300,15 +300,15 @@ toc: true
 
 - 토스트에서 `overflow: hidden`을 삭제하고 `calc()` 함수로 적절한 `border-radius`를 대체하였습니다.
 
-### Tooltips
+### 툴팁
 
 - <span class="badge bg-danger">Breaking</span> 기본 툴팁 템플렛에서 `.arrow` 이름을 `.tooltip-arrow`으로 변경하였습니다.
 
-- <span class="badge bg-danger">Breaking</span> `fallbackPlacements`의 기본 값이 `['top', 'right', 'bottom', 'left']` 으로 popper 요소의 배치가 개선되었습니다.
+- <span class="badge bg-danger">Breaking</span> `fallbackPlacements`의 기본 값이 `['top', 'right', 'bottom', 'left']`으로 popper 요소의 배치가 개선되었습니다.
 
-- <span class="badge bg-danger">Breaking</span> `whiteList` 옵션 명이 `allowList`로 변경되었습니다.
+- <span class="badge bg-danger">Breaking</span> `whiteList` 옵션명이 `allowList`로 변경되었습니다.
 
-## Utilities
+## 유틸리티
 
 - <span class="badge bg-danger">Breaking</span> RTL 지원이 추가됨에 따라 방향적인 이름 대신 논리적인 속성명으로 여러 유틸리티의 이름이 변경되었습니다:
   - `.left-*`와 `.right-*`에서 `.start-*`와 `.end-*`로 변경.
@@ -331,7 +331,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> `.text-monospace` 클래스명이 `.font-monospace`으로 변경되었습니다.
 
-- <span class="badge bg-danger">Breaking</span> 문자를 숨기기 위한 시대 착오적인 방법으로 더 이상 사용되서는 안되는 `.text-hide`를 삭제하였습니다.
+- <span class="badge bg-danger">Breaking</span> 텍스트를 숨기기 위한 시대 착오적인 방법으로 더 이상 사용되서는 안되는 `.text-hide`를 삭제하였습니다.
 
 - `font-size` 유틸리티를 위한 `.fs-*` 유틸리티를 추가하였습니다. (RFS 사용). 이들은 HTML의 기본 제목과 동일한 크기(1-6, large ~ small)를 사용하고 있으며 Sass 맵에서 변경할 수 있습니다.
 
@@ -350,11 +350,11 @@ toc: true
 - 컨테이너 작업에도 사용할 수 있도록 `.visually-hidden-focusable` 도우미를 `:focus-within`로 확장하였습니다.
 
 
-## Helpers
+## 도우미
 
 - <span class="badge bg-danger">Breaking</span> 더욱 편리한 CSS 변수 추가로 동작이 개선된 **Responsive embed가 [ratio 도우미]({{< docsref "/helpers/ratio" >}})** 로 이름이 변경되었습니다.
   - 비율을 나타내는 클래스가 `by`에서 `x`로 이름이 변경되었습니다. 예를 들어, `.ratio-16by9`는 `.ratio-16x9`가 되었습니다.
-  - `.embed-responsive-item`과 요소 그룹 셀렉타를 삭제하여 더욱 단순한 `.ratio > *` 셀렉타로 변경되었습니다. 이로써 클래스는 불필요해 졌고, 비율 도우미는 어떠한 HTML 요소로도 사용 가능해졌습니다.
+  - `.embed-responsive-item`과 요소 그룹 셀렉터를 삭제하여 더욱 단순한 `.ratio > *` 셀렉터로 변경되었습니다. 이로써 클래스는 불필요해 졌고, 비율 도우미는 어떠한 HTML 요소로도 사용 가능해졌습니다.
   - `$embed-responsive-aspect-ratios`의 Sass 맵은 `$aspect-ratios`로 이름이 변경되었고, 그 값은 클래스 이름과 퍼센티지를 `key: value` 값으로 포함하도록 간소화되었습니다.
   - Sass 맵의 각 값에 CSS 변수가 생성되어 포함되었습니다. `.ratio`의 `--bs-aspect-ratio` 변수를 수정하여 임의의 [사용자 정의 비율]({{< docsref "/helpers/ratio#custom-ratios" >}})을 만듭니다.
 
@@ -371,14 +371,14 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> 모든 JavaScript 플러그인의 데이터 속성은 제삼자의 코드와 자체 코드에서 Bootstrap의 기능을 구별하는 데 도움이 되도록 이름을 붙이고 있습니다. 예를 들어 `data-toggle` 대신 `data-bs-toggle`을 사용합니다.
 
-- **모든 클러그인은 첫번째 인수로서 CSS 셀렉타를 받아들일 수 있게 되었습니다.** 플러그인의 새로운 인스턴스를 작성하기 위해 DOM 요소 또는 임의의 CSS 셀렉타를 전달할 수 있습니다. :
+- **모든 클러그인은 첫번째 인수로서 CSS 셀렉터를 받아들일 수 있게 되었습니다.** 플러그인의 새로운 인스턴스를 작성하기 위해 DOM 요소 또는 임의의 CSS 셀렉터를 전달할 수 있습니다. :
 
   ```js
   var modal = new bootstrap.Modal('#myModal')
   var dropdown = new bootstrap.Dropdown('[data-bs-toggle="dropdown"]')
   ```
 
-- `popperConfig`는 Bootstrap 기본 Popper 콘피그를 인수로 하는 함수로 전달할 수 있으며, 이 기본 콘피그를 내 방식대로 병합할 수 있습니다. **드롭다운, 팝오버, 툴팁에 적용됩니다.**
+- `popperConfig`는 Bootstrap 기본 Popper 설정을 인수로 하는 함수로 전달할 수 있으며, 이 기본 설정을 내 방식대로 병합할 수 있습니다. **드롭다운, 팝오버, 툴팁에 적용됩니다.**
 
 - 팝오버 요소의 보다 나은 배치를 위해 `fallbackPlacements` 기본값이 `['top', 'right', 'bottom', 'left']`로 변경되었습니다. **드롭다운, 팝오버, 툴팁에 적용됩니다.**
 

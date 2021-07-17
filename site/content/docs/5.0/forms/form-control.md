@@ -2,12 +2,12 @@
 layout: docs
 title: 폼 컨트롤
 title_en: Form controls
-description: 문자 형식의 `<input>`이나 `<textarea>`과 같은 폼 컨트롤에 사용자 정의 스타일, 크기 조정, 포커스 상태등의 업그레이드를 실시할 수 있습니다.
+description: 텍스트 형식의 `<input>`이나 `<textarea>`과 같은 폼 컨트롤에 사용자 정의 스타일, 크기 조정, 포커스 상태등의 업그레이드를 실시할 수 있습니다.
 group: forms
 toc: true
 ---
 
-## Example
+## 예시
 
 {{< example >}}
 <div class="mb-3">
@@ -20,7 +20,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Sizing
+## 크기 조절
 
 `.form-control-lg`와 `.form-control-sm` 클래스를 사용해서 크기를 다르게 설정할 수 있습니다.
 
@@ -30,7 +30,7 @@ toc: true
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
 {{< /example >}}
 
-## Disabled
+## 비활성화
 
 `disabled` 불리언 속성을 추가하면 비활성화외형이 되면서 포인터 이벤트가 삭제됩니다.
 
@@ -39,7 +39,7 @@ toc: true
 <input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
 {{< /example >}}
 
-## Readonly
+## 읽기 전용
 
 `readonly` 불리언 속성을 추가함으로써 입력 값의 변경을 막을 수 있습니다.
 
@@ -47,9 +47,9 @@ toc: true
 <input class="form-control" type="text" value="Readonly input here..." aria-label="readonly input example" readonly>
 {{< /example >}}
 
-## Readonly plain text
+## 읽기 전용 일반 텍스트
 
-폼 내의 `<input readonly>` 요소를 일반 문자로 표시하고 싶은 경우, `.form-control-plaintext` 클래스를 사용합니다. 기본 폼 필드의 스타일을 삭제하고 그에 맞는 마진과 패딩을 유지한 일반 문자로 보여집니다.
+폼 내의 `<input readonly>` 요소를 일반 텍스트로 표시하고 싶은 경우, `.form-control-plaintext` 클래스를 사용합니다. 기본 폼 필드의 스타일을 삭제하고 그에 맞는 마진과 패딩을 유지한 일반 텍스트로 보여집니다.
 
 {{< example >}}
   <div class="mb-3 row">
@@ -82,7 +82,7 @@ toc: true
 </form>
 {{< /example >}}
 
-## File input
+## 파일 선택
 
 {{< example >}}
 <div class="mb-3">
@@ -107,14 +107,14 @@ toc: true
 </div>
 {{< /example >}}
 
-## Color
+## 색상
 
 {{< example >}}
 <label for="exampleColorInput" class="form-label">Color picker</label>
 <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
 {{< /example >}}
 
-## Datalists
+## 데이터 목록
 
 데이터 목록을 사용하면 `<input>` 안에서 엑세스(및 자동 보완) 할 수 있는 `<option>` 그룹을 작성할 수 있습니다. 이들은 `<select>` 요소와 비슷하지만 목록 표시에는 많은 제한과 차이가 있습니다. 대부분의 브라우저나 운영 체계는 `<datalist>` 요소를 어느 정도 지원하고 있지만, 그 표시에는 일관성이 없습니다.
 
@@ -134,7 +134,7 @@ toc: true
 
 ## Sass
 
-### Variables
+### 변수
 
 `$input-*`는 (버튼빼고)대부분의 폼 컨트롤로 공유되고 있습니다.
 
@@ -146,6 +146,6 @@ toc: true
 
 {{< scss-docs name="form-text-variables" file="scss/_variables.scss" >}}
 
-`$form-file-*`은 파일 입력용입니다.
+`$form-file-*`은 파일 선택용입니다.
 
 {{< scss-docs name="form-file-variables" file="scss/_variables.scss" >}}

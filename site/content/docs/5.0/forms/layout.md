@@ -7,7 +7,7 @@ group: forms
 toc: true
 ---
 
-## Forms
+## 폼
 
 폼 필드의 모든 그룹은 `<form>` 요소 안에 존재해야 합니다. Bootstrap은 `<form>` 요소에 기본 스타일링은 제공하지 않지만 기본 제공되는 몇 가지 강력한 브라우저 기능이 있습니다.
 
@@ -17,9 +17,9 @@ toc: true
 
 Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를 적용하여 기본적으로 수직으로 쌓고 있습니다. 추가 클래스를 사용하여 폼 별로 이 레이아웃을 바꿀 수 있습니다.
 
-## Utilities
+## 유틸리티
 
-[Margin utilities]({{< docsref "/utilities/spacing" >}})는 폼에 구조를 추가하는 가장 간단한 방법입니다. 이들은 라벨, 컨트롤, 옵션 폼 문자, 폼 검증 문구의 기본적인 그룹화를 제공합니다. 우리는 일관성을 유지하기 위해 `margin-bottom`유틸리티를 사용해 폼 전체에 하나의 방향성을 사용할 것을 권장합니다.
+[마진 유틸리티]({{< docsref "/utilities/spacing" >}})는 폼에 구조를 추가하는 가장 간단한 방법입니다. 이들은 라벨, 컨트롤, 옵션 폼 텍스트, 폼 검증 문구의 기본적인 그룹화를 제공합니다. 우리는 일관성을 유지하기 위해 `margin-bottom`유틸리티를 사용해 폼 전체에 하나의 방향성을 사용할 것을 권장합니다.
 
 `<fieldset>`나 `<div>` 등의 거의 모든 요소를 사용하여 자유롭게 폼을 작성해 주세요.
 
@@ -34,11 +34,11 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 </div>
 {{< /example >}}
 
-## Form grid
+## 폼 그리드
 
 보다 복잡한 폼은 그리드 클래스를 사용하여 만들 수 있습니다. 그리드 클래스를 사용해 여러 개의 컬럼, 다양한 너비, 추가 배치 옵션이 필요한 폼 레이아웃 표현이 가능합니다.
 
-**Sass변수 `$enable-grid-classes`가 활성화 되어 있어야 합니다** (기본이 활성화 상태임).
+**Sass 변수 `$enable-grid-classes`가 활성화 되어 있어야 합니다** (기본이 활성화 상태임).
 
 {{< example >}}
 <div class="row">
@@ -51,7 +51,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 </div>
 {{< /example >}}
 
-## Gutters
+## 거터
 
 [거터 제어자 클래스]({{< docsref "/layout/gutters" >}})를 추가하는 것으로, 인라인이나 블록 방향으로 거터의 너비를 조정할 수 있습니다. **이또한 Sass 변수 `$enable-grid-classes`가 활성화 되어 있어야 합니다.** (기본값이 활성화 상태임).
 
@@ -115,7 +115,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 </form>
 {{< /example >}}
 
-## Horizontal form
+## 수평 폼
 
 폼 그룹에 `.row` 클래스를 추가하고 `.col-*-*` 클래스를 사용해 라벨이나 컨트롤의 폭을 지정하는 것으로, 그리드를 사용한 수평 방향의 폼을 작성할 수 있습니다. `<label>`에는 반드시 `.col-form-label`을 추가하여 관련 폼 컨트롤과 함께 수직 방향의 중앙에 배치하도록 합니다.
 
@@ -172,7 +172,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 </form>
 {{< /example >}}
 
-### Horizontal form label sizing
+### 수평 폼 라벨 크기 조절
 
 `.form-control-lg`와 `.form-control-sm`의 사용에 따라 `<label>`이나 `<legend>`에 `.col-form-label-sm` 이나 `.col-form-label-lg`를 사용해 주세요.
 
@@ -197,7 +197,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 </div>
 {{< /example >}}
 
-## Column sizing
+## 열 크기 조절
 
 지금까지의 예시에서 봐왔듯 그리드 시스템에는 `.row` 안에 `.col`을 몇 개라도 배치할 수 있습니다. 이 열들은 이용 가능한 너비를 균등하게 분할합니다. 또한 `.col-sm-7`와 같은 특정 컬럼 클래스를 사용하여 컬럼 서브셋을 선택하여 공간을 늘리거나 줄이거나 나머지 `.col`들을 균등 분할할 수도 있습니다.
 
@@ -215,7 +215,7 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 </div>
 {{< /example >}}
 
-## Auto-sizing
+## 자동 크기 조절
 
 아래 예시에서는 플렉스박스 유틸리티를 사용하여 콘텐츠를 수직 방향으로 중앙에 오게 하고 `.col`을 `.col-auto`로 변경함으로써 필요한 만큼 컬럼이 공간을 차지하도록 하고 있습니다. 콘텐츠에 따라 컬럼의 크기가 다르게 설정됩니다.
 
@@ -293,9 +293,9 @@ Bootstrap은 거의 모든 폼 컨트롤에 `display: block`과 `width: 100%`를
 </form>
 {{< /example >}}
 
-## Inline forms
+## 인라인 폼
 
-`.row-cols-*` 클래스를 사용해, 수평 방향의 레이아웃을 만듭니다. [거터 제어자 클래스]({{< docsref "/layout/gutters" >}})를 추가함으로써 수평 방향과 수직 방향에 거터를 적절하게 줄 수 있습니다. 좁은 모바일 뷰포트에서 `.col-12` 는 양식 컨트롤 등을 쌓을 수 있도록 도와줍니다. `.align-items-center`를 사용해 폼 요소를 중앙에 오게 해 `.form-checkbox`의 위치가 예쁘게 적용되었습니다.
+`.row-cols-*` 클래스를 사용해, 수평 방향의 레이아웃을 만듭니다. [거터 제어자 클래스]({{< docsref "/layout/gutters" >}})를 추가함으로써 수평 방향과 수직 방향에 거터를 적절하게 줄 수 있습니다. 좁은 모바일 뷰포트에서 `.col-12` 는 폼 컨트롤 등을 쌓을 수 있도록 도와줍니다. `.align-items-center`를 사용해 폼 요소를 중앙에 오게 해 `.form-checkbox`의 위치가 예쁘게 적용되었습니다.
 
 {{< example >}}
 <form class="row row-cols-lg-auto g-3 align-items-center">
