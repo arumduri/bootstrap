@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/utilities/api.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">유틸리티 API</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Utility API</h1>
-        
         <p class="bd-lead">유틸리티 API는 유틸리티 클래스를 생성하기 위한 Sass 기반 도구입니다.</p>
         
 
@@ -403,35 +401,28 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#api-explained">API explained</a>
+    <li><a href="#api-설명">API 설명</a>
       <ul>
-        <li><a href="#custom-class-prefix">Custom class prefix</a></li>
-        <li><a href="#states">States</a></li>
+        <li><a href="#사용자-지정-클래스-접두사">사용자 지정 클래스 접두사</a></li>
+        <li><a href="#상태">상태</a></li>
+        <li><a href="#반응형-유틸리티">반응형 유틸리티</a></li>
+        <li><a href="#유틸리티-변경">유틸리티 변경</a></li>
+        <li><a href="#인쇄-유틸리티">인쇄 유틸리티</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li>
+    <li><a href="#important">Important</a></li>
+    <li><a href="#api-사용하기">API 사용하기</a>
       <ul>
-        <li><a href="#responsive-utilities">Responsive utilities</a></li>
-        <li><a href="#changing-utilities">Changing utilities</a></li>
-        <li><a href="#print-utilities">Print utilities</a></li>
-      </ul>
-    </li>
-    <li><a href="#importance">Importance</a></li>
-    <li><a href="#using-the-api">Using the API</a>
-      <ul>
-        <li><a href="#add-utilities">Add utilities</a></li>
-        <li><a href="#modify-utilities">Modify utilities</a>
+        <li><a href="#유틸리티-추가">유틸리티 추가</a></li>
+        <li><a href="#유틸리티-수정">유틸리티 수정</a>
           <ul>
-            <li><a href="#enable-responsive">Enable responsive</a></li>
-            <li><a href="#rename-utilities">Rename utilities</a></li>
+            <li><a href="#반응형-활성화">반응형 활성화</a></li>
+            <li><a href="#유틸리티-이름-변경">유틸리티 이름 변경</a></li>
           </ul>
         </li>
-        <li><a href="#remove-utilities">Remove utilities</a>
+        <li><a href="#유틸리티-제거">유틸리티 제거</a>
           <ul>
-            <li><a href="#remove-utility-in-rtl">Remove utility in RTL</a></li>
+            <li><a href="#rtl에서-유틸리티-제거">RTL에서 유틸리티 제거</a></li>
           </ul>
         </li>
       </ul>
@@ -444,8 +435,8 @@
       <div class="bd-content ps-lg-4">
         
 
-        <p>부트 스트랩 유틸리티는 유틸리티 API로 생성되며 Sass를 통해 기본 유틸리티 클래스 세트를 수정하거나 확장하는 데 사용할 수 있습니다. 저희 유틸리티 API는 다양한 옵션으로 클래스 패밀리를 생성하기 위한 일련의 Sass맵 및 함수를 기반으로 합니다. Sass맵에 익숙하지 않은 경우 <a href="https://sass-lang.com/documentation/values/maps">official Sass docs</a> 를 읽고 시작해 보세요.</p>
-<p><code>$utilities</code> 맵에는 우리의 모든 유틸리티가 포함되어 나중에는 사용자정의 <code>$utilities</code> 와 통합(파일이 있을 경우)됩니다. 유틸리티 맵에는 다음 옵션을 허용할 수 있는 유틸리티 그룹의 키 목록이 포함되어 있습니다.:</p>
+        <p>Bootstrap 유틸리티는 유틸리티 API로 생성되며 Sass를 통해 기본 유틸리티 클래스 세트를 수정하거나 확장하는 데 사용할 수 있습니다. 저희 유틸리티 API는 다양한 옵션으로 클래스 패밀리를 생성하기 위한 일련의 Sass맵 및 함수를 기반으로 합니다. Sass맵에 익숙하지 않은 경우 <a href="https://sass-lang.com/documentation/values/maps">official Sass docs</a>를 읽고 시작해 보세요.</p>
+<p><code>$utilities</code> 맵에는 우리의 모든 유틸리티가 포함되어 나중에는 사용자정의 <code>$utilities</code> 와 통합(파일이 있을 경우)됩니다. 유틸리티 맵에는 다음 옵션을 허용할 수 있는 유틸리티 그룹의 키 목록이 포함되어 있습니다:</p>
 <table class="table text-start">
 <thead>
 <tr>
@@ -498,8 +489,8 @@
 </tbody>
 </table>
 
-<h2 id="api-explained">API explained</h2>
-<p>모든 유틸리티 변수는 <code>_utilities.scss</code> 스타일 시트의 <code>$utilities</code> 변수에 추가됩니다. 각 유틸리티 그룹은 다음과 같습니다.:</p>
+<h2 id="api-설명">API 설명</h2>
+<p>모든 유틸리티 변수는 <code>_utilities.scss</code> 스타일 시트의 <code>$utilities</code> 변수에 추가됩니다. 각 유틸리티 그룹은 다음과 같습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
@@ -518,8 +509,8 @@
 <span class="p">.</span><span class="nc">opacity-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><h3 id="custom-class-prefix">Custom class prefix</h3>
-<p>컴파일 된 CSS에서 사용되는 클래스 접두사를 변경하려면 <code>class</code> 옵션을 사용하세요.:</p>
+</code></pre></div><h3 id="사용자-지정-클래스-접두사">사용자 지정 클래스 접두사</h3>
+<p>컴파일된 CSS에서 사용되는 클래스 접두사를 변경하려면 <code>class</code> 옵션을 사용하세요.:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
@@ -539,11 +530,9 @@
 <span class="p">.</span><span class="nc">o-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">o-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">o-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><h3 id="states">States</h3>
-<p>가상 클래스의 변형을 생성하려면 <code>state</code> 옵션을 사용하십시오. 비슷한 클래스의 예시로는 <code>:hover</code> 및 <code>:focus</code> 입니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 <code>state: hover</code> 를 추가하면 컴파일 된 CSS에 <code>.opacity-hover:hover</code> 가 표시됩니다.</p>
-<h1 id="여러개의-가상-클래스가-필요하십니까-state--hover-focus-와-같이-공백으로-구분-된-상태-목록을-사용하세요">여러개의 가상 클래스가 필요하십니까? <code>state : hover focus</code> 와 같이 공백으로 구분 된 상태 목록을 사용하세요.</h1>
-<p>가상 클래스의 변형을 생성하려면 <code>state</code> 옵션을 사용하십시오. 비슷한 클래스의 예시로는 <code>:hover</code> 및 <code>:focus</code>입니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 <code>state: hover</code>를 추가하면 컴파일 된 CSS에 <code>.opacity-hover:hover</code>가 표시됩니다.</p>
-<p>여러 개의 가상 클래스가 필요하십니까? <code>state : hover focus</code>와 같이 공백으로 구분 된 상태 목록을 사용하세요.</p>
+</code></pre></div><h3 id="상태">상태</h3>
+<p>가상 클래스의 변형을 생성하려면 <code>state</code> 옵션을 사용하세요. 비슷한 클래스의 예시로는 <code>:hover</code> 및 <code>:focus</code>가 있습니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 <code>state: hover</code>를 추가하면 컴파일된 CSS에 <code>.opacity-hover:hover</code>가 표시됩니다.</p>
+<p>여러 개의 가상 클래스가 필요하신가요? <code>state : hover focus</code>와 같이 공백으로 구분 된 상태 목록을 사용하세요.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
@@ -564,8 +553,8 @@
 <span class="p">.</span><span class="nc">opacity-50-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-75-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">.</span><span class="nc">opacity-100-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-</code></pre></div><h3 id="responsive-utilities">Responsive utilities</h3>
-<p><a href="/docs/5.0/layout/breakpoints/">all breakpoints</a>에서 반응 형 유틸리티 (예 : <code>.opacity-md-25</code> )를 생성하려면 <code>responsive</code> 불리언을 추가합니다.</p>
+</code></pre></div><h3 id="반응형-유틸리티">반응형 유틸리티</h3>
+<p><a href="/docs/5.0/layout/breakpoints/">all breakpoints</a>에서 반응형 유틸리티 (예: <code>.opacity-md-25</code> )를 생성하려면 <code>responsive</code> 불리언을 추가합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
@@ -625,8 +614,8 @@
   <span class="p">.</span><span class="nc">opacity-xxl-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
   <span class="p">.</span><span class="nc">opacity-xxl-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h3 id="changing-utilities">Changing utilities</h3>
-<p>동일한 키를 사용하여 기존 유틸리티를 대체하십시오. 예를 들어 추가 반응형 오버플로 유틸리티 클래스를 원할 경우 다음을 수행 할 수 있습니다.:</p>
+</code></pre></div><h3 id="유틸리티-변경">유틸리티 변경</h3>
+<p>동일한 키를 사용하여 기존 유틸리티를 대체하십시오. 예를 들어 추가 반응형 오버플로 유틸리티 클래스를 원할 경우 다음을 수행 할 수 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;overflow&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">responsive</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
@@ -634,7 +623,7 @@
     <span class="na">values</span><span class="o">:</span> <span class="ni">visible</span> <span class="ni">hidden</span> <span class="ni">scroll</span> <span class="ni">auto</span><span class="o">,</span>
   <span class="p">)</span><span class="o">,</span>
 <span class="p">);</span>
-</code></pre></div><h3 id="print-utilities">Print utilities</h3>
+</code></pre></div><h3 id="인쇄-유틸리티">인쇄 유틸리티</h3>
 <p><code>print</code> 옵션을 활성화하면 ** 또한 ** 인쇄용 유틸리티 클래스가 생성되며, 이는 <code>@media print {...}</code> 미디어 쿼리 내에서만 적용됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
@@ -663,11 +652,11 @@
   <span class="p">.</span><span class="nc">opacity-print-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
   <span class="p">.</span><span class="nc">opacity-print-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h2 id="importance">Importance</h2>
-<p>All utilities generated by the API include <code>!important</code> to ensure they override components and modifier classes as intended. You can toggle this setting globally with the <code>$enable-important-utilities</code> variable (defaults to <code>true</code>).</p>
-<h2 id="using-the-api">Using the API</h2>
-<p>이제 유틸리티 API의 작동 방식에 익숙해 졌으므로 사용자 지정 클래스를 추가하고 기본 유틸리티를 수정하는 방법을 배워 봅시다.</p>
-<h3 id="add-utilities">Add utilities</h3>
+</code></pre></div><h2 id="important">Important</h2>
+<p>API에 의해 생성된 모든 유틸리티에는 의도한 대로 컴포넌트 및 수정자 클래스를 재정의할 수 있도록 <code>!important</code>가 포함됩니다. <code>$enable-important-utilities</code> 변수 (기본값은 <code>true</code>)를 사용하여 이 설정을 전역적으로 토글할 수 있습니다.</p>
+<h2 id="api-사용하기">API 사용하기</h2>
+<p>이제 유틸리티 API의 작동 방식에 익숙해졌으므로 사용자 지정 클래스를 추가하고 기본 유틸리티를 수정하는 방법을 배워봅시다.</p>
+<h3 id="유틸리티-추가">유틸리티 추가</h3>
 <p><code>map-merge</code>를 사용하면 새로운 유틸리티를 기본 <code>$utilities</code> 맵에 추가할 수 있습니다. 먼저 <code>_utilities.scss</code>를 가져왔는지 확인한 다음 <code>map-merge</code>를 이용하여 새로운 유틸리티를 추가하십시오. 다음 예시는 세 개의 값이 있는 반응형 <code>cursor</code> 유틸리티를 추가하는 방법입니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
@@ -684,9 +673,9 @@
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span> 
-</code></pre></div><h3 id="modify-utilities">Modify utilities</h3>
+</code></pre></div><h3 id="유틸리티-수정">유틸리티 수정</h3>
 <p><code>map-get</code> 및 <code>map-merge</code> 함수를 사용하여 기본 <code>$utilities</code> 맵의 기존 유틸리티를 수정합니다. 아래는 <code>width</code> 유틸리티에 신규 값을 추가하는 예시입니다.
-초기 <code>map-merge</code>로 시작한 다음 수정할 유틸리티를 지정하세요. 중첩 된 <code>&quot;width&quot;</code> 맵을 <code>map-get</code> 을 이용해 가져 온 뒤 유틸리티의 옵션 및 값에 접근하여 수정합니다.</p>
+초기 <code>map-merge</code>로 시작한 다음 수정할 유틸리티를 지정하세요. 중첩 된 <code>&quot;width&quot;</code> 맵을 <code>map-get</code>을 이용해 가져 온 뒤 유틸리티의 옵션 및 값에 접근하여 수정합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities&#34;</span><span class="p">;</span>
@@ -705,7 +694,7 @@
     <span class="p">)</span><span class="o">,</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><h4 id="enable-responsive">Enable responsive</h4>
+</code></pre></div><h4 id="반응형-활성화">반응형 활성화</h4>
 <p>You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the <code>border</code> classes responsive:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
@@ -747,8 +736,8 @@
   <span class="p">.</span><span class="nc">border-xxl</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
   <span class="p">.</span><span class="nc">border-xxl-0</span> <span class="p">{</span> <span class="err">...</span> <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h4 id="rename-utilities">Rename utilities</h4>
-<p>이전 v4 유틸리티가 그립거나 다른 명명 규칙을 사용 하고 싶습니까? 유틸리티 API는 주어진 유틸리티의 결과 <code>class</code> 를 재정의 하는데 사용할 수 있습니다. 예를 들어 <code>.ms- *</code> 유틸리티의 이름을 오래된 <code>.ml- *</code> 로 바꿀 경우 다음과 같이 할 수 있습니다:</p>
+</code></pre></div><h4 id="유틸리티-이름-변경">유틸리티 이름 변경</h4>
+<p>이전 v4 유틸리티가 그립거나 다른 명명 규칙을 사용 하고 싶습니까? 유틸리티 API는 주어진 유틸리티의 결과 <code>class</code>를 재정의 하는데 사용할 수 있습니다. 예를 들어 <code>.ms- *</code> 유틸리티의 이름을 오래된 <code>.ml- *</code>로 바꿀 경우 다음과 같이 할 수 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities&#34;</span><span class="p">;</span>
@@ -761,8 +750,8 @@
     <span class="p">)</span><span class="o">,</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><h3 id="remove-utilities">Remove utilities</h3>
-<p>그룹 키를 <code>null</code> 로 설정하면 기본 유틸리티를 제거 할 수 있습니다. 예를 들어 모든 <code>width</code> 유틸리티를 제거하려면 <code>$utilities</code> <code>map-merge</code> 를 만들고 <code> &quot;width&quot;: null</code> 을 추가합니다.</p>
+</code></pre></div><h3 id="유틸리티-제거">유틸리티 제거</h3>
+<p>그룹 키를 <code>null</code>로 설정하면 기본 유틸리티를 제거 할 수 있습니다. 예를 들어 모든 <code>width</code> 유틸리티를 제거하려면 <code>$utilities</code> <code>map-merge</code>를 만들고 <code> &quot;width&quot;: null</code>을 추가합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities&#34;</span><span class="p">;</span>
@@ -773,8 +762,8 @@
     <span class="s2">&#34;width&#34;</span><span class="o">:</span> <span class="n">null</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div><h4 id="remove-utility-in-rtl">Remove utility in RTL</h4>
-<p>아랍어 줄 바꿈과 같은 일부 예외적 인 경우는 <a href="https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl">RTL styling difficult</a> 를 합니다(스타일 지정을 어렵게 만든다는 뜻). 따라서 <code>rtl</code> 옵션을 <code>false</code> 로 설정하여 RTL 출력에서 유틸리티를 삭제할 수 있습니다.</p>
+</code></pre></div><h4 id="rtl에서-유틸리티-제거">RTL에서 유틸리티 제거</h4>
+<p>아랍어 줄 바꿈과 같은 일부 예외적 인 경우는 <a href="https://rtlstyling.com/posts/rtl-styling#common-things-that-might-not-work-for-rtl">RTL styling difficult</a>를 합니다 (스타일 지정을 어렵게 만든다는 뜻). 따라서 <code>rtl</code> 옵션을 <code>false</code>로 설정하여 RTL 출력에서 유틸리티를 삭제할 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;word-wrap&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">property</span><span class="o">:</span> <span class="n">word-wrap</span> <span class="n">word-break</span><span class="o">,</span>
@@ -816,7 +805,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

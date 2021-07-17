@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/offcanvas.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">오프캔버스</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Offcanvas</h1>
-        
         <p class="bd-lead">몇 가지의 클래스와 JavaScript 플러그인을 사용해 네비게이션이나 쇼핑카트 등에 유용한 숨겨진 사이드바를 사용할 수 있습니다.</p>
         
 
@@ -403,28 +401,28 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#examples">Examples</a>
+    <li><a href="#작동-원리">작동 원리</a></li>
+    <li><a href="#예시">예시</a>
       <ul>
-        <li><a href="#offcanvas-components">Offcanvas components</a></li>
-        <li><a href="#live-demo">Live demo</a></li>
+        <li><a href="#오프캔버스-컴포넌트">오프캔버스 컴포넌트</a></li>
+        <li><a href="#라이브-데모">라이브 데모</a></li>
       </ul>
     </li>
-    <li><a href="#placement">Placement</a></li>
-    <li><a href="#backdrop">Backdrop</a></li>
-    <li><a href="#accessibility">Accessibility</a></li>
+    <li><a href="#배치">배치</a></li>
+    <li><a href="#백드롭">백드롭</a></li>
+    <li><a href="#접근성">접근성</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
-        <li><a href="#variables">Variables</a></li>
+        <li><a href="#변수">변수</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#사용-방법">사용 방법</a>
       <ul>
-        <li><a href="#via-data-attributes">Via data attributes</a></li>
-        <li><a href="#via-javascript">Via JavaScript</a></li>
-        <li><a href="#options">Options</a></li>
-        <li><a href="#methods">Methods</a></li>
-        <li><a href="#events">Events</a></li>
+        <li><a href="#데이터-속성-사용하기">데이터 속성 사용하기</a></li>
+        <li><a href="#javascript-사용하기">JavaScript 사용하기</a></li>
+        <li><a href="#옵션">옵션</a></li>
+        <li><a href="#메소드">메소드</a></li>
+        <li><a href="#이벤트">이벤트</a></li>
       </ul>
     </li>
   </ul>
@@ -435,7 +433,7 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="how-it-works">How it works</h2>
+        <h2 id="작동-원리">작동 원리</h2>
 <p>오프캔버스는 JavaScript로 뷰포트의 왼쪽, 오른쪽, 혹은 아래쪽에서 표시되는 사이드바 컴포넌트입니다. 버튼이나 앵커는 토글하는 특정 요소에 붙여지는 트리거로 사용되며 <code>data</code> 속성은 JavaScript를 호출하기 위해 사용됩니다.</p>
 <ul>
 <li>오프캔버스는 모달과 같이 JavaScript 코드를 일부 공유하고 있습니다. 개념적으로는 아주 비슷하지만 이들은 다른 플러그인입니다.</li>
@@ -448,8 +446,8 @@
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
 </div>
 
-<h2 id="examples">Examples</h2>
-<h3 id="offcanvas-components">Offcanvas components</h3>
+<h2 id="예시">예시</h2>
+<h3 id="오프캔버스-컴포넌트">오프캔버스 컴포넌트</h3>
 <p>다음은 기본적으로 표시되는(<code>.offcanvas</code>의 <code>.show</code>에 의해) 오프캔버스의 예시입니다. 오프캔버스에는 닫기 버튼이 있는 헤더와 초기 <code>padding</code>을 위한 옵션의 body클래스가 지원됩니다. 가능한 오프캔버스의 헤더에 닫기 액션을 포함시키거나 명시적인 닫기 액션을 제공할 것을 권장합니다.</p>
 <div class="bd-example bd-example-offcanvas p-0 bg-light overflow-hidden">
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
@@ -470,7 +468,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="live-demo">Live demo</h3>
+<h3 id="라이브-데모">라이브 데모</h3>
 <p>아래의 버튼을 클릭하면 <code>.offcanvas</code> 클래스를 갖고 있는 요소의 <code>.show</code> 클래스를 토글하는 JavaScript로 오프캔버스를 표시/숨김하는 것을 확인할 수 있습니다.</p>
 <ul>
 <li><code>.offcanvas</code> 콘텐츠를 숨김 (기본)</li>
@@ -534,10 +532,10 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="placement">Placement</h2>
+<h2 id="배치">배치</h2>
 <p>오프캔버스 컴포넌트의 기본 배치는 없으므로 아래 제어자 클래스 중 하나를 추가해야 합니다:</p>
 <ul>
-<li><code>.offcanvas-start</code>는 오프캔버스를 뷰포트의 왼쪽에 배치합니다(위의 예시로 확인)</li>
+<li><code>.offcanvas-start</code>는 오프캔버스를 뷰포트의 왼쪽에 배치합니다 (위의 예시로 확인)</li>
 <li><code>.offcanvas-end</code>는 오프캔버스를 뷰포트의 오른쪽에 배치합니다.</li>
 <li><code>.offcanvas-top</code>은 뷰포트의 맨 위에 오프캔버스를 배치합니다.</li>
 <li><code>.offcanvas-bottom</code>은 뷰포트의 맨 아래에 오프캔버스를 배치합니다.</li>
@@ -612,7 +610,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     ...
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="backdrop">Backdrop</h2>
+<h2 id="백드롭">백드롭</h2>
 <p>오프캔버스와 그 배경이 표시될 때에는 <code>&lt;body&gt;</code> 요소의 스크롤은 비활성화됩니다. <code>&lt;body&gt;</code> 스크롤을 바꾸고 싶으면 <code>data-bs-scroll</code> 속성을, 배경의 스크롤을 바꾸고 싶으면 <code>data-bs-backdrop</code> 속성을 사용해 주세요.</p>
 <div class="bd-example">
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
@@ -677,10 +675,10 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Try scrolling the rest of the page to see this option in action.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="accessibility">Accessibility</h2>
+<h2 id="접근성">접근성</h2>
 <p>개념적으로 오프캔버스 패널은 모달 dialog여서, 반드시 <code>.offcanvas</code>에 <code>aria-labelledby=&quot;...&quot;</code>라는 오프캔버스의 타이틀을 참조하는 기술을 추가해 주세요. 덧붙여 <code>role=&quot;dialog&quot;</code>는 이미 JavaScript로 추가되고 있기 때문에 따로 추가할 필요는 없습니다.</p>
 <h2 id="sass">Sass</h2>
-<h3 id="variables">Variables</h3>
+<h3 id="변수">변수</h3>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$offcanvas-padding-y</span><span class="o">:</span>               <span class="nv">$modal-inner-padding</span><span class="p">;</span>
 <span class="nv">$offcanvas-padding-x</span><span class="o">:</span>               <span class="nv">$modal-inner-padding</span><span class="p">;</span>
 <span class="nv">$offcanvas-horizontal-width</span><span class="o">:</span>        <span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
@@ -693,8 +691,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="nv">$offcanvas-color</span><span class="o">:</span>                   <span class="nv">$modal-content-color</span><span class="p">;</span>
 <span class="nv">$offcanvas-box-shadow</span><span class="o">:</span>              <span class="nv">$modal-content-box-shadow-xs</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="usage">Usage</h2>
-<p>오프캔버스 플러그인에서는 몇 가지 클래스와 속성을 이용하여 힘든 처리를 합니다.:</p>
+<h2 id="사용-방법">사용 방법</h2>
+<p>오프캔버스 플러그인에서는 몇 가지 클래스와 속성을 이용하여 힘든 처리를 합니다:</p>
 <ul>
 <li><code>.offcanvas</code>는 콘텐츠를 숨깁니다.</li>
 <li><code>.offcanvas.show</code>는 콘텐츠를 표시합니다.</li>
@@ -703,16 +701,16 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <li><code>.offcanvas-bottom</code>은 아래쪽의 오프캔버스를 숨깁니다.</li>
 </ul>
 <p>닫기 버튼에 <code>data-bs-dismiss=&quot;offcanvas&quot;</code> 속성을 추가해 JavaScript 기능으로 감춥니다.</p>
-<h3 id="via-data-attributes">Via data attributes</h3>
-<p>요소에 <code>data-bs-toggle=&quot;offcanvas&quot;</code>와 <code>data-bs-target</code>이나 <code>href</code>를 추가하면 1개의 오프캔버스 요소의 제어를 자동으로 할 수 있습니다. <code>data-bs-target</code> 속성에는 오프캔버스를 적용하기 위한 CSS 셀렉타를 지정합니다. 오프캔버스 속성에는 반드시 <code>offcanvas</code> 클래스를 추가해야 합니다. 기본 열린 상태로 하고 싶다면 <code>show</code> 클래스를 추가하세요.</p>
-<h3 id="via-javascript">Via JavaScript</h3>
+<h3 id="데이터-속성-사용하기">데이터 속성 사용하기</h3>
+<p>요소에 <code>data-bs-toggle=&quot;offcanvas&quot;</code>와 <code>data-bs-target</code>이나 <code>href</code>를 추가하면 1개의 오프캔버스 요소의 제어를 자동으로 할 수 있습니다. <code>data-bs-target</code> 속성에는 오프캔버스를 적용하기 위한 CSS 셀렉터를 지정합니다. 오프캔버스 속성에는 반드시 <code>offcanvas</code> 클래스를 추가해야 합니다. 기본 열린 상태로 하고 싶다면 <code>show</code> 클래스를 추가하세요.</p>
+<h3 id="javascript-사용하기">JavaScript 사용하기</h3>
 <p>이처럼 수동으로 활성화 합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">offcanvasElementList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.offcanvas&#39;</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">offcanvasList</span> <span class="o">=</span> <span class="nx">offcanvasElementList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">offcanvasEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Offcanvas</span><span class="p">(</span><span class="nx">offcanvasEl</span><span class="p">)</span>
 <span class="p">})</span>
-</code></pre></div><h3 id="options">Options</h3>
-<p>data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성의 경우, <code>data-bs-backdrop=&quot;&quot;</code>처럼 <code> data-bs-</code>에 옵션 명을 추가해 사용합니다.</p>
+</code></pre></div><h3 id="옵션">옵션</h3>
+<p>data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성의 경우, <code>data-bs-backdrop=&quot;&quot;</code>처럼 <code> data-bs-</code>에 옵션명을 추가해 사용합니다.</p>
 <table class="table">
 <thead>
 <tr>
@@ -744,7 +742,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </tbody>
 </table>
 
-<h3 id="methods">Methods</h3>
+<h3 id="메소드">메소드</h3>
 <div class="bd-callout bd-callout-danger">
 <h4 id="asynchronous-methods-and-transitions">Asynchronous methods and transitions</h4>
 <p>All API methods are <strong>asynchronous</strong> and start a <strong>transition</strong>. They return to the caller as soon as the transition is started but <strong>before it ends</strong>. In addition, a method call on a <strong>transitioning component will be ignored</strong>.</p>
@@ -753,7 +751,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </div>
 
 <p>콘텐츠를 오프캔버스 요소로 액티브하게 합니다. 옵션의 <code>object</code>를 받습니다.</p>
-<p>아래의 예시처럼 생성자를 사용해 오프캔버스의 인스턴스를 만들 수 있습니다.:</p>
+<p>아래의 예시처럼 생성자를 사용해 오프캔버스의 인스턴스를 만들 수 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myOffcanvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myOffcanvas&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">bsOffcanvas</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Offcanvas</span><span class="p">(</span><span class="nx">myOffcanvas</span><span class="p">)</span>
 </code></pre></div><table class="table">
@@ -787,7 +785,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </tbody>
 </table>
 
-<h3 id="events">Events</h3>
+<h3 id="이벤트">이벤트</h3>
 <p>Bootstrap의 오프캔버스 클래스는 오프캔버스 기능에 연결하기 위한 몇 가지 이벤트를 공개하고 있습니다.</p>
 <table class="table">
 <thead>
@@ -803,7 +801,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </tr>
 <tr>
 <td><code>shown.bs.offcanvas</code></td>
-<td>이 이벤트는 오프캔버스 요소가 사용자에게 보일 때 발생합니다(CSS 트랜지션이 완료될 때까지 기다립니다).</td>
+<td>이 이벤트는 오프캔버스 요소가 사용자에게 보일 때 발생합니다 (CSS 트랜지션이 완료될 때까지 기다립니다).</td>
 </tr>
 <tr>
 <td><code>hide.bs.offcanvas</code></td>
@@ -811,7 +809,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </tr>
 <tr>
 <td><code>hidden.bs.offcanvas</code></td>
-<td>이 이벤트는 오프캔버스 요소가 사용자로부터 없어졌을때 발생합니다(CSS 트랜지션이 완료되기를 기다립니다).</td>
+<td>이 이벤트는 오프캔버스 요소가 사용자로부터 없어졌을때 발생합니다 (CSS 트랜지션이 완료되기를 기다립니다).</td>
 </tr>
 </tbody>
 </table>
@@ -845,7 +843,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="웹팩이나 다른 번들러를 사용하여 프로젝트에 Bootstrap을 포함하는 방법을 알아보세요.">
+<meta name="description" content="Webpack이나 다른 번들러를 사용하여 프로젝트에 Bootstrap을 포함하는 방법을 알아보세요.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.84.0">
 
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>웹팩과 번들러 · Bootstrap v5.0</title>
+<title>Webpack과 번들러 · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/getting-started/webpack/">
 
@@ -34,14 +34,14 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="웹팩과 번들러">
-<meta name="twitter:description" content="웹팩이나 다른 번들러를 사용하여 프로젝트에 Bootstrap을 포함하는 방법을 알아보세요.">
+<meta name="twitter:title" content="Webpack과 번들러">
+<meta name="twitter:description" content="Webpack이나 다른 번들러를 사용하여 프로젝트에 Bootstrap을 포함하는 방법을 알아보세요.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/getting-started/webpack/">
-<meta property="og:title" content="웹팩과 번들러">
-<meta property="og:description" content="웹팩이나 다른 번들러를 사용하여 프로젝트에 Bootstrap을 포함하는 방법을 알아보세요.">
+<meta property="og:title" content="Webpack과 번들러">
+<meta property="og:description" content="Webpack이나 다른 번들러를 사용하여 프로젝트에 Bootstrap을 포함하는 방법을 알아보세요.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded active" aria-current="page">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded active" aria-current="page">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -388,12 +388,10 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/getting-started/webpack.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">웹팩과 번들러</h1>
+          <h1 class="bd-title" id="content">Webpack과 번들러</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Webpack and bundlers</h1>
-        
-        <p class="bd-lead">웹팩이나 다른 번들러를 사용하여 프로젝트에 Bootstrap을 포함하는 방법을 알아보세요.</p>
+        <p class="bd-lead">Webpack이나 다른 번들러를 사용하여 프로젝트에 Bootstrap을 포함하는 방법을 알아보세요.</p>
         
 
       </div>
@@ -403,12 +401,12 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#installing-bootstrap">Installing Bootstrap</a></li>
-    <li><a href="#importing-javascript">Importing JavaScript</a></li>
-    <li><a href="#importing-styles">Importing Styles</a>
+    <li><a href="#bootstrap-설치">Bootstrap 설치</a></li>
+    <li><a href="#javascript-불러오기">JavaScript 불러오기</a></li>
+    <li><a href="#스타일-불러오기">스타일 불러오기</a>
       <ul>
-        <li><a href="#importing-precompiled-sass">Importing Precompiled Sass</a></li>
-        <li><a href="#importing-compiled-css">Importing Compiled CSS</a></li>
+        <li><a href="#사전-컴파일된-css-불러오기">사전 컴파일된 CSS 불러오기</a></li>
+        <li><a href="#컴파일된-css-불러오기">컴파일된 CSS 불러오기</a></li>
       </ul>
     </li>
   </ul>
@@ -419,9 +417,9 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="installing-bootstrap">Installing Bootstrap</h2>
+        <h2 id="bootstrap-설치">Bootstrap 설치</h2>
 <p>npm을 사용하여 Node.js 모듈로 <a href="/docs/5.0/getting-started/download/#npm">Bootstrap을 설치</a>합니다.</p>
-<h2 id="importing-javascript">Importing JavaScript</h2>
+<h2 id="javascript-불러오기">JavaScript 불러오기</h2>
 <p>앱의 진입점 (일반적으로 <code>index.js</code> 또는 <code>app.js</code>)에 다음 줄을 추가하여 <a href="/docs/5.0/getting-started/javascript/">Bootstrap의 JavaScript</a>를 불러옵니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// You can specify which plugins you need
 </span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Tooltip</span><span class="p">,</span> <span class="nx">Toast</span><span class="p">,</span> <span class="nx">Popover</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span>
@@ -430,13 +428,13 @@
 <span class="p">...</span>
 </code></pre></div><p>Bootstrap은 <code>peerDependencies</code> 속성에 지정된 <a href="https://popper.js.org/">Popper</a>에 의존합니다.
 이것은 This means that you will have to make sure to add it to your <code>npm install @popperjs/core</code>를 사용하여 <code>package.json</code>에 추가해야 함을 의미합니다.</p>
-<h2 id="importing-styles">Importing Styles</h2>
-<h3 id="importing-precompiled-sass">Importing Precompiled Sass</h3>
-<p>Bootstrap의 잠재력을 최대한 활용하고 필요에 맞게 커스터마이징하려면 프로젝트 번들링 프로세스의 일부로 소스 파일을 사용하세요.</p>
+<h2 id="스타일-불러오기">스타일 불러오기</h2>
+<h3 id="사전-컴파일된-css-불러오기">사전 컴파일된 CSS 불러오기</h3>
+<p>Bootstrap의 잠재력을 최대한 활용하고 필요에 맞게 사용자 지정하려면 프로젝트 번들링 프로세스의 일부로 소스 파일을 사용하세요.</p>
 <p>먼저 <code>_custom.scss</code>를 직접 만들고 이를 통해 <a href="/docs/5.0/customize/sass/">기본 제공 커스텀 변수</a>를 재정의합니다. 그런 다음에 메인 Sass 파일을 사용하여 커스텀 변수를 가져온 다음 Bootstrap을 사용합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;custom&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;~bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
-</code></pre></div><p>Bootstrap을 컴파일하려면 필수 로더인 <a href="https://github.com/webpack-contrib/sass-loader">sass-loader</a> 및 <a href="https://github.com/postcss/autoprefixer#webpack">Autoprefixer</a>와 <a href="https://github.com/webpack-contrib/postcss-loader">postcss-loader</a>를 설치하고 사용해야합니다. 최소한의 설정으로 웹팩 구성에 다음 규칙 또는 유사한 규칙이 포함되여아 합니다:</p>
+</code></pre></div><p>Bootstrap을 컴파일하려면 필수 로더인 <a href="https://github.com/webpack-contrib/sass-loader">sass-loader</a> 및 <a href="https://github.com/postcss/autoprefixer#webpack">Autoprefixer</a>와 <a href="https://github.com/webpack-contrib/postcss-loader">postcss-loader</a>를 설치하고 사용해야합니다. 최소한의 설정으로 webpack 구성에 다음 규칙 또는 유사한 규칙이 포함되여아 합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// ...
 </span><span class="c1"></span><span class="p">{</span>
   <span class="nx">test</span><span class="o">:</span> <span class="sr">/\.(scss)$/</span><span class="p">,</span>
@@ -467,10 +465,10 @@
   <span class="p">}]</span>
 <span class="p">}</span>
 <span class="c1">// ...
-</span></code></pre></div><h3 id="importing-compiled-css">Importing Compiled CSS</h3>
+</span></code></pre></div><h3 id="컴파일된-css-불러오기">컴파일된 CSS 불러오기</h3>
 <p>프로젝트의 진입점에 이 줄을 추가하여 Bootstrap의 즉시 사용 가능한 CSS를 사용할 수도 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="s1">&#39;bootstrap/dist/css/bootstrap.min.css&#39;</span><span class="p">;</span>
-</code></pre></div><p>이 경우에는 웹팩 구성에 대한 특별한 수정 없이 <code>css</code>에 대한 기존 규칙을 사용할 수 있습니다. 단, <code>sass-loader</code>는 <a href="https://github.com/webpack-contrib/style-loader">style-loader</a> 및 <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>가 필요하지 않습니다.</p>
+</code></pre></div><p>이 경우에는 webpack 구성에 대한 특별한 수정 없이 <code>css</code>에 대한 기존 규칙을 사용할 수 있습니다. 단, <code>sass-loader</code>는 <a href="https://github.com/webpack-contrib/style-loader">style-loader</a> 및 <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>가 필요하지 않습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// ...
 </span><span class="c1"></span><span class="nx">module</span><span class="o">:</span> <span class="p">{</span>
   <span class="nx">rules</span><span class="o">:</span> <span class="p">[</span>
@@ -509,7 +507,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

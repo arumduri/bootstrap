@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded active" aria-current="page">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/layout/containers.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">컨테이너</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Containers</h1>
-        
         <p class="bd-lead">컨테이너는 지정된 기기 또는 뷰포트 내에서 콘텐츠를 포함하고 채우고 정렬하는 Bootstrap의 기본 구성 요소입니다.</p>
         
 
@@ -403,10 +401,10 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#how-they-work">How they work</a></li>
-    <li><a href="#default-container">Default container</a></li>
-    <li><a href="#responsive-containers">Responsive containers</a></li>
-    <li><a href="#fluid-containers">Fluid containers</a></li>
+    <li><a href="#작동-원리">작동 원리</a></li>
+    <li><a href="#기본-컨테이너">기본 컨테이너</a></li>
+    <li><a href="#반응형-컨테이너">반응형 컨테이너</a></li>
+    <li><a href="#유동-컨테이너">유동 컨테이너</a></li>
     <li><a href="#sass">Sass</a></li>
   </ul>
 </nav>
@@ -416,7 +414,7 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="how-they-work">How they work</h2>
+        <h2 id="작동-원리">작동 원리</h2>
 <p>컨테이너는 Bootstrap에서 가장 기본적인 레이아웃 요소이며 <strong>기본 그리드 시스템을 사용할 때 필요합니다</strong>. 컨테이너는 내용을 포함하고 채우고 (때로는) 내용을 중앙 정렬하는 데에 사용됩니다. 컨테이너는 &amp;<em>중첩될 수 있지만</em> 대부분의 레이아웃에는 중첩된 컨테이너가 필요하지 않습니다.</p>
 <p>Bootstrap에는 세 가지 다른 컨테이너가 있습니다:</p>
 <ul>
@@ -425,7 +423,7 @@
 <li>정의된 중단점까지 <code>width: 100%</code>를 설정하는 <code>.container-{breakpoint}</code></li>
 </ul>
 <p>아래 표는 각 중단점에서 각 컨테이너의 <code>max-width</code>가 원래 <code>.container</code>와 &lsquo;.container-fluid&rsquo;가 어떻게 비교되는지 보여줍니다.</p>
-<p><a href="/docs/5.0/examples/grid/#containers">그리드 예제</a>에서 실제로 보고 비교헤보세요.</p>
+<p><a href="/docs/5.0/examples/grid/#containers">그리드 예시</a>에서 실제로 보고 비교헤보세요.</p>
 <table class="table">
   <thead>
     <tr>
@@ -522,25 +520,25 @@
     </tr>
   </tbody>
 </table>
-<h2 id="default-container">Default container</h2>
+<h2 id="기본-컨테이너">기본 컨테이너</h2>
 <p>기본 <code>.container</code> 클래스는 반응형 고정 너비 컨테이너입니다. 즉, <code>max-width</code>가 각 중단점에서 변경됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
   <span class="c">&lt;!-- Content here --&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="responsive-containers">Responsive containers</h2>
+</code></pre></div><h2 id="반응형-컨테이너">반응형 컨테이너</h2>
 <p>반응형 컨테이너를 사용하면 지정된 중단점에 도달할 때까지 너비가 100%인 클래스를 지정할 수 있으며, 그 이후에는 더 높은 각 중단점에 대해 <code>max-width</code>를 적용합니다. 예를 들어, <code>.container-sm</code>은 <code>md</code>, <code>lg</code>, <code>xl</code> 및 <code>xxl</code>로 확장되는 <code>sm</code> 중단점에 도달할 때까지 시작하는 너비가 100%입니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container-sm&#34;</span><span class="p">&gt;</span>100% wide until small breakpoint<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container-md&#34;</span><span class="p">&gt;</span>100% wide until medium breakpoint<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container-lg&#34;</span><span class="p">&gt;</span>100% wide until large breakpoint<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container-xl&#34;</span><span class="p">&gt;</span>100% wide until extra large breakpoint<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container-xxl&#34;</span><span class="p">&gt;</span>100% wide until extra extra large breakpoint<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="fluid-containers">Fluid containers</h2>
+</code></pre></div><h2 id="유동-컨테이너">유동 컨테이너</h2>
 <p>뷰포트의 전체 너비에 걸쳐 있는 전체 너비 컨테이너에 <code>.container-fluid</code>를 사용합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container-fluid&#34;</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h2 id="sass">Sass</h2>
-<p>위에 나와있는 것처럼 Bootstrap은 원하는 레이아웃을 빌드하는 데 도움이 되는 일련의 미리 정의된 컨테이너 클래스를 생성합니다. 다음과 같이 미리 정의된 컨테이너 클래스를 강화하는 Sass 맵(<code>_variables.scss</code>에 있음)을 수정하여 커스터마이징할 수 있습니다:</p>
+<p>위에 나와있는 것처럼 Bootstrap은 원하는 레이아웃을 빌드하는 데 도움이 되는 일련의 미리 정의된 컨테이너 클래스를 생성합니다. 다음과 같이 미리 정의된 컨테이너 클래스를 강화하는 Sass 맵(<code>_variables.scss</code>에 있음)을 수정하여 사용자 지정할 수 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$container-max-widths</span><span class="o">:</span> <span class="p">(</span>
   <span class="na">sm</span><span class="o">:</span> <span class="mi">540</span><span class="kt">px</span><span class="o">,</span>
   <span class="na">md</span><span class="o">:</span> <span class="mi">720</span><span class="kt">px</span><span class="o">,</span>
@@ -549,7 +547,7 @@
   <span class="na">xxl</span><span class="o">:</span> <span class="mi">1320</span><span class="kt">px</span>
 <span class="p">);</span>
 </code></pre></div>
-<p>Sass를 커스터마이징하는 것 외에도 Sass 믹스인을 사용하여 고유한 컨테이너를 만들 수도 있습니다.</p>
+<p>Sass를 사용자 지정하는 것 외에도 Sass 믹스인을 사용하여 고유한 컨테이너를 만들 수도 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Source mixin
 </span><span class="c1"></span><span class="k">@mixin</span><span class="nf"> make-container</span><span class="p">(</span><span class="nv">$padding-x</span><span class="o">:</span> <span class="nv">$container-padding-x</span><span class="p">)</span> <span class="p">{</span>
   <span class="na">width</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
@@ -563,7 +561,7 @@
 </span><span class="c1"></span><span class="nc">.custom-container</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> make-container</span><span class="p">();</span>
 <span class="p">}</span>
-</code></pre></div><p>Sass 맵 및 변수를 수정하는 방법에 대한 자세한 내용과 예제는 <a href="/docs/5.0/layout/grid/#sass">그리드 문서의 Sass 부분</a>을 참조하세요.</p>
+</code></pre></div><p>Sass 맵 및 변수를 수정하는 방법에 대한 자세한 내용과 예시는 <a href="/docs/5.0/layout/grid/#sass">그리드 문서의 Sass 부분</a>을 참조하세요.</p>
 
       </div>
     </main>
@@ -589,7 +587,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

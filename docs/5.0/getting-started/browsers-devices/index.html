@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded active" aria-current="page">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/getting-started/browsers-devices.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">브라우저 및 기기</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Browsers and devices</h1>
-        
         <p class="bd-lead">각각의 알려진 특성과 버그를 포함하여 Bootstrap에서 지원하는 구버전부터 최신버전까지의 브라우저와 장치들에 대해 알아 봅시다.</p>
         
 
@@ -403,22 +401,22 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#supported-browsers">Supported browsers</a>
+    <li><a href="#지원-브라우저">지원 브라우저</a>
       <ul>
-        <li><a href="#mobile-devices">Mobile devices</a></li>
-        <li><a href="#desktop-browsers">Desktop browsers</a></li>
+        <li><a href="#모바일-기기">모바일 기기</a></li>
+        <li><a href="#데스크톱-브라우저">데스크톱 브라우저</a></li>
       </ul>
     </li>
     <li><a href="#internet-explorer">Internet Explorer</a></li>
-    <li><a href="#modals-and-dropdowns-on-mobile">Modals and dropdowns on mobile</a>
+    <li><a href="#모바일에서의-모달과-드롭다운">모바일에서의 모달과 드롭다운</a>
       <ul>
-        <li><a href="#overflow-and-scrolling">Overflow and scrolling</a></li>
-        <li><a href="#ios-text-fields-and-scrolling">iOS text fields and scrolling</a></li>
-        <li><a href="#navbar-dropdowns">Navbar Dropdowns</a></li>
+        <li><a href="#오버플로우와-스크롤">오버플로우와 스크롤</a></li>
+        <li><a href="#ios-텍스트-필드와-스크롤">iOS 텍스트 필드와 스크롤</a></li>
+        <li><a href="#내비게이션-바-드롭다운">내비게이션 바 드롭다운</a></li>
       </ul>
     </li>
-    <li><a href="#browser-zooming">Browser zooming</a></li>
-    <li><a href="#validators">Validators</a></li>
+    <li><a href="#브라우저-확대축소">브라우저 확대/축소</a></li>
+    <li><a href="#유효성-검사">유효성 검사</a></li>
   </ul>
 </nav>
         </div>
@@ -427,7 +425,7 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="supported-browsers">Supported browsers</h2>
+        <h2 id="지원-브라우저">지원 브라우저</h2>
 <p>Bootstrap은 모든 주요 브라우저 및 플랫폼의 <strong>최신 및 안정 버전</strong>을 지원합니다.</p>
 <p>최신 버전의 WebKit, Blink, Gecko 등을 직접적으로 또는 플랫폼의 웹 뷰 API를 기반으로 하는 브라우저를 사용하는 경우에는 명시적으로 지원하지 않습니다. 하지만 Bootstrap은 이러한 브라우저에서도 (대부분의 경우) 정상적으로 출력 및 작동합니다. 더 구체적인 지원 정보는 아래에 설명되어 있습니다.</p>
 <p><a href="https://github.com/twbs/bootstrap/blob/v5.0.2/.browserslistrc"><code>.browserslistrc 파일</code></a>에서 지원되는 브라우저의 범위와 버전에 대해서 확인하실 수 있습니다:</p>
@@ -442,8 +440,8 @@ Firefox ESR
 iOS &gt;= 12
 Safari &gt;= 12
 not Explorer &lt;= 11
-</code></pre></div><p>우리는 CSS 접두어를 통해 의도한 브라우저 지원을 처리하기 위해서 <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>를 사용하며 <a href="https://github.com/browserslist/browserslist">Browserslist</a>를 통해 브라우저 버전을 관리합니다. 이러한 도구를 프로젝트에 통합하는 방법은 해당 문서를 참고해주세요.</p>
-<h3 id="mobile-devices">Mobile devices</h3>
+</code></pre></div><p>우리는 CSS 접두사를 통해 의도한 브라우저 지원을 처리하기 위해서 <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>를 사용하며 <a href="https://github.com/browserslist/browserslist">Browserslist</a>를 통해 브라우저 버전을 관리합니다. 이러한 도구를 프로젝트에 통합하는 방법은 해당 문서를 참고해주세요.</p>
+<h3 id="모바일-기기">모바일 기기</h3>
 <p>대부분의 경우 Bootstrap은 각 주요 플랫폼 기본 브라우저의 최신 버전을 지원합니다. 단 프록시 브라우저 (Opera Mini, Opera Mobile의 터보 모드, UC Browser Mini, Amazon Silk 등)는 지원하지 않습니다.</p>
 <table class="table">
   <thead>
@@ -472,7 +470,7 @@ not Explorer &lt;= 11
     </tr>
   </tbody>
 </table>
-<h3 id="desktop-browsers">Desktop browsers</h3>
+<h3 id="데스크톱-브라우저">데스크톱 브라우저</h3>
 <p>마찬가지로 대부분의 데스크톱 브라우저의 최신 버전을 지원합니다.</p>
 <table class="table">
   <thead>
@@ -508,16 +506,16 @@ not Explorer &lt;= 11
 <p>Bootstrap은 Linux용 Chromium 및 Chrome과 Linux용 Firefox에서 정상적으로 표시되고 작동하겠지만 공식적으로 지원하지는 않습니다.</p>
 <h2 id="internet-explorer">Internet Explorer</h2>
 <p>Internet Explorer는 지원되지 않습니다. <strong>Internet Explorer 지원이 필요하다면 Bootstrap v4를 사용해주세요.</strong></p>
-<h2 id="modals-and-dropdowns-on-mobile">Modals and dropdowns on mobile</h2>
-<h3 id="overflow-and-scrolling">Overflow and scrolling</h3>
+<h2 id="모바일에서의-모달과-드롭다운">모바일에서의 모달과 드롭다운</h2>
+<h3 id="오버플로우와-스크롤">오버플로우와 스크롤</h3>
 <p><code>&lt;body&gt;</code> 요소에서 <code>overflow: hidden;</code> 지원은 iOS와 Android에서 제한되어 있습니다. 이를 위해 장치의 브라우저에서 모달 상단 또는 하단을 스크롤하면 <code>&lt;body&gt;</code> 콘텐츠가 스크롤되기 시작합니다. <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=175502">Chrome 버그 #175502</a> (Chrome v40에서 수정됨)과 <a href="https://bugs.webkit.org/show_bug.cgi?id=153852">WebKit 버그 #153852</a>를 확인해주세요.</p>
-<h3 id="ios-text-fields-and-scrolling">iOS text fields and scrolling</h3>
+<h3 id="ios-텍스트-필드와-스크롤">iOS 텍스트 필드와 스크롤</h3>
 <p>iOS 9.2부터 모달이 열려있을 때 <code>&lt;input&gt;</code> 또는 <code>&lt;textarea&gt;</code>의 경계 내에서 초기 스크롤 제스쳐 터치를 하면 모달 아래에 있는 콘텐츠가 모달 자체 대신에 스크롤됩니다. <a href="https://bugs.webkit.org/show_bug.cgi?id=153856">WebKit 버그 #153856</a>를 확인해주세요.</p>
-<h3 id="navbar-dropdowns">Navbar Dropdowns</h3>
+<h3 id="내비게이션-바-드롭다운">내비게이션 바 드롭다운</h3>
 <p><code>.dropdown-backdrop</code> 요소는 z-index의 복잡성 때문에 iOS의 nav에서 사용되지 않습니다. 따라서 네비게이션 바에서 드롭다운을 닫으려면 드롭다운 요소를 직접 클릭 (또는 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event#Safari_Mobile">iOS에서 클릭 이벤트를 발생시키는 기타 요소</a>를 사용) 해야 합니다.</p>
-<h2 id="browser-zooming">Browser zooming</h2>
+<h2 id="브라우저-확대축소">브라우저 확대/축소</h2>
 <p>페이지 확대/축소 기능은 필연적으로 Bootstrap과 웹에 나머지 컴포넌트 모두에 렌더링 아티펙트를 표시합니다. 문제에 따라 해결이 가능할 수도 있습니다 (먼저 검색하고 필요하다면 문제를 열어주세요). 그러나 우리는 종종 단순무식한 해결 방법 외에는 직접적인 해결책이 없는지라 이러한 것들을 무시한는 경향이 있습니다.</p>
-<h2 id="validators">Validators</h2>
+<h2 id="유효성-검사">유효성 검사</h2>
 <p>오래된 브라우저와 버그가 많은 브라우저에 최상의 환경을 제공하기 위해 Bootstrap은 <a href="http://browserhacks.com/">CSS 브라우저 해결책</a>을 사용하여 특정 브라우저 버전에 대한 특수 CSS를 대상으로 브라우저 자체에서 버그 관련 작업을 수행합니다. 이러한 해결책으로 인해 CSS 검증자가 잘못되었다는 불만을 제기할 수 있습니다. 일부 브라우저에서는 아직 완전히 표준화되지 않은 불완전한 최신 CSS 기능도 사용하지만, 이러한 기능은 순수하게 점진적인 향상을 위해 사용됩니다.</p>
 <p>이러한 유효성 검사 경고는 실제로 중요하지 않습니다. CSS 해결책이 아닌 부분이 완전히 유효하고 해결책이 아닌 부분의 적절한 기능을 방해하지 않기 때문입니다. 따라서 우리는 이러한 특정 경고를 의도적으로 무시합니다.</p>
 <p>우리 HTML 문서에는 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">특정 Firefox 버그</a>에 대한 해결 방법이 포함되어 있기 때문에 사소한 HTML 유효성 검사 경고가 있습니다.</p>
@@ -546,7 +544,7 @@ not Explorer &lt;= 11
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

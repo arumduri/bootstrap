@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded active" aria-current="page">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -401,14 +401,14 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#what-is-rfs">What is RFS?</a></li>
-    <li><a href="#using-rfs">Using RFS</a>
+    <li><a href="#rfs">RFS?</a></li>
+    <li><a href="#rfs-사용하기">RFS 사용하기</a>
       <ul>
-        <li><a href="#using-the-mixins">Using the mixins</a></li>
-        <li><a href="#using-the-functions">Using the functions</a></li>
+        <li><a href="#믹스인-사용하기">믹스인 사용하기</a></li>
+        <li><a href="#기능-사용하기">기능 사용하기</a></li>
       </ul>
     </li>
-    <li><a href="#extended-documentation">Extended documentation</a></li>
+    <li><a href="#확장된-문서">확장된 문서</a></li>
   </ul>
 </nav>
         </div>
@@ -417,13 +417,13 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="what-is-rfs">What is RFS?</h2>
+        <h2 id="rfs">RFS?</h2>
 <p>Bootstrap의 사이드 프로젝트인 <a href="https://github.com/twbs/rfs/tree/v9.0.3">RFS</a>는 글꼴 크기를 조절하기 위해 만들어졌던 (즉 반응형 글꼴 크기 (Responsive Font Sizes)의 약자) 유닛 크기 조절 엔진입니다. 지금의 RFS는 <code>margin</code>, <code>padding</code>, <code>border-radius</code> 또는<code>box-shadow</code>와 같은 단위 값으로 대부분의 CSS 속성의 크기를 조정할 수 있습니다.</p>
 <p>메커니즘이 브라우저 뷰포트의 치수를 기반으로 적절한 값을 자동으로 계산합니다. 반응형 스케일링 동작을 활성화하기 위해 <code>rem</code> 및 뷰포트 단위가 혼합된 <code>calc()</code> 함수로 컴파일됩니다.</p>
-<h2 id="using-rfs">Using RFS</h2>
+<h2 id="rfs-사용하기">RFS 사용하기</h2>
 <p>믹스인은 Bootstrap에 포함되어 있으며 Bootstrap의 <code>scss</code>를 포함하면 사용할 수 있습니다. RFS는 필요한 경우 <a href="https://github.com/twbs/rfs/tree/v9.0.3#installation">독립형으로 설치</a>할 수도 있습니다.</p>
-<h3 id="using-the-mixins">Using the mixins</h3>
-<p><code>rfs()</code> 믹스인 <code>font-size</code>, <code>margin</code>, <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, <code>margin-left</code>, <code>padding</code>, <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, 그리고 <code>padding-left</code>에 대한 약어가 있습니다. 소스 Sass 및 컴파일 된 CSS에 대해서는 아래 예제를 참조하세요.</p>
+<h3 id="믹스인-사용하기">믹스인 사용하기</h3>
+<p><code>rfs()</code> 믹스인 <code>font-size</code>, <code>margin</code>, <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, <code>margin-left</code>, <code>padding</code>, <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, 그리고 <code>padding-left</code>에 대한 약어가 있습니다. 소스 Sass 및 컴파일된 CSS에 대해서는 아래 예시를 참조하세요.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.title</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> font-size</span><span class="p">(</span><span class="mi">4</span><span class="kt">rem</span><span class="p">);</span>
 <span class="p">}</span>
@@ -444,13 +444,13 @@
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> padding</span><span class="p">(</span><span class="mi">2</span><span class="mf">.5</span><span class="kt">rem</span> <span class="k">!important</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div><h3 id="using-the-functions">Using the functions</h3>
-<p>W포함해서 사용하지 않으려는 경우 다른 두 가지 기능도 있습니다:</p>
+</code></pre></div><h3 id="기능-사용하기">기능 사용하기</h3>
+<p>포함해서 사용하지 않으려는 경우 다른 두 가지 기능도 있습니다:</p>
 <ul>
 <li><code>rfs-value()</code>는 <code>px</code> 값이 전달되면 값을 <code>rem</code> 값으로 변환하고, 다른 경우에는 동일한 결과를 반환합니다.</li>
 <li><code>rfs-fluid-value()</code>는 속성의 크기 조정이 필요한 경우 값의 유동적 버전을 반환합니다.</li>
 </ul>
-<p>이 예제에서는 Bootstrap의 내장 <a href="/docs/5.0/layout/breakpoints/">반응형 중단점 믹스인</a> 중 하나를 사용하여 <code>lg</code> 중단점 아래에만 스타일을 적용합니다.</p>
+<p>이 예시에서는 Bootstrap의 내장 <a href="/docs/5.0/layout/breakpoints/">반응형 중단점 믹스인</a> 중 하나를 사용하여 <code>lg</code> 중단점 아래에만 스타일을 적용합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.selector</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> media-breakpoint-down</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
     <span class="na">padding</span><span class="o">:</span> <span class="nf">rfs-fluid-value</span><span class="p">(</span><span class="mi">2</span><span class="kt">rem</span><span class="p">);</span>
@@ -463,7 +463,7 @@
     <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.125</span><span class="kt">rem</span><span class="p">;</span> <span class="c">/* 1.125rem is small enough, so RFS won&#39;t rescale this */</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h2 id="extended-documentation">Extended documentation</h2>
+</code></pre></div><h2 id="확장된-문서">확장된 문서</h2>
 <p>RFS는 Bootstrap 조직 아래의 별도 프로젝트입니다. RFS 및 구성에 대한 자세한 내용은 <a href="https://github.com/twbs/rfs/tree/v9.0.3">GitHub 저장소</a>에서 찾을 수 있습니다.</p>
 
       </div>
@@ -490,7 +490,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

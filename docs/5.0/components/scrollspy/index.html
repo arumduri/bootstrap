@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/scrollspy.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">스크롤스파이</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Scrollspy</h1>
-        
         <p class="bd-lead">스크롤 위치에 따라 Bootstrap 내비게이션 또는 목록 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.</p>
         
 
@@ -403,15 +401,15 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#example-in-navbar">Example in navbar</a></li>
-    <li><a href="#example-with-nested-nav">Example with nested nav</a></li>
-    <li><a href="#example-with-list-group">Example with list-group</a></li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#작동-원리">작동 원리</a></li>
+    <li><a href="#navbar-예시">navbar 예시</a></li>
+    <li><a href="#nested-nav-예시">nested nav 예시</a></li>
+    <li><a href="#list-group-예시">list-group 예시</a></li>
+    <li><a href="#사용-방법">사용 방법</a>
       <ul>
-        <li><a href="#via-data-attributes">Via data attributes</a></li>
-        <li><a href="#via-javascript">Via JavaScript</a></li>
-        <li><a href="#methods">Methods</a>
+        <li><a href="#데이터-속성-사용하기">데이터 속성 사용하기</a></li>
+        <li><a href="#javascript-사용하기">JavaScript 사용하기</a></li>
+        <li><a href="#메소드">메소드</a>
           <ul>
             <li><a href="#refresh">refresh</a></li>
             <li><a href="#dispose">dispose</a></li>
@@ -419,8 +417,8 @@
             <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
-        <li><a href="#options">Options</a></li>
-        <li><a href="#events">Events</a></li>
+        <li><a href="#옵션">옵션</a></li>
+        <li><a href="#이벤트">이벤트</a></li>
       </ul>
     </li>
   </ul>
@@ -431,7 +429,7 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="how-it-works">How it works</h2>
+        <h2 id="작동-원리">작동 원리</h2>
 <p>스크롤 스파이가 제대로 동작하기 위해서는 몇 가지 조건이 있습니다:</p>
 <ul>
 <li>Bootstrap <a href="/docs/5.0/components/navs-tabs/">nav component</a> 혹은 <a href="/docs/5.0/components/list-group/">list group</a>에서 사용해야 합니다.</li>
@@ -444,7 +442,7 @@
 <p>스크롤 가능한 컨테이너(<code>&lt;body&gt;</code> 이외의 )를 작성할 경우에는 반드시 <code>height</code>를 설정하고 키보드로 부터의 접근을 확실히 하기 위해서 <code>tabindex=&quot;0&quot;</code>와 함께 <code>overflow-y: scroll;</code>을 적용하십시오.
 </div>
 
-<h2 id="example-in-navbar">Example in navbar</h2>
+<h2 id="navbar-예시">navbar 예시</h2>
 <p>내비게이션 바 아래 영역을 스크롤하여 활성화된 클래스의 변화를 살펴보세요. 드롭다운 아이템도 같이 강조 표시됩니다.</p>
 <div class="bd-example">
   <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
@@ -512,8 +510,8 @@
   <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;scrollspyHeading5&#34;</span><span class="p">&gt;</span>Fifth heading<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="example-with-nested-nav">Example with nested nav</h2>
-<p>스크롤 스파이는 중첩된 <code>.nav</code> 에서도 동작합니다. 중첩 된 <code>.nav</code>가 <code>.active</code>인 경우, 그 부모도 <code>.active</code>가 됩니다. 내비게이션 바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.</p>
+</code></pre></div><h2 id="nested-nav-예시">nested nav 예시</h2>
+<p>스크롤 스파이는 중첩된 <code>.nav</code>에서도 동작합니다. 중첩 된 <code>.nav</code>가 <code>.active</code>인 경우, 그 부모도 <code>.active</code>가 됩니다. 내비게이션 바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.</p>
 <div class="bd-example">
   <div class="row">
     <div class="col-4">
@@ -587,7 +585,7 @@
   <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;item-3-2&#34;</span><span class="p">&gt;</span>Item 3-2<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="example-with-list-group">Example with list-group</h2>
+</code></pre></div><h2 id="list-group-예시">list-group 예시</h2>
 <p>스크롤 스파이는 <code>.list-group</code>에서도 동작합니다. 목록 그룹 옆의 영역을 스크롤해서 활성화 된 클래스가 변화하는 것을 보겠습니다.</p>
 <div class="bd-example">
   <div class="row">
@@ -629,9 +627,9 @@
   <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;list-item-4&#34;</span><span class="p">&gt;</span>Item 4<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h2 id="usage">Usage</h2>
-<h3 id="via-data-attributes">Via data attributes</h3>
-<p>topbar 내비게이션에 스크롤 스파이 동작을 간단하게 추가하려면, 스크롤 스파이 하고 싶은 요소에 <code>data-bs-spy=&quot;scroll&quot;</code>를 추가합니다(가장 전형적으로는 <code>&lt;body&gt;</code>입니다). 그 다음에 <code>data-bs-target</code> 속성에 임의의 Bootstrap <code>.nav</code> 컴포넌트의 부모 요소의 ID 또는 클래스를 추가합니다.</p>
+</code></pre></div><h2 id="사용-방법">사용 방법</h2>
+<h3 id="데이터-속성-사용하기">데이터 속성 사용하기</h3>
+<p>topbar 내비게이션에 스크롤 스파이 동작을 간단하게 추가하려면, 스크롤 스파이 하고 싶은 요소에 <code>data-bs-spy=&quot;scroll&quot;</code>를 추가합니다 (가장 전형적으로는 <code>&lt;body&gt;</code>입니다). 그 다음에 <code>data-bs-target</code> 속성에 임의의 Bootstrap <code>.nav</code> 컴포넌트의 부모 요소의 ID 또는 클래스를 추가합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
   <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
 <span class="p">}</span>
@@ -644,7 +642,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   ...
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="via-javascript">Via JavaScript</h3>
+</code></pre></div><h3 id="javascript-사용하기">JavaScript 사용하기</h3>
 <p>CSS에 <code>position: relative;</code>를 추가한 뒤, JavaScript로 스크롤 스파이를 호출합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;#navbar-example&#39;</span>
@@ -659,7 +657,7 @@
 <p>표시되지 않는 타깃 요소는 무시되며 대응 nav 아이템은 강조 표시되지 않습니다.
 </div>
 
-<h3 id="methods">Methods</h3>
+<h3 id="메소드">메소드</h3>
 <h4 id="refresh">refresh</h4>
 <p>DOM에서 요소의 추가나 삭제와 동시에 스크롤 스파이를 사용할 경우 다음과 같이 refresh 메소드를 호출해야 합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">dataSpyList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-spy=&#34;scroll&#34;]&#39;</span><span class="p">))</span>
@@ -677,8 +675,8 @@
 <p><em>Static</em> method which allows you to get the scrollspy instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialised</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">scrollSpyContentEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;content&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">scrollSpy</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">ScrollSpy</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">scrollSpyContentEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap scrollspy instance
-</span></code></pre></div><h3 id="options">Options</h3>
-<p>옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성인 경우는 <code>data-bs-offset=&quot;&quot;</code> 처럼 <code>data-bs-</code>에 옵션 명을 추가합니다.</p>
+</span></code></pre></div><h3 id="옵션">옵션</h3>
+<p>옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성인 경우는 <code>data-bs-offset=&quot;&quot;</code> 처럼 <code>data-bs-</code>에 옵션명을 추가합니다.</p>
 <table class="table">
   <thead>
     <tr>
@@ -709,7 +707,7 @@
     </tr>
   </tbody>
 </table>
-<h3 id="events">Events</h3>
+<h3 id="이벤트">이벤트</h3>
 <table class="table">
   <thead>
     <tr>
@@ -753,7 +751,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

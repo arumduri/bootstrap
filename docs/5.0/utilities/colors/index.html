@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/utilities/colors.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">색상</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Colors</h1>
-        
         <p class="bd-lead">색상 유틸리티 클래스를 사용하여 <code>color</code> (색상)을 통해 의미를 전달합니다. 호버 상태의 링크 스타일링에 대한 지원도 포함합니다.</p>
         
 
@@ -403,13 +401,13 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#colors">Colors</a></li>
-    <li><a href="#specificity">Specificity</a></li>
+    <li><a href="#색상">색상</a></li>
+    <li><a href="#상황별">상황별</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
-        <li><a href="#variables">Variables</a></li>
-        <li><a href="#map">Map</a></li>
-        <li><a href="#utilities-api">Utilities API</a></li>
+        <li><a href="#변수">변수</a></li>
+        <li><a href="#맵">맵</a></li>
+        <li><a href="#유틸리티-api">유틸리티 API</a></li>
       </ul>
     </li>
   </ul>
@@ -420,8 +418,8 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="colors">Colors</h2>
-<p>색상 유틸리티를 사용하여 문자를 색상화 합니다. 링크에 색을 입히려면 <code>: hover</code> 및 <code>: focus</code> 상태가 있는 <a href="/docs/5.0/helpers/colored-links/"><code>.link-*</code> helper classes</a>를 사용할 수 있습니다.</p>
+        <h2 id="색상">색상</h2>
+<p>색상 유틸리티를 사용하여 텍스트를 색상화 합니다. 링크에 색을 입히려면 <code>: hover</code> 및 <code>: focus</code> 상태가 있는 <a href="/docs/5.0/helpers/colored-links/"><code>.link-*</code> helper classes</a>를 사용할 수 있습니다.</p>
 <div class="bd-example">
 
 <p class="text-primary">.text-primary</p>
@@ -455,11 +453,11 @@
 <p>Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the <code>.visually-hidden</code> class.
 </div>
 
-<h2 id="specificity">Specificity</h2>
+<h2 id="상황별">상황별</h2>
 <p>다른 선택자의 특수성으로 인해 상황별 클래스를 적용 할 수 없는 경우가 있습니다. 해결 방법은 요소의 컨텐츠를  <code>&lt;div&gt;</code> 또는 원하는 클래스의 의미 요소로 감싸는 것입니다.</p>
 <h2 id="sass">Sass</h2>
 <p>다음 Sass 기능 외에도 색상 등에 대해 포함 된 <a href="/docs/5.0/customize/css-variables/">CSS 사용자 정의 속성</a> (일명 CSS 변수)에 대해 읽어보십시오.</p>
-<h3 id="variables">Variables</h3>
+<h3 id="변수">변수</h3>
 <p>대부분의 <code>color</code> 유틸리티는 일반 색상 팔레트 변수에서 재할당 된 테마 색상에 의해 생성됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$blue</span><span class="o">:</span>    <span class="mh">#0d6efd</span><span class="p">;</span>
 <span class="nv">$indigo</span><span class="o">:</span>  <span class="mh">#6610f2</span><span class="p">;</span>
@@ -481,7 +479,7 @@
 <span class="nv">$light</span><span class="o">:</span>         <span class="nv">$gray-100</span><span class="p">;</span>
 <span class="nv">$dark</span><span class="o">:</span>          <span class="nv">$gray-900</span><span class="p">;</span>
 </code></pre></div>
-<p>그레이 스케일 색상도 사용할 수 있지만 유틸리티를 생성하는 데 하위 집합 만 사용됩니다.</p>
+<p>그레이 스케일 색상도 사용할 수 있지만 유틸리티를 생성하는 데 자식 집합 만 사용됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$white</span><span class="o">:</span>    <span class="mh">#fff</span><span class="p">;</span>
 <span class="nv">$gray-100</span><span class="o">:</span> <span class="mh">#f8f9fa</span><span class="p">;</span>
 <span class="nv">$gray-200</span><span class="o">:</span> <span class="mh">#e9ecef</span><span class="p">;</span>
@@ -494,7 +492,7 @@
 <span class="nv">$gray-900</span><span class="o">:</span> <span class="mh">#212529</span><span class="p">;</span>
 <span class="nv">$black</span><span class="o">:</span>    <span class="mh">#000</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="map">Map</h3>
+<h3 id="맵">맵</h3>
 <p>테마 색상은 Sass 맵에 배치되어 유틸리티, 구성 요소 수정자 등을 생성하기 위해 반복 할 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;primary&#34;</span><span class="o">:</span>    <span class="nv">$primary</span><span class="o">,</span>
@@ -520,8 +518,8 @@
   <span class="s2">&#34;900&#34;</span><span class="o">:</span> <span class="nv">$gray-900</span>
 <span class="p">);</span>
 </code></pre></div>
-<h3 id="utilities-api">Utilities API</h3>
-<p>색상 유틸리티는<code>scss / _utilities.scss</code> 의 유틸리티 API에 선언되어 있습니다. <a href="/docs/5.0/utilities/api/#using-the-api">유틸리티 API 사용 방법 알아보기</a></p>
+<h3 id="유틸리티-api">유틸리티 API</h3>
+<p>색상 유틸리티는<code>scss / _utilities.scss</code>의 유틸리티 API에 선언되어 있습니다. <a href="/docs/5.0/utilities/api/#using-the-api">유틸리티 API 사용 방법 알아보기</a></p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss">    <span class="s2">&#34;color&#34;</span><span class="nd">:</span> <span class="o">(</span>
       <span class="nt">property</span><span class="nd">:</span> <span class="nt">color</span><span class="o">,</span>
       <span class="nt">class</span><span class="nd">:</span> <span class="nt">text</span><span class="o">,</span>
@@ -563,7 +561,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

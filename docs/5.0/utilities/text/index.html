@@ -10,7 +10,7 @@
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>글자 · Bootstrap v5.0</title>
+<title>텍스트 · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/utilities/text/">
 
@@ -34,13 +34,13 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="글자">
+<meta name="twitter:title" content="텍스트">
 <meta name="twitter:description" content="Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/utilities/text/">
-<meta property="og:title" content="글자">
+<meta property="og:title" content="텍스트">
 <meta property="og:description" content="Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded active" aria-current="page">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded active" aria-current="page">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -388,11 +388,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/utilities/text.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">글자</h1>
+          <h1 class="bd-title" id="content">텍스트</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Text</h1>
-        
         <p class="bd-lead">Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.</p>
         
 
@@ -403,21 +401,21 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#text-alignment">Text alignment</a></li>
-    <li><a href="#text-wrapping-and-overflow">Text wrapping and overflow</a></li>
-    <li><a href="#word-break">Word break</a></li>
-    <li><a href="#text-transform">Text transform</a></li>
-    <li><a href="#font-size">Font size</a></li>
-    <li><a href="#font-weight-and-italics">Font weight and italics</a></li>
-    <li><a href="#line-height">Line height</a></li>
-    <li><a href="#monospace">Monospace</a></li>
-    <li><a href="#reset-color">Reset color</a></li>
-    <li><a href="#text-decoration">Text decoration</a></li>
+    <li><a href="#텍스트-정렬">텍스트 정렬</a></li>
+    <li><a href="#텍스트-줄바꿈과-오버플로우">텍스트 줄바꿈과 오버플로우</a></li>
+    <li><a href="#단어-기준-줄바꿈">단어 기준 줄바꿈</a></li>
+    <li><a href="#텍스트-대소문자">텍스트 대소문자</a></li>
+    <li><a href="#글꼴-크기">글꼴 크기</a></li>
+    <li><a href="#글꼴-굵기와-기울임체">글꼴 굵기와 기울임체</a></li>
+    <li><a href="#행간">행간</a></li>
+    <li><a href="#고정폭">고정폭</a></li>
+    <li><a href="#색상-재설정">색상 재설정</a></li>
+    <li><a href="#텍스트-꾸미기">텍스트 꾸미기</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
-        <li><a href="#variables">Variables</a></li>
-        <li><a href="#maps">Maps</a></li>
-        <li><a href="#utilities-api">Utilities API</a></li>
+        <li><a href="#변수">변수</a></li>
+        <li><a href="#맵">맵</a></li>
+        <li><a href="#유틸리티-api">유틸리티 API</a></li>
       </ul>
     </li>
   </ul>
@@ -428,7 +426,7 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="text-alignment">Text alignment</h2>
+        <h2 id="텍스트-정렬">텍스트 정렬</h2>
 <p>Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.</p>
 <div class="bd-example">
 <p class="text-start">Start aligned text on all viewport sizes.</p>
@@ -451,7 +449,7 @@
 Note that we don&rsquo;t provide utility classes for justified text. While, aesthetically, justified text might look more appealing, it does make word-spacing more random and therefore harder to read.
 </div>
 
-<h2 id="text-wrapping-and-overflow">Text wrapping and overflow</h2>
+<h2 id="텍스트-줄바꿈과-오버플로우">텍스트 줄바꿈과 오버플로우</h2>
 <p>Wrap text with a <code>.text-wrap</code> class.</p>
 <div class="bd-example">
 <div class="badge bg-primary text-wrap" style="width: 6rem;">
@@ -468,16 +466,16 @@ Note that we don&rsquo;t provide utility classes for justified text. While, aest
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-nowrap bd-highlight&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 8rem;&#34;</span><span class="p">&gt;</span>
   This text should overflow the parent.
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="word-break">Word break</h2>
+<h2 id="단어-기준-줄바꿈">단어 기준 줄바꿈</h2>
 <p>Prevent long strings of text from breaking your components' layout by using <code>.text-break</code> to set <code>word-wrap: break-word</code> and <code>word-break: break-word</code>. We use <code>word-wrap</code> instead of the more common <code>overflow-wrap</code> for wider browser support, and add the deprecated <code>word-break: break-word</code> to avoid issues with flex containers.</p>
 <div class="bd-example">
 <p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-break&#34;</span><span class="p">&gt;</span>mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
 <div class="bd-callout bd-callout-warning">
-Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">breaking words isn&rsquo;t possible in Arabic</a>, which is the most used RTL language. Therefore <code>.text-break</code> is removed from our RTL compiled CSS.
+가장 많이 사용되는 RTL 언어인 <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">아랍어에서는 단어 기준 줄바꿈이 불가능하다는 점</a>을 유의해주세요. 따라서 RTL 컴파일 CSS에서는 <code>.text-break</code>가 제거되었습니다.
 </div>
 
-<h2 id="text-transform">Text transform</h2>
+<h2 id="텍스트-대소문자">텍스트 대소문자</h2>
 <p>Transform text in components with text capitalization classes.</p>
 <div class="bd-example">
 <p class="text-lowercase">Lowercased text.</p>
@@ -487,7 +485,7 @@ Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">break
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-uppercase&#34;</span><span class="p">&gt;</span>Uppercased text.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-capitalize&#34;</span><span class="p">&gt;</span>CapiTaliZed text.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
 <p>Note how <code>.text-capitalize</code> only changes the first letter of each word, leaving the case of any other letters unaffected.</p>
-<h2 id="font-size">Font size</h2>
+<h2 id="글꼴-크기">글꼴 크기</h2>
 <p>Quickly change the <code>font-size</code> of text. While our heading classes (e.g., <code>.h1</code>–<code>.h6</code>) apply <code>font-size</code>, <code>font-weight</code>, and <code>line-height</code>, these utilities <em>only</em> apply <code>font-size</code>. Sizing for these utilities matches HTML&rsquo;s heading elements, so as the number increases, their size decreases.</p>
 <div class="bd-example">
 <p class="fs-1">.fs-1 text</p>
@@ -503,7 +501,7 @@ Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">break
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fs-5&#34;</span><span class="p">&gt;</span>.fs-5 text<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fs-6&#34;</span><span class="p">&gt;</span>.fs-6 text<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
 <p>Customize your available <code>font-size</code>s by modifying the <code>$font-sizes</code> Sass map.</p>
-<h2 id="font-weight-and-italics">Font weight and italics</h2>
+<h2 id="글꼴-굵기와-기울임체">글꼴 굵기와 기울임체</h2>
 <p>Quickly change the <code>font-weight</code> or <code>font-style</code> of text with these utilities. <code>font-style</code> utilities are abbreviated as <code>.fst-*</code> and <code>font-weight</code> utilities are abbreviated as <code>.fw-*</code>.</p>
 <div class="bd-example">
 <p class="fw-bold">Bold text.</p>
@@ -520,7 +518,7 @@ Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">break
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fw-lighter&#34;</span><span class="p">&gt;</span>Lighter weight text (relative to the parent element).<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fst-italic&#34;</span><span class="p">&gt;</span>Italic text.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fst-normal&#34;</span><span class="p">&gt;</span>Text with normal font style<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="line-height">Line height</h2>
+<h2 id="행간">행간</h2>
 <p>Change the line height with <code>.lh-*</code> utilities.</p>
 <div class="bd-example">
 <p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
@@ -531,13 +529,13 @@ Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">break
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;lh-sm&#34;</span><span class="p">&gt;</span>This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;lh-base&#34;</span><span class="p">&gt;</span>This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;lh-lg&#34;</span><span class="p">&gt;</span>This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="monospace">Monospace</h2>
+<h2 id="고정폭">고정폭</h2>
 <p>Change a selection to our monospace font stack with <code>.font-monospace</code>.</p>
 <div class="bd-example">
 <p class="font-monospace">This is in monospace</p>
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;font-monospace&#34;</span><span class="p">&gt;</span>This is in monospace<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="reset-color">Reset color</h2>
-<p>Reset a text or link&rsquo;s color with <code>.text-reset</code>, so that it inherits the color from its parent.</p>
+<h2 id="색상-재설정">색상 재설정</h2>
+<p>부모 항목의 색상을 상속하도록 <code>.text-reset</code>로 텍스트나 링크의 색상을 초기화하세요.</p>
 <div class="bd-example">
 <p class="text-muted">
   Muted text with a <a href="#" class="text-reset">reset link</a>.
@@ -545,7 +543,7 @@ Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">break
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-muted&#34;</span><span class="p">&gt;</span>
   Muted text with a <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-reset&#34;</span><span class="p">&gt;</span>reset link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>.
 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="text-decoration">Text decoration</h2>
+<h2 id="텍스트-꾸미기">텍스트 꾸미기</h2>
 <p>Decorate text in components with text decoration classes.</p>
 <div class="bd-example">
 <p class="text-decoration-underline">This text has a line underneath it.</p>
@@ -555,7 +553,7 @@ Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">break
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-decoration-line-through&#34;</span><span class="p">&gt;</span>This text has a line going through it.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;text-decoration-none&#34;</span><span class="p">&gt;</span>This link has its text decoration removed<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="sass">Sass</h2>
-<h3 id="variables">Variables</h3>
+<h3 id="변수">변수</h3>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// stylelint-disable value-keyword-case
 </span><span class="c1"></span><span class="nv">$font-family-sans-serif</span><span class="o">:</span>      <span class="ni">system-ui</span><span class="o">,</span> <span class="o">-</span><span class="n">apple-system</span><span class="o">,</span> <span class="s2">&#34;Segoe UI&#34;</span><span class="o">,</span> <span class="n">Roboto</span><span class="o">,</span> <span class="s2">&#34;Helvetica Neue&#34;</span><span class="o">,</span> <span class="n">Arial</span><span class="o">,</span> <span class="s2">&#34;Noto Sans&#34;</span><span class="o">,</span> <span class="s2">&#34;Liberation Sans&#34;</span><span class="o">,</span> <span class="ni">sans-serif</span><span class="o">,</span> <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="o">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span><span class="p">;</span>
 <span class="nv">$font-family-monospace</span><span class="o">:</span>       <span class="n">SFMono-Regular</span><span class="o">,</span> <span class="n">Menlo</span><span class="o">,</span> <span class="n">Monaco</span><span class="o">,</span> <span class="n">Consolas</span><span class="o">,</span> <span class="s2">&#34;Liberation Mono&#34;</span><span class="o">,</span> <span class="s2">&#34;Courier New&#34;</span><span class="o">,</span> <span class="ni">monospace</span><span class="p">;</span>
@@ -589,7 +587,7 @@ Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">break
 <span class="nv">$h5-font-size</span><span class="o">:</span>                <span class="nv">$font-size-base</span> <span class="o">*</span> <span class="mi">1</span><span class="mf">.25</span><span class="p">;</span>
 <span class="nv">$h6-font-size</span><span class="o">:</span>                <span class="nv">$font-size-base</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="maps">Maps</h3>
+<h3 id="맵">맵</h3>
 <p>Font-size utilities are generated from this map, in combination with our utilities API.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$font-sizes</span><span class="o">:</span> <span class="p">(</span>
   <span class="na">1</span><span class="o">:</span> <span class="nv">$h1-font-size</span><span class="o">,</span>
@@ -600,7 +598,7 @@ Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">break
   <span class="na">6</span><span class="o">:</span> <span class="nv">$h6-font-size</span>
 <span class="p">);</span>
 </code></pre></div>
-<h3 id="utilities-api">Utilities API</h3>
+<h3 id="유틸리티-api">유틸리티 API</h3>
 <p>Font and text utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.0/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss">    <span class="s2">&#34;font-family&#34;</span><span class="nd">:</span> <span class="o">(</span>
       <span class="nt">property</span><span class="nd">:</span> <span class="nt">font-family</span><span class="o">,</span>
@@ -698,7 +696,7 @@ Note that <a href="https://rtlstyling.com/posts/rtl-styling#3.-line-break">break
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

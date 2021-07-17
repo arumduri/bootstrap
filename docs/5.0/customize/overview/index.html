@@ -10,7 +10,7 @@
 <meta name="docsearch:language" content="en">
 <meta name="docsearch:version" content="5.0">
 
-<title>커스터마이징 · Bootstrap v5.0</title>
+<title>사용자 지정 · Bootstrap v5.0</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.0/customize/overview/">
 
@@ -34,13 +34,13 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="커스터마이징">
+<meta name="twitter:title" content="사용자 지정">
 <meta name="twitter:description" content="Sass를 사용하여 테마 지정 및 Bootstrap 확장과 사용자 정의 방법, 풍부한 글로벌 옵션, 광범위한 컬러 시스템 등을 소개합니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
 
 <!-- Facebook -->
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.0/customize/overview/">
-<meta property="og:title" content="커스터마이징">
+<meta property="og:title" content="사용자 지정">
 <meta property="og:description" content="Sass를 사용하여 테마 지정 및 Bootstrap 확장과 사용자 정의 방법, 풍부한 글로벌 옵션, 광범위한 컬러 시스템 등을 소개합니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.0/assets/brand/bootstrap-social.png">
@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="true" aria-current="true">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse show" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -388,11 +388,9 @@
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/customize/overview.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
-          <h1 class="bd-title" id="content">커스터마이징</h1>
+          <h1 class="bd-title" id="content">사용자 지정</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Customize</h1>
-        
         <p class="bd-lead">Sass를 사용하여 테마 지정 및 Bootstrap 확장과 사용자 정의 방법, 풍부한 글로벌 옵션, 광범위한 컬러 시스템 등을 소개합니다.</p>
         
 
@@ -413,35 +411,35 @@
             
             <div class="col-md-6">
               <a class="d-block text-decoration-none" href="../options/">
-                <strong class="d-block h5 mb-0">Options</strong>
-                <span class="text-secondary">내장(built-in) 변수를 사용하여 Bootstrap을 재정의해 글로벌 CSS 기본 설정을 쉽게 전환할 수 있습니다.</span>
+                <strong class="d-block h5 mb-0">옵션</strong>
+                <span class="text-secondary">내장 변수를 사용하여 Bootstrap을 재정의해 글로벌 CSS 기본 설정을 쉽게 전환할 수 있습니다.</span>
               </a>
             </div>
             
             <div class="col-md-6">
               <a class="d-block text-decoration-none" href="../color/">
-                <strong class="d-block h5 mb-0">Color</strong>
+                <strong class="d-block h5 mb-0">색상</strong>
                 <span class="text-secondary">툴킷 전체를 지원하는 컬러 시스템에 대해 배우고 재정의합니다.</span>
               </a>
             </div>
             
             <div class="col-md-6">
               <a class="d-block text-decoration-none" href="../components/">
-                <strong class="d-block h5 mb-0">Components</strong>
+                <strong class="d-block h5 mb-0">컴포넌트</strong>
                 <span class="text-secondary">기본 클래스와 제어자 클래스를 사용하여 거의 모든 컴포넌트를 반응형으로 구축하는 방법을 학습합니다.</span>
               </a>
             </div>
             
             <div class="col-md-6">
               <a class="d-block text-decoration-none" href="../css-variables/">
-                <strong class="d-block h5 mb-0">CSS variables</strong>
+                <strong class="d-block h5 mb-0">CSS 변수</strong>
                 <span class="text-secondary">빠르고 미래지향적인 디자인과 개발 실현을 위해 Bootstrap의 CSS 사용자 정의 속성을 사용합니다.</span>
               </a>
             </div>
             
             <div class="col-md-6">
               <a class="d-block text-decoration-none" href="../optimize/">
-                <strong class="d-block h5 mb-0">Optimize</strong>
+                <strong class="d-block h5 mb-0">최적화</strong>
                 <span class="text-secondary">프로젝트를 간소화하고, 반응형, 유지 보수 할 수 있게 최고의 경험을 제공합니다.</span>
               </a>
             </div>
@@ -449,17 +447,17 @@
           </div>
         
 
-        <h2 id="overview">Overview</h2>
+        <h2 id="개요">개요</h2>
 <p>Bootstrap을 재정의 하는 방법은 여러 가지가 있습니다. 가장 좋은 방법은 당신의 프로젝트, 빌드 도구의 복잡성, 사용하고 있는 Bootstrap 버전, 브라우저 지원 등에 따라 달라질 수 있습니다.</p>
 <p>우리는 아래의 두 가지 방법을 선호합니다:</p>
 <ol>
-<li>소스 파일을 사용하고 확장할 수 있도록 <a href="/docs/5.0/getting-started/download/#package-managers">패키지 매니저를 통해</a> Bootstrap을 사용합니다.</li>
-<li>Bootstrap의 스타일을 추가하거나 덮어씌기 할 수 있도록 Bootstrap의 컴파일된 배포 파일 또는 <a href="/docs/5.0/getting-started/download/#cdn-via-jsdelivr">jsDelivr</a>를 사용합니다.</li>
+<li>소스 파일을 사용하고 확장할 수 있도록 <a href="/docs/5.0/getting-started/download/#패키지-관리자">패키지 매니저를 통해</a> Bootstrap을 사용합니다.</li>
+<li>Bootstrap의 스타일을 추가하거나 덮어씌기 할 수 있도록 Bootstrap의 컴파일된 배포 파일 또는 <a href="/docs/5.0/getting-started/download/#jsdelivr를-통한-cdn">jsDelivr</a>를 사용합니다.</li>
 </ol>
 <p>모든 패키지 매니저의 사용법을 여기서 자세히 설명할 수는 없지만, <a href="/docs/5.0/customize/sass/">자체 Sass 컴파일러에서 Bootstrap을 사용하기 위한</a> 몇 가지 방법은 안내해 줄 수 있습니다.</p>
 <p>배포 파일을 사용하고자 하는 사람은 <a href="/docs/5.0/getting-started/introduction/">getting started page</a>에서 해당 파일을 포함하는 방법과 HTML 페이지에서 예시를 확인해 주세요. 거기에서 레이아웃, 구성요소 및 사용하고 싶은 동작에 대한 문서를 참조해 주세요.</p>
 <p>글로벌 옵션 이용 방법, 컬러 시스템 이용과 변경, 컴포넌트 구축 방법, 늘어나는 CSS 사용자 정의 속성 사용 방법과 Bootstrap로 빌드할때 코드 최적화 방법등 Bootstrap을 숙지한 후 계속해서 살펴봐 주세요.</p>
-<h2 id="csps-and-embedded-svgs">CSPs and embedded SVGs</h2>
+<h2 id="csp와-임베디드-svg">CSP와 임베디드 SVG</h2>
 <p>브라우저 및 기기 간에 일관되게 스타일링하기 위해 몇몇 Bootstrap 컴포넌트는 CSS에 내장된 SVG를 포함하고 있습니다. <strong><abbr title="Content Security Policy">CSP</abbr> 형태가 보다 엄격한 조직을 위해</strong>, embedded SVG(모두 <code>background-image</code>를 통해 적용되게)의 모든 인스턴스를 문서화하여 옵션을 보다 철저하게 검토할 수 있게 하였습니다.</p>
 <ul>
 <li><a href="/docs/5.0/components/accordion/">아코디언</a></li>
@@ -469,9 +467,9 @@
 <li><a href="/docs/5.0/forms/validation/#server-side">폼 유효성 검사 아이콘</a></li>
 <li><a href="/docs/5.0/forms/select/">셀렉트 메뉴</a></li>
 <li><a href="/docs/5.0/components/carousel/#with-controls">캐러셀 컨트롤</a></li>
-<li><a href="/docs/5.0/components/navbar/#responsive-behaviors">내비바 토글 버튼</a></li>
+<li><a href="/docs/5.0/components/navbar/#responsive-behaviors">내비게이션 바 토글 버튼</a></li>
 </ul>
-<p><a href="https://github.com/twbs/bootstrap/issues/25394">커뮤니티 정보</a>에 의하면, 사용자의 코드를 가지고 이 문제에 대처하는 방법으로는 URL을 로컬 호스트한다, 이미지를 삭제해 인라인으로 이미지를 사용한다(모든 컴포넌트로 가능한 것은 아닙니다), CSP를 변경한다 등이 있습니다. 우리는 사용자가 자신의 보안 정책을 확인하고 필요에 따라 최적의 방법을 선택하는 것을 권장합니다.</p>
+<p><a href="https://github.com/twbs/bootstrap/issues/25394">커뮤니티 정보</a>에 의하면, 사용자의 코드를 가지고 이 문제에 대처하는 방법으로는 URL을 로컬 호스트한다, 이미지를 삭제해 인라인으로 이미지를 사용한다 (모든 컴포넌트로 가능한 것은 아닙니다), CSP를 변경한다 등이 있습니다. 우리는 사용자가 자신의 보안 정책을 확인하고 필요에 따라 최적의 방법을 선택하는 것을 권장합니다.</p>
 
       </div>
     </main>
@@ -497,7 +495,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/toasts.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">토스트</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Toasts</h1>
-        
         <p class="bd-lead">가볍고 쉽게 재정의할 수 있는 알림메시로 푸시 알림을 보냅니다.</p>
         
 
@@ -403,28 +401,28 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#examples">Examples</a>
+    <li><a href="#개요">개요</a></li>
+    <li><a href="#예시">예시</a>
       <ul>
-        <li><a href="#basic">Basic</a></li>
-        <li><a href="#live">Live</a></li>
-        <li><a href="#translucent">Translucent</a></li>
-        <li><a href="#stacking">Stacking</a></li>
-        <li><a href="#custom-content">Custom content</a></li>
-        <li><a href="#color-schemes">Color schemes</a></li>
+        <li><a href="#기본">기본</a></li>
+        <li><a href="#실시간">실시간</a></li>
+        <li><a href="#반투명">반투명</a></li>
+        <li><a href="#중첩">중첩</a></li>
+        <li><a href="#사용자-지정-콘텐츠">사용자 지정 콘텐츠</a></li>
+        <li><a href="#색상-스키마">색상 스키마</a></li>
       </ul>
     </li>
-    <li><a href="#placement">Placement</a></li>
-    <li><a href="#accessibility">Accessibility</a></li>
+    <li><a href="#배치">배치</a></li>
+    <li><a href="#접근성">접근성</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
-        <li><a href="#variables">Variables</a></li>
+        <li><a href="#변수">변수</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#사용-방법">사용 방법</a>
       <ul>
-        <li><a href="#options">Options</a></li>
-        <li><a href="#methods">Methods</a>
+        <li><a href="#옵션">옵션</a></li>
+        <li><a href="#메소드">메소드</a>
           <ul>
             <li><a href="#show">show</a></li>
             <li><a href="#hide">hide</a></li>
@@ -433,7 +431,7 @@
             <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
-        <li><a href="#events">Events</a></li>
+        <li><a href="#이벤트">이벤트</a></li>
       </ul>
     </li>
   </ul>
@@ -445,7 +443,7 @@
         
 
         <p>토스트는 모바일 및 데스크톱 운영 체제에서 보급된 푸시 알림을 모방하여 설계된 가벼운 알림창 입니다. Flexbox로 만들어져 있어 위치 조정 및 배치가 간단합니다.</p>
-<h2 id="overview">Overview</h2>
+<h2 id="개요">개요</h2>
 <p>토스트 플러그인을 사용할 때 알아두어야 할 사항:</p>
 <ul>
 <li>토스트는 퍼포먼스상의 이유로 opt-in 방식으로 되어 있기 때문에 <strong>스스로 초기화</strong>해야 합니다.</li>
@@ -455,9 +453,9 @@
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
 </div>
 
-<h2 id="examples">Examples</h2>
-<h3 id="basic">Basic</h3>
-<p>토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 <code>display: flex</code>를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 콘텐츠를 쉽게 정렬시킬 수 있습니다.</p>
+<h2 id="예시">예시</h2>
+<h3 id="기본">기본</h3>
+<p>토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합니다. 토스트의 header는 <code>display: flex</code>를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 콘텐츠를 쉽게 정렬시킬 수 있습니다.</p>
 <p>토스트는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. 토스트 콘텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.</p>
 <div class="bd-example bg-light">
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -483,8 +481,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     Hello, world! This is a toast message.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="live">Live</h3>
-<p>아래의 버튼을 클릭하면 <code>.hide</code>를 사용해 기본적으로 숨겨져 있던 (유틸리티를 사용해 오른쪽 아래에 배치한)토스트가 표시됩니다.</p>
+<h3 id="실시간">실시간</h3>
+<p>아래의 버튼을 클릭하면 <code>.hide</code>를 사용해 기본적으로 숨겨져 있던 (유틸리티를 사용해 오른쪽 아래에 배치한) 토스트가 표시됩니다.</p>
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
@@ -517,7 +515,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="translucent">Translucent</h3>
+</code></pre></div><h3 id="반투명">반투명</h3>
 <p>토스트는 아래의 콘텐츠와 어울려져 보이도록 약간 비치게 보여집니다.</p>
 <div class="bd-example bg-dark">
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -543,7 +541,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     Hello, world! This is a toast message.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="stacking">Stacking</h3>
+<h3 id="중첩">중첩</h3>
 <p>토스트를 <code>toast container</code>로 감싸면 여러 개 사용할 수 있습니다.</p>
 <div class="bd-example bg-light">
 <div class="toast-container">
@@ -598,7 +596,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="custom-content">Custom content</h3>
+<h3 id="사용자-지정-콘텐츠">사용자 지정 콘텐츠</h3>
 <p>서브 컴포넌트를 삭제하거나, <a href="/docs/5.0/utilities/api/">utilities</a>로 조정하거나, 독자적인 마크업을 추가하여 토스트를 재정의할 수 있습니다. 아래 예시에서는, 기본 제공하는 <code>.toast-header</code>를 삭제하고 <a href="https://icons.getbootstrap.kr/">Bootstrap Icons</a>을 사용하여 사용자 정의 숨김 아이콘을 추가하고 <a href="/docs/5.0/utilities/flex/">flexbox utilities</a>로 레이아웃을 조정해 보다 간단한 토스트를 만들고 있습니다.</p>
 <div class="bd-example bg-light">
 <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
@@ -637,7 +635,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="color-schemes">Color schemes</h3>
+<h3 id="색상-스키마">색상 스키마</h3>
 <p>위의 예시를 바탕으로 <a href="/docs/5.0/utilities/colors/">color</a>와 <a href="/docs/5.0/utilities/background/">background</a> 유틸리티를 사용해 다른 토스트의 색상 배합을 만들 수 있습니다. 여기에서는 <code>.toast</code>에 <code>.bg-primary</code>와 <code>.text-white</code>를 추가하고, 닫기 버튼에는 <code>.btn-close-white</code>를 추가하고 있습니다. 선명한 모서리를 보여주기 위해 <code>.border-0</code>을 추가해 기본으로 제공한 모서리를 삭제하고 있습니다.</p>
 <div class="bd-example bg-light">
 <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
@@ -656,7 +654,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close btn-close-white me-2 m-auto&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;toast&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="placement">Placement</h2>
+<h2 id="배치">배치</h2>
 <p>필요에 따라 사용자 지정 CSS로 토스트를 배치시킵니다. 우측 상단은 알림용으로 사용되는 경우가 많으며, 상단 중앙도 마찬가지입니다. 한번에 하나의 토스트 밖에 표시하지 않는다면, 배치 스타일을 <code>.toast</code>의 오른쪽에 넣어주세요.</p>
 <div class="bd-example">
 <form>
@@ -827,10 +825,10 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="accessibility">Accessibility</h2>
-<p>토스트는 방문자가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code> region</a>로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 <code>aria-atomic=&quot;true&quot;</code>를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 콘텐츠 일부만을 갱신한 경우나 같은 토스트의 콘텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 <a href="/docs/5.0/components/alerts/">alert component</a>를 사용해 주세요.</p>
+<h2 id="접근성">접근성</h2>
+<p>토스트는 방텍스트가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code> region</a>로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 <code>aria-atomic=&quot;true&quot;</code>를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 콘텐츠 일부만을 갱신한 경우나 같은 토스트의 콘텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 <a href="/docs/5.0/components/alerts/">alert component</a>를 사용해 주세요.</p>
 <p>토스트가 생성되거나 업데이트 되기 <em>전</em>에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두 가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.</p>
-<p>그리고, 내용에 따라 <code>role</code> 과 <code>aria-live</code> 의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 <code>role=&quot;alert&quot; aria-live=&quot;assertive&quot;</code> 속성을 사용하고, 그렇지 않으면 <code>role=&quot;status&quot; aria-live=&quot;polite&quot;</code> 속성을 사용합니다.</p>
+<p>그리고, 내용에 따라 <code>role</code> 과 <code>aria-live</code>의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 <code>role=&quot;alert&quot; aria-live=&quot;assertive&quot;</code> 속성을 사용하고, 그렇지 않으면 <code>role=&quot;status&quot; aria-live=&quot;polite&quot;</code> 속성을 사용합니다.</p>
 <p>보여지는 콘텐츠가 바뀌면 사용자가 토스트를 읽기에 충분한 시간이 필요하므로 <a href="#options"><code>delay</code> timeout</a>을 반드시 업데이트 해 주세요.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toast&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">&#34;polite&#34;</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">data-bs-delay</span><span class="o">=</span><span class="s">&#34;10000&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">&#34;assertive&#34;</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -860,9 +858,9 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     Hello, world! This is a toast message.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만, 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에 긴 <a href="#options"><code>delay</code> timeout</a> 를 주었다고 하더라도 키보드나 지원 기술 사용자가 알 수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 <code>autohide: false</code>를 사용하는 것을 권장합니다.</p>
+<p>기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만, 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에 긴 <a href="#options"><code>delay</code> timeout</a>를 주었다고 하더라도 키보드나 지원 기술 사용자가 알 수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 <code>autohide: false</code>를 사용하는 것을 권장합니다.</p>
 <h2 id="sass">Sass</h2>
-<h3 id="variables">Variables</h3>
+<h3 id="변수">변수</h3>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$toast-max-width</span><span class="o">:</span>                   <span class="mi">350</span><span class="kt">px</span><span class="p">;</span>
 <span class="nv">$toast-padding-x</span><span class="o">:</span>                   <span class="mf">.75</span><span class="kt">rem</span><span class="p">;</span>
 <span class="nv">$toast-padding-y</span><span class="o">:</span>                   <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
@@ -879,14 +877,14 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="nv">$toast-header-background-color</span><span class="o">:</span>     <span class="nf">rgba</span><span class="p">(</span><span class="nv">$white</span><span class="o">,</span> <span class="mf">.85</span><span class="p">);</span>
 <span class="nv">$toast-header-border-color</span><span class="o">:</span>         <span class="nf">rgba</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="mf">.05</span><span class="p">);</span>
 </code></pre></div>
-<h2 id="usage">Usage</h2>
+<h2 id="사용-방법">사용 방법</h2>
 <p>JavaScript를 통해 초기화:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">toastElList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.toast&#39;</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">toastList</span> <span class="o">=</span> <span class="nx">toastElList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">toastEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Toast</span><span class="p">(</span><span class="nx">toastEl</span><span class="p">,</span> <span class="nx">option</span><span class="p">)</span>
 <span class="p">})</span>
-</code></pre></div><h3 id="options">Options</h3>
-<p>옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우 <code>data-bs-animation=&quot;&quot;</code>처럼 <code>data-bs-</code> 에 옵션 명을 추가합니다.</p>
+</code></pre></div><h3 id="옵션">옵션</h3>
+<p>옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우 <code>data-bs-animation=&quot;&quot;</code>처럼 <code>data-bs-</code>에 옵션명을 추가합니다.</p>
 <table class="table">
   <thead>
     <tr>
@@ -919,7 +917,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     </tr>
   </tbody>
 </table>
-<h3 id="methods">Methods</h3>
+<h3 id="메소드">메소드</h3>
 <div class="bd-callout bd-callout-danger">
 <h4 id="asynchronous-methods-and-transitions">Asynchronous methods and transitions</h4>
 <p>All API methods are <strong>asynchronous</strong> and start a <strong>transition</strong>. They return to the caller as soon as the transition is started but <strong>before it ends</strong>. In addition, a method call on a <strong>transitioning component will be ignored</strong>.</p>
@@ -945,7 +943,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p><em>Static</em> method which allows you to get the scrollspy instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialised</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myToastEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myToastEl&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">myToast</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Toast</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">myToastEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap toast instance
-</span></code></pre></div><h3 id="events">Events</h3>
+</span></code></pre></div><h3 id="이벤트">이벤트</h3>
 <table class="table">
   <thead>
     <tr>
@@ -1001,7 +999,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

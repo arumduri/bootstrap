@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded active" aria-current="page">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -401,15 +401,15 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#install-parcel">Install Parcel</a></li>
-    <li><a href="#install-bootstrap">Install Bootstrap</a></li>
-    <li><a href="#importing-javascript">Importing JavaScript</a></li>
-    <li><a href="#importing-css">Importing CSS</a></li>
-    <li><a href="#build-app">Build app</a>
+    <li><a href="#parcel-설치">Parcel 설치</a></li>
+    <li><a href="#bootstrap-설치">Bootstrap 설치</a></li>
+    <li><a href="#javascript-불러오기">JavaScript 불러오기</a></li>
+    <li><a href="#css-불러오기">CSS 불러오기</a></li>
+    <li><a href="#앱-빌드">앱 빌드</a>
       <ul>
-        <li><a href="#edit-packagejson">Edit <code>package.json</code></a></li>
-        <li><a href="#run-dev-script">Run dev script</a></li>
-        <li><a href="#build-app-files">Build app files</a></li>
+        <li><a href="#packagejson-수정"><code>package.json</code> 수정</a></li>
+        <li><a href="#dev-스크립트-실행">dev 스크립트 실행</a></li>
+        <li><a href="#앱-파일-빌드">앱 파일 빌드</a></li>
       </ul>
     </li>
   </ul>
@@ -420,11 +420,11 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="install-parcel">Install Parcel</h2>
+        <h2 id="parcel-설치">Parcel 설치</h2>
 <p><a href="https://en.parceljs.org/getting_started.html">Parcel Bundler</a>를 설치해주세요.</p>
-<h2 id="install-bootstrap">Install Bootstrap</h2>
+<h2 id="bootstrap-설치">Bootstrap 설치</h2>
 <p>npm을 통해서 Node.js 모듈로 <a href="/docs/5.0/getting-started/download/#npm">bootstrap을 설치</a>해주세요.</p>
-<p>Bootstrap은 <code>peerDependencies</code> 속성에 지정된 Popper에 의존합니다. 이것은 <code>npm install @ popperjs/core</code>를 사용하여 두 가지 모두를 <code>package.json</code> 에 추가해야 한다는 것을 의미합니다.</p>
+<p>Bootstrap은 <code>peerDependencies</code> 속성에 지정된 Popper에 의존합니다. 이것은 <code>npm install @ popperjs/core</code>를 사용하여 두 가지 모두를 <code>package.json</code>에 추가해야 한다는 것을 의미합니다.</p>
 <p>모든 작업이 완료되면 프로젝트는 다음과 같이 구성됩니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">project-name/
 ├── build/
@@ -437,7 +437,7 @@
 │   └── index.html
 │   └── index.js
 └── package.json
-</code></pre></div><h2 id="importing-javascript">Importing JavaScript</h2>
+</code></pre></div><h2 id="javascript-불러오기">JavaScript 불러오기</h2>
 <p>앱의 진입점 (일반적으로 <code>src/index.js</code>)에서 <a href="/docs/5.0/getting-started/javascript/">Bootstrap의 JavaScript</a>를 가져옵니다. 모든 플러그인을 하나의 파일로 가져오거나 일부만 필요한 경우 개별적으로 가져올 수도 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// Import all plugins
 </span><span class="c1"></span><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">bootstrap</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span><span class="p">;</span>
@@ -447,10 +447,10 @@
 
 <span class="c1">// Or import just one
 </span><span class="c1"></span><span class="kr">import</span> <span class="nx">Alert</span> <span class="nx">as</span> <span class="nx">Alert</span> <span class="nx">from</span> <span class="s1">&#39;../node_modules/bootstrap/js/dist/alert&#39;</span><span class="p">;</span>
-</code></pre></div><h2 id="importing-css">Importing CSS</h2>
-<p>Bootstrap의 잠재력을 최대한 활용하고 필요에 맞게 커스터마이징하려면 프로젝트 번들링 과정의 일부로 소스 파일을 사용하세요.</p>
+</code></pre></div><h2 id="css-불러오기">CSS 불러오기</h2>
+<p>Bootstrap의 잠재력을 최대한 활용하고 필요에 맞게 사용자 지정하려면 프로젝트 번들링 과정의 일부로 소스 파일을 사용하세요.</p>
 <p>자체 <code>scss/custom.scss</code>를 만들어서 <a href="/docs/5.0/customize/sass/#importing">Bootstrap의 Sass 파일을 불러오고</a> <a href="/docs/5.0/customize/sass/#variable-defaults">기본 제공되는 맞춤 변수</a>를 재정의해주세요.</p>
-<h2 id="build-app">Build app</h2>
+<h2 id="앱-빌드">앱 빌드</h2>
 <p><code>&lt;/body&gt;</code> 태그로 닫기 전에 <code>src/index.js</code>를 포함시켜주세요.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
@@ -462,17 +462,17 @@
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./index.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="edit-packagejson">Edit <code>package.json</code></h3>
+</code></pre></div><h3 id="packagejson-수정"><code>package.json</code> 수정</h3>
 <p><code>package.json</code> 파일에 <code>dev</code> 및 <code>build</code> 스크립트를 추가해주세요.</p>
 <div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
   <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;parcel ./src/index.html&#34;</span><span class="p">,</span>
   <span class="nt">&#34;prebuild&#34;</span><span class="p">:</span> <span class="s2">&#34;npx rimraf build&#34;</span><span class="p">,</span>
   <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;parcel build --public-url ./ ./src/index.html --experimental-scope-hoisting --out-dir build&#34;</span>
 <span class="p">}</span>
-</code></pre></div><h3 id="run-dev-script">Run dev script</h3>
+</code></pre></div><h3 id="dev-스크립트-실행">dev 스크립트 실행</h3>
 <p><code>http://127.0.0.1:1234</code>를 통해서 앱에 접근할 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npm run dev
-</code></pre></div><h3 id="build-app-files">Build app files</h3>
+</code></pre></div><h3 id="앱-파일-빌드">앱 파일 빌드</h3>
 <p>빌드된 파일은 <code>build/</code> 폴더 내에 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">npm run build
 </code></pre></div>
@@ -500,7 +500,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

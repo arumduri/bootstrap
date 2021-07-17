@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/getting-started/contents.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">구성 요소</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Contents</h1>
-        
         <p class="bd-lead">사전 컴파일 및 소스 코드 버전을 포함해서 Bootstrap에 무엇이 포함되어 있는지 알아보세요.</p>
         
 
@@ -403,10 +401,10 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#precompiled-bootstrap">Precompiled Bootstrap</a></li>
-    <li><a href="#css-files">CSS files</a></li>
-    <li><a href="#js-files">JS files</a></li>
-    <li><a href="#bootstrap-source-code">Bootstrap source code</a></li>
+    <li><a href="#사전-컴파일된-bootstrap">사전 컴파일된 Bootstrap</a></li>
+    <li><a href="#css-파일">CSS 파일</a></li>
+    <li><a href="#js-파일">JS 파일</a></li>
+    <li><a href="#bootstrap-소스-코드">Bootstrap 소스 코드</a></li>
   </ul>
 </nav>
         </div>
@@ -415,7 +413,7 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="precompiled-bootstrap">Precompiled Bootstrap</h2>
+        <h2 id="사전-컴파일된-bootstrap">사전 컴파일된 Bootstrap</h2>
 <p>다운로드 한 후 압축을 해제하면 다음과 같은 것들을 확인하실 수 있습니다:</p>
 <!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too, but be sure to keep in mind to add the `dist` folder. -->
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">bootstrap/
@@ -466,7 +464,7 @@
     ├── bootstrap.min.js
     └── bootstrap.min.js.map
 </code></pre></div><p>이것은 어떤 웹 프로젝트에서도 빠르게 사용할 수 있는 Bootstrap의 가장 기본적인 형태인 프리 컴파일된 파일입니다. 우리는 컴파일된 CSS와 JS (<code>bootstrap.*</code>), 그리고 컴파일 및 경량화된 primevideoCSS와 JS (<code>bootstrap.min.*</code>)도 제공합니다. <a href="https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps">소스 맵</a> (<code>bootstrap.*.map</code>)은 몇몇 브라우저의 개발자 도구에서 사용할 수 있습니다. 번들된 JS 파일 (<code>bootstrap.bundle.js</code> 및 경량화된 <code>bootstrap.bundle.min.js</code>)에는 <a href="https://popper.js.org/">Popper</a>가 포함되어 있습니다.</p>
-<h2 id="css-files">CSS files</h2>
+<h2 id="css-파일">CSS 파일</h2>
 <p>Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 몇 가지 선택지가 포함되어 있습니다.</p>
 <table class="table">
   <thead>
@@ -529,7 +527,7 @@
     </tr>
   </tbody>
 </table>
-<h2 id="js-files">JS files</h2>
+<h2 id="js-파일">JS 파일</h2>
 <p>마찬가지로 컴파일된 JavaScript의 일부 또는 전체를 포함할 수 있는 선택지가 있습니다.</p>
 <table class="table">
   <thead>
@@ -555,7 +553,7 @@
     </tr>
   </tbody>
 </table>
-<h2 id="bootstrap-source-code">Bootstrap source code</h2>
+<h2 id="bootstrap-소스-코드">Bootstrap 소스 코드</h2>
 <p>Bootstrap 소스코드 다운로드에는 사전 컴파일된 CSS 및 JavaScript 에셋, Sass 소스, JavaScript 및 문서가 포함되어 있습니다. 구체적으로는 다음에 나와있는 것 외에도 추가적인 것들이 포함되어 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">bootstrap/
 ├── dist/
@@ -568,7 +566,7 @@
 │              └── examples/
 ├── js/
 └── scss/
-</code></pre></div><p><code>scss/</code> 및 <code>js/</code>는 우리 CSS 및 JavaScript의 소스 코드입니다. <code>dist/</code> 폴더에는 사전 컴파일 다운로드 부분에 나와있는 모든 것들이 포함되어 있습니다. <code>site/docs/</code> 폴더에는 문서의 소스 코드가 포함되어 있으며, <code>examples/</code>에는 Bootstrap의 사용 예제가 있습니다. 그 밖의 다른 파일에는 패키지 지원, 라이선스 정보, 그리고 개발 관련을 제공합니다.</p>
+</code></pre></div><p><code>scss/</code> 및 <code>js/</code>는 우리 CSS 및 JavaScript의 소스 코드입니다. <code>dist/</code> 폴더에는 사전 컴파일 다운로드 부분에 나와있는 모든 것들이 포함되어 있습니다. <code>site/docs/</code> 폴더에는 문서의 소스 코드가 포함되어 있으며, <code>examples/</code>에는 Bootstrap의 사용 예시가 있습니다. 그 밖의 다른 파일에는 패키지 지원, 라이선스 정보, 그리고 개발 관련을 제공합니다.</p>
 
       </div>
     </main>
@@ -594,7 +592,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

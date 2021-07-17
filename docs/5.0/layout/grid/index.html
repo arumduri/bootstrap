@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded active" aria-current="page">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/layout/grid.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">그리드 시스템</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Grid system</h1>
-        
         <p class="bd-lead">강력한 모바일 우선 flexbox 그리드를 사용하여 12개의 열 시스템, 6개의 기본 반응형 계층, Sass 변수 및 믹스인, 수십 개의 사전 정의된 클래스 덕분에 모든 모양과 크기의 레이아웃을 빌드할 수 있습니다.</p>
         
 
@@ -403,36 +401,36 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#example">Example</a></li>
-    <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#grid-options">Grid options</a></li>
-    <li><a href="#auto-layout-columns">Auto-layout columns</a>
+    <li><a href="#예시">예시</a></li>
+    <li><a href="#작동-원리">작동 원리</a></li>
+    <li><a href="#그리드-옵션">그리드 옵션</a></li>
+    <li><a href="#열-자동-레이아웃">열 자동 레이아웃</a>
       <ul>
         <li><a href="#equal-width">Equal-width</a></li>
-        <li><a href="#setting-one-column-width">Setting one column width</a></li>
-        <li><a href="#variable-width-content">Variable width content</a></li>
+        <li><a href="#한-열의-너비-설정">한 열의 너비 설정</a></li>
+        <li><a href="#가변-너비-콘텐츠">가변 너비 콘텐츠</a></li>
       </ul>
     </li>
-    <li><a href="#responsive-classes">Responsive classes</a>
+    <li><a href="#반응형-클래스">반응형 클래스</a>
       <ul>
-        <li><a href="#all-breakpoints">All breakpoints</a></li>
-        <li><a href="#stacked-to-horizontal">Stacked to horizontal</a></li>
-        <li><a href="#mix-and-match">Mix and match</a></li>
-        <li><a href="#row-columns">Row columns</a></li>
+        <li><a href="#모든-중단점">모든 중단점</a></li>
+        <li><a href="#수평-중첩">수평 중첩</a></li>
+        <li><a href="#섞기">섞기</a></li>
+        <li><a href="#행열">행열</a></li>
       </ul>
     </li>
-    <li><a href="#nesting">Nesting</a></li>
+    <li><a href="#중첩">중첩</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
-        <li><a href="#variables">Variables</a></li>
-        <li><a href="#mixins">Mixins</a></li>
-        <li><a href="#example-usage">Example usage</a></li>
+        <li><a href="#변수">변수</a></li>
+        <li><a href="#믹스인">믹스인</a></li>
+        <li><a href="#사용-예시">사용 예시</a></li>
       </ul>
     </li>
-    <li><a href="#customizing-the-grid">Customizing the grid</a>
+    <li><a href="#그리드-사용자-정의">그리드 사용자 정의</a>
       <ul>
-        <li><a href="#columns-and-gutters">Columns and gutters</a></li>
-        <li><a href="#grid-tiers">Grid tiers</a></li>
+        <li><a href="#열과-거터">열과 거터</a></li>
+        <li><a href="#그리드-계층">그리드 계층</a></li>
       </ul>
     </li>
   </ul>
@@ -443,7 +441,7 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="example">Example</h2>
+        <h2 id="예시">예시</h2>
 <p>Bootstrap의 그리드 시스템은 일련의 컨테이너, 행, 열을 사용하여 콘텐츠를 레이아웃하고 정렬합니다. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a>로 빌드되었으며 완전한 반응형입니다. 다음은 그리드 시스템이 함께 제공되는 방법에 대한 예와 자세한 설명입니다.</p>
 <div class="bd-callout bd-callout-info">
 <strong>flexbox를 처음 사용하거나 익숙하지 않나요?</strong> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">CSS Tricks flexbox 가이드에서</a> 배경, 철학, 가이드라인, 코드 스니펫에 대해 읽어보세요.
@@ -477,7 +475,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <p>위의 예에서는 사전 정의된 그리드 클래스를 사용하여 모든 기기와 뷰포트에 동일한 너비의 열 3개를 만듭니다. 이러한 열은 부모 <code>.container</code>가 있는 페이지 중앙에 있습니다.</p>
-<h2 id="how-it-works">How it works</h2>
+<h2 id="작동-원리">작동 원리</h2>
 <p>이를 세분화하면 그리드 시스템이 함께 제공되는 방법은 다음과 같습니다:</p>
 <ul>
 <li>
@@ -500,7 +498,7 @@
 </li>
 </ul>
 <p>제한 사항 및 <a href="https://github.com/philipwalton/flexbugs">flexbox 관련 버그</a>, <a href="https://github.com/philipwalton/flexbugs#flexbug-9">일부 HTML 요소를 플렉스 컨테이너로 사용할 수 없음</a>에 주의하세요.</p>
-<h2 id="grid-options">Grid options</h2>
+<h2 id="그리드-옵션">그리드 옵션</h2>
 <p>Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의한 모든 중단점에 걸쳐 적응할 수 있습니다. 6개의 기본 그리드 계층은 다음과 같습니다:</p>
 <ul>
 <li>Extra small (xs)</li>
@@ -552,7 +550,7 @@
       <td>1320px</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">클래스 접두어</th>
+      <th class="text-nowrap" scope="row">클래스 접두사</th>
       <td><code>.col-</code></td>
       <td><code>.col-sm-</code></td>
       <td><code>.col-md-</code></td>
@@ -582,7 +580,7 @@
     </tr>
   </tbody>
 </table>
-<h2 id="auto-layout-columns">Auto-layout columns</h2>
+<h2 id="열-자동-레이아웃">열 자동 레이아웃</h2>
 <p><code>.col-sm-6</code>과 같이 명시적인 번호가 매겨진 클래스 없이 간편한 열 크기 조정을 위해 중단점별 열 클래스를 활용합니다.</p>
 <h3 id="equal-width">Equal-width</h3>
 <p>예를 들어서 <code>xs</code>에서 <code>xxl</code>까지 모든 기기와 뷰포트에 적용되는 두 가지 그리드 레이아웃이 있습니다. 필요한 각 중단점에 대해 단위 없는 클래스를 원하는 수만큼 추가하면 모든 열의 너비가 동일합니다.</p>
@@ -629,7 +627,7 @@
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="setting-one-column-width">Setting one column width</h3>
+<h3 id="한-열의-너비-설정">한 열의 너비 설정</h3>
 <p>flexbox 그리드 열에 대한 자동 레이아웃은 또한 한 열의 너비를 설정하고 형제 열이 주위에서 자동으로 크기를 조정하도록 할 수 있음을 의미합니다. 미리 정의된 그리드 클래스 (아래에 표시되어 있음), 그리드 믹스인 또는 인라인 너비를 사용할 수 있습니다. 다른 열은 중앙 열의 너비에 관계없이 크기가 조정됩니다.</p>
 <div class="bd-example bd-example-row">
 <div class="container">
@@ -680,7 +678,7 @@
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="variable-width-content">Variable width content</h3>
+<h3 id="가변-너비-콘텐츠">가변 너비 콘텐츠</h3>
 <p><code>col-{breakpoint}-auto</code> 클래스를 사용하여 콘텐츠의 자연스러운 너비에 따라 열의 크기를 조정합니다.</p>
 <div class="bd-example bd-example-row">
 <div class="container">
@@ -731,9 +729,9 @@
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="responsive-classes">Responsive classes</h2>
+<h2 id="반응형-클래스">반응형 클래스</h2>
 <p>Bootstrap의 그리드에는 복잡한 반응형 레이아웃을 구축하기 위한 6개 계층의 사전 정의된 클래스가 포함되어 있습니다. small, small, medium, large, extra large 기기에서 열의 크기를 원하는 대로 사용자 정의하세요.</p>
-<h3 id="all-breakpoints">All breakpoints</h3>
+<h3 id="모든-중단점">모든 중단점</h3>
 <p>가장 작은 기기에서 가장 큰 기기까지 동일한 그리드의 경우 <code>.col</code> 및 <code>.col-*</code> 클래스를 사용합니다. 특정 크기의 열이 필요한 경우 번호가 지정된 클래스를 지정하세요. 그렇지 않으면 <code>.col</code>을 계속 사용하시면 됩니다.</p>
 <div class="bd-example bd-example-row">
 <div class="container">
@@ -760,7 +758,7 @@
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4&#34;</span><span class="p">&gt;</span>col-4<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="stacked-to-horizontal">Stacked to horizontal</h3>
+<h3 id="수평-중첩">수평 중첩</h3>
 <p>단일 세트의 <code>.col-sm-*</code> 클래스를 사용하여 스택에서 시작하여 작은 중단점(<code>sm</code>)에서 수평이 되는 기본 그리드 시스템을 만들 수 있습니다.</p>
 <div class="bd-example bd-example-row">
 <div class="container">
@@ -785,7 +783,7 @@
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm&#34;</span><span class="p">&gt;</span>col-sm<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="mix-and-match">Mix and match</h3>
+<h3 id="섞기">섞기</h3>
 <p>열이 일부 그리드 계층에 쌓이는 것을 원하지 않으시나요? 필요에 따라 각 계층에 대해 서로 다른 클래스를 조합하여 사용하세요. 모든 작동 방식에 대한 더 나은 아이디어는 아래 예를 참조하세요.</p>
 <div class="bd-example bd-example-row">
 <div class="container">
@@ -828,8 +826,8 @@
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6&#34;</span><span class="p">&gt;</span>.col-6<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h3 id="row-columns">Row columns</h3>
-<p>반응형 <code>.row-cols-*</code> 클래스를 사용하여 콘텐츠와 레이아웃을 가장 잘 렌더링하는 열 수를 빠르게 설정하세요. 일반 <code>.col-*</code> 클래스는 개별 열 (예: <code>.col-md-4</code>)에 적용되지만 행 열 클래스는 포함된 열의 기본값으로 상위 <code>.row</code>에 설정됩니다. <code>.row-cols-auto</code>를 사용하면 열에 자연스러운 너비를 지정할 수 있습니다.</p>
+<h3 id="행열">행열</h3>
+<p>반응형 <code>.row-cols-*</code> 클래스를 사용하여 콘텐츠와 레이아웃을 가장 잘 렌더링하는 열 수를 빠르게 설정하세요. 일반 <code>.col-*</code> 클래스는 개별 열 (예: <code>.col-md-4</code>)에 적용되지만 행 열 클래스는 포함된 열의 기본값으로 부모 <code>.row</code>에 설정됩니다. <code>.row-cols-auto</code>를 사용하면 열에 자연스러운 너비를 지정할 수 있습니다.</p>
 <p>이러한 행 열 클래스를 사용하여 기본 그리드 레이아웃을 빠르게 생성하거나 카드 레이아웃을 제어하고 필요할 때 열 수준에서 재정의할 수 있습니다.</p>
 <div class="bd-example bd-example-row">
 <div class="container">
@@ -976,7 +974,7 @@
     <span class="k">@include</span><span class="nd"> row-cols</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div><h2 id="nesting">Nesting</h2>
+</code></pre></div><h2 id="중첩">중첩</h2>
 <p>기본 그리드로 콘텐츠를 중첩하려면 기존 <code>.col-sm-*</code> 열 내에 새로운 <code>.row</code>와 <code>.col-sm-*</code> 열 세트를 추가하세요. 중첩된 행에는 최대 12개 이하의 열을 추가하는 열 집합이 포함되어야 합니다 (사용 가능한 열 12개를 모두 사용할 필요는 없음).</p>
 <div class="bd-example bd-example-row">
 <div class="container">
@@ -1015,7 +1013,7 @@
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="sass">Sass</h2>
 <p>Bootstrap의 Sass 파일 소스를 사용할 때 Sass 변수와 믹스인을 사용하여 사용자 정의, 의미 체계 및 반응형 페이지 레이아웃을 생성할 수 있는 옵션이 있습니다. 사전 정의된 그리드 클래스는 이러한 동일한 변수와 믹스인을 사용하여 빠른 반응형 레이아웃을 위해 즉시 사용할 수 있는 전체 클래스 모음을 제공합니다.</p>
-<h3 id="variables">Variables</h3>
+<h3 id="변수">변수</h3>
 <p>변수와 맵은 열 수, 여백 너비 및 부동 열을 시작할 미디어 쿼리 지점을 결정합니다. 우리는 이것을 사용하여 위에 설명된 미리 정의된 그리드 클래스와 아래에 나열된 사용자 지정 믹스인을 생성합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-columns</span><span class="o">:</span>      <span class="mi">12</span><span class="p">;</span>
 <span class="nv">$grid-gutter-width</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span>
@@ -1036,7 +1034,7 @@
   <span class="na">xxl</span><span class="o">:</span> <span class="mi">1320</span><span class="kt">px</span>
 <span class="p">);</span>
 </code></pre></div>
-<h3 id="mixins">Mixins</h3>
+<h3 id="믹스인">믹스인</h3>
 <p>믹스인은 개별 그리드 열에 대한 시멘틱 CSS를 생성하기 위해 그리드 변수와 함께 사용됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="c1">// Creates a wrapper for a series of columns
 </span><span class="c1"></span><span class="k">@include</span><span class="nd"> make-row</span><span class="p">();</span>
@@ -1050,7 +1048,7 @@
 
 <span class="c1">// Get fancy by offsetting, or changing the sort order
 </span><span class="c1"></span><span class="k">@include</span><span class="nd"> make-col-offset</span><span class="p">(</span><span class="nv">$size</span><span class="o">,</span> <span class="nv">$columns</span><span class="o">:</span> <span class="nv">$grid-columns</span><span class="p">);</span>
-</code></pre></div><h3 id="example-usage">Example usage</h3>
+</code></pre></div><h3 id="사용-예시">사용 예시</h3>
 <p>변수를 사용자 정의 값으로 수정하거나 기본값과 함께 믹스인을 사용할 수 있습니다. 다음은 기본 설정을 사용하여 간격이 있는 2열 레이아웃을 만드는 예입니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.example-container</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> make-container</span><span class="p">();</span>
@@ -1097,13 +1095,13 @@
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;example-content-secondary&#34;</span><span class="p">&gt;</span>Secondary content<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="customizing-the-grid">Customizing the grid</h2>
+<h2 id="그리드-사용자-정의">그리드 사용자 정의</h2>
 <p>내장된 그리드 Sass 변수와 맵을 사용하여 사전 정의된 그리드 클래스를 완전히 사용자 정의할 수 있습니다. 계층 수, 미디어 쿼리 크기 및 컨테이너 너비를 변경한 다음 다시 컴파일하면 됩니다.</p>
-<h3 id="columns-and-gutters">Columns and gutters</h3>
+<h3 id="열과-거터">열과 거터</h3>
 <p>그리드 열의 수는 Sass 변수를 통해 수정할 수 있습니다. <code>$grid-columns</code>는 각 개별 열의 너비 (백분율)를 생성하는 데에 사용되는 반면 <code>$grid-gutter-width</code>는 열 거터의 너비를 설정합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-columns</span><span class="o">:</span> <span class="mi">12</span> <span class="k">!default</span><span class="p">;</span>
 <span class="nv">$grid-gutter-width</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span> <span class="k">!default</span><span class="p">;</span>
-</code></pre></div><h3 id="grid-tiers">Grid tiers</h3>
+</code></pre></div><h3 id="그리드-계층">그리드 계층</h3>
 <p>열 자체를 넘어 그리드 계층의 수를 사용자 정의할 수도 있습니다. 4개의 그리드 계층만 필요하다면 <code>$grid-breakpoints</code> 및 <code>$container-max-widths</code>를 다음과 같이 업데이트하면 됩니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grid-breakpoints</span><span class="o">:</span> <span class="p">(</span>
   <span class="na">xs</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
@@ -1143,7 +1141,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

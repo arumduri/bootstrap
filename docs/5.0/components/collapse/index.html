@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/collapse.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">콜랩스</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Collapse</h1>
-        
         <p class="bd-lead">몇 가지 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체 콘텐츠의 표시 방식을 전환합니다.</p>
         
 
@@ -403,23 +401,23 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#example">Example</a></li>
-    <li><a href="#multiple-targets">Multiple targets</a></li>
-    <li><a href="#accessibility">Accessibility</a></li>
+    <li><a href="#작동-원리">작동 원리</a></li>
+    <li><a href="#예시">예시</a></li>
+    <li><a href="#다중-항목">다중 항목</a></li>
+    <li><a href="#접근성">접근성</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
-        <li><a href="#variables">Variables</a></li>
-        <li><a href="#classes">Classes</a></li>
+        <li><a href="#변수">변수</a></li>
+        <li><a href="#클래스">클래스</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#사용-방법">사용 방법</a>
       <ul>
-        <li><a href="#via-data-attributes">Via data attributes</a></li>
-        <li><a href="#via-javascript">Via JavaScript</a></li>
-        <li><a href="#options">Options</a></li>
-        <li><a href="#methods">Methods</a></li>
-        <li><a href="#events">Events</a></li>
+        <li><a href="#데이터-속성-사용하기">데이터 속성 사용하기</a></li>
+        <li><a href="#javascript-사용하기">JavaScript 사용하기</a></li>
+        <li><a href="#옵션">옵션</a></li>
+        <li><a href="#메소드">메소드</a></li>
+        <li><a href="#이벤트">이벤트</a></li>
       </ul>
     </li>
   </ul>
@@ -430,13 +428,13 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="how-it-works">How it works</h2>
-<p>Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에 사용됩니다. 버튼과 앵커는, 토글 하는 특정 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 <code>height</code> 가 기존 값에서 <code>0</code>으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 고려하면, <code>.collapse</code> 요소에 <code>padding</code>을 사용할 수 없습니다. 대신, 이 클래스를 독립된 래핑 요소로 사용합니다.</p>
+        <h2 id="작동-원리">작동 원리</h2>
+<p>Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에 사용됩니다. 버튼과 앵커는, 토글 하는 특정 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 <code>height</code>가 기존 값에서 <code>0</code>으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 고려하면, <code>.collapse</code> 요소에 <code>padding</code>을 사용할 수 없습니다. 대신, 이 클래스를 독립된 줄바꿈 요소로 사용합니다.</p>
 <div class="bd-callout bd-callout-info">
 The animation effect of this component is dependent on the <code>prefers-reduced-motion</code> media query. See the <a href="/docs/5.0/getting-started/accessibility/#reduced-motion">reduced motion section of our accessibility documentation</a>.
 </div>
 
-<h2 id="example">Example</h2>
+<h2 id="예시">예시</h2>
 <p>아래의 버튼을 클릭하면, 클래스 변경에 따라 다른 요소의 표시 및 숨김을 전환할 수 있습니다.</p>
 <ul>
 <li><code>.collapse</code> 콘텐츠를 숨깁니다.</li>
@@ -471,9 +469,9 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="multiple-targets">Multiple targets</h2>
-<p><code>&lt;button&gt;</code> 이나 <code>&lt;a&gt;</code> 는, 그 <code>href</code> 나 <code>data-bs-target</code> 속성의 셀렉타로 여러 요소를 참조하는 것으로, 여러 개의 요소를 표시하거나 숨길 수 있습니다.
-여러 개의 <code>&lt;button&gt;</code> 이나 <code>&lt;a&gt;</code> 는, 각각의 <code>href</code> 나 <code>data-bs-target</code> 속성으로 요소를 참조하고 있는 경우, 어느 요소를 표시하거나 숨길 수 있습니다.</p>
+<h2 id="다중-항목">다중 항목</h2>
+<p><code>&lt;button&gt;</code> 이나 <code>&lt;a&gt;</code> 는 그 <code>href</code> 나 <code>data-bs-target</code> 속성의 셀렉터로 여러 요소를 참조하는 것으로 여러 개의 요소를 표시하거나 숨길 수 있습니다.
+여러 개의 <code>&lt;button&gt;</code> 이나 <code>&lt;a&gt;</code> 는 각각의 <code>href</code> 나 <code>data-bs-target</code> 속성으로 요소를 참조하고 있는 경우, 어느 요소를 표시하거나 숨길 수 있습니다.</p>
 <div class="bd-example">
 <p>
   <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
@@ -517,15 +515,15 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="accessibility">Accessibility</h2>
-<p>컨트롤 요소에 <code>aria-expanded</code>를 반드시 추가해 주세요. 이 속성은 컨트롤에 연결된 접을 수 있는 요소의 현재 상태를 스크린 리더나 동일한 지원 기술에 명시적으로 전달합니다. 접을 수 있는 요소가 기본적으로 닫혀있는 경우, 컨트롤 요소의 속성값은 <code>aria-expanded=&quot;false&quot;</code> 이어야 합니다. <code>show</code> 클래스를 사용해 접을 수 있는 요소를 기본으로 열도록 설정한 경우에는, 대신 컨트롤에 <code>aria-expanded=&quot;true&quot;</code> 로 설정해 주십시오. 플러그인은 접을 수 있는 요소가 열려 있는지 닫혀 있는지에 따라(JavaScript를 통해 사용자가 접을 수 있는 요소와 관련된 별도의 요소를 트리거 했기 때문에) 컨트롤 상에서 이 속성을 자동으로 바꿉니다. 컨트롤 요소의 HTML 요소가 버튼이 아닌 경우(예를 들어 <code>&lt;a&gt;</code> 나 <code>&lt;div&gt;</code> 등) 요소에 <code>role=&quot;button&quot;</code> 속성을 추가해야 합니다.</p>
-<p>컨트롤 요소가 하나의 접을 수 있는 요소를 타깃으로 하는 경우, 즉 <code>data-bs-target</code> 속성이 <code>id</code> 셀렉타를 바라보는 경우, 접을 수 있는 요소의 <code>id</code>를 한 <code>aria-controls</code> 속성을 컨트롤 요소에 추가하지 않으면 안 됩니다. 최근 스크린 리더 및 지원 기술에서는 이 속성을 이용하여 접을 수 있는 요소 자체로 직접 이동하기 위한 단축키를 사용자에게 제공하고 있습니다.</p>
+<h2 id="접근성">접근성</h2>
+<p>컨트롤 요소에 <code>aria-expanded</code>를 반드시 추가해 주세요. 이 속성은 컨트롤에 연결된 접을 수 있는 요소의 현재 상태를 스크린 리더나 동일한 지원 기술에 명시적으로 전달합니다. 접을 수 있는 요소가 기본적으로 닫혀있는 경우, 컨트롤 요소의 속성값은 <code>aria-expanded=&quot;false&quot;</code> 이어야 합니다. <code>show</code> 클래스를 사용해 접을 수 있는 요소를 기본으로 열도록 설정한 경우에는, 대신 컨트롤에 <code>aria-expanded=&quot;true&quot;</code>로 설정해 주십시오. 플러그인은 접을 수 있는 요소가 열려 있는지 닫혀 있는지에 따라(JavaScript를 통해 사용자가 접을 수 있는 요소와 관련된 별도의 요소를 트리거 했기 때문에) 컨트롤 상에서 이 속성을 자동으로 바꿉니다. 컨트롤 요소의 HTML 요소가 버튼이 아닌 경우(예를 들어 <code>&lt;a&gt;</code> 나 <code>&lt;div&gt;</code> 등) 요소에 <code>role=&quot;button&quot;</code> 속성을 추가해야 합니다.</p>
+<p>컨트롤 요소가 하나의 접을 수 있는 요소를 타깃으로 하는 경우, 즉 <code>data-bs-target</code> 속성이 <code>id</code> 셀렉터를 바라보는 경우, 접을 수 있는 요소의 <code>id</code>를 한 <code>aria-controls</code> 속성을 컨트롤 요소에 추가하지 않으면 안 됩니다. 최근 스크린 리더 및 지원 기술에서는 이 속성을 이용하여 접을 수 있는 요소 자체로 직접 이동하기 위한 단축키를 사용자에게 제공하고 있습니다.</p>
 <p>Bootstrap의 현재 구현은, <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#accordion">WAI-ARIA Authoring Practices 1.1 accordion pattern</a>에 설명되어 있는 여러 가지 <em>optional</em> 키보드 인터랙션을 커버하고 있지 않음을 주의해 주십시오. - 사용자 정의 JavaScript로 이것들을 직접 포함해야 합니다.</p>
 <h2 id="sass">Sass</h2>
-<h3 id="variables">Variables</h3>
+<h3 id="변수">변수</h3>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$transition-collapse</span><span class="o">:</span>         <span class="n">height</span> <span class="mf">.35</span><span class="kt">s</span> <span class="ni">ease</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="classes">Classes</h3>
+<h3 id="클래스">클래스</h3>
 <p>콜랩스 트랜지션 클래스는 다른 컴포넌트와 함께 사용되고 있기 때문에 <code>scss/_transitions.scss</code>에 들어있습니다. (콜랩스와 아코디언).</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.collapse</span> <span class="p">{</span>
   <span class="k">&amp;</span><span class="nd">:not</span><span class="o">(</span><span class="nc">.show</span><span class="o">)</span> <span class="p">{</span>
@@ -539,7 +537,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="k">@include</span><span class="nd"> transition</span><span class="p">(</span><span class="nv">$transition-collapse</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="usage">Usage</h2>
+<h2 id="사용-방법">사용 방법</h2>
 <p>콜랩스 플러그인은, 여러 클래스를 이용하여 중요한 작업을 처리합니다.</p>
 <ul>
 <li><code>.collapse</code> 콘텐츠를 숨김</li>
@@ -547,17 +545,17 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <li><code>.collapsing</code>은 트랜지션 시작시 추가되어, 종료시 삭제 됨</li>
 </ul>
 <p>이들의 클래스는 <code>_transitions.scss</code>에 있습니다.</p>
-<h3 id="via-data-attributes">Via data attributes</h3>
-<p>요소에 <code>data-bs-toggle=&quot;collapse&quot;</code>와 <code>data-bs-target</code>만 추가하면 접을 수 있는 요소의 제어를 자동으로 할당할 수 있습니다. <code>data-bs-target</code> 속성은 접을 수 있는 CSS 셀렉타를 지정합니다. 접을 수 있는 요소에는 반드시 <code>collapse</code> 클래스를 추가해야 합니다. 기본적으로 열린 상태로 만들려면 <code>show</code> 클래스를 추가해야 합니다.</p>
+<h3 id="데이터-속성-사용하기">데이터 속성 사용하기</h3>
+<p>요소에 <code>data-bs-toggle=&quot;collapse&quot;</code>와 <code>data-bs-target</code>만 추가하면 접을 수 있는 요소의 제어를 자동으로 할당할 수 있습니다. <code>data-bs-target</code> 속성은 접을 수 있는 CSS 셀렉터를 지정합니다. 접을 수 있는 요소에는 반드시 <code>collapse</code> 클래스를 추가해야 합니다. 기본적으로 열린 상태로 만들려면 <code>show</code> 클래스를 추가해야 합니다.</p>
 <p>접을 수 있는 영역에 accordion(아코디언) 같은 그룹 관리를 추가하려면, 데이터 속성 <code>data-bs-parent=&quot;#selector&quot;</code>를 추가합니다. 데모를 참조해 주세요.</p>
-<h3 id="via-javascript">Via JavaScript</h3>
+<h3 id="javascript-사용하기">JavaScript 사용하기</h3>
 <p>수동으로 유효하게 하는 경우:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">collapseElementList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.collapse&#39;</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">collapseList</span> <span class="o">=</span> <span class="nx">collapseElementList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">collapseEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Collapse</span><span class="p">(</span><span class="nx">collapseEl</span><span class="p">)</span>
 <span class="p">})</span>
-</code></pre></div><h3 id="options">Options</h3>
-<p>옵션은 JavaScript나 데이터 속성으로 줄 수 있습니다. 데이터 속성의 경우는 <code>data-bs-parent=&quot;&quot;</code> 처럼 <code>data-bs-</code> 에 옵션 명을 추가합니다.</p>
+</code></pre></div><h3 id="옵션">옵션</h3>
+<p>옵션은 JavaScript나 데이터 속성으로 줄 수 있습니다. 데이터 속성의 경우는 <code>data-bs-parent=&quot;&quot;</code> 처럼 <code>data-bs-</code>에 옵션명을 추가합니다.</p>
 <table class="table">
   <thead>
     <tr>
@@ -572,7 +570,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td><code>parent</code></td>
       <td>selector | jQuery object | DOM element </td>
       <td><code>false</code></td>
-      <td>parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다(기존 accordion(아코디언) 동작과 비슷합니다. - 이것은 <code>card</code> 클래스에 의존합니다). 속성은 접을 수 있는 타깃 영역으로 설정해야 합니다.</td>
+      <td>parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될 때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다 (기존 아코디언 동작과 비슷하며 <code>card</code> 클래스에 의존합니다). 속성은 접을 수 있는 타깃 영역으로 설정해야 합니다.</td>
     </tr>
     <tr>
       <td><code>toggle</code></td>
@@ -582,7 +580,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     </tr>
   </tbody>
 </table>
-<h3 id="methods">Methods</h3>
+<h3 id="메소드">메소드</h3>
 <div class="bd-callout bd-callout-danger">
 <h4 id="asynchronous-methods-and-transitions">Asynchronous methods and transitions</h4>
 <p>All API methods are <strong>asynchronous</strong> and start a <strong>transition</strong>. They return to the caller as soon as the transition is started but <strong>before it ends</strong>. In addition, a method call on a <strong>transitioning component will be ignored</strong>.</p>
@@ -599,8 +597,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </code></pre></div><table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>메소드</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>
@@ -639,7 +637,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     </tr>
   </tbody>
 </table>
-<h3 id="events">Events</h3>
+<h3 id="이벤트">이벤트</h3>
 <p>Bootstrap의 콜랩스 클래스는, 콜랩스 기능을 후킹하기 위한 몇 가지 이벤트를 공개하고 있습니다.</p>
 <table class="table">
   <thead>
@@ -655,7 +653,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     </tr>
     <tr>
       <td><code>shown.bs.collapse</code></td>
-      <td>이 이벤트는 collapse 요소가 사용자에게 보여질 때 발생합니다(CSS 트랜지션이 완료되는 것을 기다립니다).</td>
+      <td>이 이벤트는 collapse 요소가 사용자에게 보여질 때 발생합니다 (CSS 트랜지션이 완료되는 것을 기다립니다).</td>
     </tr>
     <tr>
       <td><code>hide.bs.collapse</code></td>
@@ -663,7 +661,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     </tr>
     <tr>
       <td><code>hidden.bs.collapse</code></td>
-      <td>이 이벤트는 collapse 요소가 사용자에게 숨겨졌을 때 발생합니다(CSS 트랜지션이 완료될 때까지 기다립니다).</td>
+      <td>이 이벤트는 collapse 요소가 사용자에게 숨겨졌을 때 발생합니다 (CSS 트랜지션이 완료될 때까지 기다립니다).</td>
     </tr>
   </tbody>
 </table>
@@ -696,7 +694,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

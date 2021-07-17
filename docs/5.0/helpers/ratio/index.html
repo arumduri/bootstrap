@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/helpers/ratio.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">비율</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Ratios</h1>
-        
         <p class="bd-lead">생성된 가상 요소를 사용하여 요소가 선택한 가로세로 비율을 유지하도록 합니다. 부모의 너비에 따라 비디오 또는 슬라이드 쇼 내용물을 반응형으로 처리하는 데에 적합합니다.</p>
         
 
@@ -403,11 +401,11 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#example">Example</a></li>
-    <li><a href="#aspect-ratios">Aspect ratios</a></li>
-    <li><a href="#custom-ratios">Custom ratios</a></li>
-    <li><a href="#sass-map">Sass map</a></li>
+    <li><a href="#소개">소개</a></li>
+    <li><a href="#예시">예시</a></li>
+    <li><a href="#가로세로-비율">가로세로 비율</a></li>
+    <li><a href="#사용자-지정-비율">사용자 지정 비율</a></li>
+    <li><a href="#sass-맵">Sass 맵</a></li>
   </ul>
 </nav>
         </div>
@@ -416,15 +414,15 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="about">About</h2>
-<p>비율 도우미를 사용하여 <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;video&gt;</code>, 그리고 <code>&lt;object&gt;</code>와 같은 외부 콘텐츠의 가로세로 비율을 관리할 수 있습니다. 이 도우미는 모든 표준 HTML 하위 요소에도 사용 할 수 있습니다 (예를 들어, <code>&lt;div&gt;</code> 또는 <code>&lt;img&gt;</code>). 스타일은 부모 <code>.ratio</code> 클래스에서 하위 요소로 직접 적용 됩니다.</p>
+        <h2 id="소개">소개</h2>
+<p>비율 도우미를 사용하여 <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;video&gt;</code>, 그리고 <code>&lt;object&gt;</code>와 같은 외부 콘텐츠의 가로세로 비율을 관리할 수 있습니다. 이 도우미는 모든 표준 HTML 자식 요소에도 사용 할 수 있습니다 (예를 들어, <code>&lt;div&gt;</code> 또는 <code>&lt;img&gt;</code>). 스타일은 부모 <code>.ratio</code> 클래스에서 자식 요소로 직접 적용 됩니다.</p>
 <p>가로세로 비율은 Sass 맵에서 선언되고 CSS 변수를 통해 각 클래스에 적용되므로 <a href="#custom-ratios">사용자 정의 가로세로 비율</a> 도 사용 할 수 있습니다.</p>
 <div class="bd-callout bd-callout-info">
-<strong>꿀팁!</strong> <a href="/docs/5.0/content/reboot/">Reboot</a>에서 자동으로 재정의하기 때문에 <code>&lt;iframe&gt;</code> 에서 <code>frameborder=&quot;0&quot;</code> 은 사용하지 않아도 됩니다.
+<strong>꿀팁!</strong> <a href="/docs/5.0/content/reboot/">Reboot</a>에서 자동으로 재정의하기 때문에 <code>&lt;iframe&gt;</code>에서 <code>frameborder=&quot;0&quot;</code> 은 사용하지 않아도 됩니다.
 </div>
 
-<h2 id="example">Example</h2>
-<p>부모요소에 <code>.ratio</code>와 가로세로 비율 클래스를 사용해 <code>&lt;iframe&gt;</code> 같은 요소를 감싸보세요. 범용 선택기 <code>.ratio &gt; *</code> 덕분에 직계 하위 요소는 사이즈가 자동으로 조정 됩니다.</p>
+<h2 id="예시">예시</h2>
+<p>부모요소에 <code>.ratio</code>와 가로세로 비율 클래스를 사용해 <code>&lt;iframe&gt;</code> 같은 요소를 감싸보세요. 범용 선택기 <code>.ratio &gt; *</code> 덕분에 직계 자식 요소는 크기가 자동으로 조정 됩니다.</p>
 <div class="bd-example">
 <div class="ratio ratio-16x9">
   <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
@@ -432,7 +430,7 @@
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ratio ratio-16x9&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.youtube.com/embed/zpOULjyy-n8?rel=0&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;YouTube video&#34;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="aspect-ratios">Aspect ratios</h2>
+<h2 id="가로세로-비율">가로세로 비율</h2>
 <p>가로세로 비율은 수정자 클래스로 사용자가 직접 정의 할 수 있습니다. 기본적으로 제공되는 비율 클래스는 다음과 같습니다.</p>
 <div class="bd-example bd-example-ratios">
 <div class="ratio ratio-1x1">
@@ -459,9 +457,9 @@
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ratio ratio-21x9&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>21x9<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="custom-ratios">Custom ratios</h2>
+<h2 id="사용자-지정-비율">사용자 지정 비율</h2>
 <p>각 <code>.ratio-*</code> 클래스는 선택기에 CSS 사용자 정의 속성 (또는 CSS 변수)이 내장되어 있습니다. 이 CSS 변수를 재정의하여 사용자전용 가로세로 비율을 즉석에서 만들 수 있습니다.</p>
-<p>예를 들어 2x1 가로세로 비율을 만들려면 <code>.ratio</code> 에서 <code>--bs-aspect-ratio: 50%</code>를 설정합니다.</p>
+<p>예를 들어 2x1 가로세로 비율을 만들려면 <code>.ratio</code>에서 <code>--bs-aspect-ratio: 50%</code>를 설정합니다.</p>
 <div class="bd-example bd-example-ratios">
 <div class="ratio" style="--bs-aspect-ratio: 50%;">
   <div>2x1</div>
@@ -469,7 +467,7 @@
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ratio&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;--bs-aspect-ratio: 50%;&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>2x1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<p>이 CSS 변수를 사용하면 중단 점에서 가로세로 비율을 쉽게 변경 할 수 있습니다. 다음은 기본 4x3비율이지만 md중단점에서 사용자가 지정한 2x1 비율로 변경됩니다.</p>
+<p>이 CSS 변수를 사용하면 중단점에서 가로세로 비율을 쉽게 변경 할 수 있습니다. 다음은 기본 4x3비율이지만 md중단점에서 사용자가 지정한 2x1 비율로 변경됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nc">.ratio-4x3</span> <span class="p">{</span>
   <span class="k">@include</span><span class="nd"> media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
     <span class="na">--bs-aspect-ratio</span><span class="o">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span> <span class="c1">// 2x1
@@ -482,8 +480,8 @@
 </div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ratio ratio-4x3&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>4x3, then 2x1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
-<h2 id="sass-map">Sass map</h2>
-<p><code>_variables.scss</code> 에서 사용하고자 하는 가로세로 비율을 변경 할 수 있습니다. 다음은 기본 <code>$ratio-aspect-ratios</code> 맵 코드 입니다. 원하시는대로 맵 코드를 수정하시고 Sass를 사용하기 위해 다시 컴파일 하세요.</p>
+<h2 id="sass-맵">Sass 맵</h2>
+<p><code>_variables.scss</code>에서 사용하고자 하는 가로세로 비율을 변경 할 수 있습니다. 다음은 기본 <code>$ratio-aspect-ratios</code> 맵 코드 입니다. 원하시는대로 맵 코드를 수정하시고 Sass를 사용하기 위해 다시 컴파일 하세요.</p>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$aspect-ratios</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;1x1&#34;</span><span class="o">:</span> <span class="mi">100</span><span class="kt">%</span><span class="o">,</span>
   <span class="s2">&#34;4x3&#34;</span><span class="o">:</span> <span class="nf">calc</span><span class="p">(</span><span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">100</span><span class="kt">%</span><span class="p">)</span><span class="o">,</span>
@@ -516,7 +514,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

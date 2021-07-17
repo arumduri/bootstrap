@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded active" aria-current="page">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -401,22 +401,22 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#individual-or-compiled">Individual or compiled</a></li>
-    <li><a href="#using-bootstrap-as-a-module">Using Bootstrap as a module</a></li>
-    <li><a href="#dependencies">Dependencies</a></li>
-    <li><a href="#still-want-to-use-jquery-its-possible">Still want to use jQuery? It&rsquo;s possible!</a></li>
-    <li><a href="#data-attributes">Data attributes</a></li>
-    <li><a href="#events">Events</a></li>
-    <li><a href="#programmatic-api">Programmatic API</a>
+    <li><a href="#개별-또는-컴파일">개별 또는 컴파일</a></li>
+    <li><a href="#bootstrap을-모듈로-사용하기">Bootstrap을 모듈로 사용하기</a></li>
+    <li><a href="#의존성">의존성</a></li>
+    <li><a href="#jquery를-계속-사용하고-싶으신가요-가능합니다">jQuery를 계속 사용하고 싶으신가요? 가능합니다!</a></li>
+    <li><a href="#데이터-속성">데이터 속성</a></li>
+    <li><a href="#이벤트">이벤트</a></li>
+    <li><a href="#프로그래매틱-api">프로그래매틱 API</a>
       <ul>
-        <li><a href="#css-selectors-in-constructors">CSS selectors in constructors</a></li>
-        <li><a href="#asynchronous-functions-and-transitions">Asynchronous functions and transitions</a></li>
-        <li><a href="#default-settings">Default settings</a></li>
+        <li><a href="#생성자에서의-css-선택자">생성자에서의 CSS 선택자</a></li>
+        <li><a href="#비동기-기능-및-트랜지션">비동기 기능 및 트랜지션</a></li>
+        <li><a href="#기본-설정값">기본 설정값</a></li>
       </ul>
     </li>
-    <li><a href="#no-conflict-only-if-you-use-jquery">No conflict (only if you use jQuery)</a></li>
-    <li><a href="#version-numbers">Version numbers</a></li>
-    <li><a href="#no-special-fallbacks-when-javascript-is-disabled">No special fallbacks when JavaScript is disabled</a></li>
+    <li><a href="#충돌-방지-jquery를-사용하는-경우에만">충돌 방지 (jQuery를 사용하는 경우에만)</a></li>
+    <li><a href="#버전-번호">버전 번호</a></li>
+    <li><a href="#javascript가-비활성화된-경우-특별한-폴백-없음">JavaScript가 비활성화된 경우 특별한 폴백 없음</a></li>
     <li><a href="#sanitizer">Sanitizer</a></li>
   </ul>
 </nav>
@@ -426,10 +426,10 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="individual-or-compiled">Individual or compiled</h2>
+        <h2 id="개별-또는-컴파일">개별 또는 컴파일</h2>
 <p>(Bootstrap의 독립된 <code>js/dist/*.js</code>를 이용해서) 플러그인을 별도로 포함시키거나, <code>bootstrap.js</code> 또는 경량화된 <code>bootstrap.min.js</code> (둘 다 포함하면 안됨)을 이용해서 한 번에 포함하세요.</p>
-<p>번들러 (웹팩, Rollup&hellip;)를 사용한다면 UMD를 위해서 준비된 <code>/js/dist/*.js</code>을 사용할 수도 있습니다.</p>
-<h2 id="using-bootstrap-as-a-module">Using Bootstrap as a module</h2>
+<p>번들러 (webpack, Rollup&hellip;)를 사용한다면 UMD를 위해서 준비된 <code>/js/dist/*.js</code>을 사용할 수도 있습니다.</p>
+<h2 id="bootstrap을-모듈로-사용하기">Bootstrap을 모듈로 사용하기</h2>
 <p><a href="https://caniuse.com/es6-module">타게팅하려는 브라우저가 지원하는 경우</a> 브라우저에서 Bootstrap를 모듈로 사용할 수 있도록 <code>ESM</code> (<code>bootstrap.esm.js</code> 및 <code>bootstrap.esm.min.js</code>)으로 빌드된 버전을 제공합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;module&#34;</span><span class="p">&gt;</span>
   <span class="kr">import</span> <span class="p">{</span> <span class="nx">Toast</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap.esm.min.js&#39;</span>
@@ -442,12 +442,12 @@
 <p>브라우저 제한으로 인해 드롭다운, 툴팁 및 팝오버 플러그인과 같은 일부 플러그인은 Popper에 의존하기 때문에 <code>module</code> 유형이 있는 <code>&lt;script&gt;</code> 태그에서 사용할 수 없습니다. 이 문제에 대해 자세히 알아보려면 <a href="https://v8.dev/features/modules#specifiers">여기</a>를 참고해주세요.
 </div>
 
-<h2 id="dependencies">Dependencies</h2>
+<h2 id="의존성">의존성</h2>
 <p>일부 플러그인 및 CSS 컴포넌트는 다른 플러그인에 의존합니다. 플러그인을 개별적으로 포함하려면 문서에서 이러한 종속성을 확인해주세요</p>
 <p>드롭다운, 팝오버, 툴팁도 <a href="https://popper.js.org/">Popper</a>에 의존하고 있습니다.</p>
-<h2 id="still-want-to-use-jquery-its-possible">Still want to use jQuery? It&rsquo;s possible!</h2>
+<h2 id="jquery를-계속-사용하고-싶으신가요-가능합니다">jQuery를 계속 사용하고 싶으신가요? 가능합니다!</h2>
 <p>Bootstrap 5는 jQuery 없이도 사용할 수 있게 설계되었지만 여전히 jQuery와 함께 컴포넌트를 사용할 수 있습니다. <strong>Bootstrap이 <code>window</code> 객체에서 <code>jQuery</code>를 감지하면</strong> jQuery의 플러그인 시스템에 모든 컴포넌트를 추가합니다. 즉, 툴팁을 활성화하기 위해서 <code>$('[data-bs-toggle=&quot;tooltip&quot;]').tooltip()</code>를 사용할 수 있게 됩니다. 이는 다른 컴포넌트에도 적용됩니다.</p>
-<h2 id="data-attributes">Data attributes</h2>
+<h2 id="데이터-속성">데이터 속성</h2>
 <p>거의 모든 Bootstrap 플러그인은 데이터 속성 (JavaScript 기능을 사용하는 권장 방법)과 함께 HTML을 통해서만 활성화 및 구성할 수 있습니다. <strong>단일 요소의 한 세트의 데이터 속성만 사용해야 합니다.</strong> (예: 동일한 버튼으로 툴팁과 모달을 트리거할 수 없음)</p>
 <div class="bd-callout bd-callout-warning">
 <h2 id="선택자">선택자</h2>
@@ -455,7 +455,7 @@
 <code>collapse:Example</code>와 같은 특수 선택자를 사용하는 경우 이스케이프를 해주셔야 합니다.
 </div>
 
-<h2 id="events">Events</h2>
+<h2 id="이벤트">이벤트</h2>
 <p>Bootstrap은 대부분의 플러그인 고유 작업에 대한 사용자 지정 이벤트를 제공합니다. 일반적으로 이것들은 부정사 (infinitive) 및 과거분사 (past participle)의 형태로 제공됩니다. 부정사 (예: <code>show</code>)는 이벤트가 시작될 때 트리거되고 과거분사 (예: <code>shown</code>)는 동작이 완료될 때 트리거됩니다.</p>
 <p>모든 부정사 이벤트는 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>preventDefault()</code></a> 기능을 제공합니다. 이것은 시작하기 전에 작업 실행을 중지하는 기능을 제공합니다. 이벤트 핸들러에서 false를 반환하면 자동으로 <code>preventDefault()</code>를 호출합니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myModal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myModal&#39;</span><span class="p">)</span>
@@ -474,18 +474,18 @@
 </code></pre></div>
 </div>
 
-<h2 id="programmatic-api">Programmatic API</h2>
+<h2 id="프로그래매틱-api">프로그래매틱 API</h2>
 <p>모든 생성자는 선택적 옵션 객체를 허용하거나 (기본 동작으로 플러그인을 시작한다면) 아무것도 허용하지 않습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myModalEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myModal&#39;</span><span class="p">)</span>
 
 <span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nx">myModalEl</span><span class="p">)</span> <span class="c1">// initialized with defaults
 </span><span class="c1"></span><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="nx">myModalEl</span><span class="p">,</span> <span class="p">{</span> <span class="nx">keyboard</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span> <span class="c1">// initialized with no keyboard
 </span></code></pre></div><p>특정 플러그인 인스턴스를 가져오려면 각 플러그인이 <code>getInstance</code> 메서드를 노출합니다. 요소에서 직접 가져오려면 <code>bootstrap.Popover.getInstance(myPopoverEl)</code>를 사용해주세요.</p>
-<h3 id="css-selectors-in-constructors">CSS selectors in constructors</h3>
+<h3 id="생성자에서의-css-선택자">생성자에서의 CSS 선택자</h3>
 <p>플러그인을 초기화하기 위해 DOM 요소 대신 CSS 선택자를 첫 번째 인수로 사용할 수도 있습니다. 현재 플러그인의 요소는 단일 요소만 지원하므로 <code>querySelector</code> 메소드에 의해 발견됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">dropdown</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Dropdown</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;dropdown&#34;]&#39;</span><span class="p">)</span>
-</code></pre></div><h3 id="asynchronous-functions-and-transitions">Asynchronous functions and transitions</h3>
+</code></pre></div><h3 id="비동기-기능-및-트랜지션">비동기 기능 및 트랜지션</h3>
 <p>모든 프로그래밍 가능한 API 메서드는 <strong>비동기적</strong>이며 트랜지션이 시작되고 <strong>종료되기 전에</strong> 호출자에게 반환됩니다.</p>
 <p>트랜지션이 완료된 후 작업을 실행하기 위해 해당 이베트를 수신할 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">myCollapseEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myCollapse&#39;</span><span class="p">)</span>
@@ -503,23 +503,23 @@
 
 <span class="nx">carousel</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span> <span class="c1">// Will start sliding to the slide 1 and returns to the caller
 </span><span class="c1"></span><span class="nx">carousel</span><span class="p">.</span><span class="nx">to</span><span class="p">(</span><span class="s1">&#39;2&#39;</span><span class="p">)</span> <span class="c1">// !! Will be ignored, as the transition to the slide 1 is not finished !!
-</span></code></pre></div><h3 id="default-settings">Default settings</h3>
+</span></code></pre></div><h3 id="기본-설정값">기본 설정값</h3>
 <p>플러그인의 <code>Contsructor.Default</code> 객체를 수정하여 플러그인의 기본 설정을 변경할 수 있습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// changes default for the modal plugin&#39;s `keyboard` option to false
 </span><span class="c1"></span><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">.</span><span class="nx">Default</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span>
-</code></pre></div><h2 id="no-conflict-only-if-you-use-jquery">No conflict (only if you use jQuery)</h2>
+</code></pre></div><h2 id="충돌-방지-jquery를-사용하는-경우에만">충돌 방지 (jQuery를 사용하는 경우에만)</h2>
 <p>가끔 다른 UI 프레임워크와 함께 Bootstrap을 사용해야 할 수도 있습니다. 이런 경우 네임스페이스 충돌이 발생할 수도 있습니다. 이러한 문제가 발생할 경우 값을 되돌리려는 플러그인에 <code>.noConflict</code> 값을 호출할 수 있습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">bootstrapButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value
 </span><span class="c1"></span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">bootstrapBtn</span> <span class="o">=</span> <span class="nx">bootstrapButton</span> <span class="c1">// give $().bootstrapBtn the Bootstrap functionality
-</span></code></pre></div><h2 id="version-numbers">Version numbers</h2>
+</span></code></pre></div><h2 id="버전-번호">버전 번호</h2>
 <p>Bootstrap 플러그인의 각 버전은 <code>VERSION</code> 속성
 각 Bootstrap 플러그인 버전은 플러그인 생성자의 <code>VERSION</code> 속성을 통해 접근할 수 있습니다. 툴팁 플러그인을 예로 들자면 다음과 같습니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; &#34;5.0.2&#34;
-</span></code></pre></div><h2 id="no-special-fallbacks-when-javascript-is-disabled">No special fallbacks when JavaScript is disabled</h2>
+</span></code></pre></div><h2 id="javascript가-비활성화된-경우-특별한-폴백-없음">JavaScript가 비활성화된 경우 특별한 폴백 없음</h2>
 <p>Bootstrap의 플러그인은 JavaScript가 비활성화되어있을 때 특히 멋있게 폴백되지 않습니다. 이 경우 사용자 경험에 관심이 있다면 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a>를 사용해서 상황 (및 JavaScript를 다시 활성화하는 방법)을 사용자에게 설명하거나 직접 만든 폴백을 추가하세요.</p>
 <div class="bd-callout bd-callout-warning">
-<h5 id="서드파티-라이브러리">서드파티 라이브러리</h5>
-<p>Bootstrap은 Prototype 또는 jQuery UI 같은 <strong>서드파티 라이브러리를 공식적으로 지원하지 않습니다.</strong>  <code>.noConflict</code> 및 네임스페이스 이벤트가 있긴 하지만 직접 수정해야하는 호환성 문제가 있을 수도 있습니다.
+<h5 id="서드-파티-라이브러리">서드 파티 라이브러리</h5>
+<p>Bootstrap은 Prototype 또는 jQuery UI 같은 <strong>서드 파티 라이브러리를 공식적으로 지원하지 않습니다.</strong>  <code>.noConflict</code> 및 네임스페이스 이벤트가 있긴 하지만 직접 수정해야하는 호환성 문제가 있을 수도 있습니다.
 </div>
 
 <h2 id="sanitizer">Sanitizer</h2>
@@ -604,7 +604,7 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>

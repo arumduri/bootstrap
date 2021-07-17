@@ -89,7 +89,7 @@
           <a class="nav-link p-2 active" aria-current="true" href="/docs/5.0/getting-started/introduction/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">문서</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
-          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예제</a>
+          <a class="nav-link p-2" href="/docs/5.0/examples/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">예시</a>
         </li>
         <li class="nav-item col-6 col-md-auto">
           <a class="nav-link p-2" href="https://icons.getbootstrap.kr/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Icons');" target="_blank" rel="noopener">아이콘</a>
@@ -194,7 +194,7 @@
               <li><a href="/docs/5.0/getting-started/browsers-devices/" class="d-inline-flex align-items-center rounded">브라우저 &amp; 기기</a></li>
               <li><a href="/docs/5.0/getting-started/javascript/" class="d-inline-flex align-items-center rounded">JavaScript</a></li>
               <li><a href="/docs/5.0/getting-started/build-tools/" class="d-inline-flex align-items-center rounded">빌드 도구</a></li>
-              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">웹팩</a></li>
+              <li><a href="/docs/5.0/getting-started/webpack/" class="d-inline-flex align-items-center rounded">Webpack</a></li>
               <li><a href="/docs/5.0/getting-started/parcel/" class="d-inline-flex align-items-center rounded">Parcel</a></li>
               <li><a href="/docs/5.0/getting-started/accessibility/" class="d-inline-flex align-items-center rounded">접근성</a></li>
               <li><a href="/docs/5.0/getting-started/rfs/" class="d-inline-flex align-items-center rounded">RFS</a></li>
@@ -204,7 +204,7 @@
       </li>
       <li class="mb-1">
         <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#customize-collapse" aria-expanded="false">
-          커스터마이징
+          사용자 지정
         </button>
 
         <div class="collapse" id="customize-collapse">
@@ -229,7 +229,7 @@
               <li><a href="/docs/5.0/layout/breakpoints/" class="d-inline-flex align-items-center rounded">중단점</a></li>
               <li><a href="/docs/5.0/layout/containers/" class="d-inline-flex align-items-center rounded">컨테이너</a></li>
               <li><a href="/docs/5.0/layout/grid/" class="d-inline-flex align-items-center rounded">그리드</a></li>
-              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">컬럼</a></li>
+              <li><a href="/docs/5.0/layout/columns/" class="d-inline-flex align-items-center rounded">열</a></li>
               <li><a href="/docs/5.0/layout/gutters/" class="d-inline-flex align-items-center rounded">거터</a></li>
               <li><a href="/docs/5.0/layout/utilities/" class="d-inline-flex align-items-center rounded">유틸리티</a></li>
               <li><a href="/docs/5.0/layout/z-index/" class="d-inline-flex align-items-center rounded">Z-index</a></li>
@@ -340,7 +340,7 @@
               <li><a href="/docs/5.0/utilities/shadows/" class="d-inline-flex align-items-center rounded">그림자</a></li>
               <li><a href="/docs/5.0/utilities/sizing/" class="d-inline-flex align-items-center rounded">크기 조절</a></li>
               <li><a href="/docs/5.0/utilities/spacing/" class="d-inline-flex align-items-center rounded">간격</a></li>
-              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">글자</a></li>
+              <li><a href="/docs/5.0/utilities/text/" class="d-inline-flex align-items-center rounded">텍스트</a></li>
               <li><a href="/docs/5.0/utilities/vertical-align/" class="d-inline-flex align-items-center rounded">수직 정렬</a></li>
               <li><a href="/docs/5.0/utilities/visibility/" class="d-inline-flex align-items-center rounded">가시성</a></li>
           </ul>
@@ -390,9 +390,7 @@
           <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/components/tooltips.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
           <h1 class="bd-title" id="content">툴팁</h1>
         </div>
-        
         <h6 class="text-muted" id="content">// Tooltips</h1>
-        
         <p class="bd-lead">CSS3를 사용한 애니메이션이나 data-bs-attributes를 사용한 CSS와 JavaScript로 사용자 정의 Bootstrap의 툴팁을 추가하기 위한 문서와 예시입니다.</p>
         
 
@@ -403,24 +401,24 @@
           <strong class="d-block h6 my-2 pb-2 border-bottom">목차</strong>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#example-enable-tooltips-everywhere">Example: Enable tooltips everywhere</a></li>
-    <li><a href="#examples">Examples</a></li>
+    <li><a href="#개요">개요</a></li>
+    <li><a href="#예시-모든-곳에서-툴팁-활성화">예시: 모든 곳에서 툴팁 활성화</a></li>
+    <li><a href="#예시">예시</a></li>
     <li><a href="#sass">Sass</a>
       <ul>
-        <li><a href="#variables">Variables</a></li>
+        <li><a href="#변수">변수</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#사용-방법">사용 방법</a>
       <ul>
-        <li><a href="#markup">Markup</a></li>
-        <li><a href="#disabled-elements">Disabled elements</a></li>
-        <li><a href="#options">Options</a>
+        <li><a href="#마크업">마크업</a></li>
+        <li><a href="#비활성화-요소">비활성화 요소</a></li>
+        <li><a href="#옵션">옵션</a>
           <ul>
-            <li><a href="#using-function-with-popperconfig">Using function with <code>popperConfig</code></a></li>
+            <li><a href="#popperconfig으로-기능-사용하기"><code>popperConfig</code>으로 기능 사용하기</a></li>
           </ul>
         </li>
-        <li><a href="#methods">Methods</a>
+        <li><a href="#메소드">메소드</a>
           <ul>
             <li><a href="#show">show</a></li>
             <li><a href="#hide">hide</a></li>
@@ -434,7 +432,7 @@
             <li><a href="#getorcreateinstance">getOrCreateInstance</a></li>
           </ul>
         </li>
-        <li><a href="#events">Events</a></li>
+        <li><a href="#이벤트">이벤트</a></li>
       </ul>
     </li>
   </ul>
@@ -445,16 +443,16 @@
       <div class="bd-content ps-lg-4">
         
 
-        <h2 id="overview">Overview</h2>
+        <h2 id="개요">개요</h2>
 <p>툴팁 플러그인을 사용할 때 알아두어야 할 점:</p>
 <ul>
-<li>툴팁의 배치는 <a href="https://popper.js.org/">Popper</a>에 의존하고 있습니다. bootstrap.js 앞에 <a href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">popper.min.js</a> 를 사용하거나, 툴팁을 동작시키기 위해 팝오버를 포함한 <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code>를 사용해야 합니다.</li>
+<li>툴팁의 배치는 <a href="https://popper.js.org/">Popper</a>에 의존하고 있습니다. bootstrap.js 앞에 <a href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">popper.min.js</a>를 사용하거나, 툴팁을 동작시키기 위해 팝오버를 포함한 <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code>를 사용해야 합니다.</li>
 <li>툴팁은 퍼포먼스를 위해 opt-in 되어 있기 때문에 <strong>스스로 초기화를 해야 합니다.</strong></li>
 <li>길이가 0의 타이틀을 가진 툴팁은 표시되지 않습니다.</li>
 <li>더 복잡한 컴포넌트(input group, button groups 등)의 렌더링 문제를 피하기 위해 <code>container: 'body'</code>를 지정해 주십시오.</li>
 <li>숨겨진 요소에서 툴팁을 트리거 해도 제 기능을 하지 않습니다.</li>
 <li><code>.disabled</code>나 <code>disabled</code> 요소의 툴팁은 그 위(바깥) 요소에서 트리거 해야 합니다.</li>
-<li>여러 라인에 걸쳐 있는 하이퍼링크에서 트리거된 툴팁은 중앙에 배치됩니다. 이 동작을 피하기 위해서는 <code>&lt;a&gt;</code>에 <code>white-space: nowrap;</code> 을 사용해 주십시오.</li>
+<li>여러 라인에 걸쳐 있는 하이퍼링크에서 트리거된 툴팁은 중앙에 배치됩니다. 이 동작을 피하기 위해서는 <code>&lt;a&gt;</code>에 <code>white-space: nowrap;</code>을 사용해 주십시오.</li>
 <li>툴팁은 대응 요소가 DOM에서 삭제되기 전에 숨겨야 합니다.</li>
 <li>툴팁은 shadow DOM 내의 요소 덕분에 트리거할 수 있습니다.</li>
 </ul>
@@ -467,13 +465,13 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </div>
 
 <p>몇 가지 예를 들어보겠습니다.</p>
-<h2 id="example-enable-tooltips-everywhere">Example: Enable tooltips everywhere</h2>
+<h2 id="예시-모든-곳에서-툴팁-활성화">예시: 모든 곳에서 툴팁 활성화</h2>
 <p>페이지 상의 모든 툴팁을 초기화 하는 방법 중 하나는 <code>data-bs-toggle</code> 속성으로 선택하는 것입니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tooltipTriggerList</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;tooltip&#34;]&#39;</span><span class="p">))</span>
 <span class="kd">var</span> <span class="nx">tooltipList</span> <span class="o">=</span> <span class="nx">tooltipTriggerList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">tooltipTriggerEl</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">tooltipTriggerEl</span><span class="p">)</span>
 <span class="p">})</span>
-</code></pre></div><h2 id="examples">Examples</h2>
+</code></pre></div><h2 id="예시">예시</h2>
 <p>아래 링크에 커서를 맞추면 툴팁이 나타납니다:</p>
 <div class="bd-example tooltip-demo">
   <p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" title="The last tip!">your own</a> site or project.
@@ -515,7 +513,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   </a>
 </div>
 <h2 id="sass">Sass</h2>
-<h3 id="variables">Variables</h3>
+<h3 id="변수">변수</h3>
 <div class="highlight"><pre class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$tooltip-font-size</span><span class="o">:</span>                 <span class="nv">$font-size-sm</span><span class="p">;</span>
 <span class="nv">$tooltip-max-width</span><span class="o">:</span>                 <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
 <span class="nv">$tooltip-color</span><span class="o">:</span>                     <span class="nv">$white</span><span class="p">;</span>
@@ -530,7 +528,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <span class="nv">$tooltip-arrow-height</span><span class="o">:</span>              <span class="mf">.4</span><span class="kt">rem</span><span class="p">;</span>
 <span class="nv">$tooltip-arrow-color</span><span class="o">:</span>               <span class="nv">$tooltip-bg</span><span class="p">;</span>
 </code></pre></div>
-<h2 id="usage">Usage</h2>
+<h2 id="사용-방법">사용 방법</h2>
 <p>툴팁 플러그인은 필요에 따라 콘텐츠와 마크업을 생성하고 기본 값으로는 트리거 요소 뒤에 툴팁을 배치합니다.</p>
 <p>JavaScript를 사용해 툴팁을 트리거 합니다:</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
@@ -545,11 +543,11 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </code></pre></div>
 </div>
 
-<h3 id="markup">Markup</h3>
-<p>툴팁에 필요한 마크업은 툴팁을 작성하고자 하는 HTML 요소의 <code>data</code> 속성과 <code>title</code> 뿐입니다. 툴팁 마크업은 단순하지만 위치를 지정해야 합니다 (플러그인에 의해 기본 <code>top</code> 이 설정되어 있습니다).</p>
+<h3 id="마크업">마크업</h3>
+<p>툴팁에 필요한 마크업은 툴팁을 작성하고자 하는 HTML 요소의 <code>data</code> 속성과 <code>title</code> 뿐입니다. 툴팁 마크업은 단순하지만 위치를 지정해야 합니다 (플러그인에 의해 기본 <code>top</code>이설정되어 있습니다).</p>
 <div class="bd-callout bd-callout-warning">
-<h5 id="making-tooltips-work-for-keyboard-and-assistive-technology-users">Making tooltips work for keyboard and assistive technology users</h5>
-<p>툴팁을 추가해야 하는 부분은 키보드로 포커스가 가능하고 상호작용이 가능한 HTML 요소(링크나 폼 컨트롤 등)뿐 입니다. 임의의 HTML 요소(<code>&lt;span&gt;</code> 등)는 <code>tabindex=&quot;0&quot;</code> 속성을 추가하여 포커스가 가능하게 할 수 있지만 이는 키보드 사용자에게 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 키보드 사용자를 곤란하게 하거나 혼란스럽게 할 수 있으며 현재 대부분의 스크린 리더는 이러한 상황에서 툴팁을 제공하지 않습니다. 게다가 툴팁의 트리거로서 <code>hover</code> 에만 의지해서는 안됩니다. 이것은 키보드 사용자가 툴팁을 트리거 할 수 없게 되기 때문입니다.
+<h5 id="키보드-및-보조-기술-사용자를-위한-툴팁-만들기">키보드 및 보조 기술 사용자를 위한 툴팁 만들기</h5>
+<p>툴팁을 추가해야 하는 부분은 키보드로 포커스가 가능하고 상호작용이 가능한 HTML 요소(링크나 폼 컨트롤 등)뿐 입니다. 임의의 HTML 요소(<code>&lt;span&gt;</code> 등)는 <code>tabindex=&quot;0&quot;</code> 속성을 추가하여 포커스가 가능하게 할 수 있지만 이는 키보드 사용자에게 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 키보드 사용자를 곤란하게 하거나 혼란스럽게 할 수 있으며 현재 대부분의 스크린 리더는 이러한 상황에서 툴팁을 제공하지 않습니다. 게다가 툴팁의 트리거로서 <code>hover</code>에만 의지해서는 안됩니다. 이것은 키보드 사용자가 툴팁을 트리거 할 수 없게 되기 때문입니다.
 </div>
 
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- HTML to write --&gt;</span>
@@ -562,8 +560,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     Some tooltip text!
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div><h3 id="disabled-elements">Disabled elements</h3>
-<p><code>disabled</code> 속성을 갖는 요소는 상호작용할 수 없습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁 (혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 <code>&lt;div&gt;</code> 나 <code>&lt;span&gt;</code> 으로 툴팁을 트리거하여, 이상적으로 <code>tabindex=&quot;0&quot;</code>을 사용해서 키보드로 포커스가 가능하도록 해야합니다.</p>
+</code></pre></div><h3 id="비활성화-요소">비활성화 요소</h3>
+<p><code>disabled</code> 속성을 갖는 요소는 상호작용할 수 없습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁 (혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 <code>&lt;div&gt;</code> 나 <code>&lt;span&gt;</code>으로 툴팁을 트리거하여, 이상적으로 <code>tabindex=&quot;0&quot;</code>을 사용해서 키보드로 포커스가 가능하도록 해야합니다.</p>
 <div class="tooltip-demo">
 <div class="bd-example">
 <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Disabled tooltip">
@@ -573,8 +571,8 @@ The animation effect of this component is dependent on the <code>prefers-reduced
   <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>Disabled button<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></code></pre></div>
 </div>
-<h3 id="options">Options</h3>
-<p>옵션은 data 속성이나 JavaScript로 전달할 수 있습니다. data 속성의 경우는, <code>data-bs-animation=&quot;&quot;</code>과 같이 <code>data-bs-</code>에 옵션 명을 추가합니다. data 속성으로 옵션을 전달하려면 옵션 명의 대문자와 소문자를 캐멀케이스(camelCase)에서 케밥케이스(kebab-case)로 변경해 주세요. 예를 들어 <code>data-bs-customClass=&quot;beautifier&quot;</code>가 아니라 <code>data-bs-custom-class=&quot;beautifier&quot;</code>로 해야 합니다.</p>
+<h3 id="옵션">옵션</h3>
+<p>옵션은 data 속성이나 JavaScript로 전달할 수 있습니다. data 속성의 경우는, <code>data-bs-animation=&quot;&quot;</code>과 같이 <code>data-bs-</code>에 옵션명을 추가합니다. data 속성으로 옵션을 전달하려면 옵션명의 대문자와 소텍스트를 캐멀케이스(camelCase)에서 케밥케이스(kebab-case)로 변경해 주세요. 예를 들어 <code>data-bs-customClass=&quot;beautifier&quot;</code>가 아니라 <code>data-bs-custom-class=&quot;beautifier&quot;</code>로 해야 합니다.</p>
 <div class="bd-callout bd-callout-warning">
 보안상의 이유로, <code>sanitize</code>, <code>sanitizeFn</code>, <code>allowList</code> 옵션을 data 속성으로 지정할 수 없다는 것에 주의해 주세요.
 </div>
@@ -620,7 +618,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td>
         <p>툴팁내의 HTML을 허용합니다.</p>
         <p>true의 경우, 툴팁의 <code>title</code>에 있는 HTML 태그가 툴팁에 나타납니다. false 의 경우는, <code>innerText</code> 속성이 DOM에 콘텐츠를 삽입하기 위해 사용됩니다.</p>
-        <p>XSS 공격이 걱정된다면 문자를 사용하세요.</p>
+        <p>XSS 공격이 걱정된다면 텍스트를 사용하세요.</p>
       </td>
     </tr>
     <tr>
@@ -636,7 +634,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>셀렉타가 제공되는 경우 툴팁 객체는 지정된 타깃으로 이양됩니다. 실제로는 동적으로 추가된 DOM 요소에 툴팁을 적용하기 위해서도 사용됩니다.(<code>jQuery.on</code> 지원). <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> 와 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
+      <td>셀렉터가 제공되는 경우 툴팁 객체는 지정된 타깃으로 이양됩니다. 실제로는 동적으로 추가된 DOM 요소에 툴팁을 적용하기 위해서도 사용됩니다.(<code>jQuery.on</code> 지원). <a href="https://github.com/twbs/bootstrap/issues/4215">this</a> 와 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>template</code></td>
@@ -672,7 +670,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
       <td><code>fallbackPlacements</code></td>
       <td>array</td>
       <td><code>['top', 'right', 'bottom', 'left']</code></td>
-      <td>폴백 배치를 정의하려면 배치 목록을 배열로 지정합니다(우선순위 순서). 자세한 내용은 팝오버의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a>를 참조해 주세요.</td>
+      <td>폴백 배치를 정의하려면 배치 목록을 배열로 지정합니다 (우선순위 순서). 자세한 내용은 팝오버의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements">behavior docs</a>를 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>boundary</code></td>
@@ -733,7 +731,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p>개별 툴팁 옵션은 위에서 설명한 것처럼 data 속성을 사용해 지정할 수도 있습니다.
 </div>
 
-<h4 id="using-function-with-popperconfig">Using function with <code>popperConfig</code></h4>
+<h4 id="popperconfig으로-기능-사용하기"><code>popperConfig</code>으로 기능 사용하기</h4>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">popperConfig</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">defaultBsPopperConfig</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// var newPopperConfig = {...}
@@ -741,7 +739,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 </span><span class="c1"></span>    <span class="c1">// return newPopperConfig
 </span><span class="c1"></span>  <span class="p">}</span>
 <span class="p">})</span>
-</code></pre></div><h3 id="methods">Methods</h3>
+</code></pre></div><h3 id="메소드">메소드</h3>
 <div class="bd-callout bd-callout-danger">
 <h4 id="asynchronous-methods-and-transitions">Asynchronous methods and transitions</h4>
 <p>All API methods are <strong>asynchronous</strong> and start a <strong>transition</strong>. They return to the caller as soon as the transition is started but <strong>before it ends</strong>. In addition, a method call on a <strong>transitioning component will be ignored</strong>.</p>
@@ -759,7 +757,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p>요소의 툴팁을 토글합니다. <strong>툴팁이 실제로 표시되거나 숨겨지기 전에 호출한 곳으로 돌아갑니다</strong> (즉, <code>shown.bs.tooltip</code> 혹은 <code>hidden.bs.tooltip</code> 이벤트가 발생하기 전). 이것은 툴팁의 &ldquo;수동&rdquo; 트리거로 간주됩니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">toggle</span><span class="p">()</span>
 </code></pre></div><h4 id="dispose">dispose</h4>
-<p>요소의 툴팁을 숨기고 업앱니다(DOM 요소에 보존되어 있는 데이터를 삭제). 위임을 사용하는 툴팁(<a href="#options">the <code>selector</code> option</a> 을 사용하여 작성된 것)은 후손의 트리거 요소상에서 개별적으로 없앨수 없습니다.</p>
+<p>요소의 툴팁을 숨기고 업앱니다 (DOM 요소에 보존되어 있는 데이터를 삭제). 위임을 사용하는 툴팁(<a href="#options">the <code>selector</code> option</a>을 사용하여 작성된 것)은 후손의 트리거 요소상에서 개별적으로 없앨수 없습니다.</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">tooltip</span><span class="p">.</span><span class="nx">dispose</span><span class="p">()</span>
 </code></pre></div><h4 id="enable">enable</h4>
 <p>요소의 툴팁을 표시하는 기능을 부여합니다. <strong>툴팁은 기본적으로 활성화되어 있습니다.</strong></p>
@@ -781,7 +779,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
 <p><em>Static</em> method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialised</p>
 <div class="highlight"><pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">exampleTriggerEl</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;example&#39;</span><span class="p">)</span>
 <span class="kd">var</span> <span class="nx">tooltip</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tooltip</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">exampleTriggerEl</span><span class="p">)</span> <span class="c1">// Returns a Bootstrap tooltip instance
-</span></code></pre></div><h3 id="events">Events</h3>
+</span></code></pre></div><h3 id="이벤트">이벤트</h3>
 <table class="table">
   <thead>
     <tr>
@@ -796,7 +794,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
     </tr>
     <tr>
       <td><code>shown.bs.tooltip</code></td>
-      <td>이 이벤트는 툴팁이 사용자에게 보일 때 발생합니다(CSS 트렌지션이 완료되기를 기다립니다).</td>
+      <td>이 이벤트는 툴팁이 사용자에게 보일 때 발생합니다 (CSS 트렌지션이 완료되기를 기다립니다).</td>
     </tr>
     <tr>
       <td><code>hide.bs.tooltip</code></td>
@@ -845,7 +843,7 @@ The animation effect of this component is dependent on the <code>prefers-reduced
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/5.0/">문서</a></li>
-          <li class="mb-2"><a href="/docs/5.0/examples/">예제</a></li>
+          <li class="mb-2"><a href="/docs/5.0/examples/">예시</a></li>
           <li class="mb-2"><a href="https://opencollective.com/bootstrap">테마</a></li>
           <li class="mb-2"><a href="https://blog.getbootstrap.com/">블로그</a></li>
         </ul>
