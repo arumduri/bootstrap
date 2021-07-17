@@ -18,7 +18,7 @@ Bootstrap의 사이드 프로젝트인 [RFS](https://github.com/twbs/rfs/tree/v{
 
 ### 믹스인 사용하기
 
-`rfs()` 믹스인 `font-size`, `margin`, `margin-top`, `margin-right`, `margin-bottom`, `margin-left`, `padding`, `padding-top`, `padding-right`, `padding-bottom`, 그리고 `padding-left`에 대한 약어가 있습니다. 소스 Sass 및 컴파일 된 CSS에 대해서는 아래 예시를 참조하세요.
+`rfs()` 믹스인 `font-size`, `margin`, `margin-top`, `margin-right`, `margin-bottom`, `margin-left`, `padding`, `padding-top`, `padding-right`, `padding-bottom`, 그리고 `padding-left`에 대한 약어가 있습니다. 소스 Sass 및 컴파일된 CSS에 대해서는 아래 예시를 참조하세요.
 
 ```scss
 .title {

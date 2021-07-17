@@ -11,7 +11,7 @@ toc: true
 
 팝오버 플러그인을 사용할 때 알아두어야 할 점:
 
-- 팝오버는 [Popper](https://popper.js.org/)에 의존하고 있습니다. 팝오버를 동작시키기 위해서는 bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}}) 를 쓰거나 Popper를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`를 사용해야 합니다.
+- 팝오버는 [Popper](https://popper.js.org/)에 의존하고 있습니다. 팝오버를 동작시키기 위해서는 bootstrap.js 앞에 [popper.min.js]({{< param "cdn.popper" >}})를 쓰거나 Popper를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`를 사용해야 합니다.
 - 팝오버는, 의존관계로 [tooltip plugin]({{< docsref "/components/tooltips" >}})이 필요합니다.
 - 팝오버는 퍼포먼스를 위해 opt-in 되어 있기 때문에, **스스로 초기화를 해야 합니다.**
 - 길이가 0인 `title` 과 `content` 값은 팝오버를 표시하지 않습니다.
@@ -32,7 +32,7 @@ toc: true
 
 팝오버가 어떤 기능을 하는지 몇 가지 예를 들어 보겠습니다.
 
-## 예시: Enable popovers everywhere
+## 예시: 모든 곳에서 팝오버 활성화
 
 페이지 상의 모든 팝오버를 초기화하는 방법 중 하나는 `data-bs-toggle` 속성으로 선택하는 것입니다:
 
@@ -43,7 +43,7 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 })
 ```
 
-## 예시: Using the `container` option
+## 예시: `container` 옵션 사용하기
 
 부모 요소에 팝오버를 방해하는 몇 가지 스타일이 있다면, 대신 사용자 정의 `container`를 지정하여 팝오버의 HTML을 해당 요소 내에 표시되도록 합니다.
 
@@ -59,7 +59,7 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
 {{< /example >}}
 
-### Four directions
+### 사방위
 
 4가지 옵션이 있습니다: top, right, bottom, left. RTL에서 Bootstrap을 사용하는 경우 방향은 반대가 됩니다.
 
@@ -78,12 +78,12 @@ var popover = new bootstrap.Popover(document.querySelector('.example-popover'), 
 </button>
 {{< /example >}}
 
-### Dismiss on next click
+### 다음 클릭으로 닫기
 
 사용자가 다음 토글 요소 이외의 요소를 클릭했을 때 팝오버를 닫으려면 `focus` 트리거를 사용합니다.
 
 {{< callout danger >}}
-#### Specific markup required for dismiss-on-next-click
+#### 다음 클릭으로 닫기를 사용하기 위해서는 특정한 마크업이 필요
 
 브라우저나 플랫폼에 관계없이 제대로 동작하기 위해서는 `<button>` 태그가 _아닌_ `<a>` 태그를 사용해야 하며 [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) 속성을 포함해야 합니다.
 {{< /callout >}}
@@ -98,7 +98,7 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 })
 ```
 
-### Disabled elements
+### 비활성화 요소
 
 `disabled` 속성을 갖는 요소는 인터랙티브하지 않습니다. 즉, 사용자가 팝오버(또는 툴팁)를 일으키기 위해서 호버하거나 클릭할 수 없습니다. 차선책으로 감싼 `<div>` 및 `<span>`에서 팝오버를 트리거 되길 원하지만, `tabindex="0"`을 사용해 키보드 포커스가 가능하도록 이상적으로 만듭니다.
 
@@ -117,7 +117,7 @@ var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), 
 
 {{< scss-docs name="popover-variables" file="scss/_variables.scss" >}}
 
-## Usage
+## 사용 방법
 
 JavaScript로 팝오버를 유효화 합니다:
 
@@ -136,7 +136,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 또한, 인터랙티브한 컨트롤(폼 요소나 링크 등)들을 팝오버에 포함할 수도 있지만 (허락된 속성이나 태그의 `allowList`에 이러한 요소를 추가하여), 현재 팝오버는 키보드 포커스 순서를 관리하지 않는다는 점에 유의하십시오. 키보드 사용자가 팝오버를 열면 포커스는 트리거가 되는 요소에 머무르고, 팝오버는 보통 문서 구조의 트리거를 쉽게 따라가지 않기 때문에 <kbd>TAB</kbd> 을 앞으로 이동/눌러도 키보드 사용자가 팝오버 자체로 이동하라는 보장은 없습니다. 요컨대 단순히 팝오버에 상호작용할 수 있는 컨트롤을 추가하는 것만으로도 키보드 사용자나 스크린 리더 사용자들이 이들 컨트롤에 접근할 수 없거나 적어도 전체적으로 비논리적인 포커스 순서가 될 수 있습니다. 이러한 경우는, modal(모달) 사용을 검토해 주십시오.
 {{< /callout >}}
 
-### Options
+### 옵션
 
 옵션은 data 속성이나 JavaScript로 전달할 수 있습니다. data 속성의 경우는, `data-bs-animation=""`과 같이 `data-bs-`에 옵션명을 추가합니다. data 속성으로 옵션을 전달하려면 옵션명의 대문자와 소텍스트를 캐멀케이스(camelCase)에서 케밥케이스(kebab-case)로 변경해 주세요. 예를 들어 `data-bs-customClass="beautifier"`가 아니라 `data-bs-custom-class="beautifier"`로 해야 합니다.
 
@@ -206,7 +206,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>selector</code></td>
       <td>string | false</td>
       <td><code>false</code></td>
-      <td>셀렉타가 제공되는 경우 팝오버 객체는 지정된 타깃으로 이양됩니다. 실제로 이는 동적인 HTML 콘텐츠에 팝오버를 추가할 수 있도록 하기 위해 사용됩니다. 자세한 내용은 <a href="{{< param repo >}}/issues/4215">this</a> 과 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
+      <td>셀렉터가 제공되는 경우 팝오버 객체는 지정된 타깃으로 이양됩니다. 실제로 이는 동적인 HTML 콘텐츠에 팝오버를 추가할 수 있도록 하기 위해 사용됩니다. 자세한 내용은 <a href="{{< param repo >}}/issues/4215">this</a> 과 <a href="https://codepen.io/team/bootstrap/pen/zYBXGwX?editors=1010">an informative example</a> 을 참조해 주세요.</td>
     </tr>
     <tr>
       <td><code>template</code></td>
@@ -253,7 +253,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td><code>''</code></td>
       <td>
         <p>팝오버가 표시되었을 때 클래스를 추가합니다. 이 클래스는 탬플릿에서 지정된 클래스에 추가되어 추가되므로 주의해 주십시오. 여러 개의 클래스를 추가하려면 공백으로 구분하세요: <code>'class-1 class-2'</code></p>
-        <p>또한 추가 클래스 이름을 포함한 단일 텍스트열을 반환하는 함수를 줄 수도 있습니다.</p>
+        <p>또한 추가 클래스 이름을 포함한 단일 문자열을 반환하는 함수를 줄 수도 있습니다.</p>
       </td>
     </tr>
     <tr>
@@ -279,7 +279,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
       <td>array | string | function</td>
       <td><code>[0, 8]</code></td>
       <td>
-        <p>타깃에 대한 팝오버의 상대적인 오프셋. data 속성에는 <code>data-bs-offset="10,20"</code>와 같이 콤마 구분으로 텍스트열을 건내줄 수 있습니다.</p>
+        <p>타깃에 대한 팝오버의 상대적인 오프셋. data 속성에는 <code>data-bs-offset="10,20"</code>와 같이 콤마 구분으로 문자열을 건내줄 수 있습니다.</p>
         <p>오프셋을 결정하기 위해 함수가 사용되는 경우는 Popper의 배치, 참조, Popper의 직사각형을 포함한 객체를 첫번째 인수로 호출합니다. 트리거 되는 요소의 DOM 노드가 두번째 인수로 전달됩니다. 이 함수는 두 값을 갖는 배열 <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>을 반환해야 합니다.</p>
         <p>보다 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>를 참조해 주세요.</p>
       </td>
@@ -302,7 +302,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 각각의 팝오버 data 옵션은, 위에서 설명했듯이 data 속성을 사용하여 지정할 수도 있습니다.
 {{< /callout >}}
 
-#### Using function with `popperConfig`
+#### `popperConfig`으로 기능 사용하기
 
 ```js
 var popover = new bootstrap.Popover(element, {
@@ -347,7 +347,7 @@ myPopover.toggle()
 
 #### dispose
 
-요소의 팝오버를 숨기고 없앱니다 (DOM 요소에 저장된 데이터를 삭제합니다). 위임을 사용하는 팝오버([the `selector` option](#options) 를 사용하여 작성된 것) 는 자식의 트리거 요소로 인해 개벌적으로 없앨 수 없습니다.
+요소의 팝오버를 숨기고 없앱니다 (DOM 요소에 저장된 데이터를 삭제합니다). 위임을 사용하는 팝오버([the `selector` option](#options)를 사용하여 작성된 것) 는 자식의 트리거 요소로 인해 개벌적으로 없앨 수 없습니다.
 
 ```js
 myPopover.dispose()

@@ -54,7 +54,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### 수직 정렬
 
-[flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}}) 를 사용해, 내비게이션의 수평 방향의 배치를 변경합니다. 내비게이션의 기본은 왼쪽 정렬이지만, 쉽게 가운데 혹은 오른쪽 정렬로 변경 가능합니다.
+[flexbox utilities]({{< docsref "/layout/grid#horizontal-alignment" >}})를 사용해, 내비게이션의 수평 방향의 배치를 변경합니다. 내비게이션의 기본은 왼쪽 정렬이지만, 쉽게 가운데 혹은 오른쪽 정렬로 변경 가능합니다.
 
 `.justify-content-center`를 사용해 가운데 정렬이 가능합니다.
 
@@ -128,7 +128,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### 탭
 
-`.nav-tabs` 클래스를 추가해 탭이 있는 인터페이스를 만들 수 있습니다. [tab JavaScript plugin](#javascript-behavior) 으로 탭 가능한 영역을 만듭니다。
+`.nav-tabs` 클래스를 추가해 탭이 있는 인터페이스를 만들 수 있습니다. [tab JavaScript plugin](#javascript-behavior)으로 탭 가능한 영역을 만듭니다。
 
 {{< example >}}
 <ul class="nav nav-tabs">
@@ -168,9 +168,9 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-### Fill and justify
+### 필과 채우기
 
-`.nav`가로 폭을 100% 사용하게 합니다. `.nav-item`에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill`을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.
+`.nav` 가로 폭을 100% 사용하게 합니다. `.nav-item`에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill`을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.
 
 {{< example >}}
 <ul class="nav nav-pills nav-fill">
@@ -230,9 +230,9 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </nav>
 
 {{< /example >}}
-## Working with flex utilities
+## 플렉스 유틸리티
 
-반응형 내비게이션의 변화가 필요한 경우에는 [flexbox utilities]({{< docsref "/utilities/flex" >}}) 를 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 중단점 간에 더 많은 사용자 지정이 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
+반응형 내비게이션의 변화가 필요한 경우에는 [flexbox 유틸리티]({{< docsref "/utilities/flex" >}})를 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 중단점 간에 더 많은 사용자 지정이 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
 
 {{< example >}}
 <nav class="nav nav-pills flex-column flex-sm-row">
@@ -243,15 +243,15 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </nav>
 {{< /example >}}
 
-## Regarding accessibility
+## 접근성에 관하여
 
-내비게이션바를 제공하기 위해 내비게이션을 사용하고 있는 경우, `<ul>`의 부모 컨테이너에 `role="navigation"`을 추가하거나, `<nav>` 요소를 내비게이션 전체에 감싸주세요. role을 `<ul>` 자체에 추가하지 마십시오.
+내비게이션 바를 제공하기 위해 내비게이션을 사용하고 있는 경우, `<ul>`의 부모 컨테이너에 `role="navigation"`을 추가하거나, `<nav>` 요소를 내비게이션 전체에 감싸주세요. role을 `<ul>` 자체에 추가하지 마세요.
 
-내비게이션바는, `.nav-tabs`에서 시각적으로는 탭으로 보여지게 되있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel) 에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior) 를 참조해 주십시오. JavaScript는 활성화된 탭에 `aria-selected="true"`를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하지 않습니다.
+내비게이션 바는, `.nav-tabs`에서 시각적으로는 탭으로 보여지게 되있지만, `role="tablist"`, `role="tab"`, `role="tabpanel"` 속성을 부여하지 **말아** 주십시오. 이들은 [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr> Authoring Practices](https://www.w3.org/TR/wai-aria-practices/#tabpanel)에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. [JavaScript behavior](#javascript-behavior)를 참조해 주십시오. JavaScript는 활성화된 탭에 `aria-selected="true"`를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 `aria-current` 속성이 필요하지 않습니다.
 
 ## 드롭다운 사용하기
 
-dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript plugin]({{< docsref "/components/dropdowns#usage" >}}) 으로 드롭다운 메뉴를 추가합니다.
+드롭다운에 HTML을 조금 추가하고, [JavaScript 드롭다운 플러그인]({{< docsref "/components/dropdowns#usage" >}})으로 드롭다운 메뉴를 추가합니다.
 
 
 ### 드롭다운이 있는 탭
@@ -312,7 +312,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 
 {{< scss-docs name="nav-variables" file="scss/_variables.scss" >}}
 
-## JavaScript 행동
+## JavaScript 비헤이비어
 
 `bootstrap.js`파일을 통해 탭의 JavaScript 플러그인을 사용함으로써 내비게이션 탭과 pill을 확장하고 드롭다운 메뉴에서도 로컬 콘텐츠의 탭 가능한 창을 만들 수 있습니다.
 
@@ -522,7 +522,7 @@ dropdown(드롭다운) 에 HTML을 조금 추가하고, [dropdowns JavaScript pl
 </div>
 ```
 
-### JavaScript를 통해 사용하기
+### JavaScript 사용하기
 
 JavaScript로 탭 가능한 탭을 유효하게 합니다 (각 탭을 개별적으로 유효하게 할 필요가 있습니다).
 
@@ -548,7 +548,7 @@ var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
 bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ```
 
-### Fade effect
+### 페이드 효과
 
 탭을 페이드인 시키려면, `.tab-pane`에 `.fade`를 추가합니다. 첫 번째 탭에는 콘텐츠를 표시하기 위해 `.show`를 추가할 필요가 있습니다.
 

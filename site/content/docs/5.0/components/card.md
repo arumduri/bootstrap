@@ -8,13 +8,13 @@ toc: true
 ---
 
 ## 소개
-**카드**는 유연하고 확장이 가능한 컨테이너입니다. Headers나 footers의 옵션, 다양한 콘텐츠, 문맥에 따른 배경 색상, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap 3의 panels、wells、thumbnails는 카드로 바뀝니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
+**카드**는 유연하고 확장이 가능한 컨테이너입니다. Headers나 footers의 옵션, 다양한 콘텐츠, 문맥에 따른 배경색, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap 3의 panels、wells、thumbnails는 카드로 바뀝니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
 
 ## 예시
 
 카드는 적은 마크업과 스타일로 되어 있지만, 다양한 사용자 정의가 가능합니다. Flexbox로 만들어져 있어 쉽게 배치할 수 있고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 `margin` 설정이 없어서 필요에 따라 [spacing utilities]({{< docsref "/utilities/spacing" >}})를 사용합니다.
 
-아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [sizing options](#sizing) 을 통해서 간단하게 재정의할 수 있습니다.
+아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [sizing options](#sizing)을 통해서 간단하게 재정의할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -230,7 +230,7 @@ Grid를 사용해, 필요에 따라 카드를 행과 열 안에 넣어서 사용
 
 ### 유틸리티 사용하기
 
-[Available sizing utilities]({{< docsref "/utilities/sizing" >}}) 을 사용해 카드의 가로 폭을 빠르게 설정합니다.
+[Available sizing utilities]({{< docsref "/utilities/sizing" >}})을 사용해 카드의 가로 폭을 빠르게 설정합니다.
 
 {{< example >}}
 <div class="card w-75">
@@ -266,7 +266,7 @@ Grid를 사용해, 필요에 따라 카드를 행과 열 안에 넣어서 사용
 
 ## 텍스트 정렬
 
-텍스트의 배치는 [text align classes]({{< docsref "/utilities/text#text-alignment" >}}) 을 사용해 변경할 수 있습니다.
+텍스트의 배치는 [text align classes]({{< docsref "/utilities/text#text-alignment" >}})을 사용해 변경할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -296,7 +296,7 @@ Grid를 사용해, 필요에 따라 카드를 행과 열 안에 넣어서 사용
 
 ## 내비게이션
 
-[Nav components]({{< docsref "/components/navs-tabs" >}}) 을 사용해 카드의 헤더 (혹은 block)에 내비게이션을 적용할 수 있습니다.
+[Nav components]({{< docsref "/components/navs-tabs" >}})을 사용해 카드의 헤더 (혹은 block)에 내비게이션을 적용할 수 있습니다.
 
 {{< example >}}
 <div class="card text-center">
@@ -350,7 +350,7 @@ Grid를 사용해, 필요에 따라 카드를 행과 열 안에 넣어서 사용
 
 ### 이미지 설명문
 
-Header나 footer와 같이, 카드에는 카드의 상부와 하부의 "image caps"(카드의 상부 또는 하부의 이미지) 을 포함할 수 있습니다.
+Header나 footer와 같이, 카드에는 카드의 상부와 하부의 "image caps"(카드의 상부 또는 하부의 이미지)을 포함할 수 있습니다.
 
 {{< example >}}
 <div class="card mb-3">
@@ -439,7 +439,7 @@ Header나 footer와 같이, 카드에는 카드의 상부와 하부의 "image ca
 
 ### 테두리
 
-카드의 `border-color` 만 변경하려면, [border utilities]({{< docsref "/utilities/borders" >}}) 를 사용합니다. 아래와 같이, `.text-{color}` 클래스를 부모의 `.card` 나 카드 내용의 서브 세트에 배치할 수 있습니다.
+카드의 `border-color` 만 변경하려면, [border utilities]({{< docsref "/utilities/borders" >}})를 사용합니다. 아래와 같이, `.text-{color}` 클래스를 부모의 `.card` 나 카드 내용의 서브 세트에 배치할 수 있습니다.
 
 {{< example >}}
 {{< card.inline >}}

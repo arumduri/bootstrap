@@ -225,9 +225,9 @@ toc: true
 </div>
 ```
 
-## Usage
+## 사용 방법
 
-### Via data attributes
+### 데이터 속성 사용하기
 
 topbar 내비게이션에 스크롤 스파이 동작을 간단하게 추가하려면, 스크롤 스파이 하고 싶은 요소에 `data-bs-spy="scroll"`를 추가합니다 (가장 전형적으로는 `<body>`입니다). 그 다음에 `data-bs-target` 속성에 임의의 Bootstrap `.nav` 컴포넌트의 부모 요소의 ID 또는 클래스를 추가합니다.
 
@@ -249,7 +249,7 @@ body {
 </body>
 ```
 
-### Via JavaScript
+### JavaScript 사용하기
 
 CSS에 `position: relative;`를 추가한 뒤, JavaScript로 스크롤 스파이를 호출합니다:
 
@@ -307,7 +307,7 @@ var scrollSpyContentEl = document.getElementById('content')
 var scrollSpy = bootstrap.ScrollSpy.getOrCreateInstance(scrollSpyContentEl) // Returns a Bootstrap scrollspy instance
 ```
 
-### Options
+### 옵션
 
 옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성인 경우는 `data-bs-offset=""` 처럼 `data-bs-`에 옵션명을 추가합니다.
 

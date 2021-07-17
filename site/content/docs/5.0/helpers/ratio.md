@@ -26,7 +26,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Aspect ratios
+## 가로세로 비율
 
 가로세로 비율은 수정자 클래스로 사용자가 직접 정의 할 수 있습니다. 기본적으로 제공되는 비율 클래스는 다음과 같습니다.
 
@@ -45,7 +45,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Custom ratios
+## 사용자 지정 비율
 
 각 `.ratio-*` 클래스는 선택기에 CSS 사용자 정의 속성 (또는 CSS 변수)이 내장되어 있습니다. 이 CSS 변수를 재정의하여 사용자전용 가로세로 비율을 즉석에서 만들 수 있습니다. 
 
@@ -74,7 +74,7 @@ toc: true
 {{< /example >}}
 
 
-## Sass map
+## Sass 맵
 
 `_variables.scss`에서 사용하고자 하는 가로세로 비율을 변경 할 수 있습니다. 다음은 기본 `$ratio-aspect-ratios` 맵 코드 입니다. 원하시는대로 맵 코드를 수정하시고 Sass를 사용하기 위해 다시 컴파일 하세요.
 

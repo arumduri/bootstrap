@@ -27,7 +27,7 @@ toc: true
 또한, 그룹이나 툴바에는 명시적인 라벨을 붙일 필요가 있습니다. 그 말은, 올바른 롤 속성이 있어도 대부분의 스크린 리더는 그것을 안내하지 않기 때문입니다. 여기에서는 `aria-label`을 사용하고 있지만, `aria-labelledby` 같은 대체품을 사용하는 것도 가능합니다.
 {{< /callout >}}
 
-이 클래스는 [`.nav` navigation components]({{< docsref "/components/navs-tabs" >}}) 를 대체하여 링크 그룹에 추가할 수도 있습니다.
+이 클래스는 [`.nav` navigation components]({{< docsref "/components/navs-tabs" >}})를 대체하여 링크 그룹에 추가할 수도 있습니다.
 
 {{< example >}}
 <div class="btn-group">
@@ -59,7 +59,7 @@ toc: true
 
 ## 체크박스와 라디오버튼 그룹
 
-버튼과 같은 체크 박스와 라디오 [toggle buttons]({{< docsref "/forms/checks-radios" >}}) 을 조합하여 아주 매끄러운 외형의 버튼 그룹을 만듭니다.
+버튼과 같은 체크 박스와 라디오 [toggle buttons]({{< docsref "/forms/checks-radios" >}})을 조합하여 아주 매끄러운 외형의 버튼 그룹을 만듭니다.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">

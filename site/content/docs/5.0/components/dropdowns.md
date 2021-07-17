@@ -140,7 +140,7 @@ toc: true
 </div>
 ```
 
-### Split button
+### 분할 버튼
 
 마찬가지로, 단일 버튼의 드롭다운과 실질적으로 같은 마크업으로 분할된 버튼의 드롭다운을 만드는데, 드롭다운의 화살표 주위의 적절한 간격을 확보하기 위해서 `.dropdown-toggle-split`를 추가합니다.
 
@@ -350,9 +350,9 @@ toc: true
 </div>
 ```
 
-## Dark dropdowns
+## 검은색 드롭다운
 
-기존의 `.dropdown-menu`에 `.dropdown-menu-dark`를 추가해 어두운 내비게이션바나 사용자 정의 스타일에 맞추어 어두운 드롭다운을 만들 수 있습니다. 드롭다운 항목을 변경을 할 필요는 없습니다.
+기존의 `.dropdown-menu`에 `.dropdown-menu-dark`를 추가해 어두운 내비게이션 바나 사용자 정의 스타일에 맞추어 어두운 드롭다운을 만들 수 있습니다. 드롭다운 항목을 변경을 할 필요는 없습니다.
 
 {{< example >}}
 <div class="dropdown">
@@ -396,14 +396,14 @@ toc: true
 </nav>
 {{< /example >}}
 
-## Directions
+## 방향성
 
 {{< callout info >}}
 #### RTL
 RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropstart`는 오른쪽에 표시됩니다.
 {{< /callout >}}
 
-### Dropup
+### 위
 
 부모 요소에 `.dropup`을 추가하여 요소의 위쪽으로 표시할 수 있습니다.
 
@@ -462,7 +462,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 </div>
 ```
 
-### Dropright
+### 오른쪽
 
 부모 요소에 `.dropend`를 추가하여 요소의 오른쪽에 표시할 수 있습니다.
 
@@ -521,7 +521,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 </div>
 ```
 
-### Dropleft
+### 왼쪽
 
 부모 요소에 `.dropstart`를 추가하여 요소의 왼쪽에 표시할 수 있습니다.
 
@@ -584,7 +584,7 @@ RTL에서 Bootstrap을 사용할 경우, 방향성은 반대가 되어 `.dropsta
 </div>
 ```
 
-## Menu items
+## 메뉴 항목
 
 You can use `<a>` or `<button>` elements as dropdown items.
 
@@ -612,7 +612,7 @@ You can use `<a>` or `<button>` elements as dropdown items.
 </ul>
 {{< /example >}}
 
-### Active
+### 활성화
 
 드롭다운 아이템에 `.active`를 추가하여 **활성화** 스타일을 만듭니다. 활성화된 상태를 스크린 리더에 전달하기 위해 `aria-current` 속성을 사용합니다. 현재 페이지에는 `page` 값을, 세트 내 현재 아이템에는 `true`를 사용합니다.
 
@@ -636,7 +636,7 @@ You can use `<a>` or `<button>` elements as dropdown items.
 </ul>
 {{< /example >}}
 
-## Menu alignment
+## 메뉴 정렬
 
 기본적으로, 드롭다운 메뉴는 자동으로 위에서 100% 위치와 부모의 왼쪽에 따라 배치됩니다. 이것은 방향성이 있는 `.drop*` 클래스로 변경할 수 있지만, 추가적인 제어자 클래스로 제어할 수도 있습니다.
 
@@ -659,7 +659,7 @@ You can use `<a>` or `<button>` elements as dropdown items.
 </div>
 {{< /example >}}
 
-### Responsive alignment
+### 반응형 정렬
 
 반응형 배치를 사용하고 싶을 경우, `data-bs-display="static"` 속성을 추가하여 동적 배치를 비활성화하고 반응형 변형 클래스를 사용합니다.
 
@@ -695,7 +695,7 @@ You can use `<a>` or `<button>` elements as dropdown items.
 
 navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가할 필요가 없다는 점에 주의하십시오.
 
-### Alignment options
+### 정렬 옵션
 
 다양한 드롭다운 배치를 한 곳에서 확인할 수 있도록 위에서 설명한 옵션들의 데모를 소개합니다.
 
@@ -778,11 +778,11 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 </div>
 {{< /example >}}
 
-## Menu content
+## 메뉴 콘텐츠
 
-### Headers
+### 헤더
 
-임의의 드롭다운 메뉴 액션 섹션 라벨에 header를 추가합니다.
+임의의 드롭다운 메뉴 액션 섹션 라벨에 헤더를 추가합니다.
 
 {{< example >}}
 <ul class="dropdown-menu">
@@ -792,7 +792,7 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 </ul>
 {{< /example >}}
 
-### Dividers
+### 구분선
 
 관련 메뉴 아이템을 구분선으로 나눕니다.
 
@@ -806,9 +806,9 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 </ul>
 {{< /example >}}
 
-### Text
+### 텍스트
 
-자유롭게 드롭다운 메뉴 내에 텍스트로 배치하고 [spacing utilities]({{< docsref "/utilities/spacing" >}})를 사용합니다. 메뉴의 너비를 제한하기 위해 추가로 인라인 스타일이 필요할 가능성이 크다는 점에 유의하십시오.
+자유롭게 드롭다운 메뉴 내에 텍스트로 배치하고 [간격 유틸리티]({{< docsref "/utilities/spacing" >}})를 사용합니다. 메뉴의 너비를 제한하기 위해 추가로 인라인 스타일이 필요할 가능성이 크다는 점에 유의하십시오.
 
 {{< example >}}
 <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
@@ -821,9 +821,9 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 </div>
 {{< /example >}}
 
-### Forms
+### 폼
 
-드롭다운 메뉴 안에 form을 넣거나 드롭다운 메뉴로 해서 [margin 혹은 padding utilities]({{< docsref "/utilities/spacing" >}}) 를 사용하여 여백을 제공합니다.
+드롭다운 메뉴 안에 폼을 넣거나 드롭다운 메뉴로 해서 [margin 혹은 padding utilities]({{< docsref "/utilities/spacing" >}})를 사용하여 여백을 제공합니다.
 
 {{< example >}}
 <div class="dropdown-menu">
@@ -874,7 +874,7 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 </form>
 {{< /example >}}
 
-## Dropdown options
+## 드롭다운 옵션
 
 드롭다운의 위치를 변경하려면 `data-bs-offset` 나 `data-bs-reference`를 사용합니다.
 
@@ -906,7 +906,7 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 </div>
 {{< /example >}}
 
-### Auto close behavior
+### 자동 닫기 비헤이비어
 
 기본적으로, 드롭다운 메뉴의 안쪽 또는 바깥쪽을 클릭하면 드롭 다운 메뉴가 닫힙니다. `autoClose` 옵션을 사용하면, 이 동작을 변경할 수 있습니다.
 
@@ -978,7 +978,7 @@ navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가�
 
 {{< scss-docs name="caret-mixins" file="scss/mixins/_caret.scss" >}}
 
-## Usage
+## 사용 방법
 
 data 속성이나 JavaScript를 사용해, 드롭다운 플러그인은 부모의 `.dropdown-menu`의 `.show` 클래스를 토글하는 것으로 숨기는 콘텐츠(드롭다운 메뉴)를 토글합니다. `data-bs-toggle="dropdown"` 속성은 어플리케이션 레벨에서 드롭다운 메뉴를 닫기 위해 이용됩니다.
 
@@ -986,7 +986,7 @@ data 속성이나 JavaScript를 사용해, 드롭다운 플러그인은 부모�
 터치 대응 기기에서는, 드롭다운을 열면 빈 `mouseover` 핸들러가 `<body>` 요소의 바로 아래 자식 요소에 추가됩니다. 이렇게 보기 싫은 hack은  [iOS' event delegation](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html)을 피하고자 필요한 것으로, 그렇지 않으면 드롭다운 바깥쪽의 임의의 곳을 탭 해도 드롭다운을 닫는 코드를 트리거 할 수 없습니다. 드롭다운이 닫히면, 이렇게 추가된 빈 `mouseover` 핸들러는 삭제됩니다.
 {{< /callout >}}
 
-### Via data attributes
+### 데이터 속성 사용하기
 
 링크나 버튼에 `data-bs-toggle="dropdown"`을 추가하고, 드롭다운을 바꾸도록 합니다.
 
@@ -1001,7 +1001,7 @@ data 속성이나 JavaScript를 사용해, 드롭다운 플러그인은 부모�
 </div>
 ```
 
-### Via JavaScript
+### JavaScript 사용하기
 
 JavaScript 로 드롭다운을 호출합니다:
 
@@ -1018,7 +1018,7 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
 JavaScript로 드롭다운을 호출하느냐 data-api를 사용하느냐에 상관없이 `data-bs-toggle="dropdown"`은 항상 드롭다운의 트리거 요소에 존재해야 합니다.
 {{< /callout >}}
 
-### Options
+### 옵션
 
 옵션은 data 속성이나 JavaScript로 전달할 수 있습니다. data 속성의 경우는, `data-bs-offset=""`과 같이 `data-bs-`에 옵션명을 추가합니다. data 속성으로 옵션을 전달하려면 옵션명의 대문자와 소텍스트를 캐멀케이스(camelCase)에서 케밥케이스(kebab-case)로 변경해 주세요. 예를 들어 `data-bs-autoClose="false"`가 아니라 `data-bs-auto-close="false"`로 해야 합니다.
 
@@ -1055,7 +1055,7 @@ JavaScript로 드롭다운을 호출하느냐 data-api를 사용하느냐에 상
       <td>array | string | function</td>
       <td><code>[0, 2]</code></td>
       <td>
-        <p>타깃에 대한 드롭다운의 상대적인 오프셋. data 속성에는 <code>data-bs-offset="10,20"</code>와 같이 콤마 구분으로 텍스트열을 건내줄 수 있습니다.</p>
+        <p>타깃에 대한 드롭다운의 상대적인 오프셋. data 속성에는 <code>data-bs-offset="10,20"</code>와 같이 콤마 구분으로 문자열을 건내줄 수 있습니다.</p>
         <p>오프셋을 결정하기 위해 함수가 사용되는 경우는 Popper의 배치, 참조, Popper의 직사각형을 포함한 객체를 첫번째 인수로 호출합니다. 트리거 되는 요소의 DOM 노드가 두번째 인수로 전달됩니다. 이 함수는 두 값을 갖는 배열 <code>[<a href="https://popper.js.org/docs/v2/modifiers/offset/#skidding-1">skidding</a>, <a href="https://popper.js.org/docs/v2/modifiers/offset/#distance-1">distance</a>]</code>을 반환해야 합니다.</p>
         <p>보다 자세한 정보는 Popper의 <a href="https://popper.js.org/docs/v2/modifiers/offset/#options">offset docs</a>를 참조해 주세요.</p>
       </td>
@@ -1086,7 +1086,7 @@ JavaScript로 드롭다운을 호출하느냐 data-api를 사용하느냐에 상
   </tbody>
 </table>
 
-#### Using function with `popperConfig`
+#### `popperConfig`으로 기능 사용하기
 
 ```js
 var dropdown = new bootstrap.Dropdown(element, {
@@ -1103,8 +1103,8 @@ var dropdown = new bootstrap.Dropdown(element, {
 <table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>메소드</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>
@@ -1165,8 +1165,8 @@ var dropdown = new bootstrap.Dropdown(element, {
 <table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>메소드</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>

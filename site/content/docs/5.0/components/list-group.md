@@ -49,7 +49,7 @@ toc: true
 </ul>
 {{< /example >}}
 
-## Links and buttons
+## 링크와 버튼
 
 _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`을 사용하고, `.list-group-item-action`을 추가합니다. 비 인터랙티브한 요소(`<li>` 혹은 `<div>`와 같은)로 만들어진 목록 그룹이 클릭이나 탭 어포던스를 제공하지 않도록, 이러한 가상 클래스를 분리하고 있습니다.
 
@@ -81,7 +81,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 </div>
 {{< /example >}}
 
-## Flush
+## 채우기
 
 `.list-group-flush`를 추가하고, 부모 컨테이너(카드 등) 내의 목록 그룹의 아이템을 끝에서 끝까지 표시하기 위해 몇개의 라인과 둥근 모서리를 제거하도록 합니다.
 
@@ -95,7 +95,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 </ul>
 {{< /example >}}
 
-## Numbered
+## 숫자
 
 `.list-group-numbered`라는 제어자 클래스(와 옵션에서 `<ol>`요소를 사용하여)를 추가하여 숫자 목록 리스트 그룹을 만들 수 있습니다. 숫자는(`<ol>`의 브라우저 기본 스타일링이 아닌) CSS에 의해 추가되므로 목록 그룹 아이템 내에서 배치가 간단하고 재정의하기도 쉬워집니다.
 
@@ -137,7 +137,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 </ol>
 {{< /example >}}
 
-## Horizontal
+## 수평
 
 목록 그룹의 아이템 레이아웃을 모든 중단점에서 수직에서 수평으로 변경하려면 `.list-group-horizontal`를 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}`를 선택하고 중단점의 `min-width`로 시작하는 목록 그룹을 수평으로 합니다. 현재 **수평 목록 그룹을 flush 목록 그룹과 조합할 수 없습니다.**
 
@@ -155,7 +155,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 {{< /list-group.inline >}}
 {{< /example >}}
 
-## Contextual classes
+## 상황별 클래스
 
 상황별 클래스를 사용하여, 스테이트풀(stateful)한 배경색과 텍스트색으로 목록 아이템을 꾸밉니다.
 
@@ -187,7 +187,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## With badges
+## 배지 포함
 
 [utilities]({{< docsref "/utilities/flex" >}})를 사용해, 아직 읽지 않은 수나 액티비티 등을 표시하기 위한 배지를 목록 그룹의 아이템에 추가합니다.
 
@@ -208,7 +208,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 </ul>
 {{< /example >}}
 
-## Custom content
+## 사용자 지정 콘텐츠
 
 [flexbox utilities]({{< docsref "/utilities/flex" >}})의 도움을 받아 아래와 같은 링크된 목록 그룹에서도 거의 모든 HTML를 추가할 수 있습니다.
 
@@ -241,7 +241,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 </div>
 {{< /example >}}
 
-## Checkboxes and radios
+## 체크박스와 라디오버튼
 
 목록 그룹 아이템 내에 Bootstrap 체크 박스와 라디오 버튼을 배치하고 필요에 따라 재정의합니다. `<label>` 없이도 사용이 가능하지만 접근성을 위해 `aria-label` 속성과 값을 포함해 주세요.
 
@@ -309,13 +309,13 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 
-### Loop
+### 루프
 
 믹스인 `list-group-item-variant()`를 사용하여 제어자 클래스를 생성하는 반복문입니다.
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 
-## JavaScript behavior
+## JavaScript 비헤이비어
 
 탭 JavaScript 플러그인—개별적으로 혹은 컴파일된 `bootstrap.js`를 사용해 목록 그룹을 확장하고 로컬 콘텐츠의 탭 가능한 판넬을 작성합니다.
 
@@ -369,7 +369,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 </div>
 ```
 
-### Using data attributes
+### 데이터 속성 사용하기
 
 JavaScript를 쓰지 않아도, `data-bs-toggle="list"`를 지정하거나 요소로 지정만 해도 목록 그룹 내비게이션을 활성화할 수 있습니다. 이들의 data 속성을 `.list-group-item`에 이용합니다.
 
@@ -393,7 +393,7 @@ JavaScript를 쓰지 않아도, `data-bs-toggle="list"`를 지정하거나 요�
 </div>
 ```
 
-### Via JavaScript
+### JavaScript 사용하기
 
 JavaScript로 탭 가능한 목록 아이템을 유효하게 합니다.(각 목록 아이템을 개별적으로 유효하게 할 필요가 있습니다):
 
@@ -419,7 +419,7 @@ var triggerFirstTabEl = document.querySelector('#myTab li:first-child a')
 bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 ```
 
-### Fade effect
+### 페이드 효과
 
 탭 판넬을 페이드인 시키려면 `.tab-pane`에 `.fade`를 추가합니다. 첫번째 탭 판넬에는 첫번째 콘텐츠를 표시하기 위해서 `.show`를 추가 할 필요가 있습니다.
 

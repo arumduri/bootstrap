@@ -22,9 +22,9 @@ toc: true
 
 ## 예시
 
-### Basic
+### 기본
 
-토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합나디. 토스트의 header는 `display: flex`를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 콘텐츠를 쉽게 정렬시킬 수 있습니다.
+토스트의 확장성과 예측 가능성을 높이기 위해 header와 body 사용을 권장합니다. 토스트의 header는 `display: flex`를 사용하고 있으며, margin 과 flexbox 유틸리티를 통해 콘텐츠를 쉽게 정렬시킬 수 있습니다.
 
 토스트는 필요에 따라 유연하게 대응할 수 있으며 필요한 마크업은 거의 없습니다. 토스트 콘텐츠를 포함하는 요소가 최소 하나는 있어야 하고 닫기 버튼은 강력히 권장합니다.
 
@@ -42,9 +42,9 @@ toc: true
 </div>
 {{< /example >}}
 
-### Live
+### 실시간
 
-아래의 버튼을 클릭하면 `.hide`를 사용해 기본적으로 숨겨져 있던 (유틸리티를 사용해 오른쪽 아래에 배치한)토스트가 표시됩니다.
+아래의 버튼을 클릭하면 `.hide`를 사용해 기본적으로 숨겨져 있던 (유틸리티를 사용해 오른쪽 아래에 배치한) 토스트가 표시됩니다.
 
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
@@ -82,7 +82,7 @@ toc: true
 </div>
 ```
 
-### Translucent
+### 반투명
 
 토스트는 아래의 콘텐츠와 어울려져 보이도록 약간 비치게 보여집니다.
 
@@ -100,7 +100,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### Stacking
+### 중첩
 
 토스트를 `toast container`로 감싸면 여러 개 사용할 수 있습니다.
 
@@ -132,7 +132,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### Custom content
+### 사용자 지정 콘텐츠
 
 서브 컴포넌트를 삭제하거나, [utilities]({{< docsref "/utilities/api" >}})로 조정하거나, 독자적인 마크업을 추가하여 토스트를 재정의할 수 있습니다. 아래 예시에서는, 기본 제공하는 `.toast-header`를 삭제하고 [Bootstrap Icons]({{< param icons >}})을 사용하여 사용자 정의 숨김 아이콘을 추가하고 [flexbox utilities]({{< docsref "/utilities/flex" >}})로 레이아웃을 조정해 보다 간단한 토스트를 만들고 있습니다.
 
@@ -176,7 +176,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Placement
+## 배치
 
 필요에 따라 사용자 지정 CSS로 토스트를 배치시킵니다. 우측 상단은 알림용으로 사용되는 경우가 많으며, 상단 중앙도 마찬가지입니다. 한번에 하나의 토스트 밖에 표시하지 않는다면, 배치 스타일을 `.toast`의 오른쪽에 넣어주세요.
 
@@ -305,7 +305,7 @@ toc: true
 </div>
 {{< /example >}}
 
-기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만, 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에 긴 [`delay` timeout](#options) 를 주었다고 하더라도 키보드나 지원 기술 사용자가 알 수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 `autohide: false`를 사용하는 것을 권장합니다.
+기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만, 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에 긴 [`delay` timeout](#options)를 주었다고 하더라도 키보드나 지원 기술 사용자가 알 수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 `autohide: false`를 사용하는 것을 권장합니다.
 
 ## Sass
 
@@ -313,7 +313,7 @@ toc: true
 
 {{< scss-docs name="toast-variables" file="scss/_variables.scss" >}}
 
-## Usage
+## 사용 방법
 
 JavaScript를 통해 초기화:
 
@@ -324,7 +324,7 @@ var toastList = toastElList.map(function (toastEl) {
 })
 ```
 
-### Options
+### 옵션
 
 옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우 `data-bs-animation=""`처럼 `data-bs-`에 옵션명을 추가합니다.
 

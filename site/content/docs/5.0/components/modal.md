@@ -37,7 +37,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 ### 모달 컴포넌트
 
-아래는 _static_ 모달의 예입니다. (즉, `position`과 `display`가 오버라이드 되는 것을 의미합니다) 여기에는 모달 header, 모달 body(`padding` 때문에 필요), 모달 footer(선택사항)가 포함되어 있습니다. 가능한 한 모달을 닫을 수 있는 것을 포함시키거나 닫을 수 있는 다른 명시적인 요소를 제공하도록 부탁드립니다.
+아래는 _static_ 모달의 예입니다. (즉, `position`과 `display`가 오버라이드되는 것을 의미합니다) 여기에는 모달 header, 모달 body (`padding` 때문에 필요), 모달 footer (선택)가 포함되어 있습니다. 가능한 한 모달을 닫을 수 있는 것을 포함시키거나 닫을 수 있는 다른 명시적인 요소를 제공하도록 부탁드립니다.
 
 <div class="bd-example bd-example-modal">
   <div class="modal" tabindex="-1">
@@ -79,7 +79,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 ```
 
-### Live demo
+### 라이브 데모
 
 아래 버튼을 눌러 보세요. 모달 화면이 위에서 아래로 나타납니다.
 
@@ -133,7 +133,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 ```
 
-### Static backdrop
+### 정적 백드롭
 
 백드롭을 static으로 설정하면, 배경을 클릭해도 모달은 닫히지 않습니다. 아래 버튼을 클릭해 시도해 보세요.
 
@@ -187,7 +187,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 ```
 
-### Scrolling long content
+### 기다란 콘텐츠 스크롤
 
 사용자의 뷰포트나 기기가 너무 길면 모달 페이지가 자체적으로 스크롤을 생성합니다. 아래 버튼을 클릭해 시도해 보십시오.
 
@@ -250,7 +250,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 ```
 
-### Vertically centered
+### 세로 중앙
 
 모달을 중앙에 배치하기 위해서 `.modal-dialog`에 `.modal-dialog-centered`를 추가합니다.
 
@@ -313,9 +313,9 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 ```
 
-### Tooltips and popovers
+### 툴팁과 팝오버
 
-[Tooltips]({{< docsref "/components/tooltips" >}})과 [popovers]({{< docsref "/components/popovers" >}})는 필요에 따라 모달 안에 배치시킬 수 있습니다. 모달이 닫히면 그 안에 있는 툴팁이나 팝오버도 자동으로 삭제됩니다.
+[툴팁]({{< docsref "/components/tooltips" >}})과 [팝오버]({{< docsref "/components/popovers" >}})는 필요에 따라 모달 안에 배치시킬 수 있습니다. 모달이 닫히면 그 안에 있는 툴팁이나 팝오버도 자동으로 삭제됩니다.
 
 <div class="modal fade" id="exampleModalPopovers" tabindex="-1" aria-labelledby="exampleModalPopoversLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -355,7 +355,7 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 ```
 
-### Using the grid
+### 그리드 사용하기
 
 `.modal-body` 안에 `.container-fluid`를 중첩시켜 모달 안에 Bootstrap 그리드 시스템을 이용할 수 있습니다. 다른 곳에서 사용하듯이 일반적인 그리드 시스템 클래스를 사용합니다.
 
@@ -439,9 +439,9 @@ myModal.addEventListener('shown.bs.modal', function () {
 </div>
 ```
 
-### Varying modal content
+### 다양한 모달 콘텐츠
 
-같은 모달을 트리거하는 버튼들이 있는데, 그것들이 미묘하게 다른 내용의 모달을 트리거 하고 있습니까? `event.relatedTarget`과 [HTML `data-bs-*` attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)를 사용하여 어떤 버튼이 클릭 되었는지에 따라 모달의 내용을 변화시킬 수 있습니다.
+같은 모달을 트리거하는 버튼들이 있는데, 그것들이 미묘하게 다른 내용의 모달을 트리거하고 있나요? `event.relatedTarget`과 [HTML `data-bs-*` attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)를 사용하여 어떤 버튼이 클릭 되었는지에 따라 모달의 내용을 변화시킬 수 있습니다.
 
 다음은 HTML과 JavaScript의 예시를 넣은 라이브 데모입니다. `relatedTarget`의 자세한 내용은 [read the modal events docs](#events)를 참조해 주세요.
 
@@ -497,7 +497,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 })
 ```
 
-### Toggle between modals
+### 모달 간 토글
 
 `data-bs-target`과 `data-bs-toggle` 속성을 교묘하게 배치함으로써 여러 모달을 토글할 수 있습니다. 예를 들어 이미 열려있는 로그인 모달에서 비밀번호 재설정의 모달을 열수 있습니다. **여러 개의 모달을 동시에 열 수 없으므로 주의해 주세요.** 이 방법으로 손쉽게 두 개의 다른 모달을 표시할 수 있습니다.
 
@@ -537,13 +537,13 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
 {{< /example >}}
 
-### Change animation
+### 애니메이션 변경
 
 `$modal-fade-transform` 변수는 모달 페이드인 애니메이션 이전 `.modal-dialog`의 전환 상태를 결정하고, `$modal-show-transform` 변수는 모달 페이드인 애니메이션 종료시 `.modal-dialog`의 전환 상태를 결정합니다.
 
 예를 들어, zoom-in애니메이션을 만들고 싶다면 `$modal-fade-transform: scale(.8)`을 설정합니다.
 
-### Remove animation
+### 애니메이션 제거
 
 화면에 페이드인 하는 것이 아니라 단순히 표시만 하는 경우에는, 마크업에서 `.fade` 클래스를 삭제합니다.
 
@@ -553,7 +553,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 </div>
 ```
 
-### Dynamic heights
+### 동적 높이
 
 모달이 열려있는데 높이가 변경된 경우에는 스크롤바가 표시되었을 때 모달의 위치를 재조정하기 위해 `myModal.handleUpdate()`를 호출해야 합니다.
 
@@ -561,11 +561,11 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
 
 반드시 `.modal`에 모달 타이틀을 참조하는 `aria-labelledby="..."`를 추가해 주세요. 게다가 `.modal`에 `aria-describedby`를 추가하는 것으로, 모달 다이얼로그의 설명을 줄 수 있습니다. JavaScript로 이미 추가하고 있음으로 `role="dialog"`를 추가할 필요가 없다는 점에 주의해 주세요.
 
-### Embedding YouTube videos
+### YouTube 동영상 포함시키키
 
-YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaScript를 추가해 자동으로 재생을 정지하는 등의 처리가 필요합니다. 자세한 내용은 [See this helpful Stack Overflow post](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal)를 참조해 주세요.
+YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaScript를 추가해 자동으로 재생을 정지하는 등의 처리가 필요합니다. 자세한 내용은 [도움이 되는 Stack Overflow 글](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal)을 참조해 주세요.
 
-## Optional sizes
+## 선택적 크기
 
 모달에는 3개의 옵션 크기가 있어, 제어자 클래스를 통해 `.modal-dialog`로 배치할 수 있습니다. 이들 크기는 좁은 뷰포트에서의 가로 스크롤 바를 피하기 위해 특정 중단점에서 유효하게 됩니다.
 
@@ -657,7 +657,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
   </div>
 </div>
 
-## Fullscreen Modal
+## 전체화면 모달
 
 `.modal-dialog`에는 아래와 같은 클래스를 추가하는 것으로, 화면을 꽉채운 모달을 이용할 수 있습니다.
 
@@ -820,17 +820,17 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 
 {{< scss-docs name="modal-variables" file="scss/_variables.scss" >}}
 
-### Loop
+### 루프
 
 [Responsive fullscreen modals](#fullscreen-modal)은 `$breakpoints` 맵과 `scss/_modal.scss`내의 반복에 의해 생성됩니다.
 
 {{< scss-docs name="modal-fullscreen-loop" file="scss/_modal.scss" >}}
 
-## Usage
+## 사용 방법
 
 모달 플러그인은, data 속성이나 JavaScript를 사용하고, 필요에 따라 숨겨서 콘텐츠를 바꿉니다. 또한 기본 스크롤 동작을 덮어쓰고 모달의 바깥쪽을 클릭했을 때 표시된 모달을 삭제하기 위한 클릭 영역을 제공하기 위해서 `.modal-backdrop`을 생성합니다.
 
-### Via data attributes
+### 데이터 속성 사용하기
 
 JavaScript를 쓰지 않고 모달을 활성화 시킵니다. 버튼과 같은 컨트롤러 요소에 `data-bs-toggle="modal"`을 설정하고, 추가로 `data-bs-target="#foo"` 또는 `href="#foo"`를 지정하고, 토글하는 특정 모달을 타깃으로 합니다.
 
@@ -838,7 +838,7 @@ JavaScript를 쓰지 않고 모달을 활성화 시킵니다. 버튼과 같은 �
 <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Launch modal</button>
 ```
 
-### Via JavaScript
+### JavaScript 사용하기
 
 JavaScript 한 줄로 모달을 생성합니다:
 
@@ -846,7 +846,7 @@ JavaScript 한 줄로 모달을 생성합니다:
 var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 ```
 
-### Options
+### 옵션
 
 옵션은 data 속성 또는 JavaScript로 줄 수 있습니다. data 속성의 경우는 `data-bs-backdrop=""`처럼 `data-bs-`에 옵션명을 추가합니다.
 

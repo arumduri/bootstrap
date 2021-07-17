@@ -44,7 +44,7 @@ Bootstrap [utilities for setting width]({{< docsref "/utilities/sizing" >}})을 
 </div>
 {{< /example >}}
 
-## Labels
+## 라벨
 
 `.progress-bar` 안에 텍스트를 배치하고 프로그레스 바에 라벨을 추가합니다.
 
@@ -54,7 +54,7 @@ Bootstrap [utilities for setting width]({{< docsref "/utilities/sizing" >}})을 
 </div>
 {{< /example >}}
 
-## Height
+## 높이
 
 `.progress`에는 `height` 값만 설정되어 있기 때문에, 이 값을 변경하면 내부 `.progress-bar`는 그에 따라 자동으로 크기가 변경됩니다.
 
@@ -67,7 +67,7 @@ Bootstrap [utilities for setting width]({{< docsref "/utilities/sizing" >}})을 
 </div>
 {{< /example >}}
 
-## Backgrounds
+## 배경색
 
 Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 외형을 변경합니다.
 
@@ -86,7 +86,7 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 </div>
 {{< /example >}}
 
-## Multiple bars
+## 다수
 
 필요에 따라 프로그레스 컴포넌트에 여러 개의 프로그레스 바를 포함할 수 있습니다.
 
@@ -98,9 +98,9 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 </div>
 {{< /example >}}
 
-## Striped
+## 스트라이프
 
-임의의 `.progress-bar`에 `.progress-bar-striped`를 추가해 프로그레스 바의 배경 색상에 CSS 그라데이션으로 스트라이프를 적용합니다.
+임의의 `.progress-bar`에 `.progress-bar-striped`를 추가해 프로그레스 바의 배경색에 CSS 그라데이션으로 스트라이프를 적용합니다.
 
 {{< example >}}
 <div class="progress">
@@ -120,7 +120,7 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 </div>
 {{< /example >}}
 
-## Animated stripes
+## 애니메이션 스트라이프
 
 스트라이프 형태의 그라데이션을 애니메이션화할 수도 있습니다. `.progress-bar`에 `.progress-bar-animated`를 추가하면 CSS3 애니메이션으로 줄무늬를 오른쪽에서 왼쪽으로 애니메이션 시킬 수 있습니다.
 
@@ -145,7 +145,7 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 
 {{< scss-docs name="progress-variables" file="scss/_variables.scss" >}}
 
-### Keyframes
+### 키프레임
 
 CSS 애니메이션화를 위해 `scss/_progress-bar.scss`에 포함되어 있는 `.progress-bar-animated`를 사용합니다.
 

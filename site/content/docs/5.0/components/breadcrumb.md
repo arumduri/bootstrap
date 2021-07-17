@@ -36,7 +36,7 @@ toc: true
 
 ## 구분자
 
-구분자는 CSS의 [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) 과 [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content) 를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 `--bs-breadcrumb-divider`를 변경하거나, `$breadcrumb-divider` Sass 변수와 `$breadcrumb-divider-flipped`를 사용해 RTL에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS를 다시 컴파일하지 않고 재정의할 수 있는 글로벌한 구분자를 얻을 수 있습니다.
+구분자는 CSS의 [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before)과 [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content)를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 `--bs-breadcrumb-divider`를 변경하거나, `$breadcrumb-divider` Sass 변수와 `$breadcrumb-divider-flipped`를 사용해 RTL에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS를 다시 컴파일하지 않고 재정의할 수 있는 글로벌한 구분자를 얻을 수 있습니다.
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -47,13 +47,13 @@ toc: true
 </nav>
 {{< /example >}}
 
-Sass 를 통해 수정할 때, 텍스트열의 주변에 따옴표를 만들기 위해 [quote](https://sass-lang.com/documentation/modules/string#quote) 함수가 필요합니다. 예를 들어, `>`을 구분자로 사용하려면 이렇게 사용합니다.
+Sass 를 통해 수정할 때, 문자열의 주변에 따옴표를 만들기 위해 [quote](https://sass-lang.com/documentation/modules/string#quote) 함수가 필요합니다. 예를 들어, `>`을 구분자로 사용하려면 이렇게 사용합니다.
 
 ```scss
 $breadcrumb-divider: quote(">");
 ```
 
-또한 **내장된 SVG 아이콘**을 사용할 수도 있습니다. CSS 사용자 지정 속성을 통해 적용하거나 Sass 변수를 사용하십시오.
+또한 **내장된 SVG 아이콘**을 사용할 수도 있습니다. CSS 사용자 지정 속성을 통해 적용하거나 Sass 변수를 사용하세요.
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
@@ -68,7 +68,7 @@ $breadcrumb-divider: quote(">");
 $breadcrumb-divider: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E");
 ```
 
-또한 divider 설정인 `--bs-breadcrumb-divider: '';`을 빈 값으로 넣거나 (CSS 사용자 지정 속성의 빈 텍스트열은 값으로 카운터 됨), Sass 변수를 `$breadcrumb-divider: none;`으로 설정할 수도 있습니다.
+또한 divider 설정인 `--bs-breadcrumb-divider: '';`을 빈 값으로 넣거나 (CSS 사용자 지정 속성의 빈 문자열은 값으로 카운터 됨), Sass 변수를 `$breadcrumb-divider: none;`으로 설정할 수도 있습니다.
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">

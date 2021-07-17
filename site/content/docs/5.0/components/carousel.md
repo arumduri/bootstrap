@@ -27,7 +27,7 @@ toc: true
 
 ### 슬라이드만
 
-슬라이드만 사용하는 캐러셀입니다. 캐러셀 이미지에 `.d-block`과 `.w-100` 이 있는 것을 주의해 주세요.
+슬라이드만 사용하는 캐러셀입니다. 캐러셀 이미지에 `.d-block`과 `.w-100`이있는 것을 주의해 주세요.
 
 {{< example >}}
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -108,7 +108,7 @@ toc: true
 
 ### 설명문 포함
 
-`.carousel-item` 안의 `.carousel-caption` 요소를 사용해, 슬라이드에 설명문 (캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 [디스플레이 유틸리티]({{< docsref "/utilities/display" >}}) 를 사용함으로써, 보다 작은 뷰포트에서 간단하게 설명문 (캡션, caption)을 감추는 것도 가능합니다. 처음에는 `.d-none` 로 비표시하고, 중형 기기에서는 `.d-md-block`으로 다시 표시합니다.
+`.carousel-item` 안의 `.carousel-caption` 요소를 사용해, 슬라이드에 설명문 (캡션, caption)을 손쉽게 추가할 수 있습니다. 아래와 같이, 옵션의 [디스플레이 유틸리티]({{< docsref "/utilities/display" >}})를 사용함으로써, 보다 작은 뷰포트에서 간단하게 설명문 (캡션, caption)을 감추는 것도 가능합니다. 처음에는 `.d-none`로 비표시하고, 중형 기기에서는 `.d-md-block`으로 다시 표시합니다.
 
 {{< example >}}
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -380,8 +380,8 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 <table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>메소드</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>

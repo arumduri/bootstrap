@@ -2,12 +2,12 @@
 layout: docs
 title: 말 줄임표
 title_en: Text truncation
-description: 줄임표를 사용하여 긴 텍스트의 텍스트열을 자릅니다.
+description: 줄임표를 사용하여 긴 텍스트의 문자열을 자릅니다.
 group: helpers
 toc: false
 --- 
 
-콘텐츠의 내용이 너무 길 경우 `.text-truncate` 클래스를 사용하여 텍스트열을 자를 수 있습니다. ** `display: inline-block` 또는 `display: block` 이 필요합니다.**
+콘텐츠의 내용이 너무 길 경우 `.text-truncate` 클래스를 사용하여 문자열을 자를 수 있습니다. **`display: inline-block` 또는 `display: block`이 필요합니다.**
 
 {{< example >}}
 <!-- Block level -->

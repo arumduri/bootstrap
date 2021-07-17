@@ -142,7 +142,7 @@ Display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 버튼 플러그인에서는, 간단한 on/off 토글 버튼을 생성할 수 있습니다.
 
 {{< callout info >}}
-시각적으로, 이 토글 버튼은 [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}) 과 같습니다. 하지만, 이런 것들은 지원 기술에 따라 다르게 전달됩니다. 체크 박스는 스크린 리더에 의해, "checked"/"not checked"로 안내되며(보이는 것과 상관없이 기본적으로는 체크 박스이기 때문에), 토글 버튼은 "button"/"button pressed"로 안내됩니다. 이 두 가지 접근방식 중 어느 쪽을 선택할지는 작성하는 토글의 타입과 체크 박스 또는 실제 버튼으로 안내 되었을 때 토글이 사용자에게 의미가 있는지 여부에 따라 다릅니다.
+시각적으로, 이 토글 버튼은 [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}})과 같습니다. 하지만, 이런 것들은 지원 기술에 따라 다르게 전달됩니다. 체크 박스는 스크린 리더에 의해, "checked"/"not checked"로 안내되며(보이는 것과 상관없이 기본적으로는 체크 박스이기 때문에), 토글 버튼은 "button"/"button pressed"로 안내됩니다. 이 두 가지 접근방식 중 어느 쪽을 선택할지는 작성하는 토글의 타입과 체크 박스 또는 실제 버튼으로 안내 되었을 때 토글이 사용자에게 의미가 있는지 여부에 따라 다릅니다.
 {{< /callout >}}
 
 ### 상태 토글
@@ -173,8 +173,8 @@ var bsButton = new bootstrap.Button(button)
 <table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>메소드</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>

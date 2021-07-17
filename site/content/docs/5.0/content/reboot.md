@@ -58,7 +58,7 @@ $font-family-sans-serif:
 
 ## 제목과 단락
 
-모든 제목 요소 (예: `<h1>` 및 `<p>`)는 `margin-top` 이 제거되도록 재설정됩니다. 제목에는 `margin-bottom: .5rem` 이 추가되고 단락은 `margin-bottom : 1rem`이 추가되어 간격을 쉽게 조정할 수 있습니다.
+모든 제목 요소 (예: `<h1>` 및 `<p>`)는 `margin-top`이제거되도록 재설정됩니다. 제목에는 `margin-bottom: .5rem`이추가되고 단락은 `margin-bottom : 1rem`이 추가되어 간격을 쉽게 조정할 수 있습니다.
 
 <table class="table">
   <thead>

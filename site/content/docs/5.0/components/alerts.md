@@ -8,7 +8,7 @@ toc: true
 ---
 
 ## 예시
-텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를 들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing) 을 사용합니다.
+텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를 들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing)을 사용합니다.
 
 {{< example >}}
 {{< alerts.inline >}}
@@ -50,7 +50,7 @@ toc: true
 
 ### 아이콘
 
-마찬가지로 [flexbox 유틸리티]({{< docsref "/utilities/flex" >}}) 와 [Bootstrap Icons]({{< param icons >}}) 을 이용하여 경고창을 만들 수 있습니다. 아이콘이나 콘텐츠에 따라서는 유틸리티나 사용자 정의 스타일을 더 추가할 수도 있습니다.
+마찬가지로 [flexbox 유틸리티]({{< docsref "/utilities/flex" >}})와 [Bootstrap Icons]({{< param icons >}})을 이용하여 경고창을 만들 수 있습니다. 아이콘이나 콘텐츠에 따라서는 유틸리티나 사용자 정의 스타일을 더 추가할 수도 있습니다.
 
 {{< example >}}
 <div class="alert alert-primary d-flex align-items-center" role="alert">
@@ -177,8 +177,8 @@ var bsAlert = new bootstrap.Alert(myAlert)
 <table class="table">
   <thead>
     <tr>
-      <th>Method</th>
-      <th>Description</th>
+      <th>메소드</th>
+      <th>설명</th>
     </tr>
   </thead>
   <tbody>

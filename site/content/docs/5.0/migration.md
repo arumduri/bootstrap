@@ -246,7 +246,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> 드롭다운의 모든 이벤트는 드롭다운 토글 버튼으로 트리거 되어 이후 부모 요소에 버블링 됩니다.
 
-- 드롭다운 메뉴에는 위치가 정적일때 `data-bs-popper="static"` 속성이 설정되며, 드롭다운이 내비바에 있을 때에는 `data-bs-popper="none"`으로 설정됩니다. 이것은 JavaScript를 통해 추가되며 Popper의 배치에 간섭하지 않고 사용자 정의 위치 스타일을 사용하는데 도움이 됩니다.
+- 드롭다운 메뉴에는 위치가 정적일때 `data-bs-popper="static"` 속성이 설정되며, 드롭다운이 내비게이션 바에 있을 때에는 `data-bs-popper="none"`으로 설정됩니다. 이것은 JavaScript를 통해 추가되며 Popper의 배치에 간섭하지 않고 사용자 정의 위치 스타일을 사용하는데 도움이 됩니다.
 
 - <span class="badge bg-danger">Breaking</span> 드롭다운 플러그인에 대한 `flip` 옵션을 삭제하고 Popper의 네이티브 설정으로 변경되었습니다. [flip](https://popper.js.org/docs/v2/modifiers/flip/) 제어자의 [`fallbackPlacements`](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements)의 빈 배열을 통해서 플립 동작을 비활성화 할 수 있습니다.
 
@@ -354,7 +354,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> 더욱 편리한 CSS 변수 추가로 동작이 개선된 **Responsive embed가 [ratio 도우미]({{< docsref "/helpers/ratio" >}})** 로 이름이 변경되었습니다.
   - 비율을 나타내는 클래스가 `by`에서 `x`로 이름이 변경되었습니다. 예를 들어, `.ratio-16by9`는 `.ratio-16x9`가 되었습니다.
-  - `.embed-responsive-item`과 요소 그룹 셀렉타를 삭제하여 더욱 단순한 `.ratio > *` 셀렉타로 변경되었습니다. 이로써 클래스는 불필요해 졌고, 비율 도우미는 어떠한 HTML 요소로도 사용 가능해졌습니다.
+  - `.embed-responsive-item`과 요소 그룹 셀렉터를 삭제하여 더욱 단순한 `.ratio > *` 셀렉터로 변경되었습니다. 이로써 클래스는 불필요해 졌고, 비율 도우미는 어떠한 HTML 요소로도 사용 가능해졌습니다.
   - `$embed-responsive-aspect-ratios`의 Sass 맵은 `$aspect-ratios`로 이름이 변경되었고, 그 값은 클래스 이름과 퍼센티지를 `key: value` 값으로 포함하도록 간소화되었습니다.
   - Sass 맵의 각 값에 CSS 변수가 생성되어 포함되었습니다. `.ratio`의 `--bs-aspect-ratio` 변수를 수정하여 임의의 [사용자 정의 비율]({{< docsref "/helpers/ratio#custom-ratios" >}})을 만듭니다.
 
@@ -371,7 +371,7 @@ toc: true
 
 - <span class="badge bg-danger">Breaking</span> 모든 JavaScript 플러그인의 데이터 속성은 제삼자의 코드와 자체 코드에서 Bootstrap의 기능을 구별하는 데 도움이 되도록 이름을 붙이고 있습니다. 예를 들어 `data-toggle` 대신 `data-bs-toggle`을 사용합니다.
 
-- **모든 클러그인은 첫번째 인수로서 CSS 셀렉타를 받아들일 수 있게 되었습니다.** 플러그인의 새로운 인스턴스를 작성하기 위해 DOM 요소 또는 임의의 CSS 셀렉타를 전달할 수 있습니다. :
+- **모든 클러그인은 첫번째 인수로서 CSS 셀렉터를 받아들일 수 있게 되었습니다.** 플러그인의 새로운 인스턴스를 작성하기 위해 DOM 요소 또는 임의의 CSS 셀렉터를 전달할 수 있습니다. :
 
   ```js
   var modal = new bootstrap.Modal('#myModal')

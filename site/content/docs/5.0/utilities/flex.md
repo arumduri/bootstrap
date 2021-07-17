@@ -2,7 +2,7 @@
 layout: docs
 title: 플렉스
 title_en: Flex
-description: 반응형 Flexbox 유틸리티 세트를 사용해 그리드 열, 네비게이션 바, 구성 요소, 레이아웃의 정렬 및 크기 조정을 신속하게 관리합니다. 더 복잡한 구현의 경우 사용자 정의 CSS가 필요할 수 있습니다.
+description: 반응형 flexbox 유틸리티 세트를 사용해 그리드 열, 네비게이션 바, 구성 요소, 레이아웃의 정렬 및 크기 조정을 신속하게 관리합니다. 더 복잡한 구현의 경우 사용자 정의 CSS가 필요할 수 있습니다.
 group: utilities
 toc: true
 ---
@@ -281,7 +281,7 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 </div>
 {{< /example >}}
 
-필요한 경우 `.flex-shrink- *` 유틸리티를 사용하여 flex 아이템의 수축 기능을 전환합니다. 아래 예시에서 `.flex-shrink-1` 이 포함 된 두 번째 flex 아이템은 해당 내용이 강제로 새로운 row로 감싸집니다. `.w-100` 이 포함 된 첫번째 flex 아이템에 더 많은 공간을 허용하기 위해 "축소" 합니다.
+필요한 경우 `.flex-shrink- *` 유틸리티를 사용하여 flex 아이템의 수축 기능을 전환합니다. 아래 예시에서 `.flex-shrink-1`이포함 된 두 번째 flex 아이템은 해당 내용이 강제로 새로운 row로 감싸집니다. `.w-100`이포함 된 첫번째 flex 아이템에 더 많은 공간을 허용하기 위해 "축소" 합니다.
 
 {{< example >}}
 <div class="d-flex bd-highlight">
@@ -303,7 +303,7 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 
 ## Auto margins
 
-Flexbox는 flex 정렬과 자동여백을 혼합 할 때 꽤 멋진 일을 할 수 있습니다. 아래는 자동 여백을 통해 flex 아이템을 제어하는 세 가지 예시입니다. 기본값 (자동 여백 없음), 두 항목을 오른쪽으로 밀기 ( `.me-auto` ), 두 항목을 왼쪽으로 밀기 ( `.ms-auto` ).
+Flexbox는 flex 정렬과 자동여백을 혼합할 때 꽤 멋진 일을 할 수 있습니다. 아래는 자동 여백을 통해 flex 아이템을 제어하는 세 가지 예시입니다. 기본값 (자동 여백 없음), 두 항목을 오른쪽으로 밀기 ( `.me-auto` ), 두 항목을 왼쪽으로 밀기 ( `.ms-auto` ).
 
 {{< example >}}
 <div class="d-flex bd-highlight mb-3">
@@ -345,7 +345,7 @@ Flexbox는 flex 정렬과 자동여백을 혼합 할 때 꽤 멋진 일을 할 �
 
 ## Wrap
 
-flex 컨테이너에서 flex 아이템이 줄바꿈되는 방식을 변경합니다. `.flex-nowrap`으로 줄바꿈을 없애거나 (브라우저 기본값), `.flex-wrap`으로 줄바꿈 또는`.flex-wrap-reverse` 로 역방향으로 줄바꿈 중에서 선택하십시오.
+flex 컨테이너에서 flex 아이템이 줄바꿈되는 방식을 변경합니다. `.flex-nowrap`으로 줄바꿈을 없애거나 (브라우저 기본값), `.flex-wrap`으로 줄바꿈 또는`.flex-wrap-reverse`로 역방향으로 줄바꿈 중에서 선택하십시오.
 
 <div class="bd-example">
   <div class="d-flex flex-nowrap bd-highlight" style="width: 8rem;">
@@ -632,7 +632,7 @@ flexbox 컨테이너에서 `align-content` 유틸리티를 사용하여 flex 아
 
 ## Media object
 
-Bootstrap4에서 [미디어 개체 구성 요소](https://getbootstrap.com/docs/4.6/components/media-object/) 를 복제 해오고 싶으십니까? 이전보다 훨씬 더 많은 유연성과 사용자 정의를 허용하는 몇 가지 flex유틸리티를 사용하여 즉시 다시 만드세요.
+Bootstrap4에서 [미디어 개체 구성 요소](https://getbootstrap.com/docs/4.6/components/media-object/)를 복제 해오고 싶으십니까? 이전보다 훨씬 더 많은 유연성과 사용자 정의를 허용하는 몇 가지 flex유틸리티를 사용하여 즉시 다시 만드세요.
 
 {{< example >}}
 <div class="d-flex">

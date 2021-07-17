@@ -54,6 +54,6 @@ Bootstrap을 재정의 하는 방법은 여러 가지가 있습니다. 가장 �
 - [폼 유효성 검사 아이콘]({{< docsref "/forms/validation#server-side" >}})
 - [셀렉트 메뉴]({{< docsref "/forms/select" >}})
 - [캐러셀 컨트롤]({{< docsref "/components/carousel#with-controls" >}})
-- [내비바 토글 버튼]({{< docsref "/components/navbar#responsive-behaviors" >}})
+- [내비게이션 바 토글 버튼]({{< docsref "/components/navbar#responsive-behaviors" >}})
 
 [커뮤니티 정보](https://github.com/twbs/bootstrap/issues/25394)에 의하면, 사용자의 코드를 가지고 이 문제에 대처하는 방법으로는 URL을 로컬 호스트한다, 이미지를 삭제해 인라인으로 이미지를 사용한다 (모든 컴포넌트로 가능한 것은 아닙니다), CSP를 변경한다 등이 있습니다. 우리는 사용자가 자신의 보안 정책을 확인하고 필요에 따라 최적의 방법을 선택하는 것을 권장합니다.

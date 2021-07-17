@@ -24,7 +24,7 @@ toc: true
 
 ## 예시
 
-### Offcanvas components
+### 오프캔버스 컴포넌트
 
 다음은 기본적으로 표시되는(`.offcanvas`의 `.show`에 의해) 오프캔버스의 예시입니다. 오프캔버스에는 닫기 버튼이 있는 헤더와 초기 `padding`을 위한 옵션의 body클래스가 지원됩니다. 가능한 오프캔버스의 헤더에 닫기 액션을 포함시키거나 명시적인 닫기 액션을 제공할 것을 권장합니다.
 
@@ -40,7 +40,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### Live demo
+### 라이브 데모
 
 아래의 버튼을 클릭하면 `.offcanvas` 클래스를 갖고 있는 요소의 `.show` 클래스를 토글하는 JavaScript로 오프캔버스를 표시/숨김하는 것을 확인할 수 있습니다.
 
@@ -80,7 +80,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Placement
+## 배치
 
 오프캔버스 컴포넌트의 기본 배치는 없으므로 아래 제어자 클래스 중 하나를 추가해야 합니다:
 
@@ -133,7 +133,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## Backdrop
+## 백드롭
 
 오프캔버스와 그 배경이 표시될 때에는 `<body>` 요소의 스크롤은 비활성화됩니다. `<body>` 스크롤을 바꾸고 싶으면 `data-bs-scroll` 속성을, 배경의 스크롤을 바꾸고 싶으면 `data-bs-backdrop` 속성을 사용해 주세요.
 
@@ -181,7 +181,7 @@ toc: true
 
 {{< scss-docs name="offcanvas-variables" file="scss/_variables.scss" >}}
 
-## Usage
+## 사용 방법
 
 오프캔버스 플러그인에서는 몇 가지 클래스와 속성을 이용하여 힘든 처리를 합니다.:
 
@@ -193,11 +193,11 @@ toc: true
 
 닫기 버튼에 `data-bs-dismiss="offcanvas"` 속성을 추가해 JavaScript 기능으로 감춥니다.
 
-### Via data attributes
+### 데이터 속성 사용하기
 
-요소에 `data-bs-toggle="offcanvas"`와 `data-bs-target`이나 `href`를 추가하면 1개의 오프캔버스 요소의 제어를 자동으로 할 수 있습니다. `data-bs-target` 속성에는 오프캔버스를 적용하기 위한 CSS 셀렉타를 지정합니다. 오프캔버스 속성에는 반드시 `offcanvas` 클래스를 추가해야 합니다. 기본 열린 상태로 하고 싶다면 `show` 클래스를 추가하세요.
+요소에 `data-bs-toggle="offcanvas"`와 `data-bs-target`이나 `href`를 추가하면 1개의 오프캔버스 요소의 제어를 자동으로 할 수 있습니다. `data-bs-target` 속성에는 오프캔버스를 적용하기 위한 CSS 셀렉터를 지정합니다. 오프캔버스 속성에는 반드시 `offcanvas` 클래스를 추가해야 합니다. 기본 열린 상태로 하고 싶다면 `show` 클래스를 추가하세요.
 
-### Via JavaScript
+### JavaScript 사용하기
 
 이처럼 수동으로 활성화 합니다:
 
@@ -208,7 +208,7 @@ var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
 })
 ```
 
-### Options
+### 옵션
 
 data 속성 및 JavaScript로 옵션을 전달할 수 있습니다. data 속성의 경우, `data-bs-backdrop=""`처럼 ` data-bs-`에 옵션명을 추가해 사용합니다.
 

@@ -25,7 +25,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-## Working with icons
+## 아이콘 사용하기
 
 페이지네이션 링크에 텍스트 대신 아이콘이나 심벌을 사용하고 싶다면, `aria` 속성을 사용하여 스크린 리더를 적절히 지원하도록 하세요.
 
@@ -49,9 +49,9 @@ toc: true
 </nav>
 {{< /example >}}
 
-## Disabled and active states
+## 비활성화 및 활성화 상태
 
-페이지네이션 링크는, 다양한 상황에 따라 재정의할 수 있습니다. 클릭할 수 없는 링크에는 `.disabled`를, 현재의 페이지에는 `.active`를 사용합니다.
+페이지네이션 링크는 다양한 상황에 따라 재정의할 수 있습니다. 클릭할 수 없는 링크에는 `.disabled`를, 현재의 페이지에는 `.active`를 사용합니다.
 
 `.disabled` 클래스는 `pointer-events: none`를 사용하여 `<a>`의 링크 기능을 무효화 _하려고_ 하고 있습니다만, 이 CSS 속성은 아직 표준화 되어 있지 않고, 키보드 내비게이션을 고려하고 있지 않습니다. 그래서 비활성화된 링크에는 항상 `tabindex="-1"`를 추가하고 그 기능을 완전히 비활성화하기 위헤 사용자 정의 JavaScript를 사용해야 합니다.
 
@@ -121,9 +121,9 @@ toc: true
 </nav>
 {{< /example >}}
 
-## Alignment
+## 정렬
 
-[Flexbox utilities]({{< docsref "/utilities/flex" >}}) 를 사용해 페이지네이션의 위치를 변경합니다.
+[Flexbox utilities]({{< docsref "/utilities/flex" >}})를 사용해 페이지네이션의 위치를 변경합니다.
 
 {{< example >}}
 <nav aria-label="Page navigation example">
