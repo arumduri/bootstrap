@@ -13,14 +13,14 @@
     - title: Browsers & devices
       title_ko: 브라우저 & 기기
     - title: JavaScript
-    - title: Build tools
-      title_ko: 빌드 도구
     - title: Webpack
     - title: Parcel
     - title: Accessibility
       title_ko: 접근성
     - title: RFS
     - title: RTL
+    - title: Contribute
+      title_ko: 기여
 
 - title: Customize
   title_ko: 사용자 지정
@@ -55,6 +55,8 @@
     - title: Utilities
       title_ko: 유틸리티
     - title: Z-index
+    - title: CSS Grid
+      title_ko: CSS 그리드
 
 - title: Content
   title_ko: 컨텐츠
@@ -128,6 +130,8 @@
       title_ko: 오프캔버스
     - title: Pagination
       title_ko: 페이지네이션
+    - title: Placeholders
+      title_ko: 플레이스홀더
     - title: Popovers
       title_ko: 팝오버
     - title: Progress
@@ -152,12 +156,16 @@
       title_ko: 비율
     - title: Position
       title_ko: 위치
+    - title: Stacks
+      title_ko: 스택
     - title: Visually hidden
       title_ko: 시각적으로 숨기기
     - title: Stretched link
       title_ko: 확장형 링크
     - title: Text truncation
       title_ko: 말줄임표
+    - title: Vertical rule
+      title_ko: 세로줄
 
 - title: Utilities
   title_ko: 유틸리티
@@ -177,6 +185,8 @@
       title_ko: 플로트
     - title: Interactions
       title_ko: 상호작용
+    - title: Opacity
+      title_ko: 불투명도
     - title: Overflow
       title_ko: 오버플로우
     - title: Position
