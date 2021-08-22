@@ -7,10 +7,6 @@ group: helpers
 toc: true
 ---
 
-{{< callout info >}}
-{{< partial "callout-untranslated.md" >}}
-{{< /callout >}}
-
 스택은 Bootstrap에서 레이아웃을 빠르고 쉽게 생성하기 위해 여러 flexbox 속성을 적용하는 지름길을 제공합니다. 개념 및 구현에 대한 모든 크레딧은 오픈 소스 [Pylon Project](https://almonk.github.io/pylon/)에 있습니다.
 
 ## 세로

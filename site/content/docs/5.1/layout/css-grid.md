@@ -7,10 +7,6 @@ group: layout
 toc: true
 ---
 
-{{< callout info >}}
-{{< partial "callout-untranslated.md" >}}
-{{< /callout >}}
-
 Bootstrap의 기본 그리드 시스템은 수백만 명의 사람들이 시도하고 테스트한 10년 이상의 CSS 레이아웃 기술의 정점을 나타냅니다. 그러나 그것은 또한 우리가 새로운 브라우저에서 볼 수 있는 CSS 그리드와 같은 많은 최신 CSS 기능과 기술 없이 만들어졌습니다.
 
 {{< callout warning >}}
