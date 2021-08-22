@@ -367,6 +367,9 @@
     <loc>https://getbootstrap.kr/docs/5.1/utilities/borders/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.kr/docs/5.1/content/tables/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.kr/docs/5.1/utilities/text/</loc>
   </url>
   <url>
@@ -389,9 +392,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.1/forms/form-control/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.kr/docs/5.1/content/tables/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.1/components/progress/</loc>
