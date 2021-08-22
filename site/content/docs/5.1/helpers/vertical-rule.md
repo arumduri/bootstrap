@@ -2,32 +2,28 @@
 layout: docs
 title: 세로줄
 title_en: Vertical rule
-description: Use the custom vertical rule helper to create vertical dividers like the `<hr>` element.
+description: 사용자 지정 세로줄 도우미를 사용하여 `<hr>` 요소와 같은 세로 구분선을 만드세요.
 group: helpers
 toc: true
 ---
 
-{{< callout info >}}
-{{< partial "callout-untranslated.md" >}}
-{{< /callout >}}
+## 작동 원리
 
-## How it works
+세로줄은 `<hr>` 요소에서 영감을 받았으며 공통 레이아웃에서 수직 구분선을 만들 수 있습니다. 세로줄은 `<hr>` 요소처럼 스타일이 지정되어 있습니다:
 
-Vertical rules are inspired by the `<hr>` element, allowing you to create vertical dividers in common layouts. They're styled just like `<hr>` elements:
+- `1px` 너비
+- `1em`의 `min-height`
+- `currentColor` 및 `opacity`로 색상 지정 가능
 
-- They're `1px` wide
-- They have `min-height` of `1em`
-- Their color is set via `currentColor` and `opacity`
+필요에 따라 추가 스타일로 사용자 정의하세요.
 
-Customize them with additional styles as needed.
-
-## Example
+## 예제
 
 {{< example >}}
 <div class="vr"></div>
 {{< /example >}}
 
-Vertical rules scale their height in flex layouts:
+수직 규칙은 flex 레이아웃에서 높이를 조정합니다:
 
 {{< example >}}
 <div class="d-flex" style="height: 200px;">
@@ -35,9 +31,9 @@ Vertical rules scale their height in flex layouts:
 </div>
 {{< /example >}}
 
-## With stacks
+## 스택과 함깨 사용하기
 
-They can also be used in [stacks]({{< docsref "/helpers/stacks" >}}):
+[스택]({{< docsref "/helpers/stacks" >}})에서 사용할 수도 있습니다:
 
 {{< example >}}
 <div class="hstack gap-3">

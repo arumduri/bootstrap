@@ -2,17 +2,17 @@
 layout: docs
 title: 수직 정렬
 title_en: Vertical alignment
-description: Easily change the vertical alignment of inline, inline-block, inline-table, and table cell elements.
+description: 인라인, 인라인 블록, 인라인 테이블 및 테이블 셀 요소의 수직 정렬을 쉽게 변경할 수 있습니다.
 group: utilities
 ---
 
-Change the alignment of elements with the [`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.
+[`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) 유틸리티를 사용하여 요소의 정렬을 변경합니다. 수직 정렬은 인라인, 인라인 블록, 인라인 테이블 및 테이블 셀 요소에만 영향을 미칩니다.
 
-Choose from `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom`, and `.align-text-top` as needed.
+필요에 따라 `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom` 및 `.align-text-top` 중에서 선택할 수 있습니다.
 
-To vertically center non-inline content (like `<div>`s and more), use our [flex box utilities]({{< docsref "/utilities/flex#align-items" >}}).
+인라인이 아닌 콘텐츠 (예: `<div>` 등)를 세로로 가운데에 맞추려면 [flexbox 유틸리티]({{< docsref "/utilities/flex#align-items" >}})를 사용하세요.
 
-With inline elements:
+인라인 요소를 다음과 같이 사용할 수 있습니다:
 
 {{< example >}}
 <span class="align-baseline">baseline</span>
@@ -23,7 +23,7 @@ With inline elements:
 <span class="align-text-bottom">text-bottom</span>
 {{< /example >}}
 
-With table cells:
+테이블 셀을 다음과 같이 사용할 수 있습니다:
 
 {{< example >}}
 <table style="height: 100px;">
@@ -44,6 +44,6 @@ With table cells:
 
 ### 유틸리티 API
 
-Vertical align utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+수직 정렬 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-vertical-align" file="scss/_utilities.scss" >}}
