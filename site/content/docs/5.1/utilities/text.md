@@ -23,7 +23,8 @@ Easily realign text to components with text alignment classes. For start, end, a
 {{< /example >}}
 
 {{< callout info >}}
-Note that we don't provide utility classes for justified text. While, aesthetically, justified text might look more appealing, it does make word-spacing more random and therefore harder to read.
+정렬된 텍스트에 대한 유틸리티 클래스는 제공하지 않습니다. 미학적으로 정렬된 텍스트는 매력적으로 보일 수 있지만 단어 간격을 무작위로 만들기 떄문에 가독성이 저하됩니다.
+
 {{< /callout >}}
 
 ## 텍스트 줄바꿈과 오버플로우

@@ -112,7 +112,7 @@ And background color opacities build on that with their own map that's consumed 
 
 ### 믹스인
 
-** 배경 유틸리티를 생성하는 데 믹스 인이 사용되지는 않지만 **, 자신만의 그라데이션을 만들고 싶은 다른 상황을 위한 몇가지 추가 믹스 인이 있습니다.
+** 배경 유틸리티를 생성하는 데 믹스인이 사용되지는 않지만 **, 자신만의 그라데이션을 만들고 싶은 다른 상황을 위한 몇가지 추가 믹스인이 있습니다.
 
 {{< scss-docs name="gradient-bg-mixin" file="scss/mixins/_gradients.scss" >}}
 

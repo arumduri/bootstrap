@@ -7,7 +7,7 @@ group: helpers
 aliases: "/docs/5.1/helpers/"
 ---
 
-부모 요소에 `.clearfix`를 추가하여 `floats`를 쉽게 정렬합니다. 믹스 인으로도 사용할 수 있습니다.
+부모 요소에 `.clearfix`를 추가하여 `floats`를 쉽게 정렬합니다. 믹스인으로도 사용할 수 있습니다.
 
 HTML에서 사용시:
 
@@ -15,11 +15,11 @@ HTML에서 사용시:
 <div class="clearfix">...</div>
 ```
 
-믹스 인 소스코드:
+믹스인 소스코드:
 
 {{< scss-docs name="clearfix" file="scss/mixins/_clearfix.scss" >}}
 
-SCSS에서 믹스 인 사용시:
+SCSS에서 믹스인 사용시:
 
 ```scss
 .element {
