@@ -38,7 +38,7 @@ toc: true
 
 ### 위치
 
-Use utilities to modify a `.badge` and position it in the corner of a link or button.
+유틸리티를 사용하여 `.badge`를 수정하고 링크나 버튼의 모서리에 배치하세요.
 
 {{< example >}}
 <button type="button" class="btn btn-primary position-relative">
@@ -50,7 +50,7 @@ Use utilities to modify a `.badge` and position it in the corner of a link or bu
 </button>
 {{< /example >}}
 
-You can also replace the `.badge` class with a few more utilities without a count for a more generic indicator.
+더 일반적인 지표에 대한 카운트 없이 `.badge` 클래스를 몇 가지 더 많은 유틸리티로 대체할 수도 있습니다.
 
 {{< example >}}
 <button type="button" class="btn btn-primary position-relative">

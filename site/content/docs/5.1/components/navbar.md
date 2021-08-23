@@ -132,7 +132,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-lig
 
 ### 내비게이션 바
 
-내비게이션 바의 내비게이션 링크는 `.nav` 옵션에 독자적인 변경 클래스를 추가하여 구축되며, 적절한 반응형 스타일링을 위해 [toggler classes](#toggler) 사용을 해야 합니다. 내비게이션 바 안에서 내비게이션 링크는 **수평 방향으로 펼쳐져 깔끔하게 정렬**합니다.
+내비게이션 바의 내비게이션 링크는 `.nav` 옵션에 독자적인 변경 클래스를 추가하여 빌드되며, 적절한 반응형 스타일링을 위해 [toggler classes](#toggler) 사용을 해야 합니다. 내비게이션 바 안에서 내비게이션 링크는 **수평 방향으로 펼쳐져 깔끔하게 정렬**합니다.
 
 현재 페이지를 나타내기 위해 `.nav-link`에 `.nav-link` 클래스를 추가합니다.
 
@@ -659,11 +659,11 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 
 이렇게 했을 때는 컨테이너가 열렸을 때 포커스를 이동시키기 위한 추가적인 JavaScript를 포함하는 것을 권장합니다. 그렇지 않으면, 키보드 사용자나 지원 기술 사용자는 새롭게 표시된 콘텐츠를 찾는 데 어려움을 겪을 것입니다. 특히, 열린 컨테이너가 문서의 구조상 토글러보다 *before*에 있는 경우는 더욱더 그렇습니다. 또한 토글러가 콘텐츠의 `id`를 가르키는 `aria-controls` 속성을 가지고 있는 것을 확인할 필요가 있습니다. 이론적으로는 지원 기술 사용자가 토글러에서 그것을 제어하는 콘텐츠를 직접 점프할 수 있게 되어 있지만, 현재 이 지원은 매우 애매합니다.
 
-### Offcanvas
+### 오프캔버스
 
-Transform your expanding and collapsing navbar into an offcanvas drawer with the offcanvas plugin. We extend both the offcanvas default styles and use our `.navbar-expand-*` classes to create a dynamic and flexible navigation sidebar.
+오프캔버스 플러그인을 사용하여 확장 및 콜랩스 내비바를 오프캔버스 서랍으로 변환하세요. 오프캔버스 기본 스타일을 모두 확장하고 `.navbar-expand-*` 클래스를 사용하여 동적이고 유연한 네비게이션 사이드바를 만들 수 있습니다.
 
-In the example below, to create an offcanvas navbar that is always collapsed across all breakpoints, omit the `.navbar-expand-*` class entirely.
+아래 예에서 모든 중단점에서 항상 축소되는 오프캔버스 탐색 모음을 만들려면 `.navbar-expand-*` 클래스를 완전히 생략해야 합니다.
 
 {{< example >}}
 <nav class="navbar navbar-light bg-light fixed-top">
@@ -709,7 +709,7 @@ In the example below, to create an offcanvas navbar that is always collapsed acr
 </nav>
 {{< /example >}}
 
-To create an offcanvas navbar that expands into a normal navbar at a specific breakpoint like `lg`, use `.navbar-expand-lg`.
+`lg`와 같은 특정 중단점에서 일반 내비바로 확장되는 캔버스 내비바를 만들려면 `.navbar-expand-lg`를 사용하세요.
 
 ```html
 <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">

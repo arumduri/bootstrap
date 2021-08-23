@@ -9,7 +9,7 @@ toc: true
 
 ## 작동 원리
 
-프로그레스 컴포넌트는 2개의 HTML 요소와 너비를 설정하기 위한 몇 가지 CSS와 속성들로 구축됩니다. [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)는 사용하지 않음으로, 프로그레스 바를 쌓아 올리거나 애니메이션화 하거나 텍스트 라벨을 배치할 수 있습니다.
+프로그레스 컴포넌트는 2개의 HTML 요소와 너비를 설정하기 위한 몇 가지 CSS와 속성들로 빌드됩니다. [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)는 사용하지 않음으로, 프로그레스 바를 쌓아 올리거나 애니메이션화 하거나 텍스트 라벨을 배치할 수 있습니다.
 
 - 프로그레스 바의 최대 너비를 나타내기 위해 `.progress`를 사용합니다.
 - 진행상황을 나타내기 위해 안쪽에 `.progress-bar`를 사용합니다.

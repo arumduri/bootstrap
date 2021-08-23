@@ -16,16 +16,16 @@ Bootstrap 유틸리티는 유틸리티 API로 생성되며 Sass를 통해 기본
 {{< bs-table "table text-start" >}}
 | 옵션 | 형식 | 기본값 | 설명 |
 | --- | --- | --- | --- |
-| [`property`](#property) | **필수** | – | Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins). |
-| [`values`](#values) | **필수** | – | List of values, or a map if you don't want the class name to be the same as the value. If `null` is used as map key, it isn't compiled. |
-| [`class`](#class) | 선택 | null | Name of the generated class. If not provided and `property` is an array of strings, `class` will default to the first element of the `property` array. |
-| [`css-var`](#css-variable-utilities) | 선택 | `false` | Boolean to generate CSS variables instead of CSS rules. |
-| [`local-vars`](#local-css-variables) | 선택 | null | Map of local CSS variables to generate in addition to the CSS rules. |
-| [`state`](#states) | 선택 | null | List of pseudo-class variants (e.g., `:hover` or `:focus`) to generate. |
-| [`responsive`](#responsive) | 선택 | `false` | Boolean indicating if responsive classes should be generated. |
-| `rfs` | 선택 | `false` | Boolean to enable [fluid rescaling with RFS]({{< docsref "/getting-started/rfs" >}}). |
-| [`print`](#print) | 선택 | `false` | Boolean indicating if print classes need to be generated. |
-| `rtl` | 선택 | `true` | Boolean indicating if utility should be kept in RTL. |
+| [`property`](#property) | **필수** | – | 속성의 이름입니다. 문자열 또는 문자열 배열 (예: 수평 패딩 또는 여백)이 될 수 있습니다. |
+| [`values`](#values) | **필수** | – | 값 목록입니다. 클래스 이름이 값과 동일하지 않게 하려는 경우에는 맵입니다. `null`이 맵 키로 사용되면 컴파일되지 않습니다. |
+| [`class`](#class) | 선택 | null | 생성된 클래스의 이름입니다. 제공하지 않고 `property`가 문자열 배열인 경우 `class`는 기본적으로 `property` 배열의 첫 번째 요소로 설정됩니다. |
+| [`css-var`](#css-variable-utilities) | 선택 | `false` | CSS 규칙 대신 CSS 변수를 생성하는 불대수입니다. |
+| [`local-vars`](#local-css-variables) | 선택 | null | CSS 규칙 외에 생성할 로컬 CSS 변수의 맵입니다. |
+| [`state`](#states) | 선택 | null | 생성할 의사 클래스 변형 목록 (예: `:hover` 또는 `:focus`)입니다. |
+| [`responsive`](#responsive) | 선택 | `false` | 반응형 클래스를 생성해야 하는지 여부를 나타내는 불대수입니다. |
+| `rfs` | 선택 | `false` | [RFS를 사용한 플루이드 리스케일링]({{< docsref "/getting-started/rfs" >}})을 활성화하는 불대수입니다. |
+| [`print`](#print) | 선택 | `false` | 인쇄 클래스를 생성해야 하는지 여부를 나타내는 불대수입니다. |
+| `rtl` | 선택 | `true` | 유틸리티를 RTL로 유지해야 하는지 여부를 나타내는 불대수입니다. |
 {{< /bs-table >}}
 
 ## API 설명
@@ -57,7 +57,9 @@ $utilities: (
 .opacity-100 { opacity: 1; }
 ```
 
-### Property
+### 속성
+
+모든 유틸리티에 대해 필수적으로 `property` 키를 설정해야 하며 유효한 CSS 속성을 포함해야 합니다. 이 속성은 생성된 유틸리티의 규칙 집합에서 사용됩니다. `class` 키가 생략되면 기본 클래스 이름으로도 사용됩니다. `text-decoration` 유틸리티를 사용하는 것을 고려해보세요:
 
 The required `property` key must be set for any utility, and it must contain a valid CSS property. This property is used in the generated utility's ruleset. When the `class` key is omitted, it also serves as the default class name. Consider the `text-decoration` utility:
 
@@ -70,7 +72,7 @@ $utilities: (
 );
 ```
 
-Output:
+출력 결과:
 
 ```css
 .text-decoration-none { text-decoration: none !important; }
@@ -78,17 +80,17 @@ Output:
 .text-decoration-line-through { text-decoration: line-through !important; }
 ```
 
-### Values
+### 값
 
-Use the `values` key to specify which values for the specified `property` should be used in the generated class names and rules. Can be a list or map (set in the utilities or in a Sass variable).
+`values` 키를 사용하여 생성된 클래스 이름 및 규칙에서 지정된 `property`에 사용할 값을 지정하세요. 목록 또는 맵이 될 수 있습니다 (유틸리티 또는 Sass 변수에서 설정 가능).
 
-As a list, like with [`text-decoration` utilities]({{< docsref "/utilities/text#text-decoration" >}}):
+[`text-decoration` 유틸리티]({{< docsref "/utilities/text#text-decoration" >}})와 같은 목록으로:
 
 ```scss
 values: none underline line-through
 ```
 
-As a map, like with [`opacity` utilities]({{< docsref "/utilities/opacity" >}}):
+[`opacity` 유틸리티]({{< docsref "/utilities/opacity" >}})와 같은 맵은 다음과 같습니다:
 
 ```scss
 values: (
@@ -100,15 +102,14 @@ values: (
 )
 ```
 
-As a Sass variable that sets the list or map, as in our [`position` utilities]({{< docsref "/utilities/position" >}}):
-
+[`position` 유틸리티]({{< docsref "/utilities/position" >}})처럼 목록 또는 맵을 설정하는 Sass 변수는 다음과 같습니다:
 ```scss
 values: $position-values
 ```
 
-### Class
+### 클래스
 
-Use the `class` option to change the class prefix used in the compiled CSS. For example, to change from `.opacity-*` to `.o-*`:
+컴파일된 CSS에서 사용되는 클래스 접두사를 변경하려면 `class` 옵션을 사용하세요. 예를 들어 `.opacity-*`에서 `.o-*`로 변경하려면 다음과 같이 할 수 있습니다:
 
 ```scss
 $utilities: (
@@ -126,7 +127,7 @@ $utilities: (
 );
 ```
 
-Output:
+출력 결과:
 
 ```css
 .o-0 { opacity: 0 !important; }
@@ -136,9 +137,9 @@ Output:
 .o-100 { opacity: 1 !important; }
 ```
 
-### CSS variable utilities
+### CSS 변수 유틸리티
 
-Set the `css-var` boolean option to `true` and the API will generate local CSS variables for the given selector instead of the usual `property: value` rules. Consider our `.text-opacity-*` utilities:
+`css-var` 불대수 옵션을 `true`로 설정하면 API가 일반적인 `property: value` 규칙 대신 지정된 선택기에 대한 로컬 CSS 변수를 생성합니다:
 
 ```scss
 $utilities: (
@@ -155,7 +156,7 @@ $utilities: (
 );
 ```
 
-Output:
+출력 결과:
 
 ```css
 .text-opacity-25 { --bs-text-opacity: .25; }
@@ -164,9 +165,9 @@ Output:
 .text-opacity-100 { --bs-text-opacity: 1; }
 ```
 
-### Local CSS variables
+### 로컬 CSS 변수
 
-Use the `local-vars` option to specify a Sass map that will generate local CSS variables within the utility class's ruleset. Please note that it may require additional work to consume those local CSS variables in the generated CSS rules. For example, consider our `.bg-*` utilities:
+유틸리티 클래스의 규칙 세트 내에서 로컬 CSS 변수를 생성할 Sass 맵을 지정하려면 `local-vars` 옵션을 사용하세요. 생성된 CSS 규칙에서 해당 로컬 CSS 변수를 사용하려면 추가 작업이 필요할 수 있습니다. 예를 들어 다음 예시처럼 `.bg-*` 유틸리티를 고려해보세요:
 
 ```scss
 $utilities: (

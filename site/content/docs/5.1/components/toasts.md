@@ -43,12 +43,12 @@ toc: true
 {{< /example >}}
 
 {{< callout warning >}}
-Previously, our scripts dynamically added the `.hide` class to completely hide a toast (with `display:none`, rather than just with `opacity:0`). This is now not necessary anymore. However, for backwards compatibility, our script will continue to toggle the class (even though there is no practical need for it) until the next major version.
+이전에 스크립트는 토스트를 완전히 숨기기 위해 (`opacity:0`이 아닌 `display:none`으로) `.hide` 클래스를 동적으로 추가했습니다. 이것은 이제 더 이상 필요하지 않습니다. 그러나 이전 버전과의 호환성을 위해 스크립트는 다음 메이저 버전 전까지 클래스를 계속 토글합니다 (실제로 필요하지는 않음).
 {{< /callout >}}
 
 ### 실시간
 
-Click the button below to show a toast (positioned with our utilities in the lower right corner) that has been hidden by default.
+아래 버튼을 클릭하면 기본적으로 숨겨져 있는 알림 (오른쪽 하단 모서리에 있는 유틸리티와 함께 ​​위치함)을 표시합니다.
 
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -86,7 +86,7 @@ Click the button below to show a toast (positioned with our utilities in the low
 </div>
 ```
 
-We use the following JavaScript to trigger our live toast demo:
+다음 JavaScript를 사용하여 라이브 토스트 데모를 트리거할 수 있습니다:
 
 ```js
 var toastTrigger = document.getElementById('liveToastBtn')
@@ -342,7 +342,7 @@ var toastList = toastElList.map(function (toastEl) {
 })
 ```
 
-### Triggers
+### 트리거
 
 {{% js-dismiss "toast" %}}
 

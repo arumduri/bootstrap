@@ -18,7 +18,7 @@ sections:
     description: 툴킷 전체를 지원하는 컬러 시스템에 대해 배우고 재정의합니다.
   - title: 컴포넌트
     link: Components
-    description: 기본 클래스와 제어자 클래스를 사용하여 거의 모든 컴포넌트를 반응형으로 구축하는 방법을 학습합니다.
+    description: 기본 클래스와 제어자 클래스를 사용하여 거의 모든 컴포넌트를 반응형으로 빌드하는 방법을 학습합니다.
   - title: CSS 변수
     link: CSS variables
     description: 빠르고 미래지향적인 디자인과 개발 실현을 위해 Bootstrap의 CSS 사용자 정의 속성을 사용합니다.
@@ -40,7 +40,7 @@ Bootstrap을 재정의 하는 방법은 여러 가지가 있습니다. 가장 �
 
 배포 파일을 사용하고자 하는 사람은 [getting started page]({{< docsref "/getting-started/introduction" >}})에서 해당 파일을 포함하는 방법과 HTML 페이지에서 예시를 확인해 주세요. 거기에서 레이아웃, 구성요소 및 사용하고 싶은 동작에 대한 문서를 참조해 주세요.
 
-글로벌 옵션 이용 방법, 컬러 시스템 이용과 변경, 컴포넌트 구축 방법, 늘어나는 CSS 사용자 정의 속성 사용 방법과 Bootstrap로 빌드할때 코드 최적화 방법등 Bootstrap을 숙지한 후 계속해서 살펴봐 주세요.
+글로벌 옵션 이용 방법, 컬러 시스템 이용과 변경, 컴포넌트 빌드 방법, 늘어나는 CSS 사용자 정의 속성 사용 방법과 Bootstrap로 빌드할때 코드 최적화 방법등 Bootstrap을 숙지한 후 계속해서 살펴봐 주세요.
 
 
 ## CSP와 임베디드 SVG

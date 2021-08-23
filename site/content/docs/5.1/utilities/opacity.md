@@ -2,13 +2,13 @@
 layout: docs
 title: 불투명도
 title_en: Opacity
-description: Control the opacity of elements.
+description: 요소의 불투명도를 제어할 수 있습니다.
 group: utilities
 ---
 
-The `opacity` property sets the opacity level for an element. The opacity level describes the transparency level, where `1` is not transparent at all, `.5` is 50% visible, and `0` is completely transparent.
+`opacity` 속성은 요소의 불투명도 수준을 설정합니다. `1`은 불투명, `.5`는 반투명, `0` 투명을 의미합니다.
 
-Set the `opacity` of an element using `.opacity-{value}` utilities.
+`.opacity-{value}` 유틸리티를 사용하여 요소의 `opacity`를 설정합니다.
 
 <div class="bd-example d-sm-flex">
   <div class="opacity-100 p-3 m-2 bg-primary text-light fw-bold rounded">100%</div>
@@ -24,8 +24,8 @@ Set the `opacity` of an element using `.opacity-{value}` utilities.
 <div class="opacity-25">...</div>
 ```
 
-### Utilities API
+### 유틸리티 API
 
-Opacity utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+불투명도 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-opacity" file="scss/_utilities.scss" >}}
