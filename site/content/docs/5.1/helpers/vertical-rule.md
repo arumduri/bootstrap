@@ -31,7 +31,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## 스택과 함깨 사용하기
+## 스택과 함께 사용하기
 
 [스택]({{< docsref "/helpers/stacks" >}})에서 사용할 수도 있습니다:
 
