@@ -62,7 +62,7 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
 - Extra large (xl)
 - Extra extra large (xxl)
 
-위에서 언급했듯이 이러한 각 중단점에는 고유한 컨테이너, 고유한 클래스 접두사, 수정자가 있습니다. 다음은 이러한 중단점에서 그리드가 변경되는 방식입니다:
+위에서 언급했듯이 이러한 각 중단점에는 고유한 컨테이너, 고유한 클래스 접두어, 수정자가 있습니다. 다음은 이러한 중단점에서 그리드가 변경되는 방식입니다:
 
 <table class="table mb-4">
   <thead>
@@ -105,7 +105,7 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
       <td>1320px</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">클래스 접두사</th>
+      <th class="text-nowrap" scope="row">클래스 접두어</th>
       <td><code>.col-</code></td>
       <td><code>.col-sm-</code></td>
       <td><code>.col-md-</code></td>

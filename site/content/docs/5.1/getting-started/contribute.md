@@ -79,7 +79,7 @@ Dart Sass는 10의 반올림 정밀도를 사용하며 이 값은 효율성을 �
 
 ## Autoprefixer
 
-Bootstrap은 빌드할 때 CSS 속성에 자동으로 벤더 접두사를 추가하기 위해 [Autoprefixer][autoprefixer] (빌드 과정에 포함됨)를 사용합니다. 이것을 통해서 시간과 코드를 아낄 수 있고 v3에서 볼 수 있는 것과 같은 벤더 믹스인의 필요성을 제거하면서 CSS의 핵심 부분을 한 번에 작성할 수 있습니다.
+Bootstrap은 빌드할 때 CSS 속성에 자동으로 벤더 접두어를 추가하기 위해 [Autoprefixer][autoprefixer] (빌드 과정에 포함됨)를 사용합니다. 이것을 통해서 시간과 코드를 아낄 수 있고 v3에서 볼 수 있는 것과 같은 벤더 믹스인의 필요성을 제거하면서 CSS의 핵심 부분을 한 번에 작성할 수 있습니다.
 
 우리는 Autoprefixer를 통해서 지원하는 브라우저의 목록을 GitHub repository내의 개별 파일에서 관리하고 있습니다. 자세한 부분은 [.browserslistrc]({{< param repo >}}/blob/v{{< param current_version >}}/.browserslistrc)를 확인해주세요.
 
