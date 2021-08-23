@@ -1,1 +1,1 @@
-The animation effect of this component is dependent on the `prefers-reduced-motion` media query. See the [reduced motion section of our accessibility documentation](/docs/{{ .Site.Params.docs_version }}/getting-started/accessibility/#reduced-motion).
+이 컴포넌트의 애니메이션 효과는 `prefers-reduced-motion` 미디어 쿼리에 따라 다릅니다. [접근성 문서의 모션 감소 문단](/docs/{{ .Site.Params.docs_version }}/getting-started/accessibility/#reduced-motion)을 참고하세요.
