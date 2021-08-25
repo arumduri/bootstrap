@@ -91,7 +91,7 @@ v5.1.0부터 텍스트 색상 유틸리티는 CSS 변수를 사용하여 Sass로
 
 ### 맵
 
-테마 색상은 Sass 맵에 배치되어 유틸리티, 구성 요소 수정자 등을 생성하기 위해 반복 할 수 있습니다.
+테마 색상은 Sass 맵에 배치되어 유틸리티, 컴포넌트 수정자 등을 생성하기 위해 반복 할 수 있습니다.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 

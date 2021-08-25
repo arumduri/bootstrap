@@ -2,7 +2,7 @@
 layout: docs
 title: 컨테이너
 title_en: Containers
-description: 컨테이너는 지정된 기기 또는 뷰포트 내에서 콘텐츠를 포함하고 채우고 정렬하는 Bootstrap의 기본 구성 요소입니다.
+description: 컨테이너는 지정된 기기 또는 뷰포트 내에서 콘텐츠를 포함하고 채우고 정렬하는 Bootstrap의 기본 컴포넌트입니다.
 group: layout
 toc: true
 ---

@@ -2,7 +2,7 @@
 layout: docs
 title: 플렉스
 title_en: Flex
-description: 반응형 flexbox 유틸리티 세트를 사용해 그리드 열, 네비게이션 바, 구성 요소, 레이아웃의 정렬 및 크기 조정을 신속하게 관리합니다. 더 복잡한 구현의 경우 사용자 정의 CSS가 필요할 수 있습니다.
+description: 반응형 flexbox 유틸리티 세트를 사용해 그리드 열, 네비게이션 바, 컴포넌트, 레이아웃의 정렬 및 크기 조정을 신속하게 관리합니다. 더 복잡한 구현의 경우 사용자 정의 CSS가 필요할 수 있습니다.
 group: utilities
 toc: true
 ---

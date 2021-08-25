@@ -1013,7 +1013,7 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
 ```
 
 {{< callout info >}}
-##### `data-bs-toggle="dropdown"`은 여전히 필요하다
+##### `data-bs-toggle="dropdown"`은 여전히 필요합니다
 
 JavaScript로 드롭다운을 호출하느냐 data-api를 사용하느냐에 상관없이 `data-bs-toggle="dropdown"`은 항상 드롭다운의 트리거 요소에 존재해야 합니다.
 {{< /callout >}}

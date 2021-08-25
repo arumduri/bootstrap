@@ -197,7 +197,7 @@ var alerts =  [].slice.call(alertList).map(function (element) {
 
 {{< callout info >}}
 
-경고만 해제할 목적이라면 JS API를 통해 구성 요소를 수동으로 초기화할 필요는 없습니다. `data-bs-dismiss="alert"`를 사용하면 구성 요소가 자동으로 적절하게 초기화되고 해제됩니다.
+경고만 해제할 목적이라면 JS API를 통해 컴포넌트를 수동으로 초기화할 필요는 없습니다. `data-bs-dismiss="alert"`를 사용하면 컴포넌트가 자동으로 적절하게 초기화되고 해제됩니다.
 
 자세한 내용은 [트리거](#트리거) 섹션을 참조하세요.
 {{< /callout >}}

@@ -94,7 +94,7 @@ Grayscale colors are also available, but only a subset are used to generate any 
 
 ### 맵
 
-그런 다음 테마 색상은 Sass 맵에 배치되어 유틸리티, 구성 요소 수정자 등을 생성하기 위해 반복 할 수 있습니다.
+그런 다음 테마 색상은 Sass 맵에 배치되어 유틸리티, 컴포넌트 수정자 등을 생성하기 위해 반복 할 수 있습니다.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
