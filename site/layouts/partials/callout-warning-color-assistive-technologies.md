@@ -1,3 +1,3 @@
-##### Conveying meaning to assistive technologies
+##### 보조 기술에 의미 전달하기
 
-Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. Ensure that information denoted by the color is either obvious from the content itself (e.g. the visible text), or is included through alternative means, such as additional text hidden with the `.visually-hidden` class.
+색상을 사용하여 의미를 추가하는 것은 시각적 표시만 제공되며 스크린 리더와 같은 보조 기술 사용자에게는 전달되지 않습니다. 색상으로 표시된 정보가 콘텐츠 자체 (예: 보이는 텍스트)에서 명확하거나 `.visually-hidden` 클래스로 숨겨진 추가 텍스트와 같은 대체 수단을 통해 포함되는지 확인하세요.

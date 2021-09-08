@@ -62,7 +62,7 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
 - Extra large (xl)
 - Extra extra large (xxl)
 
-위에서 언급했듯이 이러한 각 중단점에는 고유한 컨테이너, 고유한 클래스 접두사, 수정자가 있습니다. 다음은 이러한 중단점에서 그리드가 변경되는 방식입니다:
+위에서 언급했듯이 이러한 각 중단점에는 고유한 컨테이너, 고유한 클래스 접두어, 수정자가 있습니다. 다음은 이러한 중단점에서 그리드가 변경되는 방식입니다:
 
 <table class="table mb-4">
   <thead>
@@ -105,7 +105,7 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
       <td>1320px</td>
     </tr>
     <tr>
-      <th class="text-nowrap" scope="row">클래스 접두사</th>
+      <th class="text-nowrap" scope="row">클래스 접두어</th>
       <td><code>.col-</code></td>
       <td><code>.col-sm-</code></td>
       <td><code>.col-md-</code></td>
@@ -140,7 +140,7 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
 
 `.col-sm-6`과 같이 명시적인 번호가 매겨진 클래스 없이 간편한 열 크기 조정을 위해 중단점별 열 클래스를 활용합니다.
 
-### Equal-width
+### 동일 너비
 
 예를 들어서 `xs`에서 `xxl`까지 모든 기기와 뷰포트에 적용되는 두 가지 그리드 레이아웃이 있습니다. 필요한 각 중단점에 대해 단위 없는 클래스를 원하는 수만큼 추가하면 모든 열의 너비가 동일합니다.
 
@@ -231,7 +231,7 @@ flexbox 그리드 열에 대한 자동 레이아웃은 또한 한 열의 너비�
 {{< /example >}}
 
 ## 반응형 클래스
-Bootstrap의 그리드에는 복잡한 반응형 레이아웃을 구축하기 위한 6개 계층의 사전 정의된 클래스가 포함되어 있습니다. small, small, medium, large, extra large 기기에서 열의 크기를 원하는 대로 사용자 정의하세요.
+Bootstrap의 그리드에는 복잡한 반응형 레이아웃을 빌드하기 위한 6개 계층의 사전 정의된 클래스가 포함되어 있습니다. small, small, medium, large, extra large 기기에서 열의 크기를 원하는 대로 사용자 정의하세요.
 
 ### 모든 중단점
 

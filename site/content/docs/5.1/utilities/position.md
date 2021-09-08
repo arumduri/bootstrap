@@ -103,7 +103,7 @@ Where *position* is one of:
 </button>
 {{< /example >}}
 
-해당 클래스를 기존 구성 요소와 함께 사용하여 새 구성 요소를 만들 수 있습니다. `$ position-values` 변수에 항목을 추가하여 기능을 확장 할 수 있습니다.
+해당 클래스를 기존 컴포넌트와 함께 사용하여 새 컴포넌트를 만들 수 있습니다. `$ position-values` 변수에 항목을 추가하여 기능을 확장 할 수 있습니다.
 
 {{< example class="bd-example-position-examples" >}}
 <div class="position-relative m-4">

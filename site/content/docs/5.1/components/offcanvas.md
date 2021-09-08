@@ -195,16 +195,16 @@ toc: true
 
 ### 데이터 속성 사용하기
 
-#### Toggle
+#### 토글
 
-Add `data-bs-toggle="offcanvas"` and a `data-bs-target` or `href` to the element to automatically assign control of one offcanvas element. The `data-bs-target` attribute accepts a CSS selector to apply the offcanvas to. Be sure to add the class `offcanvas` to the offcanvas element. If you'd like it to default open, add the additional class `show`.
+요소에 `data-bs-toggle="offcanvas"`와 `data-bs-target` 또는 `href`를 추가하면 하나의 offcanvas 요소에 대한 제어가 자동으로 할당됩니다. `data-bs-target` 속성은 오프캔버스를 적용할 CSS 선택자를 허용합니다. offcanvas 요소에 `offcanvas` 클래스를 추가해야 합니다. 기본적으로 열리게 하려면 `show` 클래스를 추가하세요.
 
-#### Dismiss
+#### 해제
 
 {{% js-dismiss "offcanvas" %}}
 
 {{< callout warning >}}
-While both ways to dismiss an offcanvas are supported, keep in mind that dismissing from outside an offcanvas does not match [the WAI-ARIA modal dialog design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal). Do this at your own risk.
+모달을 해제하는 두 가지 방법을 모두 지원하지만 모달 외부에서 해제하는 것은 [WAI-ARIA 모달 대화 디자인 패턴](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal)과 일치하지 않습니다. 문제가 생길 수도 있다는 점에 주의하세요.
 {{< /callout >}}
 
 ### JavaScript 사용하기
@@ -251,8 +251,8 @@ var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
 | `toggle` | 오프캔버스 요소의 표시 및 숨김을 바꿉니다. **실제로 표시 또는 숨김 되기 전의 오프캔버스 요소로 돌아갑니다** (즉, `shown.bs.offcanvas` 또는 `hidden.bs.offcanvas` 이벤트가 발생하기 전) |
 | `show` | 오프캔버스 요소를 표시합니다. **실제로 표시되기 전의 오프캔버스 요소로 돌아갑니다** (즉, `shown.bs.offcanvas` 이벤트가 발생하기 전).|
 | `hide` | 오프캔버스 요소를 숨깁니다. **실제로 숨겨지기전의 오픈캔버스 요소로 돌아갑니다.** (즉, `hidden.bs.offcanvas` 이벤트가 발생하기 전).|
-| `getInstance` | DOM 요소와 연관된 오프캔버스 인스턴스를 얻기 위한 *Static* 메서드입니다. |
-| `getOrCreateInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialised |
+| `getInstance` | DOM 요소와 연관된 오프캔버스 인스턴스를 얻기 위한 *정적* 메서드입니다. |
+| `getOrCreateInstance` | *정적* 메서드를 사용하면 DOM 요소와 연결된 오프캔버스 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 만들 수 있습니다. |
 {{< /bs-table >}}
 
 ### 이벤트

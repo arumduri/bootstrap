@@ -50,6 +50,6 @@ a {
 }
 ```
 
-## Grid breakpoints
+## 그리드 중단점
 
-While we include our grid breakpoints as CSS variables (except for `xs`), be aware that **CSS variables do not work in media queries**. This is by design in the CSS spec for variables, but may change in coming years with support for `env()` variables. Check out [this Stack Overflow answer](https://stackoverflow.com/a/47212942) for some helpful links. In the mean time, you can use these variables in other CSS situations, as well as in your JavaScript.
+우리는 그리드 중단점을 CSS 변수로 포함시켰지만(`xs` 제외) **CSS 변수는 미디어 쿼리에서 작동하지 않습니다**. 이것은 변수에 대한 CSS 사양의 설계에 의한 것이지만 `env()` 변수에 대한 지원에 따라 향후 변경될 수 있습니다. 몇 가지 유용한 링크는 [이 Stack Overflow 답변](https://stackoverflow.com/a/47212942)을 확인하세요. 그동안 다른 CSS 상황과 JavaScript에서 이러한 변수를 사용할 수 있습니다.

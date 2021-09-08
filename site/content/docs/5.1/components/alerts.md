@@ -25,7 +25,7 @@ toc: true
 
 ### 실시간
 
-Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
+아래 버튼을 클릭하여 경고 (시작할 인라인 스타일로 숨겨짐)를 표시한 다음 내장된 닫기 버튼으로 경고를 해제 (및 삭제)합니다.
 
 <div id="liveAlertPlaceholder"></div>
 
@@ -42,7 +42,7 @@ Click the button below to show an alert (hidden with inline styles to start), th
 </div>
 ```
 
-We use the following JavaScript to trigger our live alert demo:
+다음 예제에서는 JavaScript를 사용하여 라이브 알림 데모를 트리거합니다:
 
 ```js
 var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
@@ -184,9 +184,9 @@ if (alertTrigger) {
 
 ## JavaScript 비헤이비어
 
-### Initialize
+### 초기화
 
-Initialize elements as alerts
+요소를 경고로 초기화합니다.
 
 ```js
 var alertList = document.querySelectorAll('.alert')
@@ -196,18 +196,19 @@ var alerts =  [].slice.call(alertList).map(function (element) {
 ```
 
 {{< callout info >}}
-For the sole purpose of dismissing an alert, it isn't necessary to initialize the component manually via the JS API. By making use of `data-bs-dismiss="alert"`, the component will be initialized automatically and properly dismissed.
 
-See the [triggers](#triggers) section for more details.
+경고만 해제할 목적이라면 JS API를 통해 컴포넌트를 수동으로 초기화할 필요는 없습니다. `data-bs-dismiss="alert"`를 사용하면 컴포넌트가 자동으로 적절하게 초기화되고 해제됩니다.
+
+자세한 내용은 [트리거](#트리거) 섹션을 참조하세요.
 {{< /callout >}}
 
-### Triggers
+### 트리거
 
 {{% js-dismiss "alert" %}}
 
-**Note that closing an alert will remove it from the DOM.**
+**경고를 닫으면 DOM에서 경고가 제거된다는 사실에 주의하세요.**
 
-### Methods
+### 메소드
 
 <table class="table">
   <thead>
@@ -238,7 +239,8 @@ See the [triggers](#triggers) section for more details.
         <code>getInstance</code>
       </td>
       <td>
-        DOM 요소와 관련된 경고창의 인스턴스를 가져오는 Static 메소드입니다. <br />사용법 : <code>bootstrap.Alert.getInstance(alert)</code>
+        DOM 요소와 관련된 경고창의 인스턴스를 가져오는 Static 메소드입니다.
+        <br />사용법: <code>bootstrap.Alert.getInstance(alert)</code>
       </td>
     </tr>
     <tr>
@@ -246,8 +248,8 @@ See the [triggers](#triggers) section for more details.
         <code>getOrCreateInstance</code>
       </td>
       <td>
-        Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialised.
-        You can use it like this: <code>bootstrap.Alert.getOrCreateInstance(element)</code>
+        DOM 요소와 연결된 경고 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 만드는 정적 메서드입니다.
+        <br />사용법: <code>bootstrap.Alert.getOrCreateInstance(element)</code>
       </td>
     </tr>
   </tbody>

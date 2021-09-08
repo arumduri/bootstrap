@@ -108,17 +108,18 @@ Bootstrap의 소스 Sass 파일에는 색상과 그 16진수 값의 목록을 �
 
 [Color]({{< docsref "/utilities/colors" >}})와 [background]({{< docsref "/utilities/background" >}}) 유틸리티 클래스는 `500` 색상의 값을 사용해 `color`와 `background-color`를 설정하기 위해서 이용할 수 있습니다.
 
-## Generating utilities
+## 유틸리티 생성하기
 
-<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.0</small>
+<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">v5.1.0에서 추가됨</small>
 
-Bootstrap doesn't include `color` and `background-color` utilities for every color variable, but you can generate these yourself with our [utility API]({{< docsref "/utilities/api" >}}) and our extended Sass maps added in v5.1.0.
+Bootstrap에는 모든 색상 변수에 대한 `color` 및 `background-color` 유틸리티가 포함되어 있지 않지만 [유틸리티 API]({{< docsref "/utilities/api" >}}) 및 확장된 v5.1.0에 Sass 맵이 추가되어 있습니다.
 
-1. To start, make sure you've imported our functions, variables, mixins, and utilities.
-2. Use our `map-merge-multiple()` function to quickly merge multiple Sass maps together in a new map.
-3. Merge this new combined map to extend any utility with a `{color}-{level}` class name.
 
-Here's an example that generates text color utilities (e.g., `.text-purple-500`) using the above steps.
+1. 시작하려면 함수, 변수, 믹스인, 유틸리티를 가져왔는지 확인하세요.
+2. `map-merge-multiple()` 함수를 사용하여 여러 Sass 맵을 새 맵에서 빠르게 병합하세요.
+3. 이 새로운 결합 맵을 병합하여 `{color}-{level}` 클래스 이름을 가진 유틸리티를 확장하세요.
+
+다음은 위의 단계를 사용하여 텍스트 색상 유틸리티 (예: `.text-purple-500`)를 생성하는 예입니다.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -148,4 +149,4 @@ $utilities: map-merge(
 @import "bootstrap/scss/utilities/api";
 ```
 
-This will generate new `.text-{color}-{level}` utilities for every color and level. You can do the same for any other utility and property as well.
+이렇게 하면 모든 색상과 레벨에 대해 새로운 `.text-{color}-{level}` 유틸리티가 생성됩니다. 다른 유틸리티 및 속성에 대해서도 동일한 작업을 수행할 수 있습니다.

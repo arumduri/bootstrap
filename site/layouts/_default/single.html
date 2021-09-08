@@ -4,6 +4,7 @@
       <div class="row">
         <div class="col-xl-8">
           <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
+          {{ if .Params.title_en }}<h6 class="text-muted">// {{ $.Param "title_en" | markdownify }}</h6>{{ end }}
           <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
           {{ if eq .Title "Examples" }}
           <div class="d-flex flex-column flex-sm-row">

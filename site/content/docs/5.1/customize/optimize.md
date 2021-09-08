@@ -55,7 +55,7 @@ const modal = new Modal(document.getElementById('myModal'))
 
 ## Autoprefixer .browserslistrc
 
-Bootstrap은 특정 CSS 속성에 브라우저 접두사(prefixes)를 자동으로 추가하기 위해 Autoprefixer에 의존합니다. 접두사는 Bootstrap의 루트에 있는 `.browserslistrc` 파일에 의해 결정됩니다. 브라우저의 이 목록을 재정의하여 Sass를 컴파일하면 해당 브라우저나 버전에 고유한 벤터 접두사가 있는 경우 컴파일된 CSS에서 일부 CSS가 자동으로 삭제됩니다.
+Bootstrap은 특정 CSS 속성에 브라우저 접두어(prefixes)를 자동으로 추가하기 위해 Autoprefixer에 의존합니다. 접두어는 Bootstrap의 루트에 있는 `.browserslistrc` 파일에 의해 결정됩니다. 브라우저의 이 목록을 재정의하여 Sass를 컴파일하면 해당 브라우저나 버전에 고유한 벤더 접두어가 있는 경우 컴파일된 CSS에서 일부 CSS가 자동으로 삭제됩니다.
 
 ## 사용되지 않은 CSS
 

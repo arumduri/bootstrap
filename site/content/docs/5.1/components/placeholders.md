@@ -1,18 +1,19 @@
 ---
 layout: docs
-title: Placeholders
-description: Use loading placeholders for your components or pages to indicate something may still be loading.
+title: 플레이스홀더
+title_en: Placeholders
+description: 컴포넌트나 페이지에 로딩 플레이스홀더를 사용하여 아직 로딩 중임을 나타냅니다.
 group: components
 toc: true
 ---
 
-## About
+## 소개
 
-Placeholders can be used to enhance the experience of your application. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, color, and sizing can be easily customized with our utility classes.
+플레이스홀더는 애플리케이션 경험을 향상시키는 데에 사용할 수 있습니다. HTML과 CSS로만 만들어졌기 때문에 만드는 데에 JavaScript가 필요하지 않습니다. 그러나 가시성을 전환하려면 일부 사용자 정의 JavaScript가 필요합니다. 외관, 색상 및 크기는 유틸리티 클래스로 쉽게 사용자 정의할 수 있습니다.
 
-## Example
+## 예제
 
-In the example below, we take a typical card component and recreate it with placeholders applied to create a "loading card". Size and proportions are the same between the two.
+아래 예에서는 일반적인 카드 컴포넌트를 가져와 "로딩 카드"를 만들기 위해 적용된 자리 표시자를 사용하여 다시 만듭니다. 크기와 비율은 둘 사이에 동일합니다.
 
 <div class="bd-example bd-example-placeholder-cards d-flex justify-content-around">
 <div class="card">
@@ -71,11 +72,11 @@ In the example below, we take a typical card component and recreate it with plac
 </div>
 ```
 
-## How it works
+## 작동 방법
 
-Create placeholders with the `.placeholder` class and a grid column class (e.g., `.col-6`) to set the `width`. They can replace the text inside an element or as be added as a modifier class to an existing component.
+`.placeholder` 클래스와 그리드 열 클래스 (예: `.col-6`)로 자리 표시자를 만들어 `width`를 설정합니다. 요소 내부의 텍스트를 바꾸거나 기존 컴포넌트에 수정자 클래스로 추가할 수 있습니다.
 
-We apply additional styling to `.btn`s via `::before` to ensure the `height` is respected. You may extend this pattern for other situations as needed, or add a `&nbsp;` within the element to reflect the height when actual text is rendered in its place.
+`::before`를 통해 `.btn`에 추가 스타일을 적용하여 `height`가 존중되도록 합니다. 필요에 따라 이 패턴을 다른 상황에 맞게 확장하거나 요소 내에 `&nbsp;`를 추가하여 실제 텍스트가 해당 위치에 렌더링될 때 높이를 반영할 수 있습니다.
 
 {{< example >}}
 <p aria-hidden="true">
@@ -86,12 +87,12 @@ We apply additional styling to `.btn`s via `::before` to ensure the `height` is 
 {{< /example >}}
 
 {{< callout info >}}
-The use of `aria-hidden="true"` only indicates that the element should be hidden to screen readers. The *loading* behaviour of the placeholder depends on how authors will actually use the placeholder styles, how they plan to update things, etc. Some JavasSript code may be needed to *swap* the state of the placeholder and inform AT users of the update.
+`aria-hidden="true"`의 사용은 요소가 스크린 리더에 숨겨져야 함을 나타냅니다. 플레이스홀더의 *로딩* 동작은 작성자가 실제로 플레이스홀더 스타일을 사용하는 방법, 업데이트 계획 방법 등에 따라 다릅니다. 플레이스홀더의 상태를 *교환*하고 사용자에게 업데이트를 알리기 위해 일부 JavasSript 코드가 필요할 수도 있습니다.
 {{< /callout >}}
 
-### Width
+### 너비
 
-You can change the `width` through grid column classes, width utilities, or inline styles.
+그리드 열 클래스, 너비 유틸리티 또는 인라인 스타일을 통해 `width`를 변경할 수 있습니다.
 
 {{< example >}}
 <span class="placeholder col-6"></span>
@@ -99,9 +100,9 @@ You can change the `width` through grid column classes, width utilities, or inli
 <span class="placeholder" style="width: 25%;"></span>
 {{< /example >}}
 
-### Color
+### 색상
 
-By default, the `placeholder` uses `currentColor`. This can be overriden with a custom color or utility class.
+기본적으로 `placeholder`는 `currentColor`를 사용합니다. 사용자 정의 색상 또는 유틸리티 클래스로 재정의할 수 있습니다.
 
 {{< example >}}
 <span class="placeholder col-12"></span>
@@ -112,9 +113,9 @@ By default, the `placeholder` uses `currentColor`. This can be overriden with a 
 {{< /placeholders.inline >}}
 {{< /example >}}
 
-### Sizing
+### 크기
 
-The size of `.placeholder`s are based on the typographic style of the parent element. Customize them with sizing modifiers: `.placeholder-lg`, `.placeholder-sm`, or `.placeholder-xs`.
+`.placeholder`의 크기는 상위 요소의 글꼴 스타일을 기반으로 합니다. `.placeholder-lg`, `.placeholder-sm` 또는 `.placeholder-xs`와 같은 크기 조정자를 사용하여 맞춤설정하세요.
 
 {{< example >}}
 <span class="placeholder col-12 placeholder-lg"></span>
@@ -123,9 +124,8 @@ The size of `.placeholder`s are based on the typographic style of the parent ele
 <span class="placeholder col-12 placeholder-xs"></span>
 {{< /example >}}
 
-### Animation
-
-Animate placehodlers with `.placeholder-glow` or `.placeholder-wave` to better convey the perception of something being _actively_ loaded.
+### 애니메이션
+`.placeholder-glow` 또는 `.placeholder-wave`를 사용하여 플레이스홀더에 애니메이션을 적용하여 무언가가 _활성적으로_ 로드되고 있다는 인식을 더 잘 전달할 수 있습니다.
 
 {{< example >}}
 <p class="placeholder-glow">
@@ -139,6 +139,6 @@ Animate placehodlers with `.placeholder-glow` or `.placeholder-wave` to better c
 
 ## Sass
 
-### Variables
+### 변수
 
 {{< scss-docs name="placeholders" file="scss/_variables.scss" >}}

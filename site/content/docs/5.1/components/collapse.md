@@ -41,12 +41,12 @@ Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에
 </div>
 {{< /example >}}
 
-## Horizontal
+## 콜랩스
 
-The collapse plugin also supports horizontal collapsing. Add the `.collapse-horizontal` modifier class to transition the `width` instead of `height` and set a `width` on the immediate child element. Feel free to write your own custom Sass, use inline styles, or use our [width utilities]({{< docsref "/utilities/sizing" >}}).
+콜랩스 플러그인은 수평 콜랩스도 지원합니다. `.collapse-horizontal` 수정자 클래스를 추가하여 `height` 대신 `width`를 트랜지션하고 직계 자식 요소에 `width`를 설정하세요. 자유롭게 사용자 정의 Sass를 작성하거나 인라인 스타일을 사용하거나 [너비 유틸리티]({{< docsref "/utilities/sizing" >}})를 사용할 수 있습니다.
 
 {{< callout info >}}
-Please note that while the example below has a `min-height` set to avoid excessive repaints in our docs, this is not explicitly required. **Only the `width` on the child element is required.**
+아래 예제에서는 문서에서 과도한 리페인트를 방지하기 위해 `min-height`가 설정되어 있지만 명시적으로 필요한 것은 아닙니다. **하위 요소의 `width`만 필요합니다.**
 {{< /callout >}}
 
 {{< example >}}

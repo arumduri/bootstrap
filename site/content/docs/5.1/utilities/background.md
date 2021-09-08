@@ -38,7 +38,7 @@ toc: true
 
 ## Opacity
 
-<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.0</small>
+<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">v5.1.0에서 추가됨</small>
 
 As of v5.1.0, `background-color` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
@@ -94,7 +94,7 @@ Grayscale colors are also available, but only a subset are used to generate any 
 
 ### 맵
 
-그런 다음 테마 색상은 Sass 맵에 배치되어 유틸리티, 구성 요소 수정자 등을 생성하기 위해 반복 할 수 있습니다.
+그런 다음 테마 색상은 Sass 맵에 배치되어 유틸리티, 컴포넌트 수정자 등을 생성하기 위해 반복 할 수 있습니다.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
@@ -112,7 +112,7 @@ And background color opacities build on that with their own map that's consumed 
 
 ### 믹스인
 
-** 배경 유틸리티를 생성하는 데 믹스 인이 사용되지는 않지만 **, 자신만의 그라데이션을 만들고 싶은 다른 상황을 위한 몇가지 추가 믹스 인이 있습니다.
+** 배경 유틸리티를 생성하는 데 믹스인이 사용되지는 않지만 **, 자신만의 그라데이션을 만들고 싶은 다른 상황을 위한 몇가지 추가 믹스인이 있습니다.
 
 {{< scss-docs name="gradient-bg-mixin" file="scss/mixins/_gradients.scss" >}}
 

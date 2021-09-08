@@ -1,93 +1,93 @@
-- category: Snippets
-  description: "Common patterns for building sites and apps that build on existing components and utilities with custom CSS and more."
+- category: 스니펫
+  description: "사용자 지정 CSS 등을 사용하여 기존 컴포넌트 및 유틸리티를 기반으로 하는 사이트 및 앱 구축을 위한 일반적인 패턴입니다."
   examples:
     - name: Headers
-      description: "Display your branding, navigation, search, and more with these header components"
+      description: "브랜드, 내비게이션, 검색 등을 헤더 컴포넌트로 표시합니다."
     - name: Heroes
-      description: "Set the stage on your homepage with heroes that feature clear calls to action."
+      description: "명확한 클릭 유도 버튼 (CTA)을 특징으로 하는 히어로로 홈페이지의 무대를 장식합니다."
     - name: Features
-      description: "Explain the features, benefits, or other details in your marketing content."
+      description: "마케팅 콘텐츠의 기능, 이점 또는 다른 세부 정보를 설명합니다."
     - name: Sidebars
-      description: "Common navigation patterns ideal for offcanvas or multi-column layouts."
+      description: "오프캔버스 또는 다중 열 레이아웃에 이상적인 일반적인 내비게이션 패턴입니다."
     - name: Footers
-      description: "Finish every page strong with an awesome footer, big or small."
+      description: "크든 작든 멋진 푸터로 모든 페이지를 강력하게 마무리합니다."
     - name: Dropdowns
-      description: "Enhance your dropdowns with filters, icons, custom styles, and more."
+      description: "필터, 아이콘, 사용자 정의 스타일 등으로 드롭다운 경험을 향상시킵니다."
     - name: List groups
-      description: "Extend list groups with utilities and custom styles for any content."
+      description: "모든 콘텐츠에 대한 유틸리티 및 사용자 정의 스타일로 목록 그룹을 확장합니다."
     - name: Modals
-      description: "Transform modals to serve any purpose, from feature tours to dialogs."
+      description: "기능 둘러보기에서 대화 상자까지 모든 목적에 맞게 모달을 변환합니다."
 
-- category: Custom Components
-  description: "Brand new components and templates to help folks quickly get started with Bootstrap and demonstrate best practices for adding onto the framework."
+- category: 사용자 지정 컴포넌트
+  description: "사람들이 Bootstrap을 빠르게 시작하고 프레임워크에 추가하기 위한 모범 사례를 시연하는 데에 도움이 되는 새로운 컴포넌트 및 템플릿입니다."
   examples:
     - name: Album
-      description: "Simple one-page template for photo galleries, portfolios, and more."
+      description: "사진 갤러리, 포트폴리오 등을 위한 단순한 단일 페이지 템플릿입니다."
     - name: Pricing
-      description: "Example pricing page built with Cards and featuring a custom header and footer."
+      description: "카드로 만들어지고 맞춤 헤더와 푸터가 있는 가격 페이지 예시입니다."
     - name: Checkout
-      description: "Custom checkout form showing our form components and their validation features."
+      description: "폼 컴포넌트 및 유효성 검사 기능을 보여주는 사용자 정의 결제 페이지 양식입니다."
     - name: Product
-      description: "Lean product-focused marketing page with extensive grid and image work."
+      description: "확장 그리드 및 이미지 작업이 포함된 제품 중심의 깔끔한 마케팅 페이지입니다."
     - name: Cover
-      description: "A one-page template for building simple and beautiful home pages."
+      description: "심플하고 아름다운 홈페이지 제작을 위한 단일 페이지 템플릿입니다."
     - name: Carousel
-      description: "Customize the navbar and carousel, then add some new components."
+      description: "내비바와 캐러셀을 사용자 지정한 다음 몇 가지 새로운 컴포넌트를 추가했습니다."
     - name: Blog
-      description: "Magazine like blog template with header, navigation, featured content."
+      description: "헤더, 내비게이션, 추천 콘텐츠가 있는 매거진 형식의 블로그 템플릿입니다."
     - name: Dashboard
-      description: "Basic admin dashboard shell with fixed sidebar and navbar."
+      description: "고정 사이드바 및 내비바가 있는 기본적인 관리자 대시보드 셸입니다."
     - name: Sign-in
-      description: "Custom form layout and design for a simple sign in form."
+      description: "간단한 로그인 폼을 위한 사용자 정의 폼 레이아웃 및 디자인입니다."
     - name: Sticky footer
-      description: "Attach a footer to the bottom of the viewport when page content is short."
+      description: "페이지 내용이 짧은 경우 표시 영역 하단에 바닥글을 첨부합니다."
     - name: Sticky footer navbar
-      description: "Attach a footer to the bottom of the viewport with a fixed top navbar."
+      description: "고정된 상단 내비바를 사용하여 뷰포트 하단에 바닥글을 첨부합니다."
     - name: Jumbotron
-      description: "Use utilities to recreate and enhance Bootstrap 4's jumbotron."
+      description: "유틸리티를 사용하여 Bootstrap 4의 점보트론을 다시 만들고 향상시켰습니다."
 
-- category: Framework
-  description: "Examples that focus on implementing uses of built-in components provided by Bootstrap."
+- category: 프레임워크
+  description: "Bootstrap에서 제공하는 내장 구성 요소의 사용 구현에 중점을 둔 예시입니다."
   examples:
     - name: "Starter template"
-      description: "Nothing but the basics: compiled CSS and JavaScript."
+      description: "컴파일된 CSS와 JavaScript가 있는 기본적인 템플릿입니다."
     - name: Grid
-      description: "Multiple examples of grid layouts with all four tiers, nesting, and more."
+      description: "4단계 계층, 중첩 등이 모두 포함된 다수의 그리드 레이아웃 예시입니다."
     - name: Cheatsheet
-      description: "Kitchen sink of Bootstrap components."
+      description: "거의 모든 Bootstrap 컴포넌트가 포함되어 있습니다."
     - name: Cheatsheet RTL
-      description: "Kitchen sink of Bootstrap components, RTL."
+      description: "거의 모든 Bootstrap 컴포넌트가 포함되어 있습니다. (RTL)"
 
-- category: Navbars
-  description: "Taking the default navbar component and showing how it can be moved, placed, and extended."
+- category: 네비바
+  description: "기본 내비바 컴포넌트를 사용하여 이동, 배치 및 확장하는 방법을 보여줍니다."
   examples:
     - name: Navbars
-      description: "Demonstration of all responsive and container options for the navbar."
+      description: "네비바에 대한 모든 반응형 및 컨테이너 옵션 예시입니다."
     - name: Navbar static
-      description: "Single navbar example of a static top navbar along with some additional content."
+      description: "추가 콘텐츠가 있는 정적인 상단 내비바의 단일 내비바 예시입니다."
     - name: Navbar fixed
-      description: "Single navbar example with a fixed top navbar along with some additional content."
+      description: "추가 콘텐츠가 있는 상단에 고정된 내비바의 단일 내비바 예시입니다."
     - name: Navbar bottom
-      description: "Single navbar example with a bottom navbar along with some additional content."
+      description: "추가 콘텐츠가 있는 하단에 고정된 내비바의 단일 내비바 예시입니다."
     - name: Offcanvas navbar
-      description: "Turn your expandable navbar into a sliding offcanvas menu (doesn't use our offcanvas component)."
+      description: "펼칠 수 있는 내비바를 슬라이딩 오프캔버스 메뉴로 전환합니다 (오프캔버스 컴포넌트를 사용하지 않음)."
 
 - category: RTL
-  description: "See Bootstrap's RTL version in action with these modified Custom Components examples."
+  description: "수정된 사용자 지정 컴포넌드 예시와 함께 작동하는 Bootstrap의 RTL 버전을 확인해보세요."
   examples:
     - name: Album RTL
-      description: "Simple one-page template for photo galleries, portfolios, and more."
+      description: "사진 갤러리, 포트폴리오 등을 위한 단순한 단일 페이지 템플릿입니다."
     - name: Checkout RTL
-      description: "Custom checkout form showing our form components and their validation features."
+      description: "폼 컴포넌트 및 유효성 검사 기능을 보여주는 사용자 정의 결제 페이지 양식입니다."
     - name: Carousel RTL
-      description: "Customize the navbar and carousel, then add some new components."
+      description: "내비바와 캐러셀을 사용자 지정한 다음 몇 가지 새로운 컴포넌트를 추가했습니다."
     - name: Blog RTL
-      description: "Magazine like blog template with header, navigation, featured content."
+      description: "헤더, 내비게이션, 추천 콘텐츠가 있는 매거진 형식의 블로그 템플릿입니다."
     - name: Dashboard RTL
-      description: "Basic admin dashboard shell with fixed sidebar and navbar."
+      description: "고정 사이드바 및 내비바가 있는 기본적인 관리자 대시보드 셸입니다."
 
-- category: Integrations
-  description: "Integrations with external libraries."
+- category: 통합
+  description: "외부 라이브러리와의 통합 예시입니다."
   examples:
     - name: "Masonry"
-      description: "Combine the powers of the Bootstrap grid and the Masonry layout."
+      description: "Bootstrap 그리드와 메이슨리 (Masonry) 레이아웃의 기능을 결합합니다."

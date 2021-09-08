@@ -1,6 +1,6 @@
 - group: v1.x
   baseurl: "https://getbootstrap.com"
-  description: "Every minor and patch release from v1 is listed below."
+  description: "v1의 모든 메이저 및 마이너 버전입니다."
   versions:
     - v: "1.0.0"
     - v: "1.1.0"
@@ -11,7 +11,7 @@
 
 - group: v2.x
   baseurl: "https://getbootstrap.com"
-  description: "Every minor and patch release from v2 is listed below."
+  description: "v2의 모든 메이저 및 마이너 버전입니다."
   versions:
     - v: "2.0.0"
     - v: "2.0.1"
@@ -29,14 +29,14 @@
 
 - group: v3.x
   baseurl: "https://getbootstrap.com/docs"
-  description: "Every minor and patch release from v3 is listed below. Last update was v3.4.1."
+  description: "v3의 모든 메이저 및 마이너 버전입니다. 마지막 업데이트는 v3.4.1입니다."
   versions:
     - v: "3.3"
     - v: "3.4"
 
 - group: v4.x
   baseurl: "https://getbootstrap.com/docs"
-  description: "Our previous major release with its minor releases. Last update was v4.6.0."
+  description: "이전 버전의 모든 메이저 및 마이너 버전입니다. 마지막 업데이트는 v4.6.0입니다."
   versions:
     - v: "4.0"
     - v: "4.1"
@@ -48,7 +48,7 @@
 
 - group: v5.x
   baseurl: "https://getbootstrap.kr/docs"
-  description: "Current major release. Last update was v5.1.0."
+  description: "현행 버전입니다. 마지막 업데이트는 v5.1.0입니다."
   versions:
     - v: "5.0"
     - v: "5.1"

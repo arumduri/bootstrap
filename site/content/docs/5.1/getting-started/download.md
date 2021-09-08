@@ -22,10 +22,10 @@ toc: true
 Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 파이프라인을 사용해서 BootStrap를 컴파일할 수 있습니다. 이를 위해서는 다음 도구들이 필요합니다:
 
 - CSS 컴파일을 위한 Sass 컴파일러 (Libsass 또는 Ruby Sass도 지원함).
-- CSS 벤더 접두사를 위한 [Autoprefixer](https://github.com/postcss/autoprefixer)
+- CSS 벤더 접두어를 위한 [Autoprefixer](https://github.com/postcss/autoprefixer)
 
 - Sass 소스 파일을 CSS 파일로 컴파일하기 위한 [Sass 컴파일러]({{< docsref "/getting-started/contribute#sass" >}})
-- CSS 벤더 접두사를 위한 [Autoprefixer](https://github.com/postcss/autoprefixer)
+- CSS 벤더 접두어를 위한 [Autoprefixer](https://github.com/postcss/autoprefixer)
 
 필요한 경우 [빌드 도구]({{< docsref "/getting-started/contribute#tooling-setup" >}})를 사용할 수도 있습니다. Bootstrap 및 문서 개발을 위해 포함되어 있긴 하지만, 목적에 적합하지 않을 수도 있습니다.
 

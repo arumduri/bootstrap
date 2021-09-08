@@ -1,1 +1,1 @@
-By default, this component uses the built-in content sanitizer, which strips out any HTML elements that are not explicitly allowed. See the [sanitizer section in our JavaScript documentation](/docs/{{ .Site.Params.docs_version }}/getting-started/javascript/#sanitizer) for more details.
+이 컴포는트는 기본적으로 명시적으로 허용되지 않는 HTML 요소를 제거하는 내장 콘텐츠 새니타이저를 사용합니다. 자세한 내용은 [자바스크립트 문서의 Sanitizer 문단](/docs/{{ .Site.Params.docs_version }}/getting-started/javascript/#sanitizer)을 참고하세요.

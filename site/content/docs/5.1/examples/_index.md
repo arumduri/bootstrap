@@ -1,7 +1,8 @@
 ---
 layout: single
-title: Examples
-description: Quickly get a project started with any of our examples ranging from using parts of the framework to custom components and layouts.
+title: 예시
+title_en: Examples
+description: 프레임워크의 일부를 사용하는 것부터 사용자 지정 컴포넌트 및 레이아웃에 이르기까지 다양한 예시를 통해 프로젝트를 빠르게 시작하세요.
 aliases: "/examples/"
 ---
 
@@ -11,7 +12,7 @@ aliases: "/examples/"
   <p>{{ $entry.description }}</p>
   {{ if eq $entry.category "RTL" -}}
     <div class="bd-callout bd-callout-warning">
-      <p>The RTL feature is still <strong>experimental</strong> and will probably evolve according to user feedback. Spotted something or have an improvement to suggest? <a href="{{ $.Site.Params.repo }}/issues/new">Open an issue</a>, we'd love to get your insights.</p>
+      <p>RTL 기능은 아직 <strong>실험적이며</strong> 사용자 피드백에 따라 발전할 것입니다. 무언가를 발견했거나 개선할 점이 있나요? <a href="{{ $.Site.Params.repo }}/issues/new">이슈를 열어서</a> 여러분들의 의견을 알려주세요.</p>
     </div>
   {{ end -}}
 

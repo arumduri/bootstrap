@@ -33,7 +33,7 @@ toc: true
 
 ### Body
 
-카드를 구축하는 클래스는 `.card-body`입니다. 카드 내에 여백에 필요할 때 사용합니다.
+카드를 빌드하는 클래스는 `.card-body`입니다. 카드 내에 여백에 필요할 때 사용합니다.
 
 {{< example >}}
 <div class="card">

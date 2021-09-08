@@ -11,7 +11,7 @@ toc: true
 
 모달 컴포넌트의 메뉴 옵션이 최근 변경되었으니 사용하기 전에 아래 내용을 꼭 읽어보시기 바랍니다.
 
-- 모달은 HTML, CSS, 그리고 JavaScript로 구축됩니다. 모달은 문서 내의 다른 모든 것 위에 배치되어 `<body>`의 스크롤을 제거하고 모달의 콘텐츠가 스크롤 되도록 합니다.
+- 모달은 HTML, CSS, 그리고 JavaScript로 빌드됩니다. 모달은 문서 내의 다른 모든 것 위에 배치되어 `<body>`의 스크롤을 제거하고 모달의 콘텐츠가 스크롤 되도록 합니다.
 - 모달의 "배경" 을 클릭하면 자동으로 모달이 닫힙니다.
 - Bootstrap은 한번에 하나의 모달을 지원합니다. 중첩된 모달은 지원되지 않습니다.
 - 모달은 `position: fixed`를 사용합니다. 가능한 다른 요소와의 간섭을 피하기 위해, 모달 HTML을 최상단의 위치에 넣어 주세요. 다른 고정 요소안에 `.modal`을 중첩해 넣으면 문제가 발생할 가능성이 높습니다.
@@ -840,12 +840,12 @@ JavaScript를 쓰지 않고 모달을 활성화 시킵니다. 버튼과 같은 �
 <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Launch modal</button>
 ```
 
-#### Dismiss
+#### 해제
 
 {{% js-dismiss "modal" %}}
 
 {{< callout warning >}}
-While both ways to dismiss a modal are supported, keep in mind that dismissing from outside a modal does not match [the WAI-ARIA modal dialog design pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal). Do this at your own risk.
+모달을 해제하는 두 가지 방법을 모두 지원하지만 모달 외부에서 해제하는 것은 [WAI-ARIA 모달 대화 디자인 패턴](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal)과 일치하지 않습니다. 문제가 생길 수도 있다는 점에 주의하세요.
 {{< /callout >}}
 
 ### JavaScript 사용하기
@@ -897,9 +897,9 @@ var myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 {{< partial "callout-danger-async-methods.md" >}}
 {{< /callout >}}
 
-#### Passing options
+#### 옵션 전달
 
-모달로서 콘텐츠를 활성화 합니다. 옵션의 `object`를 받습니다.
+모달로서 콘텐츠를 활성화합니다. 옵션의 `object`를 받습니다.
 
 ```js
 var myModal = new bootstrap.Modal(document.getElementById('myModal'), {

@@ -25,22 +25,22 @@ toc: true
 {{< /example >}}
 
 {{< callout warning >}}
-**Deprecation:** With the addition of `.text-opacity-*` utilities and CSS variables for text utilities, `.text-black-50` and `.text-white-50` are deprecated as of v5.1.0. They'll be removed in v6.0.0.
+**지원 중단:** `.text-opacity-*` 유틸리티 및 텍스트 유틸리티용 CSS 변수가 추가되면서 `.text-black-50` 및 `.text-white-50`은 v5.1.0부터 더 이상 사용되지 않으며 v6.0.0에서 제거될 예정입니다.
 {{< /callout >}}
 
 {{< callout info >}}
 {{< partial "callout-warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## Opacity
+## 불투명도
 
-<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">Added in v5.1.0</small>
+<small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">v5.1.0에서 추가됨</small>
 
-As of v5.1.0, text color utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+v5.1.0부터 텍스트 색상 유틸리티는 CSS 변수를 사용하여 Sass로 생성됩니다. 이를 통해 컴파일 및 동적 알파 투명도 변경 없이 실시간 색상 변경이 가능합니다.
 
-### How it works
+### 작동 원리
 
-Consider our default `.text-primary` utility.
+기본 `.text-primary` 유틸리티를 고려해보세요.
 
 ```css
 .text-primary {
@@ -48,19 +48,18 @@ Consider our default `.text-primary` utility.
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }
 ```
+우리는 `--bs-primary` (값 `13, 110, 253`) CSS 변수의 RGB 버전을 사용하고 알파 투명도를 위해 두 번째 CSS 변수 `--bs-text-opacity`를 첨부했습니다. (로컬 CSS 변수 덕분에 기본값 '1' 사용). 즉, 지금 `.text-primary`를 사용할 때마다 계산된 `color` 값은 `rgba(13, 110, 253, 1)`입니다. 각 `.text-*` 클래스 내부의 로컬 CSS 변수는 상속 문제를 방지하므로 유틸리티의 중첩 인스턴스는 자동으로 수정된 알파 투명도를 갖지 않습니다.
 
-We use an RGB version of our `--bs-primary` (with the value of `13, 110, 253`) CSS variable and attached a second CSS variable, `--bs-text-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.text-primary` now, your computed `color` value is `rgba(13, 110, 253, 1)`. The local CSS variable inside each `.text-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+### 예제
 
-### Example
-
-To change that opacity, override `--bs-text-opacity` via custom styles or inline styles.
+불투명도를 변경하려면 맞춤 스타일 또는 인라인 스타일을 통해 `--bs-text-opacity`를 재정의하세요.
 
 {{< example >}}
 <div class="text-primary">This is default primary text</div>
 <div class="text-primary" style="--bs-text-opacity: .5;">This is 50% opacity primary text</div>
 {{< /example >}}
 
-Or, choose from any of the `.text-opacity` utilities:
+또는 `.text-opacity` 유틸리티 중 하나를 선택할 수 있습니다:
 
 {{< example >}}
 <div class="text-primary">This is default primary text</div>
@@ -92,19 +91,19 @@ Or, choose from any of the `.text-opacity` utilities:
 
 ### 맵
 
-테마 색상은 Sass 맵에 배치되어 유틸리티, 구성 요소 수정자 등을 생성하기 위해 반복 할 수 있습니다.
+테마 색상은 Sass 맵에 배치되어 유틸리티, 컴포넌트 수정자 등을 생성하기 위해 반복 할 수 있습니다.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
-그레이 스케일 색상은 Sass 맵으로도 사용할 수 있습니다. **이 지도는 유틸리티를 생성하는 데 사용되지 않습니다.**
+그레이 스케일 색상은 Sass 맵으로도 사용할 수 있습니다. **이 맵은 유틸리티를 생성하는 데에 사용되지 않습니다.**
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
 
-RGB colors are generated from a separate Sass map:
+RGB 색상은 별도의 Sass 맵에서 생성됩니다:
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_variables.scss" >}}
 
-And color opacities build on that with their own map that's consumed by the utilities API:
+그리고 색상 불투명도는 유틸리티 API에서 사용하는 자체 맵을 기반으로 빌드됩니다:
 
 {{< scss-docs name="utilities-text-colors" file="scss/_variables.scss" >}}
 

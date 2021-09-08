@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Reboot
-description: 단일 파일에 있는 요소별 CSS 변경 모음인 Reboot는 Bootstrap을 초기에 구축하는 우아하고 일관되며 간단한 기준선을 제공합니다.
+description: 단일 파일에 있는 요소별 CSS 변경 모음인 Reboot는 Bootstrap을 초기에 빌드하는 우아하고 일관되며 간단한 기준선을 제공합니다.
 group: content
 aliases: "/docs/5.1/content/"
 toc: true

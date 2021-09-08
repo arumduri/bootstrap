@@ -19,7 +19,7 @@ Bootstrap의 스타일과 레이아웃은 다양한 마크업 구조에 적용�
 
 ### 상호 작용이 가능한 컴포넌트
 
-Bootstrap의 모달 다이얼로그, 드롭다운 메뉴 및 커스텀 툴팁 같은 상호 작용이 가능한 컴포넌트는 터치, 마우스, 그리고 키보드 사용자들에게 최적화되어 있습니다. 관련 [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/) 역할 및 속성의 사용을 통해 이러한 구성 요소는 보조 기술 (예: 화면 리더기)을 사용하여 이해하고 작동할 수 있어야 합니다.
+Bootstrap의 모달 다이얼로그, 드롭다운 메뉴 및 커스텀 툴팁 같은 상호 작용이 가능한 컴포넌트는 터치, 마우스, 그리고 키보드 사용자들에게 최적화되어 있습니다. 관련 [<abbr title="Web Accessibility Initiative">WAI</abbr>-<abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/WAI/standards-guidelines/aria/) 역할 및 속성의 사용을 통해 이러한 컴포넌트는 보조 기술 (예: 화면 리더기)을 사용하여 이해하고 작동할 수 있어야 합니다.
 
 Bootstrap의 구성요소는 상당히 보편적으로 설계되었으므로 작성자는 해당 구성요소의 정확한 특성과 기능을 보다 정확하게 전달하기 위해 추가 <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 역할 및 속성 외에 JavaScript 동작을 포함해야 할 수도 있습니다. 이것은 일반적으로 문서에 명시되어 있습니다.
 

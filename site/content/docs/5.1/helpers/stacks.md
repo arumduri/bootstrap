@@ -7,10 +7,6 @@ group: helpers
 toc: true
 ---
 
-{{< callout info >}}
-{{< partial "callout-untranslated.md" >}}
-{{< /callout >}}
-
 스택은 Bootstrap에서 레이아웃을 빠르고 쉽게 생성하기 위해 여러 flexbox 속성을 적용하는 지름길을 제공합니다. 개념 및 구현에 대한 모든 크레딧은 오픈 소스 [Pylon Project](https://almonk.github.io/pylon/)에 있습니다.
 
 ## 세로
@@ -27,7 +23,7 @@ toc: true
 
 ## 가로
 
-가로 레이아웃에는 `.hstack`을 사용하세요. 쌓인 항목은 기본적으로 세로 중앙에 배치되며 필요한 너비만 차지합니다. 항목 사이에 공간을 추가하려면 `.gap-*` 유틸리티를 사용하세요.
+수평 레이아웃에는 `.hstack`을 사용하세요. 중첩된 항목은 기본적으로 수직 중심으로 배치되며 필요한 너비만 차지합니다. 항목 사이에 공간을 추가하려면 `.gap-*` 유틸리티를 사용하세요.
 
 {{< example >}}
 <div class="hstack gap-3">
