@@ -529,7 +529,7 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
         Hide this modal and show the first with the button below.
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
       </div>
     </div>
   </div>
@@ -965,7 +965,7 @@ var modal = bootstrap.Modal.getInstance(myModalEl) // Returns a Bootstrap modal 
 
 #### getOrCreateInstance
 
-*Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialised
+*Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized
 
 ```js
 var myModalEl = document.querySelector('#myModal')

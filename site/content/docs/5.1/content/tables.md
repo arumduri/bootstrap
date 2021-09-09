@@ -560,7 +560,7 @@ _아무_ 스타일이 중첩 테이블로 유출되는 것을 방지하기 위�
 <div class="bd-example">
   <table class="table">
     <caption>List of users</caption>
-    {{< partial "table-content.html" >}}
+    {{< partial "table-content" >}}
   </table>
 </div>
 

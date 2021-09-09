@@ -104,7 +104,7 @@ Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에
 
 {{< example lang="js" show_preview="false" >}}
 {{< js.inline >}}
-{{- readFile (printf "site/static/docs/%s/assets/js/validate-forms.js" .Site.Params.docs_version) -}}
+{{- readFile (path.Join "site/static/docs" .Site.Params.docs_version "assets/js/validate-forms.js") -}}
 {{< /js.inline >}}
 {{< /example >}}
 

@@ -631,7 +631,7 @@ You can use `<a>` or `<button>` elements as dropdown items.
 {{< example >}}
 <ul class="dropdown-menu">
   <li><a class="dropdown-item" href="#">Regular link</a></li>
-  <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Disabled link</a></li>
+  <li><a class="dropdown-item disabled">Disabled link</a></li>
   <li><a class="dropdown-item" href="#">Another link</a></li>
 </ul>
 {{< /example >}}
@@ -1151,7 +1151,7 @@ var dropdown = new bootstrap.Dropdown(element, {
         <code>getOrCreateInstance</code>
       </td>
       <td>
-        Static method which returns a dropdown instance associated to a DOM element or create a new one in case it wasn't initialised.
+        Static method which returns a dropdown instance associated to a DOM element or create a new one in case it wasn't initialized.
         You can use it like this: <code>bootstrap.Dropdown.getOrCreateInstance(element)</code>
       </td>
     </tr>
