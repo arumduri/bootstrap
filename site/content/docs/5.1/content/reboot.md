@@ -56,19 +56,19 @@ $font-family-sans-serif:
 
 이 `font-family`는 자동으로 `<body`에 적용되며 Bootstrap을 통해 자동으로 전역 상속됩니다. 전역 `font-family`를 바꾸려면 `$font-family-base`를 업데이트한 다음 Bootstrap을 다시 컴파일해주세요.
 
-## CSS variables
+## CSS 변수
 
-As Bootstrap 5 continues to mature, more and more styles will be built with [CSS variables]({{< docsref "/customize/css-variables" >}}) as a means to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
+Bootstrap 5가 계속해서 발전해나감에 따라 Sass를 재컴파일할 필요 없이 더 많은 실시간 사용자 정의를 제공하는 수단으로 [CSS 변수]({{< docsref "/customize/css-variables" >}})를 사용하여 점점 더 많은 스타일이 빌드될 것입니다. 우리의 접근 방식은 소스 Sass 변수를 가져와 CSS 변수로 변환하는 것입니다. 이렇게 하면 CSS 변수를 사용하지 않더라도 여전히 Sass의 모든 기능을 사용할 수 있습니다. **이 작업은 아직 진행 중이며 완전히 구현하려면 시간이 걸립니다.**
 
-For example, consider these `:root` CSS variables for common `<body>` styles:
+예를 들어 일반적인 `<body>` 스타일에 대해 다음 `:root` CSS 변수를 고려합니다:
 
 {{< scss-docs name="root-body-variables" file="scss/_root.scss" >}}
 
-In practice, those variables are then applied in Reboot like so:
+실제로 이러한 변수는 다음과 같이 Reboot에 적용됩니다.:
 
 {{< scss-docs name="reboot-body-rules" file="scss/_reboot.scss" >}}
 
-Which allows you to make real-time customizations however you like:
+원하는 대로 실시간 사용자 정의할 수 있습니다.:
 
 ```html
 <body style="--bs-body-color: #333;">

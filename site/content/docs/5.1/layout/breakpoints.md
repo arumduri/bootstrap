@@ -23,15 +23,15 @@ Bootstrap에는 반응형 제작을 위해 _grid tiers_ 라고 하는 6개의 Br
 <table class="table">
   <thead>
     <tr>
-      <th>Breakpoint</th>
-      <th>Class infix</th>
-      <th>Dimensions</th>
+      <th>중단점</th>
+      <th>클래스 중위표기</th>
+      <th>너비</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>X-Small</td>
-      <td><em>None</em></td>
+      <td><em>없음</em></td>
       <td>&lt;576px</td>
     </tr>
     <tr>

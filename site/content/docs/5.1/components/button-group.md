@@ -9,7 +9,7 @@ toc: true
 
 ## 기본 예시
 
-`.btn-group`으로 `.btn`요소를 포장합니다.
+`.btn-group`으로 `.btn` 요소를 포장합니다.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic example">
@@ -20,14 +20,14 @@ toc: true
 {{< /example >}}
 
 {{< callout warning >}}
-##### Ensure correct `role` and provide a label
+##### 올바른 `role` 확인 및 레이블 제공하기
 
 스크린 리더에게 일련의 버튼이 그룹화되어 있음을 전달하기 위해서는 적절한 `role`을 지정해야 합니다. 버튼 그룹의 경우, `role="group"`이 되고, 툴바의 경우는 `role="toolbar"`가 됩니다.
 
-또한, 그룹이나 툴바에는 명시적인 라벨을 붙일 필요가 있습니다. 그 말은, 올바른 롤 속성이 있어도 대부분의 스크린 리더는 그것을 안내하지 않기 때문입니다. 여기에서는 `aria-label`을 사용하고 있지만, `aria-labelledby` 같은 대체품을 사용하는 것도 가능합니다.
+또한, 그룹이나 툴바에는 명시적인 라벨을 붙일 필요가 있습니다. 그 말은, 올바른 롤 속성이 있어도 대부분의 스크린 리더는 그것을 안내하지 않기 때문입니다. 여기에서는 `aria-label`을 사용하고 있지만, `aria-labelledby` 같은 대체제를 사용하는 것도 가능합니다.
 {{< /callout >}}
 
-이 클래스는 [`.nav` navigation components]({{< docsref "/components/navs-tabs" >}})를 대체하여 링크 그룹에 추가할 수도 있습니다.
+이 클래스는 [`.nav` 내비게이션 컴포넌트]({{< docsref "/components/navs-tabs" >}})를 대체하여 링크 그룹에 추가할 수도 있습니다.
 
 {{< example >}}
 <div class="btn-group">

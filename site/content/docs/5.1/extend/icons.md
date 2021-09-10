@@ -18,7 +18,7 @@ Bootstrap Icons는 [@mdo](https://github.com/mdo)가 디자인하고 [Bootstrap 
 
  Bootstrap Icons를 어떻게 설치하고 어떤 것이 권장되는 사용법인지 [자세히 알아보세요]({{< param icons >}}).
 
-## Alternatives
+## 대체제
 
 우리는 이 아이콘 세트를 Bootstrap Icons에 대한 선호 대안으로 테스트하고 사용했습니다
 
@@ -32,7 +32,7 @@ Bootstrap Icons는 [@mdo](https://github.com/mdo)가 디자인하고 [Bootstrap 
 {{< /icons.inline >}}
 {{< /markdown >}}
 
-## More options
+## 추가적인 대체제
 
 아직 확인해보지는 않았지만 좋아보이며 SVG를 포함한 여러 형식을 제공합니다.
 

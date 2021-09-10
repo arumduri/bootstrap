@@ -49,9 +49,9 @@ Bootstrap에서 card는 기본적으로 `position: relative` 상태를 갖고 �
 </div>
 {{< /example >}}
 
-## Identifying the containing block
+## containing block 식별하기
 
-만약 확장형 링크가 작동하지 않는다면, [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block)이 원인 일 수 있습니다. 다음 CSS 속성은 요소를 포함하는 블록형태로 만듭니다.
+만약 확장형 링크가 작동하지 않는다면, [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block#Identifying_the_containing_block)이 원인일 수 있습니다. 다음 CSS 속성은 요소를 포함하는 블록형태로 만듭니다.
 
 - `static` 이외의 `position` 값
 - `none` 이외의 `transform` 또는 `perspective` 값

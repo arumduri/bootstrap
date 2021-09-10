@@ -344,8 +344,9 @@ API에 의해 생성된 모든 유틸리티에는 의도한 대로 컴포넌트 
 
 이제 유틸리티 API의 작동 방식에 익숙해졌으므로 사용자 지정 클래스를 추가하고 기본 유틸리티를 수정하는 방법을 배워봅시다.
 
-### Override utilities
+### 유틸리티 오버라이드
 
+동일한 키를 사용하여 기존 유틸리티를 재정의하세요. 예를 들어 추가적인 반응형 오버플로우 유틸리티 클래스가 필요한 경우 다음처럼 할 수 있습니다.
 Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:
 
 ```scss
