@@ -4,9 +4,6 @@
     <loc>https://getbootstrap.kr/docs/5.1/examples/album/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.kr/docs/5.1/getting-started/best-practices/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.kr/docs/5.1/examples/blog/</loc>
   </url>
   <url>
@@ -62,9 +59,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.1/examples/jumbotron/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.kr/docs/5.1/about/license/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.1/examples/list-groups/</loc>
@@ -190,6 +184,9 @@
     <loc>https://getbootstrap.kr/docs/5.1/utilities/display/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.kr/docs/5.1/about/license/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.kr/docs/5.1/forms/layout/</loc>
   </url>
   <url>
@@ -200,6 +197,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.1/components/modal/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.kr/docs/5.1/getting-started/best-practices/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.1/components/list-group/</loc>

@@ -394,7 +394,7 @@
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <div class="btn-group btn-group-sm mb-2 mb-md-0">
             <a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.1/utilities/api" title="원문 보기" target="_blank" rel="noopener">원문 보기</a>
-            <a class="btn btn-bd-light" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/utilities/api.md" title="GitHub에서 번역하기" target="_blank" rel="noopener">GitHub에서 번역하기</a>
+            <a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/blob/main/site/content/docs/5.1/utilities/api.md" title="GitHub에서 번역하기" target="_blank" rel="noopener">GitHub에서 번역하기</a>
             <a class="btn btn-bd-light dropdown-toggle" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false">
               🇰🇷
             </a>
@@ -436,7 +436,7 @@
     <li><a href="#important">Important</a></li>
     <li><a href="#api-사용하기">API 사용하기</a>
       <ul>
-        <li><a href="#override-utilities">Override utilities</a></li>
+        <li><a href="#유틸리티-오버라이드">유틸리티 오버라이드</a></li>
         <li><a href="#유틸리티-추가">유틸리티 추가</a></li>
         <li><a href="#유틸리티-수정">유틸리티 수정</a>
           <ul>
@@ -759,8 +759,9 @@
 <p>API에 의해 생성된 모든 유틸리티에는 의도한 대로 컴포넌트 및 수정자 클래스를 재정의할 수 있도록 <code>!important</code>가 포함됩니다. <code>$enable-important-utilities</code> 변수 (기본값은 <code>true</code>)를 사용하여 이 설정을 전역적으로 토글할 수 있습니다.</p>
 <h2 id="api-사용하기">API 사용하기</h2>
 <p>이제 유틸리티 API의 작동 방식에 익숙해졌으므로 사용자 지정 클래스를 추가하고 기본 유틸리티를 수정하는 방법을 배워봅시다.</p>
-<h3 id="override-utilities">Override utilities</h3>
-<p>Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:</p>
+<h3 id="유틸리티-오버라이드">유틸리티 오버라이드</h3>
+<p>동일한 키를 사용하여 기존 유틸리티를 재정의하세요. 예를 들어 추가적인 반응형 오버플로우 유틸리티 클래스가 필요한 경우 다음처럼 할 수 있습니다.
+Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;overflow&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">responsive</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>

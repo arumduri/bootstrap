@@ -394,7 +394,7 @@
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <div class="btn-group btn-group-sm mb-2 mb-md-0">
             <a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.1/content/reboot" title="원문 보기" target="_blank" rel="noopener">원문 보기</a>
-            <a class="btn btn-bd-light" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/content/reboot.md" title="GitHub에서 번역하기" target="_blank" rel="noopener">GitHub에서 번역하기</a>
+            <a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/blob/main/site/content/docs/5.1/content/reboot.md" title="GitHub에서 번역하기" target="_blank" rel="noopener">GitHub에서 번역하기</a>
             <a class="btn btn-bd-light dropdown-toggle" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false">
               🇰🇷
             </a>
@@ -424,7 +424,7 @@
     <li><a href="#접근">접근</a></li>
     <li><a href="#페이지-기본값">페이지 기본값</a></li>
     <li><a href="#기본-글꼴-스택">기본 글꼴 스택</a></li>
-    <li><a href="#css-variables">CSS variables</a></li>
+    <li><a href="#css-변수">CSS 변수</a></li>
     <li><a href="#제목과-단락">제목과 단락</a></li>
     <li><a href="#목록">목록</a></li>
     <li><a href="#인라인-코드">인라인 코드</a></li>
@@ -497,9 +497,9 @@
   <span class="s2">&#34;Apple Color Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Emoji&#34;</span><span class="o">,</span> <span class="s2">&#34;Segoe UI Symbol&#34;</span><span class="o">,</span> <span class="s2">&#34;Noto Color Emoji&#34;</span> <span class="k">!default</span><span class="p">;</span>
 </code></pre></div><p>글꼴 스택에는 이모지 글꼴이 포함되어 있기 때문에 많은 일반적인 기호/딩뱃 유니코드 텍스트가 여러 색상의 그림 텍스트로 렌더링됩니다. 브라우저/플랫폼의 기본 이모티콘 글꼴에 사용된 스타일에 따라 모양이 달라지며 CSS <code>color</code> 스타일의 영향을 받지 않습니다.</p>
 <p>이 <code>font-family</code>는 자동으로 <code>&lt;body</code>에 적용되며 Bootstrap을 통해 자동으로 전역 상속됩니다. 전역 <code>font-family</code>를 바꾸려면 <code>$font-family-base</code>를 업데이트한 다음 Bootstrap을 다시 컴파일해주세요.</p>
-<h2 id="css-variables">CSS variables</h2>
-<p>As Bootstrap 5 continues to mature, more and more styles will be built with <a href="/docs/5.1/customize/css-variables/">CSS variables</a> as a means to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don&rsquo;t use CSS variables, you still have all the power of Sass. <strong>This is still in-progress and will take time to fully implement.</strong></p>
-<p>For example, consider these <code>:root</code> CSS variables for common <code>&lt;body&gt;</code> styles:</p>
+<h2 id="css-변수">CSS 변수</h2>
+<p>Bootstrap 5가 계속해서 발전해나감에 따라 Sass를 재컴파일할 필요 없이 더 많은 실시간 사용자 정의를 제공하는 수단으로 <a href="/docs/5.1/customize/css-variables/">CSS 변수</a>를 사용하여 점점 더 많은 스타일이 빌드될 것입니다. 우리의 접근 방식은 소스 Sass 변수를 가져와 CSS 변수로 변환하는 것입니다. 이렇게 하면 CSS 변수를 사용하지 않더라도 여전히 Sass의 모든 기능을 사용할 수 있습니다. <strong>이 작업은 아직 진행 중이며 완전히 구현하려면 시간이 걸립니다.</strong></p>
+<p>예를 들어 일반적인 <code>&lt;body&gt;</code> 스타일에 대해 다음 <code>:root</code> CSS 변수를 고려합니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss">  <span class="k">@if</span> <span class="nv">$font-size-root</span> <span class="o">!=</span> <span class="n">null</span> <span class="p">{</span>
     <span class="na">--#{$variable-prefix}root-font-size</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$font-size-root</span><span class="si">}</span><span class="p">;</span>
   <span class="p">}</span>
@@ -513,7 +513,7 @@
   <span class="p">}</span>
   <span class="na">--#{$variable-prefix}body-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$body-bg</span><span class="si">}</span><span class="p">;</span>
   </code></pre></div>
-<p>In practice, those variables are then applied in Reboot like so:</p>
+<p>실제로 이러한 변수는 다음과 같이 Reboot에 적용됩니다.:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nt">body</span> <span class="p">{</span>
   <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 1
 </span><span class="c1"></span>  <span class="na">font-family</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$variable-prefix</span><span class="si">}</span><span class="n">body-font-family</span><span class="p">);</span>
@@ -527,7 +527,7 @@
 </span><span class="c1"></span>  <span class="na">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// 4
 </span><span class="c1"></span><span class="p">}</span>
 </code></pre></div>
-<p>Which allows you to make real-time customizations however you like:</p>
+<p>원하는 대로 실시간 사용자 정의할 수 있습니다.:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;--bs-body-color: #333;&#34;</span><span class="p">&gt;</span>
   <span class="c">&lt;!-- ... --&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>

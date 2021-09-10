@@ -394,7 +394,7 @@
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <div class="btn-group btn-group-sm mb-2 mb-md-0">
             <a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.1/utilities/background" title="원문 보기" target="_blank" rel="noopener">원문 보기</a>
-            <a class="btn btn-bd-light" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/utilities/background.md" title="GitHub에서 번역하기" target="_blank" rel="noopener">GitHub에서 번역하기</a>
+            <a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/blob/main/site/content/docs/5.1/utilities/background.md" title="GitHub에서 번역하기" target="_blank" rel="noopener">GitHub에서 번역하기</a>
             <a class="btn btn-bd-light dropdown-toggle" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false">
               🇰🇷
             </a>
@@ -423,10 +423,10 @@
   <ul>
     <li><a href="#배경색">배경색</a></li>
     <li><a href="#배경-그라데이션">배경 그라데이션</a></li>
-    <li><a href="#opacity">Opacity</a>
+    <li><a href="#불투명도">불투명도</a>
       <ul>
-        <li><a href="#how-it-works">How it works</a></li>
-        <li><a href="#example">Example</a></li>
+        <li><a href="#작동-방식">작동 방식</a></li>
+        <li><a href="#예시">예시</a></li>
       </ul>
     </li>
     <li><a href="#sass">Sass</a>
@@ -483,17 +483,17 @@
 <div class="p-3 mb-2 bg-light bg-gradient text-dark">.bg-light.bg-gradient</div>
 <div class="p-3 mb-2 bg-dark bg-gradient text-white">.bg-dark.bg-gradient</div>
 
-<h2 id="opacity">Opacity</h2>
+<h2 id="불투명도">불투명도</h2>
 <p><small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">v5.1.0에서 추가됨</small></p>
 <p>As of v5.1.0, <code>background-color</code> utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.</p>
-<h3 id="how-it-works">How it works</h3>
+<h3 id="작동-방식">작동 방식</h3>
 <p>Consider our default <code>.bg-success</code> utility.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">bg-success</span> <span class="p">{</span>
   <span class="nv">--bs-bg-opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
   <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">success</span><span class="o">-</span><span class="n">rgb</span><span class="p">),</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">bg</span><span class="o">-</span><span class="n">opacity</span><span class="p">))</span> <span class="cp">!important</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div><p>We use an RGB version of our <code>--bs-success</code> (with the value of <code>25, 135, 84</code>) CSS variable and attached a second CSS variable, <code>--bs-bg-opacity</code>, for the alpha transparency (with a default value <code>1</code> thanks to a local CSS variable). That means anytime you use <code>.bg-success</code> now, your computed <code>color</code> value is <code>rgba(25, 135, 84, 1)</code>. The local CSS variable inside each <code>.bg-*</code> class avoids inheritance issues so nested instances of the utilities don&rsquo;t automatically have a modified alpha transparency.</p>
-<h3 id="example">Example</h3>
+<h3 id="예시">예시</h3>
 <p>To change that opacity, override <code>--bs-bg-opacity</code> via custom styles or inline styles.</p>
 <div class="bd-example">
 <div class="bg-success p-2 text-white">This is default success background</div>
