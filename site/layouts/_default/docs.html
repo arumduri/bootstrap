@@ -9,7 +9,19 @@
     <main class="bd-main order-1">
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
+          <div class="btn-group btn-group-sm mb-2 mb-md-0">
+            <a class="btn btn-bd-light" href="https://getbootstrap.com/{{ .Page.File.Dir | replaceRE `\\` "/" }}{{ .Page.File.ContentBaseName | replaceRE `\\` "/" }}" title="원문 보기" target="_blank" rel="noopener">원문 보기</a>
+            <a class="btn btn-bd-light" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="GitHub에서 번역하기" target="_blank" rel="noopener">GitHub에서 번역하기</a>
+            <a class="btn btn-bd-light dropdown-toggle" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="-36 -24 72 48"><g transform="rotate(-56.3099325)"><g id="b2"><path id="b" d="M-6-25H6M-6-22H6M-6-19H6" stroke="#000" stroke-width="2"/><use xlink:href="#b" y="44"/></g><path stroke="#fff" stroke-width="1" d="M0,17v10"/><circle fill="#cd2e3a" r="12"/><path fill="#0047a0" d="M0-12A6,6 0 0 0 0,0A6,6 0 0 1 0,12A12,12 0 0,1 0-12Z"/></g><g transform="rotate(-123.6900675)"><use xlink:href="#b2"/><path stroke="#fff" stroke-width="1" d="M0-23.5v3M0,17v3.5M0,23.5v3"/></g></svg>
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+              <li><a class="dropdown-item" href="https://getbootstrap.su/{{ .Page.File.Dir | replaceRE `\\` "/" }}{{ .Page.File.ContentBaseName | replaceRE `\\` "/" }}">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 6" width="21" height="14"><rect fill="#fff" width="9" height="3"/><rect fill="#d52b1e" y="3" width="9" height="3"/><rect fill="#0039a6" y="2" width="9" height="2"/></svg>
+                русском</a></li>
+            </ul>
+          </div>
           <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
         </div>
         {{ if .Params.title_en }}<h6 class="text-muted" id="content">// {{ $.Param "title_en" | markdownify }}</h6>{{ end }}
