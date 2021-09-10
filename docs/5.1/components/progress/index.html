@@ -7,7 +7,7 @@
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.88.1">
 
-<meta name="docsearch:language" content="en">
+<meta name="docsearch:language" content="ko">
 <meta name="docsearch:version" content="5.1">
 
 <title>프로그레스 · Bootstrap v5.1</title>
@@ -392,7 +392,22 @@
     <main class="bd-main order-1">
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/components/progress.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
+          <div class="btn-group btn-group-sm mb-2 mb-md-0">
+            <a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.1/components/progress" title="원문 보기" target="_blank" rel="noopener">원문 보기</a>
+            <a class="btn btn-bd-light" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/components/progress.md" title="GitHub에서 번역하기" target="_blank" rel="noopener">GitHub에서 번역하기</a>
+            <a class="btn btn-bd-light dropdown-toggle" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false">
+              🇰🇷
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+              <li><a class="dropdown-item" href="https://v5.bootcss.com/docs/5.1/components/progress">
+                🇨🇳 中文 (简体)
+              </a></li>
+              <li><a class="dropdown-item" href="https://getbootstrap.su/docs/5.1/components/progress">
+                🇷🇺 русском
+              </a></li>
+            </ul>
+          </div>
           <h1 class="bd-title" id="content">프로그레스</h1>
         </div>
         <h6 class="text-muted" id="content">// Progress</h6>
@@ -575,13 +590,12 @@
 <h2 id="애니메이션-스트라이프">애니메이션 스트라이프</h2>
 <p>스트라이프 형태의 그라데이션을 애니메이션화할 수도 있습니다. <code>.progress-bar</code>에 <code>.progress-bar-animated</code>를 추가하면 CSS3 애니메이션으로 줄무늬를 오른쪽에서 왼쪽으로 애니메이션 시킬 수 있습니다.</p>
 <div class="bd-example">
-  <div class="progress">
-    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-  </div>
-  <button type="button" class="btn btn-secondary mt-3" data-bs-toggle="button" id="btnToggleAnimatedProgress" aria-pressed="false" autocomplete="off">
-    Toggle animation
-  </button>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
 </div>
+</div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar progress-bar-striped progress-bar-animated&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;75&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 75%&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar progress-bar-striped progress-bar-animated&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;75&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 75%&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>

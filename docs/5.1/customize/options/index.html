@@ -7,7 +7,7 @@
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.88.1">
 
-<meta name="docsearch:language" content="en">
+<meta name="docsearch:language" content="ko">
 <meta name="docsearch:version" content="5.1">
 
 <title>옵션 · Bootstrap v5.1</title>
@@ -392,7 +392,22 @@
     <main class="bd-main order-1">
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/customize/options.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
+          <div class="btn-group btn-group-sm mb-2 mb-md-0">
+            <a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.1/customize/options" title="원문 보기" target="_blank" rel="noopener">원문 보기</a>
+            <a class="btn btn-bd-light" href="https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.1/customize/options.md" title="GitHub에서 번역하기" target="_blank" rel="noopener">GitHub에서 번역하기</a>
+            <a class="btn btn-bd-light dropdown-toggle" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false">
+              🇰🇷
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+              <li><a class="dropdown-item" href="https://v5.bootcss.com/docs/5.1/customize/options">
+                🇨🇳 中文 (简体)
+              </a></li>
+              <li><a class="dropdown-item" href="https://getbootstrap.su/docs/5.1/customize/options">
+                🇷🇺 русском
+              </a></li>
+            </ul>
+          </div>
           <h1 class="bd-title" id="content">옵션</h1>
         </div>
         <h6 class="text-muted" id="content">// Options</h6>
@@ -486,6 +501,11 @@
 <td><code>$enable-important-utilities</code></td>
 <td><code>true</code> (기본) 혹은 <code>false</code></td>
 <td>유틸리티 클래스에서 <code>!important</code> 접미사를 사용합니다.</td>
+</tr>
+<tr>
+<td><code>$enable-smooth-scroll</code></td>
+<td><code>true</code> (기본) 혹은 <code>false</code></td>
+<td><code>scroll-behavior: smooth</code>를 <a href="/docs/5.1/getting-started/accessibility/#reduced-motion"><code>prefers-reduced-motion</code> 미디어 쿼리</a>를 통해서 감소된 모션을 요청하는 사용자를 제외하고 전역으로 전용합니다.</td>
 </tr>
 </tbody>
 </table>
