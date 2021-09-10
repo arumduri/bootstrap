@@ -86,18 +86,22 @@ Bootstrap에서는 미리 정의된 버튼 스타일이 포함되어 있으며, 
 
 - `<a>` 는 `disabled` 속성을 지원하지 않음으로 시각적으로 비활성화처럼 보이게 하기 위해 `.disabled` 클래스를 추가해야 합니다.
 - 앵커 버튼의 모든 `pointer-events`를 비활성화시키기 위해 장래적으로 사용하기 쉬운 스타일이 포함되어 있습니다.
-- 비활성화버튼은 보조 기술에 대한 요소의 상태를 나타내는 `aria-disabled="true"` 속성이 포함되어야 합니다.
+- `<a>`를 사용하는 비활성화 버튼은 보조 기술에 대한 요소의 상태를 나타내는 `aria-disabled="true"` 속성이 포함되어야 합니다.
+- `<a>`를 사용하는 비활성화 버튼은 `href` 속성을 포함하면 *안됩니다*.
+
+{{< example >}}
+<a class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+<a class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>
+{{< /example >}}
+
+### 링크 기능 주의사항
+
+비활성화된 링크에서 `href` 속성을 유지해야 하는 경우를 다루기 위해 `.disabled` 클래스는 `pointer-events: none`을 사용하여 `<a>`의 링크 기능을 비활성화하려고 시도합니다. 이 CSS 속성은 아직 HTML에서 표준화되지 않았지만 모든 최신 브라우저에서 지원합니다. 또한 `pointer-events: none`을 지원하는 브라우저에서도 키보드 탐색은 영향을 받지 않습니다. 따라서 확실하게 하려면 `aria-disabled="true"` 외에도 이러한 링크에 `tabindex="-1"` 속성을 포함하여 키보드 포커스를 받지 않도록 하고 사용자 지정 JavaScript를 사용하여 해당 기능을 완전히 비활성화해야 합니다.
 
 {{< example >}}
 <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
 <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
 {{< /example >}}
-
-{{< callout warning >}}
-##### 링크 기능 주의사항
-
-`.disabled` 클래스는 `<a>`의 링크 기능을 무효화 하기 위해서 `pointer-events: none`을 사용하지만, 이 CSS 속성은 아직 표준화되어 있지 않습니다. 게다가 `pointer-events: none`을 지원하는 브라우저에서도 키보드 내비게이션은 영향을 받지 않습니다. 그렇기 때문에 안전을 위해 `aria-disabled="true"`에 더해 `tabindex="-1"` 속성을 링크로 설정하고 키보드 포커스를 받지 않도록 하며, 사용자 정의 JavaScript를 사용하여 기능을 완전히 무효화 하도록 합니다.
-{{< /callout >}}
 
 ## 버튼 블록
 
@@ -158,7 +162,7 @@ Display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 {{< example >}}
 <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
 <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
-<a href="#" class="btn btn-primary disabled" tabindex="-1" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
+<a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
 {{< /example >}}
 
 ### 메소드

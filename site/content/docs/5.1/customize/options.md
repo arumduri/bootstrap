@@ -27,4 +27,5 @@ group: customize
 | `$enable-negative-margins`     | `true` 혹은 `false` (기본)        | [마이너스 마진 유틸리티]({{< docsref "/utilities/spacing#negative-margin" >}})를 사용합니다. |
 | `$enable-deprecation-messages` | `true` (기본) 혹은 `false`        | `false`로 설정하면 `v6`에서 삭제 예정인 권장 믹스인이나 함수를 사용할때 에러가 표시되지 않습니다. |
 | `$enable-important-utilities`  | `true` (기본) 혹은 `false`        | 유틸리티 클래스에서 `!important` 접미사를 사용합니다. |
+| `$enable-smooth-scroll`        | `true` (기본) 혹은 `false`        | `scroll-behavior: smooth`를 [`prefers-reduced-motion` 미디어 쿼리]({{< docsref "/getting-started/accessibility#reduced-motion" >}})를 통해서 감소된 모션을 요청하는 사용자를 제외하고 전역으로 전용합니다. |
 {{< /bs-table >}}
