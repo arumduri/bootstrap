@@ -127,7 +127,7 @@ var popover = new bootstrap.Popover(exampleEl, options)
 ```
 
 {{< callout warning >}}
-### Making popovers work for keyboard and assistive technology users
+### 키보드 및 보조 기술 사용자들을 위해 팝오버 만들기
 
 키보드 사용자가 팝오버를 활성화하려면, 키보드 포커스가 가능하며 상호작용이 가능한 HTML 요소(링크나 폼 컨트톨 등)에만 추가해야 합니다. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가함으로써 포커스가 가능한데, 이는 키보드 사용자에게는 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 혼란을 초래할 수 있습니다. 게다가 키보드 사용자가 팝오버를 트리거 할 수 없게 되므로 팝오버의 트리거를 `hover`에만 의지해서는 안됩니다.
 
@@ -297,9 +297,9 @@ var popover = new bootstrap.Popover(exampleEl, options)
 </table>
 
 {{< callout info >}}
-#### Data attributes for individual popovers
+#### 독립 팝오버를 위한 데이터 속성
 
-각각의 팝오버 data 옵션은, 위에서 설명했듯이 data 속성을 사용하여 지정할 수도 있습니다.
+위에서 설명했듯이 각각의 팝오버 data 옵션은 data 속성을 사용하여 지정할 수도 있습니다.
 {{< /callout >}}
 
 #### `popperConfig`으로 기능 사용하기

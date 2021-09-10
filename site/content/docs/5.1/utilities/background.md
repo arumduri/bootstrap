@@ -36,13 +36,13 @@ toc: true
 {{< /colors.inline >}}
 {{< /markdown >}}
 
-## Opacity
+## 불투명도
 
 <small class="d-inline-flex px-2 py-1 font-monospace text-muted border rounded-3">v5.1.0에서 추가됨</small>
 
 As of v5.1.0, `background-color` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
-### How it works
+### 작동 방식
 
 Consider our default `.bg-success` utility.
 
@@ -55,7 +55,7 @@ Consider our default `.bg-success` utility.
 
 We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-bg-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.bg-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.bg-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
 
-### Example
+### 예시
 
 To change that opacity, override `--bs-bg-opacity` via custom styles or inline styles.
 

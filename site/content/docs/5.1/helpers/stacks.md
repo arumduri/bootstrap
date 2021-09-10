@@ -10,7 +10,7 @@ toc: true
 스택은 Bootstrap에서 레이아웃을 빠르고 쉽게 생성하기 위해 여러 flexbox 속성을 적용하는 지름길을 제공합니다. 개념 및 구현에 대한 모든 크레딧은 오픈 소스 [Pylon Project](https://almonk.github.io/pylon/)에 있습니다.
 
 {{< callout warning >}}
-주목! 최근 Safari에 flexbox가 있는 갭 유틸리티에 대한 지원이 추가되었으므로 원하는 브라우저 지원을 확인하는 것이 좋습니다. 그리드 레이아웃에는 문제가 없어야 합니다. [자세히 알아보세요](https://caniuse.com/flexbox-gap).
+주의! 최근 Safari에 flexbox가 있는 갭 유틸리티에 대한 지원이 추가되었으므로 원하는 브라우저 지원을 확인하는 것이 좋습니다. 그리드 레이아웃에는 문제가 없어야 합니다. [자세히 알아보세요](https://caniuse.com/flexbox-gap).
 {{< /callout >}}
 
 ## 세로

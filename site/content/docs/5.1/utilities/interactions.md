@@ -7,7 +7,7 @@ group: utilities
 toc: false
 ---
 
-## Text selection
+## 텍스트 선택
 
 사용자가 콘텐츠와 상호 작용할 때 콘텐츠가 선택되는 방식을 변경합니다.
 
@@ -17,7 +17,7 @@ toc: false
 <p class="user-select-none">This paragraph will not be selectable when clicked by the user.</p>
 {{< /example >}}
 
-## Pointer events
+## 포인터 이벤트
 
 Bootstrap은 요소와의 상호 작용을 금지하거나 추가하기 위해 `.pe-none` 및 `.pe-auto` 클래스를 제공합니다.
 
