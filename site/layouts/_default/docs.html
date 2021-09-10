@@ -9,7 +9,22 @@
     <main class="bd-main order-1">
       <div class="bd-intro ps-lg-4">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">GitHub에서 보기</a>
+          <div class="btn-group btn-group-sm mb-2 mb-md-0">
+            <a class="btn btn-bd-light" href="https://getbootstrap.com/{{ .Page.File.Dir | replaceRE `\\` "/" }}{{ .Page.File.ContentBaseName | replaceRE `\\` "/" }}" title="원문 보기" target="_blank" rel="noopener">원문 보기</a>
+            <a class="btn btn-bd-light" href="{{ .Site.Params.repo }}/blob/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="GitHub에서 번역하기" target="_blank" rel="noopener">GitHub에서 번역하기</a>
+            <a class="btn btn-bd-light dropdown-toggle" href="#" role="button" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false">
+              🇰🇷
+            </a>
+          
+            <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+              <li><a class="dropdown-item" href="https://v5.bootcss.com/{{ .Page.File.Dir | replaceRE `\\` "/" }}{{ .Page.File.ContentBaseName | replaceRE `\\` "/" }}">
+                🇨🇳 中文 (简体)
+              </a></li>
+              <li><a class="dropdown-item" href="https://getbootstrap.su/{{ .Page.File.Dir | replaceRE `\\` "/" }}{{ .Page.File.ContentBaseName | replaceRE `\\` "/" }}">
+                🇷🇺 русском
+              </a></li>
+            </ul>
+          </div>
           <h1 class="bd-title" id="content">{{ .Title | markdownify }}</h1>
         </div>
         {{ if .Params.title_en }}<h6 class="text-muted" id="content">// {{ $.Param "title_en" | markdownify }}</h6>{{ end }}
