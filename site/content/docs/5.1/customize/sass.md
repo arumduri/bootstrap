@@ -71,7 +71,7 @@ your-project/
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/helpers";
 
-// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utililies.scss`
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 // 6. Add additional custom code here

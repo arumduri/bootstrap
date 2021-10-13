@@ -2,14 +2,14 @@
 layout: docs
 title: 이미지
 title_en: Images
-description: 이미지를 반응형 동작으로 선택하고 (부모 요소보다 커지지 않도록) 클래스를 통해 경량 스타일을 추가하는 문서 및 예시입니다.
+description: 이미지를 반응형 동작으로 선택하고 (부모보다 커지지 않도록) 클래스를 통해 경량 스타일을 추가하는 문서 및 예시입니다.
 group: content
 toc: true
 ---
 
 ## 반응형 이미지
 
-Bootstrap의 이미지는 `.img-fluid`를 통해서 반응형으로 만들어집니다. 이렇게 하면 이미지에 `max-width: 100%;` 및 `height: auto;`가 적용되어 부모 요소와 함께 크기가 조정됩니다.
+Bootstrap의 이미지는 `.img-fluid`를 통해서 반응형으로 만들어집니다. 이렇게 하면 이미지에 `max-width: 100%;` 및 `height: auto;`가 적용되어 부모 너비와 함께 크기가 조정됩니다.
 
 {{< example >}}
 {{< placeholder width="100%" height="250" class="bd-placeholder-img-lg img-fluid" text="Responsive image" >}}

@@ -103,23 +103,23 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 
 ## 스위치
 
-사용자 정의 체크 박스의 마크업을 가지고 있는 스위치는 토글 스위치를 렌더링하기 위해 `.form-switch` 클래스를 사용합니다. `disabled` 속성도 지원하고 있습니다.
+사용자 정의 체크 박스의 마크업을 가지고 있는 스위치는 토글 스위치를 렌더링하기 위해 `.form-switch` 클래스를 사용합니다. 이 역할을 컨트롤의 특성을 지원하는 보조 기술에 보다 정확하게 전달하려면 `role="switch"`를 사용하는 것이 좋습니다. 이전 보조 기술에서는 일반적인 체크박스로으로 간단히 폴백됩니다. 스위치는 `disabled` 속성도 지원하고 있습니다.
 
 {{< example >}}
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
   <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
   <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled" disabled>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
   <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
 </div>
 <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked disabled>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
   <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
 </div>
 {{< /example >}}

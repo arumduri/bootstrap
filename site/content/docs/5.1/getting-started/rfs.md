@@ -8,13 +8,13 @@ toc: true
 
 ## RFS?
 
-Bootstrap의 사이드 프로젝트인 [RFS](https://github.com/twbs/rfs/tree/v{{< param "rfs_version" >}})는 글꼴 크기를 조절하기 위해 만들어졌던 (즉 반응형 글꼴 크기 (Responsive Font Sizes)의 약자) 유닛 크기 조절 엔진입니다. 지금의 RFS는 `margin`, `padding`, `border-radius` 또는`box-shadow`와 같은 단위 값으로 대부분의 CSS 속성의 크기를 조정할 수 있습니다.
+Bootstrap의 사이드 프로젝트인 [RFS](https://github.com/twbs/rfs/tree/{{< param "rfs_version" >}})는 글꼴 크기를 조절하기 위해 만들어졌던 (즉 반응형 글꼴 크기 (Responsive Font Sizes)의 약자) 유닛 크기 조절 엔진입니다. 지금의 RFS는 `margin`, `padding`, `border-radius` 또는`box-shadow`와 같은 단위 값으로 대부분의 CSS 속성의 크기를 조정할 수 있습니다.
 
 메커니즘이 브라우저 뷰포트의 치수를 기반으로 적절한 값을 자동으로 계산합니다. 반응형 스케일링 동작을 활성화하기 위해 `rem` 및 뷰포트 단위가 혼합된 `calc()` 함수로 컴파일됩니다.
 
 ## RFS 사용하기
 
-믹스인은 Bootstrap에 포함되어 있으며 Bootstrap의 `scss`를 포함하면 사용할 수 있습니다. RFS는 필요한 경우 [독립형으로 설치](https://github.com/twbs/rfs/tree/v{{< param "rfs_version" >}}#installation)할 수도 있습니다.
+믹스인은 Bootstrap에 포함되어 있으며 Bootstrap의 `scss`를 포함하면 사용할 수 있습니다. RFS는 필요한 경우 [독립형으로 설치](https://github.com/twbs/rfs/tree/{{< param "rfs_version" >}}#installation)할 수도 있습니다.
 
 ### 믹스인 사용하기
 
@@ -82,4 +82,4 @@ Bootstrap의 사이드 프로젝트인 [RFS](https://github.com/twbs/rfs/tree/v{
 ```
 
 ## 확장된 문서
-RFS는 Bootstrap 조직 아래의 별도 프로젝트입니다. RFS 및 구성에 대한 자세한 내용은 [GitHub 저장소](https://github.com/twbs/rfs/tree/v{{< param "rfs_version" >}})에서 찾을 수 있습니다.
+RFS는 Bootstrap 조직 아래의 별도 프로젝트입니다. RFS 및 구성에 대한 자세한 내용은 [GitHub 저장소](https://github.com/twbs/rfs/tree/{{< param "rfs_version" >}})에서 찾을 수 있습니다.

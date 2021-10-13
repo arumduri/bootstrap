@@ -427,7 +427,7 @@ Reboot에는 기본 커서를 `pointer`로 변경하는 `role="button"`의 개�
 `<abbr>` 요소는 단락 텍스트 사이에서 눈에 띄도록 기본 스타일링을 받습니다.
 
 <div class="bd-example">
-  Nulla <abbr title="attribute">attr</abbr> vitae elit libero, a pharetra augue.
+  The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.
 </div>
 
 ### 요약

@@ -103,9 +103,9 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 {{< example >}}
 <ol class="list-group list-group-numbered">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">A list item</li>
+  <li class="list-group-item">A list item</li>
+  <li class="list-group-item">A list item</li>
 </ol>
 {{< /example >}}
 
@@ -116,21 +116,21 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Subheading</div>
-      Cras justo odio
+      Content for list item
     </div>
     <span class="badge bg-primary rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Subheading</div>
-      Cras justo odio
+      Content for list item
     </div>
     <span class="badge bg-primary rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Subheading</div>
-      Cras justo odio
+      Content for list item
     </div>
     <span class="badge bg-primary rounded-pill">14</span>
   </li>
