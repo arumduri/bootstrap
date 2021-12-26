@@ -11,7 +11,7 @@ toc: true
 
 스크롤 스파이가 제대로 동작하기 위해서는 몇 가지 조건이 있습니다:
 
-- Bootstrap [nav component]({{< docsref "/components/navs-tabs" >}}) 혹은 [list group]({{< docsref "/components/list-group" >}})에서 사용해야 합니다.
+- Bootstrap [내비바 컴포넌트]({{< docsref "/components/navs-tabs" >}}) 혹은 [목록 그룹]({{< docsref "/components/list-group" >}})에서 사용해야 합니다.
 - 스크롤 스파이는 감시 대상의 요소, 보통은 `<body>`의 `position: relative;`를 필요로 합니다.
 - 앵커 (`<a>`)가 필요하고, 그 요소를 가르키는 `id`가 필요합니다.
 

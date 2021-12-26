@@ -29,9 +29,9 @@ toc: true
 
 ## 모든 색상
 
-모든 Bootstrap 색상은 `scss/_variables.scss` 파일의 Sass 변수와 Sass 맵으로 이용할 수 있습니다. 파일 크기 증가를 막기 위해서 이런 변수마다 텍스트나 배경색 클래스를 만들지 않습니다. 그 대신에, 이런 색의 자식 집합을 [theme palette](#theme-colors)로 선택하고 있습니다.
+모든 Bootstrap 색상은 `scss/_variables.scss` 파일의 Sass 변수와 Sass 맵으로 이용할 수 있습니다. 파일 크기 증가를 막기 위해서 이런 변수마다 텍스트나 배경색 클래스를 만들지 않습니다. 그 대신에, 이런 색의 자식 집합을 [테마 팔레트](#theme-colors)로 선택하고 있습니다.
 
-색을 재정의 할 때는, 색상 대비에 주의해 주세요. 아래 표시된 것처럼 메인 색상에 - 현재 색상에 대해, 흰색에 대해, 검은색에 대해 - 각각 세 가지 대비 비율을 추가했습니다.
+색을 재정의할 때는 색상 대비에 주의해 주세요. 아래 표시된 것처럼 메인 색상에 현재 색상에 대해, 흰색에 대해, 검은색에 대해서 각각 세 가지 대비 비율을 추가했습니다.
 
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
@@ -76,9 +76,9 @@ toc: true
 
 Sass는 프로그램적으로 변수를 만들 수 없어서 모든 색상을 위한 변수를 수동으로 만듭니다. 중간 값을 지정하고 (예를 들어, `$blue-500`), Sass의 `mix()` 색상 함수로 색조(밝게) 혹은 음영(어둡게)의 사용자 정의 색상 함수를 사용하고 있습니다.
 
-`mix()` 사용은, `lighten()`과 `darken()`이 동일하지 않습니다. — 전자는 지정한 색상을 흰색과 검은색으로 섞지만, 후자는 각 색의 밝기 값을 조정하기만 하면 됩니다. 그 결과, [CodePen 데모](https://codepen.io/emdeoh/pen/zYOQOPB)처럼 충실한 색을 얻을 수 있습니다.
+`mix()`의 사용은 `lighten()`과 `darken()` 조금 다릅니다. 전자는 지정한 색상을 흰색과 검은색으로 섞지만, 후자는 각 색의 밝기 값을 조정하기만 하면 됩니다. 그 결과, [CodePen 데모](https://codepen.io/emdeoh/pen/zYOQOPB)에서 보이는 것처럼 더 완전한 색을 얻을 수 있습니다.
 
-`tint-color()` 및 `shade-color()` 함수에서는 `mix()`를 `$theme-color-interval` 변수와 함께 사용합니다. 전체 소스 코드는 `scss/_functions.scss`와 `scss/_variables.scss` 파일을 참조해 주세요.
+`tint-color()`와 `shade-color()` 함수에서는 `mix()`를 `$theme-color-interval` 변수와 함께 사용합니다. 전체 소스 코드는 `scss/_functions.scss`와 `scss/_variables.scss` 파일을 참조해 주세요.
 
 ## 색상 Sass 맵
 

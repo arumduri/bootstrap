@@ -11,7 +11,7 @@ group: customize
 이러한 변수는 Bootstrap의 `scss/_variables.scss` 파일 내의 주요 글로벌 옵션을 찾아 재정의 할 수 있습니다.
 
 {{< bs-table "table text-start" >}}
-| Variable                       | Values                             | Description                                                                            |
+| 변수                       | 값                             | 설명                                                                            |
 | ------------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------- |
 | `$spacer`                      | `1rem` (기본), 혹은 어떤 수 > 0 | [간격 유틸리티]({{< docsref "/utilities/spacing" >}})를 만들때 기본 간격 값을 지정. |
 | `$enable-rounded`              | `true` (기본) 혹은 `false`        | 다양한 컴포넌트에서 정의된 `border-radius` 스타일의 사용 유무. |

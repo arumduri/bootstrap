@@ -12,7 +12,7 @@ toc: true
 
 ## 작동 원리
 
-아코디언은 내부적으로 [collapse]({{< docsref "/components/collapse" >}})를 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 렌더링을 하려면, `.accordion`에 `.open` 클래스를 추가해야 합니다.
+아코디언은 내부적으로 [콜랩스]({{< docsref "/components/collapse" >}})를 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 렌더링을 하려면, `.accordion`에 `.open` 클래스를 추가해야 합니다.
 
 {{< callout info >}}
 {{< partial "callout-info-prefersreducedmotion.md" >}}
@@ -149,7 +149,7 @@ toc: true
 
 ## 접근성
 
-자세한 내용은 [collapse accessibility section]({{< docsref "/components/collapse#accessibility" >}})을 참고해 주세요.
+자세한 내용은 [콜랩스 문서의 접근성 문단]({{< docsref "/components/collapse#accessibility" >}})을 참고해 주세요.
 
 ## Sass
 

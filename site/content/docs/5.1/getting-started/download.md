@@ -19,7 +19,7 @@ toc: true
 <a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">다운로드</a>
 
 ## 소스 파일
-Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 파이프라인을 사용해서 BootStrap를 컴파일할 수 있습니다. 이를 위해서는 다음 도구들이 필요합니다:
+Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 파이프라인을 통해서 BootStrap를 컴파일할 수 있습니다. 이를 위해서는 다음 도구들이 필요합니다:
 
 - CSS 컴파일을 위한 Sass 컴파일러 (Libsass 또는 Ruby Sass도 지원함).
 - CSS 벤더 접두어를 위한 [Autoprefixer](https://github.com/postcss/autoprefixer)
@@ -46,7 +46,7 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 <script src="{{< param "cdn.js_bundle" >}}" integrity="{{< param "cdn.js_bundle_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-이미 컴파일된 JavaScript를 사용하고 있고 Popper를 개별적으로 포함하는 것을 선호한다면 JS 이전에 CDN을 통해서 Popper를 추가하세요.
+이미 컴파일된 JavaScript를 사용하고 있고 Popper를 개별적으로 포함하는 것을 선호한다면 Bootstrap의 JS 이전에 CDN을 통해서 Popper를 추가하세요.
 
 ```html
 <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>

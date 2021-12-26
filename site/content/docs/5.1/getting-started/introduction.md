@@ -26,7 +26,7 @@ toc: true
 
 ### JS
 
-우리의 많은 컴포넌트들은 작동에 JavaScript를 필요로 합니다. 정확히 말하면 우리의 JavaScript 플러그인과 [Popper](https://popper.js.org/)가 필요합니다. **다음 중 하나의 `<script>`**를 `</body>` 태그가 닫히기 전에 페이지 끝 부분에 넣어 활성화 시켜주세요.
+우리의 많은 컴포넌트들은 작동에 JavaScript를 필요로 합니다. 정확히 말하면 우리의 JavaScript 플러그인과 [Popper](https://popper.js.org/)가 필요합니다. **다음 중 하나의 `<script>`를** `</body>` 태그가 닫히기 전에 페이지 끝 부분에 넣어 활성화 시켜주세요.
 
 #### 번들
 
@@ -145,7 +145,7 @@ CSS에서 보다 간단한 크기 조절을 위해서 우리는 `content-box`에
 
 위 스니펫을 사용하면 `::before`와 `::after`를 통해서 생성된 콘텐츠와 같은 중첩된 요소는 모두 `.selector-for-some-widget`에 대해서 지정된 `box-sizing`를 상속합니다.
 
-[box model and sizing at CSS Tricks에서 박스 모델과 크기 조절](https://css-tricks.com/box-sizing/)에 대해서 자세히 알아보세요.
+[CSS Tricks에서 박스 모델과 크기 조절](https://css-tricks.com/box-sizing/)에 대해서 자세히 알아보세요.
 
 ### Reboot
 

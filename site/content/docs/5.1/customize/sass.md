@@ -181,7 +181,7 @@ Bootstrap은 Sass 맵 내의 몇몇 특정 키를 전제로 사용하며 우리�
 
 ### 색상
 
-[Sass maps]({{< docsref "/customize/color#color-sass-maps" >}})의 사용 외에 `$primary`과 같이 독립된 변수로 사용할 수 있습니다.
+[Sass 맵]({{< docsref "/customize/color#color-sass-maps" >}})의 사용 외에 `$primary`과 같이 독립된 변수로 사용할 수 있습니다.
 
 ```scss
 .custom-element {
@@ -209,7 +209,7 @@ Bootstrap의 `tint-color()`와 `shade-color()` 함수로, 색을 밝게 혹은 �
 
 ### 색상 대비
 
-[WCAG 2.0 색상 대비 표준 접근성](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)을 만족시키기 위해서는, 극소수의 예외를 제외하고 만드는 사람은 [최소 4.5:1의 대비 비율](https://www.w3.org/WAI/WCAG20/quickref/20160105/Overview.php#visual-audio-contrast-contrast)을 제공**해야 합니다**
+[WCAG 2.0 색상 대비 표준 접근성](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)을 만족시키기 위해서는, 극소수의 예외를 제외하고 만드는 사람은 [최소 4.5:1의 대비 비율](https://www.w3.org/WAI/WCAG20/quickref/20160105/Overview.php#visual-audio-contrast-contrast)을 제공**해야 합니다.**
 
 Bootstrap에 포함된 추가 기능은 색상 대비 함수 `color-contrast`입니다. [WCAG 2.0 알고리즘](https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests)을 이용해, `sRGB` 색 공간의 상대 휘도에 근거한 대비 임계치를 계산하여 자동으로 light (`#fff`), dark (`#212529`), black (`#000`)을 반환합니다. 이 함수는 복수의 클래스를 만드는 믹스인이나 반복에 특히 유용합니다.
 

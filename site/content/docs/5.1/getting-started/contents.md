@@ -73,10 +73,10 @@ Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 
   <thead>
     <tr>
       <th scope="col">CSS 파일</th>
-      <th scope="col">레이아웃</th>
+      <th scope="col" class="text-nowrap">레이아웃</th>
       <th scope="col">콘텐츠</th>
-      <th scope="col">컴포넌트</th>
-      <th scope="col">유틸리티</th>
+      <th scope="col" class="text-nowrap">컴포넌트</th>
+      <th scope="col" class="text-nowrap">유틸리티</th>
     </tr>
   </thead>
   <tbody>
@@ -124,7 +124,7 @@ Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 
         <div><code class="fw-normal text-nowrap">bootstrap-reboot.rtl.min.css</code></div>
       </th>
       <td class="text-muted">&mdash;</td>
-      <td><a class="link-secondary" href="{{< docsref "/content/reboot" >}}">Reboot만</a></td>
+      <td><a class="link-secondary text-nowrap" href="{{< docsref "/content/reboot" >}}">Reboot만</a></td>
       <td class="text-muted">&mdash;</td>
       <td class="text-muted">&mdash;</td>
     </tr>

@@ -94,19 +94,19 @@ Grayscale colors are also available, but only a subset are used to generate any 
 
 ### 맵
 
-그런 다음 테마 색상은 Sass 맵에 배치되어 유틸리티, 컴포넌트 수정자 등을 생성하기 위해 반복 할 수 있습니다.
+그런 다음 테마 색상은 Sass 맵에 배치되어 유틸리티, 컴포넌트 수정자 등을 생성하기 위해 반복할 수 있습니다.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
-Grayscale colors are also available as a Sass map. **This map is not used to generate any utilities.**
+회색조 색상은 Sass 맵으로도 사용할 수 있습니다. **이 맵은 유틸리티를 생성하는 데에 사용되지 않습니다.**
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
-
-RGB colors are generated from a separate Sass map:
+ㄴ
+RGB 색상은 별도의 Sass 맵에서 생성됩니다:
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_variables.scss" >}}
 
-And background color opacities build on that with their own map that's consumed by the utilities API:
+그리고 배경색 불투명도는 유틸리티 API에서 사용하는 자체 맵을 기반으로 합니다:
 
 {{< scss-docs name="utilities-bg-colors" file="scss/_variables.scss" >}}
 
