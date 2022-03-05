@@ -13,7 +13,7 @@ Bootstrap의 컴포넌트는 주로 기본-제어자(base-modifier) 명명법으
 
 제어자 클래스를 만들기 위해, Sass의 `@each` 반복문을 사용하여 Sass 맵을 반복합니다. 이는 특히 `$theme-colors`로 컴포넌트의 변형을 만들고 중단점별로 반응하는 변형을 만들때 도움이 됩니다. 이 Sass 맵을 재정의하고 다시 컴파일하면 자동으로 반복문에 변경이 반영됩니다.
 
-이러한 반복문을 제정의하고 Bootstrap의 기본-제어자 클래스 접근법을 당신의 코드로 확장하는 방법에 대해서는 [Sass 멥과 반복 문서]({{< docsref "/customize/sass#maps-and-loops" >}})를 체크 해 주세요.
+이러한 반복문을 재정의하고 Bootstrap의 기본 제어자 클래스 접근법을 당신의 코드로 확장하는 방법에 대해서는 [Sass 맵과 루프 문서]({{< docsref "/customize/sass#maps-and-loops" >}})를 확인해 주세요.
 
 ## 제어자
 
@@ -35,7 +35,7 @@ Bootstrap의 컴포넌트의 대부분은 기본-제어자 클래스 접근법�
 
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
 
-Sass 맵과 변수를 변경하는 방법에 대한 자세한 예시는, [그리드 문서의 Sass 섹션]({{< docsref "/layout/grid#sass" >}})을 참조해 주세요.
+Sass 맵과 변수를 변경하는 방법에 대한 자세한 예시는 [그리드 문서의 Sass 섹션]({{< docsref "/layout/grid#sass" >}})을 참조해 주세요.
 
 ## 직접 만들기
 

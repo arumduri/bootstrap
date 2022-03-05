@@ -40,7 +40,7 @@ toc: true
 
 ## Sass
 
-- 중복된 값을 쉽게 삭제할 수 있도록 기본 Sass 맵의 병합을 폐지하였습니다. 앞으로는 `$theme-colors`과 같은 모든 값을 Sass 맵에서 정의해야 합니다. 자세한 내용은 [Sass maps]({{< docsref "/customize/sass#maps-and-loops" >}})를 참조해 주세요.
+- 중복된 값을 쉽게 삭제할 수 있도록 기본 Sass 맵의 병합을 폐지하였습니다. 앞으로는 `$theme-colors`과 같은 모든 값을 Sass 맵에서 정의해야 합니다. 자세한 내용은 [Sass 맵]({{< docsref "/customize/sass#maps-and-loops" >}})를 참조해 주세요.
 
 - <span class="badge bg-danger">Breaking</span> YIQ 색공간과 관련 없어졌기 때문에 `color-yiq()` 함수와 그에 관련된 변수들을 `color-contrast()`로 변경하였습니다. [#30168.](https://github.com/twbs/bootstrap/pull/30168/)
   - `$yiq-contrasted-threshold`는 `$min-contrast-ratio`로 변경.

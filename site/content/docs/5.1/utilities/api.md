@@ -346,8 +346,7 @@ API에 의해 생성된 모든 유틸리티에는 의도한 대로 컴포넌트 
 
 ### 유틸리티 오버라이드
 
-동일한 키를 사용하여 기존 유틸리티를 재정의하세요. 예를 들어 추가적인 반응형 오버플로우 유틸리티 클래스가 필요한 경우 다음처럼 할 수 있습니다.
-Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:
+동일한 키를 사용하여 기존 유틸리티를 재정의하세요. 예를 들어 추가적인 반응형 오버플로우 유틸리티 클래스가 필요한 경우 다음처럼 할 수 있습니다:
 
 ```scss
 $utilities: (
@@ -409,7 +408,7 @@ $utilities: map-merge(
 
 #### 반응형 활성화
 
-You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the `border` classes responsive:
+현재 응답하지 않는 기존 유틸리티 세트에 대해 응답 클래스를 기본적으로 활성화할 수 있습니다. 예를 들어, `border` 클래스를 반응형으로 만들려면:
 
 ```scss
 @import "bootstrap/scss/functions";

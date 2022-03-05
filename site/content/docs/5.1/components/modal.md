@@ -441,9 +441,9 @@ myModal.addEventListener('shown.bs.modal', function () {
 
 ### 다양한 모달 콘텐츠
 
-같은 모달을 트리거하는 버튼들이 있는데, 그것들이 미묘하게 다른 내용의 모달을 트리거하고 있나요? `event.relatedTarget`과 [HTML `data-bs-*` attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)를 사용하여 어떤 버튼이 클릭 되었는지에 따라 모달의 내용을 변화시킬 수 있습니다.
+같은 모달을 트리거하는 버튼들이 있는데, 그것들이 미묘하게 다른 내용의 모달을 트리거하고 있나요? `event.relatedTarget`과 [HTML `data-bs-*` 속성](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)를 사용하여 어떤 버튼이 클릭 되었는지에 따라 모달의 내용을 변화시킬 수 있습니다.
 
-다음은 HTML과 JavaScript의 예시를 넣은 라이브 데모입니다. `relatedTarget`의 자세한 내용은 [read the modal events docs](#events)를 참조해 주세요.
+다음은 HTML과 JavaScript의 예시가 포함된 라이브 데모입니다. `relatedTarget`의 자세한 내용은 [모달 이벤트 문서](#events)를 참조해 주세요.
 
 {{< example >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
@@ -822,7 +822,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 
 ### 루프
 
-[Responsive fullscreen modals](#fullscreen-modal)은 `$breakpoints` 맵과 `scss/_modal.scss`내의 반복에 의해 생성됩니다.
+[반응형 전체화면 모달](#fullscreen-modal)은 `$breakpoints` 맵과 `scss/_modal.scss`내의 반복에 의해 생성됩니다.
 
 {{< scss-docs name="modal-fullscreen-loop" file="scss/_modal.scss" >}}
 
