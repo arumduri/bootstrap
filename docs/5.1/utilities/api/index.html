@@ -245,7 +245,7 @@
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
               <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">타이포그래피</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">이미지</a></li>
-              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">표</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">테이블</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">피규어</a></li>
           </ul>
         </div>
@@ -765,8 +765,7 @@
 <h2 id="api-사용하기">API 사용하기</h2>
 <p>이제 유틸리티 API의 작동 방식에 익숙해졌으므로 사용자 지정 클래스를 추가하고 기본 유틸리티를 수정하는 방법을 배워봅시다.</p>
 <h3 id="유틸리티-오버라이드">유틸리티 오버라이드</h3>
-<p>동일한 키를 사용하여 기존 유틸리티를 재정의하세요. 예를 들어 추가적인 반응형 오버플로우 유틸리티 클래스가 필요한 경우 다음처럼 할 수 있습니다.
-Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:</p>
+<p>동일한 키를 사용하여 기존 유틸리티를 재정의하세요. 예를 들어 추가적인 반응형 오버플로우 유틸리티 클래스가 필요한 경우 다음처럼 할 수 있습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;overflow&#34;</span><span class="o">:</span> <span class="p">(</span>
     <span class="na">responsive</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
@@ -813,7 +812,7 @@ Override existing utilities by using the same key. For example, if you want addi
   <span class="p">)</span>
 <span class="p">);</span>
 </code></pre></div><h4 id="반응형-활성화">반응형 활성화</h4>
-<p>You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the <code>border</code> classes responsive:</p>
+<p>현재 응답하지 않는 기존 유틸리티 세트에 대해 응답 클래스를 기본적으로 활성화할 수 있습니다. 예를 들어, <code>border</code> 클래스를 반응형으로 만들려면:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/functions&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/variables&#34;</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">&#34;bootstrap/scss/utilities&#34;</span><span class="p">;</span>

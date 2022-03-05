@@ -245,7 +245,7 @@
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
               <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">타이포그래피</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">이미지</a></li>
-              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">표</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">테이블</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">피규어</a></li>
           </ul>
         </div>
@@ -484,8 +484,8 @@
         <h2 id="소개">소개</h2>
 <p><strong>카드</strong>는 유연하고 확장이 가능한 컨테이너입니다. Headers나 footers의 옵션, 다양한 콘텐츠, 문맥에 따른 배경색, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap 3의 panels、wells、thumbnails는 카드로 바뀝니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.</p>
 <h2 id="예시">예시</h2>
-<p>카드는 적은 마크업과 스타일로 되어 있지만, 다양한 사용자 정의가 가능합니다. Flexbox로 만들어져 있어 쉽게 배치할 수 있고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 <code>margin</code> 설정이 없어서 필요에 따라 <a href="/docs/5.1/utilities/spacing/">spacing utilities</a>를 사용합니다.</p>
-<p>아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 <a href="#sizing">sizing options</a>을 통해서 간단하게 재정의할 수 있습니다.</p>
+<p>카드는 적은 마크업과 스타일로 되어 있지만, 다양한 사용자 정의가 가능합니다. Flexbox로 만들어져 있어 쉽게 배치할 수 있고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 <code>margin</code> 설정이 없어서 필요에 따라 <a href="/docs/5.1/utilities/spacing/">간격 유틸리티</a>를 사용합니다.</p>
+<p>아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 <a href="#sizing">크기 조절 옵션</a>을 통해서 간단하게 재정의할 수 있습니다.</p>
 <div class="bd-example">
 <div class="card" style="width: 18rem;">
   <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
@@ -789,7 +789,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="유틸리티-사용하기">유틸리티 사용하기</h3>
-<p><a href="/docs/5.1/utilities/sizing/">Available sizing utilities</a>을 사용해 카드의 가로 폭을 빠르게 설정합니다.</p>
+<p><a href="/docs/5.1/utilities/sizing/">크기 조절 유틸리티</a>을 사용해 카드의 가로 폭을 빠르게 설정합니다.</p>
 <div class="bd-example">
 <div class="card w-75">
   <div class="card-body">
@@ -839,7 +839,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h2 id="텍스트-정렬">텍스트 정렬</h2>
-<p>텍스트의 배치는 <a href="/docs/5.1/utilities/text/#text-alignment">text align classes</a>을 사용해 변경할 수 있습니다.</p>
+<p>텍스트의 배치는 <a href="/docs/5.1/utilities/text/#text-alignment">텍스트 정렬 클래스</a>를 사용해서 변경할 수 있습니다.</p>
 <div class="bd-example">
 <div class="card" style="width: 18rem;">
   <div class="card-body">
@@ -1190,7 +1190,7 @@
 </div>
 
 <h3 id="테두리">테두리</h3>
-<p>카드의 <code>border-color</code>만 변경하려면, <a href="/docs/5.1/utilities/borders/">border utilities</a>를 사용합니다. 아래와 같이, <code>.text-{color}</code> 클래스를 부모의 <code>.card</code> 나 카드 내용의 서브 세트에 배치할 수 있습니다.</p>
+<p>카드의 <code>border-color</code>만 변경하려면, <a href="/docs/5.1/utilities/borders/">테두리 유틸리티</a>를 사용합니다. 아래와 같이, <code>.text-{color}</code> 클래스를 부모의 <code>.card</code> 나 카드 내용의 서브 세트에 배치할 수 있습니다.</p>
 <div class="bd-example">
 
 <div class="card border-primary mb-3" style="max-width: 18rem;">
@@ -1306,7 +1306,7 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
 <h3 id="믹스인-유틸리티">믹스인 유틸리티</h3>
-<p>필요에 따라서 카드의 header 나 footer의 라인을 변경하거나, <code>.bg-transparent</code>를 사용해 <code>background-color</code>를 삭제할 수 있습니다.</p>
+<p>필요에 따라서 카드의 header나 footer의 라인을 변경하거나, <code>.bg-transparent</code>를 사용해 <code>background-color</code>를 삭제할 수 있습니다.</p>
 <div class="bd-example">
 <div class="card border-success mb-3" style="max-width: 18rem;">
   <div class="card-header bg-transparent border-success">Header</div>

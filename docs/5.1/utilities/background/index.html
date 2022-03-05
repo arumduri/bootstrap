@@ -245,7 +245,7 @@
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
               <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">타이포그래피</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">이미지</a></li>
-              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">표</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">테이블</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">피규어</a></li>
           </ul>
         </div>
@@ -557,7 +557,7 @@
 <span class="nv">$black</span><span class="o">:</span>    <span class="mh">#000</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="맵">맵</h3>
-<p>그런 다음 테마 색상은 Sass 맵에 배치되어 유틸리티, 컴포넌트 수정자 등을 생성하기 위해 반복 할 수 있습니다.</p>
+<p>그런 다음 테마 색상은 Sass 맵에 배치되어 유틸리티, 컴포넌트 수정자 등을 생성하기 위해 반복할 수 있습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;primary&#34;</span><span class="o">:</span>    <span class="nv">$primary</span><span class="o">,</span>
   <span class="s2">&#34;secondary&#34;</span><span class="o">:</span>  <span class="nv">$secondary</span><span class="o">,</span>
@@ -569,8 +569,8 @@
   <span class="s2">&#34;dark&#34;</span><span class="o">:</span>       <span class="nv">$dark</span>
 <span class="p">);</span>
 </code></pre></div>
-<p>Grayscale colors are also available as a Sass map. <strong>This map is not used to generate any utilities.</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grays</span><span class="o">:</span> <span class="p">(</span>
+<p>회색조 색상은 Sass 맵으로도 사용할 수 있습니다. <strong>이 맵은 유틸리티를 생성하는 데에 사용되지 않습니다.</strong></p>
+<p><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$grays</span><span class="o">:</span> <span class="p">(</span>
   <span class="s2">&#34;100&#34;</span><span class="o">:</span> <span class="nv">$gray-100</span><span class="o">,</span>
   <span class="s2">&#34;200&#34;</span><span class="o">:</span> <span class="nv">$gray-200</span><span class="o">,</span>
   <span class="s2">&#34;300&#34;</span><span class="o">:</span> <span class="nv">$gray-300</span><span class="o">,</span>
@@ -582,10 +582,11 @@
   <span class="s2">&#34;900&#34;</span><span class="o">:</span> <span class="nv">$gray-900</span>
 <span class="p">);</span>
 </code></pre></div>
-<p>RGB colors are generated from a separate Sass map:</p>
+ㄴ
+RGB 색상은 별도의 Sass 맵에서 생성됩니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$theme-colors-rgb</span><span class="o">:</span> <span class="nf">map-loop</span><span class="p">(</span><span class="nv">$theme-colors</span><span class="o">,</span> <span class="n">to-rgb</span><span class="o">,</span> <span class="s2">&#34;$value&#34;</span><span class="p">);</span>
 </code></pre></div>
-<p>And background color opacities build on that with their own map that&rsquo;s consumed by the utilities API:</p>
+<p>그리고 배경색 불투명도는 유틸리티 API에서 사용하는 자체 맵을 기반으로 합니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="nv">$utilities-bg</span><span class="o">:</span> <span class="nf">map-merge</span><span class="p">(</span>
   <span class="nv">$utilities-colors</span><span class="o">,</span>
   <span class="p">(</span>

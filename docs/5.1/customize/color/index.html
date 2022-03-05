@@ -245,7 +245,7 @@
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
               <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">타이포그래피</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">이미지</a></li>
-              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">표</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">테이블</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">피규어</a></li>
           </ul>
         </div>
@@ -497,8 +497,8 @@
 </code></pre></div>
 <p>이 색상을 변경하는 방법은 <a href="/docs/5.1/customize/sass/#maps-and-loops">Sass 맵과 반복 문서</a>를 확인해 주세요.</p>
 <h2 id="모든-색상">모든 색상</h2>
-<p>모든 Bootstrap 색상은 <code>scss/_variables.scss</code> 파일의 Sass 변수와 Sass 맵으로 이용할 수 있습니다. 파일 크기 증가를 막기 위해서 이런 변수마다 텍스트나 배경색 클래스를 만들지 않습니다. 그 대신에, 이런 색의 자식 집합을 <a href="#theme-colors">theme palette</a>로 선택하고 있습니다.</p>
-<p>색을 재정의 할 때는, 색상 대비에 주의해 주세요. 아래 표시된 것처럼 메인 색상에 - 현재 색상에 대해, 흰색에 대해, 검은색에 대해 - 각각 세 가지 대비 비율을 추가했습니다.</p>
+<p>모든 Bootstrap 색상은 <code>scss/_variables.scss</code> 파일의 Sass 변수와 Sass 맵으로 이용할 수 있습니다. 파일 크기 증가를 막기 위해서 이런 변수마다 텍스트나 배경색 클래스를 만들지 않습니다. 그 대신에, 이런 색의 자식 집합을 <a href="#theme-colors">테마 팔레트</a>로 선택하고 있습니다.</p>
+<p>색을 재정의할 때는 색상 대비에 주의해 주세요. 아래 표시된 것처럼 메인 색상에 현재 색상에 대해, 흰색에 대해, 검은색에 대해서 각각 세 가지 대비 비율을 추가했습니다.</p>
 <div class="row font-monospace">
   
     <div class="col-md-4 mb-3">
@@ -797,8 +797,8 @@
 </div>
 <h3 id="sass-참고-사항">Sass 참고 사항</h3>
 <p>Sass는 프로그램적으로 변수를 만들 수 없어서 모든 색상을 위한 변수를 수동으로 만듭니다. 중간 값을 지정하고 (예를 들어, <code>$blue-500</code>), Sass의 <code>mix()</code> 색상 함수로 색조(밝게) 혹은 음영(어둡게)의 사용자 정의 색상 함수를 사용하고 있습니다.</p>
-<p><code>mix()</code> 사용은, <code>lighten()</code>과 <code>darken()</code>이 동일하지 않습니다. — 전자는 지정한 색상을 흰색과 검은색으로 섞지만, 후자는 각 색의 밝기 값을 조정하기만 하면 됩니다. 그 결과, <a href="https://codepen.io/emdeoh/pen/zYOQOPB">CodePen 데모</a>처럼 충실한 색을 얻을 수 있습니다.</p>
-<p><code>tint-color()</code> 및 <code>shade-color()</code> 함수에서는 <code>mix()</code>를 <code>$theme-color-interval</code> 변수와 함께 사용합니다. 전체 소스 코드는 <code>scss/_functions.scss</code>와 <code>scss/_variables.scss</code> 파일을 참조해 주세요.</p>
+<p><code>mix()</code>의 사용은 <code>lighten()</code>과 <code>darken()</code> 조금 다릅니다. 전자는 지정한 색상을 흰색과 검은색으로 섞지만, 후자는 각 색의 밝기 값을 조정하기만 하면 됩니다. 그 결과, <a href="https://codepen.io/emdeoh/pen/zYOQOPB">CodePen 데모</a>에서 보이는 것처럼 더 완전한 색을 얻을 수 있습니다.</p>
+<p><code>tint-color()</code>와 <code>shade-color()</code> 함수에서는 <code>mix()</code>를 <code>$theme-color-interval</code> 변수와 함께 사용합니다. 전체 소스 코드는 <code>scss/_functions.scss</code>와 <code>scss/_variables.scss</code> 파일을 참조해 주세요.</p>
 <h2 id="색상-sass-맵">색상 Sass 맵</h2>
 <p>Bootstrap의 소스 Sass 파일에는 색상과 그 16진수 값의 목록을 빠르고 쉽게 반복하기 위한 세가지 맵이 포함되어 있습니다.</p>
 <ul>

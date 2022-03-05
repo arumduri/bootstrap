@@ -245,7 +245,7 @@
               <li><a href="/docs/5.1/content/reboot/" class="d-inline-flex align-items-center rounded">Reboot</a></li>
               <li><a href="/docs/5.1/content/typography/" class="d-inline-flex align-items-center rounded">타이포그래피</a></li>
               <li><a href="/docs/5.1/content/images/" class="d-inline-flex align-items-center rounded">이미지</a></li>
-              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">표</a></li>
+              <li><a href="/docs/5.1/content/tables/" class="d-inline-flex align-items-center rounded">테이블</a></li>
               <li><a href="/docs/5.1/content/figures/" class="d-inline-flex align-items-center rounded">피규어</a></li>
           </ul>
         </div>
@@ -861,8 +861,8 @@
   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div><h3 id="다양한-모달-콘텐츠">다양한 모달 콘텐츠</h3>
-<p>같은 모달을 트리거하는 버튼들이 있는데, 그것들이 미묘하게 다른 내용의 모달을 트리거하고 있나요? <code>event.relatedTarget</code>과 <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">HTML <code>data-bs-*</code> attributes</a>를 사용하여 어떤 버튼이 클릭 되었는지에 따라 모달의 내용을 변화시킬 수 있습니다.</p>
-<p>다음은 HTML과 JavaScript의 예시를 넣은 라이브 데모입니다. <code>relatedTarget</code>의 자세한 내용은 <a href="#events">read the modal events docs</a>를 참조해 주세요.</p>
+<p>같은 모달을 트리거하는 버튼들이 있는데, 그것들이 미묘하게 다른 내용의 모달을 트리거하고 있나요? <code>event.relatedTarget</code>과 <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">HTML <code>data-bs-*</code> 속성</a>를 사용하여 어떤 버튼이 클릭 되었는지에 따라 모달의 내용을 변화시킬 수 있습니다.</p>
+<p>다음은 HTML과 JavaScript의 예시가 포함된 라이브 데모입니다. <code>relatedTarget</code>의 자세한 내용은 <a href="#events">모달 이벤트 문서</a>를 참조해 주세요.</p>
 <div class="bd-example">
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Open modal for @fat</button>
@@ -1289,7 +1289,7 @@
 <span class="nv">$modal-scale-transform</span><span class="o">:</span>             <span class="nf">scale</span><span class="p">(</span><span class="mi">1</span><span class="mf">.02</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="루프">루프</h3>
-<p><a href="#fullscreen-modal">Responsive fullscreen modals</a>은 <code>$breakpoints</code> 맵과 <code>scss/_modal.scss</code>내의 반복에 의해 생성됩니다.</p>
+<p><a href="#fullscreen-modal">반응형 전체화면 모달</a>은 <code>$breakpoints</code> 맵과 <code>scss/_modal.scss</code>내의 반복에 의해 생성됩니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="k">@each</span> <span class="nv">$breakpoint</span> <span class="ow">in</span> <span class="nf">map-keys</span><span class="p">(</span><span class="nv">$grid-breakpoints</span><span class="p">)</span> <span class="p">{</span>
   <span class="nv">$infix</span><span class="o">:</span> <span class="nf">breakpoint-infix</span><span class="p">(</span><span class="nv">$breakpoint</span><span class="o">,</span> <span class="nv">$grid-breakpoints</span><span class="p">);</span>
   <span class="nv">$postfix</span><span class="o">:</span> <span class="nf">if</span><span class="p">(</span><span class="nv">$infix</span> <span class="o">!=</span> <span class="s2">&#34;&#34;</span><span class="o">,</span> <span class="nv">$infix</span> <span class="o">+</span> <span class="s2">&#34;-down&#34;</span><span class="o">,</span> <span class="s2">&#34;&#34;</span><span class="p">);</span>
