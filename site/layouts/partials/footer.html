@@ -7,7 +7,8 @@
           <span class="fs-5">Bootstrap</span>
         </a>
         <ul class="list-unstyled small text-muted">
-          <li class="mb-2"> <a href="/docs/{{ .Site.Params.docs_version }}/about/team/">Bootstrap 팀</a>이 <a href="{{ .Site.Params.repo }}/graphs/contributors">기여자 분들</a>과 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
+          <li class="mb-2"> <a href="/docs/{{ .Site.Params.docs_version }}/about/team/">Bootstrap 팀</a>이 <a href="{{ .Site.Params.repo }}/graphs/contributors">기여자 분들</a>의 도움으로 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
+          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588이">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="{{ .Site.Params.repo }}/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v{{ .Site.Params.current_version }}입니다.</li>
         </ul>
@@ -18,8 +19,8 @@
           <li class="mb-2"><a href="/">홈</a></li>
           <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/">문서</a></li>
           <li class="mb-2"><a href="/docs/{{ .Site.Params.docs_version }}/examples/">예시</a></li>
-          <li class="mb-2"><a href="{{ .Site.Params.themes }}">테마</a></li>
-          <li class="mb-2"><a href="{{ .Site.Params.blog }}">블로그</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.themes }}">테마(영어)</a></li>
+          <li class="mb-2"><a href="{{ .Site.Params.blog }}">블로그(영어)</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 mb-3">
@@ -50,6 +51,7 @@
           <li class="mb-2"><a href="{{ .Site.Params.opencollective }}">Open Collective</a></li>
           <li class="mb-2"><a href="{{ .Site.Params.slack }}">Slack</a></li>
           <li class="mb-2"><a href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+          <li class="mb-2"><a href="https://github.com/arumduri">{{ partial "icons/translate.svg" (dict "class" "navbar-nav-svg d-inline-block align-text-top" "width" "16" "height" "16") }} 한국어 번역</a></li>
         </ul>
       </div>
     </div>
