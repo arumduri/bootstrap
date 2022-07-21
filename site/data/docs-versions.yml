@@ -47,8 +47,9 @@
     - v: "4.6"
 
 - group: v5.x
-  baseurl: "https://getbootstrap.kr/docs"
-  description: "현행 버전입니다. 마지막 업데이트는 v5.1.3입니다."
+  baseurl: "https://getbootstrap.com/docs"
+  description: "Current major release. Last update was v5.2.0."
   versions:
     - v: "5.0"
     - v: "5.1"
+    - v: "5.2"

@@ -2,7 +2,8 @@
 # The logic for the sidebar generation is in "site/layouts/partials/docs-sidebar.html".
 
 - title: Getting started
-  title_ko: 시작하기
+  icon: book-half
+  icon_color: indigo
   pages:
     - title: Introduction
       title_ko: 시작하기
@@ -15,6 +16,7 @@
     - title: JavaScript
     - title: Webpack
     - title: Parcel
+    - title: Vite
     - title: Accessibility
       title_ko: 접근성
     - title: RFS
@@ -23,7 +25,8 @@
       title_ko: 기여
 
 - title: Customize
-  title_ko: 사용자 지정
+  icon: palette2
+  icon_color: pink
   pages:
     - title: Overview
       title_ko: 개요
@@ -40,7 +43,8 @@
       title_ko: 최적화
 
 - title: Layout
-  title_ko: 레이아웃
+  icon: grid-fill
+  icon_color: teal
   pages:
     - title: Breakpoints
       title_ko: 중단점
@@ -59,7 +63,8 @@
       title_ko: CSS 그리드
 
 - title: Content
-  title_ko: 컨텐츠
+  icon: file-earmark-richtext
+  icon_color: gray
   pages:
     - title: Reboot
     - title: Typography
@@ -72,7 +77,8 @@
       title_ko: 피규어
 
 - title: Forms
-  title_ko: 폼
+  icon: ui-radios
+  icon_color: blue
   pages:
     - title: Overview
       title_ko: 개요
@@ -94,7 +100,8 @@
       title_ko: 유효성 검사
 
 - title: Components
-  title_ko: 컴포넌트
+  icon: menu-button-wide-fill
+  icon_color: cyan
   pages:
     - title: Accordion
       title_ko: 아코디언
@@ -121,11 +128,8 @@
     - title: List group
       title_ko: 목록 그룹
     - title: Modal
-      title_ko: 모달
-    - title: Navs & tabs
-      title_ko: 내비게이션 & 탭
     - title: Navbar
-      title_ko: 내비게이션 바
+    - title: Navs & tabs
     - title: Offcanvas
       title_ko: 오프캔버스
     - title: Pagination
@@ -146,29 +150,25 @@
       title_ko: 툴팁
 
 - title: Helpers
-  title_ko: 도우미
+  icon: magic
+  icon_color: orange
   pages:
     - title: Clearfix
-      title_ko: 클리어픽스
+    - title: Color & background
     - title: Colored links
-      title_ko: 컬러 링크
-    - title: Ratio
-      title_ko: 비율
     - title: Position
-      title_ko: 위치
+    - title: Ratio
     - title: Stacks
-      title_ko: 스택
-    - title: Visually hidden
-      title_ko: 시각적으로 숨기기
     - title: Stretched link
       title_ko: 확장형 링크
     - title: Text truncation
       title_ko: 말줄임표
     - title: Vertical rule
-      title_ko: 세로줄
+    - title: Visually hidden
 
 - title: Utilities
-  title_ko: 유틸리티
+  icon: braces-asterisk
+  icon_color: red
   pages:
     - title: API
     - title: Background
@@ -205,7 +205,8 @@
       title_ko: 가시성
 
 - title: Extend
-  title_ko: 확장
+  icon: tools
+  icon_color: blue
   pages:
     - title: Approach
       title_ko: 접근
@@ -213,7 +214,8 @@
       title_ko: 아이콘
 
 - title: About
-  title_ko: 소개
+  icon: globe2
+  icon_color: indigo
   pages:
     - title: Overview
       title_ko: 개요

@@ -62,7 +62,9 @@
   description: "기본 내비바 컴포넌트를 사용하여 이동, 배치 및 확장하는 방법을 보여줍니다."
   examples:
     - name: Navbars
-      description: "네비바에 대한 모든 반응형 및 컨테이너 옵션 예시입니다."
+      description: "Demonstration of all responsive and container options for the navbar."
+    - name: Navbars offcanvas
+      description: "Same as the Navbars example, but with our offcanvas component."
     - name: Navbar static
       description: "추가 콘텐츠가 있는 정적인 상단 내비바의 단일 내비바 예시입니다."
     - name: Navbar fixed
