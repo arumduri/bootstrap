@@ -200,7 +200,7 @@ myModal.addEventListener('shown.bs.hidden', event => {
 
 ### 기본 설정값
 
-플러그인의 `Contsructor.Default` 객체를 수정하여 플러그인의 기본 설정을 변경할 수 있습니다:
+플러그인의 `Constructor.Default` 객체를 수정하여 플러그인의 기본 설정을 변경할 수 있습니다:
 
 ```js
 // changes default for the modal plugin's `keyboard` option to false
