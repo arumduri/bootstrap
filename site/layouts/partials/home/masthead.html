@@ -1,27 +1,34 @@
 <div class="bd-masthead mb-3" id="content">
-  <div class="container px-4 px-md-3">
-    <div class="row align-items-lg-center">
-      <div class="col-8 mx-auto col-md-4 order-md-2 col-lg-5">
-        {{ partial "icons/homepage-hero.svg" (dict "class" "img-fluid mb-3 mb-md-0" "width" "600" "height" "533") }}
-      </div>
-      <div class="col-md-8 order-md-1 col-lg-7 text-center text-md-start">
-        <h1 class="mb-3">Bootstrap으로 빠르고 반응형인 사이트를 만들어보세요</h1>
-        <p class="lead mb-4">
-          세계에서 가장 인기있는 프론트엔드 오픈 소스 툴킷이며 Sass 변수와 믹스인, 반응형 그리드 시스템, 광범위한 사전 제작된 컴포넌트, 그리고 강력한 JavaScript 플러그인이 있는 Bootstrap으로 반응형 모바일 우선 사이트를 디자인하고 입맛대로 바꿔보세요.
-        </p>
-
-        <div class="d-flex flex-column flex-md-row">
-          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg btn-bd-primary mb-3 me-md-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">시작하기</a>
-          <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="btn btn-lg btn-outline-secondary mb-3" onclick="ga('send', 'event', 'Jumbotron actions', 'Download', 'Download {{ .Site.Params.current_version }}');">다운로드</a>
+  <div class="container-xxl bd-gutter">
+    <div class="col-md-8 mx-auto text-center">
+      <a class="d-flex flex-column flex-lg-row justify-content-center align-items-center mb-4 text-dark lh-sm text-decoration-none" href="https://blog.getbootstrap.com/2022/07/19/bootstrap-5-2-0/">
+        <strong class="d-sm-inline-block p-2 me-2 mb-2 mb-lg-0 rounded-3 masthead-notice">v5.2 업데이트</strong>
+        <span class="text-muted">CSS 변수, 반응형 오프캔버스, 새로운 유틸리티, 그 외 많은 것들이 추가되었습니다!</span>
+      </a>
+      <img src="/docs/{{ .Site.Params.docs_version }}/assets/brand/bootstrap-logo-shadow.png" width="200" height="165" alt="Bootstrap" class="d-block mx-auto mb-3">
+      <h1 class="mb-3 fw-semibold">Bootstrap으로 빠르게 반응형 사이트 빌드하기</h1>
+      <p class="lead mb-4">
+        강력하고 확장 가능하며 기능이 풍부한 프론트엔드 툴킷. Sass로 빌드 및 커스터마이징하고, 사전 빌드된 그리드 시스템 및 구성 요소를 활용하고, 강력한 JavaScript 플러그인으로 프로젝트에 생기를 불어넣습니다.
+      </p>
+      <div class="d-flex flex-column flex-lg-row align-items-md-stretch justify-content-md-center gap-3 mb-4">
+        <div class="d-inline-block v-align-middle fs-5">
+          {{ highlight (printf ("npm i bootstrap@%s") .Site.Params.current_version) "sh" "" }}
         </div>
-        <p class="text-muted mb-0">
-          현재 <strong>v{{ .Site.Params.current_version }}</strong>
-          <span class="px-1">&middot;</span>
-          <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/" class="link-secondary">v4.6.x 문서</a>
-          <span class="px-1">&middot;</span>
-          <a href="/docs/versions/" class="link-secondary">모든 버전</a>
-        </p>
+        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/" class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold" onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">
+          <svg class="bi me-2" aria-hidden="true"><use xlink:href="#book-half"></use></svg>
+          문서 읽어보기
+        </a>
       </div>
+      <p class="text-muted mb-0">
+        현재 <strong>v{{ .Site.Params.current_version }}</strong>
+        <span class="px-1">&middot;</span>
+        <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="link-secondary">다운로드</a>
+        <span class="px-1">&middot;</span>
+        <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/" class="link-secondary text-nowrap">v4.6.x 문서</a>
+        <span class="px-1">&middot;</span>
+        <a href="/docs/versions/" class="link-secondary text-nowrap">모든 버전</a>
+      </p>
+      {{ partial "ads" . }}
     </div>
   </div>
 </div>
