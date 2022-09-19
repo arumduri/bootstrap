@@ -15,8 +15,8 @@
 (() => {
   'use strict'
   // Insert copy to clipboard button before .highlight
-  const btnTitle = 'Copy to clipboard'
-  const btnEdit = 'Edit on StackBlitz'
+  const btnTitle = '클립보드에 복사'
+  const btnEdit = 'StackBlitz에서 수정'
 
   const btnHtml = [
     '<div class="bd-code-snippet">',

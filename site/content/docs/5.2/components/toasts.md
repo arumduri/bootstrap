@@ -335,7 +335,7 @@ As part of Bootstrap's evolving CSS variables approach, toasts now use local CSS
 
 {{< scss-docs name="toast-css-vars" file="scss/_toasts.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 {{< scss-docs name="toast-variables" file="scss/_variables.scss" >}}
 

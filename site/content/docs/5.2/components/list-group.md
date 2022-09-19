@@ -308,7 +308,7 @@ As part of Bootstrap's evolving CSS variables approach, list groups now use loca
 
 {{< scss-docs name="list-group-css-vars" file="scss/_list-group.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 {{< scss-docs name="list-group-variables" file="scss/_variables.scss" >}}
 

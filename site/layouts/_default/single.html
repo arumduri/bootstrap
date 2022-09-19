@@ -4,9 +4,8 @@
       <div class="row">
         <div class="col-xl-8">
           <h1 class="bd-title mt-0">{{ .Title | markdownify }}</h1>
-          {{ if .Params.title_en }}<h6 class="text-muted">// {{ $.Param "title_en" | markdownify }}</h6>{{ end }}
           <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
-          {{ if eq .Title "Examples" }}
+          {{ if eq .Title "예시" }}
           <div class="d-flex flex-column flex-md-row gap-3">
             <a href="{{ .Site.Params.download.dist_examples }}" class="btn btn-lg bd-btn-lg btn-bd-primary d-flex align-items-center justify-content-center fw-semibold" onclick="ga('send', 'event', 'Examples', 'Hero', 'Download Examples');">
               <svg class="bi me-2" aria-hidden="true"><use xlink:href="#box-seam"></use></svg>
@@ -29,18 +28,18 @@
     <div class="container-xxl bd-gutter">
       {{ .Content }}
 
-      {{ if eq .Title "Examples" }}
+      {{ if eq .Title "예시" }}
         <hr class="my-5">
         <div class="container">
           <div class="text-center">
             <div class="masthead-followup-icon d-inline-block mb-2 text-bg-danger">
               {{ partial "icons/droplet-fill.svg" (dict "width" "32" "height" "32") }}
             </div>
-            <h2 class="display-6 fw-normal">Go further with Bootstrap Themes</h2>
+            <h2 class="display-6 fw-normal">Bootstrap Themes로 더 나아가기</h2>
             <p class="col-md-10 col-lg-8 mx-auto lead">
-              Need something more than these examples? Take Bootstrap to the next level with premium themes from the <a href="{{ .Site.Params.themes }}">official Bootstrap Themes marketplace</a>. They’re built as their own extended frameworks, rich with new components and plugins, documentation, and powerful build tools.
+              더 필요한 것이 있으신가요? <a href="{{ .Site.Params.themes }}">Bootstrap 공식 테마 마켓플레이스</a>의 프리미엄 테마를 통해서 Bootstrap를 다음 단계로 올려놓으세요. Bootstrap을 기반으로 확장된 고유의 프레임워크, 풍부한 새로운 컴포넌트 및 플러그인, 문서, 강력한 빌드 도구로 만들어졌습니다.
             </p>
-            <a href="{{ .Site.Params.themes }}" class="btn btn-lg btn-outline-primary mb-3">Browse themes</a>
+            <a href="{{ .Site.Params.themes }}" class="btn btn-lg btn-outline-primary mb-3">테마 탐색하기</a>
           </div>
           <img class="d-block img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes-collage.png,
                                                               /docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes-collage@2x.png 2x"

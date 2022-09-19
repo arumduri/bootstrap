@@ -70,12 +70,12 @@ bootstrap/
 Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 몇 가지 선택지가 포함되어 있습니다.
 
 {{< bs-table "table" >}}
-| CSS files | Layout | Content | Components | Utilities |
+| CSS 파일 | 레이아웃 | 콘텐츠 | 컴포넌트 | 유틸리티 |
 | --- | --- | --- | --- | --- |
-| `bootstrap.css`<br> `bootstrap.min.css`<br> `bootstrap.rtl.css`<br> `bootstrap.rtl.min.css` | Included | Included | Included | Included |
-| `bootstrap-grid.css`<br> `bootstrap-grid.rtl.css`<br> `bootstrap-grid.min.css`<br> `bootstrap-grid.rtl.min.css` | [Only grid system]({{< docsref "/layout/grid" >}}) | — | — | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
-| `bootstrap-utilities.css`<br> `bootstrap-utilities.rtl.css`<br> `bootstrap-utilities.min.css`<br> `bootstrap-utilities.rtl.min.css` | — | — | — | Included |
-| `bootstrap-reboot.css`<br> `bootstrap-reboot.rtl.css`<br> `bootstrap-reboot.min.css`<br> `bootstrap-reboot.rtl.min.css` | — | [Only Reboot]({{< docsref "/content/reboot" >}}) | — | — |
+| `bootstrap.css`<br> `bootstrap.min.css`<br> `bootstrap.rtl.css`<br> `bootstrap.rtl.min.css` | 포함 | 포함 | 포함 | 포함 |
+| `bootstrap-grid.css`<br> `bootstrap-grid.rtl.css`<br> `bootstrap-grid.min.css`<br> `bootstrap-grid.rtl.min.css` | [그리드 시스템만]({{< docsref "/layout/grid" >}}) | — | — | [플렉스 유틸리티만]({{< docsref "/utilities/flex" >}}) |
+| `bootstrap-utilities.css`<br> `bootstrap-utilities.rtl.css`<br> `bootstrap-utilities.min.css`<br> `bootstrap-utilities.rtl.min.css` | — | — | — | 포함 |
+| `bootstrap-reboot.css`<br> `bootstrap-reboot.rtl.css`<br> `bootstrap-reboot.min.css`<br> `bootstrap-reboot.rtl.min.css` | — | [Reboot만]({{< docsref "/content/reboot" >}}) | — | — |
 {{< /bs-table >}}
 
 ## JS 파일
@@ -83,9 +83,9 @@ Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 
 마찬가지로 컴파일된 JavaScript의 일부 또는 전체를 포함할 수 있는 선택지가 있습니다.
 
 {{< bs-table "table" >}}
-| JS Files | Popper |
+| JS 파일 | Popper |
 | --- | --- |
-| `bootstrap.bundle.js`<br> `bootstrap.bundle.min.js`<br> | Included |
+| `bootstrap.bundle.js`<br> `bootstrap.bundle.min.js`<br> | 포함 |
 | `bootstrap.js`<br> `bootstrap.min.js`<br> | – |
 {{< /bs-table >}}
 

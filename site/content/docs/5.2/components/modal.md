@@ -779,7 +779,7 @@ As part of Bootstrap's evolving CSS variables approach, modals now use local CSS
 
 {{< scss-docs name="modal-backdrop-css-vars" file="scss/_modal.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 {{< scss-docs name="modal-variables" file="scss/_variables.scss" >}}
 

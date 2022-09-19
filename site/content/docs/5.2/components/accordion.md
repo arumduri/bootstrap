@@ -161,6 +161,6 @@ As part of Bootstrap's evolving CSS variables approach, accordions now use local
 
 {{< scss-docs name="accordion-css-vars" file="scss/_accordion.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 {{< scss-docs name="accordion-variables" file="scss/_variables.scss" >}}

@@ -17,7 +17,7 @@ toc: true
 
 <br>
 
-1. **Create a new `index.html` file in your project root.** Include the `<meta name="viewport">` tag as well for [proper responsive behavior](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) in mobile devices.
+1. **프로젝트 최상위 폴더에 `index.html` file파일을 생성해주세요.** 그리고 모바일에서의 [적절한 반응형 동작](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag)을 위해 `<meta name="viewport">`를 넣어주세요.
 
    ```html
    <!doctype html>
@@ -33,7 +33,7 @@ toc: true
    </html>
    ```
 
-2. **Include Bootstrap's CSS and JS.** Place the `<link>` tag in the `<head>` for our CSS, and the `<script>` tag for our JavaScript bundle (including Popper for positioning dropdowns, poppers, and tooltips) before the closing `</body>`. Learn more about our [CDN links](#cdn-links).
+2. **Bootstrap의 CSS와 JS를 포함시켜주세요.** CSS를 위해서 `<head>`에 `<link>` 태그를 추가시켜주고, JavaScript 번들 (드롭다운, 팝오버 및 툴팁 위치 지정을 위한 Popper 포함)을 위헤서 `</body>` 전에 `<script>` 태그를 삽입해주세요. [CDN 링크](#cdn-링크)에 대해서 자세히 알아보세요.
 
    ```html
    <!doctype html>
@@ -51,37 +51,37 @@ toc: true
    </html>
    ```
 
-   You can also include [Popper](https://popper.js.org/) and our JS separately. If you don't plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper.
+   [Popper](https://popper.js.org/)와 JS를 개별로 포함시킬 수도 있습니다. 드롭다운, 팝오버 또는 툴팁을 사용할 생각이 없다면 Popper를 제외해서 수십 킬로바이트를 아낄 수 있습니다.
 
    ```html
    <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
    <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
    ```
 
-3. **Hello, world!** Open the page in your browser of choice to see your Bootstrapped page. Now you can start building with Bootstrap by creating your own [layout]({{< docsref "/layout/grid" >}}), adding dozens of [components]({{< docsref "/components/buttons" >}}), and utilizing [our official examples]({{< docsref "/examples" >}}).
+3. **Hello, world!** 브라우저에서 페이지를 열어 Bootstrap이 적용된 페이지를 확인해보세요. 이제 나만의 [레이아웃]({{< docsref "/layout/grid" >}})을 만들고 수십 개의 [컴포넌트]({{< docsref "/components/buttons" >}})를 추가하고 [공식 예제]({{< docsref "/examples" >}})를 활용하여 Bootstrap으로 빌드를 시작할 수 있습니다.
 
-## CDN links
+## CDN 링크
 
-As reference, here are our primary CDN links.
+다음은 기본 CDN의 링크입니다.
 
 {{< bs-table >}}
-| Description | URL |
+| 설명 | URL |
 | --- | --- |
 | CSS | `{{< param "cdn.css" >}}` |
 | JS | `{{< param "cdn.js_bundle" >}}` |
 {{< /bs-table >}}
 
-You can also use the CDN to fetch any of our [additional builds listed in the Contents page]({{< docsref "/getting-started/contents" >}}).
+CDN을 사용하여 [콘텐츠 페이지에 나열된 추가 빌드]({{< docsref "/getting-started/contents" >}})를 가져올 수도 있습니다.
 
-## Next steps
+## 다음 단계
 
-- Read a bit more about some [important global environment settings](#important-globals) that Bootstrap utilizes.
+- Bootstrap이 활용하는 몇 가지 [중요한 전역 환경 설정](#중요한-전역-속성)을 확인해주세요.
 
-- Read about what's included in Bootstrap in our [contents section]({{< docsref "/getting-started/contents/" >}}) and the list of [components that require JavaScript](#js-components) below.
+- [구성요소 섹션에서 Bootstrap]({{< docsref "/getting-started/contents/" >}})에 포함된 내용과 [JavaScript가 필요한 컴포넌트](#js-컴포넌트) 목록을 아래에서 읽어보세요.
 
-- Need a little more power? Consider building with Bootstrap by [including the source files via package manager]({{< docsref "/getting-started/download#package-managers" >}}).
+- 추가적인 부분이 필요하신가요? [패키지 관리자를 통해 소스 파일을 포함]({{< docsref "/getting-started/download#패키지-관리자" >}})하여 Bootstrap으로 빌드하는 것을 고려해보세요.
 
-- Looking to use Bootstrap as a module with `<script type="module">`? Please refer to our [using Bootstrap as a module]({{< docsref "/getting-started/javascript#using-bootstrap-as-a-module" >}}) section.
+- `<script type="module">`이 있는 모듈로 Bootstrap을 사용하고 싶으신가요? [Bootstrap을 모듈로 사용하기]({{< docsref "/getting-started/javascript#using-bootstrap-as-a-module" >}}) 섹션을 참고해주세요.
 
 ## JS 컴포넌트
 
@@ -97,9 +97,9 @@ You can also use the CDN to fetch any of our [additional builds listed in the Co
 - 드롭다운에서의 표시 및 위치 ([Popper](https://popper.js.org/)도 필요)
 - 모달에서의 표시, 위치, 스크롤 행동
 - 네비게이션 바와 오프캔버스에서의 반응형 동작 구현을 위한 접기 플러그인 확장
-- Navs with the Tab plugin for toggling content panes
+- 콘텐츠 창 전환을 위한 탭 플러그인이 있는 네비게이션
 - 표시, 위치 지정, 스크롤 동작을 위한 오프캔버스
-- Scrollspy for scroll behavior and navigation updates
+- 스크롤 동작 및 네비게이션 갱신을 위한 스크롤스파이
 - 토스트 표시 및 닫기
 - 툴팁과 팝오버에서의 표시 및 위치 ([Popper](https://popper.js.org/)도 필요)
 {{< /markdown >}}

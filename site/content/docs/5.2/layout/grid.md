@@ -97,7 +97,7 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
     </thead>
     <tbody>
       <tr>
-        <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
+        <th class="text-nowrap" scope="row">컨테이너 <code class="fw-normal">max-width</code></th>
         <td>None (auto)</td>
         <td>540px</td>
         <td>720px</td>
@@ -106,7 +106,7 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
         <td>1320px</td>
       </tr>
       <tr>
-        <th class="text-nowrap" scope="row">Class prefix</th>
+        <th class="text-nowrap" scope="row">클래스 접두사</th>
         <td><code>.col-</code></td>
         <td><code>.col-sm-</code></td>
         <td><code>.col-md-</code></td>
@@ -115,15 +115,15 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
         <td><code>.col-xxl-</code></td>
       </tr>
       <tr>
-        <th class="text-nowrap" scope="row"># of columns</th>
+        <th class="text-nowrap" scope="row">열 개수</th>
         <td colspan="6">12</td>
       </tr>
       <tr>
-        <th class="text-nowrap" scope="row">Gutter width</th>
-        <td colspan="6">1.5rem (.75rem on left and right)</td>
+        <th class="text-nowrap" scope="row">거터 너비</th>
+        <td colspan="6">1.5rem (좌우 각각 .75rem)</td>
       </tr>
       <tr>
-        <th class="text-nowrap" scope="row">Custom gutters</th>
+        <th class="text-nowrap" scope="row">사용자 지정 거터</th>
         <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
       </tr>
       <tr>

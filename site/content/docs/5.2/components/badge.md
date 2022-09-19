@@ -99,6 +99,6 @@ As part of Bootstrap's evolving CSS variables approach, badges now use local CSS
 
 {{< scss-docs name="badge-css-vars" file="scss/_badge.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 {{< scss-docs name="badge-variables" file="scss/_variables.scss" >}}

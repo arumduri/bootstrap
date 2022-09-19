@@ -180,7 +180,7 @@ As part of Bootstrap's evolving CSS variables approach, alerts now use local CSS
 
 {{< scss-docs name="alert-css-vars" file="scss/_alert.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 {{< scss-docs name="alert-variables" file="scss/_variables.scss" >}}
 

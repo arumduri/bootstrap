@@ -192,7 +192,7 @@ For both spinners, small spinner modifier classes are used to update the values 
 
 {{< scss-docs name="spinner-border-sm-css-vars" file="scss/_spinners.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 {{< scss-docs name="spinner-variables" file="scss/_variables.scss" >}}
 

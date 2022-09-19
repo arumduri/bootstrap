@@ -169,7 +169,7 @@ As part of Bootstrap's evolving CSS variables approach, pagination now uses loca
 
 {{< scss-docs name="pagination-css-vars" file="scss/_pagination.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 {{< scss-docs name="pagination-variables" file="scss/_variables.scss" >}}
 

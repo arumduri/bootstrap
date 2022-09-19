@@ -800,7 +800,7 @@ Customization through CSS variables can be seen on the `.navbar-dark` class wher
 
 {{< scss-docs name="navbar-dark-css-vars" file="scss/_navbar.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 Variables for all navbars:
 

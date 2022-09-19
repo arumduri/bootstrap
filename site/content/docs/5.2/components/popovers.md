@@ -164,7 +164,7 @@ As part of Bootstrap’s evolving CSS variables approach, popovers now use local
 
 {{< scss-docs name="popover-css-vars" file="scss/_popover.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 {{< scss-docs name="popover-variables" file="scss/_variables.scss" >}}
 

@@ -1006,7 +1006,7 @@ Customization through CSS variables can be seen on the `.dropdown-menu-dark` cla
 
 {{< scss-docs name="dropdown-dark-css-vars" file="scss/_dropdown.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 Variables for all dropdowns:
 

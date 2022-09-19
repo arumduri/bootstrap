@@ -326,7 +326,7 @@ On the `.nav-pills` modifier class:
 
 {{< scss-docs name="nav-pills-css-vars" file="scss/_nav.scss" >}}
 
-### Sass variables
+### Sass 변수
 
 {{< scss-docs name="nav-variables" file="scss/_variables.scss" >}}
 
@@ -538,7 +538,7 @@ And with vertical pills. Ideally, for vertical tabs, you should also add `aria-o
 </div>
 ```
 
-### Accessibility
+### 접근성
 
 Dynamic tabbed interfaces, as described in the [ARIA Authoring Practices Guide tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/), require `role="tablist"`, `role="tab"`, `role="tabpanel"`, and additional `aria-` attributes in order to convey their structure, functionality, and current state to users of assistive technologies (such as screen readers). As a best practice, we recommend using `<button>` elements for the tabs, as these are controls that trigger a dynamic change, rather than links that navigate to a new page or location.
 
