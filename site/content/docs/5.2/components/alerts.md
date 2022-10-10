@@ -29,19 +29,8 @@ toc: true
 
 {{< example stackblitz_add_js="true" >}}
 <div id="liveAlertPlaceholder"></div>
-
-<div class="bd-example">
-  <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
-</div>
-
-```html
 <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
-
-<div class="alert alert-primary alert-dismissible" role="alert" id="liveAlert">
-  <strong>Nice!</strong> You've triggered this alert.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-```
+{{< /example >}}
 
 다음 예제에서는 JavaScript를 사용하여 라이브 알림 데모를 트리거합니다:
 
@@ -231,15 +220,15 @@ const bsAlert = new bootstrap.Alert('#myAlert')
 This makes an alert listen for click events on descendant elements which have the `data-bs-dismiss="alert"` attribute. (Not necessary when using the data-api’s auto-initialization.)
 
 {{< bs-table >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `close` | Closes an alert by removing it from the DOM. If the `.fade` and `.show` classes are present on the element, the alert will fade out before it is removed. |
-| `dispose` | Destroys an element's alert. (Removes stored data on the DOM element) |
-| `getInstance` | Static method which allows you to get the alert instance associated to a DOM element. For example: `bootstrap.Alert.getInstance(alert)`. |
-| `getOrCreateInstance` | Static method which returns an alert instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `bootstrap.Alert.getOrCreateInstance(element)`. |
+| `close` | DOM에서 제거되고 경고창을 닫습니다. `.fade` 와 `.show` 클래스가 요소에 있으면, 경고창은 제거 되기전에 사라집니다. |
+| `dispose` | 경고창을 없앱니다. (DOM 요소에 저장되어 있는 데이터를 삭제) |
+| `getInstance` | DOM 요소와 관련된 경고창의 인스턴스를 가져오는 Static 메소드입니다. 사용법: `bootstrap.Alert.getInstance(alert)` |
+| `getOrCreateInstance` | DOM 요소와 연결된 경고 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 만드는 정적 메서드입니다. 사용법: `bootstrap.Alert.getOrCreateInstance(element)` |
 {{< /bs-table >}}
 
-Basic usage:
+기본적인 사용 예시:
 
 ```js
 const alert = bootstrap.Alert.getOrCreateInstance('#myAlert')
@@ -250,10 +239,10 @@ alert.close()
 Bootstrap 경고창 플러그인은, 경고창 기능에 연결하기 위한 몇 가지의 이벤트를 제공합니다.
 
 {{< bs-table >}}
-| Event | Description |
+| 이벤트 | 설명 |
 | --- | --- |
-| `close.bs.alert` | Fires immediately when the `close` instance method is called. |
-| `closed.bs.alert` | Fired when the alert has been closed and CSS transitions have completed. |
+| `close.bs.alert` | `close` 인스턴스 메소드가 호출되면 바로 발생합니다. |
+| `closed.bs.alert` | 경고창이 닫히고, CSS 트렌지션이 완료되면 발생합니다. |
 {{< /bs-table >}}
 
 ```js

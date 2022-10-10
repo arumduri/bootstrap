@@ -25,7 +25,7 @@ Bootstrap은 [npm 스크립트](https://docs.npmjs.com/misc/scripts/)를 사용�
 [package.json]({{< param repo >}}/blob/v{{< param current_version >}}/package.json)에는 프로젝트 개발에 사용되는 다수의 작업이 있습니다. 터미널에서 `npm run`을 실행해서 모든 npm 스크립트를 확인해보세요. **최우선 작업에는 다음이 포함됩니다:**
 
 {{< bs-table >}}
-| Task | Description |
+| 작업 | 설명 |
 | --- | --- |
 | `npm start` | CSS와 JavaScript를 컴파일하고 문서를 빌드한 다음 로컬 서버를 시작합니다. |
 | `npm run dist` | 컴파일된 파일과 함께 `dist/` 폴더를 생성합니다. [Sass](https://sass-lang.com/), [Autoprefixer](https://github.com/postcss/autoprefixer), 그리고 [terser](https://github.com/terser/terser)를 사용합니다. |

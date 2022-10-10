@@ -6,7 +6,9 @@ group: getting-started
 toc: true
 thumbnail: guides/bootstrap-webpack@2x.png
 ---
-
+{{< callout info >}}
+{{< partial "callout-untranslated.md" >}}
+{{< /callout >}}
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png" width="2000" height="1000" alt="">
 
 {{< callout >}}

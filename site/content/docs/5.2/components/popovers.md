@@ -246,19 +246,19 @@ const popover = new bootstrap.Popover(element, {
 
 
 {{< bs-table "table" >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `disable` | Removes the ability for an element's popover to be shown. The popover will only be able to be shown if it is re-enabled. |
-| `dispose` | Hides and destroys an element's popover (Removes stored data on the DOM element). Popovers that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements. |
-| `enable` | Gives an element's popover the ability to be shown. **Popovers are enabled by default.** |
-| `getInstance` | _Static_ method which allows you to get the popover instance associated with a DOM element. |
+| `disable` | 요소의 팝오버를 표시하는 기능을 삭제합니다. 팝오버는 다시 활성화된 경우에만 표시됩니다. |
+| `dispose` | 요소의 팝오버를 숨기고 없앱니다 (DOM 요소에 저장된 데이터를 삭제합니다). 위임을 사용하는 팝오버 ([`selector` 옵션](#옵션)을 사용하여 작성된 것)는 자식의 트리거 요소로 인해 개벌적으로 없앨 수 없습니다. |
+| `enable` | 요소의 팝오버를 표시하는 기능을 부여합니다. **팝오버는 기본으로 활성화되어 있습니다.** |
+| `getInstance` | DOM 요소와 연관된 팝오버 인스턴스를 가져올 수 있게 하는 _Static_ 메소드입니다. |
 | `getOrCreateInstance` | *Static* method which allows you to get the popover instance associated with a DOM element, or create a new one in case it wasn't initialized. |
-| `hide` | Hides an element's popover. **Returns to the caller before the popover has actually been hidden** (i.e. before the `hidden.bs.popover` event occurs). This is considered a "manual" triggering of the popover. |
+| `hide` | 요소의 팝오버를 숨깁니다. **팝오버가 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.popover` 이벤트 발생 전). 이것은 팝오버의 “manual” 트리거로 간주합니다. |
 | `setContent` | Gives a way to change the popover's content after its initialization. |
-| `show` | Reveals an element's popover. **Returns to the caller before the popover has actually been shown** (i.e. before the `shown.bs.popover` event occurs). This is considered a "manual" triggering of the popover. Popovers whose title and content are both zero-length are never displayed. |
-| `toggle` | Toggles an element's popover. **Returns to the caller before the popover has actually been shown or hidden** (i.e. before the `shown.bs.popover` or `hidden.bs.popover` event occurs). This is considered a "manual" triggering of the popover. |
-| `toggleEnabled` | Toggles the ability for an element's popover to be shown or hidden. |
-| `update` | Updates the position of an element's popover. |
+| `show` | 요소의 팝오버를 표시합니다. **팝오버가 실제로 나타나기 전에 호출된 곳으로 돌아갑니다** (즉, `shown.bs.popover` 이벤트가 발생하기 전). 이것은 팝오버의 “manual” 트리거로 간주합니다. 타이틀과 콘텐츠의 양쪽 모두의 길이가 0인 팝오버는 결코 표시되지 않습니다. |
+| `toggle` | 요소의 팝오버를 토글합니다. **팝오버가 실제로 표시 또는 숨기기 전에 호출된 곳으로 돌아갑니다** (즉, `shown.bs.popover` 혹은 `hidden.bs.popover` 이벤트가 발생하기 전). 이것은 팝오버의 “manual” 트리거로 간주합니다. |
+| `toggleEnabled` | 요소의 팝오버 표시/숨김 여부를 바꿉니다. |
+| `update` | 요소의 팝오버 위치를 새로고칩니다. |
 {{< /bs-table >}}
 
 
@@ -281,13 +281,13 @@ The `setContent` method accepts an `object` argument, where each property-key is
 ### Events
 
 {{< bs-table >}}
-| Event | Description |
+| 이벤트 | 설명 |
 | --- | --- |
-| `hide.bs.popover` | This event is fired immediately when the `hide` instance method has been called. |
-| `hidden.bs.popover` | This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete). |
-| `inserted.bs.popover` | This event is fired after the `show.bs.popover` event when the popover template has been added to the DOM. |
-| `show.bs.popover` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.popover` | This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete). |
+| `hide.bs.popover` | 이 이벤트는 `hide` 인스턴스 메소드가 호출되었을 때 바로 발생합니다. |
+| `hidden.bs.popover` | 이 이벤트는 팝오버의 숨김이 완료될 때 발생합니다 (CSS 트랜지션이 완료되기를 기다립니다). |
+| `inserted.bs.popover` | 이 이벤트는 `show.bs.popover` 이벤트 후에, 팝오버의 템플렛이 DOM 에 추가될 때 발생합니다. |
+| `show.bs.popover` | 이 이벤트는 `show` 인스턴스 메소드가 호출되었을 때 바로 발생합니다. |
+| `shown.bs.popover` | 이 이벤트는 팝오버가 사용자에게 보여질 때 바로 발생합니다 (CSS 트랜지션이 완료되기를 기다립니다). |
 {{< /bs-table >}}
 
 ```js

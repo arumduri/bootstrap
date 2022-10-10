@@ -640,12 +640,12 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 
 ## 전체화면 모달
 
-`.modal-dialog`에는 아래와 같은 클래스를 추가하는 것으로, 화면을 꽉채운 모달을 이용할 수 있습니다.
+`.modal-dialog`에는 아래와 같은 클래스를 추가하는 것으로 화면을 꽉채운 모달을 이용할 수 있습니다.
 
 {{< bs-table >}}
-| Class | Availability |
+| 클래스 | 가용성 |
 | --- | --- | --- |
-| `.modal-fullscreen` | Always |
+| `.modal-fullscreen` | 항상 |
 | `.modal-fullscreen-sm-down` | `576px` |
 | `.modal-fullscreen-md-down` | `768px` |
 | `.modal-fullscreen-lg-down` | `992px` |
@@ -856,15 +856,15 @@ const myModal = new bootstrap.Modal('#myModal', {
 ```
 
 {{< bs-table "table" >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
-| `getInstance` | *Static* method which allows you to get the modal instance associated with a DOM element. |
+| `dispose` | 모달의 요소를 없앱니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다) |
+| `getInstance` | DOM 요소와 연관된 모달 인스턴스를 취득하는 *Static* 메소드 입니다. |
 | `getOrCreateInstance` | *Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
-| `handleUpdate` | Manually readjust the modal's position if the height of a modal changes while it is open (i.e. in case a scrollbar appears). |
-| `hide` | Manually hides a modal. **Returns to the caller before the modal has actually been hidden** (i.e. before the `hidden.bs.modal` event occurs). |
-| `show` | Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property). (i.e. `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)`. |
-| `toggle` | Manually toggles a modal. **Returns to the caller before the modal has actually been shown or hidden** (i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs). |
+| `handleUpdate` | 열려 있는 동안에 모달의 높이가 바뀌었을 경우, 모달의 위치를 수동으로 재조정합니다 (즉, 스크롤 바가 표시되어 있는 경우 등). |
+| `hide` | 수동으로 모달을 숨깁니다. **모달이 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.modal` 이벤트가 발생하기 전). |
+| `show` | 모달을 수동으로 엽니다. **모달이 실제로 표시되기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.modal` 이벤트가 발생하기 전). 또한, 모달 이벤트로 받을 수 있는 DOM 요소를 (`relatedTarget` 속성으로서) 인수로 건네줄 수도 있습니다. (예: `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)`) |
+| `toggle` | 모달을 수동으로 바꿉니다. **모달이 실제로 표시 또는 숨기기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.modal` 또는 `hidden.bs.modal` 이벤트가 발생하기 전). |
 {{< /bs-table >}}
 
 ### 이벤트
@@ -872,13 +872,13 @@ const myModal = new bootstrap.Modal('#myModal', {
 Bootstrap의 모달 클래스는 모달 기능으로 연결하기 위한 몇 가지 이벤트를 공개하고 있습니다. 모든 모달 이벤트는, 모달 자체(즉, `<div class="modal">`)에서 발생합니다.
 
 {{< bs-table >}}
-| Event | Description |
+| 이벤트 | 설명 |
 | --- | --- |
-| `hide.bs.modal` | This event is fired immediately when the `hide` instance method has been called. |
-| `hidden.bs.modal` | This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete). |
-| `hidePrevented.bs.modal` | This event is fired when the modal is shown, its backdrop is `static` and a click outside of the modal is performed. The event is also fired when the escape key is pressed and the `keyboard` option is set to `false`. |
-| `show.bs.modal` | This event fires immediately when the `show` instance method is called. If caused by a click, the clicked element is available as the `relatedTarget` property of the event. |
-| `shown.bs.modal` | This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the `relatedTarget` property of the event. |
+| `hide.bs.modal` | 이 이벤트는 `hide` 인스턴스/메소드가 불렸을 때 바로 발생합니다. |
+| `hidden.bs.modal` | 이 이벤트는 모달을 숨길 때 발생합니다 (CSS 트랜지션이 완료되기를 기다립니다). |
+| `hidePrevented.bs.modal` | 이 이벤트는 모달이 표시되고 그 배경이 `static`이고, 키보드 옵션 또는 `data-bs-keyboard`가 `false`로 설정되어 있는 상태에서 모달 바깥쪽 클릭이나 escape key를 누루면 됩니다. |
+| `show.bs.modal` | 이 이벤트는 `show` 인스턴스/메소드가 불렸을 때 바로 발생합니다. 클릭으로 인해 발생했을 때 클릭된 요소는 이벤트의 `relatedTarget` 속성으로 이용 가능합니다. |
+| `shown.bs.modal` | 이 이벤트는 모달이 사용자에게 표시될 때 발생합니다.(CSS 트랜지션이 완료되기를 기다립니다) 클릭이 원인인 경우, 클릭된 요소는 이벤트의 `relatedTarget` 속성으로 이용 가능합니다. |
 {{< /bs-table >}}
 
 ```js

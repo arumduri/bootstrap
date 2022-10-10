@@ -24,7 +24,7 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 `<h1>`부터 `<h6>`까지의 모든 제목을 사용할 수 있습니다.
 
 {{< bs-table >}}
-| Heading | Example |
+| 제목 | 예시 |
 | --- | --- |
 | `<h1></h1>` | <span class="h1">h1. Bootstrap heading</span> |
 | `<h2></h2>` | <span class="h2">h2. Bootstrap heading</span> |

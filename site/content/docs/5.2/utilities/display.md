@@ -58,22 +58,22 @@ toc: true
 특정한 화면 크기 간격에서만 요소를 표시하려면 `.d-*-none` 클래스를 `.d-*-*` 클래스와 결합 하세요. (예: `.d-none .d-md-block .d-xl-none .d-xxl-none`). 이렇게하면 중형(md) 및 대형(lg) 장치를 제외한 모든 화면 크기의 요소를 숨길 수 있습니다.
 
 {{< bs-table >}}
-| Screen size | Class |
+| 화면 크기 | 클래스 |
 | --- | --- |
-| Hidden on all | `.d-none` |
-| Hidden only on xs | `.d-none .d-sm-block` |
-| Hidden only on sm | `.d-sm-none .d-md-block` |
-| Hidden only on md | `.d-md-none .d-lg-block` |
-| Hidden only on lg | `.d-lg-none .d-xl-block` |
-| Hidden only on xl | `.d-xl-none` |
-| Hidden only on xxl | `.d-xxl-none .d-xxl-block` |
-| Visible on all | `.d-block` |
-| Visible only on xs | `.d-block .d-sm-none` |
-| Visible only on sm | `.d-none .d-sm-block .d-md-none` |
-| Visible only on md | `.d-none .d-md-block .d-lg-none` |
-| Visible only on lg | `.d-none .d-lg-block .d-xl-none` |
-| Visible only on xl | `.d-none .d-xl-block .d-xxl-none` |
-| Visible only on xxl | `.d-none .d-xxl-block` |
+| 모두 숨기기 | `.d-none` |
+| xs에서만 숨기기 | `.d-none .d-sm-block` |
+| sm에서만 숨기기 | `.d-sm-none .d-md-block` |
+| md에서만 숨기기 | `.d-md-none .d-lg-block` |
+| lg에서만 숨기기 | `.d-lg-none .d-xl-block` |
+| xl에서만 숨기기 | `.d-xl-none` |
+| xxl에서만 숨기기 | `.d-xxl-none .d-xxl-block` |
+| 모두 보이기 | `.d-block` |
+| xs에서만 보이기 | `.d-block .d-sm-none` |
+| sm에서만 보이기 | `.d-none .d-sm-block .d-md-none` |
+| md에서만 보이기 | `.d-none .d-md-block .d-lg-none` |
+| lg에서만 보이기 | `.d-none .d-lg-block .d-xl-none` |
+| xl에서만 보이기 | `.d-none .d-xl-block .d-xxl-none` |
+| xxl에서만 보이기 | `.d-none .d-xxl-block` |
 {{< /bs-table >}}
 
 {{< example >}}
