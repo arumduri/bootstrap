@@ -319,14 +319,14 @@ const carousel = new bootstrap.Carousel('#myCarousel')
 {{< /markdown >}}
 
 {{< bs-table >}}
-| Name | Type | Default | Description |
+| 이름 | 유형 | 기본값 | 설명 |
 | --- | --- | --- | --- |
-| `interval` | number | `5000` | The amount of time to delay between automatically cycling an item. |
-| `keyboard` | boolean | `true` | Whether the carousel should react to keyboard events. |
-| `pause` | string, boolean | `"hover"` | If set to `"hover"`, pauses the cycling of the carousel on `mouseenter` and resumes the cycling of the carousel on `mouseleave`. If set to `false`, hovering over the carousel won't pause it. On touch-enabled devices, when set to `"hover"`, cycling will pause on `touchend` (once the user finished interacting with the carousel) for two intervals, before automatically resuming. This is in addition to the mouse behavior. |
-| `ride` | string, boolean | `false` | If set to `true`, autoplays the carousel after the user manually cycles the first item. If set to `"carousel"`, autoplays the carousel on load. |
-| `touch` | boolean | `true` | Whether the carousel should support left/right swipe interactions on touchscreen devices. |
-| `wrap` | boolean | `true` | Whether the carousel should cycle continuously or have hard stops. |
+| `interval` | number | `5000` | 아이템을 자동으로 순환시킬 때까지의 지연 시간을 지정합니다. |
+| `keyboard` | boolean | `true` | 캐러셀이 키보드 이벤트에 반응해야 하는지 여부. |
+| `pause` | string, boolean | `"hover"` | `"hover"`로 설정하면, `mouseenter`로 캐러셀의 순환이 일시 정지하고 `mouseleave`로 캐러셀의 순환이 재개됩니다. 만약 `false`라면, 캐러셀 위에 커서를 올려도 일시 정지하지 않습니다. 터치 대응 기기에서는 `"hover"`로 설정되어 있는 경우, `touchend` (사용자가 캐러셀과의 상호작용을 마치면)시에 순환은 두번의 간격으로 일시 정지하고 그 후 자동으로 재개됩니다. 이는 위의 마우스 동작에 덧붙여 수행된다는 점에 주의해 주세요. |
+| `ride` | string, boolean | `false` | `true`로 설정되어 있다면 사용자가 수동으로 처음 아이템을 순화시킨 후, 캐러셀을 자동 재생합니다. 만약 `"carousel"`로 설정되어 있는 경우에는 로드시 캐러셀을 자동 재생합니다. |
+| `touch` | boolean | `true` | 캐러셀을 연속적으로 순환시킬지 혹은 강제로 멈추게 할지 여부. |
+| `wrap` | boolean | `true` | 터치 스크린 기기에서 캐러셀이 좌우 스와이프 인터렉션을 지원할지 여부. |
 {{< /bs-table >}}
 
 ### 메소드
@@ -346,17 +346,17 @@ const carousel = new bootstrap.Carousel(myCarouselElement, {
 ```
 
 {{< bs-table >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `cycle` | Cycles through the carousel items from left to right. |
-| `dispose` | Destroys an element's carousel. (Removes stored data on the DOM element) |
+| `cycle` | 캐러셀의 아이템을 왼쪽에서 오른쪽으로 순환시킵니다. |
+| `dispose` | 요소의 캐러셀을 없앱니다. (DOM 요소에 저장되어 있는 데이터를 삭제) |
 | `getInstance` | Static method which allows you to get the carousel instance associated to a DOM element, you can use it like this: `bootstrap.Carousel.getInstance(element)`. |
 | `getOrCreateInstance` | Static method which returns a carousel instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `bootstrap.Carousel.getOrCreateInstance(element)`. |
-| `next` | Cycles to the next item. **Returns to the caller before the next item has been shown** (e.g., before the `slid.bs.carousel` event occurs). |
-| `nextWhenVisible` | Don't cycle carousel to next when the page isn't visible or the carousel or its parent isn't visible. **Returns to the caller before the target item has been shown**. |
-| `pause` | Stops the carousel from cycling through items. |
-| `prev` | Cycles to the previous item. **Returns to the caller before the previous item has been shown** (e.g., before the `slid.bs.carousel` event occurs). |
-| `to` | Cycles the carousel to a particular frame (0 based, similar to an array). **Returns to the caller before the target item has been shown** (e.g., before the `slid.bs.carousel` event occurs). |
+| `next` | 다음 아이템으로 순환합니다. **다음 아이템이 표시되기 전** (예를 들어, `slid.bs.carousel` 이벤트가 발생하기 전)에 호출된 곳으로 돌아갑니다. |
+| `nextWhenVisible` | 페이지가 표시되어 있지 않은 경우나 캐러셀이나 그 부모가 표시되어 있지 않는 경우는 캐러셀을 다음 페이지로 순환시키지 않도록 합니다. **대상이 되는 아이템이 표시되기 전에 호출된 곳으로 돌아갑니다**. |
+| `pause` | 캐러셀의 아이템 순환을 중지시킵니다. |
+| `prev` | 이전 아이템으로 순환합니다. **이전 아이템이 표시되기 전** (예를 들어, `slid.bs.carousel` 이벤트가 발생하기 전)에 호출된 곳으로 돌아갑니다. |
+| `to` | 캐러셀을 특정 프레임에 순환시킵니다 (0 베이스, 배열과 비슷합니다). **대상 아이템이 나타나기 전** (예를 들어, `slid.bs.carousel` 이벤트 발생 이전)에 호출된 곳으로 돌아갑니다. |
 {{< /bs-table >}}
 
 ### 이벤트
@@ -371,10 +371,10 @@ Bootstrap의 캐러셀 클래스는 캐러셀 기능에 연결하기 위한 두 
 모든 캐러셀 이벤트는 캐러셀 자체 (즉, `<div class="carousel">`)에서 발생합니다.
 
 {{< bs-table >}}
-| Event type | Description |
+| 이벤트 유형 | 설명 |
 | --- | --- |
-| `slid.bs.carousel` | Fired when the carousel has completed its slide transition. |
-| `slide.bs.carousel` | Fires immediately when the `slide` instance method is invoked. |
+| `slid.bs.carousel` | 캐러셀의 슬라이드 트렌지션이 완료했을 때 발생합니다. |
+| `slide.bs.carousel` | `slide` 인스턴스 메소드가 호출되었을 때 바로 발생합니다. |
 {{< /bs-table >}}
 
 ```js

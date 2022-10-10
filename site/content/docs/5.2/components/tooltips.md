@@ -218,7 +218,7 @@ const tooltip = new bootstrap.Tooltip('#example', {
 | `popperConfig` | null, object, function | `null` | To change Bootstrap's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the Bootstrap's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper. |
 | `sanitize` | boolean | `true` | Enable or disable the sanitization. If activated `'template'`, `'content'` and `'title'` options will be sanitized. |
 | `sanitizeFn` | null, function | `null` | Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization. |
-| `selector` | string, false | `false` | If a selector is provided, tooltip objects will be delegated to the specified targets. In practice, this is used to also apply tooltips to dynamically added DOM elements (`jQuery.on` support). See [this issue]({{< param repo >}}/issues/4215) and [an informative example](https://codepen.io/Johann-S/pen/djJYPb). |
+| `selector` | string, false | `false` | If a selector is provided, tooltip objects will be delegated to the specified targets. In practice, this is used to also apply tooltips to dynamically added DOM elements (`jQuery.on` support). See [this issue]({{< param repo >}}/issues/4215) and [an informative example](https://codepen.io/Johann-S/pen/djJYPb). **Note**: `title` attribute must not be used as a selector. |
 | `template` | string | `'<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'` | Base HTML to use when creating the tooltip. The tooltip's `title` will be injected into the `.tooltip-inner`. `.tooltip-arrow` will become the tooltip's arrow. The outermost wrapper element should have the `.tooltip` class and `role="tooltip"`. |
 | `title` | string, element, function | `''` | Default title value if `title` attribute isn't present. If a function is given, it will be called with its `this` reference set to the element that the popover is attached to. |
 | `trigger` | string | `'hover focus'` | How tooltip is triggered: click, hover, focus, manual. You may pass multiple triggers; separate them with a space. `'manual'` indicates that the tooltip will be triggered programmatically via the `.tooltip('show')`, `.tooltip('hide')` and `.tooltip('toggle')` methods; this value cannot be combined with any other trigger. `'hover'` on its own will result in tooltips that cannot be triggered via the keyboard, and should only be used if alternative methods for conveying the same information for keyboard users is present. |
@@ -249,19 +249,19 @@ const tooltip = new bootstrap.Tooltip(element, {
 {{< /callout >}}
 
 {{< bs-table "table" >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `disable` | Removes the ability for an element's tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled. |
-| `dispose` | Hides and destroys an element's tooltip (Removes stored data on the DOM element). Tooltips that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements. |
-| `enable` | Gives an element's tooltip the ability to be shown. **Tooltips are enabled by default.** |
-| `getInstance` | *Static* method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `disable` | 요소의 툴팁을 표시하는 기능을 삭제합니다. 툴팁은 재활성화 된 경우에만 표시합니다. |
+| `dispose` | 요소의 툴팁을 숨기고 없앱니다 (DOM 요소에 보존되어 있는 데이터를 삭제). 위임을 사용하는 툴팁([`selector` 옵션](#옵션)을 사용하여 작성된 것)은 후손의 트리거 요소상에서 개별적으로 없앨수 없습니다. |
+| `enable` | 요소의 툴팁을 표시하는 기능을 부여합니다. **툴팁은 기본적으로 활성화되어 있습니다.** |
+| `getInstance` | DOM 요소와 연관된 툴팁의 인스턴스를 취득하는 Static 메소드입니다. |
 | `getOrCreateInstance` | *Static* method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized. |
-| `hide` | Hides an element's tooltip. **Returns to the caller before the tooltip has actually been hidden** (i.e. before the `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. |
+| `hide` | 요소의 툴팁을 숨깁니다. **툴팁이 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 “수동” 트리거로 간주됩니다. |
 | `setContent` | Gives a way to change the tooltip's content after its initialization. |
-| `show` | Reveals an element's tooltip. **Returns to the caller before the tooltip has actually been shown** (i.e. before the `shown.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. Tooltips with zero-length titles are never displayed. |
-| `toggle` | Toggles an element's tooltip. **Returns to the caller before the tooltip has actually been shown or hidden** (i.e. before the `shown.bs.tooltip` or `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. |
-| `toggleEnabled` | Toggles the ability for an element's tooltip to be shown or hidden. |
-| `update` | Updates the position of an element's tooltip. |
+| `show` | 요소의 툴팁을 표시합니다. **툴팁이 실제로 나타나기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 “수동” 트리거로 간주합니다. 길이가 0 을 가진 타이틀은 절대 표시되지 않습니다. |
+| `toggle` | 요소의 툴팁을 토글합니다. **툴팁이 실제로 표시되거나 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.tooltip` 혹은 `hidden.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 “수동” 트리거로 간주됩니다. |
+| `toggleEnabled` | 요소의 툴팁 표시 및 숨김을 변경합니다. |
+| `update` | 요소의 툴팁 위치를 갱신합니다. |
 {{< /bs-table >}}
 
 ```js
@@ -279,13 +279,13 @@ The `setContent` method accepts an `object` argument, where each property-key is
 ### 이벤트
 
 {{< bs-table >}}
-| Event | Description |
+| 이벤트 | 설명 |
 | --- | --- |
-| `hide.bs.tooltip` | This event is fired immediately when the `hide` instance method has been called. |
-| `hidden.bs.tooltip` | This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete). |
-| `inserted.bs.tooltip` | This event is fired after the `show.bs.tooltip` event when the tooltip template has been added to the DOM. |
-| `show.bs.tooltip` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.tooltip` | This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete). |
+| `hide.bs.tooltip` | 이 이벤트는 `hide` 인스턴스 메소드가 호출되었을 때 바로 발생합니다. |
+| `hidden.bs.tooltip` | 이 이벤트는 툴팁이 사용자로부터 숨김 상태가 되었을 때 발생합니다 (CSS 트렌지션이 완료되기를 기다립니다). |
+| `inserted.bs.tooltip` | 이 이벤트는 `show.bs.tooltip` 이벤트 후 툴팁 템플릿이 DOM에 추가되었을 때 발생합니다. |
+| `show.bs.tooltip` | 이 이벤트는 `show` 인스턴스 메소드가 호출되었을 때 바로 발생합니다. |
+| `shown.bs.tooltip` | 이 이벤트는 툴팁이 사용자에게 보일 때 발생합니다 (CSS 트렌지션이 완료되기를 기다립니다). |
 {{< /bs-table >}}
 
 ```js

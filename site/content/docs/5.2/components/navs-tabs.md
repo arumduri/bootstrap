@@ -636,12 +636,12 @@ const bsTab = new bootstrap.Tab('#myTab')
 ```
 
 {{< bs-table >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `dispose` | Destroys an element's tab. |
-| `getInstance` | Static method which allows you to get the tab instance associated with a DOM element, you can use it like this: `bootstrap.Tab.getInstance(element)`. |
+| `dispose` | 탭 요소를 없앱니다. |
+| `getInstance` | DOM 요소에 연관된 탭의 인스턴스를 가져오는 Static 메소드입니다. `bootstrap.Tab.getInstance(element)`처럼 사용할 수 있습니다. |
 | `getOrCreateInstance` | Static method which returns a tab instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `bootstrap.Tab.getOrCreateInstance(element)`. |
-| `show` | Selects the given tab and shows its associated pane. Any other tab that was previously selected becomes unselected and its associated pane is hidden. **Returns to the caller before the tab pane has actually been shown** (i.e. before the `shown.bs.tab` event occurs). |
+| `show` | 지정된 탭을 선택해 관련 창을 표시합니다. 이전에 선택되어 있던 다른 탭은 선택되지 않은 상태가 되고 관련된 창도 비표시 됩니다. **탭 창이 실제로 표시되기 전에 호출된 곳으로 돌아옵니다** (`shown.bs.tab` 이벤트가 발생하기 전). |
 {{< /bs-table >}}
 
 ### 이벤트
@@ -656,12 +656,12 @@ const bsTab = new bootstrap.Tab('#myTab')
 이미 활성화된 탭이 없는 경우, `hide.bs.tab` 및 `hidden.bs.tab` 이벤트는 발생하지 않습니다.
 
 {{< bs-table >}}
-| Event type | Description |
+| 이벤트 유형 | 설명 |
 | --- | --- |
-| `hide.bs.tab` | This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use `event.target` and `event.relatedTarget` to target the current active tab and the new soon-to-be-active tab, respectively. |
-| `hidden.bs.tab` | This event fires after a new tab is shown (and thus the previous active tab is hidden). Use `event.target` and `event.relatedTarget` to target the previous active tab and the new active tab, respectively. |
-| `show.bs.tab` | This event fires on tab show, but before the new tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
-| `shown.bs.tab` | This event fires on tab show after a tab has been shown. Use `event.target` and `event.relatedTarget` to target the active tab and the previous active tab (if available) respectively. |
+| `hide.bs.tab` | 이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. `event.target` 과 `event.relatedTarget` 을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타깃으로 합니다. |
+| `hidden.bs.tab` | 이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) `event.target` 과 `event.relatedTarget` 을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타깃으로 합니다. |
+| `show.bs.tab` | 이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. `event.target` 과 `event.relatedTarget` 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다. |
+| `shown.bs.tab` | 	이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. `event.target` 과 `event.relatedTarget` 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다. |
 {{< /bs-table >}}
 
 ```js

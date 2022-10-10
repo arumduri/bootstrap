@@ -301,7 +301,7 @@ const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new bootstrap
 {{< /markdown >}}
 
 {{< bs-table "table" >}}
-| Name | Type | Default | Description |
+| 이름 | 유형 | 기본값 | 설명 |
 | --- | --- | --- | --- |
 | `backdrop` | boolean 또는 string `static` | `true` | 오프캔버스가 열려 있는 동안, body에 배경을 적용합니다. Alternatively, specify `static` for a backdrop which doesn't close the offcanvas when clicked. |
 | `keyboard` | boolean | `true` | escape키가 눌려지면 오프캔버스를 닫습니다. |

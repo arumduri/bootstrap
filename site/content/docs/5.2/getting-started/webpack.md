@@ -6,7 +6,9 @@ group: getting-started
 toc: true
 thumbnail: guides/bootstrap-webpack@2x.png
 ---
-
+{{< callout info >}}
+{{< partial "callout-untranslated.md" >}}
+{{< /callout >}}
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png" width="2000" height="1000" alt="">
 
 {{< callout >}}
@@ -75,7 +77,7 @@ At this point, everything is in the right place, but Webpack won't work because 
 
 With dependencies installed and our project folder ready for us to start coding, we can now configure Webpack and run our project locally.
 
-1. **Open `webpack.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Webpack were to look for our project's JavaScript, where to output the compiled code to (`dist`), and how the development server should behave (pulling from the `dist` folder with hot reload).
+1. **Open `webpack.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Webpack where to look for our project's JavaScript, where to output the compiled code to (`dist`), and how the development server should behave (pulling from the `dist` folder with hot reload).
 
    ```js
    const path = require('path')

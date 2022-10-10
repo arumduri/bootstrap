@@ -145,10 +145,10 @@ const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Co
 {{< /markdown >}}
 
 {{< bs-table "table" >}}
-| Name | Type | Default | Description |
+| 이름 | 유형 | 기본값 | 설명 |
 | --- | --- | --- | --- |
-`parent` | selector, DOM element | `null` | If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the `card` class). The attribute has to be set on the target collapsible area. |
-`toggle` | boolean | `true` | Toggles the collapsible element on invocation. |
+`parent` | selector, DOM element | `null` | parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될 때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다 (기존 아코디언 동작과 비슷하며 `card` 클래스에 의존합니다). 속성은 접을 수 있는 타깃 영역으로 설정해야 합니다. |
+`toggle` | boolean | `true` | 호출 시에 접을 수 있는 요소를 토글합니다. |
 {{< /bs-table >}}
 
 ### 메소드
@@ -168,14 +168,14 @@ const bsCollapse = new bootstrap.Collapse('#myCollapse', {
 ```
 
 {{< bs-table >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `dispose` | Destroys an element's collapse. (Removes stored data on the DOM element) |
+| `dispose` | 요소의 콜랩스를 처리합니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다) |
 | `getInstance` | Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: `bootstrap.Collapse.getInstance(element)`. |
 | `getOrCreateInstance` | Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `bootstrap.Collapse.getOrCreateInstance(element)`. |
-| `hide` | Hides a collapsible element. **Returns to the caller before the collapsible element has actually been hidden** (e.g., before the `hidden.bs.collapse` event occurs). |
-| `show` | Shows a collapsible element. **Returns to the caller before the collapsible element has actually been shown** (e.g., before the `shown.bs.collapse` event occurs). |
-| `toggle` | Toggles a collapsible element to shown or hidden. **Returns to the caller before the collapsible element has actually been shown or hidden** (i.e. before the `shown.bs.collapse` or `hidden.bs.collapse` event occurs). |
+| `hide` | 접을 수 있는 요소를 숨깁니다. **접을 수 있는 요소가 실제로 숨겨지기 전에 호출하여 원래 위치로 돌아갑니다** (예를 들어, hidden.bs.collapse 이벤트가 발생하기 전으로). |
+| `show` | 접을 수 있는 요소를 표시합니다. **접을 수 있는 요소가 나타나기 전에 호출하여 원래대로 돌아갑니다** (예를 들어, shown.bs.collapse 이벤트가 발생하기 전으로). |
+| `toggle` | 접을 수 있는 요소의 표시/숨김을 바꿉니다. **접을 수 있는 요소가 실제로 표시 혹은 숨겨지기 전에 호출되어 원래대로 돌아갑니다** (즉, `shown.bs.collapse` 혹은 `hidden.bs.collapse` 이벤트가 발생하기 전). |
 {{< /bs-table >}}
 
 ### 이벤트
@@ -183,12 +183,12 @@ const bsCollapse = new bootstrap.Collapse('#myCollapse', {
 Bootstrap의 콜랩스 클래스는, 콜랩스 기능을 후킹하기 위한 몇 가지 이벤트를 공개하고 있습니다.
 
 {{< bs-table >}}
-| Event type | Description |
+| 이벤트 유형 | 설명 |
 | --- | --- |
-| `hide.bs.collapse` | This event is fired immediately when the `hide` method has been called. |
-| `hidden.bs.collapse` | This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete). |
-| `show.bs.collapse` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.collapse` | This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete). |
+| `hide.bs.collapse` | 이 이벤트는 `hide` 메소드가 호출될 때 바로 발생합니다. |
+| `hidden.bs.collapse` | 이 이벤트는 collapse 요소가 사용자에게 숨겨졌을 때 발생합니다 (CSS 트랜지션이 완료될 때까지 기다립니다). |
+| `show.bs.collapse` | 이 이벤트는 `show` 인스턴스 메소드가 호출될 때 바로 발생합니다. |
+| `shown.bs.collapse` | 이 이벤트는 collapse 요소가 사용자에게 보여질 때 발생합니다 (CSS 트랜지션이 완료되는 것을 기다립니다). |
 {{< /bs-table >}}
 
 ```js

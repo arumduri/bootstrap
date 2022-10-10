@@ -1096,15 +1096,15 @@ const dropdown = new bootstrap.Dropdown(element, {
 ### 메소드
 
 {{< bs-table >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `dispose` | Destroys an element's dropdown. (Removes stored data on the DOM element) |
+| `dispose` | 요소의 드롭다운을 없앱니다. (DOM 요소에 지정되어 있는 데이터를 삭제합니다) |
 | `getInstance` | Static method which allows you to get the dropdown instance associated to a DOM element, you can use it like this: `bootstrap.Dropdown.getInstance(element)`. |
 | `getOrCreateInstance` | Static method which returns a dropdown instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `bootstrap.Dropdown.getOrCreateInstance(element)`. |
-| `hide` | Hides the dropdown menu of a given navbar or tabbed navigation. |
-| `show` | Shows the dropdown menu of a given navbar or tabbed navigation. |
-| `toggle` | Toggles the dropdown menu of a given navbar or tabbed navigation. |
-| `update` | Updates the position of an element's dropdown. |
+| `hide` | 지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 숨깁니다. |
+| `show` | 지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 표시합니다. |
+| `toggle` | 지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 바꿉니다. |
+| `update` | 요소의 드롭다운 위치를 업데이트합니다. |
 {{< /bs-table >}}
 
 ### 이벤트
@@ -1112,12 +1112,12 @@ const dropdown = new bootstrap.Dropdown(element, {
 모든 드롭다운 이벤트는 토글링 요소로 시작해 이후 버블 업 됩니다. 그 때문에 `.dropdown-menu`의 부모 요소에 이벤트 리스너를 추가할 수도 있습니다. `hide.bs.dropdown`과 `hidden.bs.dropdown` 이벤트는, 클릭 이벤트의 이벤트 객체를 포함한 `clickEvent` 속성(원래의 이벤트 타입이 `click` 경우만)을 가집니다.
 
 {{< bs-table >}}
-| Event type | Description |
+| 이벤트 유형 | 설명 |
 | --- | --- |
-| `hide.bs.dropdown` | Fires immediately when the `hide` instance method has been called. |
-| `hidden.bs.dropdown` | Fired when the dropdown has finished being hidden from the user and CSS transitions have completed. |
-| `show.bs.dropdown` | Fires immediately when the `show` instance method is called. |
-| `shown.bs.dropdown` | Fired when the dropdown has been made visible to the user and CSS transitions have completed. |
+| `hide.bs.dropdown` | 이 이벤트는 `hide` 인스턴스 메소드가 호출되자마자 발생합니다. |
+| `hidden.bs.dropdown` | 이 이벤트는 드롭다운 메뉴가 비표시되어 CSS 트랜지션이 완료되었을 때 발생합니다. |
+| `show.bs.dropdown` | 이 이벤트는 `show` 인스턴스 메소드가 호출되지마자 발생합니다. |
+| `shown.bs.dropdown` | 이 이벤트는 드롭다운 메뉴가 표시되어 CSS 트랜지션이 완료되었을 때 발생합니다. |
 {{< /bs-table >}}
 
 ```js
