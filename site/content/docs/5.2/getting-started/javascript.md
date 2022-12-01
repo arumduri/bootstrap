@@ -19,7 +19,7 @@ Bootstrap의 CSS는 모든 프레임워크와 함께 사용할 수 있지만 **B
 이러한 종류의 프레임워크를 사용하는 사람들을 위한 더 나은 대안은 **Bootstrap JavaScript 대신** 별도의 프레임워크 패키지를 사용하는 것입니다. 일반적으로 다음과 같은 선택옵션이 있습니다:
 
 - React: [React Bootstrap](https://react-bootstrap.github.io/)
-- Vue: [BootstrapVue](https://bootstrap-vue.org/) (현재 Vue 2 와 Boostrap 4만 지원)
+- Vue: [BootstrapVue](https://bootstrap-vue.org/) (현재 Vue 2 와 Bootstrap 4만 지원)
 - Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
 
 ## Bootstrap을 모듈로 사용하기
