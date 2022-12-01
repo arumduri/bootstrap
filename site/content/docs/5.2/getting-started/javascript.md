@@ -12,14 +12,14 @@ toc: true
 
 번들러 (webpack, Parcel, Vite...)를 사용한다면 UMD를 위해서 준비된 `/js/dist/*.js`을 사용할 수도 있습니다.
 
-## Usage with JavaScript frameworks
+## JavaScript 프레임워크에서 사용
 
-While the Bootstrap CSS can be used with any framework, **the Bootstrap JavaScript is not fully compatible with JavaScript frameworks like React, Vue, and Angular** which assume full knowledge of the DOM. Both Bootstrap and the framework may attempt to mutate the same DOM element, resulting in bugs like dropdowns that are stuck in the "open" position.
+Bootstrap의 CSS는 모든 프레임워크와 함께 사용할 수 있지만 **Bootstrap의 JavaScript는 React, Vue 및 Angular와 같은** DOM에 대한 전반적인 이해를 기반으로 하는 **JavaScript 프레임워크**와는 완전히 호환되지 않습니다. 부트스트랩과 프레임워크 둘다 동일한 DOM 요소를 변경하려고 시도할 수 있으므로 드롭다운이 "열린" 상태에서 고정되어 버리는 버그등이 발생할 수 있습니다.
 
-A better alternative for those using this type of frameworks is to use a framework-specific package **instead of** the Bootstrap JavaScript. Here are some of the most popular options:
+이러한 종류의 프레임워크를 사용하는 사람들을 위한 더 나은 대안은 **Bootstrap JavaScript 대신** 별도의 프레임워크 패키지를 사용하는 것입니다. 일반적으로 다음과 같은 선택옵션이 있습니다:
 
 - React: [React Bootstrap](https://react-bootstrap.github.io/)
-- Vue: [BootstrapVue](https://bootstrap-vue.org/) (currently only supports Vue 2 and Bootstrap 4)
+- Vue: [BootstrapVue](https://bootstrap-vue.org/) (현재 Vue 2 와 Boostrap 4만 지원)
 - Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
 
 ## Bootstrap을 모듈로 사용하기
