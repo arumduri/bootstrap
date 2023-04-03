@@ -12,8 +12,10 @@
   }
 
   const siteDocsVersion = searchElement.getAttribute('data-bd-docs-version')
+  
+  const koPlaceholder = '문서 검색하기'
 
-  const translations = {
+  const koTranslations = {
     button: {
       buttonText: '검색',
       buttonAriaLabel: '검색',
@@ -61,7 +63,8 @@
     indexName: 'bootstrap-kr',
     appId: '40ZRL3P9Q5',
     container: searchElement,
-    translations,
+    placeholder: koPlaceholder,
+    translations: koTranslations,
     searchParameters: {
       facetFilters: [`version:${siteDocsVersion}`]
     },
