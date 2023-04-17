@@ -67,7 +67,7 @@ my-project/
 
 ## Parcel 설정하기
 
-Dependencies에 설치되고 코딩을 시작할 수 있는 프로젝트 폴더가 준비되었으므로 이제 Parcel을 설정하고 로컬에서 프로젝트를 실행할 수 있습니다. Parcel 자체는 설계상 설정 파일이 필요하지 않지만 서버를 시작하려면 npm 스크립트와 HTML 파일이 필요합니다.
+종속성이 설치되고 코딩을 시작할 수 있는 프로젝트 폴더가 준비되었으므로 이제 Parcel을 설정하고 로컬에서 프로젝트를 실행할 수 있습니다. Parcel 자체는 설계상 설정 파일이 필요하지 않지만 서버를 시작하려면 npm 스크립트와 HTML 파일이 필요합니다.
 
 1. **`src/index.html` 파일을 작성합니다.** Parcel은 렌더링할 페이지가 필요하므로 `index.html` 페이지를 사용하여 CSS 및 JavaScript 파일을 포함한 몇 가지 기본 HTML을 설정합니다.
 
@@ -90,7 +90,7 @@ Dependencies에 설치되고 코딩을 시작할 수 있는 프로젝트 폴더�
    </html>
    ```
 
-   여기에는 `div class="container"`와 `<button>`으로 부트스트랩의 스타일링을 조금 사용하여 부트스트랩의 CSS가 웹팩에 로드될 때 표시되도록 했습니다.
+   여기에는 `div class="container"`와 `<button>`으로 약간의 부트스트랩의 스타일링을 사용하여 부트스트랩의 CSS가 웹팩에 로드될 때 표시되도록 했습니다.
 
    Parcel은 자동으로 Sass를 사용하고 있음을 감지하고 이를 지원하기 위해 [Sass Parcel 플러그인](https://parceljs.org/languages/sass/)을 설치합니다. 그러나 필요하다면 수동으로 `npm i --save-dev @parcel/transformer-sass`를 실행할 수도 있습니다.
 
@@ -117,7 +117,7 @@ Dependencies에 설치되고 코딩을 시작할 수 있는 프로젝트 폴더�
 
 이 가이드의 마지막인 다음 섹션에서는 부트스트랩의 모든 CSS와 JavaScript를 가져오겠습니다.
 
-## 부트스트랩 가져오기
+## 부트스트랩 불러오기
 
 부트스트랩을 Parcel로 가져오려면 두 개의 임포트가 필요한데, 하나는 `styles.scss`, 다른 하나는 `main.js`를 임포트해야 합니다.
 
