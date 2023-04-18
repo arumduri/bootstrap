@@ -12,7 +12,7 @@ thumbnail: guides/bootstrap-parcel@2x.png
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png" width="2000" height="1000" alt="">
 
 {{< callout >}}
-**끝으로 건너뛰고 싶으신가요?** 이 가이드의 소스 코드와 동작 확인을 위한 데모는 [twbs/examples repository](https://github.com/twbs/examples/tree/main/parcel)에서 다운로드 하세요. [StackBlitz 예제 보기](https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html)에서도 가능하지만 현재 Parcel은 지원되지 않아 실행 할 수 없습니다.
+**끝으로 건너뛰고 싶으신가요?** 이 가이드의 소스 코드와 동작 확인을 위한 데모는 [twbs/examples repository](https://github.com/twbs/examples/tree/main/parcel)에서 다운로드 하세요. [StackBlitz 예제 보기](https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html)에서도 가능하지만 현재 Parcel은 지원되지 않아 실행할 수 없습니다.
 {{< /callout >}}
 
 ## 설정하기
