@@ -225,7 +225,7 @@ This makes an alert listen for click events on descendant elements which have th
 | `close` | DOM에서 제거되고 경고창을 닫습니다. `.fade` 와 `.show` 클래스가 요소에 있으면, 경고창은 제거 되기전에 사라집니다. |
 | `dispose` | 경고창을 없앱니다. (DOM 요소에 저장되어 있는 데이터를 삭제) |
 | `getInstance` | DOM 요소와 관련된 경고창의 인스턴스를 가져오는 Static 메소드입니다. 사용법: `bootstrap.Alert.getInstance(alert)` |
-| `getOrCreateInstance` | DOM 요소와 연결된 경고 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 만드는 정적 메서드입니다. 사용법: `bootstrap.Alert.getOrCreateInstance(element)` |
+| `getOrCreateInstance` | DOM 요소와 연결된 경고 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 만드는 정적 메소드입니다. 사용법: `bootstrap.Alert.getOrCreateInstance(element)` |
 {{< /bs-table >}}
 
 기본적인 사용 예시:

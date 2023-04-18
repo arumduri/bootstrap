@@ -39,7 +39,7 @@ Bootstrap의 CSS는 모든 프레임워크와 함께 사용할 수 있지만 **B
 </script>
 ```
 
-JS 번들러와 비교하여 브라우저에서 ESM을 사용하려면 모듈 이름 대신 전체 경로와 파일 이름을 사용해야 합니다. [브라우저의 JS 모듈에 대해 자세히 알아보기](https://v8.dev/features/modules#specifiers) 그렇기 때문의 위에서 처럼 `'bootstrap'` 대신에 `'bootstrap.esm.min.js'` 를 사용합니다. 그러나 이것은 Popper의 종속성으로 인해 더욱 복잡해져 다음과 같이 Popper를 JavaScript로 인포트하고 있습니다:
+JS 번들러와 비교하여 브라우저에서 ESM을 사용하려면 모듈 이름 대신 전체 경로와 파일 이름을 사용해야 합니다. [브라우저의 JS 모듈에 대해 자세히 알아보기](https://v8.dev/features/modules#specifiers) 그렇기 때문의 위처럼 `'bootstrap'` 대신에 `'bootstrap.esm.min.js'` 를 사용합니다. 그러나 이것은 Popper의 종속성으로 인해 더욱 복잡해져 있기에 아래와 같이 Popper를 JavaScript로 인포트하고 있습니다:
 
 <!-- eslint-skip -->
 ```js
@@ -52,7 +52,7 @@ import * as Popper from "@popperjs/core"
 Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relative references must start with either "/", "./", or "../".
 ```
 
-이 문제를 해결하려면 `importmap`을 사용하여 임의의 모듈 이름을 완전한 경로로 확인할 수 있습니다. [대상 브라우저](https://caniuse.com/?search=importmap)에서 `importmap`을 지원하지 않는 경우 [es-module-shims](https://github.com/guybedford/es-module-shims) 프로젝트를 사용해야 합니다. Bootstrap과 Popper에서의 작동하는 방식은 다음과 같습니다:
+이 문제를 해결하기 위해서는 `importmap`을 사용해 임의의 모듈 이름을 완전한 경로로 확인할 수 있습니다. [대상 브라우저](https://caniuse.com/?search=importmap)에서 `importmap`을 지원하지 않는 경우 [es-module-shims](https://github.com/guybedford/es-module-shims) 프로젝트를 사용해야 합니다. Bootstrap과 Popper에서의 작동하는 방식은 다음과 같습니다:
 
 ```html
 <!doctype html>
@@ -101,7 +101,7 @@ Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relativ
 
 ## 선택자
 
-성능상의 이유로 쿼리 DOM 요소에 네이티브 메서드인 `querySelector` 및 `querySelectorAll`를 사용하기 때문에 [유효한 선택자](https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier)를 반드시 사용해야 합니다. `collapse:Example`와 같은 특수 선택자를 사용하는 경우 이스케이프를 해주셔야 합니다.
+성능상의 이유로 쿼리 DOM 요소에 네이티브 메소드인 `querySelector` 및 `querySelectorAll`를 사용하기 때문에 [유효한 선택자](https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier)를 반드시 사용해야 합니다. `collapse:Example`와 같은 특수 선택자를 사용하는 경우 이스케이프를 해주셔야 합니다.
 
 ## 이벤트
 
@@ -132,13 +132,13 @@ const configObject = { keyboard: false }
 const modal1 = new bootstrap.Modal(myModalEl, configObject) // initialized with no keyboard
 ```
 
-특정 플러그인 인스턴스를 가져오려면 각 플러그인이 `getInstance` 메서드를 노출합니다. 인스턴스에서 직접 가져오려면 다음과 같이 해주어야 합니다:
+특정 플러그인 인스턴스를 가져오려면 각 플러그인이 `getInstance` 메소드를 노출합니다. 인스턴스에서 직접 가져오려면 다음과 같이 해주어야 합니다:
 
 ```js
 bootstrap.Popover.getInstance(myPopoverEl)
 ```
 
-요청된 요소에 대해 인스턴스가 시작되지 않으면 이 메서드는 `null`을 반환합니다.
+요청된 요소에 대해 인스턴스가 시작되지 않으면 이 메소드는 `null`을 반환합니다.
 
 또는 `getOrCreateInstance`를 사용하여 DOM 요소와 연결된 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다.
 
@@ -150,7 +150,7 @@ bootstrap.Popover.getOrCreateInstance(myPopoverEl, configObject)
 
 ### 생성자에서의 CSS 선택자
 
-모든 플러그인 생성자 메서드는 `getInstance` 및 `getOrCreateInstance` 메서드 외에도 첫 번째 인수로 DOM 요소 또는 유효한 [CSS 선택자](#selectors)를 받을 수 있습니다. 플러그인은 단일 요소만 지원하므로 `querySelector` 메서드로 플러그인 요소를 찾을 수 있습니다.
+모든 플러그인 생성자 메소드는 `getInstance` 및 `getOrCreateInstance` 메소드 외에도 첫 번째 인수로 DOM 요소 또는 유효한 [CSS 선택자](#selectors)를 받을 수 있습니다. 플러그인은 단일 요소만 지원하므로 `querySelector` 메소드로 플러그인 요소를 찾을 수 있습니다.
 
 ```js
 const modal = new bootstrap.Modal('#myModal')
@@ -161,7 +161,7 @@ const alert = bootstrap.Alert.getOrCreateInstance('#myAlert')
 
 ### 비동기 기능 및 트랜지션
 
-모든 프로그래밍 가능한 API 메서드는 **비동기적**이며 트랜지션이 시작되고 **종료되기 전에** 호출자에게 반환됩니다. 트랜지션이 완료된 후 작업을 실행하기 위해 해당 이베트를 수신할 수 있습니다.
+모든 프로그래밍 가능한 API 메소드는 **비동기적**이며 트랜지션이 시작되고 **종료되기 전에** 호출자에게 반환됩니다. 트랜지션이 완료된 후 작업을 실행하기 위해 해당 이베트를 수신할 수 있습니다.
 
 ```js
 const myCollapseEl = document.querySelector('#myCollapse')
@@ -171,7 +171,7 @@ myCollapseEl.addEventListener('shown.bs.collapse', event => {
 })
 ```
 
-또한 **트랜지션 컴포넌트**에 대한 메서드 호출은 **무시됩니다**.
+또한 **트랜지션 컴포넌트**에 대한 메소드 호출은 **무시됩니다**.
 
 ```js
 const myCarouselEl = document.querySelector('#myCarousel')
@@ -185,9 +185,9 @@ carousel.to('1') // Will start sliding to the slide 1 and returns to the caller
 carousel.to('2') // !! Will be ignored, as the transition to the slide 1 is not finished !!
 ```
 
-#### `dispose` 메서드
+#### `dispose` 메소드
 
-`hide()`바로 뒤에 `dispose` 메서드를 사용하는 것이 옳은 것처럼 보일 수 있지만 잘못된 결과를 초래할 수 있습니다. 다음은 문제가 되는 사용 예시입니다:
+`hide()`바로 뒤에 `dispose` 메소드를 사용하는 것이 옳은 것처럼 보일 수 있지만 잘못된 결과를 초래할 수 있습니다. 다음은 문제가 되는 사용 예시입니다:
 
 ```js
 const myModal = document.querySelector('#myModal')
@@ -207,16 +207,16 @@ myModal.addEventListener('shown.bs.hidden', event => {
 bootstrap.Modal.Default.keyboard = false
 ```
 
-## 메서드와 속성
+## 메소드와 속성
 
-모든 부트스트랩 플러그인은 다음과 같은 메서드와 정적 속성을 공개합니다.
+모든 부트스트랩 플러그인은 다음과 같은 메소드와 정적 속성을 공개합니다.
 
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
 | `dispose` | 요소의 모달을 파괴합니다. (DOM 요소에 저장된 데이터를 제거합니다.) |
-| `getInstance` | *정적* 메서드를 사용하여 DOM 요소와 연관된 모달 인스턴스를 가져올 수 있습니다. |
-| `getOrCreateInstance` | *정적* 메서드를 사용하여 DOM 요소와 연결된 모달 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. |
+| `getInstance` | *정적* 메소드를 사용하여 DOM 요소와 연관된 모달 인스턴스를 가져올 수 있습니다. |
+| `getOrCreateInstance` | *정적* 메소드를 사용하여 DOM 요소와 연결된 모달 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. |
 {{< /bs-table >}}
 
 {{< bs-table "table" >}}
@@ -322,7 +322,7 @@ $.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap funct
 
 ### jQuery 이벤트
 
-부트스트랩은 `jQuery`가 `window` 객체에 존재하고 `<body>`에 `data-bs-no-jquery` 속성이 설정되어 있지 않은 경우 jQuery를 감지합니다. jQuery가 발견되면 부트스트랩은 jQuery의 이벤트 시스템 덕분에 이벤트를 발생시킵니다. 따라서 부트스트랩의 이벤트를 수신하려면 `addEventListener` 대신 jQuery 메서드(`.on`, `.one`) 를 사용해야 합니다.
+부트스트랩은 `jQuery`가 `window` 객체에 존재하고 `<body>`에 `data-bs-no-jquery` 속성이 설정되어 있지 않은 경우 jQuery를 감지합니다. jQuery가 발견되면 부트스트랩은 jQuery의 이벤트 시스템 덕분에 이벤트를 발생시킵니다. 따라서 부트스트랩의 이벤트를 수신하려면 `addEventListener` 대신 jQuery 메소드(`.on`, `.one`) 를 사용해야 합니다.
 
 ```js
 $('#myTab a').on('shown.bs.tab', () => {
