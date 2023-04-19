@@ -18,27 +18,36 @@ Reboot는 Normalize를 기반으로 빌드되어 요소 선택자만 사용하�
 - 더 쉬운 기기 간 크기 확장을 위해서 블럭 요소의 `margin`에 `rem`을 사용합니다.
 - 가능하면 `inherit`를 사용하여 `font` 관련 속성의 선언을 최소한으로 유지합니다.
 
-## 페이지 기본값
+## CSS 변수
 
 {{< added-in "5.2.0" >}}
 
-With v5.1.1, we standardized our required `@import`s across all our CSS bundles (including `bootstrap.css`, `bootstrap-reboot.css`, and `bootstrap-grid.css`) to include `_root.scss`. This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately Bootstrap 5 will continue to see more [CSS variables]({{< docsref "/customize/css-variables" >}}) added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
+v5.1.1에서는 모든 CSS 번들(`bootstrap.css`, `bootstrap-reboot.css`, `bootstrap-grid.css` 포함)에서 필수 `@import`를 표준화하여 `_root.scss`를 포함하도록 했습니다. 이렇게 하면 해당 번들에서 사용되는 변수의 수에 관계없이 모든 번들에 `:root` 수준의 CSS 변수가 추가됩니다. 궁극적으로 부트스트랩 5는 시간이 지남에 따라 더 많은 [CSS 변수]({{< docsref "/customize/css-variables">}})를 추가하여 Sass를 항상 다시 컴파일할 필요 없이 더 많은 실시간 사용자 정의 기능을 제공할 것입니다. 우리의 접근 방식은 소스 Sass 변수를 가져와 CSS 변수로 변환하는 것입니다. 이렇게 하면 CSS 변수를 사용하지 않더라도 Sass의 모든 기능을 사용할 수 있습니다. **이 작업은 아직 진행 중이며 완전히 구현하는 데 시간이 걸립니다.**
 
-For example, consider these `:root` CSS variables for common `<body>` styles:
+예를 들어 일반적인 `<body>` 스타일에 대한 `:root` CSS 변수를 생각해 보겠습니다:
 
 {{< scss-docs name="root-body-variables" file="scss/_root.scss" >}}
 
-In practice, those variables are then applied in Reboot like so:
+실제로 이러한 변수는 다음과 같이 Reboot에 적용됩니다:
 
 {{< scss-docs name="reboot-body-rules" file="scss/_reboot.scss" >}}
 
-Which allows you to make real-time customizations however you like:
+이를 통해 원하는 대로 실시간 커스터마이징을 할 수 있습니다:
 
 ```html
 <body style="--bs-body-color: #333;">
   <!-- ... -->
 </body>
 ```
+
+## 페이지 기본값
+
+페이지 전체에 더 나은 기본값을 제공하도록 `<html>` 및 `<body>` 요소가 업데이트되었습니다. 좀 더 구체적으로 설명하면:
+
+- `box-sizing`는 `*::before` 및 `*::after`이후, `border-box`를 포함한 모든 요소에서 전역적으로 설정됩니다. 이렇게 하면 패딩이나 테두리로 인해 요소의 선언된 너비가 초과되지 않습니다.
+- `<html>`에는 기본 `font-size`가 선언되지 않고 16px(브라우저 기본값)가 사용됩니다. `<body>`에는 미디어 쿼리를 통해 반응형 글꼴 크기를 쉽게 조정하는 동시에 사용자 기본 설정을 존중하고 접근성을 높일 수 있도록`font-size: 1rem`이 적용됩니다. 이 브라우저 기본값은 `$font-size-root` 변수를 수정하여 재정의할 수 있습니다.
+- `<body>`는 또한 `font-family`, `font-weight`, `line-height` 및 `color`을 설정합니다. 이는 나중에 일부 폼 요소에서 상속되어 글꼴 불일치를 방지합니다.
+- 안전을 위해 `<body>`에는 선언된 `background-color`이 있으며 기본값은 `#fff`입니다.
 
 ## 기본 글꼴 스택
 
@@ -73,7 +82,7 @@ $font-family-sans-serif:
 
 ## 제목과 단락
 
-모든 제목 요소 (예: `<h1>` 및 `<p>`)는 `margin-top`이제거되도록 재설정됩니다. 제목에는 `margin-bottom: .5rem`이추가되고 단락은 `margin-bottom : 1rem`이 추가되어 간격을 쉽게 조정할 수 있습니다.
+모든 제목 요소 (예: `<h1>` 및 `<p>`)는 `margin-top`이 제거되도록 재설정됩니다. 제목에는 `margin-bottom: .5rem`이추가되고 단락은 `margin-bottom : 1rem`이 추가되어 간격을 쉽게 조정할 수 있습니다.
 
 {{< bs-table "table" >}}
 | Heading | Example |
@@ -86,9 +95,9 @@ $font-family-sans-serif:
 | `<h6></h6>` | <span class="h6">h6. Bootstrap heading</span> |
 {{< /bs-table >}}
 
-## Horizontal rules
+## 수평 규칙
 
-The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top`, have a default `opacity: .25`, and automatically inherit their `border-color` via `color`, including when `color` is set via the parent. They can be modified with text, border, and opacity utilities.
+`<hr>` 요소가 단순화되었습니다. 브라우저 기본값과 유사하게 `<hr>`는 `border-top`을 통해 스타일이 지정되고, 기본 `opacity: .25`를 가지며, 부모를 통해 `color`이 설정된 경우를 포함하여 `color`을 통해 `border-color`을 자동으로 상속받습니다. 텍스트, 테두리 및 불투명도 유틸리티를 사용하여 수정할 수 있습니다.
 
 {{< example >}}
 <hr>
@@ -103,7 +112,7 @@ The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are
 
 ## 목록
 
-모든 목록 (`<ul>`,`<ol>`, `<dl>`)에는 `margin-top`이 제거되고 `margin-bottom: 1rem`이 제거됩니다. 중첩된 목록에는 `margin-bottom`이 없습니다. 또한`<ul>` 및 `<ol>` 요소에서 `padding-left`를 재설정했습니다.
+모든 목록(`<ul>`, `<ol>`, `<dl>`)에는 `margin-top`이 제거되고 `margin-bottom: 1rem`이 적용됩니다. 중첩된 목록에는 `margin-bottom`이 없습니다. 또한`<ul>` 및 `<ol>` 요소에서 `padding-left`를 재설정했습니다.
 
 <div class="bd-example">
 {{< markdown >}}
@@ -226,7 +235,7 @@ To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
 - 필드셋과 마찬가지로 `<legend>`도 일종의 제목으로 표시되도록 스타일이 변경되었습니다.
 - `<label>`이 `display: inline-block`으로 설정되어 `margin`이 적용될 수 있습니다.
 - `<input>`, `<select>`, `<textarea>`, `<button>`은 대부분 Normalize에 의해 처리되지만 Reboot는 `margin`을 제거하고 `line-height: inherit`도 설정합니다.
-- `<textarea>`는 가로 크기 조정이 종종 페이지 레이아웃을 "파괴"하므로 세로로만 크기를 조정할 수 있도록 수정됩니다.
+- 가로로 크기를 조정하면 페이지 레이아웃이 "깨지는" 경우가 많으므로 `<textarea>`은 세로로만 크기를 조정할 수 있도록 수정되었습니다.
 - `<button>`과 `<input>` 버튼 요소는`:not(:disabled)`일 때 `cursor : pointer`를 갖습니다.
 
 이러한 변경 사항 등은 아래에 설명되어 있습니다.
