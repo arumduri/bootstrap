@@ -58,7 +58,7 @@ Bootstrap은 컴파일된 CSS를 처리하고 RTL로 변환하기 위해서 [RTL
 로컬에서 문서를 실행하려면 Hugo가 필요하며, [hugo-bin](https://www.npmjs.com/package/hugo-bin) npm 패키지를 통해서 설치할 수 있습니다. Hugo은 기본 포함, 마크다운 기반 파일, 템플릿 등을 제공하는 아주 빠르면서 상당한 수준으로 확장할 수 있는 정적 사이트 생성기입니다 다음은 시작하는 방법입니다:
 
 1. [도구 구성](#도구-구성)의 내용을 통해서 모든 의존성을 설치해주세요.
-2. 최상위 `/bootstrap` 폴더에서 명령줄 도구를 통해 `npm run docs-serve`를 실행해주세요.
+2. 최상위 `/bootstrap` 폴더에서 명령줄 도구를 통해 `npm run docs-serve`를 실행해 주세요.
 3. 브라우저에서 `http://localhost:9001/`를 열면, 짜잔.
 
 Hugo를 사용하는 방법에 대해 자세히 알아보고 싶다면 자체 [문서](https://gohugo.io/documentation/)를 확인해주세요.

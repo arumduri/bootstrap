@@ -10,12 +10,12 @@ toc: true
 
 먼저 [시작하기 페이지]({{< docsref "/getting-started/introduction" >}})를 읽고 Bootstrap에 익숙해지는 것이 좋습니다. 어느정도 읽어보았다면 RTL을 활성화하는 방법에 대해 계속 읽어보세요.
 
-우리가 RTL에 접근하는 방식을 강화하는 [RTLCSS 프로젝트](https://rtlcss.com/)에 대해서 읽어볼 수도 있습니다.
+또한 RTL에 대한 우리의 접근 방식을 주도하는 [RTLCSS 프로젝트](https://rtlcss.com/)에 대해서도 읽어보시길 바랍니다.
 
 {{< callout warning >}}
 ### 실험적 기능
 
-RTL 기능은 아직 **실험적이며** 사용자 피드백에 따라 발전할 것입니다. 무언가를 발견했거나 개선할 점이 있나요? [이슈를 열어서]({{< param repo >}}/issues/new/choose) 여러분들의 의견을 알려주세요.
+**부트스트랩의 RTL 기능은 아직 실험 단계이며** 사용자 피드백을 바탕으로 발전해 나갈 예정입니다. 무언가를 발견했거나 개선할 점이 있나요? [이슈를 열어서]({{< param repo >}}/issues/new/choose) 여러분들의 의견을 듣고 싶습니다.
 {{< /callout >}}
 
 ## HTML 요구 사항
