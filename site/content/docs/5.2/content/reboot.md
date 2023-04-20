@@ -431,7 +431,7 @@ Reboot에는 기본 커서를 `pointer`로 변경하는 `role="button"`의 개�
 
 ## HTML5 `[hidden]` 속성
 
-HTML5에는 [a new global attribute named `[hidden]`이라고 불리는 새로운 전역 속성](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden)이 추가되었으며, 기본적으로 `display: none`으로 스타일링됩니다. [PureCSS](https://purecss.io/)에서 아이디어를 빌려서 `[hidden] {display: none !important; }`를 사용하여 `display`가 실수로 재정의되는 것을 방지합니다.
+HTML5에는 [`[hidden]`이라고 불리는 새로운 전역 속성](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden)이 추가되었으며, 기본적으로 `display: none`으로 스타일링됩니다. [PureCSS](https://purecss.io/)에서 아이디어를 빌려서 `[hidden] {display: none !important; }`를 사용하여 `display`가 실수로 재정의되는 것을 방지합니다.
 
 ```html
 <input type="text" hidden>
