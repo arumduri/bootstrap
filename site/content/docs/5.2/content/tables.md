@@ -81,13 +81,13 @@ toc: true
 
 {{< table class="table table-striped" >}}
 
-### Striped columns
+### 스트라이프 열
 
-Use `.table-striped-columns` to add zebra-striping to any table column.
+테이블 열에 zebra-striping를 추가하려면 `.table-striped-columns`를 사용합니다.
 
 {{< table class="table table-striped-columns" >}}
 
-These classes can also be added to table variants:
+이러한 클래스는 테이블 변형에도 추가할 수 있습니다:
 
 {{< table class="table table-dark table-striped" >}}
 
@@ -105,7 +105,7 @@ These classes can also be added to table variants:
 
 {{< table class="table table-dark table-hover" >}}
 
-These hoverable rows can also be combined with the striped rows variant:
+이러한 호버링 가능한 행은 스트라이프 행 변형과 결합할 수도 있습니다:
 
 {{< table class="table table-striped table-hover" >}}
 
@@ -253,7 +253,7 @@ These hoverable rows can also be combined with the striped rows variant:
 
 {{< table class="table table-dark table-borderless" >}}
 
-## 얇은 테이블
+## 작은 테이블
 
 `.table-sm`을 추가하여 모든 셀 `padding`을 반으로 잘라 `.table`을 더 간결하게 만듭니다.
 
@@ -261,9 +261,9 @@ These hoverable rows can also be combined with the striped rows variant:
 
 {{< table class="table table-dark table-sm" >}}
 
-## Table group dividers
+## 테이블 그룹 구분선
 
-Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<tfoot>`—with `.table-group-divider`. Customize the color by changing the `border-top-color` (which we don't currently provide a utility class for at this time).
+테이블 그룹인 `<thead>`, `<tbody>`, `<tfoot>` 사이에 `.table-group-divider`를 사용하여 테두리를 더 두껍게 추가하고 그 사이를 더 어둡게 합니다. `border-top-color`을 변경하여 색상을 사용자 정의합니다(현재 유틸리티 클래스는 제공하지 않음).
 
 {{< example >}}
 <table class="table">
@@ -444,9 +444,9 @@ Add a thicker border, darker between table groups—`<thead>`, `<tbody>`, and `<
 
 ## 중첩 작동 원리
 
-_아무_ 스타일이 중첩 테이블로 유출되는 것을 방지하기 위해 CSS에서 자식 결합자 (`>`) 선택자를 사용합니다. 우리는 `thead`, `tbody`, `tfoot`의 모든 `td`와 `th`를 대상으로 해야 하므로 선택자가 없으면 꽤 길어보일 것입니다. 따라서 다소 이상해 보이는 `.table > :not(caption) > * > *`선택기를 사용하여 `.table`의 모든 `td`와 `th`를 타겟팅하지만 잠재적 중첩 테이블은 없습니다.
+중첩된 테이블로 스타일이 유출되는 것을 방지하기 위해 CSS에서 자식 결합기(`>`) 선택기를 사용합니다. `thead`, `tbody`, `tfoot`의 모든 `td`와 `th`를 대상으로 해야 하므로 선택기가 없으면 선택기가 꽤 길어 보일 것입니다. 따라서 다소 이상하게 보이는 `.table > :not(caption) > * > *` 선택기를 사용하여 `.table`의 모든 `td`와 `th`를 대상으로 하고  있지만, 잠재적인 중첩된 테이블은 대상으로 하지 않습니다.
 
-테이블의 직계 자식으로 `<tr>`을 추가하면 해당 `<tr>`이 기본적으로 `<tbody>`에 줄바꿈되므로 선택자가 의도한 대로 작동합니다.
+테이블의 직계 자식으로 `<tr>`을 추가하면 해당 `<tr>`은 기본적으로 `<tbody>`에 줄바꿈되므로 선택자가 의도한 대로 작동합니다.
 
 ## 구조
 
@@ -599,7 +599,7 @@ _아무_ 스타일이 중첩 테이블로 유출되는 것을 방지하기 위�
 </table>
 ```
 
-### 테이블 이름
+### 캡션
 
 `<caption>`은 테이블 이름과 같은 기능을 합니다. 스크린 리더를 사용하는 사용자가 테이블을 찾고 그 내용을 이해하고 읽을 것인지 결정할 수 있도록 도와줍니다.
 
