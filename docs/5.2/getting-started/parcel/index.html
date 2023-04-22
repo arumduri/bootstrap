@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The official guide for how to include and bundle Bootstrap&rsquo;s CSS and JavaScript in your project using Parcel.">
+<meta name="description" content="Parcel을 사용하여 프로젝트에 부트스트랩의 CSS와 JavaScript를 포함하고 번들링하는 방법에 대한 공식 가이드입니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.104.2">
 
@@ -35,12 +35,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Bootstrap &amp; Parcel">
-<meta name="twitter:description" content="The official guide for how to include and bundle Bootstrap&rsquo;s CSS and JavaScript in your project using Parcel.">
+<meta name="twitter:description" content="Parcel을 사용하여 프로젝트에 부트스트랩의 CSS와 JavaScript를 포함하고 번들링하는 방법에 대한 공식 가이드입니다.">
 <meta name="twitter:image" content="/docs/5.2/assets/img/guides/bootstrap-parcel@2x.png">
 
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.2/getting-started/parcel/">
 <meta property="og:title" content="Bootstrap &amp; Parcel">
-<meta property="og:description" content="The official guide for how to include and bundle Bootstrap&rsquo;s CSS and JavaScript in your project using Parcel.">
+<meta property="og:description" content="Parcel을 사용하여 프로젝트에 부트스트랩의 CSS와 JavaScript를 포함하고 번들링하는 방법에 대한 공식 가이드입니다.">
 <meta property="og:type" content="article">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1000">
@@ -476,7 +476,7 @@
           <h1 class="bd-title mb-0" id="content">Bootstrap &amp; Parcel</h1>
         </div>
         
-        <p class="bd-lead">The official guide for how to include and bundle Bootstrap&rsquo;s CSS and JavaScript in your project using Parcel.</p>
+        <p class="bd-lead">Parcel을 사용하여 프로젝트에 부트스트랩의 CSS와 JavaScript를 포함하고 번들링하는 방법에 대한 공식 가이드입니다.</p>
         
       </div>
 
@@ -491,10 +491,10 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#setup">Setup</a></li>
-    <li><a href="#project-structure">Project structure</a></li>
-    <li><a href="#configure-parcel">Configure Parcel</a></li>
-    <li><a href="#import-bootstrap">Import Bootstrap</a></li>
+    <li><a href="#설정하기">설정하기</a></li>
+    <li><a href="#프로젝트-구조">프로젝트 구조</a></li>
+    <li><a href="#parcel-설정하기">Parcel 설정하기</a></li>
+    <li><a href="#부트스트랩-불러오기">부트스트랩 불러오기</a></li>
   </ul>
 </nav>
           </div>
@@ -511,32 +511,32 @@
 
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/5.2/assets/img/guides/bootstrap-parcel.png, /docs/5.2/assets/img/guides/bootstrap-parcel@2x.png 2x" src="/docs/5.2/assets/img/guides/bootstrap-parcel.png" width="2000" height="1000" alt=""></p>
 <div class="bd-callout bd-callout-info">
-<strong>Want to skip to the end?</strong> Download the source code and working demo for this guide from the <a href="https://github.com/twbs/examples/tree/main/parcel">twbs/examples repository</a>. You can also <a href="https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html">open the example in StackBlitz</a> but not run it because Parcel isn&rsquo;t currently supported there.
+<strong>끝으로 건너뛰고 싶으신가요?</strong> 이 가이드의 소스 코드와 동작 확인을 위한 데모는 <a href="https://github.com/twbs/examples/tree/main/parcel">twbs/examples repository</a>에서 다운로드 하세요. <a href="https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html">StackBlitz 예제 보기</a>에서도 가능하지만 현재 Parcel은 지원되지 않아 실행할 수 없습니다.
 </div>
 
-<h2 id="setup">Setup <a class="anchor-link" href="#setup" aria-label="Link to this section: Setup"></a></h2>
-<p>We&rsquo;re building a Parcel project with Bootstrap from scratch, so there are some prerequisites and up front steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.</p>
+<h2 id="설정하기">설정하기 <a class="anchor-link" href="#%ec%84%a4%ec%a0%95%ed%95%98%ea%b8%b0" aria-label="Link to this section: 설정하기"></a></h2>
+<p>부트스트랩으로 Parcel 프로젝트를 처음부터 구축하기 위해 실제로 시작하기 전에 몇 가지 전제 조건과 선행 단계가 있습니다. 이 가이드를 사용하려면 Node.js가 설치되어 있고 터미널을 어느 정도 다룰 줄 알아야 합니다.</p>
 <ol>
 <li>
-<p><strong>Create a project folder and setup npm.</strong> We&rsquo;ll create the <code>my-project</code> folder and initialize npm with the <code>-y</code> argument to avoid it asking us all the interactive questions.</p>
+<p><strong>프로젝트 폴더를 만들고 npm을 설정합니다.</strong> <code>my-project</code> 폴더를 만들고 모든 대화형 질문을 하지 않도록 <code>-y</code> 인수를 사용하여 npm을 초기화 합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir my-project <span class="o">&amp;&amp;</span> <span class="nb">cd</span> my-project
 </span></span><span class="line"><span class="cl">npm init -y
 </span></span></code></pre></div></li>
 <li>
-<p><strong>Install Parcel.</strong> Unlike our Webpack guide, there&rsquo;s only a single build tool dependency here. Parcel will automatically install language transformers (like Sass) as it detects them. We use <code>--save-dev</code> to signal that this dependency is only for development use and not for production.</p>
+<p><strong>Parcel을 설치합니다.</strong> 웹팩 가이드와 달리 여기에는 빌드 도구 종속성이 하나만 있습니다. Parcel은 언어 변환기(예: Sass)를 감지하면 자동으로 설치합니다. 이 종속성이 프로덕션용이 아닌 개발용으로만 사용된다는 것을 알리기 위해 <code>--save-dev</code>를 사용합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm i --save-dev parcel
 </span></span></code></pre></div></li>
 <li>
-<p><strong>Install Bootstrap.</strong> Now we can install Bootstrap. We&rsquo;ll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don&rsquo;t plan on using those components, you can omit Popper here.</p>
+<p><strong>Bootstrap을 설치합니다.</strong> 이제 부트스트랩을 설치할 수 있습니다. 드롭다운, 팝오버, 툴팁의 위치가 부트스트랩에 따라 달라지므로 Popper도 설치합니다. 이러한 컴포넌트를 사용하지 않을 계획이라면 여기서 Popper를 생략할 수 있습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm i --save bootstrap @popperjs/core
 </span></span></code></pre></div></li>
 </ol>
-<p>Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Bootstrap.</p>
-<h2 id="project-structure">Project structure <a class="anchor-link" href="#project-structure" aria-label="Link to this section: Project structure"></a></h2>
-<p>We&rsquo;ve already created the <code>my-project</code> folder and initialized npm. Now we&rsquo;ll also create our <code>src</code> folder, stylesheet, and JavaScript file to round out the project structure. Run the following from <code>my-project</code>, or manually create the folder and file structure shown below.</p>
+<p>이제 필요한 모든 종속 요소가 설치되었으므로 프로젝트 파일을 만들고 부트스트랩을 가져올 수 있습니다.</p>
+<h2 id="프로젝트-구조">프로젝트 구조 <a class="anchor-link" href="#%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-%ea%b5%ac%ec%a1%b0" aria-label="Link to this section: 프로젝트 구조"></a></h2>
+<p>이미 <code>my-project</code> 폴더를 생성하고 npm을 초기화했습니다. 이제 프로젝트 구조를 완성하기 위해 <code>src</code> 폴더, 스타일시트, JavaScript 파일도 생성합니다. <code>my-project</code>에서 다음을 실행하거나 아래 표시된 폴더와 파일 구조를 수동으로 생성합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir <span class="o">{</span>src,src/js,src/scss<span class="o">}</span>
 </span></span><span class="line"><span class="cl">touch src/index.html src/js/main.js src/scss/styles.scss
-</span></span></code></pre></div><p>When you&rsquo;re done, your complete project should look like this:</p>
+</span></span></code></pre></div><p>완료되면 전체 프로젝트는 다음과 같은 모습일 것입니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">my-project/
 </span></span><span class="line"><span class="cl">├── src/
 </span></span><span class="line"><span class="cl">│   ├── js/
@@ -546,12 +546,12 @@
 </span></span><span class="line"><span class="cl">│   └── index.html
 </span></span><span class="line"><span class="cl">├── package-lock.json
 </span></span><span class="line"><span class="cl">└── package.json
-</span></span></code></pre></div><p>At this point, everything is in the right place, but Parcel needs an HTML page and npm script to start our server.</p>
-<h2 id="configure-parcel">Configure Parcel <a class="anchor-link" href="#configure-parcel" aria-label="Link to this section: Configure Parcel"></a></h2>
-<p>With dependencies installed and our project folder ready for us to start coding, we can now configure Parcel and run our project locally. Parcel itself requires no configuration file by design, but we do need an npm script and an HTML file to start our server.</p>
+</span></span></code></pre></div><p>이 시점에서 모든 것이 올바른 위치에 있지만 Parcel은 서버를 시작하기 위해 HTML 페이지와 npm 스크립트가 필요합니다.</p>
+<h2 id="parcel-설정하기">Parcel 설정하기 <a class="anchor-link" href="#parcel-%ec%84%a4%ec%a0%95%ed%95%98%ea%b8%b0" aria-label="Link to this section: Parcel 설정하기"></a></h2>
+<p>종속성이 설치되고 코딩을 시작할 수 있는 프로젝트 폴더가 준비되었으므로 이제 Parcel을 설정하고 로컬에서 프로젝트를 실행할 수 있습니다. Parcel 자체는 설계상 설정 파일이 필요하지 않지만 서버를 시작하려면 npm 스크립트와 HTML 파일이 필요합니다.</p>
 <ol>
 <li>
-<p><strong>Fill in the <code>src/index.html</code> file.</strong> Parcel needs a page to render, so we use our <code>index.html</code> page to set up some basic HTML, including our CSS and JavaScript files.</p>
+<p><strong><code>src/index.html</code> 파일을 작성합니다.</strong> Parcel은 렌더링할 페이지가 필요하므로 <code>index.html</code> 페이지를 사용하여 CSS 및 JavaScript 파일을 포함한 몇 가지 기본 HTML을 설정합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -568,11 +568,11 @@
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>We&rsquo;re including a little bit of Bootstrap styling here with the <code>div class=&quot;container&quot;</code> and <code>&lt;button&gt;</code> so that we see when Bootstrap&rsquo;s CSS is loaded by Webpack.</p>
-<p>Parcel will automatically detect we&rsquo;re using Sass and install the <a href="https://parceljs.org/languages/sass/">Sass Parcel plugin</a> to support it. However, if you wish, you can also manually run <code>npm i --save-dev @parcel/transformer-sass</code>.</p>
+</span></span></code></pre></div><p>여기에는 <code>div class=&quot;container&quot;</code>와 <code>&lt;button&gt;</code>으로 약간의 부트스트랩의 스타일링을 사용하여 부트스트랩의 CSS가 웹팩에 로드될 때 표시되도록 했습니다.</p>
+<p>Parcel은 자동으로 Sass를 사용하고 있음을 감지하고 이를 지원하기 위해 <a href="https://parceljs.org/languages/sass/">Sass Parcel 플러그인</a>을 설치합니다. 그러나 필요하다면 수동으로 <code>npm i --save-dev @parcel/transformer-sass</code>를 실행할 수도 있습니다.</p>
 </li>
 <li>
-<p><strong>Add the Parcel npm scripts.</strong> Open the <code>package.json</code> and add the following <code>start</code> script to the <code>scripts</code> object. We&rsquo;ll use this script to start our Parcel development server and render the HTML file we created after it&rsquo;s compiled into the <code>dist</code> directory.</p>
+<p><strong>Parcel npm 스크립트를 추가합니다.</strong> <code>package.json</code>을 열고 <code>scripts</code> 객체에 아래의 <code>start</code> 스크립트를 추가합니다. 이 스크립트로 Parcel 개발 서버를 실행하고 <code>dist</code> 디렉터리에 컴파일한 후 생성한 HTML 파일을 렌더링합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">// ...
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
@@ -583,42 +583,42 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span></code></pre></div></li>
 <li>
-<p><strong>And finally, we can start Parcel.</strong> From the <code>my-project</code> folder in your terminal, run that newly added npm script:</p>
+<p><strong>마지막으로, Parcel을 시작할 수 있습니다.</strong> 터미널의 <code>my-project</code> 폴더에서 새로 추가된 npm 스크립트를 실행합니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npm start
 </span></span></code></pre></div><img class="img-fluid" src="/docs/5.2/assets/img/guides/parcel-dev-server.png" alt="Parcel dev server running">
 </li>
 </ol>
-<p>In the next and final section to this guide, we&rsquo;ll import all of Bootstrap&rsquo;s CSS and JavaScript.</p>
-<h2 id="import-bootstrap">Import Bootstrap <a class="anchor-link" href="#import-bootstrap" aria-label="Link to this section: Import Bootstrap"></a></h2>
-<p>Importing Bootstrap into Parcel requires two imports, one into our <code>styles.scss</code> and one into our <code>main.js</code>.</p>
+<p>이 가이드의 마지막인 다음 섹션에서는 부트스트랩의 모든 CSS와 JavaScript를 가져오겠습니다.</p>
+<h2 id="부트스트랩-불러오기">부트스트랩 불러오기 <a class="anchor-link" href="#%eb%b6%80%ed%8a%b8%ec%8a%a4%ed%8a%b8%eb%9e%a9-%eb%b6%88%eb%9f%ac%ec%98%a4%ea%b8%b0" aria-label="Link to this section: 부트스트랩 불러오기"></a></h2>
+<p>부트스트랩을 Parcel로 가져오려면 두 개의 임포트가 필요한데, 하나는 <code>styles.scss</code>, 다른 하나는 <code>main.js</code>를 임포트해야 합니다.</p>
 <ol>
 <li>
-<p><strong>Import Bootstrap&rsquo;s CSS.</strong> Add the following to <code>src/scss/styles.scss</code> to import all of Bootstrap&rsquo;s source Sass.</p>
+<p><strong>부트스트랩의 CSS를 불러옵니다.</strong> 부트스트랩의 모든 소스 Sass를 가져오려면 <code>src/scss/styles.scss</code>에 다음을 추가하세요.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Import all of Bootstrap&#39;s CSS
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;~bootstrap/scss/bootstrap&#34;</span><span class="p">;</span>
-</span></span></code></pre></div><p><em>You can also import our stylesheets individually if you want. <a href="/docs/5.2/customize/sass/#importing">Read our Sass import docs</a> for details.</em></p>
+</span></span></code></pre></div><p><em>원하는 경우 스타일시트를 개별적으로 가져올 수도 있습니다. 자세한 내용은 <a href="/docs/5.2/customize/sass/#importing">Sass 불러오기 문서</a>를 참조하세요.</em></p>
 </li>
 <li>
-<p><strong>Import Bootstrap&rsquo;s JS.</strong> Add the following to <code>src/js/main.js</code> to import all of Bootstrap&rsquo;s JS. Popper will be imported automatically through Bootstrap.</p>
+<p><strong>부트스트랩의 JS를 불러옵니다.</strong> 부트스트랩의 모든 JS를 가져오려면 <code>src/js/main.js</code>에 다음을 추가합니다. Popper는 부트스트랩을 통해 자동으로 임포트됩니다.</p>
 <!-- eslint-skip -->
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Import all of Bootstrap&#39;s JS
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">bootstrap</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span>
-</span></span></code></pre></div><p>You can also import JavaScript plugins individually as needed to keep bundle sizes down:</p>
+</span></span></code></pre></div><p>필요에 따라 JavaScript 플러그인을 개별적으로 가져와 번들 크기를 줄일 수도 있습니다:</p>
 <!-- eslint-skip -->
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">Alert</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap/js/dist/alert&#39;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">// or, specify which plugins you need:
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Tooltip</span><span class="p">,</span> <span class="nx">Toast</span><span class="p">,</span> <span class="nx">Popover</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;bootstrap&#39;</span>
-</span></span></code></pre></div><p><em><a href="/docs/5.2/getting-started/javascript/">Read our JavaScript docs</a> for more information on how to use Bootstrap&rsquo;s plugins.</em></p>
+</span></span></code></pre></div><p><em>부트스트랩의 플러그인 사용 방법에 대한 자세한 내용은 <a href="/docs/5.2/getting-started/javascript/">JavaScript 문서</a>를 참조하세요.</em></p>
 </li>
 <li>
-<p><strong>And you&rsquo;re done! 🎉</strong> With Bootstrap&rsquo;s source Sass and JS fully loaded, your local development server should now look like this.</p>
+<p><strong>이제 끝났습니다! 🎉</strong> 부트스트랩의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다.</p>
 <img class="img-fluid" src="/docs/5.2/assets/img/guides/parcel-dev-server-bootstrap.png" alt="Parcel dev server running with Bootstrap">
-<p>Now you can start adding any Bootstrap components you want to use. Be sure to <a href="https://github.com/twbs/examples/tree/main/parcel">check out the complete Parcel example project</a> for how to include additional custom Sass and optimize your build by importing only the parts of Bootstrap&rsquo;s CSS and JS that you need.</p>
+<p>이제 사용하려는 부트스트랩 컴포넌트를 추가할 수 있습니다. 추가 커스텀 Sass를 포함시키고 필요한 부분만 Bootstrap의 CSS와 JS를 임포트하여 빌드를 최적화하는 방법은 <a href="https://github.com/twbs/examples/tree/main/parcel">전체 Parcel 예제 프로젝트</a>를 참조하세요.</p>
 </li>
 </ol>
 <hr class="my-5">
-<p><em>See something wrong or out of date here? Please <a href="https://github.com/twbs/bootstrap/issues/new/choose">open an issue on GitHub</a>. Need help troubleshooting? <a href="https://github.com/twbs/bootstrap/discussions">Search or start a discussion</a> on GitHub.</em>
+<p><em>여기에 잘못되었거나 오래된 내용이 있나요? <a href="https://github.com/twbs/bootstrap/issues/new/choose">GitHub에서 이슈</a>를 열어주세요. 문제 해결에 도움이 필요하신가요? <a href="https://github.com/twbs/bootstrap/discussions">GitHub에서 검색하거나 토론</a>을 시작하세요.</em>
 
       </div>
     </main>
