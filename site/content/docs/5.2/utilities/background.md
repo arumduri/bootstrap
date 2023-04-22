@@ -101,7 +101,7 @@ Grayscale colors are also available, but only a subset are used to generate any 
 회색조 색상은 Sass 맵으로도 사용할 수 있습니다. **이 맵은 유틸리티를 생성하는 데에 사용되지 않습니다.**
 
 {{< scss-docs name="gray-colors-map" file="scss/_variables.scss" >}}
-ㄴ
+
 RGB 색상은 별도의 Sass 맵에서 생성됩니다:
 
 {{< scss-docs name="theme-colors-rgb" file="scss/_maps.scss" >}}
