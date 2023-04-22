@@ -21,7 +21,7 @@
           </a>
           <h1 class="bd-title mb-0" id="content">{{ .Title | markdownify }}</h1>
         </div>
-        {{ if .Params.title_en }}<h6 class="text-muted" id="content">// {{ $.Param "title_en" | markdownify }}</h6>{{ end }}
+        {{ if .Params.title_en }}<h6 class="text-muted" id="enContent">// {{ $.Param "title_en" | markdownify }}</h6>{{ end }}
         <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
         {{ partial "ads" . }}
       </div>
