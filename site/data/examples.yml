@@ -1,3 +1,42 @@
+- category: Starters
+  external: true
+  description: "Functional examples of using Bootstrap in common JS frameworks like Webpack, Parcel, Vite, and more you can edit in StackBlitz."
+  examples:
+    - name: CDN starter
+      description: "Instantly include Bootstrap's compiled CSS and JavaScript via the jsDelivr CDN."
+      url: /examples/tree/main/starter
+    - name: Sass & JS
+      description: "Use npm to import and compile Bootstrap's Sass with Autoprefixer and Stylelint, plus our bundled JavaScript."
+      url: /examples/tree/main/sass-js
+    - name: Sass & ESM JS
+      description: "Import and compile Bootstrap's Sass with Autoprefixer and Stylelint, and compile our source JavaScript with an ESM shim."
+      url: /examples/tree/main/sass-js-esm
+    - name: Bootstrap color modes
+      description: "Import and compile Bootstrap's Sass with Stylelint, and the Bootstrap color modes."
+      url: /examples/tree/main/color-modes
+    - name: Bootstrap Icons
+      description: "Import and compile Bootstrap's Sass with Stylelint, PurgeCSS, and the Bootstrap Icons web font."
+      url: /examples/tree/main/icons-font
+    - name: Parcel
+      description: "Import and bundle Bootstrap's source Sass and JavaScript via Parcel."
+      url: /examples/tree/main/parcel
+      indexPath: src/index.html
+      indexPath: src/index.html
+    - name: React
+      description: "Import and bundle Bootstrap's source Sass and JavaScript with React, Next.js, and React Bootstrap."
+      url: /examples/tree/main/react-nextjs
+      indexPath: src/pages/index.tsx
+    - name: Vite
+      description: "Import and bundle Bootstrap's source Sass and JavaScript with Vite."
+      url: /examples/tree/main/vite
+    - name: Vue
+      description: "Import and bundle Bootstrap's source Sass and JavaScript with Vue and Vite."
+      url: /examples/tree/main/vue
+    - name: Webpack
+      description: "Import and bundle Bootstrap's source Sass and JavaScript with Webpack."
+      url: /examples/tree/main/webpack
+      indexPath: src/index.html
+
 - category: 스니펫
   description: "사용자 지정 CSS 등을 사용하여 기존 컴포넌트 및 유틸리티를 기반으로 하는 사이트 및 앱 구축을 위한 일반적인 패턴입니다."
   examples:
@@ -17,6 +56,14 @@
       description: "모든 콘텐츠에 대한 유틸리티 및 사용자 정의 스타일로 목록 그룹을 확장합니다."
     - name: Modals
       description: "기능 둘러보기에서 대화 상자까지 모든 목적에 맞게 모달을 변환합니다."
+    - name: Badges
+      description: "Make badges work with custom inner HTML and new looks."
+    - name: Breadcrumbs
+      description: "Integrate custom icons and create stepper components."
+    - name: Buttons
+      description: "Create custom buttons for just about any use case with utilities."
+    - name: Jumbotrons
+      description: "Create modernized versions of the classic Bootstrap component."
 
 - category: 사용자 지정 컴포넌트
   description: "사람들이 Bootstrap을 빠르게 시작하고 프레임워크에 추가하기 위한 모범 사례를 시연하는 데에 도움이 되는 새로운 컴포넌트 및 템플릿입니다."
