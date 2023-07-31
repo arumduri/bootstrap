@@ -44,16 +44,6 @@ const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 ```
 
-## 예시: `container` 옵션 사용하기
-
-부모 요소에 팝오버를 방해하는 몇 가지 스타일이 있다면, 대신 사용자 정의 `container`를 지정하여 팝오버의 HTML을 해당 요소 내에 표시되도록 합니다.
-
-```js
-var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
-  container: 'body'
-})
-```
-
 ### Live demo
 
 We use JavaScript similar to the snippet above to render the following live popover. Titles are set via `data-bs-title` and body content is set via `data-bs-content`.

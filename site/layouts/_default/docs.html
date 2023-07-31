@@ -27,7 +27,7 @@
           </div>
           <h1 class="bd-title mb-0" id="content">{{ .Title | markdownify }}</h1>
         </div>
-        {{ if .Params.title_en }}<h6 class="text-muted" id="content">// {{ $.Param "title_en" | markdownify }}</h6>{{ end }}
+        {{ if .Params.title_en }}<h6 class="text-muted" id="enContent">// {{ $.Param "title_en" | markdownify }}</h6>{{ end }}
         <p class="bd-lead">{{ .Page.Params.Description | markdownify }}</p>
         {{ partial "ads" . }}
       </div>
@@ -64,17 +64,6 @@
       </div>
     </main>
   </div>
-  <div class="text-center">
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2578669051257137"
-     data-ad-slot="8950816420"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
 {{ end }}
 {{ define "footer" }}
   {{ range .Page.Params.extra_js -}}
