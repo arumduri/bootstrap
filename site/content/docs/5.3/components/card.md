@@ -5,6 +5,7 @@ title_en: Cards
 description: 여러 가지 종류와 옵션을 가진 유연하고 확장 가능한 콘텐츠를 제공합니다.
 group: components
 toc: true
+untranslated: true
 ---
 
 ## 소개

@@ -5,6 +5,7 @@ title_en: CSS variables
 description: 빠르고 미래 지향적인 설계와 개발을 위해 Bootstrap의 CSS 사용자 정의를 사용합니다.
 group: customize
 toc: true
+untranslated: true
 ---
 
 Bootstrap은 Sass를 재컴파일할 필요 없이 실시간 커스터마이징을 할 수 있도록 컴파일된 CSS에 많은 [CSS 사용자 정의 속성 (변수)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)를 포함하고 있습니다. 이들은 브라우저의 검사기, 코드 샌드박스 또는 일반 프로토타입으로 작업할때 테마 색상, 중단점, 주요 글꼴 스택과 같이 일반적으로 자주 사용되는 값에 대해 간단하게 접근을 제공합니다.

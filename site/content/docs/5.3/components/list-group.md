@@ -486,7 +486,7 @@ const bsTab = new bootstrap.Tab('#myTab')
 {{< bs-table >}}
 | 이벤트 유형 | 설명 |
 | --- | --- |
-| `hide.bs.tab` | 이 이벤트는 새로운 탭이 표시될 (따라서 이전에 활성화 한 탭이 숨겨집니다) 때 발생합니다. `event.target` 과 `event.relatedTarget` 을 사용하여 각각 현재 활성화된 탭과 곧 활성화 될 새로운 탭을 타깃으로 합니다.. |
+| `hide.bs.tab` | 이 이벤트는 새로운 탭이 표시될 (따라서 이전에 활성화 한 탭이 숨겨집니다) 때 발생합니다. `event.target` 과 `event.relatedTarget` 을 사용하여 각각 현재 활성화된 탭과 곧 활성화 될 새로운 탭을 타깃으로 합니다. |
 | `hidden.bs.tab` | 이 이벤트는 새로운 탭이 표시된 후에 발생합니다 (따라서 이전 활성화 탭은 숨겨집니다). `event.target` 과 `event.relatedTarget` 을 사용하여 각각 이전 활성화 탭과 새로운 활성화 탭을 타깃으로 합니다. |
 | `show.bs.tab` | 이 이벤트는 탭 표시시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. `event.target` 과 `event.relatedTarget` 을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭 (이용 가능한 경우)을 타깃으로 합니다. |
 | `shown.bs.tab` | 이 이벤트는 탭이 표시된 이후 탭을 표시할 때 발생합니다. `event.target` 과 `event.relatedTarget` 을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭(이용 가능한 경우)을 타깃으로 합니다. |

@@ -6,14 +6,10 @@ group: getting-started
 toc: true
 thumbnail: guides/bootstrap-webpack@2x.png
 ---
-{{< callout info >}}
-{{< partial "callout-untranslated.md" >}}
-{{< /callout >}}
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png" width="2000" height="1000" alt="">
 
 {{< callout >}}
-
-**끝부분으로 건너뛰고 싶으신가요?** 이 가이드의 소스 코드와 워킹 데모를 [twbs/examples 리포지토리](https://github.com/twbs/examples/tree/main/webpack)에서 다운로드 하세요. [StackBlitz에서 예제를 열어](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) 실시간으로 편집할 수도 있습니다.
+**끝으로 건너뛰고 싶으신가요?** 이 가이드의 소스 코드와 워킹 데모를 [twbs/examples 리포지토리](https://github.com/twbs/examples/tree/main/webpack)에서 다운로드 하세요. [StackBlitz에서 예제를 열어](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) 실시간으로 편집할 수도 있습니다.
 {{< /callout >}}
 
 ## 설정하기

@@ -6,6 +6,7 @@ description: Bootstrap에 포함된 내비게이션 컴포넌트를 어떻게 �
 group: components
 aliases: "/docs/5.3/components/navs/"
 toc: true
+untranslated: true
 ---
 
 ## 기본 내비게이션

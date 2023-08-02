@@ -5,6 +5,7 @@ title_en: Floating labels
 description: 입력 필드 위로 떠오르는 예쁘고 간단한 폼 라벨을 작성할 수 있습니다.
 group: forms
 toc: true
+untranslated: true
 ---
 
 ## 예시

@@ -5,6 +5,7 @@ title_en: Carousel
 description: 캐러셀은 이미지나 텍스트의 슬라이드를 가로로 슬라이드시켜 여러 개를 표시하는 컴포넌트입니다.
 group: components
 toc: true
+untranslated: true
 ---
 
 ## 작동 원리

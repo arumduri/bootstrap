@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko" data-bs-theme="auto">
+<html lang="{{ if (eq .Page.Params.untranslated true) }}en{{ else }}ko{{ end }}" data-bs-theme="auto">
   <head>
     {{ partial "header" . }}
   </head>

@@ -80,7 +80,7 @@ RTL 지원을 Bootstrap에 빌드하는 방법에는 CSS를 작성하고 사용�
 Sass 소스 또는 컴파일된 CSS를 통한 RTL 작업은 기본 LTR과 크게 다르지 않습니다.
 
 ## 사용자 지정 소스
-[사용자 지정]({{< docsref "/customize/sass" >}})과 관련하여 선호되는 방법은 변수, 맵 및 믹스인을 활용하는 것입니다. 이 접근 방식은 [RTLCSS가 작동하는 방식]((https://rtlcss.com/learn/getting-started/why-rtlcss/)) 덕분에 컴파일된 파일에서 사후 처리 되더라도 RTL에 대해 동일하게 작동합니다.
+[사용자 지정]({{< docsref "/customize/sass" >}})과 관련하여 선호되는 방법은 변수, 맵 및 믹스인을 활용하는 것입니다. 이 접근 방식은 [RTLCSS가 작동하는 방식](https://rtlcss.com/learn/getting-started/why-rtlcss/) 덕분에 컴파일된 파일에서 사후 처리 되더라도 RTL에 대해 동일하게 작동합니다.
 
 ### 사용자 지정 RTL 값
 

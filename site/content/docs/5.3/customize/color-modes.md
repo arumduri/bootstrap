@@ -5,6 +5,7 @@ description: Bootstrap now supports color modes, or themes, as of v5.3.0. Explor
 group: customize
 toc: true
 added: "5.3"
+untranslated: true
 ---
 
 {{< callout >}}

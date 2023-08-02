@@ -5,6 +5,7 @@ description: Link utilities are used to stylize your anchors to adjust their col
 group: utilities
 toc: true
 added: 5.3
+untranslated: true
 ---
 
 ## Link opacity

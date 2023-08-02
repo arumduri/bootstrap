@@ -8,6 +8,7 @@ aliases:
   - "/components/"
   - "/docs/5.3/components/"
 toc: true
+untranslated: true
 ---
 
 ## 작동 원리

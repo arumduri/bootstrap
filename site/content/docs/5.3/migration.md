@@ -6,6 +6,7 @@ description: Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내�
 group: migration
 aliases: "/migration/"
 toc: true
+untranslated: true
 ---
 
 ## v5.3.0

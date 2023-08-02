@@ -3,21 +3,21 @@
     <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-pink-rgb);">
       <svg class="bi fs-1"><use xlink:href="#braces"></use></svg>
     </div>
-    <h2 class="display-5 mb-3 fw-semibold lh-sm">Build and extend in real-time with CSS&nbsp;variables</h2>
+    <h2 class="display-5 mb-3 fw-semibold lh-sm">CSS 변수로 실시간으로 빌드 및 확장하기</h2>
     <p class="lead fw-normal">
-      Bootstrap 5 is evolving with each release to better utilize CSS variables for global theme styles, individual components, and even utilities. We provide dozens of variables for colors, font styles, and more at a <code>:root</code> level for use anywhere. On components and utilities, CSS variables are scoped to the relevant class and can easily be modified.
+      Bootstrap 5는 전역 테마 스타일, 개별 컴포넌트 및 유틸리티에 대한 CSS 변수를 더 잘 활용하기 위해 버전을 거듭할수록 발전하고 있습니다. 어디에서나 사용할 수 있도록 <code>:root</code> 수준에서 색상, 글꼴 스타일 등에 대한 수십 가지 변수를 제공합니다. 컴포넌트 및 유틸리티에서 CSS 변수는 관련 클래스로 범위가 지정되며 쉽게 수정할 수 있습니다.
     </p>
     <p class="d-flex align-items-start flex-column lead fw-normal mb-0">
       <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/" class="icon-link icon-link-hover fw-semibold mb-3">
-        Learn more about CSS variables
+        CSS 변수에 대해서 알아보기
         <svg class="bi"><use xlink:href="#arrow-right"></use></svg>
       </a>
     </p>
   </div>
   <div class="row gx-md-5">
     <div class="col-lg-6 mb-3">
-      <h3 class="fw-semibold">Using CSS variables</h3>
-      <p>Use any of our <a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">global <code>:root</code> variables</a> to write new styles. CSS variables use the <code>var(--bs-variableName)</code> syntax and can be inherited by children elements.</p>
+      <h3 class="fw-semibold">CSS 변수 사용하기</h3>
+      <p><a href="/docs/{{ .Site.Params.docs_version }}/customize/css-variables/#root-variables">전역 <code>:root</code> 변수</a>를 사용해서 새로운 스타일을 작성해보세요. CSS 변수는 <code>var(--bs-variableName)</code>구문을 사용하며 하위 요소에 상속할 수 있습니다.</p>
       {{ highlight (printf `.component {
   color: var(--bs-gray-800);
   background-color: var(--bs-gray-100);
@@ -30,8 +30,8 @@
 }`) "scss" "" }}
     </div>
     <div class="col-lg-6 mb-3">
-      <h3 class="fw-semibold">Customizing via CSS variables</h3>
-      <p>Override global, component, or utility class variables to customize Bootstrap just how you like. No need to redeclare each rule, just a new variable value.</p>
+      <h3 class="fw-semibold">CSS 변수를 통해서 사용자 지정하기</h3>
+      <p>전역, 컴포넌트 또는 유틸리티 클래스 변수를 재정의하여 원하는 대로 Bootstrap을 사용자 지정합니다. 각 규칙을 다시 선언할 필요가 없으며 새로운 변수 값만 있으면 됩니다.</p>
       {{ highlight (printf `body {
   --bs-body-font-family: var(--bs-font-monospace);
   --bs-body-line-height: 1.4;
