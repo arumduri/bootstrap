@@ -37,6 +37,8 @@
       title_ko: 옵션
     - title: Color
       title_ko: 색상
+    - title: Color modes
+      title_ko: 색상 모드
     - title: Components
       title_ko: 컴포넌트
     - title: CSS variables
@@ -169,6 +171,10 @@
       title_ko: 색상 & 배경색
     - title: Colored links
       title_ko: 컬러 링크
+    - title: Focus ring
+      title_ko: 포커스 링
+    - title: Icon link
+      title_ko: 
     - title: Position
       title_ko: 위치
     - title: Ratio
@@ -204,6 +210,10 @@
       title_ko: 플로트
     - title: Interactions
       title_ko: 상호작용
+    - title: Link
+      title_ko: 링크
+    - title: Object fit
+      title_ko: 요소 채움
     - title: Opacity
       title_ko: 불투명도
     - title: Overflow
@@ -222,6 +232,7 @@
       title_ko: 수직 정렬
     - title: Visibility
       title_ko: 가시성
+    - title: Z-index
 
 - title: Extend
   title_ko: 확장

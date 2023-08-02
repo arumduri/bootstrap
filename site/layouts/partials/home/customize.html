@@ -1,0 +1,59 @@
+<section class="col-lg-7 mb-5">
+  <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bs-primary-rgb);">
+    <svg class="bi fs-1"><use xlink:href="#palette2"></use></svg>
+  </div>
+  <h2 class="display-5 mb-3 fw-semibold lh-sm">Sass로 뭐든지 사용자 지정하기</h2>
+  <p class="lead fw-normal">
+    Bootstrap은 모듈러 및 사용자 지정 가능한 아키텍처를 위해서 Sass를 사용합니다. 원하는 컴포넌트만 포함시키거나, 그라디언트나 그림자와 같은 전역 옵션을 활성화하거나, 우리의 변수, 맵, 함수, 믹스인을 사용해서 직접 CSS를 작성할 수 있습니다.
+  </p>
+  <p class="d-flex justify-content-start lead fw-normal">
+    <a href="/docs/{{ .Site.Params.docs_version }}/customize/overview/" class="icon-link icon-link-hover fw-semibold">
+      사용자 지정하는 방법에 대해서 알아보기
+      <svg class="bi"><use xlink:href="#arrow-right"></use></svg>
+    </a>
+  </p>
+</section>
+
+<section class="row g-md-5 mb-5 pb-md-5">
+  <div class="col-lg-6">
+    <h3>Bootstrap의 모든 Sass 포함시키기</h3>
+    <p>하나의 스타일시트를 가져오기만 하면 CSS의 모든 기능을 사용할 수 있습니다.</p>
+    {{ highlight (printf `// Variable overrides first
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+`) "scss" "" }}
+    <p><a href="/docs/{{ .Site.Params.docs_version }}/customize/options/">전역 Sass 옵션</a>에 대해서 자세히 알아보세요.</p>
+  </div>
+  <div class="col-lg-6">
+    <h3>필요한 것만 포함시키기</h3>
+    <p>필요한 CSS만 포함시키는 것은 Bootstrap을 사용자 지정하기 가장 쉬운 방법입니다.</p>
+{{ highlight (printf `// Functions first
+@import "../node_modules/bootstrap/scss/functions";
+
+// Variable overrides second
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+
+// Required Bootstrap imports
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Optional components
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+`) "scss" "" }}
+    <p><a href="/docs/{{ .Site.Params.docs_version }}/customize/sass/">Bootstrap을 Sass와 사용</a>하는 방법에 대해서 자세히 알아보세요.</p>
+  </div>
+</section>

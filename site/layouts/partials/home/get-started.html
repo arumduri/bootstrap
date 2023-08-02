@@ -1,0 +1,58 @@
+<div class="col-lg-7 mx-auto pb-3 mb-3 mb-md-5 text-md-center">
+  <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-violet-rgb);">
+    <svg class="bi fs-1"><use xlink:href="#code"></use></svg>
+  </div>
+  <h2 class="display-5 mb-3 fw-semibold lh-sm">내가 원하는 방법으로 시작하기</h2>
+  <p class="lead fw-normal">
+    바로 Bootstrap으로 빌드해보세요. CDN을 사용하거나, 패키지 관리자를 통해 설치하거나, 소스 코드를 다운로드할 수도 있습니다.
+  </p>
+  <p class="d-flex justify-content-md-start justify-content-md-center lead fw-normal">
+    <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/" class="icon-link icon-link-hover fw-semibold ps-md-4">
+      설치 문서 읽어보기
+      <svg class="bi"><use xlink:href="#arrow-right"></use></svg>
+    </a>
+  </p>
+</div>
+
+<section class="row g-3 g-md-5 mb-5 pb-5 justify-content-center">
+  <div class="col-lg-6 py-lg-4 pe-lg-5">
+    <svg class="bi mb-2 fs-2 text-body-secondary"><use xlink:href="#box-seam"></use></svg>
+    <h3 class="fw-semibold">패키지 관리자로 설치하기</h3>
+    <p class="pe-lg-5">
+      npm, RubyGems, Composer, 또는 Meteor를 통해서 Bootstrap의 Sass 소스와 JavaScript를 설치하세요. 패키지 관리자를 통한 설치헤는 문서나 전체 빌드 스크립트가 포함되어 있지 않습니다. <a href="https://github.com/twbs/examples/">우리의 npm 템플릿 저장소</a>를 사용해서 빠르게 npm으로 Bootstrap 프로젝트를 생성할 수 있습니다.
+    </p>
+    {{ highlight (printf ("npm install bootstrap@%s") .Site.Params.current_version) "sh" "" }}
+    {{ highlight (printf ("gem install bootstrap -v %s") .Site.Params.current_ruby_version) "sh" "" }}
+    <p>
+      추가적인 정보와 다른 패키지 관리자에 대한 부분은 <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/download/">설치 문서를 읽어보세요</a>.
+    </p>
+  </div>
+  <div class="col-lg-6 py-lg-4 ps-lg-5 border-lg-start">
+    <svg class="bi mb-2 fs-2 text-body-secondary"><use xlink:href="#globe2"></use></svg>
+    <h3 class="fw-semibold">CDN으로 포함시키기</h3>
+    <p class="pe-lg-5">
+      Bootstrap의 컴파일된 CSS 또는 JS만 필요하다면, <a href="https://www.jsdelivr.com/package/npm/bootstrap">jsDelivr</a>를 사용할 수 있습니다. 단순한 <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#quick-start">빠른 시작</a>으로 어떻게 작동하는지 직접 보거나, <a href="/docs/{{ .Site.Params.docs_version }}/examples/">예시를 참고</a>해서 바로 다음 프로젝트를 시작해보세요. Popper와 Bootstrap의 JS를 <a href="/docs/{{ .Site.Params.docs_version }}/getting-started/introduction/#separate">따로</a> 포함시킬 수도 있습니다.
+    </p>
+    {{ highlight (printf (`<link href="%s" rel="stylesheet" integrity=%q crossorigin="anonymous">`) .Site.Params.cdn.css (.Site.Params.cdn.css_hash | safeHTMLAttr)) "html" "" }}
+    {{ highlight (printf (`<script src="%s" integrity=%q crossorigin="anonymous"></script>`) .Site.Params.cdn.js_bundle (.Site.Params.cdn.js_bundle_hash | safeHTMLAttr)) "html" "" }}
+  </div>
+
+  <div class="col-md-8 mx-auto text-center">
+    <h4 class="fw-semibold">시작하기 가이드 읽어보기</h4>
+    <p>공식 가이드에서 Bootstrap의 소스 파일을 포함시키는 방법에 대해 알아보세요.</p>
+    <div class="d-flex flex-wrap align-items-center justify-content-center gap-4 mt-4">
+      <a class="d-flex flex-column align-items-center text-decoration-none animate-img" href="/docs/{{ .Site.Params.docs_version }}/getting-started/webpack">
+        <img class="d-block mb-2" src="/docs/{{ .Site.Params.docs_version }}/assets/img/webpack.svg" alt="" width="72" height="72" loading="lazy">
+        <span class="text-body-secondary">Webpack</span>
+      </a>
+      <a class="d-flex flex-column align-items-center text-decoration-none animate-img" href="/docs/{{ .Site.Params.docs_version }}/getting-started/parcel">
+        <img class="d-block mb-2" src="/docs/{{ .Site.Params.docs_version }}/assets/img/parcel.png" alt="" width="72" height="72" loading="lazy">
+        <span class="text-body-secondary">Parcel</span>
+      </a>
+      <a class="d-flex flex-column align-items-center text-decoration-none animate-img" href="/docs/{{ .Site.Params.docs_version }}/getting-started/vite">
+        <img class="d-block mb-2" src="/docs/{{ .Site.Params.docs_version }}/assets/img/vite.svg" alt="" width="72" height="72" loading="lazy">
+        <span class="text-body-secondary">Vite</span>
+      </a>
+    </div>
+  </div>
+</section>

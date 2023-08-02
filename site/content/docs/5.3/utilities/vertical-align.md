@@ -1,0 +1,49 @@
+---
+layout: docs
+title: 수직 정렬
+title_en: Vertical alignment
+description: 인라인, 인라인 블록, 인라인 테이블 및 테이블 셀 요소의 수직 정렬을 쉽게 변경할 수 있습니다.
+group: utilities
+---
+
+[`vertical-alignment`](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align) 유틸리티를 사용하여 요소의 정렬을 변경합니다. 수직 정렬은 인라인, 인라인 블록, 인라인 테이블 및 테이블 셀 요소에만 영향을 미칩니다.
+
+필요에 따라 `.align-baseline`, `.align-top`, `.align-middle`, `.align-bottom`, `.align-text-bottom` 및 `.align-text-top` 중에서 선택할 수 있습니다.
+
+인라인이 아닌 콘텐츠 (예: `<div>` 등)를 세로로 가운데에 맞추려면 [flexbox 유틸리티]({{< docsref "/utilities/flex#align-items" >}})를 사용하세요.
+
+인라인 요소를 다음과 같이 사용할 수 있습니다:
+
+{{< example >}}
+<span class="align-baseline">baseline</span>
+<span class="align-top">top</span>
+<span class="align-middle">middle</span>
+<span class="align-bottom">bottom</span>
+<span class="align-text-top">text-top</span>
+<span class="align-text-bottom">text-bottom</span>
+{{< /example >}}
+
+테이블 셀을 다음과 같이 사용할 수 있습니다:
+
+{{< example >}}
+<table style="height: 100px;">
+  <tbody>
+    <tr>
+      <td class="align-baseline">baseline</td>
+      <td class="align-top">top</td>
+      <td class="align-middle">middle</td>
+      <td class="align-bottom">bottom</td>
+      <td class="align-text-top">text-top</td>
+      <td class="align-text-bottom">text-bottom</td>
+    </tr>
+  </tbody>
+</table>
+{{< /example >}}
+
+## CSS
+
+### Sass 유틸리티 API
+
+수직 정렬 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-vertical-align" file="scss/_utilities.scss" >}}
