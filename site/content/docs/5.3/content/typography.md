@@ -89,11 +89,11 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 
 디스플레이 제목은 `$display-font-sizes` Sass 맵과 두 개의 변수 `$display-font-weight` 및 `$display-line-height`를 통해 구성됩니다.
 
-Display headings are customizable via two variables, `$display-font-family` and `$display-font-style`.
+디스플레이 제목은 두 가지 변수인 `$display-font-family` 및 `$display-font-style`을 통해 사용자 지정할 수 있습니다.
 
 {{< scss-docs name="display-headings" file="scss/_variables.scss" >}}
 
-## 서두
+## 선두
 
 `.lead`를 추가하여 단락을 눈에 띄게 만드십시오.
 
