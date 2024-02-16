@@ -76,20 +76,14 @@ CDN을 사용하여 [콘텐츠 페이지에 나열된 추가 빌드]({{< docsref
 ## 다음 단계
 
 - Bootstrap이 활용하는 몇 가지 [중요한 전역 환경 설정](#중요한-전역-속성)을 확인해주세요.
-
 - [구성요소 섹션에서 Bootstrap]({{< docsref "/getting-started/contents/" >}})에 포함된 내용과 [JavaScript가 필요한 컴포넌트](#js-컴포넌트) 목록을 아래에서 읽어보세요.
-
 - 추가적인 부분이 필요하신가요? [패키지 관리자를 통해 소스 파일을 포함]({{< docsref "/getting-started/download#패키지-관리자" >}})하여 Bootstrap으로 빌드하는 것을 고려해보세요.
-
 - `<script type="module">`이 있는 모듈로 Bootstrap을 사용하고 싶으신가요? [Bootstrap을 모듈로 사용하기]({{< docsref "/getting-started/javascript#using-bootstrap-as-a-module" >}}) 섹션을 참고해주세요.
 
 ## JS 컴포넌트
 
-어떤 컴포넌트가 JavaScript나 Popper를 요구하는지 궁금하신가요? 아래 컴포넌트 링크를 눌러서 확인해보세요. 일반적인 페이지 구조에 대해 전혀 확신하지 못하신다면 예시 페이지 템플릿을 계속 읽어보세요.
+어떤 컴포넌트가 JavaScript나 Popper를 요구하는지 궁금하신가요? 일반적인 페이지 구조에 대해 전혀 확신하지 못하신다면 예시 페이지 템플릿을 계속 읽어보세요.
 
-<details>
-<summary class="bd-summary-link mb-3">JavaScript를 요구하는 컴포넌트 보기</summary>
-{{< markdown >}}
 - 경고 닫기
 - 상태 및 체크 박스/라디오 기능 버튼
 - 캐러셀의 모든 슬라이드 동작, 제어 및 인디케이터
@@ -102,8 +96,6 @@ CDN을 사용하여 [콘텐츠 페이지에 나열된 추가 빌드]({{< docsref
 - 스크롤 동작 및 네비게이션 갱신을 위한 스크롤스파이
 - 토스트 표시 및 닫기
 - 툴팁과 팝오버에서의 표시 및 위치 ([Popper](https://popper.js.org/)도 필요)
-{{< /markdown >}}
-</details>
 
 ## 중요한 전역 속성
 
@@ -156,6 +148,7 @@ CSS에서 보다 간단한 크기 조절을 위해서 우리는 `content-box`에
 
 - [공식 Bootstrap 블로그]({{< param blog >}})를 읽고 구독해 보세요.
 - [GitHub Discussions](https://github.com/twbs/bootstrap/discussions)에서 질문을 하거나 추가적인 정보를 얻을 수 있습니다.
+- [커뮤니티 Discord](https://discord.gg/bZUvakRU3M) 또는 [Bootstrap subreddit](https://reddit.com/r/bootstrap)에서 토론, 질문 등을 할 수 있습니다.
 - 다른 Bootstrap 유저들과 IRC에서 대화해 보세요. `irc.libera.chat` 서버의 `#bootstrap` 채널에서 만나실 수 있습니다.
 - 구현 방법에 대한 도움을 Stack Overflow (태그는 [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5))에서 받으실 수 있습니다.
 - 개발자 분들은 [npm](https://www.npmjs.com/search?q=keywords:bootstrap) 또는 비슷한 전송 매커니즘에서 Bootstrap 수정 패키지 또는 기능 추가 패키지에서 `bootstrap` 단어를 사용해서 찾기 쉽도록 해주셔야 합니다.

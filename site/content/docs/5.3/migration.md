@@ -351,20 +351,22 @@ For a complete list of changes, [see the v5.2.0 project on GitHub](https://githu
 
 Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/)
 
-<hr class="my-5">
+## v5.0.0
+
+<hr class="mb-4">
 
 {{< callout info >}}
 **Hey there!** Changes to our first major release of Bootstrap 5, v5.0.0, are documented below. They don't reflect the additional changes shown above.
 {{< /callout >}}
 
-## 의존성
+### 의존성
 
 - 더 이상 jQuery를 사용하지 않음.
 - Popper v1.x에서 Popper v2.x로 업그레이드.
 - Libsass가 권장되지 않아 Dart Sass로 Sass 컴파일러 변경.
 - 문서 작성을 위해 Jekyll에서 Hugo로 이동.
 
-## 브라우저 지원
+### 브라우저 지원
 
 - Internet Explorer 10 및 11 지원 종료
 - Microsoft Edge 16 미만 (Legacy Edge) 지원 종료
@@ -375,7 +377,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 <hr class="my-5">
 
-## 문서 변경사항
+### 문서 변경사항
 
 - 첫페이지, 문서 레이아웃과 하단의 디자인 변경.
 - [new Parcel guide]({{< docsref "/customize/overview" >}}) 추가.
@@ -387,7 +389,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 - 사이트와 문서 버전의 이동을 손쉽게 하기 위해 navbar의 디자인을 변경하고 새로운 subnav를 추가.
 - 검색에 새로운 키보드 단축키를 추가: <kbd>Ctrl + /</kbd>.
 
-## Sass
+### Sass
 
 - 중복된 값을 쉽게 삭제할 수 있도록 기본 Sass 맵의 병합을 폐지하였습니다. 앞으로는 `$theme-colors`과 같은 모든 값을 Sass 맵에서 정의해야 합니다. 자세한 내용은 [Sass 맵]({{< docsref "/customize/sass#maps-and-loops" >}})를 참조해 주세요.
 
@@ -425,7 +427,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - `border-radius()` 믹스인에 기본 값이 설정 되었습니다.
 
-## 색상 시스템
+### 색상 시스템
 
 - `color-level()`과 `$theme-color-interval`로 동작하던 컬러 시스템이 삭제되고 새로운 컬러 시스템이 채택 되었습니다. 기본적으로 모든 코드에 사용된 `lighten()`과 `darken()` 함수는 `tint-color()`와 `shade-color()`로 대체 되었습니다. 이 함수는 색의 명도를 일정량 변경하는 대신, 그 색에 흰색이나 검은색을 혼합 합니다. `shift-color()`는 양수 혹은 음수의 weight 매개 변수에 따라 색상을 바꾸거나 음영을 주기도 합니다. [#30622](https://github.com/twbs/bootstrap/pull/30622).
 
@@ -435,7 +437,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - 색상을 적절하게 혼합한 새로운 사용자 정의 `tint-color()`와 `shade-color()` 함수를 사용해 컬러 시스템을 지원합니다.
 
-## 그리드 업데이트
+### 그리드 업데이트
 
 - **새로운 중단점!** `1400px` 이상의 경우, 새로운 `xxl` 중단점를 추가. 다른 중단점는 변경 없이 그대로.
 
@@ -455,7 +457,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - 크기를 지정하지 않아도 기본적으로 균등한 열이 되도록 `make-col` 믹스인을 업데이드 하였습니다.
 
-## 콘텐츠, Reboot 등
+### 콘텐츠, Reboot 등
 
 - **[RFS]({{< docsref "/getting-started/rfs" >}})가 기본으로 활성화 되었습니다.** Headings using the `font-size()` 믹스인을 사용한 제목은 뷰포트에 맞추어 자동적으로 `font-size`를 조정합니다. _이 기능은 이전에 v4에서 opt-in 이었습니다._
 
@@ -487,11 +489,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - `prefers-reduced-motion` 미디어 쿼리를 통해 움직임을 억제하는 사용자를 제외하고 글로벌하게 `scroll-behavior: smooth`를 적용하는 `$enable-smooth-scroll`를 추가. [#31877](https://github.com/twbs/bootstrap/pull/31877)
 
-## RTL
+### RTL
 
 - 수평 방항으로 특화된 변수, 유틸리티 그리고 믹스인의 이름이 플레스 박스의 레이아웃에서 볼수 있는 - 예를 들어, `left` 와 `right` 대신에 `start`와 `end`과 같이 - 논리적인 속성으로 변경되었습니다.
 
-## 폼
+### 폼
 
 - **새로운 플로팅 폼 추가!** 플로팅 라벨의 예시를 완전히 지원되는 폼 컴포넌트로 승격시켰습니다. [새로운 플로팅 라벨 페이지 확인하러 가기]({{< docsref "/forms/floating-labels" >}})
 
@@ -522,21 +524,21 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 <hr class="my-5">
 
-## 컴포넌트
+### 컴포넌트
 
 - 경고창, 브레드크럼, 카드, 드롭다운, 목록 그룹, 모달, 팝오버 그리고 툴팁의 `padding` 값을 `$spacer` 변수를 기반으로 통일. [#30564](https://github.com/twbs/bootstrap/pull/30564).
 
-### 아코디언
+#### 아코디언
 
 - [새로운 아코디언 컴포넌트]({{< docsref "/components/accordion" >}}) 추가.
 
-### 경고창
+#### 경고창
 
 - 경고창에 [아이콘 사용한 예시]({{< docsref "/components/alerts#icons" >}})를 추가.
 
 - 각 경고창에서 `currentColor`를 사용하게 되어 `<hr>` 사용자 정의 스타일은 삭제.
 
-### 배지
+#### 배지
 
 - <span class="badge bg-danger">Breaking</span> 배경 유틸리티의 모든 `.badge-*` 색상 클래스 삭제 (예를 들어, `.badge-primary` 대신 `.bg-primary` 사용).
 
@@ -546,13 +548,13 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - 배지의 기본 패딩을`.25em`/`.5em`에서 `.35em`/`.65em`으로 변경.
 
-### 브레드크럼
+#### 브레드크럼
 
 - `padding`, `background-color`, 그리고 `border-radius`를 제거하여 브레드크럼의 기본 모양을 단순화했습니다.
 
 - CSS를 다시 컴파일할 필요 없이 쉽게 재정의 할 수 있도록 새로운 CSS 사용자 정의 속성인 `--bs-breadcrumb-divider`를 추가했습니다.
 
-### 버튼
+#### 버튼
 
 - <span class="badge bg-danger">Breaking</span> **체크 박스나 라디오 버튼에 있는 [토글 버튼]({{< docsref "/forms/checks-radios#toggle-buttons" >}})은, JavaScript가 필요없는 새로운 마크업을 채용하고 있습니다.** 더 이상 감싸는 요소는 필요하지 않고, 바로 `<input>`에 `.btn-check`를 추가해 `.btn` 클래스의 `<label>`과 조합 합니다. [#30650](https://github.com/twbs/bootstrap/pull/30650). _이 건에 관한 문서는 버튼 페이지에서 폼 섹션으로 이동하였습니다._
 
@@ -564,7 +566,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - 비활성화 버튼은 `pointer-events: none;` 되었습니다.
 
-### 카드
+#### 카드
 
 - <span class="badge bg-danger">Breaking</span> 그리드에 유리하게 `.card-deck`을 삭제. card decks 재현을 위해 부모에 `.row-cols-*` 컨테이너를 추가하고 카드를 column 클래스로 감쌉니다. (반응형 정렬을 보다 효과적으로 제어할 수 있습니다).
 
@@ -572,13 +574,13 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> `.card` 기반의 아코디언을 [새로운 아코디언 컴포넌트]({{< docsref "/components/accordion" >}})로 교체히였습니다.
 
-### 캐러셀
+#### 캐러셀
 
 - 진한 텍스트, 컨트롤과 기호(밝은 배경에 최적) 표시를 위해 [`.carousel-dark`]({{< docsref "/components/carousel#dark-variant" >}})가 추가되었습니다.
 
 - 캐러셀의 chevron 아이콘을 [Bootstrap Icons]({{< param "icons" >}})의 새로운 SVG로 대체하였습니다.
 
-### 닫기 버튼
+#### 닫기 버튼
 
 - <span class="badge bg-danger">Breaking</span> `.close`에서 보다 일반적인 이름인 `.btn-close`으로 변경되었습니다.
 
@@ -586,11 +588,11 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - 어두운 배경에서 고대비 닫기 아이콘을 활성화하려고 `filter: invert(1)`를 사용한 새로운 `.btn-close-white` 변형 클래스가 추가되었습니다.
 
-### 콜랩스
+#### 콜랩스
 
 - 아코디언에 스크롤 고정 장치가 삭제 되었습니다.
 
-### 드롭다운
+#### 드롭다운
 
 - 어두운 드롭다운을 위해 새로운 `.dropdown-menu-dark` 변형 클래스와 관련된 변수를 추가하였습니다.
 
@@ -608,46 +610,46 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - 드롭다운이 이제 `<li>`에 싸여진 `.dropdown-item`를 지원합니다.
 
-### 점보트론
+#### 점보트론
 
 - <span class="badge bg-danger">Breaking</span> 유틸리티로 만들수 있기 때문에 점보트론 컴포넌트는 삭제되었습니다. [데모로 새로운 점보트론의 사용을 확인해 주세요.]({{< docsref "/examples/jumbotron" >}})
 
-### 목록 그룹
+#### 목록 그룹
 
 - 목록 그룹에 새로운 [`.list-group-numbered` 제어자 클래스]({{< docsref "/components/list-group#numbered" >}})가 추가되었습니다.
 
-### 내비게이션과 탭
+#### 내비게이션과 탭
 
 - `.nav-link` 클래스에 `font-size`, `font-weight`, `color`, `:hover` `color`에 대한 새로운 변수 `null`을 추가했습니다.
 
-### 내비게이션 바
+#### 내비게이션 바
 
 - <span class="badge bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).
 - <span class="badge bg-danger">Breaking</span> 내비게이션 바는 컨테이너가 필요하게 되어 간격 요건이나 필요한 CSS가 대폭 간소화되었습니다.
 
-### 오프캔버스
+#### 오프캔버스
 
 - 새로운 [오프캔버스 컴포넌트]({{< docsref "/components/offcanvas" >}})가 추가되었습니다.
 
-### 페이지네이션
+#### 페이지네이션
 
 - 페이지네이션 링크의 `margin-left`를 재정의할 수 있게 되어, 떨어져 있을 때 모든 모서리가 다이내믹하게 둥글어지게 되었습니다.
 
 - 페이지네이션 링크에 `트랜지션`을 추가하였습니다.
 
-### 팝오버
+#### 팝오버
 
 - <span class="badge bg-danger">Breaking</span> 기본 팝오버 템플릿의 `.arrow` 이름을 `.popover-arrow`로 변경하였습니다.
 
 - `whiteList` 옵션명을 `allowList`로 변경하였습니다.
 
-### 스피너
+#### 스피너
 
 - 스피너의 애니메이션의 속도를 줄임으로써 `prefers-reduced-motion: reduce`를 존중하게 되었습니다. [#31882](https://github.com/twbs/bootstrap/pull/31882).
 
 - 스피너의 수직 방향 배치를 개선하였습니다.
 
-### 토스트
+#### 토스트
 
 - [위치 지정 유틸리티]({{< docsref "/utilities/position" >}})를 사용하여 `.toast-container` 안의 토스트를 [배치]({{< docsref "/components/toasts#placement" >}})시킬 수 있게 되었습니다.
 
@@ -655,7 +657,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - 토스트에서 `overflow: hidden`을 삭제하고 `calc()` 함수로 적절한 `border-radius`를 대체하였습니다.
 
-### 툴팁
+#### 툴팁
 
 - <span class="badge bg-danger">Breaking</span> 기본 툴팁 템플렛에서 `.arrow` 이름을 `.tooltip-arrow`으로 변경하였습니다.
 
@@ -663,7 +665,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - <span class="badge bg-danger">Breaking</span> `whiteList` 옵션명이 `allowList`로 변경되었습니다.
 
-## 유틸리티
+### 유틸리티
 
 - <span class="badge bg-danger">Breaking</span> RTL 지원이 추가됨에 따라 방향적인 이름 대신 논리적인 속성명으로 여러 유틸리티의 이름이 변경되었습니다:
   - `.left-*`와 `.right-*`에서 `.start-*`와 `.end-*`로 변경.
@@ -704,7 +706,6 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - 컨테이너 작업에도 사용할 수 있도록 `.visually-hidden-focusable` 도우미를 `:focus-within`로 확장하였습니다.
 
-
 ## 도우미
 
 - <span class="badge bg-danger">Breaking</span> 더욱 편리한 CSS 변수 추가로 동작이 개선된 **Responsive embed가 [ratio 도우미]({{< docsref "/helpers/ratio" >}})** 로 이름이 변경되었습니다.
@@ -720,7 +721,7 @@ Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.co
 
 - `bootstrap-utilities.css` 안에 도우미가 포함되어 있습니다. 도우미는 더 이상 사용자 정의 빌드로 따로 포함할 필요가 없습니다.
 
-## JavaScript
+### JavaScript
 
 - **jQuery에 대한 의존을 중단**하고 플러그인을 통상적인 JavaScript로 다시 썼습니다.
 

@@ -22,7 +22,8 @@ Bootstrap의 CSS는 모든 프레임워크와 함께 사용할 수 있지만 **B
   {{< callout >}}
   **직접 사용해보세요!** [twbs/examples 리포지토리](https://github.com/twbs/examples/tree/main/react-nextjs)에서 실제로 Bootstrap과 함께 작동하는 React, Next.js, React Bootstrap 데모의 소스 코드를 다운로드해보세요. [StackBlitz에서 테스트](https://stackblitz.com/github/twbs/examples/tree/main/react-nextjs?file=src%2Fpages%2Findex.tsx)해볼 수도 있습니다.
   {{< /callout >}}
-- Vue: [BootstrapVue](https://bootstrap-vue.org/) (현재 Vue 2 와 Bootstrap 4만 지원)
+- Vue: [BootstrapVue](https://bootstrap-vue.org/) (Bootstrap 4)
+- Vue 3: [BootstrapVueNext](https://bootstrap-vue-next.github.io/bootstrap-vue-next/) (Bootstrap 5, 현재 알파 버전)
 - Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
 
 ## Bootstrap을 모듈로 사용하기

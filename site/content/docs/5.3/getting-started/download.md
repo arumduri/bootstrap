@@ -53,6 +53,24 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
 ```
 
+### Alternative CDNs
+
+We recommend [jsDelivr](https://www.jsdelivr.com/) and use it ourselves in our documentation. However, in some cases—like in some specific countries or environments—you may need to use other CDN providers like [cdnjs](https://cdnjs.com/) or [unpkg](https://unpkg.com/).
+
+You'll find the same files on these CDN providers, albeit with different URLs. With cdnjs, you can [use this direct Bootstrap package link](https://cdnjs.com/libraries/bootstrap) to copy and paste ready-to-use HTML snippets for each dist file from any version of Bootstrap.
+
+{{< callout warning>}}
+**If the SRI hashes differ for a given file, you shouldn't use the files from that CDN, because it means that the file was modified by someone else.**
+{{< /callout >}}
+
+Note that you should compare same length hashes, e.g. `sha384` with `sha384`, otherwise it's expected for them to be different.
+As such, you can use an online tool like [SRI Hash Generator](https://www.srihash.org/) to make sure that the hashes are the same for a given file.
+Alternatively, assuming you have OpenSSL installed, you can achieve the same from the CLI, for example:
+
+```sh
+openssl dgst -sha384 -binary bootstrap.min.js | openssl base64 -A
+```
+
 ## 패키지 관리자
 
 Bootstrap의 **소스 파일**을 유명한 패키지 관리자들을 사용해서 거의 모든 프로젝트에 Bootstrap을 사용할 수 있습니다. 패키지 관리자와 상관없이 Bootstrap은 공식 컴파일된 버전과 일치하는 구성을 위해 **[Sass 컴파일러]({{< docsref "/getting-started/contribute#sass" >}})와 [Autoprefixer](https://github.com/postcss/autoprefixer)를 필요로 합니다**.
