@@ -13,7 +13,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository == 'arumduri/icons' && startsWith(github.ref, 'refs/tags/v')
+    if: github.repository == 'arumduri/bootstrap' && startsWith(github.ref, 'refs/tags/v')
 
     steps:
       - name: Clone repository
