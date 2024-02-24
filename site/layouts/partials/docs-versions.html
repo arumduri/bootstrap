@@ -18,7 +18,7 @@
     <li><h6 class="dropdown-header">v5 버전</h6></li>
     <li>
       <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="{{ if .IsHome }}/{{ else }}/docs/{{ .Site.Params.docs_version }}/{{ $versions_link }}{{ end }}">
-        Latest ({{ .Site.Params.docs_version }}.x)
+        최신 ({{ .Site.Params.docs_version }}.x)
         <svg class="bi"><use xlink:href="#check2"></use></svg>
       </a>
     </li>
@@ -26,7 +26,7 @@
       {{- if (eq .Page.Params.added "5.3") }}
         <div class="dropdown-item disabled">v5.2.3</div>
       {{- else }}
-        <a class="dropdown-item" href="https://getbootstrap.com/docs/5.2/{{ $versions_link }}">v5.2.3</a>
+        <a class="dropdown-item" href="https://getbootstrap.kr/docs/5.2/{{ $versions_link }}">v5.2.3</a>
       {{- end }}
     </li>
     <li>
