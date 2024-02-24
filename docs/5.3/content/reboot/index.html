@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="ko" data-bs-theme="auto">
+<html lang="en" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="단일 파일에 있는 요소별 CSS 변경 모음인 Reboot는 Bootstrap을 초기에 빌드하는 우아하고 일관되며 간단한 기준선을 제공합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-<meta name="generator" content="Hugo 0.115.4">
+<meta name="generator" content="Hugo 0.122.0">
 
 <meta name="docsearch:language" content="ko">
 <meta name="docsearch:version" content="5.3">
@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 <link href="/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
@@ -281,21 +281,21 @@
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+                  <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
                   Light
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+                  <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
                   Dark
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-                  <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+                  <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
                   Auto
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
@@ -531,7 +531,7 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.1/site/content/docs/5.3/content/reboot.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/content/reboot.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
               GitHub에서 보기
             </a>
           </div>
@@ -554,12 +554,13 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#접근">접근</a></li>
+    <li><a href="#css-변수">CSS 변수</a></li>
     <li><a href="#페이지-기본값">페이지 기본값</a></li>
     <li><a href="#기본-글꼴-스택">기본 글꼴 스택</a></li>
     <li><a href="#제목">제목</a></li>
     <li><a href="#paragraphs">Paragraphs</a></li>
     <li><a href="#links">Links</a></li>
-    <li><a href="#horizontal-rules">Horizontal rules</a></li>
+    <li><a href="#수평-규칙">수평 규칙</a></li>
     <li><a href="#목록">목록</a></li>
     <li><a href="#인라인-코드">인라인 코드</a></li>
     <li><a href="#코드-블록">코드 블록</a></li>
@@ -591,6 +592,11 @@
         
 
         
+          <div class="bd-callout bd-callout-info">
+    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
+    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
+</div>
+        
 
         <h2 id="접근">접근 <a class="anchor-link" href="#%ec%a0%91%ea%b7%bc" aria-label="Link to this section: 접근"></a></h2>
 <p>Reboot는 Normalize를 기반으로 빌드되어 요소 선택자만 사용하여 다소 독선적인 스타일을 가진 많은 HTML 요소를 제공합니다. 추가 스타일링은 클래스에서만 수행됩니다. 예를 들어 더 간단한 기준선을 위해 일부 <code>&lt;table&gt;</code> 스타일을 재부팅하고 나중에 <code>.table</code>, <code>.table-border</code> 등을 제공합니다.</p>
@@ -601,14 +607,14 @@
 <li>더 쉬운 기기 간 크기 확장을 위해서 블럭 요소의 <code>margin</code>에 <code>rem</code>을 사용합니다.</li>
 <li>가능하면 <code>inherit</code>를 사용하여 <code>font</code> 관련 속성의 선언을 최소한으로 유지합니다.</li>
 </ul>
-<h2 id="페이지-기본값">페이지 기본값 <a class="anchor-link" href="#%ed%8e%98%ec%9d%b4%ec%a7%80-%ea%b8%b0%eb%b3%b8%ea%b0%92" aria-label="Link to this section: 페이지 기본값"></a></h2>
+<h2 id="css-변수">CSS 변수 <a class="anchor-link" href="#css-%eb%b3%80%ec%88%98" aria-label="Link to this section: CSS 변수"></a></h2>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 
-<p>With v5.1.1, we standardized our required <code>@import</code>s across all our CSS bundles (including <code>bootstrap.css</code>, <code>bootstrap-reboot.css</code>, and <code>bootstrap-grid.css</code>) to include <code>_root.scss</code>. This adds <code>:root</code> level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately Bootstrap 5 will continue to see more <a href="/docs/5.3/customize/css-variables/">CSS variables</a> added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don&rsquo;t use CSS variables, you still have all the power of Sass. <strong>This is still in-progress and will take time to fully implement.</strong></p>
-<p>For example, consider these <code>:root</code> CSS variables for common <code>&lt;body&gt;</code> styles:</p>
+<p>v5.1.1에서는 모든 CSS 번들(<code>bootstrap.css</code>, <code>bootstrap-reboot.css</code>, <code>bootstrap-grid.css</code> 포함)에서 필수 <code>@import</code>를 표준화하여 <code>_root.scss</code>를 포함하도록 했습니다. 이렇게 하면 해당 번들에서 사용되는 변수의 수에 관계없이 모든 번들에 <code>:root</code> 수준의 CSS 변수가 추가됩니다. 궁극적으로 부트스트랩 5는 시간이 지남에 따라 더 많은 <a href="/docs/5.3/customize/css-variables/">CSS 변수</a>를 추가하여 Sass를 항상 다시 컴파일할 필요 없이 더 많은 실시간 사용자 정의 기능을 제공할 것입니다. 우리의 접근 방식은 소스 Sass 변수를 가져와 CSS 변수로 변환하는 것입니다. 이렇게 하면 CSS 변수를 사용하지 않더라도 Sass의 모든 기능을 사용할 수 있습니다. <strong>이 작업은 아직 진행 중이며 완전히 구현하는 데 시간이 걸립니다.</strong></p>
+<p>예를 들어 일반적인 <code>&lt;body&gt;</code> 스타일에 대한 <code>:root</code> CSS 변수를 생각해 보겠습니다:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
-      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.1/scss/_root.scss">scss/_root.scss</a>
+      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_root.scss">scss/_root.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -642,10 +648,10 @@
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}tertiary-color-rgb</span><span class="o">:</span> <span class="si">#{</span><span class="nf">to-rgb</span><span class="p">(</span><span class="nv">$body-tertiary-color</span><span class="p">)</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}tertiary-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$body-tertiary-bg</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}tertiary-bg-rgb</span><span class="o">:</span> <span class="si">#{</span><span class="nf">to-rgb</span><span class="p">(</span><span class="nv">$body-tertiary-bg</span><span class="p">)</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
-<p>In practice, those variables are then applied in Reboot like so:</p>
+<p>실제로 이러한 변수는 다음과 같이 Reboot에 적용됩니다:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
-      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.1/scss/_reboot.scss">scss/_reboot.scss</a>
+      <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_reboot.scss">scss/_reboot.scss</a>
       <div class="d-flex ms-auto">
         <button type="button" class="btn-clipboard mt-0 me-0" title="Copy to clipboard">
           <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
@@ -664,11 +670,19 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">-webkit-tap-highlight-color</span><span class="o">:</span> <span class="nf">rgba</span><span class="p">(</span><span class="nv">$black</span><span class="o">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// 4
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span></code></pre></div></div>
-<p>Which allows you to make real-time customizations however you like:</p>
+<p>이를 통해 원하는 대로 실시간 커스터마이징을 할 수 있습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;--bs-body-color: #333;&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- ... --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h2 id="기본-글꼴-스택">기본 글꼴 스택 <a class="anchor-link" href="#%ea%b8%b0%eb%b3%b8-%ea%b8%80%ea%bc%b4-%ec%8a%a4%ed%83%9d" aria-label="Link to this section: 기본 글꼴 스택"></a></h2>
+</span></span></code></pre></div><h2 id="페이지-기본값">페이지 기본값 <a class="anchor-link" href="#%ed%8e%98%ec%9d%b4%ec%a7%80-%ea%b8%b0%eb%b3%b8%ea%b0%92" aria-label="Link to this section: 페이지 기본값"></a></h2>
+<p>페이지 전체에 더 나은 기본값을 제공하도록 <code>&lt;html&gt;</code> 및 <code>&lt;body&gt;</code> 요소가 업데이트되었습니다. 좀 더 구체적으로 설명하면:</p>
+<ul>
+<li><code>box-sizing</code>는 <code>*::before</code> 및 <code>*::after</code>이후, <code>border-box</code>를 포함한 모든 요소에서 전역적으로 설정됩니다. 이렇게 하면 패딩이나 테두리로 인해 요소의 선언된 너비가 초과되지 않습니다.</li>
+<li><code>&lt;html&gt;</code>에는 기본 <code>font-size</code>가 선언되지 않고 16px(브라우저 기본값)가 사용됩니다. <code>&lt;body&gt;</code>에는 미디어 쿼리를 통해 반응형 글꼴 크기를 쉽게 조정하는 동시에 사용자 기본 설정을 존중하고 접근성을 높일 수 있도록<code>font-size: 1rem</code>이 적용됩니다. 이 브라우저 기본값은 <code>$font-size-root</code> 변수를 수정하여 재정의할 수 있습니다.</li>
+<li><code>&lt;body&gt;</code>는 또한 <code>font-family</code>, <code>font-weight</code>, <code>line-height</code> 및 <code>color</code>을 설정합니다. 이는 나중에 일부 폼 요소에서 상속되어 글꼴 불일치를 방지합니다.</li>
+<li>안전을 위해 <code>&lt;body&gt;</code>에는 선언된 <code>background-color</code>이 있으며 기본값은 <code>#fff</code>입니다.</li>
+</ul>
+<h2 id="기본-글꼴-스택">기본 글꼴 스택 <a class="anchor-link" href="#%ea%b8%b0%eb%b3%b8-%ea%b8%80%ea%bc%b4-%ec%8a%a4%ed%83%9d" aria-label="Link to this section: 기본 글꼴 스택"></a></h2>
 <p>Bootstrap은 모든 장치 및 OS에서 최적의 텍스트 렌더링을 위해 &ldquo;기본 글꼴 스택&rdquo; 또는 &ldquo;시스템 글꼴 스택&quot;을 사용합니다. 이러한 시스템 글꼴은 화면 렌더링 개선, 가변 글꼴 지원 등을 포함하여 오늘날의 장치를 염두에 두고 특별히 설계되었습니다. <a href="https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/"><em>Smashing Magazine</em>의 글에서 기본 글꼴 스택</a>에 대해서 자세히 알아보세요.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$font-family-sans-serif</span><span class="o">:</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// Cross-platform generic font family (default user interface font)</span>
@@ -680,7 +694,7 @@
 </span></span><span class="line"><span class="cl">  <span class="c1">// Android</span>
 </span></span><span class="line"><span class="cl">  <span class="n">Roboto</span><span class="o">,</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// older macOS and iOS</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;Helvetica Neue&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;Helvetica Neue&#34;</span><span class="o">,</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// Linux</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;Noto Sans&#34;</span><span class="o">,</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;Liberation Sans&#34;</span><span class="o">,</span>
@@ -693,7 +707,7 @@
 </span></span></code></pre></div><p>글꼴 스택에는 이모지 글꼴이 포함되어 있기 때문에 많은 일반적인 기호/딩뱃 유니코드 텍스트가 여러 색상의 그림 텍스트로 렌더링됩니다. 브라우저/플랫폼의 기본 이모티콘 글꼴에 사용된 스타일에 따라 모양이 달라지며 CSS <code>color</code> 스타일의 영향을 받지 않습니다.</p>
 <p>이 <code>font-family</code>는 자동으로 <code>&lt;body</code>에 적용되며 Bootstrap을 통해 자동으로 전역 상속됩니다. 전역 <code>font-family</code>를 바꾸려면 <code>$font-family-base</code>를 업데이트한 다음 Bootstrap을 다시 컴파일해주세요.</p>
 <h2 id="제목">제목 <a class="anchor-link" href="#%ec%a0%9c%eb%aa%a9" aria-label="Link to this section: 제목"></a></h2>
-<p>All heading elements—<code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> have their <code>margin-top</code> removed, <code>margin-bottom: .5rem</code> set, and <code>line-height</code> tightened. 제목은 기본적으로 <code>color</code>를 상속하지만 선택적 CSS 변수인 <code>--bs-heading-color</code>를 통해 재정의할 수도 있습니다.</p>
+<p><code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code>와 같은 모든 제목 요소는  <code>margin-top</code>이 제거되며, <code>margin-bottom: .5rem</code>이 추가되고 <code>line-height</code>가 적용됩니다. 제목은 기본적으로 <code>color</code>를 상속하지만 선택적 CSS 변수인 <code>--bs-heading-color</code>를 통해 재정의할 수도 있습니다.</p>
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
@@ -731,9 +745,12 @@
 
 <h2 id="paragraphs">Paragraphs <a class="anchor-link" href="#paragraphs" aria-label="Link to this section: Paragraphs"></a></h2>
 <p>All <code>&lt;p&gt;</code> elements have their <code>margin-top</code> removed and <code>margin-bottom: 1rem</code> set for easy spacing.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <p>This is an example paragraph.</p>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -743,13 +760,17 @@
             <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
           </button>
         </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is an example paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is an example paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="links">Links <a class="anchor-link" href="#links" aria-label="Link to this section: Links"></a></h2>
 <p>Links have a default <code>color</code> and underline applied. While links change on <code>:hover</code>, they don&rsquo;t change based on whether someone <code>:visited</code> the link. They also receive no special <code>:focus</code> styles.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <a href="#">This is an example link</a>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -759,12 +780,16 @@
             <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
           </button>
         </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>This is an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>This is an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <p>As of v5.3.x, link <code>color</code> is set using <code>rgba()</code> and new <code>-rgb</code> CSS variables, allowing for easy customization of link color opacity. Change the link color opacity with the <code>--bs-link-opacity</code> CSS variable:</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <a href="#" style="--bs-link-opacity: .5">This is an example link</a>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -774,12 +799,16 @@
             <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
           </button>
         </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;--bs-link-opacity: .5&#34;</span><span class="p">&gt;</span>This is an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;--bs-link-opacity: .5&#34;</span><span class="p">&gt;</span>This is an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <p>Placeholder links—those without an <code>href</code>—are targeted with a more specific selector and have their <code>color</code> and <code>text-decoration</code> reset to their default values.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <a>This is a placeholder link</a>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -789,11 +818,14 @@
             <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
           </button>
         </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>This is a placeholder link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>This is a placeholder link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
-<h2 id="horizontal-rules">Horizontal rules <a class="anchor-link" href="#horizontal-rules" aria-label="Link to this section: Horizontal rules"></a></h2>
-<p>The <code>&lt;hr&gt;</code> element has been simplified. Similar to browser defaults, <code>&lt;hr&gt;</code>s are styled via <code>border-top</code>, have a default <code>opacity: .25</code>, and automatically inherit their <code>border-color</code> via <code>color</code>, including when <code>color</code> is set via the parent. They can be modified with text, border, and opacity utilities.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<h2 id="수평-규칙">수평 규칙 <a class="anchor-link" href="#%ec%88%98%ed%8f%89-%ea%b7%9c%ec%b9%99" aria-label="Link to this section: 수평 규칙"></a></h2>
+<p><code>&lt;hr&gt;</code> 요소가 단순화되었습니다. 브라우저 기본값과 유사하게 <code>&lt;hr&gt;</code>는 <code>border-top</code>을 통해 스타일이 지정되고, 기본 <code>opacity: .25</code>를 가지며, 부모를 통해 <code>color</code>이 설정된 경우를 포함하여 <code>color</code>을 통해 <code>border-color</code>을 자동으로 상속받습니다. 텍스트, 테두리 및 불투명도 유틸리티를 사용하여 수정할 수 있습니다.</p>
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <hr>
 
 <div class="text-success">
@@ -802,7 +834,8 @@
 
 <hr class="border border-danger border-2 opacity-50">
 <hr class="border border-primary border-3 opacity-75">
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -819,10 +852,11 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">hr</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;border border-danger border-2 opacity-50&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">hr</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;border border-primary border-3 opacity-75&#34;</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">hr</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;border border-primary border-3 opacity-75&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="목록">목록 <a class="anchor-link" href="#%eb%aa%a9%eb%a1%9d" aria-label="Link to this section: 목록"></a></h2>
-<p>모든 목록 (<code>&lt;ul&gt;</code>,<code>&lt;ol&gt;</code>, <code>&lt;dl&gt;</code>)에는 <code>margin-top</code>이 제거되고 <code>margin-bottom: 1rem</code>이 제거됩니다. 중첩된 목록에는 <code>margin-bottom</code>이 없습니다. 또한<code>&lt;ul&gt;</code> 및 <code>&lt;ol&gt;</code> 요소에서 <code>padding-left</code>를 재설정했습니다.</p>
+<p>모든 목록(<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;dl&gt;</code>)에는 <code>margin-top</code>이 제거되고 <code>margin-bottom: 1rem</code>이 적용됩니다. 중첩된 목록에는 <code>margin-bottom</code>이 없습니다. 또한<code>&lt;ul&gt;</code> 및 <code>&lt;ol&gt;</code> 요소에서 <code>padding-left</code>를 재설정했습니다.</p>
 <div class="bd-example">
 <ul>
 <li>All lists have their top margin removed</li>
@@ -857,9 +891,12 @@
 </div>
 <h2 id="인라인-코드">인라인 코드 <a class="anchor-link" href="#%ec%9d%b8%eb%9d%bc%ec%9d%b8-%ec%bd%94%eb%93%9c" aria-label="Link to this section: 인라인 코드"></a></h2>
 <p>인라인 코드 스니펫을 <code>&lt;code&gt;</code>로 묶습니다. HTML 꺾쇠 괄호를 이스케이프해야 합니다.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 For example, <code>&lt;section&gt;</code> should be wrapped as inline.
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -869,15 +906,19 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
             <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
           </button>
         </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">For example, <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>section<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> should be wrapped as inline.</span></span></code></pre></div></div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">For example, <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>section<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> should be wrapped as inline.</span></span></code></pre></div>
+</div>
 
 <h2 id="코드-블록">코드 블록 <a class="anchor-link" href="#%ec%bd%94%eb%93%9c-%eb%b8%94%eb%a1%9d" aria-label="Link to this section: 코드 블록"></a></h2>
 <p>여러 줄의 코드에는 <code>&lt;pre&gt;</code>를 사용하세요. 다시 한 번 올바른 렌더링을 위해 코드에서 꺾쇠 괄호를 이스케이프해야 합니다. <code>&lt;pre&gt;</code> 요소는 <code>margin-top</code>을 제거하고 <code>margin-bottom</code>에 <code>rem</code> 단위를 사용하도록 재설정됩니다.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
 &lt;p&gt;And another line of sample text here...&lt;/p&gt;
 </code></pre>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -889,13 +930,17 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>Sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
 </span></span><span class="line"><span class="cl"><span class="ni">&amp;lt;</span>p<span class="ni">&amp;gt;</span>And another line of sample text here...<span class="ni">&amp;lt;</span>/p<span class="ni">&amp;gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h2>
 <p>변수를 나타내려면 <code>&lt;var&gt;</code> 태그를 사용하세요.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -905,14 +950,18 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
             <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
           </button>
         </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">var</span><span class="p">&gt;</span>y<span class="p">&lt;/</span><span class="nt">var</span><span class="p">&gt;</span> = <span class="p">&lt;</span><span class="nt">var</span><span class="p">&gt;</span>m<span class="p">&lt;/</span><span class="nt">var</span><span class="p">&gt;&lt;</span><span class="nt">var</span><span class="p">&gt;</span>x<span class="p">&lt;/</span><span class="nt">var</span><span class="p">&gt;</span> + <span class="p">&lt;</span><span class="nt">var</span><span class="p">&gt;</span>b<span class="p">&lt;/</span><span class="nt">var</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">var</span><span class="p">&gt;</span>y<span class="p">&lt;/</span><span class="nt">var</span><span class="p">&gt;</span> = <span class="p">&lt;</span><span class="nt">var</span><span class="p">&gt;</span>m<span class="p">&lt;/</span><span class="nt">var</span><span class="p">&gt;&lt;</span><span class="nt">var</span><span class="p">&gt;</span>x<span class="p">&lt;/</span><span class="nt">var</span><span class="p">&gt;</span> + <span class="p">&lt;</span><span class="nt">var</span><span class="p">&gt;</span>b<span class="p">&lt;/</span><span class="nt">var</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="사용자-입력">사용자 입력 <a class="anchor-link" href="#%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%9e%85%eb%a0%a5" aria-label="Link to this section: 사용자 입력"></a></h2>
 <p>일반적으로 키보드를 통해 입력되는 입력을 나타내려면 <code>&lt;kbd&gt;</code>를 사용해주세요.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
 To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -923,13 +972,17 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
           </button>
         </div>
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">To switch directories, type <span class="p">&lt;</span><span class="nt">kbd</span><span class="p">&gt;</span>cd<span class="p">&lt;/</span><span class="nt">kbd</span><span class="p">&gt;</span> followed by the name of the directory.<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">To edit settings, press <span class="p">&lt;</span><span class="nt">kbd</span><span class="p">&gt;&lt;</span><span class="nt">kbd</span><span class="p">&gt;</span>Ctrl<span class="p">&lt;/</span><span class="nt">kbd</span><span class="p">&gt;</span> + <span class="p">&lt;</span><span class="nt">kbd</span><span class="p">&gt;</span>,<span class="p">&lt;/</span><span class="nt">kbd</span><span class="p">&gt;&lt;/</span><span class="nt">kbd</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl">To edit settings, press <span class="p">&lt;</span><span class="nt">kbd</span><span class="p">&gt;&lt;</span><span class="nt">kbd</span><span class="p">&gt;</span>Ctrl<span class="p">&lt;/</span><span class="nt">kbd</span><span class="p">&gt;</span> + <span class="p">&lt;</span><span class="nt">kbd</span><span class="p">&gt;</span>,<span class="p">&lt;/</span><span class="nt">kbd</span><span class="p">&gt;&lt;/</span><span class="nt">kbd</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="출력-예시">출력 예시 <a class="anchor-link" href="#%ec%b6%9c%eb%a0%a5-%ec%98%88%ec%8b%9c" aria-label="Link to this section: 출력 예시"></a></h2>
 <p>프로그램의 출력 예시를 나타내려면 <code>&lt;samp&gt;</code> 태그를 사용해주세요.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <samp>This text is meant to be treated as sample output from a computer program.</samp>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -939,11 +992,14 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
             <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
           </button>
         </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">samp</span><span class="p">&gt;</span>This text is meant to be treated as sample output from a computer program.<span class="p">&lt;/</span><span class="nt">samp</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">samp</span><span class="p">&gt;</span>This text is meant to be treated as sample output from a computer program.<span class="p">&lt;/</span><span class="nt">samp</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="표">표 <a class="anchor-link" href="#%ed%91%9c" aria-label="Link to this section: 표"></a></h2>
 <p>표는 스타일 <code>&lt;caption&gt;</code>, 테두리 축소 및 전체적으로 일관된 <code>text-align</code>을 위해 약간 조정됩니다. 테두리, 패딩 등에 대한 추가 변경 사항은 <a href="/docs/5.3/content/tables/"><code>.table</code> 클래스</a>와 함께 제공됩니다.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <table>
   <caption>
     This is an example table, and this is its caption to describe the contents.
@@ -977,7 +1033,8 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
     </tr>
   </tbody>
 </table>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1019,7 +1076,8 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 </span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Table cell<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="폼">폼 <a class="anchor-link" href="#%ed%8f%bc" aria-label="Link to this section: 폼"></a></h2>
 <p>더 간단한 기본 스타일을 위해 다양한 폼 요소가 Reboot되었습니다. 다음은 가장 눈에 띄는 변경 사항입니다:</p>
@@ -1028,7 +1086,7 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 <li>필드셋과 마찬가지로 <code>&lt;legend&gt;</code>도 일종의 제목으로 표시되도록 스타일이 변경되었습니다.</li>
 <li><code>&lt;label&gt;</code>이 <code>display: inline-block</code>으로 설정되어 <code>margin</code>이 적용될 수 있습니다.</li>
 <li><code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;button&gt;</code>은 대부분 Normalize에 의해 처리되지만 Reboot는 <code>margin</code>을 제거하고 <code>line-height: inherit</code>도 설정합니다.</li>
-<li><code>&lt;textarea&gt;</code>는 가로 크기 조정이 종종 페이지 레이아웃을 &ldquo;파괴&quot;하므로 세로로만 크기를 조정할 수 있도록 수정됩니다.</li>
+<li>가로로 크기를 조정하면 페이지 레이아웃이 &ldquo;깨지는&rdquo; 경우가 많으므로 <code>&lt;textarea&gt;</code>은 세로로만 크기를 조정할 수 있도록 수정되었습니다.</li>
 <li><code>&lt;button&gt;</code>과 <code>&lt;input&gt;</code> 버튼 요소는<code>:not(:disabled)</code>일 때 <code>cursor : pointer</code>를 갖습니다.</li>
 </ul>
 <p>이러한 변경 사항 등은 아래에 설명되어 있습니다.</p>
@@ -1159,9 +1217,12 @@ Some date inputs types are <a href="https://caniuse.com/input-datetime">not full
 </form>
 <h3 id="버튼-포인터">버튼 포인터 <a class="anchor-link" href="#%eb%b2%84%ed%8a%bc-%ed%8f%ac%ec%9d%b8%ed%84%b0" aria-label="Link to this section: 버튼 포인터"></a></h3>
 <p>Reboot에는 기본 커서를 <code>pointer</code>로 변경하는 <code>role=&quot;button&quot;</code>의 개선 사항이 포함되어 있습니다. 이 속성을 요소에 추가하면 요소가 상호 작용함을 나타내는 데에 도움이 됩니다. 이 역할은 자체 <code>cursor</code> 변경 사항을 갖는 <code>&lt;button&gt;</code> 요소에는 필요하지 않습니다.</p>
-<div class="bd-example-snippet bd-code-snippet"><div class="bd-example m-0 border-0">
+<div class="bd-example-snippet bd-code-snippet">
+  <div class="bd-example m-0 border-0">
+    
 <span role="button" tabindex="0">Non-button element button</span>
-</div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
+
+  </div><div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-0 border-top border-bottom">
         <small class="font-monospace text-body-secondary text-uppercase">html</small>
         <div class="d-flex ms-auto">
           <button type="button" class="btn-edit text-nowrap" title="Try it on StackBlitz">
@@ -1171,7 +1232,8 @@ Some date inputs types are <a href="https://caniuse.com/input-datetime">not full
             <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"/></svg>
           </button>
         </div>
-      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>Non-button element button<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></div></div>
+      </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>Non-button element button<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span></span></span></code></pre></div>
+</div>
 
 <h2 id="기타-요소">기타 요소 <a class="anchor-link" href="#%ea%b8%b0%ed%83%80-%ec%9a%94%ec%86%8c" aria-label="Link to this section: 기타 요소"></a></h2>
 <h3 id="주소">주소 <a class="anchor-link" href="#%ec%a3%bc%ec%86%8c" aria-label="Link to this section: 주소"></a></h3>
@@ -1214,7 +1276,7 @@ Some date inputs types are <a href="https://caniuse.com/input-datetime">not full
   </details>
 </div>
 <h2 id="html5-hidden-속성">HTML5 <code>[hidden]</code> 속성 <a class="anchor-link" href="#html5-hidden-%ec%86%8d%ec%84%b1" aria-label="Link to this section: HTML5 [hidden] 속성"></a></h2>
-<p>HTML5에는 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden">a new global attribute named <code>[hidden]</code>이라고 불리는 새로운 전역 속성</a>이 추가되었으며, 기본적으로 <code>display: none</code>으로 스타일링됩니다. <a href="https://purecss.io/">PureCSS</a>에서 아이디어를 빌려서 <code>[hidden] {display: none !important; }</code>를 사용하여 <code>display</code>가 실수로 재정의되는 것을 방지합니다.</p>
+<p>HTML5에는 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden"><code>[hidden]</code>이라고 불리는 새로운 전역 속성</a>이 추가되었으며, 기본적으로 <code>display: none</code>으로 스타일링됩니다. <a href="https://purecss.io/">PureCSS</a>에서 아이디어를 빌려서 <code>[hidden] {display: none !important; }</code>를 사용하여 <code>display</code>가 실수로 재정의되는 것을 방지합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">hidden</span><span class="p">&gt;</span>
 </span></span></code></pre></div><div class="bd-callout bd-callout-info">
 <code>[hidden]</code>은 jQuery의 <code>$(...).hide()</code> 및 <code>$(...).show()</code> 메소드와 호환되지 않습니다. 따라서 현재 요소의 <code>display</code>를 관리하는 다른 기술보다 <code>[hidden]</code>을 딱히 추천하지 않습니다.
@@ -1239,7 +1301,7 @@ Some date inputs types are <a href="https://caniuse.com/input-datetime">not full
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
           <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
-          <li class="mb-2">현재 v5.3.1입니다.</li>
+          <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>
       </div>
       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
@@ -1293,7 +1355,7 @@ Some date inputs types are <a href="https://caniuse.com/input-datetime">not full
   </div>
 </footer>
 
-    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
@@ -1322,20 +1384,20 @@ Some date inputs types are <a href="https://caniuse.com/input-datetime">not full
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.1\/dist\/css\/bootstrap.min.css" rel="stylesheet">
+    <link href="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.3\/dist\/css\/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
-    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.1\/dist\/js\/bootstrap.bundle.min.js"></${'script'}>
+    <${'script'} src="https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@5.3.3\/dist\/js\/bootstrap.bundle.min.js"></${'script'}>
   </head>
   <body class="p-3 m-0 border-0 ${classes}">
 
-    <!-- Example Code -->
+    \x3C!-- Example Code -->
 ${htmlSnippet.replace(/^/gm, '    ')}
-    <!-- End Example Code -->
+    \x3C!-- End Example Code -->
   </body>
 </html>`
 
-    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance.\n\/\/ In a real project please adapt this content to your needs.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/*!\n * JavaScript for Bootstrap\u0027s docs (https:\/\/getbootstrap.com\/)\n * Copyright 2011-2023 The Bootstrap Authors\n * Licensed under the Creative Commons Attribution 3.0 Unported License.\n * For details, see https:\/\/creativecommons.org\/licenses\/by\/3.0\/.\n *\/\n\n\/* global bootstrap: false *\/\n\n(() =\u003e {\n  \u0027use strict\u0027\n\n  \/\/ --------\n  \/\/ Tooltips\n  \/\/ --------\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022tooltip\u0022]\u0027)\n    .forEach(tooltip =\u003e {\n      new bootstrap.Tooltip(tooltip)\n    })\n\n  \/\/ --------\n  \/\/ Popovers\n  \/\/ --------\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022popover\u0022]\u0027)\n    .forEach(popover =\u003e {\n      new bootstrap.Popover(popover)\n    })\n\n  \/\/ -------------------------------\n  \/\/ Toasts\n  \/\/ -------------------------------\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  const toastPlacement = document.getElementById(\u0027toastPlacement\u0027)\n  if (toastPlacement) {\n    document.getElementById(\u0027selectToastPlacement\u0027).addEventListener(\u0027change\u0027, function () {\n      if (!toastPlacement.dataset.originalClass) {\n        toastPlacement.dataset.originalClass = toastPlacement.className\n      }\n\n      toastPlacement.className = \u0060${toastPlacement.dataset.originalClass} ${this.value}\u0060\n    })\n  }\n\n  \/\/ Instantiate all toasts in docs pages only\n  document.querySelectorAll(\u0027.bd-example .toast\u0027)\n    .forEach(toastNode =\u003e {\n      const toast = new bootstrap.Toast(toastNode, {\n        autohide: false\n      })\n\n      toast.show()\n    })\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js-docs-start live-toast\n  const toastTrigger = document.getElementById(\u0027liveToastBtn\u0027)\n  const toastLiveExample = document.getElementById(\u0027liveToast\u0027)\n\n  if (toastTrigger) {\n    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)\n    toastTrigger.addEventListener(\u0027click\u0027, () =\u003e {\n      toastBootstrap.show()\n    })\n  }\n  \/\/ js-docs-end live-toast\n\n  \/\/ -------------------------------\n  \/\/ Alerts\n  \/\/ -------------------------------\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ js-docs-start live-alert\n  const alertPlaceholder = document.getElementById(\u0027liveAlertPlaceholder\u0027)\n  const appendAlert = (message, type) =\u003e {\n    const wrapper = document.createElement(\u0027div\u0027)\n    wrapper.innerHTML = [\n      \u0060\u003cdiv class=\u0022alert alert-${type} alert-dismissible\u0022 role=\u0022alert\u0022\u003e\u0060,\n      \u0060   \u003cdiv\u003e${message}\u003c\/div\u003e\u0060,\n      \u0027   \u003cbutton type=\u0022button\u0022 class=\u0022btn-close\u0022 data-bs-dismiss=\u0022alert\u0022 aria-label=\u0022Close\u0022\u003e\u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    ].join(\u0027\u0027)\n\n    alertPlaceholder.append(wrapper)\n  }\n\n  const alertTrigger = document.getElementById(\u0027liveAlertBtn\u0027)\n  if (alertTrigger) {\n    alertTrigger.addEventListener(\u0027click\u0027, () =\u003e {\n      appendAlert(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027)\n    })\n  }\n  \/\/ js-docs-end live-alert\n\n  \/\/ --------\n  \/\/ Carousels\n  \/\/ --------\n  \/\/ Instantiate all non-autoplaying carousels in docs or StackBlitz\n  document.querySelectorAll(\u0027.carousel:not([data-bs-ride=\u0022carousel\u0022])\u0027)\n    .forEach(carousel =\u003e {\n      bootstrap.Carousel.getOrCreateInstance(carousel)\n    })\n\n  \/\/ -------------------------------\n  \/\/ Checks \u0026 Radios\n  \/\/ -------------------------------\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  document.querySelectorAll(\u0027.bd-example-indeterminate [type=\u0022checkbox\u0022]\u0027)\n    .forEach(checkbox =\u003e {\n      if (checkbox.id.includes(\u0027Indeterminate\u0027)) {\n        checkbox.indeterminate = true\n      }\n    })\n\n  \/\/ -------------------------------\n  \/\/ Links\n  \/\/ -------------------------------\n  \/\/ Disable empty links in docs examples only\n  document.querySelectorAll(\u0027.bd-content [href=\u0022#\u0022]\u0027)\n    .forEach(link =\u003e {\n      link.addEventListener(\u0027click\u0027, event =\u003e {\n        event.preventDefault()\n      })\n    })\n\n  \/\/ -------------------------------\n  \/\/ Modal\n  \/\/ -------------------------------\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ js-docs-start varying-modal-content\n  const exampleModal = document.getElementById(\u0027exampleModal\u0027)\n  if (exampleModal) {\n    exampleModal.addEventListener(\u0027show.bs.modal\u0027, event =\u003e {\n      \/\/ Button that triggered the modal\n      const button = event.relatedTarget\n      \/\/ Extract info from data-bs-* attributes\n      const recipient = button.getAttribute(\u0027data-bs-whatever\u0027)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback.\n\n      \/\/ Update the modal\u0027s content.\n      const modalTitle = exampleModal.querySelector(\u0027.modal-title\u0027)\n      const modalBodyInput = exampleModal.querySelector(\u0027.modal-body input\u0027)\n\n      modalTitle.textContent = \u0060New message to ${recipient}\u0060\n      modalBodyInput.value = recipient\n    })\n  }\n  \/\/ js-docs-end varying-modal-content\n\n  \/\/ -------------------------------\n  \/\/ Offcanvas\n  \/\/ -------------------------------\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  const myOffcanvas = document.querySelectorAll(\u0027.bd-example-offcanvas .offcanvas\u0027)\n  if (myOffcanvas) {\n    myOffcanvas.forEach(offcanvas =\u003e {\n      offcanvas.addEventListener(\u0027show.bs.offcanvas\u0027, event =\u003e {\n        event.preventDefault()\n      }, false)\n    })\n  }\n})()\n' : null
+    const jsSnippetContent = jsSnippet ? '\/\/ NOTICE!!! Initially embedded in our docs this JavaScript\n\/\/ file contains elements that can help you create reproducible\n\/\/ use cases in StackBlitz for instance.\n\/\/ In a real project please adapt this content to your needs.\n\/\/ \u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\u002b\n\n\/*!\n * JavaScript for Bootstrap\u0027s docs (https:\/\/getbootstrap.com\/)\n * Copyright 2011-2024 The Bootstrap Authors\n * Licensed under the Creative Commons Attribution 3.0 Unported License.\n * For details, see https:\/\/creativecommons.org\/licenses\/by\/3.0\/.\n *\/\n\n\/* global bootstrap: false *\/\n\n(() =\u003e {\n  \u0027use strict\u0027\n\n  \/\/ --------\n  \/\/ Tooltips\n  \/\/ --------\n  \/\/ Instantiate all tooltips in a docs or StackBlitz\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022tooltip\u0022]\u0027)\n    .forEach(tooltip =\u003e {\n      new bootstrap.Tooltip(tooltip)\n    })\n\n  \/\/ --------\n  \/\/ Popovers\n  \/\/ --------\n  \/\/ Instantiate all popovers in docs or StackBlitz\n  document.querySelectorAll(\u0027[data-bs-toggle=\u0022popover\u0022]\u0027)\n    .forEach(popover =\u003e {\n      new bootstrap.Popover(popover)\n    })\n\n  \/\/ -------------------------------\n  \/\/ Toasts\n  \/\/ -------------------------------\n  \/\/ Used by \u0027Placement\u0027 example in docs or StackBlitz\n  const toastPlacement = document.getElementById(\u0027toastPlacement\u0027)\n  if (toastPlacement) {\n    document.getElementById(\u0027selectToastPlacement\u0027).addEventListener(\u0027change\u0027, function () {\n      if (!toastPlacement.dataset.originalClass) {\n        toastPlacement.dataset.originalClass = toastPlacement.className\n      }\n\n      toastPlacement.className = \u0060${toastPlacement.dataset.originalClass} ${this.value}\u0060\n    })\n  }\n\n  \/\/ Instantiate all toasts in docs pages only\n  document.querySelectorAll(\u0027.bd-example .toast\u0027)\n    .forEach(toastNode =\u003e {\n      const toast = new bootstrap.Toast(toastNode, {\n        autohide: false\n      })\n\n      toast.show()\n    })\n\n  \/\/ Instantiate all toasts in docs pages only\n  \/\/ js-docs-start live-toast\n  const toastTrigger = document.getElementById(\u0027liveToastBtn\u0027)\n  const toastLiveExample = document.getElementById(\u0027liveToast\u0027)\n\n  if (toastTrigger) {\n    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)\n    toastTrigger.addEventListener(\u0027click\u0027, () =\u003e {\n      toastBootstrap.show()\n    })\n  }\n  \/\/ js-docs-end live-toast\n\n  \/\/ -------------------------------\n  \/\/ Alerts\n  \/\/ -------------------------------\n  \/\/ Used in \u0027Show live alert\u0027 example in docs or StackBlitz\n\n  \/\/ js-docs-start live-alert\n  const alertPlaceholder = document.getElementById(\u0027liveAlertPlaceholder\u0027)\n  const appendAlert = (message, type) =\u003e {\n    const wrapper = document.createElement(\u0027div\u0027)\n    wrapper.innerHTML = [\n      \u0060\u003cdiv class=\u0022alert alert-${type} alert-dismissible\u0022 role=\u0022alert\u0022\u003e\u0060,\n      \u0060   \u003cdiv\u003e${message}\u003c\/div\u003e\u0060,\n      \u0027   \u003cbutton type=\u0022button\u0022 class=\u0022btn-close\u0022 data-bs-dismiss=\u0022alert\u0022 aria-label=\u0022Close\u0022\u003e\u003c\/button\u003e\u0027,\n      \u0027\u003c\/div\u003e\u0027\n    ].join(\u0027\u0027)\n\n    alertPlaceholder.append(wrapper)\n  }\n\n  const alertTrigger = document.getElementById(\u0027liveAlertBtn\u0027)\n  if (alertTrigger) {\n    alertTrigger.addEventListener(\u0027click\u0027, () =\u003e {\n      appendAlert(\u0027Nice, you triggered this alert message!\u0027, \u0027success\u0027)\n    })\n  }\n  \/\/ js-docs-end live-alert\n\n  \/\/ --------\n  \/\/ Carousels\n  \/\/ --------\n  \/\/ Instantiate all non-autoplaying carousels in docs or StackBlitz\n  document.querySelectorAll(\u0027.carousel:not([data-bs-ride=\u0022carousel\u0022])\u0027)\n    .forEach(carousel =\u003e {\n      bootstrap.Carousel.getOrCreateInstance(carousel)\n    })\n\n  \/\/ -------------------------------\n  \/\/ Checks \u0026 Radios\n  \/\/ -------------------------------\n  \/\/ Indeterminate checkbox example in docs and StackBlitz\n  document.querySelectorAll(\u0027.bd-example-indeterminate [type=\u0022checkbox\u0022]\u0027)\n    .forEach(checkbox =\u003e {\n      if (checkbox.id.includes(\u0027Indeterminate\u0027)) {\n        checkbox.indeterminate = true\n      }\n    })\n\n  \/\/ -------------------------------\n  \/\/ Links\n  \/\/ -------------------------------\n  \/\/ Disable empty links in docs examples only\n  document.querySelectorAll(\u0027.bd-content [href=\u0022#\u0022]\u0027)\n    .forEach(link =\u003e {\n      link.addEventListener(\u0027click\u0027, event =\u003e {\n        event.preventDefault()\n      })\n    })\n\n  \/\/ -------------------------------\n  \/\/ Modal\n  \/\/ -------------------------------\n  \/\/ Modal \u0027Varying modal content\u0027 example in docs and StackBlitz\n  \/\/ js-docs-start varying-modal-content\n  const exampleModal = document.getElementById(\u0027exampleModal\u0027)\n  if (exampleModal) {\n    exampleModal.addEventListener(\u0027show.bs.modal\u0027, event =\u003e {\n      \/\/ Button that triggered the modal\n      const button = event.relatedTarget\n      \/\/ Extract info from data-bs-* attributes\n      const recipient = button.getAttribute(\u0027data-bs-whatever\u0027)\n      \/\/ If necessary, you could initiate an Ajax request here\n      \/\/ and then do the updating in a callback.\n\n      \/\/ Update the modal\u0027s content.\n      const modalTitle = exampleModal.querySelector(\u0027.modal-title\u0027)\n      const modalBodyInput = exampleModal.querySelector(\u0027.modal-body input\u0027)\n\n      modalTitle.textContent = \u0060New message to ${recipient}\u0060\n      modalBodyInput.value = recipient\n    })\n  }\n  \/\/ js-docs-end varying-modal-content\n\n  \/\/ -------------------------------\n  \/\/ Offcanvas\n  \/\/ -------------------------------\n  \/\/ \u0027Offcanvas components\u0027 example in docs only\n  const myOffcanvas = document.querySelectorAll(\u0027.bd-example-offcanvas .offcanvas\u0027)\n  if (myOffcanvas) {\n    myOffcanvas.forEach(offcanvas =\u003e {\n      offcanvas.addEventListener(\u0027show.bs.offcanvas\u0027, event =\u003e {\n        event.preventDefault()\n      }, false)\n    })\n  }\n})()\n' : null
     const project = {
       files: {
         'index.html': markup,
