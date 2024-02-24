@@ -13,7 +13,7 @@ untranslated: true
 
 ## 작동 원리
 
-아코디언은 내부적으로 [콜랩스]({{< docsref "/components/collapse" >}})를 사용하여 접기가 가능합니다. 아코디언을 펼친 상태에서 렌더링을 하려면, `.accordion`에 `.open` 클래스를 추가해야 합니다.
+아코디언은 내부적으로 [콜랩스]({{< docsref "/components/collapse" >}})를 사용하여 접기가 가능합니다.
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
@@ -22,6 +22,10 @@ untranslated: true
 ## 예시
 
 아래의 아코디언을 클릭하면, 아코디언의 내용을 접기/펼치기가 가능합니다.
+
+To render an accordion that's expanded by default:
+- add the `.show` class on the `.accordion-collapse` element.
+- drop the `.collapsed` class from the `.accordion-button` element and set its `aria-expanded` attribute to `true`.
 
 {{< example >}}
 <div class="accordion" id="accordionExample">

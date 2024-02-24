@@ -306,7 +306,7 @@ Put your checkboxes, radios, and switches on the opposite side with the `.form-c
 
 ### 테두리 스타일
 
-다양한 종류의 `.btn`이 지원되고 있습니다.
+다양한 윤곽선 스타일과 같은 `.btn`의 다양한 변형이 지원됩니다.
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">

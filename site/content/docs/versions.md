@@ -17,7 +17,7 @@ description: v1에서 v5까지 거의 모든 Bootstrap 버전에 대한 사이�
         <a class="list-group-item list-group-item-action py-2 text-primary{{ if (eq $version $.Site.Params.docs_version) }} d-flex justify-content-between align-items-center{{ end }}" href="{{ $release.baseurl }}/{{ $version }}/">
           {{ $version }}
           {{ if (eq $version $.Site.Params.docs_version) -}}
-          <span class="badge bg-primary">최신</span>
+          <span class="badge text-bg-primary">최신</span>
           {{- end }}
         </a>
       {{ if (eq (add $i 1) $len) }}</div>{{ end }}

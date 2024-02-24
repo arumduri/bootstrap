@@ -77,10 +77,10 @@ my-project/
 
    <!-- eslint-skip -->
    ```js
-   const path = require('path')
+   import { resolve } from 'path'
 
    export default {
-     root: path.resolve(__dirname, 'src'),
+     root: resolve(__dirname, 'src'),
      build: {
        outDir: '../dist'
      },
@@ -169,7 +169,7 @@ my-project/
 
    *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Bootstrap's plugins.*
 
-3. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다.
+3. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다:
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server-bootstrap.png" alt="Vite dev server running with Bootstrap">
 

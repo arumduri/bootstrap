@@ -160,13 +160,12 @@ As part of Bootstrap's evolving CSS variables approach, alerts now use local CSS
 
 {{< deprecated-in "5.3.0" >}}
 
-`$theme-colors`와 조합하여 알림 경고창의 제어자 클래스를 생성합니다.
-
 {{< scss-docs name="alert-variant-mixin" file="scss/mixins/_alert.scss" >}}
 
 ### Sass 루프
 
-믹스인 `alert-variant()`에서 제어자 클래스를 생성하는 반복문입니다.
+Loop that generates the modifier classes with an overriding of CSS variables.
+CSS 변수를 오버라이드하는 제어자 클래스를 생성하는 반복문입니다.
 
 {{< scss-docs name="alert-modifiers" file="scss/_alert.scss" >}}
 

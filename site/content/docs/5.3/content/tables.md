@@ -550,7 +550,7 @@ toc: true
 
 <div class="bd-example">
 <table class="table">
-  <thead class="table-light">
+  <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>

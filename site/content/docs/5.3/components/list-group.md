@@ -118,21 +118,21 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
       <div class="fw-bold">Subheading</div>
       Content for list item
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge text-bg-primary rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Subheading</div>
       Content for list item
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge text-bg-primary rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
       <div class="fw-bold">Subheading</div>
       Content for list item
     </div>
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge text-bg-primary rounded-pill">14</span>
   </li>
 </ol>
 {{< /example >}}
@@ -201,15 +201,15 @@ Contextual classes also work with `.list-group-item-action` for `<a>` and `<butt
 <ul class="list-group">
   <li class="list-group-item d-flex justify-content-between align-items-center">
     A list item
-    <span class="badge bg-primary rounded-pill">14</span>
+    <span class="badge text-bg-primary rounded-pill">14</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     A second list item
-    <span class="badge bg-primary rounded-pill">2</span>
+    <span class="badge text-bg-primary rounded-pill">2</span>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center">
     A third list item
-    <span class="badge bg-primary rounded-pill">1</span>
+    <span class="badge text-bg-primary rounded-pill">1</span>
   </li>
 </ul>
 {{< /example >}}
@@ -321,8 +321,6 @@ As part of Bootstrap's evolving CSS variables approach, list groups now use loca
 ### Sass 믹스인
 
 {{< deprecated-in "5.3.0" >}}
-
-Used in combination with `$theme-colors` to generate the [contextual variant classes](#variants) for `.list-group-item`s.
 
 {{< scss-docs name="list-group-mixin" file="scss/mixins/_list-group.scss" >}}
 

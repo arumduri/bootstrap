@@ -64,7 +64,7 @@ untranslated: true
 
 ### 이미지
 
-`.card-img-top`은 이미지를 위로 가지고 옵니다. `.card-text`는 텍스트를 카드에 추가할 수 있습니다.
+`.card-img-top` 및 `.card-img-bottom`은 각 카드의 테두리와 일치하도록 상하단 모서리를 둥글게 설정합니다. `.card-text`를 사용하면 카드에 텍스트를 추가할 수 있습니다. `.card-text` 내의 텍스트는 표준 HTML 태그를 사용하여 스타일을 지정할 수도 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">

@@ -33,7 +33,7 @@ toc: true
 `.text-wrap` 클래스로 줄바꿈하세요.
 
 {{< example >}}
-<div class="badge bg-primary text-wrap" style="width: 6rem;">
+<div class="badge text-bg-primary text-wrap" style="width: 6rem;">
   This text should wrap.
 </div>
 {{< /example >}}

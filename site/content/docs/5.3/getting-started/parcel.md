@@ -147,7 +147,7 @@ Bootstrap을 Parcel로 가져오려면 두 개의 임포트가 필요한데, 하
 
    *Bootstrap의 플러그인 사용 방법에 대한 자세한 내용은 [JavaScript 문서]({{< docsref "/getting-started/javascript/" >}})를 참조하세요.*
 
-3. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다.
+3. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다:
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server-bootstrap.png" alt="Parcel dev server running with Bootstrap">
 

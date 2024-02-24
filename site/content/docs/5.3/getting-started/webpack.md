@@ -241,7 +241,7 @@ Bootstrap을 Webpack으로 가져오려면 첫 번째 섹션에서 설치한 로
 
    *Bootstrap의 플러그인 사용 방법에 대한 자세한 내용은 [JavaScript 문서를 참조하세요]({{< docsref "/getting-started/javascript/" >}}) .*
 
-4. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다.
+4. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다:
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server-bootstrap.png" alt="Webpack dev server running with Bootstrap">
 

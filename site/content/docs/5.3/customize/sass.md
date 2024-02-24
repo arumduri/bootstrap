@@ -245,6 +245,8 @@ Bootstrap은 Sass 맵 내의 몇몇 특정 키를 전제로 사용하며 우리�
 Bootstrap의 `tint-color()`와 `shade-color()` 함수로, 색을 밝게 혹은 어둡게 만들 수 있습니다. 이들 함수는 Sass의 순수한 `lighten()`과 `darken()` 함수와는 달리 색을 검은색 혹은 흰색과 섞어 밝기를 일정량 변화시켜 원하는 효과를 얻지 못하는 경우가 많습니다.
 
 
+`shift-color()` combines these two functions by shading the color if the weight is positive and tinting the color if the weight is negative.
+
 {{< scss-docs name="color-functions" file="scss/_functions.scss" >}}
 
 실제로는 이 함수를 호출하여 색상과 중량의 파라미터를 전달합니다.
@@ -256,6 +258,11 @@ Bootstrap의 `tint-color()`와 `shade-color()` 함수로, 색을 밝게 혹은 �
 
 .custom-element-2 {
   color: shade-color($danger, 30%);
+}
+
+.custom-element-3 {
+  color: shift-color($success, 40%);
+  background-color: shift-color($success, -60%);
 }
 ```
 
@@ -339,18 +346,18 @@ $border-width: 0;
 
 ### 색상 스킴
 
-`prefers-color-scheme` 미디어 쿼리의 간단한 믹스인은 `light`, `dark`, 그리고 사용자 정의 색상 배합을 지원합니다. See [the color modes documentation]({{< docsref "/customize/color-modes" >}}) for information on our color mode mixin.
+`prefers-color-scheme` 미디어 쿼리의 간단한 믹스인은 `light` 및 `dark` 색상 배합을 지원합니다. 색상 모드 믹스인에 대한 정보는 [색상 모드 문서]({{< docsref "/customize/color-modes" >}})에서 확인할 수 있습니다.
 
 {{< scss-docs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" >}}
 
 ```scss
 .custom-element {
-  @include color-scheme(dark) {
-    // Insert dark mode styles here
+  @include color-scheme(light) {
+    // Insert light mode styles here
   }
 
-  @include color-scheme(custom-named-scheme) {
-    // Insert custom color scheme styles here
+  @include color-scheme(dark) {
+    // Insert dark mode styles here
   }
 }
 ```
