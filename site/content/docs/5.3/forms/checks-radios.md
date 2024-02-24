@@ -204,9 +204,9 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 </div>
 {{< /example >}}
 
-## Reverse
+## 반전
 
-Put your checkboxes, radios, and switches on the opposite side with the `.form-check-reverse` modifier class.
+체크박스, 라디오, 스위치를 `.form-check-reverse` 수정자 클래스를 사용해서 반전시킬 수 있습니다.
 
 {{< example >}}
 <div class="form-check form-check-reverse">

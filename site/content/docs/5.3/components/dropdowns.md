@@ -5,6 +5,7 @@ title_en: Dropdowns
 description: Bootstrap의 드롭다운 플러그인으로 링크 목록 등을 표시하기 위한 상황별 오버레이를 토글합니다.
 group: components
 toc: true
+untranslated: true
 ---
 
 ## 개요

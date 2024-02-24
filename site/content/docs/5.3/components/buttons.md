@@ -5,6 +5,7 @@ title_en: Buttons
 description: 다양한 크기, 상태 등을 지원하는 폼, 대화상자 등의 작업에 Bootstrap의 사용자 지정 버튼 스타일을 사용하세요.
 group: components
 toc: true
+untranslated: true
 ---
 
 ## Base class

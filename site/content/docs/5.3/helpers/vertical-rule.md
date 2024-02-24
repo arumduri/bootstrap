@@ -47,8 +47,8 @@ added: "5.1"
 
 ## CSS
 
-### Sass variables
+### Sass 변수
 
-Customize the vertical rule Sass variable to change its width.
+너비를 변경하려면 세로줄 Sass 변수를 사용자 정의하세요.
 
 {{< scss-docs name="vr-variables" file="scss/_variables.scss" >}}

@@ -5,6 +5,7 @@ description: 단일 파일에 있는 요소별 CSS 변경 모음인 Reboot는 Bo
 group: content
 aliases: "/docs/5.3/content/"
 toc: true
+untranslated: true
 ---
 
 ## 접근

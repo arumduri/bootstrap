@@ -4,6 +4,7 @@ title: Sass
 description: 변수, 맵, 믹스인 그리고 함수를 활용한 소스의 Sass 파일을 이용하여 프로젝트 빌드을 고속화하고 재정의 할 수 있습니다.
 group: customize
 toc: true
+untranslated: true
 ---
 
 변수, 맵, 믹스인 등을 활용한 소스의 Sass 파일을 이용합니다.

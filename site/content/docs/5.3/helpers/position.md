@@ -43,17 +43,18 @@ toc: true
 <div class="sticky-xxl-top">Stick to the top on viewports sized XXL (extra-extra-large) or wider</div>
 ```
 
-## Sticky bottom
+## 하단 고정
 
 Position an element at the bottom of the viewport, from edge to edge, but only after you scroll past it.
+요소를 viewport 하단에 위치시키며, 꽉 차서 (edge to edge) 표시되지만 스크롤된 이후부터 적용됩니다.
 
 ```html
 <div class="sticky-bottom">...</div>
 ```
 
-## Responsive sticky bottom
+## 반응형 하단 고정
 
-Responsive variations also exist for `.sticky-bottom` utility.
+ `.sticky-bottom` 유틸리티의 반응형 변형도 있습니다.
 
 ```html
 <div class="sticky-sm-bottom">Stick to the bottom on viewports sized SM (small) or wider</div>

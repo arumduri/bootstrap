@@ -5,6 +5,7 @@ title_en: List group
 description: 목록 그룹은 일련의 콘텐츠를 보여주기 위한 유연하고 강력한 컴포넌트입니다. 그룹을 변경하거나 확장하여 모든 콘텐츠를 지원합니다.
 group: components
 toc: true
+untranslated: true
 ---
 
 ## 기본 예시

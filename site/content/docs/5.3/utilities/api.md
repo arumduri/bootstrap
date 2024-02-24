@@ -560,9 +560,10 @@ $utilities: map-merge(
 @import "bootstrap/scss/utilities/api";
 ```
 
-### Add, remove, modify
+### 추가, 제거, 수정
 
-You can add, remove, and modify many utilities all at once with the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map#merge). Here's how you can combine the previous examples into one larger map.
+
+[`map-merge()` Sass 함수](https://sass-lang.com/documentation/modules/map#merge)를 사용해서 한 번에 다수의 유틸리티들을 추가, 제거, 수정할 수 있습니다. 다음은 하나의 큰 맵 안에 위에 있는 예제들을 포함하는 예시입니다.
 
 ```scss
 @import "bootstrap/scss/functions";

@@ -16,12 +16,12 @@ aliases:
 
 각 부분에 대한 것은 아래에서 더 자세히 다룰 예정이지만 크게 보자면 우리의 접근은 다음과 같이 나타낼 수 있습니다.
 
-- Components should be responsive and mobile-first
-- Components should be built with a base class and extended via modifier classes
-- Component states should obey a common z-index scale
-- Whenever possible, prefer an HTML and CSS implementation over JavaScript
-- Whenever possible, use utilities over custom styles
-- Whenever possible, avoid enforcing strict HTML requirements (children selectors)
+- 컴포넌트는 반응형이면서 모바일이 우선되어야 합니다
+- 컴포넌트는 기본 클래스를 사용해서 빌드되어야 하며 수정자 클래스를 사용해서 확장되어야 합니다
+- 컴포넌트 상태는 일반적인 z-index 크기를 따라야 합니다
+- 가능하다면 JavaScript보다 HTML 및 CSS로 구현되어야 합니다
+- 가능하다면 유틸티를 사용해서 사용자 지정 스타일을 사용해야 합니다
+- 가능하다면 엄격한 HTML 요구사항을 적용하지 말아야 합니다 (하위 선택자)
 
 ## 반응형
 
