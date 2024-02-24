@@ -39,3 +39,4 @@ jobs:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./_site/
+          keep_files: true
