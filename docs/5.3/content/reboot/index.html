@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -284,21 +284,21 @@
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
-                  Light
+                  라이트
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
-                  Dark
+                  다크
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
                   <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
-                  Auto
+                  시스템
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
@@ -569,8 +569,8 @@
     <li><a href="#페이지-기본값">페이지 기본값</a></li>
     <li><a href="#기본-글꼴-스택">기본 글꼴 스택</a></li>
     <li><a href="#제목">제목</a></li>
-    <li><a href="#paragraphs">Paragraphs</a></li>
-    <li><a href="#links">Links</a></li>
+    <li><a href="#단락">단락</a></li>
+    <li><a href="#링크">링크</a></li>
     <li><a href="#수평-규칙">수평 규칙</a></li>
     <li><a href="#목록">목록</a></li>
     <li><a href="#인라인-코드">인라인 코드</a></li>
@@ -603,11 +603,6 @@
         
 
         
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
 
         <h2 id="접근">접근 <a class="anchor-link" href="#%ec%a0%91%ea%b7%bc" aria-label="Link to this section: 접근"></a></h2>
 <p>Reboot는 Normalize를 기반으로 빌드되어 요소 선택자만 사용하여 다소 독선적인 스타일을 가진 많은 HTML 요소를 제공합니다. 추가 스타일링은 클래스에서만 수행됩니다. 예를 들어 더 간단한 기준선을 위해 일부 <code>&lt;table&gt;</code> 스타일을 재부팅하고 나중에 <code>.table</code>, <code>.table-border</code> 등을 제공합니다.</p>
@@ -621,7 +616,7 @@
 <h2 id="css-변수">CSS 변수 <a class="anchor-link" href="#css-%eb%b3%80%ec%88%98" aria-label="Link to this section: CSS 변수"></a></h2>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 
-<p>v5.1.1에서는 모든 CSS 번들(<code>bootstrap.css</code>, <code>bootstrap-reboot.css</code>, <code>bootstrap-grid.css</code> 포함)에서 필수 <code>@import</code>를 표준화하여 <code>_root.scss</code>를 포함하도록 했습니다. 이렇게 하면 해당 번들에서 사용되는 변수의 수에 관계없이 모든 번들에 <code>:root</code> 수준의 CSS 변수가 추가됩니다. 궁극적으로 부트스트랩 5는 시간이 지남에 따라 더 많은 <a href="/docs/5.3/customize/css-variables/">CSS 변수</a>를 추가하여 Sass를 항상 다시 컴파일할 필요 없이 더 많은 실시간 사용자 정의 기능을 제공할 것입니다. 우리의 접근 방식은 소스 Sass 변수를 가져와 CSS 변수로 변환하는 것입니다. 이렇게 하면 CSS 변수를 사용하지 않더라도 Sass의 모든 기능을 사용할 수 있습니다. <strong>이 작업은 아직 진행 중이며 완전히 구현하는 데 시간이 걸립니다.</strong></p>
+<p>v5.1.1에서는 모든 CSS 번들(<code>bootstrap.css</code>, <code>bootstrap-reboot.css</code>, <code>bootstrap-grid.css</code> 포함)에서 필수 <code>@import</code>를 표준화하여 <code>_root.scss</code>를 포함하도록 했습니다. 이렇게 하면 해당 번들에서 사용되는 변수의 수에 관계없이 모든 번들에 <code>:root</code> 수준의 CSS 변수가 추가됩니다. 궁극적으로 Bootstrap 5는 시간이 지남에 따라 더 많은 <a href="/docs/5.3/customize/css-variables/">CSS 변수</a>를 추가하여 Sass를 항상 다시 컴파일할 필요 없이 더 많은 실시간 사용자 정의 기능을 제공할 것입니다. 우리의 접근 방식은 소스 Sass 변수를 가져와 CSS 변수로 변환하는 것입니다. 이렇게 하면 CSS 변수를 사용하지 않더라도 Sass의 모든 기능을 사용할 수 있습니다. <strong>이 작업은 아직 진행 중이며 완전히 구현하는 데 시간이 걸립니다.</strong></p>
 <p>예를 들어 일반적인 <code>&lt;body&gt;</code> 스타일에 대한 <code>:root</code> CSS 변수를 생각해 보겠습니다:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
@@ -754,8 +749,8 @@
 </tbody>
 </table></div>
 
-<h2 id="paragraphs">Paragraphs <a class="anchor-link" href="#paragraphs" aria-label="Link to this section: Paragraphs"></a></h2>
-<p>All <code>&lt;p&gt;</code> elements have their <code>margin-top</code> removed and <code>margin-bottom: 1rem</code> set for easy spacing.</p>
+<h2 id="단락">단락 <a class="anchor-link" href="#%eb%8b%a8%eb%9d%bd" aria-label="Link to this section: 단락"></a></h2>
+<p>모든 <code>&lt;p&gt;</code> 요소의 <code>margin-top</code>이 제거되고 <code>margin-bottom: 1rem</code>이 설정되어 간격을 쉽게 배치할 수 있습니다.uo</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -774,8 +769,8 @@
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is an example paragraph.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h2 id="links">Links <a class="anchor-link" href="#links" aria-label="Link to this section: Links"></a></h2>
-<p>Links have a default <code>color</code> and underline applied. While links change on <code>:hover</code>, they don&rsquo;t change based on whether someone <code>:visited</code> the link. They also receive no special <code>:focus</code> styles.</p>
+<h2 id="링크">링크 <a class="anchor-link" href="#%eb%a7%81%ed%81%ac" aria-label="Link to this section: 링크"></a></h2>
+<p>링크에는 기본 <code>color</code>와 밑줄이 적용됩니다. 링크는 <code>:hover</code> 시 변경되지만 누군가 링크를 <code>:visited</code>(방문)했는지 여부에 따라 변경되지는 않습니다. 또한 특별한 <code>:focus</code> 스타일도 적용되지 않습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -794,7 +789,7 @@
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span><span class="p">&gt;</span>This is an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>As of v5.3.x, link <code>color</code> is set using <code>rgba()</code> and new <code>-rgb</code> CSS variables, allowing for easy customization of link color opacity. Change the link color opacity with the <code>--bs-link-opacity</code> CSS variable:</p>
+<p>v5.3.x부터 링크 <code>color</code>는 <code>rgba()</code>와 새로운 <code>-rgb</code> CSS 변수를 사용하여 설정되므로 링크 색상 불투명도를 쉽게 사용자 정의할 수 있습니다. 링크 색상 불투명도는 <code>--bs-link-opacity</code> CSS 변수를 사용하여 변경할 수 있습니다:</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -813,7 +808,7 @@
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;--bs-link-opacity: .5&#34;</span><span class="p">&gt;</span>This is an example link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>Placeholder links—those without an <code>href</code>—are targeted with a more specific selector and have their <code>color</code> and <code>text-decoration</code> reset to their default values.</p>
+<p>플레이스홀더 링크(<code>href</code>가 없는 링크)는 보다 구체적인 선택자가 적용되며 <code>color</code> 및 <code>text-decoration</code>이 기본값으로 재설정됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     

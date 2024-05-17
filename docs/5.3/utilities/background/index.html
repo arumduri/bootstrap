@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -284,21 +284,21 @@
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
-                  Light
+                  라이트
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
-                  Dark
+                  다크
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
                   <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
-                  Auto
+                  시스템
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
@@ -590,11 +590,6 @@
         
 
         
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
 
         <div class="bd-callout bd-callout-info">
 <strong>Accessibility tip:</strong> Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies like screen readers. Please ensure the meaning is obvious from the content itself (e.g., the visible text with a <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>sufficient</em> color contrast</a>) or is included through alternative means, such as additional text hidden with the <code>.visually-hidden</code> class.
@@ -603,7 +598,7 @@
 <h2 id="배경색">배경색 <a class="anchor-link" href="#%eb%b0%b0%ea%b2%bd%ec%83%89" aria-label="Link to this section: 배경색"></a></h2>
 <p>상황별 텍스트 색상 클래스와 비슷하게 요소의 배경을 상황별 클래스로 설정합니다. background 유틸리티는 ** <code>color</code> 는 세팅하지 않습니다 **. 따라서 경우에 따라 <code>.text- *</code> <a href="/docs/5.3/utilities/colors/">색상 유틸리티</a>를 사용하는 것이 좋습니다.</p>
 <div class="bd-callout bd-callout-info">
-Background utilities like <code>.bg-*</code> that generated from our original <code>$theme-colors</code> Sass map don&rsquo;t yet respond to color modes, however, any <code>.bg-*-subtle</code> utility will. This will be resolved in v6.
+원래 <code>$theme-colors</code> Sass 맵에서 생성된 <code>.bg-*</code>와 같은 배경 유틸리티는 아직 색상 모드에 반응하지 않지만, <code>.bg-*-subtle</code> 유틸리티는 반응합니다. 이 문제는 v6에서 해결될 예정입니다.
 </div>
 
 <div class="bd-example-snippet bd-code-snippet">
@@ -683,16 +678,16 @@ Background utilities like <code>.bg-*</code> that generated from our original <c
 <h2 id="불투명도">불투명도 <a class="anchor-link" href="#%eb%b6%88%ed%88%ac%eb%aa%85%eb%8f%84" aria-label="Link to this section: 불투명도"></a></h2>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.1.0에서 추가됨</small>
 
-<p>As of v5.1.0, <code>background-color</code> utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.</p>
+<p>v5.1.0부터 <code>background-color</code> 유틸리티는 CSS 변수를 사용하여 Sass에서 생성됩니다. 이를 통해 컴파일 없이 실시간으로 색상을 변경하고 동적 알파 투명도를 변경할 수 있습니다.</p>
 <h3 id="작동-방식">작동 방식 <a class="anchor-link" href="#%ec%9e%91%eb%8f%99-%eb%b0%a9%ec%8b%9d" aria-label="Link to this section: 작동 방식"></a></h3>
-<p>Consider our default <code>.bg-success</code> utility.</p>
+<p>기본 <code>.bg-success</code> 유틸리티를 살펴보세요.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">bg-success</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nv">--bs-bg-opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">success</span><span class="o">-</span><span class="n">rgb</span><span class="p">),</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">bg</span><span class="o">-</span><span class="n">opacity</span><span class="p">))</span> <span class="cp">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>We use an RGB version of our <code>--bs-success</code> (with the value of <code>25, 135, 84</code>) CSS variable and attached a second CSS variable, <code>--bs-bg-opacity</code>, for the alpha transparency (with a default value <code>1</code> thanks to a local CSS variable). That means anytime you use <code>.bg-success</code> now, your computed <code>color</code> value is <code>rgba(25, 135, 84, 1)</code>. The local CSS variable inside each <code>.bg-*</code> class avoids inheritance issues so nested instances of the utilities don&rsquo;t automatically have a modified alpha transparency.</p>
+</span></span></code></pre></div><p>여기서는 <code>--bs-success</code>(<code>25, 135, 84</code>) CSS 변수의 RGB 버전을 사용하고 알파 투명도를 위해 두 번째 CSS 변수인 <code>--bs-bg-opacity</code>를 첨부했습니다(로컬 CSS 변수 덕분에 기본값은 <code>1</code>입니다). 즉, 이제 <code>.bg-success</code>를 사용할 때마다 계산된 <code>color</code> 값은 <code>rgba(25, 135, 84, 1)</code>가 됩니다. 각 <code>.bg-*</code> 클래스 내부의 로컬 CSS 변수는 상속 문제를 방지하므로 유틸리티의 중첩된 인스턴스는 자동으로 알파 투명도가 수정되지 않습니다.</p>
 <h3 id="예시">예시 <a class="anchor-link" href="#%ec%98%88%ec%8b%9c" aria-label="Link to this section: 예시"></a></h3>
-<p>To change that opacity, override <code>--bs-bg-opacity</code> via custom styles or inline styles.</p>
+<p>이 불투명도를 변경하려면 사용자 정의 스타일 또는 인라인 스타일을 통해 <code>--bs-bg-opacity</code>를 재정의합니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -713,7 +708,7 @@ Background utilities like <code>.bg-*</code> that generated from our original <c
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;bg-success p-2&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;--bs-bg-opacity: .5;&#34;</span><span class="p">&gt;</span>This is 50% opacity success background<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>Or, choose from any of the <code>.bg-opacity</code> utilities:</p>
+<p>또는 <code>.bg-opacity</code> 유틸리티 중 하나를 선택하세요:</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     

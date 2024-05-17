@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -284,21 +284,21 @@
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
-                  Light
+                  라이트
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
-                  Dark
+                  다크
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
                   <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
-                  Auto
+                  시스템
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
@@ -583,11 +583,6 @@
         
 
         
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
 
         <h2 id="예시">예시 <a class="anchor-link" href="#%ec%98%88%ec%8b%9c" aria-label="Link to this section: 예시"></a></h2>
 <p><code>.btn-close</code>를 사용해 컴포넌트를 닫는 옵션을 제공합니다. 기본 스타일은 제한되어 있지만, 재정의가 가능합니다. Sass 변수를 변경해, 기본 <code>background-image</code>를 바꿉니다. <strong><code>aria-label</code>과 같은 스크린 리더용의 텍스트를 꼭 넣어 주십시오.</strong></p>
@@ -610,7 +605,7 @@
 </div>
 
 <h2 id="비활성화-상태">비활성화 상태 <a class="anchor-link" href="#%eb%b9%84%ed%99%9c%ec%84%b1%ed%99%94-%ec%83%81%ed%83%9c" aria-label="Link to this section: 비활성화 상태"></a></h2>
-<p>비활성화된 닫기 버튼은, <code>opacity</code>를 변경합니다. 그리고 <code>pointer-events: none</code> 과 <code>user-select: none</code>을 적용해, hover 상태와 active 상태가 트리거 되지 않도록 하였습니다.</p>
+<p>비활성화된 닫기 버튼은 <code>opacity</code>를 변경합니다. 그리고 <code>pointer-events: none</code> 과 <code>user-select: none</code>을 적용해, hover 상태와 active 상태가 트리거 되지 않도록 하였습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -633,10 +628,10 @@
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2">Deprecated in v5.3.0</small>
 
 <div class="bd-callout bd-callout-warning">
-<strong>Heads up!</strong> As of v5.3.0, the <code>.btn-close-white</code> class is deprecated. Instead, use <code>data-bs-theme=&quot;dark&quot;</code> to change the color mode of the close button.
+<strong>주의!</strong> v5.3.0부터 <code>.btn-close-white</code> 클래스는 더 이상 사용되지 않습니다. 대신 <code>data-bs-theme=&quot;dark&quot;</code>를 사용하여 닫기 버튼의 색상 모드를 변경하세요.
 </div>
 
-<p>Add <code>data-bs-theme=&quot;dark&quot;</code> to the <code>.btn-close</code>, or to its parent element, to invert the close button. This uses the <code>filter</code> property to invert the <code>background-image</code> without overriding its value.</p>
+<p><code>.btn-close</code> 또는 그 상위 요소에 <code>data-bs-theme=&quot;dark&quot;</code>를 추가하여 닫기 버튼을 반전시킬 수 있습니다. 이렇게 하면 <code>filter</code> 속성을 사용하여 값을 재정의하지 않고 <code>background-image</code>를 반전시킵니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0 bg-dark">
     
@@ -665,7 +660,7 @@
 <h3 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.3.0에서 추가됨</small>
 
-<p>As part of Bootstrap&rsquo;s evolving CSS variables approach, close button now uses local CSS variables on <code>.btn-close</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+<p>부트스트랩의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 닫기 버튼은 <code>.btn-close</code>의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_close.scss">scss/_close.scss</a>

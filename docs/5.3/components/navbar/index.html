@@ -284,21 +284,21 @@
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
-                  Light
+                  라이트
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
-                  Dark
+                  다크
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
                   <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
-                  Auto
+                  시스템
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
@@ -617,7 +617,7 @@
 <li>내비게이션은 기본적으로 반응형이지만 간단히 변경할 수 있습니다. 반응형 동작은 Collapse JavaScript 플러그인에 의존합니다.</li>
 <li>접근성을 확보하려면 <code>&lt;nav&gt;</code> 요소를 사용하거나, 혹은 <code>&lt;div&gt;</code>와 같이 보다 범용적인 요소를 사용하는 경우에는 <code>role=&quot;navigation&quot;</code>을 추가하여 스크린 리더 사용자를 위해 랜드마크가 되는 곳임을 명시적으로 알려주어야 합니다.</li>
 <li>현재 페이지에는 <code>aria-current=&quot;page&quot;</code>를, 세트 안에서의 현재 아이템에는 <code>aria-current=&quot;true&quot;</code>를 사용하여, 현재 아이템을 표시합니다.</li>
-<li><strong>New in v5.2.0:</strong> Navbars can be themed with CSS variables that are scoped to the <code>.navbar</code> base class. <code>.navbar-light</code> has been deprecated and <code>.navbar-dark</code> has been rewritten to override CSS variables instead of adding additional styles.</li>
+<li><strong>v5.2.0 업데이트:</strong> 탐색 모음은 <code>.navbar</code> 기본 클래스로 범위가 지정된 CSS 변수를 사용하여 테마를 지정할 수 있습니다. <code>.navbar-light</code>는 더 이상 사용되지 않으며 추가 스타일을 추가하는 대신 CSS 변수를 재정의하도록 <code>.navbar-dark</code>가 재작성되었습니다.</li>
 </ul>
 <div class="bd-callout bd-callout-info">
 이 컴포넌트의 애니메이션 효과는 <code>prefers-reduced-motion</code> 미디어 쿼리에 따라 다릅니다. <a href="/docs/5.3/getting-started/accessibility/#reduced-motion">접근성 문서의 모션 감소 문단</a>을 참고하세요.
@@ -634,7 +634,7 @@
 <li><code>.collapse.navbar-collapse</code>으로 부모 중단점에 따라 내비게이션 바의 콘텐츠를 그룹화하거나 감출수 있음.</li>
 <li>옵션으로 <code>.navbar-scroll</code>를 추가해 <code>max-height</code>와 <a href="#scrolling">scroll expanded navbar content</a>이 가능.</li>
 </ul>
-<p>여기서는 <code>lg</code> (large) 중단점에서 자동으로 접히는 &rsquo;light&rsquo; 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.</p>
+<p>여기서는 <code>lg</code> (large) 중단점에서 자동으로 접히는 라이트 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -1263,13 +1263,13 @@
 
 <h2 id="색상-스키마">색상 스키마 <a class="anchor-link" href="#%ec%83%89%ec%83%81-%ec%8a%a4%ed%82%a4%eb%a7%88" aria-label="Link to this section: 색상 스키마"></a></h2>
 <div class="bd-callout bd-callout-warning">
-<p><strong>New dark navbars in v5.3.0 —</strong> We&rsquo;ve deprecated <code>.navbar-dark</code> in favor of the new <code>data-bs-theme=&quot;dark&quot;</code>. Add <code>data-bs-theme=&quot;dark&quot;</code> to the <code>.navbar</code> to enable a component-specific color mode. <a href="/docs/5.3/customize/color-modes/">Learn more about our color modes.</a></p>
+<p><strong>v5.3.0에 추가된 새 다크 내비게이션 바 -</strong> <code>.navbar-dark</code>는 더 이상 사용되지 않고 새로운 <code>data-bs-theme=&quot;dark&quot;</code>가 사용됩니다. <code>.navbar</code>에 <code>data-bs-theme=&quot;dark&quot;</code>를 추가하면 컴포넌트별 색상 모드를 활성화할 수 있습니다. <a href="/docs/5.3/customize/color-modes/">색상 모드에 대해 자세히 알아보세요.</a></p>
 <hr>
-<p><strong>New in v5.2.0  —</strong> Navbar theming is now powered by CSS variables and <code>.navbar-light</code> has been deprecated. CSS variables are applied to <code>.navbar</code>, defaulting to the &ldquo;light&rdquo; appearance, and can be overridden with <code>.navbar-dark</code>.</p>
+<p><strong>v5.2.0 업데이트 —</strong> 이제 탐색 모음 테마는 CSS 변수를 통해 제공되며 <code>.navbar-light</code>는 더 이상 사용되지 않습니다. CSS 변수는 <code>.navbar</code>에 적용되어 기본적으로 &ldquo;light&rdquo; 모양으로 표시되며 <code>.navbar-dark</code>로 재정의할 수 있습니다.</p>
 
 </div>
 
-<p>Navbar themes are easier than ever thanks to Bootstrap&rsquo;s combination of Sass and CSS variables. The default is our &ldquo;light navbar&rdquo; for use with light background colors, but you can also apply <code>data-bs-theme=&quot;dark&quot;</code> to the <code>.navbar</code> parent for dark background colors. Then, customize with <code>.bg-*</code> and additional utilities.</p>
+<p>Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마가 그 어느 때보다 쉬워졌습니다. 기본값은 밝은 배경색에 사용할 수 있는 &ldquo;밝은 내비게이션 바&quot;지만, 어두운 배경색을 사용하려면 <code>data-bs-theme=&quot;dark&quot;</code>를 <code>.navbar</code> 부모에 적용할 수도 있습니다. 그런 다음 <code>.bg-*</code> 및 추가 유틸리티를 사용하여 사용자 정의합니다.</p>
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
@@ -2014,7 +2014,7 @@
 </span></span><span class="line"><span class="cl">    ...
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>When using offcanvas in a dark navbar, be aware that you may need to have a dark background on the offcanvas content to avoid the text becoming illegible. In the example below, we add <code>.navbar-dark</code> and <code>.bg-dark</code> to the <code>.navbar</code>, <code>.text-bg-dark</code> to the <code>.offcanvas</code>, <code>.dropdown-menu-dark</code> to <code>.dropdown-menu</code>, and <code>.btn-close-white</code> to <code>.btn-close</code> for proper styling with a dark offcanvas.</p>
+</span></span></code></pre></div><p>어두운 탐색 모음에서 오프캔버스를 사용할 때는 텍스트가 잘 보이지 않도록 오프캔버스 콘텐츠의 배경을 어둡게 설정해야 할 수 있습니다. 아래 예에서는 어두운 오프캔버스로 적절한 스타일을 지정하기 위해 <code>.navbar</code>에 <code>.navbar-dark</code>와 <code>.bg-dark</code>를, <code>.offcanvas</code>에 <code>.text-bg-dark</code>를, <code>.dropdown-menu-dark</code>에 <code>.dropdown-menu</code>를, <code>.btn-close-white</code>에 <code>.btn-close</code>를 추가합니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -2117,7 +2117,7 @@
 <h3 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 
-<p>As part of Bootstrap&rsquo;s evolving CSS variables approach, navbars now use local CSS variables on <code>.navbar</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+<p>Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 탐색바에서 <code>.navbar</code>의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_navbar.scss">scss/_navbar.scss</a>
@@ -2146,7 +2146,7 @@
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}navbar-toggler-border-radius</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-border-radius</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}navbar-toggler-focus-width</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-focus-width</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}navbar-toggler-transition</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-toggler-transition</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
-<p>Some additional CSS variables are also present on <code>.navbar-nav</code>:</p>
+<p>일부 추가 CSS 변수는 <code>.navbar-nav</code>에도 존재합니다:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_navbar.scss">scss/_navbar.scss</a>
@@ -2162,7 +2162,7 @@
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}nav-link-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-color</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}nav-link-hover-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-hover-color</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}nav-link-disabled-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">navbar-disabled-color</span><span class="p">);</span></span></span></code></pre></div></div>
-<p>Customization through CSS variables can be seen on the <code>.navbar-dark</code> class where we override specific values without adding duplicate CSS selectors.</p>
+<p>CSS 변수를 통한 커스터마이징은 <code>.navbar-dark</code> 클래스에서 중복된 CSS 선택기를 추가하지 않고 특정 값을 재정의하는 것을 볼 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_navbar.scss">scss/_navbar.scss</a>
@@ -2180,7 +2180,7 @@
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}navbar-toggler-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$navbar-dark-toggler-border-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}navbar-toggler-icon-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nf">escape-svg</span><span class="p">(</span><span class="nv">$navbar-dark-toggler-icon-bg</span><span class="p">)</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
 <h3 id="sass-변수">Sass 변수 <a class="anchor-link" href="#sass-%eb%b3%80%ec%88%98" aria-label="Link to this section: Sass 변수"></a></h3>
-<p>Variables for all navbars:</p>
+<p>모든 내비게이션 바에 대한 변수:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss">scss/_variables.scss</a>
@@ -2218,7 +2218,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-brand-color</span><span class="o">:</span>          <span class="nv">$navbar-light-active-color</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$navbar-light-brand-hover-color</span><span class="o">:</span>    <span class="nv">$navbar-light-active-color</span><span class="p">;</span>
 </span></span></code></pre></div></div>
-<p>Variables for the <a href="#color-schemes">dark navbar</a>:</p>
+<p><a href="#%EC%83%89%EC%83%81-%EC%8A%A4%ED%82%A4%EB%A7%88">다크 내비게이션 바</a>에 대한 변수:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss">scss/_variables.scss</a>
@@ -2238,7 +2238,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$navbar-dark-brand-hover-color</span><span class="o">:</span>     <span class="nv">$navbar-dark-active-color</span><span class="p">;</span>
 </span></span></code></pre></div></div>
 <h3 id="sass-루프">Sass 루프 <a class="anchor-link" href="#sass-%eb%a3%a8%ed%94%84" aria-label="Link to this section: Sass 루프"></a></h3>
-<p><a href="#responsive-behaviors">Responsive navbar expand/collapse classes</a>(예를 들어, <code>.navbar-expand-lg</code>)는 <code>$breakpoints</code> 맵과 조합되어 <code>scss/_navbar.scss</code>내의 반복문으로 생성됩니다.</p>
+<p><a href="#%EB%B0%98%EC%9D%91%ED%98%95-%EB%B9%84%ED%97%A4%EC%9D%B4%EB%B9%84%EC%96%B4">반응형 내비게이션 펼치기/접기 클래스</a>(<code>.navbar-expand-lg</code> 등)는 <code>$breakpoints</code> 맵과 조합되어 <code>scss/_navbar.scss</code>내의 반복문으로 생성됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_navbar.scss">scss/_navbar.scss</a>

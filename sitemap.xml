@@ -97,9 +97,6 @@
     <loc>https://getbootstrap.kr/docs/5.3/examples/jumbotrons/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.kr/docs/5.3/utilities/link/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.kr/docs/5.3/examples/list-groups/</loc>
   </url>
   <url>
@@ -233,6 +230,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/layout/utilities/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.kr/docs/5.3/utilities/link/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/helpers/text-truncation/</loc>

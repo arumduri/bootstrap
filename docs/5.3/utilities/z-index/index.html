@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -284,21 +284,21 @@
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
-                  Light
+                  라이트
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
-                  Dark
+                  다크
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
                   <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
-                  Auto
+                  시스템
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
@@ -564,9 +564,9 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#example">Example</a></li>
-    <li><a href="#overlays">Overlays</a></li>
-    <li><a href="#component-approach">Component approach</a></li>
+    <li><a href="#예제">예제</a></li>
+    <li><a href="#오버레이">오버레이</a></li>
+    <li><a href="#구성-요소-접근-방식">구성 요소 접근 방식</a></li>
     <li><a href="#css">CSS</a>
       <ul>
         <li><a href="#sass-맵">Sass 맵</a></li>
@@ -583,16 +583,11 @@
         
 
         
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
 
-        <h2 id="example">Example <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a></h2>
-<p>Use <code>z-index</code> utilities to stack elements on top of one another. Requires a <code>position</code> value other than <code>static</code>, which can be set with custom styles or using our <a href="/docs/5.3/utilities/position/">position utilities</a>.</p>
+        <h2 id="예제">예제 <a class="anchor-link" href="#%ec%98%88%ec%a0%9c" aria-label="Link to this section: 예제"></a></h2>
+<p><code>z-index</code> 유틸리티를 사용하여 요소를 서로 겹치게 쌓을 수 있습니다. 사용자 지정 스타일을 사용하거나 <a href="/docs/5.3/utilities/position/">위치 유틸리티</a>를 사용하여 <code>static</code> 이외의 <code>position</code> 값을 설정해야 합니다.</p>
 <div class="bd-callout bd-callout-info">
-We call these &ldquo;low-level&rdquo; <code>z-index</code> utilities because of their default values of <code>-1</code> through <code>3</code>, which we use for the layout of overlapping components. High-level <code>z-index</code> values are used for overlay components like modals and tooltips.
+이러한 &ldquo;저수준&rdquo; <code>z-index</code> 유틸리티는 기본값이 <code>-1</code>부터 <code>3</code>까지이며, 겹쳐진 구성 요소의 레이아웃에 사용합니다. 고수준 <code>z-index</code> 값은 모달 및 툴팁과 같은 오버레이 구성 요소에 사용됩니다.
 </div>
 
 <div class="bd-example-snippet bd-code-snippet">
@@ -621,15 +616,15 @@ We call these &ldquo;low-level&rdquo; <code>z-index</code> utilities because of 
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;z-n1 position-absolute p-5 rounded-3&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>z-n1<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h2 id="overlays">Overlays <a class="anchor-link" href="#overlays" aria-label="Link to this section: Overlays"></a></h2>
-<p>Bootstrap overlay components—dropdown, modal, offcanvas, popover, toast, and tooltip—all have their own <code>z-index</code> values to ensure a usable experience with competing &ldquo;layers&rdquo; of an interface.</p>
-<p>Read about them in the <a href="/docs/5.3/layout/z-index/"><code>z-index</code> layout page</a>.</p>
-<h2 id="component-approach">Component approach <a class="anchor-link" href="#component-approach" aria-label="Link to this section: Component approach"></a></h2>
+<h2 id="오버레이">오버레이 <a class="anchor-link" href="#%ec%98%a4%eb%b2%84%eb%a0%88%ec%9d%b4" aria-label="Link to this section: 오버레이"></a></h2>
+<p>Bootstrap 오버레이 구성 요소인 드롭다운, 모달, 오프캔버스, 팝오버, 토스트 및 툴팁은 각각 고유한 <code>z-index</code> 값을 가지고 있어 인터페이스의 경쟁하는 &ldquo;레이어&quot;에서 사용 가능한 경험을 보장합니다.</p>
+<p><a href="/docs/5.3/layout/z-index/"><code>z-index</code> 레이아웃 페이지</a>에서 자세히 읽어보세요.</p>
+<h2 id="구성-요소-접근-방식">구성 요소 접근 방식 <a class="anchor-link" href="#%ea%b5%ac%ec%84%b1-%ec%9a%94%ec%86%8c-%ec%a0%91%ea%b7%bc-%eb%b0%a9%ec%8b%9d" aria-label="Link to this section: 구성 요소 접근 방식"></a></h2>
 <p>On some components, we use our low-level <code>z-index</code> values to manage repeating elements that overlap one another (like buttons in a button group or items in a list group).</p>
 <p>Learn about our <a href="/docs/5.3/extend/approach/#z-index-scales"><code>z-index</code> approach</a>.</p>
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="sass-맵">Sass 맵 <a class="anchor-link" href="#sass-%eb%a7%b5" aria-label="Link to this section: Sass 맵"></a></h3>
-<p>Customize this Sass map to change the available values and generated utilities.</p>
+<p>이 Sass 맵을 사용하여 사용 가능한 값 및 생성된 유틸리티를 변경할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss">scss/_variables.scss</a>
@@ -647,7 +642,7 @@ We call these &ldquo;low-level&rdquo; <code>z-index</code> utilities because of 
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></div></div>
 <h3 id="sass-유틸리티-api">Sass 유틸리티 API <a class="anchor-link" href="#sass-%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0-api" aria-label="Link to this section: Sass 유틸리티 API"></a></h3>
-<p>Position utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
+<p>위치 유틸리티는 <code>scss/_utilities.scss</code>의 유틸리티 API에서 선언됩니다. <a href="/docs/5.3/utilities/api/#using-the-api">유틸리티 API 사용 방법을 알아보세요.</a></p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_utilities.scss">scss/_utilities.scss</a>

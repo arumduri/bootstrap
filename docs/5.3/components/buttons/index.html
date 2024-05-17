@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -284,21 +284,21 @@
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
-                  Light
+                  라이트
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
                   <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
-                  Dark
+                  다크
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
               <li>
                 <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
                   <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
-                  Auto
+                  시스템
                   <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                 </button>
               </li>
@@ -564,7 +564,7 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#base-class">Base class</a></li>
+    <li><a href="#기본-클래스">기본 클래스</a></li>
     <li><a href="#변수">변수</a></li>
     <li><a href="#텍스트-줄바꿈-비활성화">텍스트 줄바꿈 비활성화</a></li>
     <li><a href="#버튼-태그">버튼 태그</a></li>
@@ -600,14 +600,9 @@
         
 
         
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
 
-        <h2 id="base-class">Base class <a class="anchor-link" href="#base-class" aria-label="Link to this section: Base class"></a></h2>
-<p>Bootstrap has a base <code>.btn</code> class that sets up basic styles such as padding and content alignment. By default, <code>.btn</code> controls have a transparent border and background color, and lack any explicit focus and hover styles.</p>
+        <h2 id="기본-클래스">기본 클래스 <a class="anchor-link" href="#%ea%b8%b0%eb%b3%b8-%ed%81%b4%eb%9e%98%ec%8a%a4" aria-label="Link to this section: 기본 클래스"></a></h2>
+<p>Bootstrap에는 패딩 및 콘텐츠 정렬과 같은 기본 스타일을 설정하는 기본 <code>.btn</code> 클래스가 있습니다. 기본적으로 <code>.btn</code> 컨트롤에는 투명한 테두리와 배경색이 있으며, 명시적인 포커스 및 호버 스타일이 없습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -626,13 +621,13 @@
       </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn&#34;</span><span class="p">&gt;</span>Base class<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>The <code>.btn</code> class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.</p>
+<p><code>.btn</code> 클래스는 버튼 변형과 함께 사용하거나 사용자 정의 스타일의 기초로 사용하기 위한 것입니다.</p>
 <div class="bd-callout bd-callout-warning">
-If you are using the <code>.btn</code> class on its own, remember to at least define some explicit <code>:focus</code> and/or <code>:focus-visible</code> styles.
+<code>.btn</code> 클래스를 단독으로 사용하는 경우 최소한 명시적인 <code>:focus</code> 및/또는 <code>:focus-visible</code> 스타일을 정의하는 것을 잊지 마세요.
 </div>
 
 <h2 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h2>
-<p>Bootstrap includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.</p>
+<p>Bootstrap에는 각각 고유한 의미적 목적을 가진 여러 가지 버튼 변형이 포함되어 있으며, 더 많은 제어를 위해 몇 가지 추가 기능이 추가되었습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -1073,26 +1068,26 @@ If you are using the <code>.btn</code> class on its own, remember to at least de
 </span></span></code></pre></div><div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th>Method</th>
-<th>Description</th>
+<th>메소드</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>dispose</code></td>
-<td>Destroys an element&rsquo;s button. (Removes stored data on the DOM element)</td>
+<td>요소의 버튼을 삭제합니다. (DOM 요소에 저장된 데이터를 제거합니다.)</td>
 </tr>
 <tr>
 <td><code>getInstance</code></td>
-<td>Static method which allows you to get the button instance associated with a DOM element, you can use it like this: <code>bootstrap.Button.getInstance(element)</code>.</td>
+<td>정적 메소드를 사용하면 DOM 요소와 연결된 버튼 인스턴스를 가져올 수 있으며, 다음과 같이 사용할 수 있습니다: <code>bootstrap.Button.getInstance(element)</code>.</td>
 </tr>
 <tr>
 <td><code>getOrCreateInstance</code></td>
-<td>Static method which returns a button instance associated with a DOM element or creates a new one in case it wasn&rsquo;t initialized. You can use it like this: <code>bootstrap.Button.getOrCreateInstance(element)</code>.</td>
+<td>DOM 요소와 연관된 버튼 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 생성하는 정적 메소드입니다. 다음과 같이 사용할 수 있습니다: <code>bootstrap.Button.getOrCreateInstance(element)</code>.</td>
 </tr>
 <tr>
 <td><code>toggle</code></td>
-<td>Toggles push state. Gives the button the appearance that it has been activated.</td>
+<td>푸시 상태를 전환합니다. 버튼이 활성화된 것처럼 보이도록 설정합니다.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1106,7 +1101,7 @@ If you are using the <code>.btn</code> class on its own, remember to at least de
 <h3 id="변수-1">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98-1" aria-label="Link to this section: 변수"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 
-<p>As part of Bootstrap&rsquo;s evolving CSS variables approach, buttons now use local CSS variables on <code>.btn</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+<p>Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 버튼은 향상된 실시간 사용자 지정을 위해 <code>.btn</code>에서 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_buttons.scss">scss/_buttons.scss</a>
@@ -1130,8 +1125,8 @@ If you are using the <code>.btn</code> class on its own, remember to at least de
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}btn-box-shadow</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$btn-box-shadow</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}btn-disabled-opacity</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$btn-disabled-opacity</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}btn-focus-box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="si">#{</span><span class="nv">$btn-focus-width</span><span class="si">}</span> <span class="nf">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">btn-focus-shadow-rgb</span><span class="p">)</span><span class="o">,</span> <span class="mf">.5</span><span class="p">);</span></span></span></code></pre></div></div>
-<p>Each <code>.btn-*</code> modifier class updates the appropriate CSS variables to minimize additional CSS rules with our <code>button-variant()</code>, <code>button-outline-variant()</code>, and <code>button-size()</code> mixins.</p>
-<p>Here&rsquo;s an example of building a custom <code>.btn-*</code> modifier class as we do for the buttons unique to our docs by reassigning Bootstrap&rsquo;s CSS variables with a mixture of our own CSS and Sass variables.</p>
+<p>각 <code>.btn-*</code> 수정자 클래스는 <code>button-variant()</code>, <code>button-variant()</code>, <code>button-outline-variant()</code>, <code>button-size()</code> 믹스인을 사용하여 추가 CSS 규칙을 최소화하기 위해 적절한 CSS 변수를 업데이트합니다.</p>
+<p>다음은 문서에 고유한 버튼에서와 같이 자체 CSS 및 Sass 변수를 혼합하여 Bootstrap의 CSS 변수를 재할당하여 사용자 정의 <code>.btn-*</code> 수정자 클래스를 구축하는 예제입니다.</p>
 <div class="bd-example">
   <button type="button" class="btn btn-bd-primary">Custom button</button>
 </div>
