@@ -5,7 +5,6 @@ title_en: Cards
 description: 여러 가지 종류와 옵션을 가진 유연하고 확장 가능한 콘텐츠를 제공합니다.
 group: components
 toc: true
-untranslated: true
 ---
 
 ## 소개
@@ -77,7 +76,7 @@ untranslated: true
 
 ### 목록 그룹
 
-Flush list group을 사용하여 카드 안에 목록을 만듭니다.
+플러시(flush) 목록 그룹을 사용하여 카드에 콘텐츠 목록을 만듭니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -731,7 +730,7 @@ Bootstrap 그리드 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/gr
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, cards now use local CSS variables on `.card` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일부로, 이제 카드는 향상된 실시간 사용자 지정을 위해 `.card`에서 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="card-css-vars" file="scss/_card.scss" >}}
 

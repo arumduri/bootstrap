@@ -39,6 +39,7 @@ execFile('java', ['-version'], (error, stdout, stderr) => {
     '--asciiquotes',
     '--skip-non-html',
     '--Werror',
+    '--no-langdetect',
     `--filterpattern "${ignores}"`,
     '_site/',
     'js/tests/'

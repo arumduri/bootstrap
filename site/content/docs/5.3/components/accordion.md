@@ -8,7 +8,6 @@ aliases:
   - "/components/"
   - "/docs/5.3/components/"
 toc: true
-untranslated: true
 ---
 
 ## 작동 원리
@@ -162,7 +161,7 @@ To render an accordion that's expanded by default:
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, accordions now use local CSS variables on `.accordion` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 아코디언은 이제 향상된 실시간 사용자 지정을 위해 `.accordion`에서 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="accordion-css-vars" file="scss/_accordion.scss" >}}
 

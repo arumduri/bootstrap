@@ -5,15 +5,14 @@ description: Use our low-level `z-index` utilities to quickly change the stack l
 group: utilities
 toc: true
 added: "5.3"
-untranslated: true
 ---
 
-## Example
+## 예제
 
-Use `z-index` utilities to stack elements on top of one another. Requires a `position` value other than `static`, which can be set with custom styles or using our [position utilities]({{< docsref "/utilities/position/" >}}).
+`z-index` 유틸리티를 사용하여 요소를 서로 겹치게 쌓을 수 있습니다. 사용자 지정 스타일을 사용하거나 [위치 유틸리티]({{< docsref "/utilities/position/" >}})를 사용하여 `static` 이외의 `position` 값을 설정해야 합니다.
 
 {{< callout >}}
-We call these "low-level" `z-index` utilities because of their default values of `-1` through `3`, which we use for the layout of overlapping components. High-level `z-index` values are used for overlay components like modals and tooltips.
+이러한 "저수준" `z-index` 유틸리티는 기본값이 `-1`부터 `3`까지이며, 겹쳐진 구성 요소의 레이아웃에 사용합니다. 고수준 `z-index` 값은 모달 및 툴팁과 같은 오버레이 구성 요소에 사용됩니다.
 {{< /callout >}}
 
 {{< example class="bd-example-zindex-levels position-relative" >}}
@@ -24,13 +23,13 @@ We call these "low-level" `z-index` utilities because of their default values of
 <div class="z-n1 position-absolute p-5 rounded-3"><span>z-n1</span></div>
 {{< /example >}}
 
-## Overlays
+## 오버레이
 
-Bootstrap overlay components—dropdown, modal, offcanvas, popover, toast, and tooltip—all have their own `z-index` values to ensure a usable experience with competing "layers" of an interface.
+Bootstrap 오버레이 구성 요소인 드롭다운, 모달, 오프캔버스, 팝오버, 토스트 및 툴팁은 각각 고유한 `z-index` 값을 가지고 있어 인터페이스의 경쟁하는 "레이어"에서 사용 가능한 경험을 보장합니다.
 
-Read about them in the [`z-index` layout page]({{< docsref "/layout/z-index" >}}).
+[`z-index` 레이아웃 페이지]({{< docsref "/layout/z-index" >}})에서 자세히 읽어보세요.
 
-## Component approach
+## 구성 요소 접근 방식
 
 On some components, we use our low-level `z-index` values to manage repeating elements that overlap one another (like buttons in a button group or items in a list group).
 
@@ -40,12 +39,12 @@ Learn about our [`z-index` approach]({{< docsref "/extend/approach#z-index-scale
 
 ### Sass 맵
 
-Customize this Sass map to change the available values and generated utilities.
+이 Sass 맵을 사용하여 사용 가능한 값 및 생성된 유틸리티를 변경할 수 있습니다.
 
 {{< scss-docs name="zindex-levels-map" file="scss/_variables.scss" >}}
 
 ### Sass 유틸리티 API
 
-Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+위치 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에서 선언됩니다. [유틸리티 API 사용 방법을 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-zindex" file="scss/_utilities.scss" >}}

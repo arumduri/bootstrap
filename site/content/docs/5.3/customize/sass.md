@@ -4,7 +4,6 @@ title: Sass
 description: 변수, 맵, 믹스인 그리고 함수를 활용한 소스의 Sass 파일을 이용하여 프로젝트 빌드을 고속화하고 재정의 할 수 있습니다.
 group: customize
 toc: true
-untranslated: true
 ---
 
 변수, 맵, 믹스인 등을 활용한 소스의 Sass 파일을 이용합니다.
@@ -88,11 +87,11 @@ your-project/
 
 이 설정이 완료되면, `custom.scss` 안에 있는 Sass 변수나 맵을 변경할 수 있습니다. 그리고 필요에 따라 `// Optional` 섹션에 Bootstrap 일부를 추가할 수도 있습니다. 시작은 우리의 `bootstrap.scss` 파일에서 전체 가져오기 스택을 사용하기를 추천합니다.
 
-## Compiling
+## 컴파일
 
-In order to use your custom Sass code as CSS in the browser, you need a Sass compiler. Sass ships as a CLI package, but you can also compile it with other build tools like [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.js.org/), or with a GUI applications. Some IDEs also have Sass compilers built in or as downloadable extensions.
+브라우저에서 사용자 정의 Sass 코드를 CSS로 사용하려면 Sass 컴파일러가 필요합니다. Sass는 CLI 패키지로 제공되지만 [Gulp](https://gulpjs.com/) 또는 [Webpack](https://webpack.js.org/)과 같은 다른 빌드 도구나 GUI 애플리케이션을 사용하여 컴파일할 수도 있습니다. 일부 IDE에는 Sass 컴파일러가 기본 제공되거나 다운로드 가능한 확장 기능으로 제공되기도 합니다.
 
-We like to use the CLI to compile our Sass, but you can use whichever method you prefer. From the command line, run the following:
+저희는 CLI를 사용하여 Sass를 컴파일하는 것을 권장하지만 원하는 방법을 사용할 수도 있습니다. 명령줄에서 다음을 실행합니다:
 
 ```shell
 # Install Sass globally
@@ -102,15 +101,15 @@ npm install -g sass
 sass --watch ./scss/custom.scss ./css/custom.css
 ```
 
-Learn more about your options at [sass-lang.com/install](https://sass-lang.com/install) and [compiling with VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
+옵션에 대한 자세한 내용은 [sass-lang.com/install](https://sass-lang.com/install) 및 [VS Code로 컴파일하기](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css)에서 확인하세요.
 
 {{< callout info >}}
-**Using Bootstrap with another build tool?** Consider reading our guides for compiling with [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}), or [Vite]({{< docsref "/getting-started/vite" >}}). We also have production-ready demos in [our examples repository on GitHub](https://github.com/twbs/examples).
+**다른 빌드 도구와 함께 부트스트랩을 사용하시나요?** [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}) 또는 [Vite]({{< docsref "/getting-started/vite" >}})를 사용한 컴파일 가이드를 읽어보세요. 또한 [GitHub의 예제 리포지토리](https://github.com/twbs/examples)에는 프로덕션에 바로 사용할 수 있는 데모도 있습니다.
 {{< /callout >}}
 
-## Including
+## Include
 
-Once your CSS is compiled, you can include it in your HTML files. Inside your `index.html` you'll want to include your compiled CSS file. Be sure to update the path to your compiled CSS file if you've changed it.
+CSS가 컴파일되면 HTML 파일에 포함할 수 있습니다. `index.html` 안에 컴파일된 CSS 파일을 포함할 수 있습니다. 컴파일된 CSS 파일의 경로를 변경한 경우 반드시 업데이트하세요.
 
 ```html
 <!doctype html>

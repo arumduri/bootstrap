@@ -5,7 +5,6 @@ title_en: List group
 description: 목록 그룹은 일련의 콘텐츠를 보여주기 위한 유연하고 강력한 컴포넌트입니다. 그룹을 변경하거나 확장하여 모든 콘텐츠를 지원합니다.
 group: components
 toc: true
-untranslated: true
 ---
 
 ## 기본 예시
@@ -175,9 +174,9 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 </ul>
 {{< /example >}}
 
-### For links and buttons
+### 링크 및 버튼의 경우
 
-Contextual classes also work with `.list-group-item-action` for `<a>` and `<button>` elements. Note the addition of the hover styles here not present in the previous example. Also supported is the `.active` state; apply it to indicate an active selection on a contextual list group item.
+컨텍스트 클래스는 `<a>` 및 `<button>` 요소에 대해 `.list-group-item-action`과도 작동합니다. 이전 예제에는 없었던 호버 스타일이 여기에 추가되었습니다. `.active` 상태도 지원되며, 이를 적용하여 컨텍스트 목록 그룹 항목에 활성 선택을 표시할 수 있습니다.
 
 {{< example >}}
 <div class="list-group">
@@ -311,7 +310,7 @@ You can use `.stretched-link` on `<label>`s to make the whole list group item cl
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, list groups now use local CSS variables on `.list-group` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 목록 그룹은 향상된 실시간 사용자 정의를 위해 `.list-group`에서 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="list-group-css-vars" file="scss/_list-group.scss" >}}
 
@@ -327,7 +326,7 @@ As part of Bootstrap's evolving CSS variables approach, list groups now use loca
 
 ### Sass 루프
 
-Loop that generates the modifier classes with an overriding of CSS variables.
+CSS 변수를 재정의하여 수정자 클래스를 생성하는 루프입니다.
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 
@@ -454,9 +453,9 @@ bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
 {{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
-Activates your content as a tab element.
+콘텐츠를 탭 요소로 활성화합니다.
 
-You can create a tab instance with the constructor, for example:
+예를 들어 다음과 같이 생성자를 사용하여 탭 인스턴스를 만들 수 있습니다:
 
 ```js
 const bsTab = new bootstrap.Tab('#myTab')

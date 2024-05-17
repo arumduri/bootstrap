@@ -5,7 +5,6 @@ title_en: Borders
 description: 테두리 유틸리티를 사용하여 요소의 테두리 및 테두리 반경 스타일을 빠르게 지정합니다. 이미지, 버튼 또는 기타 요소에 적합합니다.
 group: utilities
 toc: true
-untranslated: true
 ---
 
 ## 테두리
@@ -14,7 +13,7 @@ untranslated: true
 
 ### 테두리 방향
 
-Add borders to custom elements:
+커스텀 요소에 테두리를 추가하세요:
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border"></span>
@@ -26,7 +25,7 @@ Add borders to custom elements:
 
 ### 반전 방향
 
-Or remove borders:
+또는 테두리를 제거하세요:
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-0"></span>
@@ -39,7 +38,7 @@ Or remove borders:
 ## 색상
 
 {{< callout info >}}
-Border utilities like `.border-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.border-*-subtle` utility will. This will be resolved in v6.
+원래 `$theme-colors` Sass 맵에서 생성된 `.border-*`와 같은 테두리 유틸리티는 아직 색상 모드에 반응하지 않지만, `.border-*-subtle` 유틸리티는 반응합니다. 이 문제는 v6에서 해결될 예정입니다.
 {{< /callout >}}
 
 테마 색상에 사전정의된 유틸리티를 사용하여 테두리 색상을 변경하십시오.
@@ -55,7 +54,7 @@ Border utilities like `.border-*` that generated from our original `$theme-color
 <span class="border border-white"></span>
 {{< /example >}}
 
-Or modify the default `border-color` of a component:
+또는 컴포넌트의 기본 `border-color`를 수정합니다:
 
 {{< example >}}
 <div class="mb-4">
@@ -72,15 +71,15 @@ Or modify the default `border-color` of a component:
 </div>
 {{< /example >}}
 
-## Opacity
+## 불투명도
 
 {{< added-in "5.2.0" >}}
 
-Bootstrap `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
+Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 생성됩니다. 이를 통해 컴파일 없이 실시간으로 색상을 변경하고 동적 알파 투명도를 변경할 수 있습니다.
 
-### How it works
+### 작동 방식
 
-Consider our default `.border-success` utility.
+기본 `.border-success` 유틸리티를 살펴보겠습니다.
 
 ```css
 .border-success {
@@ -89,18 +88,18 @@ Consider our default `.border-success` utility.
 }
 ```
 
-We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
+여기서는 `--bs-success`(`25, 135, 84` 값) CSS 변수의 RGB 버전을 사용하고 알파 투명도를 위해 두 번째 CSS 변수인 `--bs-border-opacity`를 첨부했습니다(로컬 CSS 변수 덕분에 기본값은 `1`입니다). 즉, 이제 `.border-success`를 사용할 때마다 계산된 `color` 값은 `rgba(25, 135, 84, 1)`가 됩니다. 각 `.border-*` 클래스 내부의 로컬 CSS 변수는 상속 문제를 방지하므로 유틸리티의 중첩된 인스턴스는 자동으로 알파 투명도가 수정되지 않습니다.
 
-### Example
+### 예시
 
-To change that opacity, override `--bs-border-opacity` via custom styles or inline styles.
+이 불투명도를 변경하려면 사용자 정의 스타일 또는 인라인 스타일을 통해 `--bs-border-opacity`를 재정의하면 됩니다.
 
 {{< example >}}
 <div class="border border-success p-2 mb-2">This is default success border</div>
 <div class="border border-success p-2" style="--bs-border-opacity: .5;">This is 50% opacity success border</div>
 {{< /example >}}
 
-Or, choose from any of the `.border-opacity` utilities:
+또는 `.border-opacity` 유틸리티 중 하나를 선택해도 됩니다:
 
 {{< example >}}
 <div class="border border-success p-2 mb-2">This is default success border</div>
@@ -169,7 +168,7 @@ Or, choose from any of the `.border-opacity` utilities:
 
 {{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
 
-Variables for setting `border-color` in `.border-*-subtle` utilities in light and dark mode:
+`.border-*-subtle` 유틸리티에서 `border-color`를 밝고 어두운 모드로 설정하기 위한 변수입니다:
 
 {{< scss-docs name="theme-border-subtle-variables" file="scss/_variables.scss" >}}
 
@@ -177,7 +176,7 @@ Variables for setting `border-color` in `.border-*-subtle` utilities in light an
 
 ### Sass 맵
 
-Color mode adaptive border colors are also available as a Sass map:
+컬러 모드 적응형 테두리 색상은 Sass 맵으로도 사용할 수 있습니다:
 
 {{< scss-docs name="theme-border-subtle-map" file="scss/_maps.scss" >}}
 
