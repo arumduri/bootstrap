@@ -5,26 +5,25 @@ title_en: Buttons
 description: 다양한 크기, 상태 등을 지원하는 폼, 대화상자 등의 작업에 Bootstrap의 사용자 지정 버튼 스타일을 사용하세요.
 group: components
 toc: true
-untranslated: true
 ---
 
-## Base class
+## 기본 클래스
 
-Bootstrap has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, and lack any explicit focus and hover styles.
+Bootstrap에는 패딩 및 콘텐츠 정렬과 같은 기본 스타일을 설정하는 기본 `.btn` 클래스가 있습니다. 기본적으로 `.btn` 컨트롤에는 투명한 테두리와 배경색이 있으며, 명시적인 포커스 및 호버 스타일이 없습니다.
 
 {{< example >}}
 <button type="button" class="btn">Base class</button>
 {{< /example >}}
 
-The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
+`.btn` 클래스는 버튼 변형과 함께 사용하거나 사용자 정의 스타일의 기초로 사용하기 위한 것입니다.
 
 {{< callout warning >}}
-If you are using the `.btn` class on its own, remember to at least define some explicit `:focus` and/or `:focus-visible` styles.
+`.btn` 클래스를 단독으로 사용하는 경우 최소한 명시적인 `:focus` 및/또는 `:focus-visible` 스타일을 정의하는 것을 잊지 마세요.
 {{< /callout >}}
 
 ## 변수
 
-Bootstrap includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
+Bootstrap에는 각각 고유한 의미적 목적을 가진 여러 가지 버튼 변형이 포함되어 있으며, 더 많은 제어를 위해 몇 가지 추가 기능이 추가되었습니다.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -214,12 +213,12 @@ const bsButton = new bootstrap.Button('#myButton')
 ```
 
 {{< bs-table "table" >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `dispose` | Destroys an element's button. (Removes stored data on the DOM element) |
-| `getInstance` | Static method which allows you to get the button instance associated with a DOM element, you can use it like this: `bootstrap.Button.getInstance(element)`. |
-| `getOrCreateInstance` | Static method which returns a button instance associated with a DOM element or creates a new one in case it wasn't initialized. You can use it like this: `bootstrap.Button.getOrCreateInstance(element)`. |
-| `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
+| `dispose` | 요소의 버튼을 삭제합니다. (DOM 요소에 저장된 데이터를 제거합니다.) |
+| `getInstance` | 정적 메소드를 사용하면 DOM 요소와 연결된 버튼 인스턴스를 가져올 수 있으며, 다음과 같이 사용할 수 있습니다: `bootstrap.Button.getInstance(element)`. |
+| `getOrCreateInstance` | DOM 요소와 연관된 버튼 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 생성하는 정적 메소드입니다. 다음과 같이 사용할 수 있습니다: `bootstrap.Button.getOrCreateInstance(element)`. |
+| `toggle` | 푸시 상태를 전환합니다. 버튼이 활성화된 것처럼 보이도록 설정합니다. |
 {{< /bs-table >}}
 
 예를 들어, 모든 버튼을 토글하려면:
@@ -237,13 +236,13 @@ document.querySelectorAll('.btn').forEach(buttonElement => {
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 버튼은 향상된 실시간 사용자 지정을 위해 `.btn`에서 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="btn-css-vars" file="scss/_buttons.scss" >}}
 
-Each `.btn-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules with our `button-variant()`, `button-outline-variant()`, and `button-size()` mixins.
+각 `.btn-*` 수정자 클래스는 `button-variant()`, `button-variant()`, `button-outline-variant()`, `button-size()` 믹스인을 사용하여 추가 CSS 규칙을 최소화하기 위해 적절한 CSS 변수를 업데이트합니다.
 
-Here's an example of building a custom `.btn-*` modifier class as we do for the buttons unique to our docs by reassigning Bootstrap's CSS variables with a mixture of our own CSS and Sass variables.
+다음은 문서에 고유한 버튼에서와 같이 자체 CSS 및 Sass 변수를 혼합하여 Bootstrap의 CSS 변수를 재할당하여 사용자 정의 `.btn-*` 수정자 클래스를 구축하는 예제입니다.
 
 <div class="bd-example">
   <button type="button" class="btn btn-bd-primary">Custom button</button>

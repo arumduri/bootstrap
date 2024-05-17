@@ -17,7 +17,7 @@ toc: true
 - 내비게이션은 기본적으로 반응형이지만 간단히 변경할 수 있습니다. 반응형 동작은 Collapse JavaScript 플러그인에 의존합니다.
 - 접근성을 확보하려면 `<nav>` 요소를 사용하거나, 혹은 `<div>`와 같이 보다 범용적인 요소를 사용하는 경우에는 `role="navigation"`을 추가하여 스크린 리더 사용자를 위해 랜드마크가 되는 곳임을 명시적으로 알려주어야 합니다.
 - 현재 페이지에는 `aria-current="page"`를, 세트 안에서의 현재 아이템에는 `aria-current="true"`를 사용하여, 현재 아이템을 표시합니다.
-- **New in v5.2.0:** Navbars can be themed with CSS variables that are scoped to the `.navbar` base class. `.navbar-light` has been deprecated and `.navbar-dark` has been rewritten to override CSS variables instead of adding additional styles.
+- **v5.2.0 업데이트:** 탐색 모음은 `.navbar` 기본 클래스로 범위가 지정된 CSS 변수를 사용하여 테마를 지정할 수 있습니다. `.navbar-light`는 더 이상 사용되지 않으며 추가 스타일을 추가하는 대신 CSS 변수를 재정의하도록 `.navbar-dark`가 재작성되었습니다.
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
@@ -35,7 +35,7 @@ toc: true
 - `.collapse.navbar-collapse`으로 부모 중단점에 따라 내비게이션 바의 콘텐츠를 그룹화하거나 감출수 있음.
 - 옵션으로 `.navbar-scroll`를 추가해 `max-height`와 [scroll expanded navbar content](#scrolling)이 가능.
 
-여기서는 `lg` (large) 중단점에서 자동으로 접히는 'light' 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.
+여기서는 `lg` (large) 중단점에서 자동으로 접히는 라이트 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -324,14 +324,14 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 ## 색상 스키마
 
 {{< callout warning >}}
-**New dark navbars in v5.3.0 —** We've deprecated `.navbar-dark` in favor of the new `data-bs-theme="dark"`. Add `data-bs-theme="dark"` to the `.navbar` to enable a component-specific color mode. [Learn more about our color modes.]({{< docsref "/customize/color-modes" >}})
+**v5.3.0에 추가된 새 다크 내비게이션 바 -** `.navbar-dark`는 더 이상 사용되지 않고 새로운 `data-bs-theme="dark"`가 사용됩니다. `.navbar`에 `data-bs-theme="dark"`를 추가하면 컴포넌트별 색상 모드를 활성화할 수 있습니다. [색상 모드에 대해 자세히 알아보세요.]({{< docsref "/customize/color-modes" >}})
 
 ---
 
-**New in v5.2.0  —** Navbar theming is now powered by CSS variables and `.navbar-light` has been deprecated. CSS variables are applied to `.navbar`, defaulting to the "light" appearance, and can be overridden with `.navbar-dark`.
+**v5.2.0 업데이트 —** 이제 탐색 모음 테마는 CSS 변수를 통해 제공되며 `.navbar-light`는 더 이상 사용되지 않습니다. CSS 변수는 `.navbar`에 적용되어 기본적으로 "light" 모양으로 표시되며 `.navbar-dark`로 재정의할 수 있습니다.
 {{< /callout >}}
 
-Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` and additional utilities.
+Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마가 그 어느 때보다 쉬워졌습니다. 기본값은 밝은 배경색에 사용할 수 있는 "밝은 내비게이션 바"지만, 어두운 배경색을 사용하려면 `data-bs-theme="dark"`를 `.navbar` 부모에 적용할 수도 있습니다. 그런 다음 `.bg-*` 및 추가 유틸리티를 사용하여 사용자 정의합니다.
 
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
@@ -740,7 +740,7 @@ Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and
 </nav>
 ```
 
-When using offcanvas in a dark navbar, be aware that you may need to have a dark background on the offcanvas content to avoid the text becoming illegible. In the example below, we add `.navbar-dark` and `.bg-dark` to the `.navbar`, `.text-bg-dark` to the `.offcanvas`, `.dropdown-menu-dark` to `.dropdown-menu`, and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas.
+어두운 탐색 모음에서 오프캔버스를 사용할 때는 텍스트가 잘 보이지 않도록 오프캔버스 콘텐츠의 배경을 어둡게 설정해야 할 수 있습니다. 아래 예에서는 어두운 오프캔버스로 적절한 스타일을 지정하기 위해 `.navbar`에 `.navbar-dark`와 `.bg-dark`를, `.offcanvas`에 `.text-bg-dark`를, `.dropdown-menu-dark`에 `.dropdown-menu`를, `.btn-close-white`에 `.btn-close`를 추가합니다.
 
 {{< example >}}
 <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -792,30 +792,30 @@ When using offcanvas in a dark navbar, be aware that you may need to have a dark
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 탐색바에서 `.navbar`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="navbar-css-vars" file="scss/_navbar.scss" >}}
 
-Some additional CSS variables are also present on `.navbar-nav`:
+일부 추가 CSS 변수는 `.navbar-nav`에도 존재합니다:
 
 {{< scss-docs name="navbar-nav-css-vars" file="scss/_navbar.scss" >}}
 
-Customization through CSS variables can be seen on the `.navbar-dark` class where we override specific values without adding duplicate CSS selectors.
+CSS 변수를 통한 커스터마이징은 `.navbar-dark` 클래스에서 중복된 CSS 선택기를 추가하지 않고 특정 값을 재정의하는 것을 볼 수 있습니다.
 
 {{< scss-docs name="navbar-dark-css-vars" file="scss/_navbar.scss" >}}
 
 ### Sass 변수
 
-Variables for all navbars:
+모든 내비게이션 바에 대한 변수:
 
 {{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
 
-Variables for the [dark navbar](#color-schemes):
+[다크 내비게이션 바](#색상-스키마)에 대한 변수:
 
 {{< scss-docs name="navbar-dark-variables" file="scss/_variables.scss" >}}
 
 ### Sass 루프
 
-[Responsive navbar expand/collapse classes](#responsive-behaviors)(예를 들어, `.navbar-expand-lg`)는 `$breakpoints` 맵과 조합되어 `scss/_navbar.scss`내의 반복문으로 생성됩니다.
+[반응형 내비게이션 펼치기/접기 클래스](#반응형-비헤이비어)(`.navbar-expand-lg` 등)는 `$breakpoints` 맵과 조합되어 `scss/_navbar.scss`내의 반복문으로 생성됩니다.
 
 {{< scss-docs name="navbar-expand-loop" file="scss/_navbar.scss" >}}

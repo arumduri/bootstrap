@@ -4,7 +4,6 @@ title: 오버플로우
 title_en: Overflow
 description: 콘텐츠가 요소를 오버플로우 하는 방식을 빠르게 구현 하려면 이러한 단축 유틸리티를 사용하세요.
 group: utilities
-untranslated: true
 ---
 
 ## Overflow
@@ -35,7 +34,7 @@ untranslated: true
 
 ### `overflow-x`
 
-Adjust the `overflow-x` property to affect the overflow of content horizontally.
+콘텐츠가 가로로 넘치도록 영향을 주려면 `overflow-x` 속성을 조정합니다.
 
 <div class="bd-example d-md-flex">
   <div class="overflow-x-auto p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px; white-space: nowrap;">
@@ -65,7 +64,7 @@ Adjust the `overflow-x` property to affect the overflow of content horizontally.
 
 ### `overflow-y`
 
-Adjust the `overflow-y` property to affect the overflow of content vertically.
+콘텐츠가 세로로 넘치도록 영향을 주려면 `overflow-y` 속성을 조정합니다.
 
 <div class="bd-example d-md-flex">
   <div class="overflow-y-auto p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px;">

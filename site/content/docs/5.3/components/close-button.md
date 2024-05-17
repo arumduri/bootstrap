@@ -5,7 +5,6 @@ title_en: Close button
 description: 모달이나 경고창 등의 콘텐츠를 닫기 위한 범용적인 닫기 버튼입니다.
 group: components
 toc: true
-untranslated: true
 ---
 
 ## 예시
@@ -18,7 +17,7 @@ untranslated: true
 
 ## 비활성화 상태
 
-비활성화된 닫기 버튼은, `opacity`를 변경합니다. 그리고 `pointer-events: none` 과 `user-select: none`을 적용해, hover 상태와 active 상태가 트리거 되지 않도록 하였습니다.
+비활성화된 닫기 버튼은 `opacity`를 변경합니다. 그리고 `pointer-events: none` 과 `user-select: none`을 적용해, hover 상태와 active 상태가 트리거 되지 않도록 하였습니다.
 
 {{< example >}}
 <button type="button" class="btn-close" disabled aria-label="Close"></button>
@@ -29,10 +28,10 @@ untranslated: true
 {{< deprecated-in "5.3.0" >}}
 
 {{< callout warning >}}
-**Heads up!** As of v5.3.0, the `.btn-close-white` class is deprecated. Instead, use `data-bs-theme="dark"` to change the color mode of the close button.
+**주의!** v5.3.0부터 `.btn-close-white` 클래스는 더 이상 사용되지 않습니다. 대신 `data-bs-theme="dark"`를 사용하여 닫기 버튼의 색상 모드를 변경하세요.
 {{< /callout >}}
 
-Add `data-bs-theme="dark"` to the `.btn-close`, or to its parent element, to invert the close button. This uses the `filter` property to invert the `background-image` without overriding its value.
+`.btn-close` 또는 그 상위 요소에 `data-bs-theme="dark"`를 추가하여 닫기 버튼을 반전시킬 수 있습니다. 이렇게 하면 `filter` 속성을 사용하여 값을 재정의하지 않고 `background-image`를 반전시킵니다.
 
 {{< example class="bg-dark" >}}
 <div data-bs-theme="dark">
@@ -47,7 +46,7 @@ Add `data-bs-theme="dark"` to the `.btn-close`, or to its parent element, to inv
 
 {{< added-in "5.3.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, close button now uses local CSS variables on `.btn-close` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+부트스트랩의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 닫기 버튼은 `.btn-close`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="close-css-vars" file="scss/_close.scss" >}}
 

@@ -5,7 +5,6 @@ title_en: Floating labels
 description: 입력 필드 위로 떠오르는 예쁘고 간단한 폼 라벨을 작성할 수 있습니다.
 group: forms
 toc: true
-untranslated: true
 ---
 
 ## 예시
@@ -77,9 +76,9 @@ untranslated: true
 </div>
 {{< /example >}}
 
-## Disabled
+## 비활성화
 
-Add the `disabled` boolean attribute on an input, a textarea or a select to give it a grayed out appearance, remove pointer events, and prevent focusing.
+입력, 텍스트 영역 또는 선택 영역에 `disabled` 부울 속성을 추가하여 회색으로 표시하고 포인터 이벤트를 제거하며 포커싱을 방지할 수 있습니다.
 
 {{< example >}}
 <div class="form-floating mb-3">
@@ -105,9 +104,9 @@ Add the `disabled` boolean attribute on an input, a textarea or a select to give
 </div>
 {{< /example >}}
 
-## Readonly plaintext
+## 읽기 전용 일반 텍스트
 
-Floating labels also support `.form-control-plaintext`, which can be helpful for toggling from an editable `<input>` to a plaintext value without affecting the page layout.
+플로팅 라벨은 페이지 레이아웃에 영향을 주지 않고 편집 가능한 `<input>`에서 일반 텍스트 값으로 전환하는 데 유용한 `.form-control-plaintext`도 지원합니다.
 
 {{< example >}}
 <div class="form-floating mb-3">
@@ -120,9 +119,9 @@ Floating labels also support `.form-control-plaintext`, which can be helpful for
 </div>
 {{< /example >}}
 
-## Input groups
+## 입력 그룹
 
-Floating labels also support `.input-group`.
+플로팅 라벨은 `.input-group`도 지원합니다.
 
 {{< example >}}
 <div class="input-group mb-3">

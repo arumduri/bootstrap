@@ -5,7 +5,6 @@ description: 단일 파일에 있는 요소별 CSS 변경 모음인 Reboot는 Bo
 group: content
 aliases: "/docs/5.3/content/"
 toc: true
-untranslated: true
 ---
 
 ## 접근
@@ -23,7 +22,7 @@ Reboot는 Normalize를 기반으로 빌드되어 요소 선택자만 사용하�
 
 {{< added-in "5.2.0" >}}
 
-v5.1.1에서는 모든 CSS 번들(`bootstrap.css`, `bootstrap-reboot.css`, `bootstrap-grid.css` 포함)에서 필수 `@import`를 표준화하여 `_root.scss`를 포함하도록 했습니다. 이렇게 하면 해당 번들에서 사용되는 변수의 수에 관계없이 모든 번들에 `:root` 수준의 CSS 변수가 추가됩니다. 궁극적으로 부트스트랩 5는 시간이 지남에 따라 더 많은 [CSS 변수]({{< docsref "/customize/css-variables">}})를 추가하여 Sass를 항상 다시 컴파일할 필요 없이 더 많은 실시간 사용자 정의 기능을 제공할 것입니다. 우리의 접근 방식은 소스 Sass 변수를 가져와 CSS 변수로 변환하는 것입니다. 이렇게 하면 CSS 변수를 사용하지 않더라도 Sass의 모든 기능을 사용할 수 있습니다. **이 작업은 아직 진행 중이며 완전히 구현하는 데 시간이 걸립니다.**
+v5.1.1에서는 모든 CSS 번들(`bootstrap.css`, `bootstrap-reboot.css`, `bootstrap-grid.css` 포함)에서 필수 `@import`를 표준화하여 `_root.scss`를 포함하도록 했습니다. 이렇게 하면 해당 번들에서 사용되는 변수의 수에 관계없이 모든 번들에 `:root` 수준의 CSS 변수가 추가됩니다. 궁극적으로 Bootstrap 5는 시간이 지남에 따라 더 많은 [CSS 변수]({{< docsref "/customize/css-variables">}})를 추가하여 Sass를 항상 다시 컴파일할 필요 없이 더 많은 실시간 사용자 정의 기능을 제공할 것입니다. 우리의 접근 방식은 소스 Sass 변수를 가져와 CSS 변수로 변환하는 것입니다. 이렇게 하면 CSS 변수를 사용하지 않더라도 Sass의 모든 기능을 사용할 수 있습니다. **이 작업은 아직 진행 중이며 완전히 구현하는 데 시간이 걸립니다.**
 
 예를 들어 일반적인 `<body>` 스타일에 대한 `:root` CSS 변수를 생각해 보겠습니다:
 
@@ -96,30 +95,30 @@ $font-family-sans-serif:
 | `<h6></h6>` | <span class="h6">h6. Bootstrap heading</span> |
 {{< /bs-table >}}
 
-## Paragraphs
+## 단락
 
-All `<p>` elements have their `margin-top` removed and `margin-bottom: 1rem` set for easy spacing.
+모든 `<p>` 요소의 `margin-top`이 제거되고 `margin-bottom: 1rem`이 설정되어 간격을 쉽게 배치할 수 있습니다.uo
 
 {{< example >}}
 <p>This is an example paragraph.</p>
 {{< /example >}}
 
-## Links
+## 링크
 
-Links have a default `color` and underline applied. While links change on `:hover`, they don't change based on whether someone `:visited` the link. They also receive no special `:focus` styles.
+링크에는 기본 `color`와 밑줄이 적용됩니다. 링크는 `:hover` 시 변경되지만 누군가 링크를 `:visited`(방문)했는지 여부에 따라 변경되지는 않습니다. 또한 특별한 `:focus` 스타일도 적용되지 않습니다.
 
 {{< example >}}
 <a href="#">This is an example link</a>
 {{< /example >}}
 
-As of v5.3.x, link `color` is set using `rgba()` and new `-rgb` CSS variables, allowing for easy customization of link color opacity. Change the link color opacity with the `--bs-link-opacity` CSS variable:
+v5.3.x부터 링크 `color`는 `rgba()`와 새로운 `-rgb` CSS 변수를 사용하여 설정되므로 링크 색상 불투명도를 쉽게 사용자 정의할 수 있습니다. 링크 색상 불투명도는 `--bs-link-opacity` CSS 변수를 사용하여 변경할 수 있습니다:
 
 {{< example >}}
 <a href="#" style="--bs-link-opacity: .5">This is an example link</a>
 {{< /example >}}
 
 
-Placeholder links—those without an `href`—are targeted with a more specific selector and have their `color` and `text-decoration` reset to their default values.
+플레이스홀더 링크(`href`가 없는 링크)는 보다 구체적인 선택자가 적용되며 `color` 및 `text-decoration`이 기본값으로 재설정됩니다.
 
 {{< example >}}
 <a>This is a placeholder link</a>

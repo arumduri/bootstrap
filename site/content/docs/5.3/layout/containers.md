@@ -17,7 +17,7 @@ Bootstrap에는 세 가지 다른 컨테이너가 있습니다:
 - 정의된 중단점까지 `width: 100%`를 설정하는 `.container-{breakpoint}`
 - 모든 중단점에 `width: 100%`를 설정하는 `.container-fluid`
 
-아래 표는 각 중단점에서 각 컨테이너의 `max-width`가 원래 `.container`와 '.container-fluid'가 어떻게 비교되는지 보여줍니다.
+아래 표는 각 중단점에서 각 컨테이너의 `max-width`가 원래 `.container`와 `.container-fluid`가 어떻게 비교되는지 보여줍니다.
 
 [그리드 예시]({{< docsref "/examples/grid#containers" >}})에서 실제로 보고 비교헤보세요.
 

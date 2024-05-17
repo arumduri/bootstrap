@@ -5,12 +5,11 @@ title_en: Form controls
 description: 텍스트 형식의 `<input>`이나 `<textarea>`과 같은 폼 컨트롤에 사용자 정의 스타일, 크기 조정, 포커스 상태등의 업그레이드를 실시할 수 있습니다.
 group: forms
 toc: true
-untranslated: true
 ---
 
 ## 예시
 
-Form controls are styled with a mix of Sass and CSS variables, allowing them to adapt to color modes and support any customization method.
+양식 컨트롤은 Sass 및 CSS 변수를 혼합하여 스타일을 지정하므로 색상 모드에 적응하고 모든 사용자 정의 방법을 지원할 수 있습니다.
 
 {{< example >}}
 <div class="mb-3">
@@ -38,10 +37,10 @@ Form controls are styled with a mix of Sass and CSS variables, allowing them to 
 block-level 또는 inline-level의 폼 텍스트는 `.form-text`를 사용해서 생성할 수 있습니다.
 
 {{< callout warning >}}
-Form text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
+양식 텍스트는 `aria-describedby` 속성을 사용하여 관련 양식 컨트롤과 명시적으로 연결해야 합니다. 이렇게 하면 화면 리더와 같은 보조 기술이 사용자가 컨트롤에 초점을 맞추거나 입력할 때 이 양식 텍스트를 알릴 수 있습니다.
 {{< /callout >}}
 
-Form text below inputs can be styled with `.form-text`. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
+입력 아래 양식 텍스트는 `.form-text`로 스타일을 지정할 수 있습니다. 블록 수준 요소를 사용하는 경우 위 입력과 간격을 쉽게 맞출 수 있도록 상단 여백이 추가됩니다.
 
 {{< example >}}
 <label for="inputPassword5" class="form-label">Password</label>
@@ -51,7 +50,7 @@ Form text below inputs can be styled with `.form-text`. If a block-level element
 </div>
 {{< /example >}}
 
-Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
+인라인 텍스트는 `.form-text` 클래스만 있으면 일반적인 인라인 HTML 요소(`<span>`, `<small>` 등)를 모두 사용할 수 있습니다.
 
 {{< example >}}
 <div class="row g-3 align-items-center">

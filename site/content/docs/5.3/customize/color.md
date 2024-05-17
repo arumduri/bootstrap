@@ -5,34 +5,34 @@ title_en: Color
 description: Bootstrap은 우리의 스타일과 컴포넌트를 테마로 한 광범위한 컬러 시스템을 지원합니다. 어떤 프로젝트라도 보다 포괄적으로 재정의 및 확장이 가능합니다.
 group: customize
 toc: true
-untranslated: true
 ---
 
 ## 색상
 
 {{< added-in "5.3.0" >}}
 
-Bootstrap's color palette has continued to expand and become more nuanced in v5.3.0. We've added new variables for `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on `:root` and are adapted for our new dark color mode while our original theme colors remain unchanged.
+Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세해졌습니다. `secondary` 및 `tertiary` 텍스트 및 배경색에 대한 새로운 변수와 테마 색상에 대한 `{color}-bg-subtle`, `{color}-border-subtle` 및 `{color}-text-emphasis`가 추가되었습니다. 이러한 새로운 색상은 밝고 어두운 등 다양한 색상 모드에서 더 쉽게 사용자 정의할 수 있도록 하기 위해 Sass 및 CSS 변수(색상 맵이나 유틸리티 클래스 제외)를 통해 사용할 수 있습니다. 이 새로운 변수는 `:root`에 전역적으로 설정되며, 원래 테마 색상은 변경되지 않은 채 새로운 어두운 색상 모드에 맞게 조정됩니다.
 
 Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
+`-rgb`로 끝나는 색상은 `rgb()` 및 `rgba()` 색상 모드에서 사용할 `red`, `green`, `blue` 값을 제공합니다. (예: `rgba(var(--bs-secondary-bg-rgb), .5)`)
 
 {{< callout warning>}}
-**Heads up!** There's some potential confusion with our new secondary and tertiary colors, and our existing secondary theme color, as well as our light and dark theme colors. Expect this to be ironed out in v6.
+**주의!** 새로운 보조 및 보조 색상과 기존 보조 테마 색상, 밝은 테마 색상과 어두운 테마 색상이 혼동될 가능성이 있습니다. 이 문제는 v6에서 해결될 것으로 예상됩니다.
 {{< /callout >}}
 
 <div class="table-responsive">
   <table class="table table-swatches">
     <thead>
       <tr>
-        <th style="width: 340px;">Description</th>
-        <th style="width: 200px;" class="ps-0">Swatch</th>
-        <th>Variables</th>
+        <th style="width: 340px;">설명</th>
+        <th style="width: 200px;" class="ps-0">예시</th>
+        <th>변수</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td rowspan="2">
-          {{< markdown >}}**Body —** Default foreground (color) and background, including components.{{< /markdown >}}
+          {{< markdown >}}**Body —** 컴포넌트를 포함한 기본 전경(색상) 및 배경입니다.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2" style="background-color: var(--bs-body-color);">&nbsp;</div>
@@ -51,7 +51,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td rowspan="2">
-          {{< markdown >}}**Secondary —** Use the `color` option for lighter text. Use the `bg` option for dividers and to indicate disabled component states.{{< /markdown >}}
+          {{< markdown >}}**Secondary —** 더 밝은 텍스트를 원하면 `color` 옵션을, 구분선 및 비활성화된 컴포넌트 상태를 표시하려면 `bg` 옵션을 사용하세요.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2" style="background-color: var(--bs-secondary-color);">&nbsp;</div>
@@ -70,7 +70,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td rowspan="2">
-          {{< markdown >}}**Tertiary —** Use the `color` option for even lighter text. Use the `bg` option to style backgrounds for hover states, accents, and wells.{{< /markdown >}}
+          {{< markdown >}}**Tertiary —** 더 밝은 색상의 텍스트를 원하시면 `color` 옵션을 사용하세요. `bg` 옵션을 사용하여 호버 상태, 액센트 및 우물의 배경 스타일을 지정하세요.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2" style="background-color: var(--bs-tertiary-color);">&nbsp;</div>
@@ -89,7 +89,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td>
-          {{< markdown >}}**Emphasis —** For higher contrast text. Not applicable for backgrounds.{{< /markdown >}}
+          {{< markdown >}}**Emphasis —** 대비가 높은 텍스트의 경우에 사용됩니다. 배경에는 적용되지 않습니다.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2" style="background-color: var(--bs-emphasis-color);">&nbsp;</div>
@@ -100,7 +100,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td>
-          {{< markdown >}}**Border —** For component borders, dividers, and rules. Use `--bs-border-color-translucent` to blend with backgrounds with an `rgba()` value.{{< /markdown >}}
+          {{< markdown >}}**Border —** 컴포넌트 테두리, 디바이더 및 규칙의 경우에 사용됩니다. 배경과 `-rgba()` 값을 가진 배경과 혼합하려면 `--bs-border-color-transparent`를 사용하세요.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2" style="background-color: var(--bs-border-color);">&nbsp;</div>
@@ -111,7 +111,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Primary —** Main theme color, used for hyperlinks, focus styles, and component and form active states.{{< /markdown >}}
+          {{< markdown >}}**Primary —** 하이퍼링크, 포커스 스타일, 컴포넌트 및 양식 활성 상태에 사용되는 기본 테마 색상입니다.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-primary">&nbsp;</div>
@@ -146,7 +146,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Success —** Theme color used for positive or successful actions and information.{{< /markdown >}}
+          {{< markdown >}}**Success —** 긍정적이거나 성공적인 작업 및 정보에 사용되는 테마 색상입니다.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-success">&nbsp;</div>
@@ -181,7 +181,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Danger —** Theme color used for errors and dangerous actions.{{< /markdown >}}
+          {{< markdown >}}**Danger —** 오류 및 위험한 행동에 사용되는 테마 색상입니다.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-danger">&nbsp;</div>
@@ -216,7 +216,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Warning —** Theme color used for non-destructive warning messages.{{< /markdown >}}
+          {{< markdown >}}**Warning —** 덜 위험한 경고 메시지에 사용되는 테마 색상입니다.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-warning">&nbsp;</div>
@@ -251,7 +251,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Info —** Theme color used for neutral and informative content.{{< /markdown >}}
+          {{< markdown >}}**Info —** 중립적이거나 정보성 콘텐츠에 사용되는 테마 색상입니다.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-info">&nbsp;</div>
@@ -286,7 +286,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Light —** Additional theme option for less contrasting colors.{{< /markdown >}}
+          {{< markdown >}}**Light —** 대비가 적은 색상을 위한 추가 테마 옵션입니다.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-light">&nbsp;</div>
@@ -321,7 +321,7 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Dark —** Additional theme option for higher contrasting colors.{{< /markdown >}}
+          {{< markdown >}}**Dark —** 대비가 높은 색상을 위한 추가 테마 옵션입니다.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-dark">&nbsp;</div>
@@ -358,9 +358,9 @@ Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()`
   </table>
 </div>
 
-### Using the new colors
+### 새로운 색상 사용
 
-These new colors are accessible via CSS variables and utility classes—like `--bs-primary-bg-subtle` and `.bg-primary-subtle`—allowing you to compose your own CSS rules with the variables, or to quickly apply styles via classes. The utilities are built with the color's associated CSS variables, and since we customize those CSS variables for dark mode, they are also adaptive to color mode by default.
+이러한 새로운 색상은 CSS 변수와 유틸리티 클래스(예: `--bs-primary-bg-subtle` 및 `.bg-primary-subtle`)를 통해 액세스할 수 있으므로 변수를 사용하여 자신만의 CSS 규칙을 작성하거나 클래스를 통해 스타일을 빠르게 적용할 수 있습니다. 이 유틸리티는 색상과 관련된 CSS 변수를 사용하여 구축되며, 다크 모드에 맞게 사용자 정의되므로 기본적으로 색상 모드에 맞게 조정됩니다.
 
 {{< example >}}
 <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
@@ -437,7 +437,7 @@ These new colors are accessible via CSS variables and utility classes—like `--
 
 Sass는 프로그램적으로 변수를 만들 수 없어서 모든 색상을 위한 변수를 수동으로 만듭니다. 중간 값을 지정하고 (예를 들어, `$blue-500`), Sass의 `mix()` 색상 함수로 색조(밝게) 혹은 음영(어둡게)의 사용자 정의 색상 함수를 사용하고 있습니다.
 
-`mix()`의 사용은 `lighten()`과 `darken()` 조금 다릅니다. 전자는 지정한 색상을 흰색과 검은색으로 섞지만, 후자는 각 색의 밝기 값을 조정하기만 하면 됩니다. 그 결과, [CodePen 데모](https://codepen.io/emdeoh/pen/zYOQOPB)에서 보이는 것처럼 더 완전한 색을 얻을 수 있습니다.
+`mix()`의 사용은 `lighten()`과 `darken()`간에 조금 다릅니다. 전자는 지정한 색상을 흰색과 검은색으로 섞지만, 후자는 각 색의 밝기 값을 조정하기만 하면 됩니다. 그 결과, [CodePen 데모](https://codepen.io/emdeoh/pen/zYOQOPB)에서 보이는 것처럼 더 완전한 색을 얻을 수 있습니다.
 
 `tint-color()`와 `shade-color()` 함수에서는 `mix()`를 `$theme-color-interval` 변수와 함께 사용합니다. 전체 소스 코드는 `scss/_functions.scss`와 `scss/_variables.scss` 파일을 참조해 주세요.
 
@@ -457,7 +457,7 @@ Bootstrap의 소스 Sass 파일에는 색상과 그 16진수 값의 목록을 �
 
 ### 예시
 
-당신의 Sass에서 이를 사용하는 방법입니다:
+Sass에서 이를 사용하는 방법입니다:
 ```scss
 .alpha { color: $purple; }
 .beta {
@@ -466,7 +466,7 @@ Bootstrap의 소스 Sass 파일에는 색상과 그 16진수 값의 목록을 �
 }
 ```
 
-[Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color` using the `500` color values.
+[색상]({{< docsref "/utilities/colors" >}}) 및 [배경]({{< docsref "/utilities/background" >}}) 유틸리티 클래스는 `500` 색상 값을 사용하여 `color` 및 `background-color`를 설정하는 데 사용할 수도 있습니다.
 
 ## 유틸리티 생성하기
 

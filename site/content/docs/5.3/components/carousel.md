@@ -5,26 +5,25 @@ title_en: Carousel
 description: 캐러셀은 이미지나 텍스트의 슬라이드를 가로로 슬라이드시켜 여러 개를 표시하는 컴포넌트입니다.
 group: components
 toc: true
-untranslated: true
 ---
 
 ## 작동 원리
 
 - 캐러셀은, CSS 3D 트랜스폼과 약간의 JavaScript로 만들어진, 일련의 콘텐츠를 순환시키기 위한 슬라이드쇼입니다. 일련의 이미지, 텍스트, 혹은 사용자 정의 마크업으로 동작합니다. 그리고 이전/다음의 컨트롤이나 위치 표시(인디게이터, indicator)도 지원합니다.
 
-- For performance reasons, **carousels must be manually initialized** using the [carousel constructor method](#methods). Without initialization, some of the event listeners (specifically, the events needed touch/swipe support) will not be registered until a user has explicitly activated a control or indicator.
+- 성능상의 이유로 **캐러셀은 [캐러셀 생성자 메소드](#메소드)를 사용하여 수동으로 초기화**해야 합니다. 초기화하지 않으면 일부 이벤트 리스너(특히 터치/스와이프 지원이 필요한 이벤트)는 사용자가 컨트롤이나 표시기를 명시적으로 활성화할 때까지 등록되지 않습니다.
 
-  The only exception are [autoplaying carousels](#autoplaying-carousels) with the `data-bs-ride="carousel"` attribute as these are initialized automatically on page load. If you're using autoplaying carousels with the data attribute, **don't explicitly initialize the same carousels with the constructor method.**
+  유일한 예외는 `data-bs-ride="carousel"` 속성이 있는 [자동 재생 캐러셀](#자동-재생-캐러셀)로, 페이지 로드 시 자동으로 초기화되므로 이 캐러셀은 예외입니다. 데이터 속성이 있는 자동 재생 캐러셀을 사용하는 경우 **생성자 메소드로 동일한 캐러셀을 명시적으로 초기화하지 마세요**.
 
-- Nested carousels are not supported. You should also be aware that carousels in general can often cause usability and accessibility challenges.
+- 중첩된 캐러셀은 지원되지 않습니다. 또한 일반적으로 캐러셀은 사용성 및 접근성 문제를 야기할 수 있다는 점에 유의해야 합니다.
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## Basic examples
+## 기본 예제
 
-Here is a basic example of a carousel with three slides. Note the previous/next controls. We recommend using `<button>` elements, but you can also use `<a>` elements with `role="button"`.
+다음은 슬라이드가 3개인 캐러셀의 기본 예시입니다. 이전/다음 컨트롤에 주목하세요. `<button>` 요소를 사용하는 걸 권장하지만 `role="button"`ㄴ이 포함된 `<a>` 요소를 사용할 수도 있습니다.
 
 {{< example >}}
 <div id="carouselExample" class="carousel slide">
@@ -50,9 +49,9 @@ Here is a basic example of a carousel with three slides. Note the previous/next 
 </div>
 {{< /example >}}
 
-Carousels don't automatically normalize slide dimensions. As such, you may need to use additional utilities or custom styles to appropriately size content. While carousels support previous/next controls and indicators, they're not explicitly required. Add and customize as you see fit.
+캐러셀은 슬라이드 크기를 자동으로 정규화하지 않습니다. 따라서 콘텐츠 크기를 적절하게 조정하려면 추가 유틸리티 또는 사용자 지정 스타일을 사용해야 할 수 있습니다. 캐러셀은 이전/다음 컨트롤 및 표시기를 지원하지만 명시적으로 필요한 것은 아닙니다. 원하는 대로 추가하고 사용자 지정하세요.
 
-**You must add the `.active` class to one of the slides**, otherwise the carousel will not be visible. Also be sure to set a unique `id` on the `.carousel` for optional controls, especially if you're using multiple carousels on a single page. Control and indicator elements must have a `data-bs-target` attribute (or `href` for links) that matches the `id` of the `.carousel` element.
+**슬라이드 중 하나에 `.active` 클래스를 추가해야 합니다**. 그렇지 않으면 캐러셀이 표시되지 않습니다. 또한 특히 한 페이지에서 여러 개의 캐러셀을 사용하는 경우 선택적 컨트롤의 경우 `.carousel`에 고유한 `id`를 설정해야 합니다. 컨트롤 및 표시기 요소에는 `.carousel` 요소의 `id`와 일치하는 `data-bs-target` 속성(링크의 경우 `href`)이 있어야 합니다.
 
 ### 인디케이터
 
@@ -160,14 +159,14 @@ Carousels don't automatically normalize slide dimensions. As such, you may need 
 </div>
 {{< /example >}}
 
-## Autoplaying carousels
+## 자동 재생 캐러셀
 
-You can make your carousels autoplay on page load by setting the `ride` option to `carousel`. Autoplaying carousels automatically pause while hovered with the mouse. This behavior can be controlled with the `pause` option. In browsers that support the [Page Visibility API](https://www.w3.org/TR/page-visibility/), the carousel will stop cycling when the webpage is not visible to the user (such as when the browser tab is inactive, or when the browser window is minimized).
+페이지 로드 시 캐러셀이 자동 재생되도록 설정하려면 `ride` 옵션을 `carousel`로 설정하면 됩니다. 자동 재생 캐러셀은 마우스로 마우스를 가리키는 동안 자동으로 일시 중지됩니다. 이 동작은 `pause` 옵션으로 제어할 수 있습니다. [페이지 가시성 API](https://www.w3.org/TR/page-visibility/)를 지원하는 브라우저에서는 브라우저 탭이 비활성 상태이거나 브라우저 창이 최소화되는 등 웹페이지가 사용자에게 보이지 않을 경우 캐러셀의 순환이 중지됩니다.
 
 {{< callout info >}}
-For accessibility reasons, we recommend avoiding the use of autoplaying carousels. If your page does include an autoplaying carousel, we recommend providing an additional button or control to explicitly pause/stop the carousel.
+접근성을 위해 자동 재생 캐러셀은 사용하지 않는 것이 좋습니다. 페이지에 자동 재생 캐러셀이 포함되어 있는 경우 캐러셀을 명시적으로 일시 중지/정지할 수 있는 추가 버튼이나 컨트롤을 제공하는 것이 좋습니다.
 
-See [WCAG 2.1 Success Criterion 2.2.2 Pause, Stop, Hide](https://www.w3.org/TR/WCAG21/#pause-stop-hide).
+[WCAG 2.1 Success Criterion 2.2.2 Pause, Stop, Hide](https://www.w3.org/TR/WCAG21/#pause-stop-hide)를 참고해주세요.
 {{< /callout >}}
 
 {{< example >}}
@@ -194,7 +193,7 @@ See [WCAG 2.1 Success Criterion 2.2.2 Pause, Stop, Hide](https://www.w3.org/TR/W
 </div>
 {{< /example >}}
 
-When the `ride` option is set to `true`, rather than `carousel`, the carousel won't automatically start to cycle on page load. Instead, it will only start after the first user interaction.
+`carousel`러셀' 대신 `ride` 옵션을 `true`로 설정하면 페이지 로드 시 캐러셀이 자동으로 순환하기 시작하지 않습니다. 대신 첫 번째 사용자 상호 작용 후에만 시작됩니다.
 
 {{< example >}}
 <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
@@ -248,9 +247,9 @@ When the `ride` option is set to `true`, rather than `carousel`, the carousel wo
 </div>
 {{< /example >}}
 
-### Autoplaying carousels without controls
+### 컨트롤 없는 자동 재생 캐러셀
 
-Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-100` on carousel images to prevent browser default image alignment.
+다음은 슬라이드만 있는 캐러셀입니다. 브라우저 기본 이미지 정렬을 방지하기 위해 캐러셀 이미지에 `.d-block`과 `.w-100`이 있는지 확인하세요.
 
 {{< example >}}
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -296,7 +295,7 @@ Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-
 </div>
 {{< /example >}}
 
-## 검은색 변형
+## 어두운 변형
 
 {{< deprecated-in "5.3.0" >}}
 
@@ -353,11 +352,11 @@ Here's a carousel with slides only. Note the presence of the `.d-block` and `.w-
 
 ### Sass 변수
 
-Variables for all carousels:
+모든 캐러셀에 대한 변수입니다.
 
 {{< scss-docs name="carousel-variables" file="scss/_variables.scss" >}}
 
-Variables for the [dark carousel](#dark-variant):
+[어두운 캐러셀](#검은색-변형)에 대한 변수입니다:
 
 {{< scss-docs name="carousel-dark-variables" file="scss/_variables.scss" >}}
 
@@ -369,7 +368,7 @@ Variables for the [dark carousel](#dark-variant):
 
 ### JavaScript 사용하기
 
-캐러셀을 수동으로 부르는 경우 :
+캐러셀을 수동으로 부르는 경우:
 
 ```js
 const carousel = new bootstrap.Carousel('#myCarousel')
@@ -398,7 +397,7 @@ const carousel = new bootstrap.Carousel('#myCarousel')
 {{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
-You can create a carousel instance with the carousel constructor, and pass on any additional options. For example, to manually initialize an autoplaying carousel (assuming you're not using the `data-bs-ride="carousel"` attribute in the markup itself) with a specific interval and with touch support disabled, you can use:
+캐러셀 생성자를 사용하여 캐러셀 인스턴스를 생성하고 추가 옵션을 전달할 수 있습니다. 예를 들어, 마크업 자체에서 `data-bs-ride="carousel"` 속성을 사용하지 않는 경우 특정 간격으로 터치 지원을 비활성화한 상태에서 자동 재생 캐러셀을 수동으로 초기화하려면 다음을 사용할 수 있습니다:
 
 ```js
 const myCarouselElement = document.querySelector('#myCarousel')
@@ -414,8 +413,8 @@ const carousel = new bootstrap.Carousel(myCarouselElement, {
 | --- | --- |
 | `cycle` | 캐러셀의 아이템을 왼쪽에서 오른쪽으로 순환시킵니다. |
 | `dispose` | 요소의 캐러셀을 없앱니다. (DOM 요소에 저장되어 있는 데이터를 삭제) |
-| `getInstance` | Static method which allows you to get the carousel instance associated to a DOM element. You can use it like this: `bootstrap.Carousel.getInstance(element)`. |
-| `getOrCreateInstance` | Static method which returns a carousel instance associated to a DOM element, or creates a new one in case it wasn't initialized. You can use it like this: `bootstrap.Carousel.getOrCreateInstance(element)`. |
+| `getInstance` | 정적 메소드를 사용하여 DOM 요소에 연결된 캐러셀 인스턴스를 가져올 수 있습니다. `bootstrap.Carousel.getInstance(element)`처럼 사용할 수 있습니다. |
+| `getOrCreateInstance` | DOM 엘리먼트에 연결된 캐러셀 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 생성하는 정적 메소드입니다. `bootstrap.Carousel.getOrCreateInstance(element)`처럼 사용할 수 있습니다. |
 | `next` | 다음 아이템으로 순환합니다. **다음 아이템이 표시되기 전** (예를 들어, `slid.bs.carousel` 이벤트가 발생하기 전)에 호출된 곳으로 돌아갑니다. |
 | `nextWhenVisible` | 페이지가 표시되어 있지 않은 경우나 캐러셀이나 그 부모가 표시되어 있지 않는 경우는 캐러셀을 다음 페이지로 순환시키지 않도록 합니다. **대상이 되는 아이템이 표시되기 전에 호출된 곳으로 돌아갑니다**. |
 | `pause` | 캐러셀의 아이템 순환을 중지시킵니다. |
