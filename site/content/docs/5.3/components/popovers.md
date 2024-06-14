@@ -5,7 +5,6 @@ title_en: Popovers
 description: iOS에서 볼수 있는 Bootstrap 팝오버를 사이트 임의의 요소에 추가하기 위한 문서와 예시입니다.
 group: components
 toc: true
-untranslated: true
 ---
 
 ## 개요
@@ -21,7 +20,7 @@ untranslated: true
 - `.disabled` 또는 `disabled` 요소의 팝오버는 그 위(바깥) 요소에서 트리거 해야 합니다.
 - 여러 라인에 걸쳐 있는 앵커로부터 트리거 된 경우, 팝오버는 앵커의 전체 폭을 중심으로 표시됩니다. 이 동작을 피하기 위해서는 `<a>`에 `.text-nowrap`을 사용해 주십시오.
 - 팝오버는 대응 요소가 DOM에서 삭제되기 전에 숨겨야 합니다.
-- 팝오버는 shadow DOM 내의 요소 덕분에 트리거 할 수 있습니다.
+- 팝오버는 shadow DOM 내의 요소 덕분에 트리거할 수 있습니다.
 
 {{< callout info >}}
 {{< partial "callouts/info-sanitizer.md" >}}
@@ -45,9 +44,9 @@ const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 ```
 
-### Live demo
+### 라이브 데모
 
-We use JavaScript similar to the snippet above to render the following live popover. Titles are set via `data-bs-title` and body content is set via `data-bs-content`.
+위의 스니펫과 유사한 JavaScript를 사용하여 다음과 같은 라이브 팝오버를 렌더링합니다. 제목은 `data-bs-title`을 통해 설정하고 본문 콘텐츠는 `data-bs-content`를 통해 설정합니다.
 
 {{< callout warning >}}
 {{< partial "callouts/warning-data-bs-title-vs-title.md" >}}
@@ -76,9 +75,9 @@ We use JavaScript similar to the snippet above to render the following live popo
 </button>
 {{< /example >}}
 
-### Custom `container`
+### 사용자 지정 `container`
 
-When you have some styles on a parent element that interfere with a popover, you'll want to specify a custom `container` so that the popover's HTML appears within that element instead. This is common in responsive tables, input groups, and the like.
+부모 요소에 팝오버를 방해하는 일부 스타일이 있는 경우 사용자 정의 `container`를 지정하여 해당 요소 내에 팝오버의 HTML이 대신 표시되도록 할 수 있습니다. 이는 반응형 표, 입력 그룹 등에서 흔히 사용됩니다.
 
 ```js
 const popover = new bootstrap.Popover('.example-popover', {
@@ -86,7 +85,7 @@ const popover = new bootstrap.Popover('.example-popover', {
 })
 ```
 
-Another situation where you'll want to set an explicit custom `container` are popovers inside a [modal dialog]({{< docsref "/components/modal" >}}), to make sure that the popover itself is appended to the modal. This is particularly important for popovers that contain interactive elements – modal dialogs will trap focus, so unless the popover is a child element of the modal, users won't be able to focus or activate these interactive elements.
+명시적인 사용자 정의 `container`를 설정해야 하는 또 다른 상황은 [모달 대화 상자]({{< docsref "/components/modal" >}}) 내부의 팝업으로, 팝업 자체가 모달에 추가되도록 하는 것입니다. 이는 대화형 요소가 포함된 팝업의 경우 특히 중요합니다. 모달 대화 상자는 포커스를 가두기 때문에 팝업이 모달의 하위 요소가 아니면 사용자가 이러한 대화형 요소에 초점을 맞추거나 활성화할 수 없습니다.
 
 ```js
 const popover = new bootstrap.Popover('.example-popover', {
@@ -94,11 +93,11 @@ const popover = new bootstrap.Popover('.example-popover', {
 })
 ```
 
-### Custom popovers
+### 사용자 지정 팝오버
 
 {{< added-in "5.2.0" >}}
 
-You can customize the appearance of popovers using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-popover"` to scope our custom appearance and use it to override some of the local CSS variables.
+[CSS 변수](#변수)를 사용하여 팝오버의 모양을 사용자 정의할 수 있습니다. `data-bs-custom-class="custom-popover"`로 사용자 정의 클래스를 설정하여 사용자 정의 모양의 범위를 지정하고 이를 사용하여 일부 로컬 CSS 변수를 재정의합니다.
 
 {{< scss-docs name="custom-popovers" file="site/assets/scss/_component-examples.scss" >}}
 
@@ -149,7 +148,7 @@ const popover = new bootstrap.Popover('.popover-dismiss', {
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap’s evolving CSS variables approach, popovers now use local CSS variables on `.popover` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 팝오버는 `.popover`에서 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 향상시킵니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="popover-css-vars" file="scss/_popover.scss" >}}
 
@@ -159,7 +158,7 @@ As part of Bootstrap’s evolving CSS variables approach, popovers now use local
 
 ## 사용 방법
 
-JavaScript로 팝오버를 유효화 합니다:
+JavaScript로 팝오버를 유효화합니다:
 
 ```js
 const exampleEl = document.getElementById('example')
@@ -187,26 +186,26 @@ const popover = new bootstrap.Popover(exampleEl, options)
 {{< /callout >}}
 
 {{< bs-table "table" >}}
-| Name | Type | Default | Description |
+| 이름 | 유형 | 기본값 | 설명 |
 | --- | --- | --- | --- |
-| `allowList` | object | [Default value]({{< docsref "/getting-started/javascript#sanitizer" >}}) | Object which contains allowed attributes and tags. |
-| `animation` | boolean | `true` | Apply a CSS fade transition to the popover. |
-| `boundary` | string, element | `'clippingParents'` | Overflow constraint boundary of the popover (applies only to Popper's preventOverflow modifier). By default, it's `'clippingParents'` and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's [detectOverflow docs](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary). |
-| `container` | string, element, false | `false` | Appends the popover to a specific element. Example: `container: 'body'`. This option is particularly useful in that it allows you to position the popover in the flow of the document near the triggering element - which will prevent the popover from floating away from the triggering element during a window resize. |
-| `content` | string, element, function | `''` | The popover's text content. If a function is given, it will be called with its `this` reference set to the element that the popover is attached to. |
-| `customClass` | string, function | `''` | Add classes to the popover when it is shown. Note that these classes will be added in addition to any classes specified in the template. To add multiple classes, separate them with spaces: `'class-1 class-2'`. You can also pass a function that should return a single string containing additional class names. |
-| `delay` | number, object | `0` | Delay showing and hiding the popover (ms)—doesn't apply to manual trigger type. If a number is supplied, delay is applied to both hide/show. Object structure is: `delay: { "show": 500, "hide": 100 }`. |
-| `fallbackPlacements` | string, array | `['top', 'right', 'bottom', 'left']` | Define fallback placements by providing a list of placements in array (in order of preference). For more information refer to Popper's [behavior docs](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements). |
-| `html` | boolean | `false` | Allow HTML in the popover. If true, HTML tags in the popover's `title` will be rendered in the popover. If false, `innerText` property will be used to insert content into the DOM. Use text if you're worried about XSS attacks. |
-| `offset` | number, string, function | `[0, 0]` | Offset of the popover relative to its target. You can pass a string in data attributes with comma separated values like: `data-bs-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
-| `placement` | string, function | `'top'` | How to position the popover: auto, top, bottom, left, right. When `auto` is specified, it will dynamically reorient the popover. When a function is used to determine the placement, it is called with the popover DOM node as its first argument and the triggering element DOM node as its second. The `this` context is set to the popover instance. |
-| `popperConfig` | null, object, function | `null` | To change Bootstrap's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the Bootstrap's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper. |
-| `sanitize` | boolean | `true` | Enable or disable the sanitization. If activated `'template'`, `'content'` and `'title'` options will be sanitized. |
-| `sanitizeFn` | null, function | `null` | Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization. |
-| `selector` | string, false | `false` | If a selector is provided, popover objects will be delegated to the specified targets. In practice, this is used to also apply popovers to dynamically added DOM elements (`jQuery.on` support). See [this issue]({{< param repo >}}/issues/4215) and [an informative example](https://codepen.io/Johann-S/pen/djJYPb). **Note**: `title` attribute must not be used as a selector. |
-| `template` | string | `'<div class="popover" role="tooltip"><div class="popover-arrow"></div><div class="popover-inner"></div></div>'` | Base HTML to use when creating the popover. The popover's `title` will be injected into the `.popover-inner`. `.popover-arrow` will become the popover's arrow. The outermost wrapper element should have the `.popover` class and `role="tooltip"`. |
-| `title` | string, element, function | `''` | The popover title. If a function is given, it will be called with its `this` reference set to the element that the popover is attached to. |
-| `trigger` | string | `'hover focus'` | How popover is triggered: click, hover, focus, manual. You may pass multiple triggers; separate them with a space. `'manual'` indicates that the popover will be triggered programmatically via the `.popover('show')`, `.popover('hide')` and `.popover('toggle')` methods; this value cannot be combined with any other trigger. `'hover'` on its own will result in popovers that cannot be triggered via the keyboard, and should only be used if alternative methods for conveying the same information for keyboard users is present. |
+| `allowList` | object | [기본값]({{< docsref "/getting-started/javascript#sanitizer" >}}) | 허용된 속성 및 태그가 포함된 개체입니다. |
+| `animation` | boolean | `true` | 팝오버에 CSS 페이드 전환을 적용합니다. |
+| `boundary` | string, element | `'clippingParents'` | 팝오버의 오버플로 제약 조건 경계(팝퍼의 preventOverflow 수정자에만 적용). 기본값은 `'clippingParents'`이며 (자바스크립트를 통해서만) HTMLElement 참조를 받을 수 있습니다. 자세한 내용은 Popper의 [detectOverflow 문서](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary)를 참조하세요. |
+| `container` | string, element, false | `false` | 특정 요소에 팝오버를 추가합니다. 예: `container: 'body'`. 이 옵션은 문서 흐름에서 트리거 요소 근처에 팝오버를 배치할 수 있다는 점에서 특히 유용하며, 창 크기를 조정하는 동안 팝오버가 트리거 요소에서 떠다니는 것을 방지할 수 있습니다. |
+| `content` | string, element, function | `''` | 팝오버의 텍스트 콘텐츠입니다. 함수가 지정되면 팝오버가 첨부된 요소에 대한 `this` 참조를 설정하여 호출됩니다. |
+| `customClass` | string, function | `''` | 팝오버가 표시되면 클래스를 추가합니다. 이러한 클래스는 템플릿에 지정된 모든 클래스에 추가됩니다. 여러 클래스를 추가하려면 ``class-1 class-2``와 같이 공백으로 구분합니다. 추가 클래스 이름이 포함된 단일 문자열을 반환하는 함수를 전달할 수도 있습니다. |
+| `delay` | number, object | `0` | 팝오버 표시 및 숨기기 지연(ms) - 수동 트리거 유형에는 적용되지 않습니다. 숫자를 지정하면 숨기기/표시 모두에 지연이 적용됩니다. 객체 구조: `delay: { "show": 500, "hide": 100 }`. |
+| `fallbackPlacements` | string, array | `['top', 'right', 'bottom', 'left']` | 배열에 배치 목록을 제공함으로써 대체 배치를 정의합니다(선호도 순서대로). 자세한 내용은 Popper의 [동작 문서](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements)를 참조하세요. |
+| `html` | boolean | `false` | 팝오버에 HTML 허용. true이면 팝오버의 `title`에 있는 HTML 태그가 팝오버에 렌더링됩니다. false인 경우 `innerText` 속성을 사용하여 DOM에 콘텐츠를 삽입합니다. XSS 공격이 걱정된다면 텍스트를 사용하세요. |
+| `offset` | number, string, function | `[0, 0]` | 대상에 대한 팝오버의 오프셋입니다. `data-bs-offset="10,20"`와 같이 쉼표로 구분된 값으로 데이터 속성에 문자열을 전달할 수 있습니다. 함수가 오프셋을 결정하는 데 사용되는 경우 팝퍼 배치, 참조 및 팝퍼 레코드가 포함된 객체를 첫 번째 인수로 사용하여 호출됩니다. 트리거링 요소 DOM 노드는 두 번째 인수로 전달됩니다. 이 함수는 두 개의 숫자가 포함된 배열을 반환해야 합니다: [스키딩](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [거리](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). 자세한 내용은 팝퍼의 [오프셋 문서](https://popper.js.org/docs/v2/modifiers/offset/#options)를 참조하세요. |
+| `placement` | string, function | `'top'` | auto, top, bottom, left, right로 팝오버 위치를 지정할 수 있습니다. `auto`를 지정하면 팝오버의 방향이 동적으로 변경됩니다. 함수가 위치를 결정하는 데 사용되는 경우, 함수는 팝오버 DOM 노드를 첫 번째 인수로, 트리거링 요소 DOM 노드를 두 번째 인수로 사용하여 호출됩니다. `this` 컨텍스트는 팝오버 인스턴스로 설정됩니다. |
+| `popperConfig` | null, object, function | `null` | Bootstrap의 기본 Popper 구성을 변경하려면 [Popper 구성](https://popper.js.org/docs/v2/constructors/#options)을 참조하세요. 함수를 사용하여 Popper 구성을 생성하는 경우 Bootstrap의 기본 Popper 구성이 포함된 객체와 함께 호출됩니다. 이 함수를 사용하면 기본 구성을 사용하고 자신만의 구성과 병합할 수 있습니다. 함수는 Popper에 대한 구성 객체를 반환해야 합니다. |
+| `sanitize` | boolean | `true` | 새니타이징(sanitizing)을 활성화 또는 비활성화합니다. `'template'`을 활성화하면 `'content'`, `'title'` 옵션이 새니타이징 처리됩니다. |
+| `sanitizeFn` | null, function | `null` | 여기에서 자체 새니타이징 기능을 제공할 수 있습니다. 전용 라이브러리를 사용하여 새니타이징을 수행하려는 경우 유용할 수 있습니다. |
+| `selector` | string, false | `false` | 선택기가 제공되면 팝오버 객체가 지정된 대상에 위임됩니다. 실제로는 동적으로 추가된 DOM 요소에 팝오버를 적용하는 데에도 사용됩니다(`jQuery.on` 지원). [이번 이슈]({{< param repo >}}/issues/4215) 및 [유익한 예제](https://codepen.io/Johann-S/pen/djJYPb)를 참조하세요. **참고**:`title` 속성을 선택자로 사용해서는 안 됩니다. |
+| `template` | string | `'<div class="popover" role="tooltip"><div class="popover-arrow"></div><div class="popover-inner"></div></div>'` | 팝오버를 만들 때 사용할 기본 HTML입니다. 팝오버의 `title`은 `.popover-inner`에 삽입됩니다. `.popover-arrow`는 팝오버의 화살표가 됩니다. 가장 바깥쪽 래퍼 요소에는 `.popover` 클래스와 `role="tooltip"`이 있어야 합니다. |
+| `title` | string, element, function | `''` | 팝오버 제목입니다. 함수가 지정되면 팝오버가 첨부된 요소에 대한 `this` 참조를 설정하여 호출됩니다. |
+| `trigger` | string | `'hover focus'` | 팝업이 트리거되는 방법: 클릭, 마우스오버, 포커스, 수동. 여러 트리거를 전달할 수 있으며, 공백으로 구분하세요. `'manual'`은 `.popover('show')`, `.popover('hide')` 및 `.popover('toggle')` 메서드를 통해 프로그래밍 방식으로 팝업이 트리거됨을 나타내며, 이 값은 다른 트리거와 결합할 수 없습니다. `'hover'`를 단독으로 사용하면 키보드를 통해 트리거할 수 없는 팝오버가 발생하므로 키보드 사용자에게 동일한 정보를 전달할 수 있는 대체 메서드가 있는 경우에만 사용해야 합니다. |
 {{< /bs-table >}}
 
 {{< callout info >}}
@@ -264,10 +263,10 @@ popover.setContent({
 ```
 
 {{< callout info >}}
-The `setContent` method accepts an `object` argument, where each property-key is a valid `string` selector within the popover template, and each related property-value can be `string` | `element` | `function` | `null`
+`setContent` 메서드는 `object` 인수를 받는데, 각 속성 키는 팝오버 템플릿 내에서 유효한 `string` 선택자이며, 각 관련 속성 값은 `string` | `element` | `function` | `null`일 수 있습니다.
 {{< /callout >}}
 
-### Events
+### 이벤트
 
 {{< bs-table >}}
 | 이벤트 | 설명 |
