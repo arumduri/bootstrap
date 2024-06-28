@@ -190,7 +190,7 @@ const popover = new bootstrap.Popover(exampleEl, options)
 | --- | --- | --- | --- |
 | `allowList` | object | [기본값]({{< docsref "/getting-started/javascript#sanitizer" >}}) | 허용된 속성 및 태그가 포함된 개체입니다. |
 | `animation` | boolean | `true` | 팝오버에 CSS 페이드 전환을 적용합니다. |
-| `boundary` | string, element | `'clippingParents'` | 팝오버의 오버플로 제약 조건 경계(팝퍼의 preventOverflow 수정자에만 적용). 기본값은 `'clippingParents'`이며 (자바스크립트를 통해서만) HTMLElement 참조를 받을 수 있습니다. 자세한 내용은 Popper의 [detectOverflow 문서](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary)를 참조하세요. |
+| `boundary` | string, element | `'clippingParents'` | 팝오버의 오버플로 제약 조건 경계(팝퍼의 preventOverflow 수정자에만 적용). 기본값은 `'clippingParents'`이며 (JavaScript를 통해서만) HTMLElement 참조를 받을 수 있습니다. 자세한 내용은 Popper의 [detectOverflow 문서](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary)를 참조하세요. |
 | `container` | string, element, false | `false` | 특정 요소에 팝오버를 추가합니다. 예: `container: 'body'`. 이 옵션은 문서 흐름에서 트리거 요소 근처에 팝오버를 배치할 수 있다는 점에서 특히 유용하며, 창 크기를 조정하는 동안 팝오버가 트리거 요소에서 떠다니는 것을 방지할 수 있습니다. |
 | `content` | string, element, function | `''` | 팝오버의 텍스트 콘텐츠입니다. 함수가 지정되면 팝오버가 첨부된 요소에 대한 `this` 참조를 설정하여 호출됩니다. |
 | `customClass` | string, function | `''` | 팝오버가 표시되면 클래스를 추가합니다. 이러한 클래스는 템플릿에 지정된 모든 클래스에 추가됩니다. 여러 클래스를 추가하려면 ``class-1 class-2``와 같이 공백으로 구분합니다. 추가 클래스 이름이 포함된 단일 문자열을 반환하는 함수를 전달할 수도 있습니다. |

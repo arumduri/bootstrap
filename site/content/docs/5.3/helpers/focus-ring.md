@@ -47,7 +47,7 @@ CSS 변수, Sass 변수, 유틸리티 또는 사용자 정의 스타일을 사�
 
 ### Sass 변수
 
-포커스 링 Sass 변수를 사용자 정의하여 부트스트랩 기반 프로젝트에서 포커스 링 스타일의 모든 사용법을 수정할 수 있습니다.
+포커스 링 Sass 변수를 사용자 정의하여 Bootstrap 기반 프로젝트에서 포커스 링 스타일의 모든 사용법을 수정할 수 있습니다.
 
 {{< scss-docs name="focus-ring-variables" file="scss/_variables.scss" >}}
 

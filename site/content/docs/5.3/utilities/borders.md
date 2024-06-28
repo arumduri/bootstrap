@@ -168,7 +168,7 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 
 {{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
 
-`.border-*-subtle` 유틸리티에서 `border-color`를 밝고 어두운 모드로 설정하기 위한 변수입니다:
+`.border-*-subtle` 유틸리티에서 `border-color`를 밝고 다크 모드로 설정하기 위한 변수입니다:
 
 {{< scss-docs name="theme-border-subtle-variables" file="scss/_variables.scss" >}}
 

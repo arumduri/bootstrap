@@ -304,6 +304,6 @@ $('#myTab a').on('shown.bs.tab', () => {
 })
 ```
 
-## 자바스크립트 비활성화
+## JavaScript 비활성화
 
-Bootstrap의 플러그인에는 자바스크립트가 비활성화되었을 때를 대비한 특별한 대안이 없습니다. 이 경우 사용자 환경이 걱정된다면 [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)를 사용하여 사용자에게 상황(및 JavaScript를 다시 활성화하는 방법)을 설명하거나 사용자 정의 대체 기능을 추가하세요.
+Bootstrap의 플러그인에는 JavaScript가 비활성화되었을 때를 대비한 특별한 대안이 없습니다. 이 경우 사용자 환경이 걱정된다면 [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)를 사용하여 사용자에게 상황(및 JavaScript를 다시 활성화하는 방법)을 설명하거나 사용자 정의 대체 기능을 추가하세요.

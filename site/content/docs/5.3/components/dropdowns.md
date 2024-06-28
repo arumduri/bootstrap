@@ -1055,7 +1055,7 @@ data 속성이나 JavaScript를 사용해, 드롭다운 플러그인은 부모�
 ### JavaScript 사용하기
 
 {{< callout warning >}}
-드롭다운은 자바스크립트를 통해 드롭다운을 호출하든 데이터 API를 사용하든 관계없이 트리거 요소에 `data-bs-toggle="dropdown"`이 있어야 합니다.
+드롭다운은 JavaScript를 통해 드롭다운을 호출하든 데이터 API를 사용하든 관계없이 트리거 요소에 `data-bs-toggle="dropdown"`이 있어야 합니다.
 {{< /callout >}}
 
 JavaScript로 드롭다운을 호출합니다:

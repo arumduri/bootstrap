@@ -1,121 +1,120 @@
 ---
 layout: docs
-title: v5으로 마이그레이션
+title: v5으로 마이그레이션하기
 title_en: Migrating to v5
-description: Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인 리뷰함으로써 v4에서 v5로의 변경을 지원합니다.
+description: Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인하고 검토함으로써 v4에서 v5로의 마이그레이션을 지원합니다.
 group: migration
 aliases: "/migration/"
 toc: true
-untranslated: true
 ---
 
 ## v5.3.0
 
-If you're migrating from our previous alpha releases of v5.3.0, please review their changes in addition to this section.
+이전 v5.3.0 알파 릴리즈에서 마이그레이션하는 경우 이 섹션과 함께 해당 변경 사항을 검토하세요.
 
-### Helpers
+### 도우미 
 
-- [Colored links]({{< docsref "/helpers/colored-links" >}}) once again have `!important` so they work better with our newly added link utilities.
+- [컬러 링크]({{< docsref "/helpers/colored-links" >}})에 다시 한 번 `!important`가 추가되어 새로 추가된 링크 유틸리티와 더 잘 작동합니다.
 
-### Utilities
+### 유틸리티
 
-- Added new `.d-inline-grid` [display utility]({{< docsref "/utilities/display" >}}).
+- 새로운 `.d-inline-grid` [표시 유틸리티]({{< docsref "/utilities/display" >}})를 추가했습니다.
 
 ## v5.3.0-alpha2
 
-If you're migrating from our previous alpha release of v5.3.0, please review the changes listed below.
+이전 v5.3.0 알파 릴리즈에서 마이그레이션하는 경우 이 섹션과 함께 해당 변경 사항을 검토하세요.
 
-### CSS variables
+### CSS 변수
 
-- Removed several duplicate and unused root CSS variables.
+- 중복되거나 사용되지 않는 여러 루트 CSS 변수를 제거했습니다.
 
-### Color modes
+### 색상 모드
 
-- Dark mode colors are now derived from our theme colors (e.g., `$primary`) in Sass, rather than color specific tints or shades (e.g., `$blue-300`). This allows for a more automated dark mode when customizing the default theme colors.
+- 이제 다크 모드 색상은 특정 색조나 음영(예: `$blue-300`)이 아닌 Sass의 테마 색상(예: `$primary`)에서 파생됩니다. 따라서 기본 테마 색상을 사용자 지정할 때 보다 자동화된 다크 모드를 사용할 수 있습니다.
 
-- Added Sass maps for generating theme colors for dark mode text, subtle background, and subtle border.
+- 다크 모드 텍스트, 미묘한 배경 및 미묘한 테두리의 테마 색상을 생성하기 위한 Sass 맵을 추가했습니다.
 
-- [Snippet examples]({{< docsref "/examples#snippets" >}}) are now ready for dark mode with updated markup and reduced custom styles.
+- [스니펫 예시]({{< docsref "/examples#snippets" >}})는 이제 마크업이 업데이트되고 사용자 정의 스타일이 축소된 다크 모드에 사용할 수 있습니다.
 
-- Added `color-scheme: dark` to dark mode CSS to change OS level controls like scrollbars
+- 스크롤 막대와 같은 OS 레벨 컨트롤을 변경하기 위해 다크 모드 CSS에 `color-scheme: dark`를 추가했습니다.
 
-- Form validation `border-color` and text `color` states now respond to dark mode, thanks to new Sass and CSS variables.
+- 양식 유효성 검사 `border-color` 및 텍스트 `color` 상태가 이제 새로운 Sass 및 CSS 변수 덕분에 다크 모드에 반응합니다.
 
-- Dropped recently added form control background CSS variables and reassigned the Sass variables to use CSS variables instead. This simplifies the styling across color modes and avoids an issue where form controls in dark mode wouldn't update properly.
+- 최근에 추가된 양식 컨트롤 백그라운드 CSS 변수를 삭제하고 대신 CSS 변수를 사용하도록 Sass 변수를 재할당했습니다. 이렇게 하면 여러 색상 모드에서 스타일링이 단순화되고 다크 모드의 양식 컨트롤이 제대로 업데이트되지 않는 문제를 방지할 수 있습니다.
 
-- Our `box-shadow`s will once again always stay dark instead of inverting to white when in dark mode.
+- 이제 `box-shadow`는 다크 모드에서 흰색으로 반전되는 대신 항상 어두운 상태로 유지됩니다.
 
-- Improved HTML and JavaScript for our color mode toggle script. The selector for changing the active SVG has been improved, and the markup made more accessible with ARIA attributes.
+- 색상 모드 토글 스크립트의 HTML 및 자바스크립트가 개선되었습니다. 활성 SVG 변경을 위한 선택기가 개선되었으며, ARIA 속성을 사용하여 마크업에 더 쉽게 액세스할 수 있게 되었습니다.
 
-- Improved docs code syntax colors and more across light and dark modes.
+- 라이트 모드와 다크 모드에서 문서 코드 구문 색상 등이 개선되었습니다.
 
-### Typography
+### 타이포그래피
 
-- We no longer set a color for `$headings-color-dark` or `--bs-heading-color` for dark mode. To avoid several problems of headings within components appearing the wrong color, we've set the Sass variable to `null` and added a `null` check like we use on the default light mode.
+- 더 이상 다크 모드에서 `$headings-color-dark` 또는 `--bs-heading-color`의 색상을 설정하지 않습니다. 컴포넌트 내의 제목이 잘못된 색상으로 표시되는 몇 가지 문제를 방지하기 위해 Sass 변수를 `null`로 설정하고 기본 라이트 모드에서 사용하는 것과 같은 `null` 검사를 추가했습니다.
 
-### Components
+### 컴포넌트
 
-- Cards now have a `color` set on them to improve rendering across color modes.
+- 이제 카드에 `색상`이 설정되어 색상 모드에서 렌더링이 개선됩니다.
 
-- Added new `.nav-underline` variant for our navigation with a simpler bottom border under the active nav link. [See the docs for an example.]({{< docsref "/components/navs-tabs#underline" >}})
+- 활성 탐색 링크 아래에 더 단순한 하단 테두리가 있는 탐색을 위한 새로운 `.nav-underline` 변형을 추가했습니다. [예시는 문서를 참조하세요.]({{< docsref "/components/navs-tabs#underline" >}})
 
-- Navs now have new `:focus-visible` styles that better match our custom button focus styles.
+- 이제 탐색에 사용자 정의 버튼 포커스 스타일과 더 잘 어울리는 새로운 `:focus-visible` 스타일이 추가되었습니다.
 
-### Helpers
+### 도우미
 
-- Added new `.icon-link` helper to quickly place and align Bootstrap Icons alongside a textual link. Icon links support our new link utilities, too.
+- 텍스트 링크와 함께 Bootstrap 아이콘을 빠르게 배치하고 정렬할 수 있는 새로운 `.icon-link` 도우미가 추가되었습니다. 아이콘 링크는 새로운 링크 유틸리티도 지원합니다.
 
-- Added new focus ring helper for removing the default `outline` and setting a custom `box-shadow` focus ring.
+- 기본 `outline`을 제거하고 사용자 지정 `box-shadow` 포커스 링을 설정할 수 있는 새로운 포커스 링 도우미를 추가했습니다.
 
-### Utilities
+### 유틸리티
 
-- Renamed Sass and CSS variables `${color}-text` to `${color}-text-emphasis` to match their associated utilities.
+- 관련 유틸리티와 일치하도록 Sass 및 CSS 변수 `${color}-text`의 이름을 `${color}-text-emphasis`로 변경했습니다.
 
-- Added new `.link-body-emphasis` helper alongside our [colored links]({{< docsref "/helpers/colored-links" >}}). This creates a colored link using our color mode responsive emphasis color.
+- [컬러 링크]({{< docsref "/helpers/colored-links" >}})와 함께 새로운 `.link-body-emphasis` 헬퍼를 추가했습니다. 컬러 모드 반응형 강조 색상을 사용하여 컬러 링크를 생성합니다.
 
-- Added new link utilities for link color opacity, underline offset, underline color, and underline opacity. [Explore the new links utilities.]({{< docsref "/utilities/link" >}})
+- 링크 색상 불투명도, 밑줄 오프셋, 밑줄 색상 및 밑줄 불투명도를 위한 새로운 링크 유틸리티가 추가되었습니다. [새로운 링크 유틸리티 살펴보기]({{< docsref "/utilities/link" >}})
 
-- CSS variable based `border-width` utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.
+- (v5.2.0 이전처럼) CSS 변수 기반 `border-width` 유틸리티가 해당 속성을 직접 설정하도록 되돌려졌습니다. 이렇게 하면 표를 포함한 중첩된 요소에서 상속 문제를 방지할 수 있습니다.
 
-- Added new `.border-black` utility to match our `.text-black` and `.bg-black` utilities.
+- `.text-black` 및 `.bg-black` 유틸리티와 일치하는 새로운 `.border-black` 유틸리티를 추가했습니다.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Deprecated the `.text-muted` utility and `$text-muted` Sass variable. It's been replaced by `.text-body-secondary` and `$body-secondary-color`.
+- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> `.text-muted` 유틸리티와 `$text-muted` Sass 변수가 더 이상 사용되지 않으며 `.text-body-secondary` 및 `$body-secondary-color`로 대체되었습니다.
 
-### Docs
+### 문서
 
-- Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.
+- 이제 예제는 문서의 설정에 따라 적절한 밝거나 어두운 색상 모드로 표시됩니다. 각 예시에는 개별 색상 모드 선택기가 있습니다.
 
-- Improved included JavaScript for live Toast demo.
+- 라이브 토스트 데모에 포함된 자바스크립트가 개선되었습니다.
 
-- Added `twbs/examples` repo contents to the top of the Examples page.
+- 예제 페이지 상단에 `twbs/examples` 리포지토리 콘텐츠를 추가했습니다.
 
-### Tooling
+### 툴링
 
-- Added SCSS testing via True to help test our utilities API and other customizations.
+- 유틸리티 API 및 기타 커스터마이징을 테스트할 수 있도록 True를 통한 SCSS 테스트를 추가했습니다.
 
-- Replaced instances of our bootstrap-npm-starter project with the newer and more complete [twbs/examples repo](https://github.com/twbs/examples).
+- bootstrap-npm-starter 프로젝트의 인스턴스를 더 새롭고 완전한 [twbs/examples 리포지토리](https://github.com/twbs/examples)로 교체했습니다.
 
 <hr class="mb-4">
 
-For a complete list of changes, [see the v5.3.0-alpha2 project on GitHub](https://github.com/orgs/twbs/projects/13).
+전체 변경 사항 목록은 [GitHub의 v5.3.0-alpha2 프로젝트](https://github.com/orgs/twbs/projects/13)를 참조하세요.
 
 ## v5.3.0-alpha1
 
 <hr class="mb-4">
 
-### Color modes!
+### 컬러 모드!
 
-Learn more by reading the new [color modes documentation]({{< docsref "/customize/color-modes" >}}).
+새로운 [컬러 모드 문서]({{< docsref "/customize/color-modes" >}})에서 자세히 알아보세요.
 
-- **Global support for light (default) and dark color modes.** Set color mode globally on the `:root` element, on groups of elements and components with a wrapper class, or directly on components, with `data-bs-theme="light|dark"`. Also included is a new `color-mode()` mixin that can output a ruleset with the `data-bs-theme` selector or a media query, depending on your preference.
+- **라이트(기본값) 및 다크 모드를 전역적으로 지원합니다.** `:root` 요소, 래퍼 클래스가 있는 요소 및 컴포넌트 그룹 또는 `data-bs-theme="light|dark"`를 사용하여 컴포넌트에 직접 색상 모드를 전역적으로 설정할 수 있습니다. 또한 `data-bs-theme` 선택기 또는 미디어 쿼리와 함께 규칙 집합을 출력할 수 있는 새로운 `color-mode()` 믹스인이 포함되어 있어 원하는 대로 설정할 수 있습니다.
 
-  <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Color modes replace dark variants for components, so  `.btn-close-white`, `.carousel-dark`, `.dropdown-menu-dark`, and `.navbar-dark` are deprecated.
+- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> 색상 모드는 컴포넌트의 어두운 변형을 대체하므로 `.btn-close-white`, `.carousel-dark`, `.dropdown-menu-dark` 및 `.navbar-dark`는 더 이상 사용되지 않습니다.
 
-- **New extended color system.** We've added new theme colors (but not in `$theme-colors`) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for `color` and `background-color`. These new colors are available as Sass variables, CSS variables, and utilities.
+- 새로운 확장 색상 시스템: `color` 및 `background-color`에 대한 새로운 보조, 보조, 강조 색상과 함께 보다 미묘한 시스템 전반의 색상 팔레트를 위해 새로운 테마 색상(`$theme-colors`에는 없음)을 추가했습니다. 이러한 새로운 색상은 Sass 변수, CSS 변수 및 유틸리티로 사용할 수 있습니다.
 
-- We've also expanded our theme color Sass variables, CSS variables, and utilities to include text emphasis, subtle background colors, and subtle border colors. These are available as Sass variables, CSS variables, and utilities.
+- 또한 텍스트 강조색, 미묘한 배경색, 미묘한 테두리색을 포함하도록 테마 색상 Sass 변수, CSS 변수 및 유틸리티를 확장했습니다. 이러한 기능은 Sass 변수, CSS 변수 및 유틸리티로 사용할 수 있습니다.
 
-- Adds new `_variables-dark.scss` stylesheet to house dark-mode specific overrides. This stylesheet should be imported immediately after the existing `_variables.scss` file in your import stack.
+- 다크 모드 전용 오버라이드를 저장하기 위해 새로운 `_variables-dark.scss` 스타일시트를 추가합니다. 이 스타일시트는 가져오기 스택의 기존 `_variables.scss` 파일 바로 뒤에 가져와야 합니다.
 
   ```diff
   diff --git a/scss/bootstrap.scss b/scss/bootstrap.scss
@@ -129,56 +128,56 @@ Learn more by reading the new [color modes documentation]({{< docsref "/customiz
   +@import "variables-dark";
    @import "maps";
    @import "mixins";
-   @import "utilities";
+   import "utilities";
   ```
 
-### CSS variables
+### CSS 변수
 
-- Restores CSS variables for breakpoints, though we don't use them in our media queries as they're not supported. However, these can be useful in JS-specific contexts.
+- 중단점에 대한 CSS 변수를 복원하지만, 미디어 쿼리에서는 지원되지 않으므로 사용하지 않습니다. 그러나 JS 관련 컨텍스트에서는 유용할 수 있습니다.
 
-- Per the color modes update, we've added new utilities for new Sass CSS variables `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.
+- 색상 모드 업데이트에 따라 새로운 Sass CSS 변수 `secondary` 및 `tertiary` 텍스트 및 배경색에 대한 새로운 유틸리티와 테마 색상에 대한 `{color}-bg-subtle`, `{color}-border-subtle` 및 `{color}-text-emphasis`가 추가되었습니다. 이러한 새로운 색상은 밝음과 어두움 등 다양한 색상 모드에서 더 쉽게 사용자 정의할 수 있도록 하기 위해 Sass 및 CSS 변수를 통해 사용할 수 있습니다(색상 맵은 제공되지 않음).
 
-- Adds additional variables for alerts, `.btn-close`, and `.offcanvas`.
+- 경고창, `.btn-close` 및 `.offcanvas`에 대한 변수가 추가되었습니다.
 
-- The `--bs-heading-color` variable is back with an update and dark mode support. First, we now check for a `null` value on the associated Sass variable, `$headings-color`, before trying to output the CSS variable, so by default it's not present in our compiled CSS. Second, we use the CSS variable with a fallback value, `inherit`, allowing the original behavior to persist, but also allowing for overrides.
+- `--bs-heading-color` 변수가 업데이트되어 다크 모드를 지원합니다. 첫째, 이제 CSS 변수를 출력하기 전에 연결된 Sass 변수인 `$headings-color`에 `null` 값이 있는지 확인하므로 기본적으로 컴파일된 CSS에는 이 변수가 존재하지 않습니다. 둘째, 폴백 값인 `inherit`이 있는 CSS 변수를 사용하여 원래 동작이 유지되도록 하면서도 재정의도 허용합니다.
 
-- Converts links to use CSS variables for styling `color`, but not `text-decoration`. Colors are now set with `--bs-link-color-rgb` and `--bs-link-opacity` as `rgba()` color, allowing you to customize the translucency with ease. The `a:hover` pseudo-class now overrides `--bs-link-color-rgb` instead of explicitly setting the `color` property.
+- 링크가 `color` 스타일링에 CSS 변수를 사용하도록 변환하지만 `text-decoration`은 사용하지 않습니다. 이제 `--bs-link-color-rgb` 및 `--bs-link-opacity` 색상을 `rgba()` 색상으로 설정하여 반투명도를 쉽게 사용자 지정할 수 있습니다. 이제 `a:hover` 의사 클래스가 `color` 속성을 명시적으로 설정하는 대신 `--bs-link-color-rgb`를 재정의합니다.
 
-- `--bs-border-width` is now being used in more components for greater control over default global styling.
+- 이제 더 많은 컴포넌트에서 `--bs-border-width`가 사용되어 기본 전역 스타일을 더 잘 제어할 수 있습니다.
 
-- Adds new root CSS variables for our `box-shadow`s, including `--bs-box-shadow`, `--bs-box-shadow-sm`, `--bs-box-shadow-lg`, and `--bs-box-shadow-inset`.
+-`b-box-shadow`, `--bs-box-shadow-sm`, `--bs-box-shadow-lg`, `--bs-box-shadow-inset` 등 `box-shadow`에 대한 새로운 루트 CSS 변수를 추가합니다.
 
-### Components
+### 컴포넌트
 
-#### Alert
+#### 경고창
 
-- Alert variants are now styled via CSS variables.
+- 이제 CSS 변수를 통해 경고 변형의 스타일을 지정할 수 있습니다.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `alert-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/alerts#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> `alert-variant()` 믹스인은 이제 더 이상 사용되지 않습니다. 이제 [Sass 루프]({{< docsref "/components/alerts#sass-loops" >}})를 직접 사용하여 각 변형에 대한 컴포넌트의 기본 CSS 변수를 수정합니다.
 
-#### List group
+#### 목록 그룹
 
-- List group item variants are now styled via CSS variables.
+- 목록 그룹 항목 변형은 이제 CSS 변수를 통해 스타일을 지정할 수 있습니다.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `list-group-item-variant()` mixin is now deprecated. We now [use a Sass loop]({{< docsref "/components/list-group#sass-loops" >}}) directly to modify the component's default CSS variables for each variant.
+- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> `list-group-item-variant()` 믹스인은 이제 더 이상 사용되지 않습니다. 이제 [Sass 루프]({{< docsref "/components/list-group#sass-loops" >}})를 직접 사용하여 각 변형에 대한 컴포넌트의 기본 CSS 변수를 수정합니다.
 
-#### Dropdowns
+#### 드롭다운
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.dropdown-menu-dark` class has been deprecated and replaced with `data-bs-theme="dark"` on the dropdown or any parent element. [See the docs for an example.]({{< docsref "/components/dropdowns#dark-dropdowns" >}})
+- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> 드롭다운 또는 상위 요소에서 `.dropdown-menu-dark` 클래스는 더 이상 사용되지 않으며 `data-bs-theme="dark"`로 대체되었습니다. [예시는 문서를 참조하세요.]({{< docsref "/components/dropdowns#dark-dropdowns" >}})
 
-#### Close button
+#### 닫기 버튼
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.btn-close-white` class has been deprecated and replaced with `data-bs-theme="dark"` on the close button or any parent element. [See the docs for an example.]({{< docsref "/components/close-button#dark-variant" >}})
+- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> 닫기 버튼 또는 모든 상위 요소에서 `.btn-close-white` 클래스는 더 이상 사용되지 않으며 `data-bs-theme="dark"`로 대체되었습니다. [예시는 문서를 참조하세요.]({{< docsref "/components/close-button#dark-variant" >}})
 
-#### Navbar
+#### 내비게이션 바
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The `.navbar-dark` class has been deprecated and replaced with `data-bs-theme="dark"` on the navbar or any parent element. [See the docs for updated examples.]({{< docsref "/components/navbar#color-schemes" >}})
+- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> `.navbar-dark` 클래스는 더 이상 사용되지 않으며 탐색 모음 또는 모든 상위 요소에서 `data-bs-theme="dark"`로 대체되었습니다. [업데이트된 예제는 문서를 참조하세요.]({{< docsref "/components/navbar#color-schemes" >}})
 
-### Progress bars
+### 진행률 표시줄
 
-The markup for [progress bars]({{< docsref "/components/progress" >}}) has been updated in v5.3.0. Due to the placement of `role` and various `aria-` attributes on the inner `.progress-bar` element, **some screen readers were not announcing zero value progress bars**. Now, `role="progressbar"` and the relevant `aria-*` attributes are on the outer `.progress` element, leaving the `.progress-bar` purely for the visual presentation of the bar and optional label.
+[진행률 표시줄]({{< docsref "/components/progress" >}})에 대한 마크업이 v5.3.0에서 업데이트되었습니다. 내부 `.progress-bar` 요소에 `role` 및 다양한 `aria-` 속성을 배치했기 때문에 **일부 스크린 리더에서 0 값 진행률 표시줄이 표시되지 않았습니다**. 이제 `role="progressbar"` 및 관련 `aria-*` 속성은 바깥쪽  `.progress` 요소에 있으며, `.progress-bar`는 막대의 시각적 표시와 선택적 레이블만 남게 됩니다.
 
-While we recommend adopting the new markup for improved compatibility with all screen readers, note that the legacy progress bar structure will continue to work as before.
+모든 스크린 리더와의 호환성 향상을 위해 새 마크업을 채택하는 것이 좋지만, 기존 진행률 표시줄 구조는 이전처럼 계속 작동한다는 점에 유의하세요.
 
 ```html
 <!-- Previous markup -->
@@ -192,7 +191,7 @@ While we recommend adopting the new markup for improved compatibility with all s
 </div>
 ```
 
-We've also introduced a new `.progress-stacked` class to more logically wrap [multiple progress bars]({{< docsref "/components/progress#multiple-bars" >}}) into a single stacked progress bar.
+또한 [여러 개의 진행률 표시줄]({{< docsref "/components/progress#multiple-bars" >}})을 하나의 누적된 진행률 표시줄로 보다 논리적으로 묶을 수 있도록 새로운 `.progress-stacked` 클래스를 도입했습니다.
 
 ```html
 <!-- Previous markup -->
@@ -216,53 +215,53 @@ We've also introduced a new `.progress-stacked` class to more logically wrap [mu
 </div>
 ```
 
-### Forms
+### 양식
 
-- `.form-control` is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.
+- `.form-control`은 이제 색상 모드를 지원하기 위해 CSS 변수로 스타일을 지정합니다. 여기에는 기본 및 비활성화된 양식 컨트롤 배경에 대한 두 개의 새로운 루트 CSS 변수가 추가되었습니다.
 
-- `.form-check` and `.form-switch` components are now built with CSS variables for setting the `background-image`. The usage here differs from other components in that the various focus, active, etc states for each component aren't set on the base class. Instead, the states override one variable (e.g., `--bs-form-switch-bg`).
+- `.form-check` 및 `.form-switch` 컴포넌트는 이제 `background-image` 설정을 위한 CSS 변수로 빌드됩니다. 여기서 사용법은 각 컴포넌트의 다양한 포커스, 활성 등의 상태가 베이스 클래스에 설정되지 않는다는 점에서 다른 컴포넌트와 다릅니다. 대신, 상태는 하나의 변수(예: `--bs-form-switch-bg`)를 재정의합니다.
 
-- Floating form labels now have a `background-color` to fix support for `<textarea>` elements. Additional changes have been made to also support disabled states and more.
+- 플로팅 폼 레이블에 `background-color`가 추가되어 `<textarea>` 요소에 대한 지원이 수정되었습니다. 비활성화 상태 등을 지원하기 위해 추가 변경이 이루어졌습니다.
 
-- Fixed display of date and time inputs in WebKit based browsers.
+- WebKit 기반 브라우저에서 날짜 및 시간 입력 표시가 수정되었습니다.
 
-### Utilities
+### 유틸리티
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> `.text-muted` will be replaced by `.text-body-secondary` in v6.
+- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> `.text-muted`는 v6에서 `.text-body-secondary`로 대체됩니다.
 
-  With the addition of the expanded theme colors and variables, the `.text-muted` variables and utility have been deprecated with v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
+  확장된 테마 색상과 변수가 추가됨에 따라 `.text-muted` 변수와 유틸리티는 v5.3.0에서 더 이상 사용되지 않습니다. 또한 기본값은 색상 모드를 더 잘 지원하기 위해 새로운 `--bs-secondary-color` CSS 변수로 재할당되었습니다. 이 변수는 v6.0.0에서 제거될 예정입니다.
 
-- Adds new `.overflow-x`, `.overflow-y`, and several `.object-fit-*` utilities. _The object-fit property is used to specify how an `<img>` or `<video>` should be resized to fit its container, giving us a responsive alternative to using `background-image` for a resizable fill/fit image._
+- 새로운 `.overflow-x`, `.overflow-y` 및 여러 `.object-fit-*` 유틸리티를 추가했습니다. object-fit 속성은 `<img>` 또는 `<video>`의 크기를 컨테이너에 맞게 조정하는 방법을 지정하는 데 사용되며, 크기 조정이 가능한 채우기/맞춤 이미지에 `background-image`를 사용하는 대신 반응형 대안을 제공합니다.
 
-- Adds new `.fw-medium` utility.
+- 새로운 `.fw-medium` 유틸리티를 추가합니다.
 
-- Added new [`.z-*` utilities]({{< docsref "/utilities/z-index" >}}) for `z-index`.
+- `z-index`를 위한 새로운 [`.z-*` 유틸리티]({{< docsref "/utilities/z-index" >}})를 추가했습니다.
 
-- [Box shadow utilities]({{< docsref "/utilities/shadows" >}}) (and Sass variables) have been updated for dark mode. They now use `--bs-body-color-rgb` to generate the `rgba()` color values, allowing them to easily adapt to color modes based on the specified foreground color.
+- [박스 그림자 유틸리티]({{< docsref "/utilities/shadows" >}})(및 Sass 변수)가 다크 모드용으로 업데이트되었습니다. 이제 `--bs-body-color-rgb`를 사용하여 `rgba()` 색상 값을 생성하므로 지정된 전경색에 따라 색상 모드에 쉽게 적응할 수 있습니다.
 
-For a complete list of changes, [see the v5.3.0 project on GitHub](https://github.com/twbs/bootstrap/projects/).
+전체 변경 사항 목록은 [GitHub의 v5.3.0 프로젝트](https://github.com/twbs/bootstrap/projects/)를 참조하세요.
 
 ## v5.2.0
 
 <hr class="mb-4">
 
-### Refreshed design
+### 새로워진 디자인
 
-Bootstrap v5.2.0 features a subtle design update for a handful of components and properties across the project, **most notably through refined `border-radius` values on buttons and form controls**. Our documentation also has been updated with a new homepage, simpler docs layout that no longer collapses sections of the sidebar, and more prominent examples of [Bootstrap Icons](https://icons.getbootstrap.com).
+Bootstrap v5.2.0은 프로젝트 전반의 몇 가지 구성 요소와 속성에 대한 미묘한 디자인 업데이트, **특히 버튼과 양식 컨트롤의 `border-radius` 값을 개선한 것이 가장 큰 특징입니다**. 또한 새로운 홈페이지, 더 이상 사이드바의 섹션을 축소하지 않는 더 간단한 문서 레이아웃, [Bootstrap Icons](https://icons.getbootstrap.com)의 더 눈에 띄는 예시로 문서가 업데이트되었습니다.
 
-### More CSS variables
+### 더 많은 CSS 변수
 
-**We've updated all our components to use CSS variables.** While Sass still underpins everything, each component has been updated to include CSS variables on the component base classes (e.g., `.btn`), allowing for more real-time customization of Bootstrap. In subsequent releases, we'll continue to expand our use of CSS variables into our layout, forms, helpers, and utilities. Read more about CSS variables in each component on their respective documentation pages.
+**모든 컴포넌트가 CSS 변수를 사용하도록 업데이트되었습니다.** Sass는 여전히 모든 것을 뒷받침하지만, 각 컴포넌트 베이스 클래스(예: `.btn`)에 CSS 변수를 포함하도록 업데이트되어 Bootstrap을 더욱 실시간으로 사용자 정의할 수 있게 되었습니다. 이후 릴리스에서는 레이아웃, 폼, 헬퍼 및 유틸리티로 CSS 변수 사용을 계속 확장할 예정입니다. 각 컴포넌트의 CSS 변수에 대한 자세한 내용은 해당 문서 페이지에서 확인하세요.
 
-Our CSS variable usage will be somewhat incomplete until Bootstrap 6. While we'd love to fully implement these across the board, they do run the risk of causing breaking changes. For example, setting `$alert-border-width: var(--bs-border-width)` in our source code breaks potential Sass in your own code if you were doing `$alert-border-width * 2` for some reason.
+Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전반적으로 완벽하게 구현하고 싶지만, 변경 사항이 발생할 수 있는 위험이 있습니다. 예를 들어, 소스 코드에서 `$alert-border-width: var(--bs-border-width)`를 설정하면 어떤 이유로 `$alert-border-width * 2`를 사용하는 경우 사용자 코드에서 잠재적인 Sass가 깨질 수 있습니다.
 
-As such, wherever possible, we will continue to push towards more CSS variables, but please recognize our implementation may be slightly limited in v5.
+따라서 가능한 한 더 많은 CSS 변수를 제공하기 위해 계속 노력할 것이지만, v5에서는 구현이 약간 제한될 수 있다는 점을 양해해 주시기 바랍니다.
 
-### New `_maps.scss`
+### 새로운 `_maps.scss`
 
-**Bootstrap v5.2.0 introduced a new Sass file with `_maps.scss`.** It pulls out several Sass maps from `_variables.scss` to fix an issue where updates to an original map were not applied to secondary maps that extend them. For example, updates to `$theme-colors` were not being applied to other theme maps that relied on `$theme-colors`, breaking key customization workflows. In short, Sass has a limitation where once a default variable or map has been _used_, it cannot be updated. _There's a similar shortcoming with CSS variables when they're used to compose other CSS variables._
+**Bootstrap v5.2.0에서는 `_maps.scss`가 포함된 새로운 Sass 파일이 도입되었습니다.** `_variables.scss`에서 여러 Sass 맵을 가져와 원본 맵의 업데이트가 이를 확장하는 보조 맵에 적용되지 않는 문제를 해결합니다. 예를 들어, `$theme-colors`에 대한 업데이트가 `$theme-colors`에 의존하는 다른 테마 맵에 적용되지 않아 주요 사용자 정의 워크플로우가 중단되었습니다. 요컨대, Sass에는 기본 변수나 맵이 한 번 _사용_되면 업데이트할 수 없다는 한계가 있습니다. 다른 CSS 변수를 구성하는 데 사용되는 CSS 변수에도 비슷한 단점이 있습니다.
 
-This is why variable customizations in Bootstrap have to come after `@import "functions"`, but before `@import "variables"` and the rest of our import stack. The same applies to Sass maps—you must override the defaults before they get used. The following maps have been moved to the new `_maps.scss`:
+그렇기 때문에 Bootstrap에서 변수 커스터마이징은 `@import "functions"` 뒤에 오는 것이 아니라 `@import "variables"`와 나머지 import 스택 앞에 와야 합니다. Sass 맵에도 동일하게 적용되며, 기본값을 재정의해야만 사용할 수 있습니다. 다음 맵은 새로운 `_maps.scss`로 이동되었습니다.
 
 - `$theme-colors-rgb`
 - `$utilities-colors`
@@ -273,7 +272,7 @@ This is why variable customizations in Bootstrap have to come after `@import "fu
 - `$negative-spacers`
 - `$gutters`
 
-Your custom Bootstrap CSS builds should now look something like this with a separate maps import.
+이제 별도의 맵을 가져와서 사용자 정의 Bootstrap CSS 빌드가 다음과 같이 보일 것입니다.
 
 ```diff
   // Functions come first
@@ -302,61 +301,61 @@ Your custom Bootstrap CSS builds should now look something like this with a sepa
   // etc
 ```
 
-### New utilities
+### 새 유틸리티
 
-- Expanded [`font-weight` utilities]({{< docsref "/utilities/text#font-weight-and-italics" >}}) to include `.fw-semibold` for semibold fonts.
-- Expanded [`border-radius` utilities]({{< docsref "/utilities/borders#sizes" >}}) to include two new sizes, `.rounded-4` and `.rounded-5`, for more options.
+- [`font-weight` 유틸리티]({{< docsref "/utilities/text#font-weight-and-italics" >}})를 확장하여 세미볼드 글꼴용 `.fw-semibold`를 포함하도록 했습니다.
+- [`border-radius` 유틸리티]({{< docsref "/utilities/borders#sizes" >}})를 확장하여 더 많은 옵션을 위해 두 가지 새로운 크기인 `.rounded-4`와 `.rounded-5`를 포함하도록 했습니다.
 
-### Additional changes
+### 추가 변경 사항
 
-- **Introduced new `$enable-container-classes` option. —** Now when opting into the experimental CSS Grid layout, `.container-*` classes will still be compiled, unless this option is set to `false`. Containers also now keep their gutter values.
+- **새로운 `$enable-container-classes` 옵션. -** 이제 실험적인 CSS 그리드 레이아웃을 선택할 때 이 옵션을 `false`로 설정하지 않는 한 `.container-*` 클래스가 계속 컴파일됩니다. 이제 컨테이너도 거터 값을 유지합니다.
 
-- **Offcanvas component now has [responsive variations]({{< docsref "/components/offcanvas#responsive" >}}).** The original `.offcanvas` class remains unchanged—it hides content across all viewports. To make it responsive, change that `.offcanvas` class to any `.offcanvas-{sm|md|lg|xl|xxl}` class.
+- **오프캔버스 컴포넌트의 [반응형 변형]({{< docsref "/components/offcanvas#responsive" >}}).** 원래의 `.offcanvas` 클래스는 변경되지 않고 모든 뷰포트에서 콘텐츠를 숨깁니다. 반응형으로 만들려면 해당 `.offcanvas` 클래스를 `.offcanvas-{sm|md|lg|xl|xxl}` 클래스로 변경하세요.
 
-- **Thicker table dividers are now opt-in. —** We've removed the thicker and more difficult to override border between table groups and moved it to an optional class you can apply, `.table-group-divider`. [See the table docs for an example.]({{< docsref "/content/tables#table-group-dividers" >}})
+- **이제 더 두꺼운 표 구분선은 선택 사항. -** 더 두껍고 재정의하기 어려운 표 그룹 사이의 테두리를 제거하여 선택적으로 적용할 수 있는 `.table-group-divider` 클래스로 옮겼습니다. [예시는 테이블 문서를 참조하세요.]({{< docsref "/content/tables#table-group-dividers" >}})
 
-- **[Scrollspy has been rewritten](https://github.com/twbs/bootstrap/pull/33421) to use the Intersection Observer API**, which means you no longer need relative parent wrappers, deprecates `offset` config, and more. Look for your Scrollspy implementations to be more accurate and consistent in their nav highlighting.
+- **스크롤스파이 옵저버 API를 사용하도록 [재작성](https://github.com/twbs/bootstrap/pull/33421)되었으므로** 더 이상 상대 부모 래퍼가 필요하지 않고, `offset` 구성이 더 이상 사용되지 않습니다. 탐색 강조 표시가 더 정확하고 일관성 있게 구현되도록 Scrollspy 구현을 살펴보세요.
 
-- **Popovers and tooltips now use CSS variables.** Some CSS variables have been updated from their Sass counterparts to reduce the number of variables. As a result, three variables have been deprecated in this release: `$popover-arrow-color`, `$popover-arrow-outer-color`, and `$tooltip-arrow-color`.
+- **CSS 변수를 사용하는 팝오버와 툴팁.** 일부 CSS 변수는 변수 수를 줄이기 위해 Sass에서 업데이트되었습니다. 그 결과 이번 릴리스에서는 `$popover-arrow-color`, `$popover-arrow-outer-color`, `$tooltip-arrow-color` 변수가 더 이상 사용되지 않습니다.
 
-- **Added new `.text-bg-{color}` helpers.** Instead of setting individual `.text-*` and `.bg-*` utilities, you can now use [the `.text-bg-*` helpers]({{< docsref "helpers/color-background" >}}) to set a `background-color` with contrasting foreground `color`.
+- **새로운 `.text-bg-{color}` 도우미.** 이제 개별 `.text-*` 및 `.bg-*` 유틸리티를 설정하는 대신 [`.text-bg-*` 헬퍼]({{< docsref "helpers/color-background" >}})를 사용하여 전경 `색`과 대비되는 `배경-색`을 설정할 수 있습니다.
 
-- Added `.form-check-reverse` modifier to flip the order of labels and associated checkboxes/radios.
+- 레이블과 관련 체크박스/라디오의 순서를 뒤집을 수 있는 `.form-check-reverse` 수정자를 추가했습니다.
 
-- Added [striped columns]({{< docsref "/content/tables#striped-columns" >}}) support to tables via the new `.table-striped-columns` class.
+- 새로운 `.table-striped-columns` 클래스를 통해 [줄무늬 열]({{< docsref "/content/tables#striped-columns" >}}) 지원을 표에 추가했습니다.
 
-For a complete list of changes, [see the v5.2.0 project on GitHub](https://github.com/twbs/bootstrap/projects/32).
+전체 변경사항 목록은 [GitHub의 v5.2.0 프로젝트](https://github.com/twbs/bootstrap/projects/32)를 참조하세요.
 
 ## v5.1.0
 
 <hr class="mb-4">
 
-- **Added experimental support for [CSS Grid layout]({{< docsref "/layout/css-grid" >}}). —** This is a work in progress, and is not yet ready for production use, but you can opt into the new feature via Sass. To enable it, disable the default grid, by setting `$enable-grid-classes: false` and enable the CSS Grid by setting `$enable-cssgrid: true`.
+- **[CSS 그리드 레이아웃]({{< docsref "/layout/css-grid" >}})에 대한 실험적 지원 추가. -** 이 기능은 진행 중인 작업으로 아직 프로덕션용으로 사용할 준비가 되지 않았지만 Sass를 통해 새 기능을 선택할 수 있습니다. 이 기능을 사용하려면 `$enable-grid-classes: false`를 설정하여 기본 그리드를 비활성화하고 `$enable-cssgrid: true`를 설정하여 CSS 그리드를 활성화하세요.
 
-- **Updated navbars to support offcanvas. —** Add [offcanvas drawers in any navbar]({{< docsref "/components/navbar#offcanvas" >}}) with the responsive `.navbar-expand-*` classes and some offcanvas markup.
+- **오프캔버스를 지원하는 내비게이션 바. -** 반응형 `navbar-expand-*` 클래스와 일부 오프캔버스 마크업으로 [모든 탐색바에 오프캔버스 서랍]({{< docsref "/components/navbar#offcanvas" >}})을 추가해보세요.
 
-- **Added new [placeholder component]({{< docsref "/components/placeholders/" >}}). —** Our newest component, a way to provide temporary blocks in lieu of real content to help indicate that something is still loading in your site or app.
+- **새로운 [플레이스홀더 컴포넌트]({{< docsref "/components/placeholders/" >}}). -** 사이트나 앱에서 무언가가 아직 로드 중임을 표시하기 위해 실제 콘텐츠 대신 임시 블록을 제공하는 최신 컴포넌트입니다.
 
-- **Collapse plugin now supports [horizontal collapsing]({{< docsref "/components/collapse#horizontal" >}}). —** Add `.collapse-horizontal` to your `.collapse` to collapse the `width` instead of the `height`. Avoid browser repainting by setting a `min-height` or `height`.
+- **[수평 콜랩스]({{< docsref "/components/collapse#horizontal" >}}). -** '.collapse'에 `.collapse-horizontal`을 추가하면 `height` 대신 `width`를 축소할 수 있습니다. `min-width` 또는 `height`를 설정하여 브라우저가 다시 칠하는 것을 방지하세요.
 
-- **Added new stack and vertical rule helpers. —** Quickly apply multiple flexbox properties to quickly create custom layouts with [stacks]({{< docsref "/helpers/stacks/" >}}). Choose from horizontal (`.hstack`) and vertical (`.vstack`) stacks. Add vertical dividers similar to `<hr>` elements with the [new `.vr` helpers]({{< docsref "/helpers/vertical-rule/" >}}).
+- **새로운 스택 및 수직 규칙 헬퍼. -** [스택]({{< docsref "/helpers/stacks/" >}})으로 여러 플렉스박스 속성을 빠르게 적용하여 사용자 지정 레이아웃을 빠르게 만들 수 있습니다. 가로(`.hstack`) 및 세로(`.vstack`) 스택 중에서 선택하세요. [새로운 `.vr` 도우미]({{< docsref "/helpers/vertical-rule/" >}})로 `<hr>` 요소와 유사한 세로 구분자 추가하세요.
 
-- **Added new global `:root` CSS variables. —** Added several new CSS variables to the `:root` level for controlling `<body>` styles. More are in the works, including across our utilities and components, but for now read up [CSS variables in the Customize section]({{< docsref "/customize/css-variables/" >}}).
+- **새로운 전역 `:root` CSS 변수. -** `<body>` 스타일을 제어하기 위해 `:root` 레벨에 몇 가지 새로운 CSS 변수를 추가했습니다. 유틸리티와 컴포넌트 전반을 포함해 더 많은 기능이 추가될 예정이지만 지금은 [사용자 정의 섹션의 CSS 변수]({{< docsref "/customize/css-variables/" >}})를 읽어보세요.
 
-- **Overhauled color and background utilities to use CSS variables, and added new [text opacity]({{< docsref "/utilities/text#opacity" >}}) and [background opacity]({{< docsref "/utilities/background#opacity" >}}) utilities. —** `.text-*` and `.bg-*` utilities are now built with CSS variables and `rgba()` color values, allowing you to easily customize any utility with new opacity utilities.
+- **CSS 변수를 사용하도록 변경된 색상 및 배경 유틸리티, 새로운 [텍스트 불투명도]({{< docsref "/utilities/text#opacity" >}}) 및 [배경 불투명도]({{< docsref "/utilities/background#opacity" >}}) 유틸리티. -** 이제 `.text-*` 및 `.bg-*` 유틸리티는 CSS 변수와 `rgba()` 색상 값으로 빌드되므로 새로운 불투명도 유틸리티로 모든 유틸리티를 쉽게 사용자 정의할 수 있습니다.
 
-- **Added new snippet examples based to show how to customize our components. —** Pull ready to use customized components and other common design patterns with our new [Snippets examples]({{< docsref "/examples#snippets" >}}). Includes [footers]({{< docsref "/examples/footers/" >}}), [dropdowns]({{< docsref "/examples/dropdowns/" >}}), [list groups]({{< docsref "/examples/list-groups/" >}}), and [modals]({{< docsref "/examples/modals/" >}}).
+- **컴포넌트를 사용자 정의하는 방법을 보여주는 새로운 스니펫 예제. -** 새로운 [스니펫 예시]({{< docsref "/examples#snippets" >}})를 통해 사용자 정의 컴포넌트 및 기타 일반적인 디자인 패턴을 사용할 준비를 마쳤습니다. [바닥글]({{< docsref "/examples/footers/" >}}), [드롭다운]({{< docsref "/examples/dropdowns/" >}}), [목록 그룹]({{< docsref "/examples/list-groups/" >}}), [모달]({{< docsref "/examples/modals/" >}})을 포함합니다.
 
-- **Removed unused positioning styles from popovers and tooltips** as these are handled solely by Popper. `$tooltip-margin` has been deprecated and set to `null` in the process.
+- **팝오버와 툴팁**에서 Popper에서 처리하기 전부터 있던 위치 지정 스타일을 제거했습니다. `$tooltip-margin`은 더 이상 사용되지 않으며 이 과정에서 `null`로 설정되었습니다.
 
-Want more information? [Read the v5.1.0 blog post.](https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/)
+더 자세한 정보를 원하시나요? [v5.1.0 블로그 게시물을 참조하세요](https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/).
 
 ## v5.0.0
 
 <hr class="mb-4">
 
 {{< callout info >}}
-**Hey there!** Changes to our first major release of Bootstrap 5, v5.0.0, are documented below. They don't reflect the additional changes shown above.
+**안녕하세요!** Bootstrap 5의 첫 번째 주요 릴리스인 v5.0.0의 변경 사항은 아래에 설명되어 있습니다. 위에 표시된 추가 변경사항은 반영되지 않았습니다.
 {{< /callout >}}
 
 ### 의존성

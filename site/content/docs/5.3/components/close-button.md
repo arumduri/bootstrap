@@ -46,7 +46,7 @@ toc: true
 
 {{< added-in "5.3.0" >}}
 
-부트스트랩의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 닫기 버튼은 `.btn-close`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 닫기 버튼은 `.btn-close`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="close-css-vars" file="scss/_close.scss" >}}
 
