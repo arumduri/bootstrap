@@ -11,7 +11,7 @@ toc: true
 텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를 들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing)을 사용합니다.
 
 {{< callout info >}}
-**Heads up!** As of v5.3.0, the `alert-variant()` Sass mixin is deprecated. Alert variants now have their CSS variables overridden in [a Sass loop](#sass-loops).
+**주의!** v5.3.0부터 `alert-variant()` Sass 믹스인이 더 이상 사용되지 않습니다. 이제 경고 변형은 [Sass 루프](#sass-루프)에서 해당 CSS 변수를 재정의합니다.
 {{< /callout >}}
 
 {{< example >}}
