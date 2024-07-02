@@ -17,7 +17,7 @@ toc: true
 
 ## 비활성화 상태
 
-비활성화된 닫기 버튼은 `opacity`를 변경합니다. 그리고 `pointer-events: none` 과 `user-select: none`을 적용해, hover 상태와 active 상태가 트리거 되지 않도록 하였습니다.
+비활성화된 닫기 버튼은 `opacity`를 변경합니다. 그리고 `pointer-events: none`과 `user-select: none`을 적용해, hover 상태와 active 상태가 트리거 되지 않도록 하였습니다.
 
 {{< example >}}
 <button type="button" class="btn-close" disabled aria-label="Close"></button>

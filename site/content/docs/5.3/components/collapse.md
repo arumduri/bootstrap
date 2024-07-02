@@ -66,8 +66,8 @@ Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에
 
 ## 다중 항목 및 목표
 
-`<button>` 이나 `<a>` 는 그 `href` 나 `data-bs-target` 속성의 셀렉터로 여러 요소를 참조하는 것으로 여러 개의 요소를 표시하거나 숨길 수 있습니다.
-여러 개의 `<button>` 이나 `<a>` 는 각각의 `href` 나 `data-bs-target` 속성으로 요소를 참조하고 있는 경우, 어느 요소를 표시하거나 숨길 수 있습니다.
+`<button>` 이나 `<a>`는 그 `href` 나 `data-bs-target` 속성의 셀렉터로 여러 요소를 참조하는 것으로 여러 개의 요소를 표시하거나 숨길 수 있습니다.
+여러 개의 `<button>` 이나 `<a>`는 각각의 `href` 나 `data-bs-target` 속성으로 요소를 참조하고 있는 경우, 어느 요소를 표시하거나 숨길 수 있습니다.
 
 {{< example >}}
 <p class="d-inline-flex gap-1">
@@ -171,8 +171,8 @@ const bsCollapse = new bootstrap.Collapse('#myCollapse', {
 | 메소드 | 설명 |
 | --- | --- |
 | `dispose` | 요소의 콜랩스를 처리합니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다) |
-| `getInstance` | Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: `bootstrap.Collapse.getInstance(element)`. |
-| `getOrCreateInstance` | Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `bootstrap.Collapse.getOrCreateInstance(element)`. |
+| `getInstance` | DOM 요소에 연결된 접기 인스턴스를 가져올 수 있는 정적 메서드는 다음과 같이 사용할 수 있습니다: `bootstrap.Collapse.getInstance(element)`. |
+| `getOrCreateInstance` | DOM 요소에 연결된 접기 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 생성하는 정적 메서드입니다. 다음과 같이 사용할 수 있습니다: `bootstrap.Collapse.getOrCreateInstance(element)`. |
 | `hide` | 접을 수 있는 요소를 숨깁니다. **접을 수 있는 요소가 실제로 숨겨지기 전에 호출하여 원래 위치로 돌아갑니다** (예를 들어, hidden.bs.collapse 이벤트가 발생하기 전으로). |
 | `show` | 접을 수 있는 요소를 표시합니다. **접을 수 있는 요소가 나타나기 전에 호출하여 원래대로 돌아갑니다** (예를 들어, shown.bs.collapse 이벤트가 발생하기 전으로). |
 | `toggle` | 접을 수 있는 요소의 표시/숨김을 바꿉니다. **접을 수 있는 요소가 실제로 표시 혹은 숨겨지기 전에 호출되어 원래대로 돌아갑니다** (즉, `shown.bs.collapse` 혹은 `hidden.bs.collapse` 이벤트가 발생하기 전). |

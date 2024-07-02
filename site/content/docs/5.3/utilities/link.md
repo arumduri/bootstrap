@@ -10,7 +10,7 @@ added: 5.3
 
 ## 링크 불투명도
 
-유틸리티를 사용하여 링크 `rgba()` 색상 값의 알파 불투명도를 변경합니다. 색상의 불투명도를 변경하면 링크 [대비율이 *부족*]({{< docsref "getting-started/accessibility#color-contrast" >}})해질 수 있다는 점에 유의하세요.
+유틸리티를 사용하여 링크 `rgba()` 색상 값의 알파 불투명도를 변경합니다. 색상의 불투명도를 변경하면 링크의 [대비율이 *부족*해질 수 있다]({{< docsref "getting-started/accessibility#color-contrast" >}})는 점에 유의하세요.
 
 {{< example >}}
 <p><a class="link-opacity-10" href="#">Link opacity 10</a></p>

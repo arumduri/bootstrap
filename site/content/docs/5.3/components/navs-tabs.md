@@ -37,7 +37,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 `<ul>`을 사용하거나, 아이템의 순서가 중요한 경우에는 `<ol>`를 사용하거나, `<nav>` 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. `.nav` 는 `display: flex`를 사용하고 있기 때문에, nav-link는 따로 추가적인 마크업 없이, nav-item과 동일하게 동작합니다.
+클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 `<ul>`을 사용하거나, 아이템의 순서가 중요한 경우에는 `<ol>`를 사용하거나, `<nav>` 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. `.nav`는 `display: flex`를 사용하고 있기 때문에, nav-link는 따로 추가적인 마크업 없이, nav-item과 동일하게 동작합니다.
 
 {{< example >}}
 <nav class="nav">
@@ -128,7 +128,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### 탭
 
-`.nav-tabs` 클래스를 추가해 탭이 있는 인터페이스를 만들 수 있습니다. [tab JavaScript plugin](#javascript-behavior)으로 탭 가능한 영역을 만듭니다。
+`.nav-tabs` 클래스를 추가해 탭이 있는 인터페이스를 만들 수 있습니다. [탭 JavaScript 플러그인](#javascript-비헤이비어)으로 탭 가능한 영역을 만듭니다。
 
 {{< example >}}
 <ul class="nav nav-tabs">
@@ -221,7 +221,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </nav>
 {{< /example >}}
 
-동일한 가로 폭의 아이템을 사용하고 싶은 경우에는, `.nav-justified`를 사용합니다. 모든 수평 방향의 여백은 nav-links 가 갖고 있지만, 위의 `.nav-fill` 과는 다르게, 모든 내비게이션 아이템은 동일한 가로 폭을 가지게 됩니다.
+동일한 가로 폭의 아이템을 사용하고 싶은 경우에는, `.nav-justified`를 사용합니다. 모든 수평 방향의 여백은 nav-links 가 갖고 있지만, 위의 `.nav-fill`과는 다르게, 모든 내비게이션 아이템은 동일한 가로 폭을 가지게 됩니다.
 
 {{< example >}}
 <ul class="nav nav-pills nav-justified">
@@ -240,7 +240,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-`<nav>`에 `.nav-fill`을 적용한 경우는
+`<nav>`에 `.nav-fill`을 적용한 경우:
 
 {{< example >}}
 <nav class="nav nav-pills nav-justified">
@@ -251,6 +251,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </nav>
 
 {{< /example >}}
+
 ## 플렉스 유틸리티
 
 반응형 내비게이션의 변화가 필요한 경우에는 [flexbox 유틸리티]({{< docsref "/utilities/flex" >}})를 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 중단점 간에 더 많은 사용자 지정이 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
@@ -335,21 +336,21 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 탐색은 `.nav`, `.nav-tabs` 및 `.nav-pills`에서 로컬 CSS 변수를 사용하여 향상된 실시간 사용자 정의 기능을 제공합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
-`.nav` 기본 클래스
+.nav` 기본 클래스:
 
 {{< scss-docs name="nav-css-vars" file="scss/_nav.scss" >}}
 
-`.nav-tabs` 수정자 클래스
+`.nav-tabs` 수정자 클래스를 적용한 경우:
 
 {{< scss-docs name="nav-tabs-css-vars" file="scss/_nav.scss" >}}
 
-`.nav-pills` 수정자 클래스
+`.nav-pills` 수정자 클래스를 적용한 경우:
 
 {{< scss-docs name="nav-pills-css-vars" file="scss/_nav.scss" >}}
 
 {{< added-in "5.3.0" >}}
 
-`.nav-underline` 수정자 클래스
+`.nav-underline` 수정자 클래스를 적용한 경우:
 
 {{< scss-docs name="nav-underline-css-vars" file="scss/_nav.scss" >}}
 
@@ -515,7 +516,7 @@ Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 탐색
 </div>
 ```
 
-세로형 알약도 마찬가지입니다. 세로 탭의 경우 탭 목록 컨테이너에 `aria-orientation="vertical"`을 추가하는 것이 가장 이상적입니다.
+세로형 필도 마찬가지입니다. 세로 탭의 경우 탭 목록 컨테이너에 `aria-orientation="vertical"`을 추가하는 것이 가장 이상적입니다.
 
 <div class="bd-example">
   <div class="d-flex align-items-start">
@@ -569,7 +570,7 @@ Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 탐색
 
 [ARIA Authoring Practices Guide 탭 패턴](https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/)에 설명된 대로 동적 탭 인터페이스에는 보조 기술(스크린 리더 등) 사용자에게 구조, 기능 및 현재 상태를 전달하기 위해 `role="tablist"`, `role="tab"` 및 추가 `aria-` 속성이 필요합니다. 탭은 새 페이지나 위치로 이동하는 링크가 아니라 동적 변경을 트리거하는 컨트롤이므로 `<button>` 요소를 사용하는 것이 가장 좋습니다.
 
-ARIA 저작 관행 패턴에 따라 현재 활성화된 탭만 키보드 포커스를 받습니다. JavaScript 플러그인이 초기화되면 모든 비활성 탭 컨트롤에 `tabindex="-1"`이 설정됩니다. 현재 활성 탭에 포커스가 잡히면 커서 키는 이전/다음 탭을 활성화합니다. <kbd>Home</kbd> 키와 <kbd>End</kbd> 키는 각각 첫 번째와 마지막 탭을 활성화합니다. 플러그인은 그에 따라 [로빙 `탭색인`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/)을 변경합니다. 그러나 JavaScript 플러그인은 커서 키 상호작용과 관련하여 가로 및 세로 탭 목록을 구분하지 않습니다. 탭 목록의 방향에 관계없이 위쪽 *및* 왼쪽 커서는 모두 이전 탭으로 이동하고 아래쪽 *및* 오른쪽 커서는 다음 탭으로 이동합니다.
+ARIA Authoring Practices 패턴에 따라 현재 활성화된 탭만 키보드 포커스를 받습니다. JavaScript 플러그인이 초기화되면 모든 비활성 탭 컨트롤에 `tabindex="-1"`이 설정됩니다. 현재 활성 탭에 포커스가 잡히면 커서 키는 이전/다음 탭을 활성화합니다. <kbd>Home</kbd> 키와 <kbd>End</kbd> 키는 각각 첫 번째와 마지막 탭을 활성화합니다. 플러그인은 그에 따라 [Roving `tabindex`](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/)를 변경합니다. 그러나 JavaScript 플러그인은 커서 키 상호작용과 관련하여 가로 및 세로 탭 목록을 구분하지 않습니다. 탭 목록의 방향에 관계없이 위쪽 *및* 왼쪽 커서는 모두 이전 탭으로 이동하고 아래쪽 *및* 오른쪽 커서는 다음 탭으로 이동합니다.
 
 {{< callout warning >}}
 일반적으로 키보드 탐색을 용이하게 하려면 탭 패널 내부의 의미 있는 콘텐츠를 포함하는 첫 번째 요소가 이미 초점을 맞출 수 있는 경우가 아니라면 탭 패널 자체에도 초점을 맞출 수 있도록 설정하는 것이 좋습니다. JavaScript 플러그인은 이 부분을 처리하려고 하지 않으므로 적절한 경우 마크업에 `tabindex="0"`을 추가하여 탭 패널에 명시적으로 초점을 맞출 수 있도록 설정해야 합니다.
@@ -668,7 +669,7 @@ const bsTab = new bootstrap.Tab('#myTab')
 | `dispose` | 탭 요소를 없앱니다. |
 | `getInstance` | DOM 요소에 연관된 탭의 인스턴스를 가져오는 Static 메소드입니다. `bootstrap.Tab.getInstance(element)`처럼 사용할 수 있습니다. |
 | `getOrCreateInstance` | DOM 요소에 연결된 탭 인스턴스를 반환하거나 초기화되지 않은 경우 새 탭 인스턴스를 생성하는 정적 메서드입니다. 다음과 같이 사용할 수 있습니다: `bootstrap.Tab.getOrCreateInstance(element)`. |
-| `show` | 지정된 탭을 선택해 관련 창을 표시합니다. 이전에 선택되어 있던 다른 탭은 선택되지 않은 상태가 되고 관련된 창도 비표시 됩니다. **탭 창이 실제로 표시되기 전에 호출된 곳으로 돌아옵니다** (`shown.bs.tab` 이벤트가 발생하기 전). |
+| `show` | 지정된 탭을 선택해 관련 창을 표시합니다. 이전에 선택되어 있던 다른 탭은 선택되지 않은 상태가 되고 관련된 창도 비표시 됩니다. **탭 창이 실제로 표시되기 전에 (`shown.bs.tab` 이벤트가 발생하기 전) 호출된 곳으로 돌아옵니다**. |
 {{< /bs-table >}}
 
 ### 이벤트
@@ -685,10 +686,10 @@ const bsTab = new bootstrap.Tab('#myTab')
 {{< bs-table >}}
 | 이벤트 유형 | 설명 |
 | --- | --- |
-| `hide.bs.tab` | 이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. `event.target` 과 `event.relatedTarget` 을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타깃으로 합니다. |
-| `hidden.bs.tab` | 이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) `event.target` 과 `event.relatedTarget` 을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타깃으로 합니다. |
-| `show.bs.tab` | 이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. `event.target` 과 `event.relatedTarget` 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다. |
-| `shown.bs.tab` | 	이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. `event.target` 과 `event.relatedTarget` 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다. |
+| `hide.bs.tab` | 이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타깃으로 합니다. |
+| `hidden.bs.tab` | 이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) `event.target`과 `event.relatedTarget`을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타깃으로 합니다. |
+| `show.bs.tab` | 이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다. |
+| `shown.bs.tab` | 	이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다. |
 {{< /bs-table >}}
 
 ```js

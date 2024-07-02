@@ -16,7 +16,7 @@ toc: true
 - 오프캔버스를 표시하면 기본적으로 배경이 포함되어져 있어 그것을 클릭하면 오프캔버스가 사라집니다.
 - 모달과 마찬가지로 오프캔버스는 한번에 1개밖에 표시할 수 없습니다.
 
-**주의!** CSS에 의한 애니메이션 사용을 고려한다면 `.offcanvas` 요소의 `margin`이나 `translate`를 사용할 수 없습니다. 대신, 이 클래스를 독립된 포장 요소 감싸서 사용해 주세요.
+**주의!** CSS에 의한 애니메이션 사용을 고려한다면 `.offcanvas` 요소의 `margin`이나 `translate`를 사용할 수 없습니다. 대신, 이 클래스를 독립된 래퍼 요소로 사용해 주세요.
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}

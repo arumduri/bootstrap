@@ -23,7 +23,7 @@ toc: true
 
 ## 기본 예제
 
-다음은 슬라이드가 3개인 캐러셀의 기본 예시입니다. 이전/다음 컨트롤에 주목하세요. `<button>` 요소를 사용하는 걸 권장하지만 `role="button"`ㄴ이 포함된 `<a>` 요소를 사용할 수도 있습니다.
+다음은 슬라이드가 3개인 캐러셀의 기본 예시입니다. 이전/다음 컨트롤에 주목하세요. `<button>` 요소를 사용하는 걸 권장하지만 `role="button"`이 포함된 `<a>` 요소를 사용할 수도 있습니다.
 
 {{< example >}}
 <div id="carouselExample" class="carousel slide">
@@ -55,7 +55,7 @@ toc: true
 
 ### 인디케이터
 
-그리고, 캐러셀에는 컨트롤과 함께 위치 표시(인디게이터, indicator)를 추가할 수도 있습니다. The indicators let users jump directly to a particular slide.
+그리고, 캐러셀에는 컨트롤과 함께 위치 표시(인디게이터)를 추가할 수도 있습니다. 인디게이터를 통해 사용자는 특정 슬라이드로 바로 이동할 수 있습니다.
 
 {{< example >}}
 <div id="carouselExampleIndicators" class="carousel slide">

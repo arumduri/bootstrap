@@ -8,13 +8,13 @@ toc: true
 ---
 
 ## 소개
-**카드**는 유연하고 확장이 가능한 컨테이너입니다. Headers나 footers의 옵션, 다양한 콘텐츠, 문맥에 따른 배경색, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap 3의 panels、wells、thumbnails는 카드로 바뀝니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.
+**카드**는 유연하고 확장이 가능한 컨테이너입니다. 헤더/푸터 옵션, 다양한 콘텐츠, 문맥에 따른 배경색, 강력한 표시 옵션이 포함되어 있습니다. Bootstrap 3의 panels, wells, thumbnails는 카드로 변경되었습니다. 이러한 컴포넌트의 기능은 카드의 클래스로 이용할 수 있습니다.
 
 ## 예시
 
 카드는 적은 마크업과 스타일로 되어 있지만, 다양한 사용자 정의가 가능합니다. Flexbox로 만들어져 있어 쉽게 배치할 수 있고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 `margin` 설정이 없어서 필요에 따라 [간격 유틸리티]({{< docsref "/utilities/spacing" >}})를 사용합니다.
 
-아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [크기 조절 옵션](#sizing)을 통해서 간단하게 재정의할 수 있습니다.
+아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 [크기 조절 옵션](#크기-조절)을 통해서 간단하게 재정의할 수 있습니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -419,7 +419,7 @@ Header나 footer와 같이, 카드에는 카드의 상부와 하부의 "image ca
 
 {{< added-in "5.2.0" >}}
 
-Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
+[`.text-bg-{color}` 도우미]({{< docsref "helpers/color-background" >}})로 전경 `color`와 대비되는 `background-color`를 설정합니다. 이전에는 스타일링을 위해 [`.text-{color}`]({{< docsref "/utilities/colors" >}}) 및 [`.bg-{color}`]({{< docsref "/utilities/background" >}}) 유틸리티를 수동으로 조합해야 했지만, 원하는 경우 계속 사용할 수 있습니다.
 
 {{< example >}}
 {{< card.inline >}}
@@ -548,7 +548,7 @@ Footer가 있는 카드 그룹을 사용하면, 그 내용이 자동으로 정�
 
 ### 그리드 카드
 
-Bootstrap 그리드 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/grid#row-columns" >}})를 사용해, 행마다 표시하는 그리드 열의 개수(카드 주변을 감싼)를 제어합니다. 예를 들어, 여기에서는 `.row-cols-1` 은 한 줄로 카드를 배치하고, `.row-cols-md-2` 은 4개의 카드를 해당 중단점에서 그다음 줄로 넘겨 동일의 가로 폭으로 나눠주고 있습니다.
+Bootstrap 그리드 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/grid#row-columns" >}})를 사용해, 행마다 표시하는 그리드 열의 개수(카드 주변을 감싼)를 제어합니다. 예를 들어, 여기에서는 `.row-cols-1`은 한 줄로 카드를 배치하고, `.row-cols-md-2`은 4개의 카드를 해당 중단점에서 그다음 줄로 넘겨 동일의 가로 폭으로 나눠주고 있습니다.
 
 {{< example >}}
 <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -722,7 +722,7 @@ Bootstrap 그리드 시스템과 [`.row-cols` 클래스]({{< docsref "/layout/gr
 
 ### Masonry
 
-`v4`에서는 CSS 전용 기술을 사용하여 Masonry식 컬럼의 동작을 따라 했지만 이러한 기술에는 많은 영 좋지 않은 [부작용](https://github.com/twbs/bootstrap/pull/28922)을 발생시킵니다. `v5`에서 이러한 유형의 레이아웃을 사용하려면 Masonry 플러그인을 사용하면 됩니다. Masonry는 *Bootstrap에 포함되어 있지 않지만* 시작하는 데 도움이 되는 [데모 예시]({{< docsref "/examples/masonry" >}})를 만들었습니다.
+`v4`에서는 CSS 전용 기술을 사용하여 Masonry식 컬럼의 동작을 따라 했지만 이러한 기술에는 영 좋지 않은 많은 [부작용](https://github.com/twbs/bootstrap/pull/28922)을 발생시킵니다. `v5`에서 이러한 유형의 레이아웃을 사용하려면 Masonry 플러그인을 사용하면 됩니다. Masonry는 *Bootstrap에 포함되어 있지 않지만* 시작하는 데 도움이 되는 [데모 예시]({{< docsref "/examples/masonry" >}})를 만들었습니다.
 
 ## CSS
 

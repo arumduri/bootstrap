@@ -47,6 +47,6 @@ Use the [clearfix helper]({{< docsref "/helpers/clearfix" >}}) on a parent eleme
 
 ### Sass 유틸리티 API
 
-Float 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+플로트 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-float" file="scss/_utilities.scss" >}}

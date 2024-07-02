@@ -344,7 +344,7 @@ Flexbox는 플렉스 정렬과 자동여백을 혼합할 때 꽤 멋진 일을 �
 
 ## 줄바꿈
 
-flex 컨테이너에서 플렉스 항목이 줄바꿈되는 방식을 변경합니다. `.flex-nowrap`으로 줄바꿈을 없애거나 (브라우저 기본값), `.flex-wrap`으로 줄바꿈 또는`.flex-wrap-reverse`로 역방향으로 줄바꿈 중에서 선택하십시오.
+flex 컨테이너에서 플렉스 항목이 줄바꿈되는 방식을 변경합니다. `.flex-nowrap`으로 줄바꿈을 없애거나 (브라우저 기본값), `.flex-wrap`으로 줄바꿈  또는 `.flex-wrap-reverse`로 역방향으로 줄바꿈 중에서 선택하십시오.
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex flex-nowrap" style="width: 8rem;">
@@ -427,7 +427,7 @@ flex 컨테이너에서 플렉스 항목이 줄바꿈되는 방식을 변경합�
 
 ## 순서
 
-몇 가지 `order` 유틸리티로 특정 플렉스 항목의 _보이는_ 순서를 변경합니다. 플렉스 항목 순서를 처음 또는 마지막으로 만드는 옵션과 DOM 순서를 사용하기 위한 재설정 만 제공합니다. `order` 는 0에서 5 사이의 값을 취하므로 필요한 추가 값은 사용자 정의 CSS에 추가하십시오.
+몇 가지 `order` 유틸리티로 특정 플렉스 항목의 _보이는_ 순서를 변경합니다. 플렉스 항목 순서를 처음 또는 마지막으로 만드는 옵션과 DOM 순서를 사용하기 위한 재설정 만 제공합니다. `order`는 0에서 5 사이의 값을 취하므로 필요한 추가 값은 사용자 정의 CSS에 추가하십시오.
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex flex-nowrap">
@@ -660,6 +660,6 @@ Bootstrap4에서 [미디어 객체 컴포넌트](https://getbootstrap.com/docs/4
 
 ### Sass 유틸리티 API
 
-Flexbox 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
+Flexbox 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-flex" file="scss/_utilities.scss" >}}

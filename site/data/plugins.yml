@@ -1,47 +1,47 @@
-- name: Alert
-  description: Show and hide alert messages to your users.
-  link: components/alerts/#javascript-behavior
+- name: 경고창
+  description: 사용자에게 알림 메시지를 표시하고 숨깁니다.
+  link: components/alerts/#javascript-비헤이비어
 
-- name: Button
-  description: Programmatically control the active state for buttons.
-  link: components/buttons/#button-plugin
+- name: 버튼
+  description: 버튼의 활성 상태를 프로그래밍 방식으로 제어합니다.
+  link: components/buttons/#버튼-플러그인
 
-- name: Carousel
-  description: Add slideshows to any page, including support for crossfade.
+- name: 캐러셀
+  description: 크로스 페이드 지원을 포함하여 모든 페이지에 슬라이드 쇼를 추가하세요.
   link: components/carousel/
 
-- name: Collapse
-  description: Expand and collapse areas of content, or create accordions.
+- name: 콜랩스
+  description: 콘텐츠 영역을 확장 및 축소하거나 아코디언을 만들 수 있습니다.
   link: components/collapse/
 
-- name: Dropdown
-  description: Create menus of links, actions, forms, and more.
+- name: 드롭다운
+  description: 링크, 작업, 양식 등의 메뉴를 만듭니다.
   link: components/dropdowns/
 
-- name: Modal
-  description: Add flexible and responsive dialogs to your project.
+- name: 모달
+  description: 프로젝트에 유연하고 반응이 빠른 대화 상자를 추가할 수 있습니다.
   link: components/modal/
 
-- name: Offcanvas
-  description: Build and toggle hidden sidebars into any page.
+- name: 오프캔버스
+  description: 페이지에 숨겨진 사이드바를 만들고 전환할 수 있습니다.
   link: components/offcanvas/
 
-- name: Popover
-  description: Create custom overlays. Built on Popper.
+- name: 팝오버
+  description: 사용자 지정 오버레이를 만들 수 있습니다. Popper 기반입니다.
   link: components/popovers/
 
-- name: Scrollspy
-  description: Automatically update active nav links based on page scroll.
+- name: 스크롤스파이
+  description: 페이지 스크롤에 따라 활성 내비게이션 링크를 자동으로 업데이트합니다.
   link: components/scrollspy/
 
-- name: Tab
-  description: Allow Bootstrap nav components to toggle contents.
+- name: 탭
+  description: Bootstrap 내비게이션 컴포넌트가 콘텐츠를 토글할 수 있도록 허용합니다.
   link: components/navs-tabs/
 
-- name: Toast
-  description: Show and hide notifications to your visitors.
+- name: 토스트
+  description: 방문자에게 토스트를 표시하고 숨깁니다.
   link: components/toasts/
 
-- name: Tooltip
-  description: Replace browser tooltips with custom ones. Built on Popper.
+- name: 툴팁
+  description: 브라우저 툴팁을 사용자 지정 툴팁으로 바꿔줍니다. Popper 기반입니다.
   link: components/tooltips/

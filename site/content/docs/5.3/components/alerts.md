@@ -8,7 +8,7 @@ toc: true
 ---
 
 ## 예시
-텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를 들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [alerts JavaScript plugin](#dismissing)을 사용합니다.
+텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를 들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [경고창 JavaScript 플러그인](#무시)을 사용합니다.
 
 {{< callout info >}}
 **주의!** v5.3.0부터 `alert-variant()` Sass 믹스인이 더 이상 사용되지 않습니다. 이제 경고 변형은 [Sass 루프](#sass-루프)에서 해당 CSS 변수를 재정의합니다.
@@ -148,7 +148,7 @@ toc: true
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, alerts now use local CSS variables on `.alert` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 경고창에서 `.alert`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="alert-css-vars" file="scss/_alert.scss" >}}
 
@@ -164,7 +164,6 @@ As part of Bootstrap's evolving CSS variables approach, alerts now use local CSS
 
 ### Sass 루프
 
-Loop that generates the modifier classes with an overriding of CSS variables.
 CSS 변수를 오버라이드하는 제어자 클래스를 생성하는 반복문입니다.
 
 {{< scss-docs name="alert-modifiers" file="scss/_alert.scss" >}}
@@ -195,13 +194,13 @@ const alerts = [...alertList].map(element => new bootstrap.Alert(element))
 
 ### 메소드
 
-You can create an alert instance with the alert constructor, for example:
+예를 들어 경고창 생성자를 사용하여 알림 인스턴스를 만들 수 있습니다:
 
 ```js
 const bsAlert = new bootstrap.Alert('#myAlert')
 ```
 
-This makes an alert listen for click events on descendant elements which have the `data-bs-dismiss="alert"` attribute. (Not necessary when using the data-api’s auto-initialization.)
+이렇게 하면 `data-bs-dismiss="alert"` 속성이 있는 하위 요소의 클릭 이벤트에 대해 알림을 수신합니다. (데이터 API의 자동 초기화를 사용할 때는 필요하지 않습니다.)
 
 {{< bs-table >}}
 | 메소드 | 설명 |

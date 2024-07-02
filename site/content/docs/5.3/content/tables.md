@@ -229,7 +229,7 @@ toc: true
 
 - 먼저 `--bs-table-bg` 사용자 정의 속성으로 테이블 셀의 배경을 설정합니다. 그런 다음 모든 테이블 변형에 해당 사용자 정의 속성을 설정하여 테이블 셀을 색상화합니다. 이렇게 하면 반투명 색상을 테이블 배경으로 사용하더라도 문제가 발생하지 않습니다.
 - 그런 다음 `box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));`를 사용하여 테이블 셀에 삽입 상자 그림자를 추가하여 지정된 `background-color` 위에 레이어를 추가합니다. It uses custom cascade to override the `box-shadow`, regardless the CSS specificity. 큰 스프레드를 사용하고 블러를 사용하지 않기 때문에 색상이 모노톤이 됩니다. `--bs-table-accent-bg`는 기본적으로 설정되어 있지 않기 때문에 기본 상자 그림자가 없습니다.
-- `.table-striped`, `.table-striped-columns`, `.table-hover` 또는`.table-active` 클래스가 추가되면 `--bs-table-bg-type` 또는 `--bs-table-bg-state` (기본값은 `initial`)가 반투명 (`--bs-table-striped-bg`, `--bs-table-active-bg` or `--bs-table-hover-bg`)으로 설정되어 `--bs-table-accent-bg`를 재정의합니다.
+- `.table-striped`, `.table-striped-columns`, `.table-hover`  또는 `.table-active` 클래스가 추가되면 `--bs-table-bg-type` 또는 `--bs-table-bg-state` (기본값은 `initial`)가 반투명 (`--bs-table-striped-bg`, `--bs-table-active-bg` or `--bs-table-hover-bg`)으로 설정되어 `--bs-table-accent-bg`를 재정의합니다.
 - 각 테이블 변형에 대해 해당 색상에 따라 가장 높은 대비를 가진 `--bs-table-accent-bg` 색상을 생성합니다. 예를 들어 `.table-primary`의 강조 색상은 더 어둡고 `.table-dark`는 더 밝은 강조 색상입니다.
 - 텍스트 및 테두리 색상은 동일한 방식으로 생성되며 기본적으로 색상이 상속됩니다.
 
@@ -834,5 +834,5 @@ toc: true
 {{< scss-docs name="table-loop" file="scss/_variables.scss" >}}
 
 ### 사용자 지정
--요인 변수 (`$table-striped-bg-factor`, `$table-active-bg-factor` & `$table-hover-bg-factor`)는 테이블 변형의 대비를 결정하는 데에 사용됩니다.
--밝고 어두운 테이블 변형 외에도 테마 색상은 `$table-bg-scale` 변수에 의해 밝아집니다.
+- 요인 변수 (`$table-striped-bg-factor`, `$table-active-bg-factor` & `$table-hover-bg-factor`)는 테이블 변형의 대비를 결정하는 데에 사용됩니다.
+- 밝고 어두운 테이블 변형 외에도 테마 색상은 `$table-bg-scale` 변수에 의해 밝아집니다.

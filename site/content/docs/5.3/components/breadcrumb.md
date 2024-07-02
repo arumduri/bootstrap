@@ -56,7 +56,7 @@ $breadcrumb-divider: quote(">");
 또한 **내장된 SVG 아이콘**을 사용할 수도 있습니다. CSS 사용자 지정 속성을 통해 적용하거나 Sass 변수를 사용하세요.
 
 {{< callout info >}}
-**Inlined SVG requires properly escaped characters.** Some reserved characters, such as `<`, `>` and `#`, must be URL-encoded or escaped. We do this with the `$breadcrumb-divider` variable using our [`escape-svg()` Sass function]({{< docsref "/customize/sass#escape-svg" >}}). When customizing the CSS variable, you must handle this yourself. Read [Kevin Weber's explanations on CodePen](https://codepen.io/kevinweber/pen/dXWoRw ) for more info.
+**인라인 SVG에는 올바르게 이스케이프된 문자가 필요합니다.** `<`, `>` 및 `#`와 같은 일부 예약 문자는 URL 인코딩 또는 이스케이프되어야 합니다. 이 작업은 [`escape-svg()` Sass 함수]({{< docsref "/customize/sass#escape-svg" >}})를 사용하여 `$breadcrumb-divider` 변수를 통해 수행합니다. CSS 변수를 사용자 정의할 때는 직접 처리해야 합니다. 자세한 내용은 [CodePen에서의 Kevin Weber의 설명](https://codepen.io/kevinweber/pen/dXWoRw)을 참조하세요.
 {{< /callout >}}
 
 {{< example >}}
@@ -90,7 +90,7 @@ $breadcrumb-divider: none;
 
 ## 접근성
 
-브레드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 `<nav>` 요소에 `aria-label="breadcrumb"` 과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 `aria-current="page"`를 추가하는 것이 좋습니다.
+브레드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 `<nav>` 요소에 `aria-label="breadcrumb"`과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 `aria-current="page"`를 추가하는 것이 좋습니다.
 
 자세한 내용은 [ARIA Authoring Practices Guide breadcrumb pattern](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/)을 확인해주세요.
 
@@ -100,7 +100,7 @@ $breadcrumb-divider: none;
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, breadcrumbs now use local CSS variables on `.breadcrumb` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 브레드크럼에서 `.breadcrumb`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="breadcrumb-css-vars" file="scss/_breadcrumb.scss" >}}
 

@@ -16,7 +16,7 @@ toc: true
 색상 유틸리티를 사용하여 텍스트를 색상화 합니다. 링크에 색을 입히려면 `: hover` 및 `: focus` 상태가 있는 [`.link-*` helper classes]({{< docsref "/helpers/colored-links" >}})를 사용할 수 있습니다.
 
 {{< callout info >}}
-Color utilities like `.text-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.text-*-emphasis` utility will. This will be resolved in v6.
+`.text-*`와 같은 색상 유틸리티는 `.theme-colors` Sass 맵에서 생성된 색상 모드에 아직 반응하지 않지만, `.text-*-emphasis` 유틸리티는 반응합니다. 이 문제는 v6에서 해결될 예정입니다.
 {{< /callout >}}
 
 {{< example >}}
@@ -43,7 +43,7 @@ Color utilities like `.text-*` that generated from our original `$theme-colors` 
 {{< /callout >}}
 
 {{< callout warning >}}
-**Deprecation:** With the addition of the expanded theme colors and variables, the `.text-muted` utility has been deprecated as of v5.3.0. Its default value has also been reassigned to the new `--bs-secondary-color` CSS variable to better support color modes. It will be removed in v6.0.0.
+**지원 중단:** 확장된 테마 색상과 변수가 추가됨에 따라 `.text-muted` 유틸리티는 v5.3.0부터 사용 중단되었습니다. 기본값도 색상 모드를 더 잘 지원하기 위해 새로운 `--bs-secondary-color` CSS 변수에 재할당되었습니다. 이 기능은 v6.0.0에서 제거될 예정입니다.
 {{< /callout >}}
 
 ## 불투명도
@@ -137,6 +137,6 @@ RGB 색상은 별도의 Sass 맵에서 생성됩니다:
 
 ### Sass 유틸리티 API
 
-색상 유틸리티는`scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
+색상 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-color" file="scss/_utilities.scss" >}}

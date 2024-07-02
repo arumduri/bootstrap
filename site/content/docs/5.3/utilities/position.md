@@ -21,20 +21,20 @@ toc: true
 
 ## 요소 정렬
 
-edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 형식은 `{property}-{position}` 입니다.
+edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 형식은 `{property}-{position}`입니다.
 
-here *property* is one of:
+*속성* - property:
 
-- `top` - for the vertical `top` position
-- `start` - for the horizontal `left` position (in LTR)
-- `bottom` - for the vertical `bottom` position
-- `end` - for the horizontal `right` position (in LTR)
+- `top` - 수직 `top` 위치
+- `start` - 가로 `left` 위치 (LTR 기준)
+- `bottom` - 수직 `bottom` 위치
+- `end` - 가로 `right` 위치 (LTR 기준)
 
-Where *position* is one of:
+*위치* - position:
 
-- `0` - for `0` edge position
-- `50` - for `50%` edge position
-- `100` - for `100%` edge position
+- `0` - 가장자리 위치가 `0`인 경우
+- `50` - 가장자리 위치가 `50%`인 경우
+- `100` - 가장자리 위치가 `100%`인 경우
 
 (`$ position-values` Sass 맵 변수에 항목을 추가하면 더 많은 위치 값을 추가할 수 있습니다.)
 
@@ -126,6 +126,6 @@ Where *position* is one of:
 
 ### Sass 유틸리티 API
 
-Position 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+위치 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-position" file="scss/_utilities.scss" >}}

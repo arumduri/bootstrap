@@ -14,14 +14,14 @@ Bootstrap 유틸리티는 유틸리티 API로 생성되며 Sass를 통해 기본
 `$utilities` 맵에는 우리의 모든 유틸리티가 포함되어 나중에는 사용자정의 `$utilities` 와 통합(파일이 있을 경우)됩니다. 유틸리티 맵에는 다음 옵션을 허용할 수 있는 유틸리티 그룹의 키 목록이 포함되어 있습니다:
 
 {{< bs-table "table table-utilities" >}}
-| Option | Type | Default&nbsp;value | Description |
+| 옵션 | 유형 | 기본값 | 설명 |
 | --- | --- | --- | --- |
 | [`property`](#property) | **필수** | – | 속성의 이름입니다. 문자열 또는 문자열 배열 (예: 수평 패딩 또는 여백)이 될 수 있습니다. |
-| [`values`](#values) | **Required** | – | 값 목록입니다. 클래스 이름이 값과 동일하지 않게 하려는 경우에는 맵입니다. `null`이 맵 키로 사용되면 `class`가 클래스명 앞에 붙지 않습니다. |
-| [`class`](#class) | Optional | null | 생성된 클래스의 이름입니다. 제공하지 않고 `property`가 문자열 배열인 경우 `class`는 기본적으로 `property` 배열의 첫 번째 요소로 설정됩니다. If not provided and `property` is a string, the `values` keys are used for the `class` names. |
-| [`css-var`](#css-variable-utilities) | 선택 | `false` | CSS 규칙 대신 CSS 변수를 생성하는 불대수입니다. |
-| [`css-variable-name`](#css-variable-utilities) | Optional | null | Custom un-prefixed name for the CSS variable inside the ruleset. |
-| [`local-vars`](#local-css-variables) | 선택 | null | CSS 규칙 외에 생성할 로컬 CSS 변수의 맵입니다. |
+| [`values`](#values) | **필수** | – | 값 목록입니다. 클래스 이름이 값과 동일하지 않게 하려는 경우에는 맵입니다. `null`이 맵 키로 사용되면 `class`가 클래스명 앞에 붙지 않습니다. |
+| [`class`](#class) | 선택 | null | 생성된 클래스의 이름입니다. 제공하지 않고 `property`가 문자열 배열인 경우 `class`는 기본적으로 `property` 배열의 첫 번째 요소로 설정됩니다. 프로퍼티가 제공되지 않았고 `property`가 문자열이며 `values` 키가 `class` 이름에 사용됩니다. |
+| [`css-var`](#css-변수-유틸리티) | 선택 | `false` | CSS 규칙 대신 CSS 변수를 생성하는 불대수입니다. |
+| [`css-variable-name`](#css-변수-유틸리티) | 선택 | null | 규칙 집합 내에서 접두사가 없는 사용자 정의 CSS 변수의 이름입니다. |
+| [`local-vars`](#로컬-css-변수) | 선택 | null | CSS 규칙 외에 생성할 로컬 CSS 변수의 맵입니다. |
 | [`state`](#states) | 선택 | null | 생성할 의사 클래스 변형 목록 (예: `:hover` 또는 `:focus`)입니다. |
 | [`responsive`](#responsive) | 선택 | `false` | 반응형 클래스를 생성해야 하는지 여부를 나타내는 불대수입니다. |
 | `rfs` | 선택 | `false` | [RFS를 사용한 플루이드 리스케일링]({{< docsref "/getting-started/rfs" >}})을 활성화하는 불대수입니다. |
@@ -58,11 +58,9 @@ $utilities: (
 .opacity-100 { opacity: 1; }
 ```
 
-### 속성
+### property
 
 모든 유틸리티에 대해 필수적으로 `property` 키를 설정해야 하며 유효한 CSS 속성을 포함해야 합니다. 이 속성은 생성된 유틸리티의 규칙 집합에서 사용됩니다. `class` 키가 생략되면 기본 클래스 이름으로도 사용됩니다. `text-decoration` 유틸리티를 사용하는 것을 고려해보세요:
-
-The required `property` key must be set for any utility, and it must contain a valid CSS property. This property is used in the generated utility's ruleset. When the `class` key is omitted, it also serves as the default class name. Consider the `text-decoration` utility:
 
 ```scss
 $utilities: (
@@ -81,17 +79,17 @@ $utilities: (
 .text-decoration-line-through { text-decoration: line-through !important; }
 ```
 
-### 값
+### values
 
 `values` 키를 사용하여 생성된 클래스 이름 및 규칙에서 지정된 `property`에 사용할 값을 지정하세요. 목록 또는 맵이 될 수 있습니다 (유틸리티 또는 Sass 변수에서 설정 가능).
 
-[`text-decoration` 유틸리티]({{< docsref "/utilities/text#text-decoration" >}})와 같은 목록으로:
+[`text-decoration` 유틸리티]({{< docsref "/utilities/text#text-decoration" >}})와 같은 목록:
 
 ```scss
 values: none underline line-through
 ```
 
-[`opacity` 유틸리티]({{< docsref "/utilities/opacity" >}})와 같은 맵은 다음과 같습니다:
+[`opacity` 유틸리티]({{< docsref "/utilities/opacity" >}})와 같은 맵:
 
 ```scss
 values: (
@@ -103,12 +101,12 @@ values: (
 )
 ```
 
-[`position` 유틸리티]({{< docsref "/utilities/position" >}})처럼 목록 또는 맵을 설정하는 Sass 변수는 다음과 같습니다:
+[`position` 유틸리티]({{< docsref "/utilities/position" >}})와 같은 목록 또는 맵을 설정하는 Sass 변수는 다음과 같습니다:
 ```scss
 values: $position-values
 ```
 
-### 클래스
+### class
 
 컴파일된 CSS에서 사용되는 클래스 접두사를 변경하려면 `class` 옵션을 사용하세요. 예를 들어 `.opacity-*`에서 `.o-*`로 변경하려면 다음과 같이 할 수 있습니다:
 
@@ -222,7 +220,7 @@ $utilities: (
 }
 ```
 
-### 상태
+### state
 
 가상 클래스의 변형을 생성하려면 `state` 옵션을 사용하세요. 비슷한 클래스의 예시로는 `:hover` 및 `:focus`가 있습니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 `state: hover`를 추가하면 컴파일된 CSS에 `.opacity-hover:hover`가 표시됩니다.
 
@@ -255,7 +253,7 @@ $utilities: (
 .opacity-100-hover:hover { opacity: 1 !important; }
 ```
 
-### 반응형 유틸리티
+### responsive
 
 
 ```scss
@@ -324,7 +322,7 @@ $utilities: (
 }
 ```
 
-### 인쇄
+### print
 
 `print` 옵션을 활성화하면 ** 또한 ** 인쇄용 유틸리티 클래스가 생성되며, 이는 `@media print {...}` 미디어 쿼리 내에서만 적용됩니다.
 

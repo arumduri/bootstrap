@@ -14,7 +14,7 @@ toc: true
 - 팝오버는 서드파티 라이브러리인 [Popper](https://popper.js.org/)에 의존하고 있습니다. `bootstrap.js` 앞에 [popper.min.js]({{< param "cdn.popper" >}})를 사용하거나, Popper가 포함되어 있는 `bootstrap.bundle.min.js`를 사용해야 합니다.
 - 팝오버는, 의존관계로 [popover 플러그인]({{< docsref "/components/popovers" >}})이 필요합니다.
 - 팝오버는 퍼포먼스를 위해 opt-in 되어 있기 때문에, **스스로 초기화를 해야 합니다.**
-- 길이가 0인 `title` 과 `content` 값은 팝오버를 표시하지 않습니다.
+- 길이가 0인 `title`과 `content` 값은 팝오버를 표시하지 않습니다.
 - 더 복잡한 컴포넌트(input group, button groups 등)의 렌더링 문제를 피하기 위해 `container: 'body'`를 지정해 주십시오.
 - 숨겨진 요소에서 팝오버를 트리거 해도 작동하지 않습니다.
 - `.disabled` 또는 `disabled` 요소의 팝오버는 그 위(바깥) 요소에서 트리거 해야 합니다.
@@ -190,14 +190,14 @@ const popover = new bootstrap.Popover(exampleEl, options)
 | --- | --- | --- | --- |
 | `allowList` | object | [기본값]({{< docsref "/getting-started/javascript#sanitizer" >}}) | 허용된 속성 및 태그가 포함된 개체입니다. |
 | `animation` | boolean | `true` | 팝오버에 CSS 페이드 전환을 적용합니다. |
-| `boundary` | string, element | `'clippingParents'` | 팝오버의 오버플로 제약 조건 경계(팝퍼의 preventOverflow 수정자에만 적용). 기본값은 `'clippingParents'`이며 (JavaScript를 통해서만) HTMLElement 참조를 받을 수 있습니다. 자세한 내용은 Popper의 [detectOverflow 문서](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary)를 참조하세요. |
+| `boundary` | string, element | `'clippingParents'` | 팝오버의 오버플로 제약 조건 경계(Popper의 preventOverflow 수정자에만 적용). 기본값은 `'clippingParents'`이며 (JavaScript를 통해서만) HTMLElement 참조를 받을 수 있습니다. 자세한 내용은 Popper의 [detectOverflow 문서](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary)를 참조하세요. |
 | `container` | string, element, false | `false` | 특정 요소에 팝오버를 추가합니다. 예: `container: 'body'`. 이 옵션은 문서 흐름에서 트리거 요소 근처에 팝오버를 배치할 수 있다는 점에서 특히 유용하며, 창 크기를 조정하는 동안 팝오버가 트리거 요소에서 떠다니는 것을 방지할 수 있습니다. |
 | `content` | string, element, function | `''` | 팝오버의 텍스트 콘텐츠입니다. 함수가 지정되면 팝오버가 첨부된 요소에 대한 `this` 참조를 설정하여 호출됩니다. |
 | `customClass` | string, function | `''` | 팝오버가 표시되면 클래스를 추가합니다. 이러한 클래스는 템플릿에 지정된 모든 클래스에 추가됩니다. 여러 클래스를 추가하려면 ``class-1 class-2``와 같이 공백으로 구분합니다. 추가 클래스 이름이 포함된 단일 문자열을 반환하는 함수를 전달할 수도 있습니다. |
 | `delay` | number, object | `0` | 팝오버 표시 및 숨기기 지연(ms) - 수동 트리거 유형에는 적용되지 않습니다. 숫자를 지정하면 숨기기/표시 모두에 지연이 적용됩니다. 객체 구조: `delay: { "show": 500, "hide": 100 }`. |
 | `fallbackPlacements` | string, array | `['top', 'right', 'bottom', 'left']` | 배열에 배치 목록을 제공함으로써 대체 배치를 정의합니다(선호도 순서대로). 자세한 내용은 Popper의 [동작 문서](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements)를 참조하세요. |
 | `html` | boolean | `false` | 팝오버에 HTML 허용. true이면 팝오버의 `title`에 있는 HTML 태그가 팝오버에 렌더링됩니다. false인 경우 `innerText` 속성을 사용하여 DOM에 콘텐츠를 삽입합니다. XSS 공격이 걱정된다면 텍스트를 사용하세요. |
-| `offset` | number, string, function | `[0, 0]` | 대상에 대한 팝오버의 오프셋입니다. `data-bs-offset="10,20"`와 같이 쉼표로 구분된 값으로 데이터 속성에 문자열을 전달할 수 있습니다. 함수가 오프셋을 결정하는 데 사용되는 경우 팝퍼 배치, 참조 및 팝퍼 레코드가 포함된 객체를 첫 번째 인수로 사용하여 호출됩니다. 트리거링 요소 DOM 노드는 두 번째 인수로 전달됩니다. 이 함수는 두 개의 숫자가 포함된 배열을 반환해야 합니다: [스키딩](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [거리](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). 자세한 내용은 팝퍼의 [오프셋 문서](https://popper.js.org/docs/v2/modifiers/offset/#options)를 참조하세요. |
+| `offset` | number, string, function | `[0, 0]` | 대상에 대한 팝오버의 오프셋입니다. `data-bs-offset="10,20"`와 같이 쉼표로 구분된 값으로 데이터 속성에 문자열을 전달할 수 있습니다. 함수가 오프셋을 결정하는 데 사용되는 경우 Popper 배치, 참조 및 Popper 레코드가 포함된 객체를 첫 번째 인수로 사용하여 호출됩니다. 트리거링 요소 DOM 노드는 두 번째 인수로 전달됩니다. 이 함수는 두 개의 숫자가 포함된 배열을 반환해야 합니다: [스키딩](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [거리](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). 자세한 내용은 Popper의 [오프셋 문서](https://popper.js.org/docs/v2/modifiers/offset/#options)를 참조하세요. |
 | `placement` | string, function | `'top'` | auto, top, bottom, left, right로 팝오버 위치를 지정할 수 있습니다. `auto`를 지정하면 팝오버의 방향이 동적으로 변경됩니다. 함수가 위치를 결정하는 데 사용되는 경우, 함수는 팝오버 DOM 노드를 첫 번째 인수로, 트리거링 요소 DOM 노드를 두 번째 인수로 사용하여 호출됩니다. `this` 컨텍스트는 팝오버 인스턴스로 설정됩니다. |
 | `popperConfig` | null, object, function | `null` | Bootstrap의 기본 Popper 구성을 변경하려면 [Popper 구성](https://popper.js.org/docs/v2/constructors/#options)을 참조하세요. 함수를 사용하여 Popper 구성을 생성하는 경우 Bootstrap의 기본 Popper 구성이 포함된 객체와 함께 호출됩니다. 이 함수를 사용하면 기본 구성을 사용하고 자신만의 구성과 병합할 수 있습니다. 함수는 Popper에 대한 구성 객체를 반환해야 합니다. |
 | `sanitize` | boolean | `true` | 새니타이징(sanitizing)을 활성화 또는 비활성화합니다. `'template'`을 활성화하면 `'content'`, `'title'` 옵션이 새니타이징 처리됩니다. |

@@ -18,12 +18,22 @@
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
           <div class="mb-3 mb-md-0 d-flex text-nowrap">
+            {{- if .Page.Params.untranslated -}}
+              <small class="d-inline-flex px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2 me-2">번역되지 않음</small>
+            {{- end -}}
             {{- if .Page.Params.added -}}
               <small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">v{{ .Page.Params.added }}에 추가됨</small>
             {{- end -}}
-            <a class="btn btn-sm btn-bd-light rounded-2" href="{{ .Site.Params.repo }}/blob/v{{ .Site.Params.current_version }}/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+            <div class="btn-group btn-group-sm rounded-2">
+              {{- if not .Page.Params.origin -}}
+              <a class="btn btn-bd-light" href="https://getbootstrap.com/{{ .Page.File.Dir | replaceRE `\\` "/" }}{{ .Page.File.BaseFileName }}/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a>
+              {{- end -}}
+              <a class="btn btn-bd-light" href="{{ .Site.Params.i18n }}/tree/main/site/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">{{ .Title | markdownify }}</h1>
         </div>
@@ -35,7 +45,7 @@
       {{ if (eq .Page.Params.toc true) }}
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -58,10 +68,6 @@
             </div>
             {{ end }}
           </div>
-        {{ end }}
-
-        {{ if (eq .Page.Params.untranslated true) }}
-          {{ partial "callout-untranslated.md" }}
         {{ end }}
 
         {{ .Content }}

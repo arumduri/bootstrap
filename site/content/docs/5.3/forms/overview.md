@@ -116,10 +116,10 @@ Bootstrap의 폼 컨트롤은 [Reboot된 폼 스타일]({{< docsref "/content/re
 
 ## CSS
 
-많은 폼 변수들은 일반 수준으로 설정이 되어 있어 각각의 폼 컴포넌트에서 재사용 및 확장됩니다. `$input-btn-*` 과 `$input-*`이라는 변수로 자주 볼 수 있습니다.
+많은 폼 변수들은 일반 수준으로 설정이 되어 있어 각각의 폼 컴포넌트에서 재사용 및 확장됩니다. `$input-btn-*`과 `$input-*`이라는 변수로 자주 볼 수 있습니다.
 
 ### Sass 변수
 
-`$input-btn-*` 변수는 [buttons]({{< docsref "/components/buttons" >}})과 폼 컨트롤 간에 공유되는 글로벌 변수입니다. 이 변수들은 다른 컴포넌트의 고유 변수 값으로 재할당 되고 있습니다.
+`$input-btn-*` 변수는 [버튼]({{< docsref "/components/buttons" >}})과 폼 컨트롤 간에 공유되는 글로벌 변수입니다. 이 변수들은 다른 컴포넌트의 고유 변수 값으로 재할당 되고 있습니다.
 
 {{< scss-docs name="input-btn-variables" file="scss/_variables.scss" >}}

@@ -63,6 +63,6 @@ CSS 변수, Sass 변수, 유틸리티 또는 사용자 정의 스타일을 사�
 {{< /focus-ring.inline >}}
 {{< /example >}}
 
-초점 링 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
+초점 링 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-focus-ring" file="scss/_utilities.scss" >}}

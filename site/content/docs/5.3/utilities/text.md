@@ -157,6 +157,6 @@ Sass 변수와 관련된 기본 유형 및 글꼴입니다:
 
 ### 유틸리티 API
 
-글꼴 및 텍스트 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요]({{< docsref "/utilities/api#using-the-api" >}})
+글꼴 및 텍스트 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-text" file="scss/_utilities.scss" >}}

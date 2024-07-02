@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Z-index
-description: Use our low-level `z-index` utilities to quickly change the stack level of an element or component.
+description: 저수준의 `z-index` 유틸리티를 사용하여 요소 또는 컴포넌트의 스택 레벨을 빠르게 변경할 수 있습니다.
 group: utilities
 toc: true
 added: "5.3"
@@ -29,11 +29,11 @@ Bootstrap 오버레이 구성 요소인 드롭다운, 모달, 오프캔버스, �
 
 [`z-index` 레이아웃 페이지]({{< docsref "/layout/z-index" >}})에서 자세히 읽어보세요.
 
-## 구성 요소 접근 방식
+## 컴포넌트 접근 방식
 
-On some components, we use our low-level `z-index` values to manage repeating elements that overlap one another (like buttons in a button group or items in a list group).
+일부 컴포넌트에서는 저수준의 `z-index` 값을 사용하여 버튼 그룹의 버튼이나 목록 그룹의 항목과 같이 서로 겹치는 반복 요소를 관리합니다.
 
-Learn about our [`z-index` approach]({{< docsref "/extend/approach#z-index-scales" >}}).
+`z-index` 접근 방식에 대해 [자세히 알아보세요]({{< docsref "/extend/approach#z-index-scales" >}}).
 
 ## CSS
 
@@ -45,6 +45,6 @@ Learn about our [`z-index` approach]({{< docsref "/extend/approach#z-index-scale
 
 ### Sass 유틸리티 API
 
-위치 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에서 선언됩니다. [유틸리티 API 사용 방법을 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+위치 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법을 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-zindex" file="scss/_utilities.scss" >}}

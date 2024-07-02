@@ -31,13 +31,13 @@ Bootstrap은 요소와의 상호 작용을 금지하거나 추가하기 위해 `
 
 가능하다면 더 쉬운 방법이 있습니다:
 
-- For form controls, add the `disabled` HTML attribute.
-- For links, remove the `href` attribute, making it a non-interactive anchor or placeholder link.
+- 양식 컨트롤의 경우 `disabled` HTML 속성을 추가합니다.
+- 링크의 경우 `href` 속성을 제거하여 비대화형 앵커 또는 플레이스홀더 링크로 만듭니다.
 
 ## CSS
 
 ### Sass 유틸리티 API
 
-Interaction 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+상호작용 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-interaction" file="scss/_utilities.scss" >}}

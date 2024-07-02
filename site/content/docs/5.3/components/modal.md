@@ -80,7 +80,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 ```
 
 {{< callout info >}}
-In the above static example, we use `<h5>`, to avoid issues with the heading hierarchy in the documentation page. Structurally, however, a modal dialog represents its own separate document/context, so the `.modal-title` should ideally be an `<h1>`. If necessary, you can use the [font size utilities]({{< docsref "/utilities/text#font-size" >}}) to control the heading's appearance. All the following live examples use this approach.
+위의 정적 예제에서는 `<h5>`를 사용하여 문서 페이지의 제목 계층 구조 문제를 피했습니다. 그러나 구조적으로 모달 대화 상자는 별도의 문서/컨텍스트를 나타내므로 `.modal-title`은 이상적으로는 `<h1>`이여야 합니다. 필요한 경우 [글꼴 크기 유틸리티]({{< docsref "/utilities/text#font-size" >}})를 사용하여 제목의 모양을 제어할 수 있습니다. 다음의 모든 라이브 예제에서는 이 방식을 사용합니다.
 {{< /callout >}}
 
 ### 라이브 데모
@@ -447,7 +447,7 @@ In the above static example, we use `<h5>`, to avoid issues with the heading hie
 
 같은 모달을 트리거하는 버튼들이 있는데, 그것들이 미묘하게 다른 내용의 모달을 트리거하고 있나요? `event.relatedTarget`과 [HTML `data-bs-*` 속성](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)를 사용하여 어떤 버튼이 클릭 되었는지에 따라 모달의 내용을 변화시킬 수 있습니다.
 
-다음은 HTML과 JavaScript의 예시가 포함된 라이브 데모입니다. `relatedTarget`의 자세한 내용은 [모달 이벤트 문서](#events)를 참조해 주세요.
+다음은 HTML과 JavaScript의 예시가 포함된 라이브 데모입니다. `relatedTarget`의 자세한 내용은 [모달 이벤트 문서](#이벤트)를 참조해 주세요.
 
 {{< example stackblitz_add_js="true" >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
@@ -760,7 +760,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, modals now use local CSS variables on `.modal` and `.modal-backdrop` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 경고창에서 `.modal` 및 `.modal-backdrop`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="modal-css-vars" file="scss/_modal.scss" >}}
 
@@ -772,7 +772,7 @@ As part of Bootstrap's evolving CSS variables approach, modals now use local CSS
 
 ### Sass 루프
 
-[반응형 전체화면 모달](#fullscreen-modal)은 `$breakpoints` 맵과 `scss/_modal.scss`내의 반복에 의해 생성됩니다.
+[반응형 전체화면 모달](#전체화면-모달)은 `$breakpoints` 맵과 `scss/_modal.scss`내의 반복에 의해 생성됩니다.
 
 {{< scss-docs name="modal-fullscreen-loop" file="scss/_modal.scss" >}}
 
@@ -815,11 +815,11 @@ const myModalAlternative = new bootstrap.Modal('#myModal', options)
 {{< /markdown >}}
 
 {{< bs-table "table" >}}
-| Name | Type | Default | Description |
+| 이름 | 유형 | 기본값 | 설명 |
 | --- | --- | --- | --- |
-| `backdrop` | boolean, `'static'` | `true` | Includes a modal-backdrop element. Alternatively, specify `static` for a backdrop which doesn't close the modal when clicked. |
-| `focus` | boolean | `true` | Puts the focus on the modal when initialized. |
-| `keyboard` | boolean | `true` | Closes the modal when escape key is pressed. |
+| `backdrop` | boolean, `'static'` | `true` | 모달 배경 요소를 포함합니다. 또는 클릭 시 모달이 닫히지 않는 배경에 '정적'을 지정합니다. |
+| `focus` | boolean | `true` | 초기화 시 모달에 초점을 맞춥니다. |
+| `keyboard` | boolean | `true` | Esc 키를 누르면 모달을 닫습니다. |
 {{< /bs-table >}}
 
 ### 메소드
@@ -843,7 +843,7 @@ const myModal = new bootstrap.Modal('#myModal', {
 | --- | --- |
 | `dispose` | 모달의 요소를 없앱니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다) |
 | `getInstance` | DOM 요소와 연관된 모달 인스턴스를 취득하는 *Static* 메소드 입니다. |
-| `getOrCreateInstance` | _Static_ method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
+| `getOrCreateInstance` | _Static_ 메서드를 사용하여 DOM 요소와 연결된 모달 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. |
 | `handleUpdate` | 열려 있는 동안에 모달의 높이가 바뀌었을 경우, 모달의 위치를 수동으로 재조정합니다 (즉, 스크롤 바가 표시되어 있는 경우 등). |
 | `hide` | 수동으로 모달을 숨깁니다. **모달이 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.modal` 이벤트가 발생하기 전). |
 | `show` | 모달을 수동으로 엽니다. **모달이 실제로 표시되기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.modal` 이벤트가 발생하기 전). 또한, 모달 이벤트로 받을 수 있는 DOM 요소를 (`relatedTarget` 속성으로서) 인수로 건네줄 수도 있습니다. (예: `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)`) |

@@ -22,9 +22,9 @@ toc: true
 
 아래의 아코디언을 클릭하면, 아코디언의 내용을 접기/펼치기가 가능합니다.
 
-To render an accordion that's expanded by default:
-- add the `.show` class on the `.accordion-collapse` element.
-- drop the `.collapsed` class from the `.accordion-button` element and set its `aria-expanded` attribute to `true`.
+기본적으로 확장된 아코디언을 렌더링하려면 다음 단계를 확인해주세요:
+- `.accordion-collapse` 요소에 `.show` 클래스를 추가합니다.
+- `.accordion-button` 요소에서 `.collapsed` 클래스를 삭제하고 `aria-expanded` 속성을 `true`로 설정합니다.
 
 {{< example >}}
 <div class="accordion" id="accordionExample">

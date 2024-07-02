@@ -27,7 +27,7 @@ toc: true
 
 ## 최소와 최대
 
-범위 입력에는 `min`과 `max`으로 각각 `0` 과 `100`이라는 암묵적인 값을 가지고 있습니다. `min` 과 `max` 속성을 사용해 새롭게 값을 지정할 수 있습니다.
+범위 입력에는 `min`과 `max`으로 각각 `0`과 `100`이라는 암묵적인 값을 가지고 있습니다. `min`과 `max` 속성을 사용해 새롭게 값을 지정할 수 있습니다.
 
 {{< example >}}
 <label for="customRange2" class="form-label">Example range</label>
