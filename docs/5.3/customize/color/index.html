@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/customize/color.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/customize/color/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/customize/color.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">색상</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -590,14 +624,11 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-
         <h2 id="색상">색상 <a class="anchor-link" href="#%ec%83%89%ec%83%81" aria-label="Link to this section: 색상"></a></h2>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.3.0에서 추가됨</small>
 
 <p>Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세해졌습니다. <code>secondary</code> 및 <code>tertiary</code> 텍스트 및 배경색에 대한 새로운 변수와 테마 색상에 대한 <code>{color}-bg-subtle</code>, <code>{color}-border-subtle</code> 및 <code>{color}-text-emphasis</code>가 추가되었습니다. 이러한 새로운 색상은 밝고 어두운 등 다양한 색상 모드에서 더 쉽게 사용자 정의할 수 있도록 하기 위해 Sass 및 CSS 변수(색상 맵이나 유틸리티 클래스 제외)를 통해 사용할 수 있습니다. 이 새로운 변수는 <code>:root</code>에 전역적으로 설정되며, 원래 테마 색상은 변경되지 않은 채 새로운 어두운 색상 모드에 맞게 조정됩니다.</p>
-<p>Colors ending in <code>-rgb</code> provide the <code>red, green, blue</code> values for use in <code>rgb()</code> and <code>rgba()</code> color modes. For example, <code>rgba(var(--bs-secondary-bg-rgb), .5)</code>.
-<code>-rgb</code>로 끝나는 색상은 <code>rgb()</code> 및 <code>rgba()</code> 색상 모드에서 사용할 <code>red</code>, <code>green</code>, <code>blue</code> 값을 제공합니다. (예: <code>rgba(var(--bs-secondary-bg-rgb), .5)</code>)</p>
+<p><code>-rgb</code>로 끝나는 색상은 <code>rgb()</code> 및 <code>rgba()</code> 색상 모드에서 사용할 <code>red</code>, <code>green</code>, <code>blue</code> 값을 제공합니다. (예: <code>rgba(var(--bs-secondary-bg-rgb), .5)</code>)</p>
 <div class="bd-callout bd-callout-warning">
 <strong>주의!</strong> 새로운 보조 및 보조 색상과 기존 보조 테마 색상, 밝은 테마 색상과 어두운 테마 색상이 혼동될 가능성이 있습니다. 이 문제는 v6에서 해결될 것으로 예상됩니다.
 </div>
@@ -1430,7 +1461,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

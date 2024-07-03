@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/components/offcanvas.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/components/offcanvas/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/components/offcanvas.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">오프캔버스</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -569,13 +603,13 @@
       <ul>
         <li><a href="#오프캔버스-컴포넌트">오프캔버스 컴포넌트</a></li>
         <li><a href="#라이브-데모">라이브 데모</a></li>
-        <li><a href="#body-scrolling">Body scrolling</a></li>
-        <li><a href="#body-scrolling-and-backdrop">Body scrolling and backdrop</a></li>
-        <li><a href="#static-backdrop">Static backdrop</a></li>
+        <li><a href="#body-스크롤">Body 스크롤</a></li>
+        <li><a href="#body-스크롤-및-배경">Body 스크롤 및 배경</a></li>
+        <li><a href="#정적-배경">정적 배경</a></li>
       </ul>
     </li>
-    <li><a href="#dark-offcanvas">Dark offcanvas</a></li>
-    <li><a href="#responsive">Responsive</a></li>
+    <li><a href="#어두운-오프캔버스">어두운 오프캔버스</a></li>
+    <li><a href="#반응형">반응형</a></li>
     <li><a href="#배치">배치</a></li>
     <li><a href="#접근성">접근성</a></li>
     <li><a href="#css">CSS</a>
@@ -607,22 +641,15 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
-
         <h2 id="작동-원리">작동 원리 <a class="anchor-link" href="#%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac" aria-label="Link to this section: 작동 원리"></a></h2>
-<p>Offcanvas is a sidebar component that can be toggled via JavaScript to appear from the left, right, top, or bottom edge of the viewport. Buttons or anchors are used as triggers that are attached to specific elements you toggle, and <code>data</code> attributes are used to invoke our JavaScript.</p>
+<p>오프캔버스는 JavaScript를 통해 토글하여 뷰포트의 왼쪽, 오른쪽, 위쪽 또는 아래쪽 가장자리에서 표시할 수 있는 사이드바 구성 요소입니다. 버튼 또는 앵커는 토글하는 특정 요소에 첨부되는 트리거로 사용되며, <code>data</code> 속성은 JavaScript를 호출하는 데 사용됩니다.</p>
 <ul>
 <li>오프캔버스는 모달과 같이 JavaScript 코드를 일부 공유하고 있습니다. 개념적으로는 아주 비슷하지만 이들은 다른 플러그인입니다.</li>
 <li>마찬가지로, 오프캔버승의 스타일과 치수를 위한 <a href="#sass-%EB%B3%80%EC%88%98">Sass 소스</a> 변수의 일부는 모달 변수로부터 상속받고 있습니다.</li>
 <li>오프캔버스를 표시하면 기본적으로 배경이 포함되어져 있어 그것을 클릭하면 오프캔버스가 사라집니다.</li>
 <li>모달과 마찬가지로 오프캔버스는 한번에 1개밖에 표시할 수 없습니다.</li>
 </ul>
-<p><strong>주의!</strong> CSS에 의한 애니메이션 사용을 고려한다면 <code>.offcanvas</code> 요소의 <code>margin</code>이나 <code>translate</code>를 사용할 수 없습니다. 대신, 이 클래스를 독립된 포장 요소 감싸서 사용해 주세요.</p>
+<p><strong>주의!</strong> CSS에 의한 애니메이션 사용을 고려한다면 <code>.offcanvas</code> 요소의 <code>margin</code>이나 <code>translate</code>를 사용할 수 없습니다. 대신, 이 클래스를 독립된 래퍼 요소로 사용해 주세요.</p>
 <div class="bd-callout bd-callout-info">
 이 컴포넌트의 애니메이션 효과는 <code>prefers-reduced-motion</code> 미디어 쿼리에 따라 다릅니다. <a href="/docs/5.3/getting-started/accessibility/#reduced-motion">접근성 문서의 모션 감소 문단</a>을 참고하세요.
 </div>
@@ -743,8 +770,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h3 id="body-scrolling">Body scrolling <a class="anchor-link" href="#body-scrolling" aria-label="Link to this section: Body scrolling"></a></h3>
-<p>Scrolling the <code>&lt;body&gt;</code> element is disabled when an offcanvas and its backdrop are visible. Use the <code>data-bs-scroll</code> attribute to enable <code>&lt;body&gt;</code> scrolling.</p>
+<h3 id="body-스크롤">Body 스크롤 <a class="anchor-link" href="#body-%ec%8a%a4%ed%81%ac%eb%a1%a4" aria-label="Link to this section: Body 스크롤"></a></h3>
+<p>오프캔버스와 배경이 표시되면 <code>&lt;body&gt;</code> 요소의 스크롤이 비활성화됩니다. <code>&lt;body&gt;</code> 스크롤을 활성화하려면 <code>data-bs-scroll</code> 속성을 사용합니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -783,8 +810,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h3 id="body-scrolling-and-backdrop">Body scrolling and backdrop <a class="anchor-link" href="#body-scrolling-and-backdrop" aria-label="Link to this section: Body scrolling and backdrop"></a></h3>
-<p>You can also enable <code>&lt;body&gt;</code> scrolling with a visible backdrop.</p>
+<h3 id="body-스크롤-및-배경">Body 스크롤 및 배경 <a class="anchor-link" href="#body-%ec%8a%a4%ed%81%ac%eb%a1%a4-%eb%b0%8f-%eb%b0%b0%ea%b2%bd" aria-label="Link to this section: Body 스크롤 및 배경"></a></h3>
+<p>배경이 보이면서도 <code>&lt;body&gt;</code> 스크롤을 활성화할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -823,8 +850,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h3 id="static-backdrop">Static backdrop <a class="anchor-link" href="#static-backdrop" aria-label="Link to this section: Static backdrop"></a></h3>
-<p>When backdrop is set to static, the offcanvas will not close when clicking outside of it.</p>
+<h3 id="정적-배경">정적 배경 <a class="anchor-link" href="#%ec%a0%95%ec%a0%81-%eb%b0%b0%ea%b2%bd" aria-label="Link to this section: 정적 배경"></a></h3>
+<p>배경을 정적으로 설정하면 오프캔버스 외부를 클릭해도 닫히지 않습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -871,13 +898,13 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h2 id="dark-offcanvas">Dark offcanvas <a class="anchor-link" href="#dark-offcanvas" aria-label="Link to this section: Dark offcanvas"></a></h2>
-<p><small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2">Deprecated in v5.3.0</small>
+<h2 id="어두운-오프캔버스">어두운 오프캔버스 <a class="anchor-link" href="#%ec%96%b4%eb%91%90%ec%9a%b4-%ec%98%a4%ed%94%84%ec%ba%94%eb%b2%84%ec%8a%a4" aria-label="Link to this section: 어두운 오프캔버스"></a></h2>
+<p><small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2">v5.3.0부터 지원 중단</small>
  <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 </p>
-<p>Change the appearance of offcanvases with utilities to better match them to different contexts like dark navbars. Here we add <code>.text-bg-dark</code> to the <code>.offcanvas</code> and <code>.btn-close-white</code> to <code>.btn-close</code> for proper styling with a dark offcanvas. If you have dropdowns within, consider also adding <code>.dropdown-menu-dark</code> to <code>.dropdown-menu</code>.</p>
+<p>유틸리티를 사용하여 오프캔버스의 모양을 변경하여 어두운 탐색 모음과 같은 다양한 컨텍스트에 더 잘 어울리도록 합니다. 여기서는 어두운 오프캔버스를 적절히 스타일링하기 위해 <code>.offcanvas</code>에 <code>.text-bg-dark</code>를 추가하고 <code>.btn-close-white</code>를 <code>.btn-close</code>에 추가합니다. 내부에 드롭다운이 있는 경우 <code>.dropdown-menu-dark</code>를 <code>.dropdown-menu</code>에 추가하는 것도 고려하세요.</p>
 <div class="bd-callout bd-callout-warning">
-<strong>Heads up!</strong> Dark variants for components were deprecated in v5.3.0 with the introduction of color modes. Instead of manually adding classes mentioned above, set <code>data-bs-theme=&quot;dark&quot;</code> on the root element, a parent wrapper, or the component itself.
+<strong>주의!</strong> 컴포넌트의 어두운 변형은 색상 모드가 도입된 v5.3.0에서 더 이상 사용되지 않습니다. 위에서 언급한 클래스를 수동으로 추가하는 대신 루트 요소, 부모 래퍼 또는 컴포넌트 자체에 <code>data-bs-theme=&quot;dark&quot;</code>를 설정하세요.
 </div>
 
 <div class="bd-example-snippet bd-code-snippet">
@@ -914,10 +941,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h2 id="responsive">Responsive <a class="anchor-link" href="#responsive" aria-label="Link to this section: Responsive"></a></h2>
+<h2 id="반응형">반응형 <a class="anchor-link" href="#%eb%b0%98%ec%9d%91%ed%98%95" aria-label="Link to this section: 반응형"></a></h2>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 
-<p>Responsive offcanvas classes hide content outside the viewport from a specified breakpoint and down. Above that breakpoint, the contents within will behave as usual. For example, <code>.offcanvas-lg</code> hides content in an offcanvas below the <code>lg</code> breakpoint, but shows the content above the <code>lg</code> breakpoint.</p>
+<p>반응형 오프캔버스 클래스는 지정된 중단점 아래에서 뷰포트 외부의 콘텐츠를 숨깁니다. 해당 중단점 위에서는 내부 콘텐츠가 정상적으로 작동합니다. 예를 들어 <code>.offcanvas-lg</code>는 오프캔버스에서 <code>lg</code> 중단점 아래의 콘텐츠를 숨기지만 <code>lg</code> 중단점 위의 콘텐츠는 표시합니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -960,7 +987,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>Responsive offcanvas classes are available across for each breakpoint.</p>
+<p>각 중단점마다 반응형 오프캔버스 클래스를 사용할 수 있습니다.</p>
 <ul>
 <li><code>.offcanvas</code></li>
 <li><code>.offcanvas-sm</code></li>
@@ -1098,7 +1125,7 @@
 <h3 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 
-<p>As part of Bootstrap&rsquo;s evolving CSS variables approach, offcanvas now uses local CSS variables on <code>.offcanvas</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+<p>Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 오프캔버스는 향상된 실시간 사용자 지정을 위해 <code>.offcanvas</code>에서 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_offcanvas.scss">scss/_offcanvas.scss</a>
@@ -1162,17 +1189,17 @@
 </span></span></code></pre></div><p>또는 아래와 같이 <code>data-bs-target</code>을 사용하여 <strong>offcanvas 외부</strong>의 버튼에서도 수행할 수 있습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;offcanvas&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#my-offcanvas&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span></code></pre></div><div class="bd-callout bd-callout-warning">
-모달을 해제하는 두 가지 방법을 모두 지원하지만 모달 외부에서 해제하는 것은 <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/">ARIA Authoring Practices Guide dialog (modal) pattern</a>과 일치하지 않습니다. 문제가 생길 수도 있다는 점에 주의하세요.
+모달을 해제하는 두 가지 방법을 모두 지원하지만 모달 외부에서 해제하는 것은 <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/">ARIA Authoring Practices Guide 다이얼로그 (모달) 패턴</a>과 일치하지 않습니다. 문제가 생길 수도 있다는 점에 주의하세요.
 </div>
 
 <h3 id="javascript-사용하기">JavaScript 사용하기 <a class="anchor-link" href="#javascript-%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0" aria-label="Link to this section: JavaScript 사용하기"></a></h3>
-<p>이처럼 수동으로 활성화 합니다:</p>
+<p>다음과 같이 수동으로 활성화할 수 있습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">offcanvasElementList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.offcanvas&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">offcanvasList</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">offcanvasElementList</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="nx">offcanvasEl</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Offcanvas</span><span class="p">(</span><span class="nx">offcanvasEl</span><span class="p">))</span>
 </span></span></code></pre></div><h3 id="옵션">옵션 <a class="anchor-link" href="#%ec%98%b5%ec%85%98" aria-label="Link to this section: 옵션"></a></h3>
-<p>옵션은 데이터 속성이나 자바스크립트를 통해 전달할 수 있으므로 <code>데이터-bs-</code>에 옵션 이름을 추가할 수 있습니다(예: <code>데이터-bs-animation=&quot;{value}&quot;</code>). 데이터 속성을 통해 옵션을 전달할 때 옵션 이름의 대/소문자 유형을 &lsquo;<em>camelCase</em>&lsquo;에서 &lsquo;<em>kebab-case</em>&lsquo;로 변경해야 합니다. 예를 들어 <code>data-bs-custom-class=&quot;beautifier&quot;</code> 대신 <code>data-bs-customClass=&quot;beautifier&quot;</code>를 사용합니다.</p>
+<p>옵션은 데이터 속성이나 JavaScript를 통해 전달할 수 있으므로 <code>data-bs-</code>에 옵션 이름을 추가할 수 있습니다(예: <code>data-bs-animation=&quot;{value}&quot;</code>). 데이터 속성을 통해 옵션을 전달할 때 옵션 이름의 대/소문자 유형을 &lsquo;<em>camelCase</em>&lsquo;에서 &lsquo;<em>kebab-case</em>&lsquo;로 변경해야 합니다. 예를 들어 <code>data-bs-custom-class=&quot;beautifier&quot;</code> 대신 <code>data-bs-customClass=&quot;beautifier&quot;</code>를 사용합니다.</p>
 <p>Bootstrap 5.2.0부터 모든 컴포넌트는 간단한 컴포넌트 구성을 JSON 문자열로 저장할 수 있는 <strong>experimental</strong> 예약 데이터 속성 <code>data-bs-config</code>를 지원합니다. 요소에 <code>data-bs-config='{&quot;delay&quot;:0,&quot;title&quot;:123}'</code> 및 <code>data-bs-title=&quot;456&quot;</code> 속성이 있는 경우 최종 <code>title</code> 값은 <code>456</code>이 되며 별도의 데이터 속성이 <code>data-bs-config</code>에 지정된 값을 재정의합니다. 또한 기존 데이터 속성에는 <code>data-bs-delay='{&quot;show&quot;:0,&quot;hide&quot;:150}'</code>와 같은 JSON 값을 저장할 수 있습니다.</p>
-<p>The final configuration object is the merged result of <code>data-bs-config</code>, <code>data-bs-</code>, and <code>js object</code> where the latest given key-value overrides the others.</p>
+<p>최종 구성 개체는 <code>data-bs-config</code>, <code>data-bs-</code>, <code>js object</code>의 병합된 결과로, 주어진 최신 key-value가 다른 key-value를 재정의합니다.</p>
 
 <div class="table-responsive"><table class="table">
 <thead>
@@ -1188,13 +1215,13 @@
 <td><code>backdrop</code></td>
 <td>boolean 또는 string <code>static</code></td>
 <td><code>true</code></td>
-<td>오프캔버스가 열려 있는 동안, body에 배경을 적용합니다. Alternatively, specify <code>static</code> for a backdrop which doesn&rsquo;t close the offcanvas when clicked.</td>
+<td>오프캔버스가 열려 있는 동안, body에 배경을 적용합니다. 또는 클릭해도 오프캔버스가 닫히지 않는 배경에 static`을 지정할 수 있습니다.</td>
 </tr>
 <tr>
 <td><code>keyboard</code></td>
 <td>boolean</td>
 <td><code>true</code></td>
-<td>escape키가 눌려지면 오프캔버스를 닫습니다.</td>
+<td>Esc 키가 눌려지면 오프캔버스를 닫습니다.</td>
 </tr>
 <tr>
 <td><code>scroll</code></td>
@@ -1207,7 +1234,7 @@
 
 <h3 id="메소드">메소드 <a class="anchor-link" href="#%eb%a9%94%ec%86%8c%eb%93%9c" aria-label="Link to this section: 메소드"></a></h3>
 <div class="bd-callout bd-callout-danger">
-<strong>All API methods are asynchronous and start a transition.</strong> They return to the caller as soon as the transition is started, but before it ends. In addition, a method call on a transitioning component will be ignored. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">Learn more in our JavaScript docs.</a>
+<strong>모든 API 메서드는 비동기식이며 전환을 시작합니다.</strong> 전환이 시작되는 즉시 호출자에게 반환되지만 전환이 끝나기 전에 호출자에게 반환됩니다. 또한 전환 중인 컴포넌트에 대한 메서드 호출은 무시됩니다. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">JavaScript 문서에서 자세히 알아보세요.</a>
 </div>
 
 <p>콘텐츠를 오프캔버스 요소로 액티브하게 합니다. 옵션의 <code>object</code>를 받습니다.</p>
@@ -1216,34 +1243,34 @@
 </span></span></code></pre></div><div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th>Method</th>
-<th>Description</th>
+<th>메소드</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>dispose</code></td>
-<td>Destroys an element&rsquo;s offcanvas.</td>
+<td>요소의 오프캔버스를 제거합니다.</td>
 </tr>
 <tr>
 <td><code>getInstance</code></td>
-<td><em>Static</em> method which allows you to get the offcanvas instance associated with a DOM element.</td>
+<td><em>정적</em> 메서드를 사용하여 DOM 요소와 연관된 오프캔버스 인스턴스를 가져올 수 있습니다.</td>
 </tr>
 <tr>
 <td><code>getOrCreateInstance</code></td>
-<td><em>Static</em> method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn&rsquo;t initialized.</td>
+<td><em>정적</em> 메서드를 사용하여 DOM 요소와 연결된 오프캔버스 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다.</td>
 </tr>
 <tr>
 <td><code>hide</code></td>
-<td>Hides an offcanvas element. <strong>Returns to the caller before the offcanvas element has actually been hidden</strong> (i.e. before the <code>hidden.bs.offcanvas</code> event occurs).</td>
+<td>오프캔버스 요소를 숨깁니다. <strong>오프캔버스 요소가 실제로 숨겨지기 전 (<code>hidden.bs.offcanvas</code> 이벤트가 발생하기 전)에 호출자에게 반환합니다.</strong></td>
 </tr>
 <tr>
 <td><code>show</code></td>
-<td>Shows an offcanvas element. <strong>Returns to the caller before the offcanvas element has actually been shown</strong> (i.e. before the <code>shown.bs.offcanvas</code> event occurs).</td>
+<td>오프캔버스 요소를 표시합니다. <strong>오프 캔버스 요소가 실제로 표시되기 전 (<code>shown.bs.offcanvas</code> 이벤트가 발생하기 전)에 호출자에게 반환합니다.</strong></td>
 </tr>
 <tr>
 <td><code>toggle</code></td>
-<td>Toggles an offcanvas element to shown or hidden. <strong>Returns to the caller before the offcanvas element has actually been shown or hidden</strong> (i.e. before the <code>shown.bs.offcanvas</code> or <code>hidden.bs.offcanvas</code> event occurs).</td>
+<td>오프캔버스 요소를 표시 또는 숨김으로 토글합니다. <strong>오프캔버스 요소가 실제로 표시되거나 숨겨지기 전 (<code>shown.bs.offcanvas</code> 또는 <code>hidden.bs.offcanvas</code> 이벤트가 발생하기 전) 호출자에게 반환합니다.</strong></td>
 </tr>
 </tbody>
 </table></div>
@@ -1253,30 +1280,30 @@
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th>Event type</th>
-<th>Description</th>
+<th>이벤트 유형</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>hide.bs.offcanvas</code></td>
-<td>This event is fired immediately when the <code>hide</code> method has been called.</td>
+<td>이 이벤트는 <code>hide</code> 메서드가 호출되면 즉시 발생합니다.</td>
 </tr>
 <tr>
 <td><code>hidden.bs.offcanvas</code></td>
-<td>This event is fired when an offcanvas element has been hidden from the user (will wait for CSS transitions to complete).</td>
+<td>이 이벤트는 오프캔버스 요소가 사용자에게 숨겨졌을 때 발생합니다. (CSS 전환이 완료될 때까지 기다립니다)</td>
 </tr>
 <tr>
 <td><code>hidePrevented.bs.offcanvas</code></td>
-<td>This event is fired when the offcanvas is shown, its backdrop is <code>static</code> and a click outside of the offcanvas is performed. The event is also fired when the escape key is pressed and the <code>keyboard</code> option is set to <code>false</code>.</td>
+<td>이 이벤트는 오프캔버스가 표시되고 배경이 <code>static</code>이며 오프캔버스 외부에서 클릭이 수행될 때 발생합니다. 이 이벤트는 Esc 키를 누르고 <code>keyboard</code> 옵션이 <code>false</code>로 설정된 경우에도 발생합니다.</td>
 </tr>
 <tr>
 <td><code>show.bs.offcanvas</code></td>
-<td>This event fires immediately when the <code>show</code> instance method is called.</td>
+<td>이 이벤트는 <code>show</code> 인스턴스 메서드가 호출될 때 즉시 발생합니다.</td>
 </tr>
 <tr>
 <td><code>shown.bs.offcanvas</code></td>
-<td>This event is fired when an offcanvas element has been made visible to the user (will wait for CSS transitions to complete).</td>
+<td>이 이벤트는 오프캔버스 요소가 사용자에게 표시되었을 때 발생합니다. (CSS 전환이 완료될 때까지 기다립니다)</td>
 </tr>
 </tbody>
 </table></div>
@@ -1311,7 +1338,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

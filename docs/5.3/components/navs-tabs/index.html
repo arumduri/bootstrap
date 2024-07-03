@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/components/navs-tabs.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/components/navs-tabs.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">내비게이션과 탭</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -571,7 +605,7 @@
         <li><a href="#수직">수직</a></li>
         <li><a href="#탭">탭</a></li>
         <li><a href="#필">필</a></li>
-        <li><a href="#underline">Underline</a></li>
+        <li><a href="#밑줄">밑줄</a></li>
         <li><a href="#필과-채우기">필과 채우기</a></li>
       </ul>
     </li>
@@ -606,13 +640,6 @@
       
 
       <div class="bd-content ps-lg-2">
-        
-
-        
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
         
 
         <h2 id="기본-내비게이션">기본 내비게이션 <a class="anchor-link" href="#%ea%b8%b0%eb%b3%b8-%eb%82%b4%eb%b9%84%ea%b2%8c%ec%9d%b4%ec%85%98" aria-label="Link to this section: 기본 내비게이션"></a></h2>
@@ -668,7 +695,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 <code>&lt;ul&gt;</code>을 사용하거나, 아이템의 순서가 중요한 경우에는 <code>&lt;ol&gt;</code>를 사용하거나, <code>&lt;nav&gt;</code> 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. <code>.nav</code> 는 <code>display: flex</code>를 사용하고 있기 때문에, nav-link는 따로 추가적인 마크업 없이, nav-item과 동일하게 동작합니다.</p>
+<p>클래스는 전체적으로 사용되어 있어서, 우리의 마크업은 매우 유연성이 있습니다. 위의 예시처럼 <code>&lt;ul&gt;</code>을 사용하거나, 아이템의 순서가 중요한 경우에는 <code>&lt;ol&gt;</code>를 사용하거나, <code>&lt;nav&gt;</code> 요소를 사용해서 독자적인 롤을 만들거나 할 수 있습니다. <code>.nav</code>는 <code>display: flex</code>를 사용하고 있기 때문에, nav-link는 따로 추가적인 마크업 없이, nav-item과 동일하게 동작합니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -867,7 +894,7 @@
 </div>
 
 <h3 id="탭">탭 <a class="anchor-link" href="#%ed%83%ad" aria-label="Link to this section: 탭"></a></h3>
-<p><code>.nav-tabs</code> 클래스를 추가해 탭이 있는 인터페이스를 만들 수 있습니다. <a href="#javascript-behavior">tab JavaScript plugin</a>으로 탭 가능한 영역을 만듭니다。</p>
+<p><code>.nav-tabs</code> 클래스를 추가해 탭이 있는 인터페이스를 만들 수 있습니다. <a href="#javascript-%EB%B9%84%ED%97%A4%EC%9D%B4%EB%B9%84%EC%96%B4">탭 JavaScript 플러그인</a>으로 탭 가능한 영역을 만듭니다。</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -958,8 +985,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h3 id="underline">Underline <a class="anchor-link" href="#underline" aria-label="Link to this section: Underline"></a></h3>
-<p>Take that same HTML, but use <code>.nav-underline</code> instead:</p>
+<h3 id="밑줄">밑줄 <a class="anchor-link" href="#%eb%b0%91%ec%a4%84" aria-label="Link to this section: 밑줄"></a></h3>
+<p>동일한 HTML을 사용하되, 대신 &lsquo;.nav-underline&rsquo;을 사용합니다:</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -1005,7 +1032,7 @@
 </div>
 
 <h3 id="필과-채우기">필과 채우기 <a class="anchor-link" href="#%ed%95%84%ea%b3%bc-%ec%b1%84%ec%9a%b0%ea%b8%b0" aria-label="Link to this section: 필과 채우기"></a></h3>
-<p>Force your <code>.nav</code>&rsquo;s contents to extend the full available width with one of two modifier classes. <code>.nav-item</code>에서 사용 가능한 모든 여백을 비교하고 채우기 위해 <code>.nav-fill</code>을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.</p>
+<p><code>.nav</code>의 콘텐츠가 두 가지 수정자 클래스 중 하나를 사용하여 사용 가능한 전체 너비를 확장하도록 강제합니다. <code>.nav-item</code>에서 사용 가능한 모든 여백을 비교하고 채우기 위해 <code>.nav-fill</code>을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -1079,7 +1106,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>동일한 가로 폭의 아이템을 사용하고 싶은 경우에는, <code>.nav-justified</code>를 사용합니다. 모든 수평 방향의 여백은 nav-links 가 갖고 있지만, 위의 <code>.nav-fill</code> 과는 다르게, 모든 내비게이션 아이템은 동일한 가로 폭을 가지게 됩니다.</p>
+<p>동일한 가로 폭의 아이템을 사용하고 싶은 경우에는, <code>.nav-justified</code>를 사용합니다. 모든 수평 방향의 여백은 nav-links 가 갖고 있지만, 위의 <code>.nav-fill</code>과는 다르게, 모든 내비게이션 아이템은 동일한 가로 폭을 가지게 됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -1124,7 +1151,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p><code>&lt;nav&gt;</code>에 <code>.nav-fill</code>을 적용한 경우는</p>
+<p><code>&lt;nav&gt;</code>에 <code>.nav-fill</code>을 적용한 경우:</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -1186,7 +1213,7 @@
 
 <h2 id="접근성에-관하여">접근성에 관하여 <a class="anchor-link" href="#%ec%a0%91%ea%b7%bc%ec%84%b1%ec%97%90-%ea%b4%80%ed%95%98%ec%97%ac" aria-label="Link to this section: 접근성에 관하여"></a></h2>
 <p>내비게이션 바를 제공하기 위해 내비게이션을 사용하고 있는 경우, <code>&lt;ul&gt;</code>의 부모 컨테이너에 <code>role=&quot;navigation&quot;</code>을 추가하거나, <code>&lt;nav&gt;</code> 요소를 내비게이션 전체에 감싸주세요. role을 <code>&lt;ul&gt;</code> 자체에 추가하지 마세요.</p>
-<p>내비게이션 바는, <code>.nav-tabs</code>에서 시각적으로는 탭으로 보여지게 되있지만, <code>role=&quot;tablist&quot;</code>, <code>role=&quot;tab&quot;</code>, <code>role=&quot;tabpanel&quot;</code> 속성을 부여하지 <strong>말아</strong> 주십시오. 이들은 <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/">ARIA Authoring Practices Guide tabs pattern</a>에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. <a href="#javascript-behavior">JavaScript behavior</a>를 참조해 주십시오. JavaScript는 활성화된 탭에 <code>aria-selected=&quot;true&quot;</code>를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 <code>aria-current</code> 속성이 필요하지 않습니다.</p>
+<p>내비게이션 바는, <code>.nav-tabs</code>에서 시각적으로는 탭으로 보여지게 되있지만, <code>role=&quot;tablist&quot;</code>, <code>role=&quot;tab&quot;</code>, <code>role=&quot;tabpanel&quot;</code> 속성을 부여하지 <strong>말아</strong> 주십시오. 이들은 <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/">ARIA Authoring Practices Guide tabs pattern</a>에서 설명된 것처럼, 동적인 탭 인터페이스에만 적절합니다. <a href="#javascript-%EB%B9%84%ED%97%A4%EC%9D%B4%EB%B9%84%EC%96%B4">JavaScript 비헤이비어</a>를 참조해 주십시오. JavaScript는 활성화된 탭에 <code>aria-selected=&quot;true&quot;</code>를 추가하여 선택된 상태를 처리하기 때문에 인터페이스에서는 <code>aria-current</code> 속성이 필요하지 않습니다.</p>
 <h2 id="드롭다운-사용하기">드롭다운 사용하기 <a class="anchor-link" href="#%eb%93%9c%eb%a1%ad%eb%8b%a4%ec%9a%b4-%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0" aria-label="Link to this section: 드롭다운 사용하기"></a></h2>
 <p>드롭다운에 HTML을 조금 추가하고, <a href="/docs/5.3/components/dropdowns/#usage">JavaScript 드롭다운 플러그인</a>으로 드롭다운 메뉴를 추가합니다.</p>
 <h3 id="드롭다운이-있는-탭">드롭다운이 있는 탭 <a class="anchor-link" href="#%eb%93%9c%eb%a1%ad%eb%8b%a4%ec%9a%b4%ec%9d%b4-%ec%9e%88%eb%8a%94-%ed%83%ad" aria-label="Link to this section: 드롭다운이 있는 탭"></a></h3>
@@ -1311,8 +1338,8 @@
 <h3 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 
-<p>As part of Bootstrap&rsquo;s evolving CSS variables approach, navs now use local CSS variables on <code>.nav</code>, <code>.nav-tabs</code>, and <code>.nav-pills</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
-<p>On the <code>.nav</code> base class:</p>
+<p>Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 탐색은 <code>.nav</code>, <code>.nav-tabs</code> 및 <code>.nav-pills</code>에서 로컬 CSS 변수를 사용하여 향상된 실시간 사용자 정의 기능을 제공합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.</p>
+<p>.nav` 기본 클래스:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_nav.scss">scss/_nav.scss</a>
@@ -1328,7 +1355,7 @@
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}nav-link-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$nav-link-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}nav-link-hover-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$nav-link-hover-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}nav-link-disabled-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$nav-link-disabled-color</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
-<p>On the <code>.nav-tabs</code> modifier class:</p>
+<p><code>.nav-tabs</code> 수정자 클래스를 적용한 경우:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_nav.scss">scss/_nav.scss</a>
@@ -1344,7 +1371,7 @@
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}nav-tabs-link-active-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$nav-tabs-link-active-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}nav-tabs-link-active-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$nav-tabs-link-active-bg</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}nav-tabs-link-active-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$nav-tabs-link-active-border-color</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
-<p>On the <code>.nav-pills</code> modifier class:</p>
+<p><code>.nav-pills</code> 수정자 클래스를 적용한 경우:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_nav.scss">scss/_nav.scss</a>
@@ -1358,7 +1385,7 @@
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}nav-pills-link-active-bg</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$nav-pills-link-active-bg</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.3.0에서 추가됨</small>
 
-<p>On the <code>.nav-underline</code> modifier class:</p>
+<p><code>.nav-underline</code> 수정자 클래스를 적용한 경우:</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_nav.scss">scss/_nav.scss</a>
@@ -1496,7 +1523,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-contact&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;nav-contact-tab&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;nav-disabled&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;nav-disabled-tab&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>탭의 플러그인은 pills에서도 동작합니다.</p>
+</span></span></code></pre></div><p>탭의 플러그인은 pill에서도 동작합니다.</p>
 <div class="bd-example">
   <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -1547,7 +1574,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pills-contact&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;pills-contact-tab&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;tab-pane fade&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;pills-disabled&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;tabpanel&#34;</span> <span class="na">aria-labelledby</span><span class="o">=</span><span class="s">&#34;pills-disabled-tab&#34;</span> <span class="na">tabindex</span><span class="o">=</span><span class="s">&#34;0&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>And with vertical pills. Ideally, for vertical tabs, you should also add <code>aria-orientation=&quot;vertical&quot;</code> to the tab list container.</p>
+</span></span></code></pre></div><p>세로형 필도 마찬가지입니다. 세로 탭의 경우 탭 목록 컨테이너에 <code>aria-orientation=&quot;vertical&quot;</code>을 추가하는 것이 가장 이상적입니다.</p>
 <div class="bd-example">
   <div class="d-flex align-items-start">
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -1593,14 +1620,14 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="접근성">접근성 <a class="anchor-link" href="#%ec%a0%91%ea%b7%bc%ec%84%b1" aria-label="Link to this section: 접근성"></a></h3>
-<p>Dynamic tabbed interfaces, as described in the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/">ARIA Authoring Practices Guide tabs pattern</a>, require <code>role=&quot;tablist&quot;</code>, <code>role=&quot;tab&quot;</code>, <code>role=&quot;tabpanel&quot;</code>, and additional <code>aria-</code> attributes in order to convey their structure, functionality, and current state to users of assistive technologies (such as screen readers). As a best practice, we recommend using <code>&lt;button&gt;</code> elements for the tabs, as these are controls that trigger a dynamic change, rather than links that navigate to a new page or location.</p>
-<p>In line with the ARIA Authoring Practices pattern, only the currently active tab receives keyboard focus. When the JavaScript plugin is initialized, it will set <code>tabindex=&quot;-1&quot;</code> on all inactive tab controls. Once the currently active tab has focus, the cursor keys activate the previous/next tab. The <kbd>Home</kbd> and <kbd>End</kbd> keys activate the first and last tabs, respectively. The plugin will change the <a href="https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/">roving <code>tabindex</code></a> accordingly. However, note that the JavaScript plugin does not distinguish between horizontal and vertical tab lists when it comes to cursor key interactions: regardless of the tab list&rsquo;s orientation, both the up <em>and</em> left cursor go to the previous tab, and down <em>and</em> right cursor go to the next tab.</p>
+<p><a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/">ARIA Authoring Practices Guide 탭 패턴</a>에 설명된 대로 동적 탭 인터페이스에는 보조 기술(스크린 리더 등) 사용자에게 구조, 기능 및 현재 상태를 전달하기 위해 <code>role=&quot;tablist&quot;</code>, <code>role=&quot;tab&quot;</code> 및 추가 <code>aria-</code> 속성이 필요합니다. 탭은 새 페이지나 위치로 이동하는 링크가 아니라 동적 변경을 트리거하는 컨트롤이므로 <code>&lt;button&gt;</code> 요소를 사용하는 것이 가장 좋습니다.</p>
+<p>ARIA Authoring Practices 패턴에 따라 현재 활성화된 탭만 키보드 포커스를 받습니다. JavaScript 플러그인이 초기화되면 모든 비활성 탭 컨트롤에 <code>tabindex=&quot;-1&quot;</code>이 설정됩니다. 현재 활성 탭에 포커스가 잡히면 커서 키는 이전/다음 탭을 활성화합니다. <kbd>Home</kbd> 키와 <kbd>End</kbd> 키는 각각 첫 번째와 마지막 탭을 활성화합니다. 플러그인은 그에 따라 <a href="https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/">Roving <code>tabindex</code></a>를 변경합니다. 그러나 JavaScript 플러그인은 커서 키 상호작용과 관련하여 가로 및 세로 탭 목록을 구분하지 않습니다. 탭 목록의 방향에 관계없이 위쪽 <em>및</em> 왼쪽 커서는 모두 이전 탭으로 이동하고 아래쪽 <em>및</em> 오른쪽 커서는 다음 탭으로 이동합니다.</p>
 <div class="bd-callout bd-callout-warning">
-In general, to facilitate keyboard navigation, it&rsquo;s recommended to make the tab panels themselves focusable as well, unless the first element containing meaningful content inside the tab panel is already focusable. The JavaScript plugin does not try to handle this aspect—where appropriate, you&rsquo;ll need to explicitly make your tab panels focusable by adding <code>tabindex=&quot;0&quot;</code> in your markup.
+일반적으로 키보드 탐색을 용이하게 하려면 탭 패널 내부의 의미 있는 콘텐츠를 포함하는 첫 번째 요소가 이미 초점을 맞출 수 있는 경우가 아니라면 탭 패널 자체에도 초점을 맞출 수 있도록 설정하는 것이 좋습니다. JavaScript 플러그인은 이 부분을 처리하려고 하지 않으므로 적절한 경우 마크업에 <code>tabindex=&quot;0&quot;</code>을 추가하여 탭 패널에 명시적으로 초점을 맞출 수 있도록 설정해야 합니다.
 </div>
 
 <div class="bd-callout bd-callout-danger">
-The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces that contain dropdown menus, as these cause both usability and accessibility issues. From a usability perspective, the fact that the currently displayed tab&rsquo;s trigger element is not immediately visible (as it&rsquo;s inside the closed dropdown menu) can cause confusion. From an accessibility point of view, there is currently no sensible way to map this sort of construct to a standard WAI ARIA pattern, meaning that it cannot be easily made understandable to users of assistive technologies.
+탭 JavaScript 플러그인은 사용성과 접근성 문제를 모두 유발하므로 드롭다운 메뉴가 포함된 탭 인터페이스를 <strong>지원하지 않습니다</strong>. 사용성 관점에서 보면 현재 표시된 탭의 트리거 요소가 닫힌 드롭다운 메뉴 안에 있기 때문에 즉시 보이지 않아 혼란을 야기할 수 있습니다. 접근성의 관점에서 볼 때, 현재 이러한 종류의 구조를 표준 WAI ARIA 패턴에 매핑할 수 있는 합리적인 방법이 없기 때문에 보조 기술 사용자가 쉽게 이해할 수 없습니다.
 </div>
 
 <h3 id="데이터-속성-사용하기">데이터 속성 사용하기 <a class="anchor-link" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%86%8d%ec%84%b1-%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0" aria-label="Link to this section: 데이터 속성 사용하기"></a></h3>
@@ -1655,11 +1682,11 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="메소드">메소드 <a class="anchor-link" href="#%eb%a9%94%ec%86%8c%eb%93%9c" aria-label="Link to this section: 메소드"></a></h3>
 <div class="bd-callout bd-callout-danger">
-<strong>All API methods are asynchronous and start a transition.</strong> They return to the caller as soon as the transition is started, but before it ends. In addition, a method call on a transitioning component will be ignored. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">Learn more in our JavaScript docs.</a>
+<strong>모든 API 메서드는 비동기식이며 전환을 시작합니다.</strong> 전환이 시작되는 즉시 호출자에게 반환되지만 전환이 끝나기 전에 호출자에게 반환됩니다. 또한 전환 중인 컴포넌트에 대한 메서드 호출은 무시됩니다. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">JavaScript 문서에서 자세히 알아보세요.</a>
 </div>
 
-<p>Activates your content as a tab element.</p>
-<p>You can create a tab instance with the constructor, for example:</p>
+<p>콘텐츠를 탭 요소로 활성화합니다.</p>
+<p>예를 들어 생성자를 사용하여 탭 인스턴스를 만들 수 있습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">bsTab</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Tab</span><span class="p">(</span><span class="s1">&#39;#myTab&#39;</span><span class="p">)</span>
 </span></span></code></pre></div><div class="table-responsive"><table class="table">
 <thead>
@@ -1679,11 +1706,11 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
 </tr>
 <tr>
 <td><code>getOrCreateInstance</code></td>
-<td>Static method which returns a tab instance associated to a DOM element or create a new one in case it wasn&rsquo;t initialized. You can use it like this: <code>bootstrap.Tab.getOrCreateInstance(element)</code>.</td>
+<td>DOM 요소에 연결된 탭 인스턴스를 반환하거나 초기화되지 않은 경우 새 탭 인스턴스를 생성하는 정적 메서드입니다. 다음과 같이 사용할 수 있습니다: <code>bootstrap.Tab.getOrCreateInstance(element)</code>.</td>
 </tr>
 <tr>
 <td><code>show</code></td>
-<td>지정된 탭을 선택해 관련 창을 표시합니다. 이전에 선택되어 있던 다른 탭은 선택되지 않은 상태가 되고 관련된 창도 비표시 됩니다. <strong>탭 창이 실제로 표시되기 전에 호출된 곳으로 돌아옵니다</strong> (<code>shown.bs.tab</code> 이벤트가 발생하기 전).</td>
+<td>지정된 탭을 선택해 관련 창을 표시합니다. 이전에 선택되어 있던 다른 탭은 선택되지 않은 상태가 되고 관련된 창도 비표시 됩니다. <strong>탭 창이 실제로 표시되기 전에 (<code>shown.bs.tab</code> 이벤트가 발생하기 전) 호출된 곳으로 돌아옵니다</strong>.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1707,19 +1734,19 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
 <tbody>
 <tr>
 <td><code>hide.bs.tab</code></td>
-<td>이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타깃으로 합니다.</td>
+<td>이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. <code>event.target</code>과 <code>event.relatedTarget</code>을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타깃으로 합니다.</td>
 </tr>
 <tr>
 <td><code>hidden.bs.tab</code></td>
-<td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타깃으로 합니다.</td>
+<td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) <code>event.target</code>과 <code>event.relatedTarget</code>을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타깃으로 합니다.</td>
 </tr>
 <tr>
 <td><code>show.bs.tab</code></td>
-<td>이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다.</td>
+<td>이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code>과 <code>event.relatedTarget</code>을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다.</td>
 </tr>
 <tr>
 <td><code>shown.bs.tab</code></td>
-<td>이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다.</td>
+<td>이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. <code>event.target</code>과 <code>event.relatedTarget</code>을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1755,7 +1782,7 @@ The tab JavaScript plugin <strong>does not</strong> support tabbed interfaces th
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

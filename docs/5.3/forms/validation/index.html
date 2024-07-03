@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/forms/validation.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/forms/validation/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/forms/validation.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">유효성 검사</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -589,8 +623,6 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-
         <div class="bd-callout bd-callout-warning">
 현재 클라이언트 측의 재정의하는 유효성 검사 스타일과 툴팁은 지원 기술에 공개되지 않아 접근할 수 없다는 것을 알고 있습니다. 해결책을 검토하는 동안 서버사이드 옵션을 사용하거나 브라우저의 기본 유효성 검사 방법을 사용하는 것을 권장합니다.
 </div>
@@ -599,17 +631,17 @@
 <p>Bootstrap에서 사용하고 있는 폼 유효성 검사 구조를 소개합니다:</p>
 <ul>
 <li>HTML의 폼 유효성 검사는 CSS의 두개의 가상 클래스 <code>:invalid</code>와 <code>:valid</code>를 사용해 <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;textarea&gt;</code> 요소에 적용됩니다.</li>
-<li>Bootstrap는 <code>:invalid</code> 과 <code>:valid</code> 스타일을 부모 클래스 <code>.was-validated</code>에 범위를 지정하고 일반적으로 <code>&lt;form&gt;</code>에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 잘못된 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)</li>
+<li>Bootstrap는 <code>:invalid</code>과 <code>:valid</code> 스타일을 부모 클래스 <code>.was-validated</code>에 범위를 지정하고 일반적으로 <code>&lt;form&gt;</code>에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 잘못된 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)</li>
 <li>폼의 외형을 새로 적용하려면(예를 들어, AJAX를 사용한 동적인 폼 송신의 경우), 송신 후에 <code>.was-validated</code> 클래스를 <code>&lt;form&gt;</code>으로부터 다시 삭제합니다.</li>
-<li>폴백으로서 <a href="#server-side">server-side validation</a>의 가상 클래스 대신 <code>.is-invalid</code>와 <code>.is-valid</code> 클래스를 사용할 수 있습니다. 이 클래스들은 부모 클래스인 <code>.was-validated</code>를 필요로 하지 않습니다.</li>
+<li>폴백으로서 <a href="#%EC%84%9C%EB%B2%84%EC%97%90%EC%84%9C-%EA%B2%80%EC%82%AC%ED%95%98%EA%B8%B0">서버 측 검사</a>의 가상 클래스 대신 <code>.is-invalid</code>와 <code>.is-valid</code> 클래스를 사용할 수 있습니다. 이 클래스들은 부모 클래스인 <code>.was-validated</code>를 필요로 하지 않습니다.</li>
 <li>(현시점에서는)CSS 동작에 제약이 있기 때문에 사용자 정의 JavaScript의 도움을 받지 않고 DOM 내에서 폼 컨트롤의 앞에 있는 <code>&lt;label&gt;</code>에 스타일을 적용할 수 없습니다.</li>
 <li>모든 모던 브라우저는 폼 컨트롤을 유효성 검사하기 위한 일련의 JavaScript 메소드인 <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api">constraint validation API</a>를 지원합니다.</li>
-<li>전달 문구는 <a href="#browser-defaults">browser defaults</a> (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다)나 HTML과 CSS를 추가한 사용자 정의 전달 스타일을 이용할 수도 있습니다.</li>
+<li>전달 문구는 <a href="#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EA%B8%B0%EB%B3%B8%EA%B0%92">browser defaults</a> (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다)나 HTML과 CSS를 추가한 사용자 정의 전달 스타일을 이용할 수도 있습니다.</li>
 <li>JavaScript의 <code>setCustomValidity</code>를 사용해 사용자 정의의 유효성 문구를 제공할 수도 있습니다.</li>
 </ul>
 <p>이 점들을 고려하여 사용자 정의 폼 유효성 검사 스타일, 선택적인 서버 사이드 클래스 및 브라우저 기본값에 대해, 아래의 데모를 확인 부탁드립니다.</p>
 <h2 id="사용자-지정-스타일">사용자 지정 스타일 <a class="anchor-link" href="#%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%a7%80%ec%a0%95-%ec%8a%a4%ed%83%80%ec%9d%bc" aria-label="Link to this section: 사용자 지정 스타일"></a></h2>
-<p>Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, <code>&lt;form&gt;</code>에 <code>novalidate</code>라고 하는 불리언 속성을 추가할 필요가 있습니다. 이는 브라우저의 기본 전달 툴팁을 비활성화시켜 JavaScript에서 폼 검증 API에 대한 접근을 제공합니다. 아래 예시의 전송 버튼을 눌러 보세요. JavaScript가 전송 버튼을 가로채고 전달합니다. 전송 버튼을 누르면, 폼 컨트롤에 <code>:invalid</code> 과 <code>:valid</code>의 스타일이 적용되고 있는 것을 알 수 있습니다.</p>
+<p>Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, <code>&lt;form&gt;</code>에 <code>novalidate</code>라고 하는 불리언 속성을 추가할 필요가 있습니다. 이는 브라우저의 기본 전달 툴팁을 비활성화시켜 JavaScript에서 폼 검증 API에 대한 접근을 제공합니다. 아래 예시의 전송 버튼을 눌러 보세요. JavaScript가 전송 버튼을 가로채고 전달합니다. 전송 버튼을 누르면, 폼 컨트롤에 <code>:invalid</code>과 <code>:valid</code>의 스타일이 적용되고 있는 것을 알 수 있습니다.</p>
 <p>색상, 모서리, 포커스 스타일 및 배경 아이콘을 이용해 더 나은 사용자 정의 전달 스타일을 적용하고 있습니다. <code>&lt;select&gt;</code>의 배경 아이콘은 <code>.form-select</code>에서만 사용 가능하며 <code>.form-control</code>에서는 사용할 수 없습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
@@ -1268,7 +1300,7 @@
 <h3 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.3.0에서 추가됨</small>
 
-<p>As part of Bootstrap&rsquo;s evolving CSS variables approach, forms now use local CSS variables for validation for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+<p>Bootstrap의 진화하는 CSS 변수 접근 방식의 일부로, 이제 양식은 향상된 실시간 사용자 지정을 위해 유효성 검사를 위해 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_root.scss">scss/_root.scss</a>
@@ -1281,7 +1313,7 @@
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}form-valid-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$form-valid-border-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}form-invalid-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$form-invalid-color</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}form-invalid-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$form-invalid-border-color</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
-<p>These variables are also color mode adaptive, meaning they change color while in dark mode.</p>
+<p>이러한 변수는 색상 모드 적응형이므로 다크 모드에서는 색상이 변경됩니다.</p>
 <h3 id="sass-variables">Sass variables <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
@@ -1329,7 +1361,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$form-invalid-border-color-dark</span><span class="o">:</span>    <span class="nv">$red-300</span><span class="p">;</span>
 </span></span></code></pre></div></div>
 <h3 id="sass-믹스인">Sass 믹스인 <a class="anchor-link" href="#sass-%eb%af%b9%ec%8a%a4%ec%9d%b8" aria-label="Link to this section: Sass 믹스인"></a></h3>
-<p>두 개의 믹스인을 <a href="#loop">loop</a>로 조합하고, 유효성 검사의 전달 스타일을 만들고 있습니다.</p>
+<p>두 개의 믹스인을 <a href="#%EB%A3%A8%ED%94%84">loop</a>로 조합하고, 유효성 검사의 전달 스타일을 만들고 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/mixins/_forms.scss">scss/mixins/_forms.scss</a>
@@ -1569,7 +1601,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

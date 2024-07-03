@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.">
+<meta name="description" content="Bootstrap은 이제 v5.3.0부터 색상 모드 또는 테마를 지원합니다. 기본값인 라이트 모드와 새로운 다크 모드를 살펴보거나 스타일을 템플릿으로 사용하여 나만의 모드를 만들어 보세요.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.122.0">
 
 <meta name="docsearch:language" content="ko">
 <meta name="docsearch:version" content="5.3">
 
-<title>Color modes · Bootstrap v5.3</title>
+<title>색상 모드 · Bootstrap v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.3/customize/color-modes/">
 
@@ -36,13 +36,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Color modes">
-<meta name="twitter:description" content="Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.">
+<meta name="twitter:title" content="색상 모드">
+<meta name="twitter:description" content="Bootstrap은 이제 v5.3.0부터 색상 모드 또는 테마를 지원합니다. 기본값인 라이트 모드와 새로운 다크 모드를 살펴보거나 스타일을 템플릿으로 사용하여 나만의 모드를 만들어 보세요.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.3/customize/color-modes/">
-<meta property="og:title" content="Color modes">
-<meta property="og:description" content="Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.">
+<meta property="og:title" content="색상 모드">
+<meta property="og:description" content="Bootstrap은 이제 v5.3.0부터 색상 모드 또는 테마를 지원합니다. 기본값인 라이트 모드와 새로운 다크 모드를 살펴보거나 스타일을 템플릿으로 사용하여 나만의 모드를 만들어 보세요.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,14 +564,17 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">v5.3에 추가됨</small><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/customize/color-modes.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">v5.3에 추가됨</small><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/customize/color-modes/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/customize/color-modes.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
-          <h1 class="bd-title mb-0" id="content">Color modes</h1>
+          <h1 class="bd-title mb-0" id="content">색상 모드</h1>
         </div>
-        
-        <p class="bd-lead">Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.</p>
+        <h6 class="text-muted" id="enContent">// Color modes</h6>
+        <p class="bd-lead">Bootstrap은 이제 v5.3.0부터 색상 모드 또는 테마를 지원합니다. 기본값인 라이트 모드와 새로운 다크 모드를 살펴보거나 스타일을 템플릿으로 사용하여 나만의 모드를 만들어 보세요.</p>
         <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-2578669051257137"
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -564,22 +598,22 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#dark-mode">Dark mode</a></li>
-    <li><a href="#example">Example</a></li>
-    <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#usage">Usage</a>
+    <li><a href="#다크-모드">다크 모드</a></li>
+    <li><a href="#예제">예제</a></li>
+    <li><a href="#작동-방식">작동 방식</a></li>
+    <li><a href="#사용법">사용법</a>
       <ul>
-        <li><a href="#enable-dark-mode">Enable dark mode</a></li>
-        <li><a href="#building-with-sass">Building with Sass</a></li>
+        <li><a href="#다크-모드-활성화">다크 모드 활성화</a></li>
+        <li><a href="#sass로-빌드하기">Sass로 빌드하기</a></li>
       </ul>
     </li>
-    <li><a href="#custom-color-modes">Custom color modes</a></li>
+    <li><a href="#사용자-지정-색상-모드">사용자 지정 색상 모드</a></li>
     <li><a href="#javascript">JavaScript</a></li>
-    <li><a href="#adding-theme-colors">Adding theme colors</a></li>
+    <li><a href="#테마-색상-추가">테마 색상 추가</a></li>
     <li><a href="#css">CSS</a>
       <ul>
-        <li><a href="#variables">Variables</a></li>
-        <li><a href="#sass-variables">Sass variables</a></li>
+        <li><a href="#변수">변수</a></li>
+        <li><a href="#sass-변수">Sass 변수</a></li>
         <li><a href="#sass-믹스인">Sass 믹스인</a></li>
       </ul>
     </li>
@@ -592,22 +626,15 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
-
         <div class="bd-callout bd-callout-info">
-<strong>Try it yourself!</strong> Download the source code and working demo for using Bootstrap with Stylelint, and the color modes from the <a href="https://github.com/twbs/examples/tree/main/color-modes">twbs/examples repository</a>. You can also <a href="https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html">open the example in StackBlitz</a>.
+<strong>직접 사용해보세요!</strong> <a href="https://github.com/twbs/examples/tree/main/color-modes">twbs/examples 저장소</a>에서 Bootstrap과 Stylelint 및 색상 모드를 사용하기 위한 소스 코드와 작업 데모를 다운로드하세요. <a href="https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html">StackBlitz에서 예제를 열어볼 수도 있습니다</a>.
 </div>
 
-<h2 id="dark-mode">Dark mode <a class="anchor-link" href="#dark-mode" aria-label="Link to this section: Dark mode"></a></h2>
-<p><strong>Bootstrap now supports color modes, starting with dark mode!</strong> With v5.3.0 you can implement your own color mode toggler (see below for an example from Bootstrap&rsquo;s docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the <code>&lt;html&gt;</code> element, or on specific components and elements, thanks to the <code>data-bs-theme</code> attribute.</p>
-<p>Alternatively, you can also switch to a media query implementation thanks to our color mode mixin—see <a href="#building-with-sass">the usage section for details</a>. Heads up though—this eliminates your ability to change themes on a per-component basis as shown below.</p>
-<h2 id="example">Example <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a></h2>
-<p>For example, to change the color mode of a dropdown menu, add <code>data-bs-theme=&quot;light&quot;</code> or <code>data-bs-theme=&quot;dark&quot;</code> to the parent <code>.dropdown</code>. Now, no matter the global color mode, these dropdowns will display with the specified theme value.</p>
+<h2 id="다크-모드">다크 모드 <a class="anchor-link" href="#%eb%8b%a4%ed%81%ac-%eb%aa%a8%eb%93%9c" aria-label="Link to this section: 다크 모드"></a></h2>
+<p><strong>이제 Bootstrap에서 어두운 모드부터 색상 모드를 지원합니다!</strong> v5.3.0에서는 자체 색상 모드 토글을 구현하고(아래 Bootstrap 문서에서 예시를 참조하세요) 원하는 대로 다양한 색상 모드를 적용할 수 있습니다. 기본값인 라이트 모드, 그리고 새로운 다크 모드가 지원됩니다. 색상 모드는 <code>&lt;html&gt;</code> 요소에서 전역적으로 토글하거나 &lsquo;data-bs-theme&rsquo; 속성을 사용하여 특정 컴포넌트 및 요소에서 토글할 수 있습니다.</p>
+<p>또는 컬러 모드 믹스인(자세한 내용은 사용 섹션 참조)(#building-with-sass) 덕분에 미디어 쿼리 구현으로 전환할 수도 있습니다. 주의할 점은 아래 그림과 같이 컴포넌트별로 테마를 변경할 수 없다는 점입니다.</p>
+<h2 id="예제">예제 <a class="anchor-link" href="#%ec%98%88%ec%a0%9c" aria-label="Link to this section: 예제"></a></h2>
+<p>예를 들어 드롭다운 메뉴의 색상 모드를 변경하려면 <code>data-bs-theme=&quot;light&quot;</code> 또는 <code>data-bs-theme=&quot;dark&quot;</code>를 부모 <code>.dropdown</code>에 추가하면 됩니다. 이제 전역 색상 모드에 관계없이 이러한 드롭다운은 지정된 테마 값으로 표시됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0 d-flex justify-content-between">
     
@@ -678,25 +705,25 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h2 id="how-it-works">How it works <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
+<h2 id="작동-방식">작동 방식 <a class="anchor-link" href="#%ec%9e%91%eb%8f%99-%eb%b0%a9%ec%8b%9d" aria-label="Link to this section: 작동 방식"></a></h2>
 <ul>
 <li>
-<p>As shown above, color mode styles are controlled by the <code>data-bs-theme</code> attribute. This attribute can be applied to the <code>&lt;html&gt;</code> element, or to any other element or Bootstrap component. If applied to the <code>&lt;html&gt;</code> element, it will apply to everything. If applied to a component or element, it will be scoped to that specific component or element.</p>
+<p>위에 표시된 것처럼 색상 모드 스타일은 <code>data-bs-theme</code> 속성으로 제어됩니다. 이 속성은 <code>&lt;html&gt;</code> 요소 또는 다른 요소나 Bootstrap 컴포넌트에 적용할 수 있습니다. <code>&lt;html&gt;</code> 요소에 적용하면 모든 요소에 적용됩니다. 컴포넌트나 요소에 적용하면 해당 특정 컴포넌트나 요소로 범위가 지정됩니다.</p>
 </li>
 <li>
-<p>For each color mode you wish to support, you&rsquo;ll need to add new overrides for the shared global CSS variables. We do this already in our <code>_root.scss</code> stylesheet for dark mode, with light mode being the default values. In writing color mode specific styles, use the mixin:</p>
+<p>지원하려는 각 색상 모드에 대해 공유 전역 CSS 변수에 대한 새로운 오버라이드를 추가해야 합니다. 다크 모드의 경우 <code>_root.scss</code> 스타일시트에서 이미 이 작업을 수행했으며 라이트 모드가 기본값으로 설정되어 있습니다. 컬러 모드별 스타일을 작성할 때는 믹스인을 사용하세요:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Color mode variables in _root.scss
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@include</span><span class="nd"> color-mode</span><span class="p">(</span><span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// CSS variable overrides here...
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span></code></pre></div></li>
 <li>
-<p>We use a custom <code>_variables-dark.scss</code> to power those shared global CSS variable overrides for dark mode. This file isn&rsquo;t required for your own custom color modes, but it&rsquo;s required for our dark mode for two reasons. First, it&rsquo;s better to have a single place to reset global colors. Second, some Sass variables had to be overridden for background images embedded in our CSS for accordions, form components, and more.</p>
+<p>사용자 정의 <code>_variables-dark.scss</code>를 사용하여 다크 모드에 대한 공유 전역 CSS 변수 오버라이드를 강화합니다. 이 파일은 사용자 정의 색상 모드에는 필요하지 않지만 두 가지 이유로 다크 모드에는 필요합니다. 첫째, 전역 색상을 재설정할 수 있는 단일 위치가 있는 것이 좋습니다. 둘째, 아코디언, 양식 컴포넌트 등을 위해 CSS에 포함된 배경 이미지에 대해 일부 Sass 변수를 재정의해야 했기 때문입니다.</p>
 </li>
 </ul>
-<h2 id="usage">Usage <a class="anchor-link" href="#usage" aria-label="Link to this section: Usage"></a></h2>
-<h3 id="enable-dark-mode">Enable dark mode <a class="anchor-link" href="#enable-dark-mode" aria-label="Link to this section: Enable dark mode"></a></h3>
-<p>Enable the built in dark color mode across your entire project by adding the <code>data-bs-theme=&quot;dark&quot;</code> attribute to the <code>&lt;html&gt;</code> element. This will apply the dark color mode to all components and elements, other than those with a specific <code>data-bs-theme</code> attribute applied. Building on the <a href="/docs/5.3/getting-started/introduction/#quick-start">quick start template</a>:</p>
+<h2 id="사용법">사용법 <a class="anchor-link" href="#%ec%82%ac%ec%9a%a9%eb%b2%95" aria-label="Link to this section: 사용법"></a></h2>
+<h3 id="다크-모드-활성화">다크 모드 활성화 <a class="anchor-link" href="#%eb%8b%a4%ed%81%ac-%eb%aa%a8%eb%93%9c-%ed%99%9c%ec%84%b1%ed%99%94" aria-label="Link to this section: 다크 모드 활성화"></a></h3>
+<p><code>&lt;html&gt;</code> 요소에 <code>data-bs-theme=&quot;dark&quot;</code> 속성을 추가하여 전체 프로젝트에서 기본 제공 어두운 색상 모드를 사용하도록 설정합니다. 이렇게 하면 특정 <code>data-bs-theme</code> 속성이 적용된 요소를 제외한 모든 컴포넌트와 요소에 어두운 색상 모드가 적용됩니다. 아래는 <a href="/docs/5.3/getting-started/introduction/#quick-start">빠른 시작 템플릿</a>을 기반으로 만들어진 예시입니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!doctype html&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span> <span class="na">data-bs-theme</span><span class="o">=</span><span class="s">&#34;dark&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -710,11 +737,11 @@
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>Bootstrap does not yet ship with a built-in color mode picker, but you can use the one from our own documentation if you like. <a href="#javascript">Learn more in the JavaScript section.</a></p>
-<h3 id="building-with-sass">Building with Sass <a class="anchor-link" href="#building-with-sass" aria-label="Link to this section: Building with Sass"></a></h3>
-<p>Our new dark mode option is available to use for all users of Bootstrap, but it&rsquo;s controlled via data attributes instead of media queries and does not automatically toggle your project&rsquo;s color mode. You can disable our dark mode entirely via Sass by changing <code>$enable-dark-mode</code> to <code>false</code>.</p>
-<p>We use a custom Sass mixin, <code>color-mode()</code>, to help you control <em>how</em> color modes are applied. By default, we use a <code>data</code> attribute approach, allowing you to create more user-friendly experiences where your visitors can choose to have an automatic dark mode or control their preference (like in our own docs here). This is also an easy and scalable way to add different themes and more custom color modes beyond light and dark.</p>
-<p>In case you want to use media queries and only make color modes automatic, you can change the mixin&rsquo;s default type via Sass variable. Consider the following snippet and its compiled CSS output.</p>
+</span></span></code></pre></div><p>Bootstrap에는 아직 내장된 색상 모드 선택기가 제공되지 않지만 원하는 경우 자체 문서에 있는 색상 모드 선택기를 사용할 수 있습니다. <a href="#javascript">JavaScript 문단에서 자세히 확인해보세요.</a></p>
+<h3 id="sass로-빌드하기">Sass로 빌드하기 <a class="anchor-link" href="#sass%eb%a1%9c-%eb%b9%8c%eb%93%9c%ed%95%98%ea%b8%b0" aria-label="Link to this section: Sass로 빌드하기"></a></h3>
+<p>새로운 다크 모드 옵션은 Bootstrap의 모든 사용자가 사용할 수 있지만 미디어 쿼리 대신 데이터 속성을 통해 제어되며 프로젝트의 색상 모드를 자동으로 전환하지 않습니다. Sass를 통해 <code>$enable-dark-mode</code>를 <code>false</code>로 변경하여 다크 모드를 완전히 비활성화할 수 있습니다.</p>
+<p>색상 모드가 <em>어떻게</em> 적용되는지 제어할 수 있도록 사용자 정의 Sass 믹스인 <code>color-mode()</code>를 사용합니다. 기본적으로 <code>data</code> 속성 접근 방식을 사용하여 (이 문서처럼) 방문자가 자동 다크 모드를 선택하거나 기본 설정을 제어할 수 있는 보다 사용자 친화적인 환경을 만들 수 있습니다. 또한 라이트/다크 외에도 다양한 테마와 사용자 정의 색상 모드를 추가할 수 있는 쉽고 확장 가능한 방법입니다.</p>
+<p>미디어 쿼리를 사용하고 색상 모드만 자동으로 만들려면 Sass 변수를 통해 믹싱의 기본 유형을 변경할 수 있습니다. 다음 스니펫과 컴파일된 CSS 출력을 살펴보세요.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$color-mode-type</span><span class="o">:</span> <span class="n">data</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> color-mode</span><span class="p">(</span><span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
@@ -723,12 +750,12 @@
 </span></span><span class="line"><span class="cl">    <span class="na">background-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs-primary-bg-subtle</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Outputs to:</p>
+</span></span></code></pre></div><p>결과는 다음과 같습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="o">[</span><span class="nt">data-bs-theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">element</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">primary</span><span class="o">-</span><span class="kc">text</span><span class="o">-</span><span class="n">emphasis</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">primary</span><span class="o">-</span><span class="n">bg</span><span class="o">-</span><span class="n">subtle</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>And when setting to <code>media-query</code>:</p>
+</span></span></code></pre></div><p><code>media-query</code> 설정 시를 사용한 예시입니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$color-mode-type</span><span class="o">:</span> <span class="n">media-query</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">@include</span><span class="nd"> color-mode</span><span class="p">(</span><span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
@@ -737,16 +764,16 @@
 </span></span><span class="line"><span class="cl">    <span class="na">background-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs-primary-bg-subtle</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Outputs to:</p>
+</span></span></code></pre></div><p>결과는 다음과 같습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">prefers-color-scheme</span><span class="o">:</span> <span class="nt">dark</span><span class="o">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">element</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">primary</span><span class="o">-</span><span class="kc">text</span><span class="o">-</span><span class="n">emphasis</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">primary</span><span class="o">-</span><span class="n">bg</span><span class="o">-</span><span class="n">subtle</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h2 id="custom-color-modes">Custom color modes <a class="anchor-link" href="#custom-color-modes" aria-label="Link to this section: Custom color modes"></a></h2>
-<p>While the primary use case for color modes is light and dark mode, custom color modes are also possible. Create your own <code>data-bs-theme</code> selector with a custom value as the name of your color mode, then modify our Sass and CSS variables as needed. We opted to create a separate <code>_variables-dark.scss</code> stylesheet to house Bootstrap&rsquo;s dark mode specific Sass variables, but that&rsquo;s not required for you.</p>
-<p>For example, you can create a &ldquo;blue theme&rdquo; with the selector <code>data-bs-theme=&quot;blue&quot;</code>. In your custom Sass or CSS file, add the new selector and override any global or component CSS variables as needed. If you&rsquo;re using Sass, you can also use Sass&rsquo;s functions within your CSS variable overrides.</p>
+</span></span></code></pre></div><h2 id="사용자-지정-색상-모드">사용자 지정 색상 모드 <a class="anchor-link" href="#%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%a7%80%ec%a0%95-%ec%83%89%ec%83%81-%eb%aa%a8%eb%93%9c" aria-label="Link to this section: 사용자 지정 색상 모드"></a></h2>
+<p>색상 모드의 주요 사용 사례는 라이트/다크 모드이지만 사용자 정의 색상 모드도 가능합니다. 사용자 정의 값을 색상 모드의 이름으로 사용하여 나만의 <code>data-bs-theme</code> 선택기를 만든 다음 필요에 따라 Sass 및 CSS 변수를 수정합니다. 저희는 Bootstrap의 다크 모드 전용 Sass 변수를 저장하기 위해 별도의 <code>_variables-dark.scss</code> 스타일시트를 만들기로 선택했지만, 반드시 필요한 것은 아닙니다.</p>
+<p>예를 들어 <code>data-bs-theme=&quot;blue&quot;</code> 선택기를 사용하여 &ldquo;파란색 테마&quot;를 만들 수 있습니다. 사용자 정의 Sass 또는 CSS 파일에서 새 선택기를 추가하고 필요에 따라 전역 또는 컴포넌트 CSS 변수를 재정의합니다. Sass를 사용하는 경우 CSS 변수 오버라이드 내에서 Sass의 함수를 사용할 수도 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/assets/scss/_content.scss">site/assets/scss/_content.scss</a>
@@ -801,8 +828,8 @@
 </span></span><span class="line"><span class="cl">  ...
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h2 id="javascript">JavaScript <a class="anchor-link" href="#javascript" aria-label="Link to this section: JavaScript"></a></h2>
-<p>To allow visitors or users to toggle color modes, you&rsquo;ll need to create a toggle element to control the <code>data-bs-theme</code> attribute on the root element, <code>&lt;html&gt;</code>. We&rsquo;ve built a toggler in our documentation that initially defers to a user&rsquo;s current system color mode, but provides an option to override that and pick a specific color mode.</p>
-<p>Here&rsquo;s a look at the JavaScript that powers it. Feel free to inspect our own documentation navbar to see how it&rsquo;s implemented using HTML and CSS from our own components. It is suggested to include the JavaScript at the top of your page to reduce potential screen flickering during reloading of your site. Note that if you decide to use media queries for your color modes, your JavaScript may need to be modified or removed if you prefer an implicit control.</p>
+<p>방문자나 사용자가 색상 모드를 전환할 수 있도록 하려면 루트 요소인 <code>&lt;html&gt;</code>의 <code>data-bs-theme</code> 속성을 제어하는 토글 요소를 만들어야 합니다. 처음에는 사용자의 현재 시스템 색상 모드를 따르지만, 이를 재정의하고 특정 색상 모드를 선택할 수 있는 옵션을 제공하는 토글러를 문서에 작성했습니다.</p>
+<p>이 기능을 구동하는 JavaScript를 살펴보세요. 자체 컴포넌트에서 HTML과 CSS를 사용하여 어떻게 구현되었는지 보려면 자체 문서 내비게이션 바를 살펴보시기 바랍니다. 사이트 새로고침 시 발생할 수 있는 화면 깜박임을 줄이려면 페이지 상단에 JavaScript를 포함하는 것이 좋습니다. 색상 모드에 미디어 쿼리를 사용하기로 결정한 경우, 암시적 제어를 선호하는 경우 JavaScript를 수정하거나 제거해야 할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/*!
 </span></span></span><span class="line"><span class="cl"><span class="cm"> * Color mode toggler for Bootstrap&#39;s docs (https://getbootstrap.com/)
 </span></span></span><span class="line"><span class="cl"><span class="cm"> * Copyright 2011-2024 The Bootstrap Authors
@@ -885,9 +912,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">})()</span></span></span></code></pre></div>
 </div>
 
-<h2 id="adding-theme-colors">Adding theme colors <a class="anchor-link" href="#adding-theme-colors" aria-label="Link to this section: Adding theme colors"></a></h2>
-<p>Adding a new color in <code>$theme-colors</code> is not enough for some of our components like <a href="/docs/5.3/components/alerts/">alerts</a> and <a href="/docs/5.3/components/list-group/">list groups</a>. New colors must also be defined in <code>$theme-colors-text</code>, <code>$theme-colors-bg-subtle</code>, and <code>$theme-colors-border-subtle</code> for light theme; but also in <code>$theme-colors-text-dark</code>, <code>$theme-colors-bg-subtle-dark</code>, and <code>$theme-colors-border-subtle-dark</code> for dark theme.</p>
-<p>This is a manual process because Sass cannot generate its own Sass variables from an existing variable or map. In future versions of Bootstrap, we&rsquo;ll revisit this setup to reduce the duplication.</p>
+<h2 id="테마-색상-추가">테마 색상 추가 <a class="anchor-link" href="#%ed%85%8c%eb%a7%88-%ec%83%89%ec%83%81-%ec%b6%94%ea%b0%80" aria-label="Link to this section: 테마 색상 추가"></a></h2>
+<p><a href="/docs/5.3/components/alerts/">경고창</a>이나 <a href="/docs/5.3/components/list-group/">목록 그룹</a>과 같은 일부 컴포넌트의 경우 <code>$theme-colors</code>에 새 색상을 추가하는 것만으로는 충분하지 않습니다. 밝은 테마의 경우 <code>$theme-colors-text</code>, <code>$theme-colors-bg-subtle</code> 및 <code>$theme-colors-border-subtle</code>에도 새 색상을 정의해야 하며 어두운 테마의 경우 <code>$theme-colors-text-dark</code>, <code>$theme-colors-bg-subtle-dark</code> 및 <code>$theme-colors-border-subtle-dark</code>에도 새 색상을 정의해야 합니다.</p>
+<p>Sass는 기존 변수나 맵에서 자체 Sass 변수를 생성할 수 없으므로 이 과정은 수동으로 진행해야 합니다. 향후 버전의 Bootstrap에서는 중복을 줄이기 위해 이 설정을 다시 검토할 예정입니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// Required
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">@import</span> <span class="s2">&#34;functions&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;variables&#34;</span><span class="p">;</span>
@@ -928,8 +955,8 @@
 </span></span><span class="line"><span class="cl"><span class="k">@import</span> <span class="s2">&#34;reboot&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// etc
 </span></span></span></code></pre></div><h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
-<h3 id="variables">Variables <a class="anchor-link" href="#variables" aria-label="Link to this section: Variables"></a></h3>
-<p>Dozens of root level CSS variables are repeated as overrides for dark mode. These are scoped to the color mode selector, which defaults to <code>data-bs-theme</code> but <a href="#building-with-sass">can be configured</a> to use a <code>prefers-color-scheme</code> media query. Use these variables as a guideline for generating your own new color modes.</p>
+<h3 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h3>
+<p>수십 개의 루트 수준 CSS 변수가 다크 모드에 대한 오버라이드로 반복됩니다. 이러한 변수의 범위는 색상 모드 선택기에 한정되며, 기본값은 <code>data-bs-theme</code>이지만 <a href="#sass%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0">직접 구성 가능한</a> 미디어 쿼리에서 <code>prefers-color-scheme</code>을 사용하도록 설정할 수 있습니다. 이 변수를 새 색상 모드를 생성할 때 가이드라인으로 사용하세요.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_root.scss">scss/_root.scss</a>
@@ -986,8 +1013,8 @@
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}form-valid-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$form-valid-border-color-dark</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}form-invalid-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$form-invalid-color-dark</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}form-invalid-border-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$form-invalid-border-color-dark</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
-<h3 id="sass-variables">Sass variables <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
-<p>CSS variables for our dark color mode are partially generated from dark mode specific Sass variables in <code>_variables-dark.scss</code>. This also includes some custom overrides for changing the colors of embedded SVGs used throughout our components.</p>
+<h3 id="sass-변수">Sass 변수 <a class="anchor-link" href="#sass-%eb%b3%80%ec%88%98" aria-label="Link to this section: Sass 변수"></a></h3>
+<p>다크 컬러 모드의 CSS 변수는 부분적으로 <code>_variables-dark.scss</code>의 다크 모드 전용 Sass 변수에서 생성됩니다. 여기에는 컴포넌트 전체에 사용되는 임베디드 SVG의 색상을 변경하기 위한 몇 가지 사용자 정의 오버라이드도 포함됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables-dark.scss">scss/_variables-dark.scss</a>
@@ -1067,7 +1094,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$accordion-button-active-icon-dark</span><span class="o">:</span>  <span class="sx">url(&#34;data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 16 16&#39; fill=&#39;</span><span class="si">#{</span><span class="nv">$accordion-icon-active-color-dark</span><span class="si">}</span><span class="sx">&#39;&gt;&lt;path fill-rule=&#39;evenodd&#39; d=&#39;M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z&#39;/&gt;&lt;/svg&gt;&#34;)</span><span class="p">;</span>
 </span></span></code></pre></div></div>
 <h3 id="sass-믹스인">Sass 믹스인 <a class="anchor-link" href="#sass-%eb%af%b9%ec%8a%a4%ec%9d%b8" aria-label="Link to this section: Sass 믹스인"></a></h3>
-<p>Styles for dark mode, and any custom color modes you create, can be scoped appropriately to the <code>data-bs-theme</code> attribute selector or media query with the customizable <code>color-mode()</code> mixin. See the <a href="#building-with-sass">Sass usage section</a> for more details.</p>
+<p>다크 모드의 스타일과 사용자가 만든 모든 사용자 정의 색상 모드는 사용자 정의 가능한 <code>color-mode()</code> 믹스인을 사용하여 <code>data-bs-theme</code> 속성 선택기 또는 미디어 쿼리에 적절하게 범위를 지정할 수 있습니다. 자세한 내용은 <a href="#sass%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0">Sass 사용법 문단</a>을 참조하세요.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/mixins/_color-mode.scss">scss/mixins/_color-mode.scss</a>
@@ -1122,7 +1149,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

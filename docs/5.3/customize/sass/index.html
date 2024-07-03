@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/customize/sass.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/customize/sass/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/customize/sass.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">Sass</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -597,8 +631,6 @@
       
 
       <div class="bd-content ps-lg-2">
-        
-
         
 
         <p>변수, 맵, 믹스인 등을 활용한 소스의 Sass 파일을 이용합니다.</p>
@@ -673,7 +705,7 @@
 </span></span><span class="line"><span class="cl">sass --watch ./scss/custom.scss ./css/custom.css
 </span></span></code></pre></div><p>옵션에 대한 자세한 내용은 <a href="https://sass-lang.com/install">sass-lang.com/install</a> 및 <a href="https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css">VS Code로 컴파일하기</a>에서 확인하세요.</p>
 <div class="bd-callout bd-callout-info">
-<strong>다른 빌드 도구와 함께 부트스트랩을 사용하시나요?</strong> <a href="/docs/5.3/getting-started/webpack/">Webpack</a>, <a href="/docs/5.3/getting-started/parcel/">Parcel</a> 또는 <a href="/docs/5.3/getting-started/vite/">Vite</a>를 사용한 컴파일 가이드를 읽어보세요. 또한 <a href="https://github.com/twbs/examples">GitHub의 예제 리포지토리</a>에는 프로덕션에 바로 사용할 수 있는 데모도 있습니다.
+<strong>다른 빌드 도구와 함께 Bootstrap을 사용하시나요?</strong> <a href="/docs/5.3/getting-started/webpack/">Webpack</a>, <a href="/docs/5.3/getting-started/parcel/">Parcel</a> 또는 <a href="/docs/5.3/getting-started/vite/">Vite</a>를 사용한 컴파일 가이드를 읽어보세요. 또한 <a href="https://github.com/twbs/examples">GitHub의 예제 리포지토리</a>에는 프로덕션에 바로 사용할 수 있는 데모도 있습니다.
 </div>
 
 <h2 id="include">Include <a class="anchor-link" href="#include" aria-label="Link to this section: Include"></a></h2>
@@ -806,7 +838,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="색상-대비">색상 대비 <a class="anchor-link" href="#%ec%83%89%ec%83%81-%eb%8c%80%eb%b9%84" aria-label="Link to this section: 색상 대비"></a></h3>
 <p><a href="https://www.w3.org/TR/WCAG/">Web Content Accessibility Guidelines (WCAG)</a> 색 대비 조건을 만족시키기 위해서는, 극소수의 예외를 제외하고 만드는 사람은 최소 <a href="https://www.w3.org/TR/WCAG/#contrast-minimum">4.5:1의 텍스트 색 대비</a> 및 최소 <a href="https://www.w3.org/TR/WCAG/#non-text-contrast">비-텍스트 색 대비 3:1</a>을 제공<strong>해야 합니다.</strong></p>
-<p>이것을 돕기 위해서 Bootstrap에는 <code>color-contrast</code> 함수가 내장되어 있습니다. <a href="https://www.w3.org/TR/WCAG/#dfn-contrast-ratio">WCAG contrast ratio algorithm</a>을 이용해,  <code>sRGB</code> 색 공간의 <a href="https://www.w3.org/TR/WCAG/#dfn-relative-luminance">상대 휘도</a>에 근거한 대비 임계치를 계산하여 자동으로 light (<code>#fff</code>), dark (<code>#212529</code>), black (<code>#000</code>)을 반환합니다. 이 함수는 복수의 클래스를 만드는 믹스인이나 반복에 특히 유용합니다.</p>
+<p>이것을 돕기 위해서 Bootstrap에는 <code>color-contrast</code> 함수가 내장되어 있습니다. <a href="https://www.w3.org/TR/WCAG/#dfn-contrast-ratio">WCAG contrast ratio algorithm</a>을 이용해 <code>sRGB</code> 색 공간의 <a href="https://www.w3.org/TR/WCAG/#dfn-relative-luminance">상대 휘도</a>에 근거한 대비 임계치를 계산하여 자동으로 light (<code>#fff</code>), dark (<code>#212529</code>), black (<code>#000</code>)을 반환합니다. 이 함수는 복수의 클래스를 만드는 믹스인이나 반복에 특히 유용합니다.</p>
 <p>예를 들어, <code>$theme-colors</code> 맵에서 swatch의 색상을 만드는 경우입니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@each</span> <span class="nv">$color</span><span class="o">,</span> <span class="nv">$value</span> <span class="ow">in</span> <span class="nv">$theme-colors</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nc">.swatch-</span><span class="si">#{</span><span class="nv">$color</span><span class="si">}</span> <span class="p">{</span>
@@ -904,7 +936,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

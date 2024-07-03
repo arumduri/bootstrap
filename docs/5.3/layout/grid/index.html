@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/layout/grid.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/layout/grid/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/layout/grid.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">그리드 시스템</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -603,8 +637,6 @@
       
 
       <div class="bd-content ps-lg-2">
-        
-
         
 
         <h2 id="예시">예시 <a class="anchor-link" href="#%ec%98%88%ec%8b%9c" aria-label="Link to this section: 예시"></a></h2>
@@ -666,7 +698,7 @@
 <p><strong>컨테이너는 콘텐츠를 중앙에 놓고 가로로 채웁니다.</strong> 반응형 픽셀 너비에는 <code>.container</code>를, 모든 뷰포트 및 디바이스에서 <code>width: 100%</code>에는 <code>.container-fluid</code>를, 유동 및 픽셀 폭의 조합에는 반응형 컨테이너 (예: <code>.container-md</code>)를 사용합니다.</p>
 </li>
 <li>
-<p><strong>행은 열의 래퍼입니다.</strong> 각 열에는 열 사이의 공간을 제어하기 위한 수평 <code>padding</code> (거터라고 함)이 있습니다. 그런 다음 이 <code>padding</code>은 여백이 마이너스인 행에서 상쇄되어 열의 콘텐츠가 좌측 하단으로 시각적으로 정렬되도록 합니다. 또한 행은 <a href="#row-columns">열 크기를 균일하게 적용하고</a> <a href="/docs/5.3/layout/gutters/">거터 클래스</a>를 통해 콘텐츠의 간격을 변경하는 수정자 클래스를 지원합니다.</p>
+<p><strong>행은 열의 래퍼입니다.</strong> 각 열에는 열 사이의 공간을 제어하기 위한 수평 <code>padding</code> (거터라고 함)이 있습니다. 그런 다음 이 <code>padding</code>은 여백이 마이너스인 행에서 상쇄되어 열의 콘텐츠가 좌측 하단으로 시각적으로 정렬되도록 합니다. 또한 행은 <a href="#%ED%96%89%EC%97%B4">열 크기를 균일하게 적용하고</a> <a href="/docs/5.3/layout/gutters/">거터 클래스</a>를 통해 콘텐츠의 간격을 변경하는 수정자 클래스를 지원합니다.</p>
 </li>
 <li>
 <p><strong>열은 매우 유연합니다.</strong> 행 당 12개의 템플릿 열을 사용할 수 있으므로 여러 열에 걸쳐 있는 다양한 요소 조합을 만들 수 있습니다. 열 클래스는 확장할 템플릿 열의 수를 나타냅니다 (예: <code>col-4</code>는 4개 확장). <code>width</code>는 백분율로 설정되므로 항상 상대적인 크기가 동일합니다.</p>
@@ -1475,7 +1507,7 @@
 <h2 id="그리드-사용자-정의">그리드 사용자 정의 <a class="anchor-link" href="#%ea%b7%b8%eb%a6%ac%eb%93%9c-%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%a0%95%ec%9d%98" aria-label="Link to this section: 그리드 사용자 정의"></a></h2>
 <p>내장된 그리드 Sass 변수와 맵을 사용하여 사전 정의된 그리드 클래스를 완전히 사용자 정의할 수 있습니다. 계층 수, 미디어 쿼리 크기 및 컨테이너 너비를 변경한 다음 다시 컴파일하면 됩니다.</p>
 <h3 id="열과-거터">열과 거터 <a class="anchor-link" href="#%ec%97%b4%ea%b3%bc-%ea%b1%b0%ed%84%b0" aria-label="Link to this section: 열과 거터"></a></h3>
-<p>그리드 열의 수는 Sass 변수를 통해 수정할 수 있습니다. <code>$grid-columns</code>는 각 개별 열의 너비 (백분율)를 생성하는 데에 사용되는 반면 <code>$grid-gutter-width</code>는 열 거터의 너비를 설정합니다. <code>$grid-row-columns</code> is used to set the maximum number of columns of <code>.row-cols-*</code>, any number over this limit is ignored.</p>
+<p>그리드 열의 수는 Sass 변수를 통해 수정할 수 있습니다. <code>$grid-columns</code>는 각 개별 열의 너비 (백분율)를 생성하는 데에 사용되는 반면 <code>$grid-gutter-width</code>는 열 거터의 너비를 설정합니다. <code>.row-cols-*</code>의 최대 열 수를 설정하는 데 <code>$grid-row-columns</code>가 사용되며, 이 제한을 초과하는 숫자는 무시됩니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$grid-columns</span><span class="o">:</span> <span class="mi">12</span> <span class="k">!default</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$grid-gutter-width</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.5</span><span class="kt">rem</span> <span class="k">!default</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$grid-row-columns</span><span class="o">:</span> <span class="mi">6</span> <span class="k">!default</span><span class="p">;</span>
@@ -1520,7 +1552,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

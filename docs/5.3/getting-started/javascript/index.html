@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/getting-started/javascript.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/getting-started/javascript/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/getting-started/javascript.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">JavaScript</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -590,7 +624,7 @@
         <li><a href="#jquery-이벤트">jQuery 이벤트</a></li>
       </ul>
     </li>
-    <li><a href="#자바스크립트-비활성화">자바스크립트 비활성화</a></li>
+    <li><a href="#javascript-비활성화">JavaScript 비활성화</a></li>
   </ul>
 </nav>
           </div>
@@ -598,8 +632,6 @@
       
 
       <div class="bd-content ps-lg-2">
-        
-
         
 
         <h2 id="개별-또는-컴파일">개별 또는 컴파일 <a class="anchor-link" href="#%ea%b0%9c%eb%b3%84-%eb%98%90%eb%8a%94-%ec%bb%b4%ed%8c%8c%ec%9d%bc" aria-label="Link to this section: 개별 또는 컴파일"></a></h2>
@@ -631,7 +663,7 @@
 </span></span><span class="line"><span class="cl">  <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.toast&#39;</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">toastNode</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nx">Toast</span><span class="p">(</span><span class="nx">toastNode</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>JS 번들러와 비교하여 브라우저에서 ESM을 사용하려면 모듈 이름 대신 전체 경로와 파일 이름을 사용해야 합니다. <a href="https://v8.dev/features/modules#specifiers">브라우저의 JS 모듈에 대해 자세히 알아보기</a> 그렇기 때문의 위처럼 <code>'bootstrap'</code> 대신에 <code>'bootstrap.esm.min.js'</code> 를 사용합니다. 그러나 이것은 Popper의 종속성으로 인해 더욱 복잡해져 있기에 아래와 같이 Popper를 JavaScript로 인포트하고 있습니다:</p>
+</span></span></code></pre></div><p>JS 번들러와 비교하여 브라우저에서 ESM을 사용하려면 모듈 이름 대신 전체 경로와 파일 이름을 사용해야 합니다. <a href="https://v8.dev/features/modules#specifiers">브라우저의 JS 모듈에 대해 자세히 알아보기</a> 그렇기 때문의 위처럼 <code>'bootstrap'</code> 대신에 <code>'bootstrap.esm.min.js'</code>를 사용합니다. 그러나 이것은 Popper의 종속성으로 인해 더욱 복잡해져 있기에 아래와 같이 Popper를 JavaScript로 인포트하고 있습니다:</p>
 <!-- eslint-skip -->
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">Popper</span> <span class="nx">from</span> <span class="s2">&#34;@popperjs/core&#34;</span>
 </span></span></code></pre></div><p>그대로 시도하면 콘솔에 다음과 같은 오류가 표시됩니다:</p>
@@ -671,9 +703,9 @@
 <p>드롭다운, 팝오버, 툴팁도 <a href="https://popper.js.org/">Popper</a>에 의존하고 있습니다.</p>
 <h2 id="데이터-속성">데이터 속성 <a class="anchor-link" href="#%eb%8d%b0%ec%9d%b4%ed%84%b0-%ec%86%8d%ec%84%b1" aria-label="Link to this section: 데이터 속성"></a></h2>
 <p>거의 모든 Bootstrap 플러그인은 데이터 속성 (JavaScript 기능을 사용하는 권장 방법)과 함께 HTML을 통해서만 활성화 및 구성할 수 있습니다. <strong>단일 요소의 한 세트의 데이터 속성만 사용해야 합니다.</strong> (예: 동일한 버튼으로 툴팁과 모달을 트리거할 수 없음)</p>
-<p>옵션은 데이터 속성이나 자바스크립트를 통해 전달할 수 있으므로 <code>데이터-bs-</code>에 옵션 이름을 추가할 수 있습니다(예: <code>데이터-bs-animation=&quot;{value}&quot;</code>). 데이터 속성을 통해 옵션을 전달할 때 옵션 이름의 대/소문자 유형을 &lsquo;<em>camelCase</em>&lsquo;에서 &lsquo;<em>kebab-case</em>&lsquo;로 변경해야 합니다. 예를 들어 <code>data-bs-custom-class=&quot;beautifier&quot;</code> 대신 <code>data-bs-customClass=&quot;beautifier&quot;</code>를 사용합니다.</p>
+<p>옵션은 데이터 속성이나 JavaScript를 통해 전달할 수 있으므로 <code>data-bs-</code>에 옵션 이름을 추가할 수 있습니다(예: <code>data-bs-animation=&quot;{value}&quot;</code>). 데이터 속성을 통해 옵션을 전달할 때 옵션 이름의 대/소문자 유형을 &lsquo;<em>camelCase</em>&lsquo;에서 &lsquo;<em>kebab-case</em>&lsquo;로 변경해야 합니다. 예를 들어 <code>data-bs-custom-class=&quot;beautifier&quot;</code> 대신 <code>data-bs-customClass=&quot;beautifier&quot;</code>를 사용합니다.</p>
 <p>Bootstrap 5.2.0부터 모든 컴포넌트는 간단한 컴포넌트 구성을 JSON 문자열로 저장할 수 있는 <strong>experimental</strong> 예약 데이터 속성 <code>data-bs-config</code>를 지원합니다. 요소에 <code>data-bs-config='{&quot;delay&quot;:0,&quot;title&quot;:123}'</code> 및 <code>data-bs-title=&quot;456&quot;</code> 속성이 있는 경우 최종 <code>title</code> 값은 <code>456</code>이 되며 별도의 데이터 속성이 <code>data-bs-config</code>에 지정된 값을 재정의합니다. 또한 기존 데이터 속성에는 <code>data-bs-delay='{&quot;show&quot;:0,&quot;hide&quot;:150}'</code>와 같은 JSON 값을 저장할 수 있습니다.</p>
-<p>The final configuration object is the merged result of <code>data-bs-config</code>, <code>data-bs-</code>, and <code>js object</code> where the latest given key-value overrides the others.</p>
+<p>최종 구성 개체는 <code>data-bs-config</code>, <code>data-bs-</code>, <code>js object</code>의 병합된 결과로, 주어진 최신 key-value가 다른 key-value를 재정의합니다.</p>
 
 <h2 id="선택자">선택자 <a class="anchor-link" href="#%ec%84%a0%ed%83%9d%ec%9e%90" aria-label="Link to this section: 선택자"></a></h2>
 <p>성능상의 이유로 쿼리 DOM 요소에 네이티브 메소드인 <code>querySelector</code> 및 <code>querySelectorAll</code>를 사용하기 때문에 <a href="https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier">유효한 선택자</a>를 반드시 사용해야 합니다. <code>collapse:Example</code>와 같은 특수 선택자를 사용하는 경우 이스케이프를 해주셔야 합니다.</p>
@@ -699,7 +731,7 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Popover</span><span class="p">.</span><span class="nx">getOrCreateInstance</span><span class="p">(</span><span class="nx">myPopoverEl</span><span class="p">,</span> <span class="nx">configObject</span><span class="p">)</span>
 </span></span></code></pre></div><p>인스턴스가 초기화되지 않은 경우 두 번째 인수로 선택적 설정 객체를 받아 사용할 수 있습니다.</p>
 <h3 id="생성자에서의-css-선택자">생성자에서의 CSS 선택자 <a class="anchor-link" href="#%ec%83%9d%ec%84%b1%ec%9e%90%ec%97%90%ec%84%9c%ec%9d%98-css-%ec%84%a0%ed%83%9d%ec%9e%90" aria-label="Link to this section: 생성자에서의 CSS 선택자"></a></h3>
-<p>모든 플러그인 생성자 메소드는 <code>getInstance</code> 및 <code>getOrCreateInstance</code> 메소드 외에도 첫 번째 인수로 DOM 요소 또는 유효한 <a href="#selectors">CSS 선택자</a>를 받을 수 있습니다. 플러그인은 단일 요소만 지원하므로 <code>querySelector</code> 메소드로 플러그인 요소를 찾을 수 있습니다.</p>
+<p>모든 플러그인 생성자 메소드는 <code>getInstance</code> 및 <code>getOrCreateInstance</code> 메소드 외에도 첫 번째 인수로 DOM 요소 또는 유효한 <a href="#%EC%84%A0%ED%83%9D%EC%9E%90">CSS 선택자</a>를 받을 수 있습니다. 플러그인은 단일 요소만 지원하므로 <code>querySelector</code> 메소드로 플러그인 요소를 찾을 수 있습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">modal</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Modal</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">dropdown</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Dropdown</span><span class="p">(</span><span class="s1">&#39;[data-bs-toggle=&#34;dropdown&#34;]&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">offcanvas</span> <span class="o">=</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Offcanvas</span><span class="p">.</span><span class="nx">getInstance</span><span class="p">(</span><span class="s1">&#39;#myOffcanvas&#39;</span><span class="p">)</span>
@@ -871,8 +903,8 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myTab a&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// do something...
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
-</span></span></code></pre></div><h2 id="자바스크립트-비활성화">자바스크립트 비활성화 <a class="anchor-link" href="#%ec%9e%90%eb%b0%94%ec%8a%a4%ed%81%ac%eb%a6%bd%ed%8a%b8-%eb%b9%84%ed%99%9c%ec%84%b1%ed%99%94" aria-label="Link to this section: 자바스크립트 비활성화"></a></h2>
-<p>Bootstrap의 플러그인에는 자바스크립트가 비활성화되었을 때를 대비한 특별한 대안이 없습니다. 이 경우 사용자 환경이 걱정된다면 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a>를 사용하여 사용자에게 상황(및 JavaScript를 다시 활성화하는 방법)을 설명하거나 사용자 정의 대체 기능을 추가하세요.</p>
+</span></span></code></pre></div><h2 id="javascript-비활성화">JavaScript 비활성화 <a class="anchor-link" href="#javascript-%eb%b9%84%ed%99%9c%ec%84%b1%ed%99%94" aria-label="Link to this section: JavaScript 비활성화"></a></h2>
+<p>Bootstrap의 플러그인에는 JavaScript가 비활성화되었을 때를 대비한 특별한 대안이 없습니다. 이 경우 사용자 환경이 걱정된다면 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a>를 사용하여 사용자에게 상황(및 JavaScript를 다시 활성화하는 방법)을 설명하거나 사용자 정의 대체 기능을 추가하세요.</p>
 
       </div>
     </main>
@@ -899,7 +931,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

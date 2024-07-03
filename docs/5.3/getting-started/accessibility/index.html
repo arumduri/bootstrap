@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/getting-started/accessibility.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/getting-started/accessibility/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/getting-started/accessibility.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">접근성</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -583,8 +617,6 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-
         <p>Bootstrap은 개발자가 시각적으로 매력적이고 기능이 풍부하며 즉시 액세스할 수 있는 웹사이트와 애플리케이션을 만들 수 있도록 사전 제작된 스타일과 레이아웃 도구 및 대화형 구성요소로 이루어진 사용하기 쉬운 프레임워크를 제공합니다.</p>
 <h2 id="개요와-한계">개요와 한계 <a class="anchor-link" href="#%ea%b0%9c%ec%9a%94%ec%99%80-%ed%95%9c%ea%b3%84" aria-label="Link to this section: 개요와 한계"></a></h2>
 <p>Bootstrap으로 개발한 프로젝트의 전반적인 접근성은 작성자가 추가한 마크업, 추가 스타일 및 스크립트에 큰 영향을 받습니다. 이 부분이 올바르게 구현되었다면 <a href="https://www.w3.org/TR/WCAG/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1</a> (A/AA/AAA), <a href="https://www.section508.gov/">Section 508</a> 및 유사한 접근성 표준 및 요구사항을 충족하는 Bootstrap을 사용하여 웹사이트와 애플리케이션을 만드는 것이 완벽하게 가능해야 합니다.</p>
@@ -601,7 +633,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden&#34;</span><span class="p">&gt;</span>Danger: <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  This action is not reversible
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>기존의 &ldquo;건너뛰기&rdquo; 링크와 같이 시각적으로 숨겨진 대화형 컨트롤의 경우 <code>.visually-hidden-focusable</code> 클래스를 사용합니다. (고대비 키보드 사용자의 경우) 이렇게 초점이 맞춰지면 컨트롤이 표시됩니다. <strong>이전 버전의 <code>.sr-only</code> 및 <code>.sr-only-focusable</code> 클래스와 달리 Bootstrap 5의 <code>.visually-hidden-focusable</code> 은 독립된 클래스이며 <code>.visually-hidden</code> 클래스와 함께 사용해서는 안됩니다.</strong></p>
+</span></span></code></pre></div><p>기존의 &ldquo;건너뛰기&rdquo; 링크와 같이 시각적으로 숨겨진 대화형 컨트롤의 경우 <code>.visually-hidden-focusable</code> 클래스를 사용합니다. (고대비 키보드 사용자의 경우) 이렇게 초점이 맞춰지면 컨트롤이 표시됩니다. <strong>이전 버전의 <code>.sr-only</code> 및 <code>.sr-only-focusable</code> 클래스와 달리 Bootstrap 5의 <code>.visually-hidden-focusable</code>은 독립된 클래스이며 <code>.visually-hidden</code> 클래스와 함께 사용해서는 안됩니다.</strong></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;visually-hidden-focusable&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#content&#34;</span><span class="p">&gt;</span>Skip to main content<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="감소된-모션">감소된 모션 <a class="anchor-link" href="#%ea%b0%90%ec%86%8c%eb%90%9c-%eb%aa%a8%ec%85%98" aria-label="Link to this section: 감소된 모션"></a></h3>
 <p>Bootstrap에는 <a href="https://www.w3.org/TR/mediaqueries-5/#prefers-reduced-motion"><code>prefers-reduced-motion</code> 미디어 기능</a> 지원이 포함되어 있습니다. 사용자가 감소된 모션에 대한 기본 설정을 지정할 수 있는 브라우저/환경에서 Bootstrap의 대부분의 CSS 전환 효과 (예: 모달 다이얼로그 상자가 열리거나 닫힐 때 또는 캐러셀의 슬라이딩 애니메이션)가 비활성화되고 의미 있는 애니메이션 (예: 스피너)의 속도가 느려집니다.</p>
@@ -644,7 +676,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

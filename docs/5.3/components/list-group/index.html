@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/components/list-group.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/components/list-group/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/components/list-group.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">목록 그룹</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -603,8 +637,6 @@
       
 
       <div class="bd-content ps-lg-2">
-        
-
         
 
         <h2 id="기본-예시">기본 예시 <a class="anchor-link" href="#%ea%b8%b0%eb%b3%b8-%ec%98%88%ec%8b%9c" aria-label="Link to this section: 기본 예시"></a></h2>
@@ -740,7 +772,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p><code>&lt;button&gt;</code>에서는 <code>.disabled</code> 클래스 대신에 <code>disabled</code> 속성을 사용할 수도 있습니다. 유감스럽게도, <code>&lt;a&gt;</code> 는 disabled 속성을 지원하지 않습니다.</p>
+<p><code>&lt;button&gt;</code>에서는 <code>.disabled</code> 클래스 대신에 <code>disabled</code> 속성을 사용할 수도 있습니다. 유감스럽게도, <code>&lt;a&gt;</code>는 disabled 속성을 지원하지 않습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -1068,7 +1100,7 @@
 </div>
 
 <div class="bd-callout bd-callout-info">
-<strong>Accessibility tip:</strong> Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies like screen readers. Please ensure the meaning is obvious from the content itself (e.g., the visible text with a <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>sufficient</em> color contrast</a>) or is included through alternative means, such as additional text hidden with the <code>.visually-hidden</code> class.
+<strong>접근성 팁:</strong> 색상을 사용하여 의미를 추가하면 시각적 표시만 제공되므로 화면 리더와 같은 보조 기술 사용자에게는 의미가 전달되지 않습니다. 콘텐츠 자체에서 의미가 명확하게 드러나거나(예: <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>충분한</em> 색상 대비</a>가 있는 가시 텍스트) <code>.visually-hidden</code> 클래스로 숨겨진 추가 텍스트 등 대체 수단을 통해 의미가 포함되었는지 확인하시기 바랍니다.
 </div>
 
 <h2 id="배지-포함">배지 포함 <a class="anchor-link" href="#%eb%b0%b0%ec%a7%80-%ed%8f%ac%ed%95%a8" aria-label="Link to this section: 배지 포함"></a></h2>
@@ -1389,7 +1421,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$list-group-action-active-bg</span><span class="o">:</span>       <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="n">secondary-bg</span><span class="p">);</span>
 </span></span></code></pre></div></div>
 <h3 id="sass-믹스인">Sass 믹스인 <a class="anchor-link" href="#sass-%eb%af%b9%ec%8a%a4%ec%9d%b8" aria-label="Link to this section: Sass 믹스인"></a></h3>
-<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2">Deprecated in v5.3.0</small>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2">v5.3.0부터 지원 중단</small>
 
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
@@ -1544,7 +1576,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="메소드">메소드 <a class="anchor-link" href="#%eb%a9%94%ec%86%8c%eb%93%9c" aria-label="Link to this section: 메소드"></a></h3>
 <div class="bd-callout bd-callout-danger">
-<strong>All API methods are asynchronous and start a transition.</strong> They return to the caller as soon as the transition is started, but before it ends. In addition, a method call on a transitioning component will be ignored. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">Learn more in our JavaScript docs.</a>
+<strong>모든 API 메서드는 비동기식이며 전환을 시작합니다.</strong> 전환이 시작되는 즉시 호출자에게 반환되지만 전환이 끝나기 전에 호출자에게 반환됩니다. 또한 전환 중인 컴포넌트에 대한 메서드 호출은 무시됩니다. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">JavaScript 문서에서 자세히 알아보세요.</a>
 </div>
 
 <p>콘텐츠를 탭 요소로 활성화합니다.</p>
@@ -1596,19 +1628,19 @@
 <tbody>
 <tr>
 <td><code>hide.bs.tab</code></td>
-<td>이 이벤트는 새로운 탭이 표시될 (따라서 이전에 활성화 한 탭이 숨겨집니다) 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 현재 활성화된 탭과 곧 활성화 될 새로운 탭을 타깃으로 합니다.</td>
+<td>이 이벤트는 새로운 탭이 표시될 (따라서 이전에 활성화 한 탭이 숨겨집니다) 때 발생합니다. <code>event.target</code>과 <code>event.relatedTarget</code>을 사용하여 각각 현재 활성화된 탭과 곧 활성화 될 새로운 탭을 타깃으로 합니다.</td>
 </tr>
 <tr>
 <td><code>hidden.bs.tab</code></td>
-<td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다 (따라서 이전 활성화 탭은 숨겨집니다). <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 이전 활성화 탭과 새로운 활성화 탭을 타깃으로 합니다.</td>
+<td>이 이벤트는 새로운 탭이 표시된 후에 발생합니다 (따라서 이전 활성화 탭은 숨겨집니다). <code>event.target</code>과 <code>event.relatedTarget</code>을 사용하여 각각 이전 활성화 탭과 새로운 활성화 탭을 타깃으로 합니다.</td>
 </tr>
 <tr>
 <td><code>show.bs.tab</code></td>
-<td>이 이벤트는 탭 표시시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭 (이용 가능한 경우)을 타깃으로 합니다.</td>
+<td>이 이벤트는 탭 표시시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. <code>event.target</code>과 <code>event.relatedTarget</code>을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭 (이용 가능한 경우)을 타깃으로 합니다.</td>
 </tr>
 <tr>
 <td><code>shown.bs.tab</code></td>
-<td>이 이벤트는 탭이 표시된 이후 탭을 표시할 때 발생합니다. <code>event.target</code> 과 <code>event.relatedTarget</code> 을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭(이용 가능한 경우)을 타깃으로 합니다.</td>
+<td>이 이벤트는 탭이 표시된 이후 탭을 표시할 때 발생합니다. <code>event.target</code>과 <code>event.relatedTarget</code>을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭(이용 가능한 경우)을 타깃으로 합니다.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1646,7 +1678,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

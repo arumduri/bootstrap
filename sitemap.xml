@@ -43,12 +43,6 @@
     <loc>https://getbootstrap.kr/docs/5.3/examples/checkout/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.kr/docs/5.3/helpers/color-background/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.kr/docs/5.3/customize/color-modes/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.kr/docs/5.3/examples/cover/</loc>
   </url>
   <url>
@@ -70,9 +64,6 @@
     <loc>https://getbootstrap.kr/docs/5.3/examples/navbar-fixed/</loc>
   </url>
   <url>
-    <loc>https://getbootstrap.kr/docs/5.3/helpers/focus-ring/</loc>
-  </url>
-  <url>
     <loc>https://getbootstrap.kr/docs/5.3/examples/footers/</loc>
   </url>
   <url>
@@ -83,9 +74,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/examples/heroes/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.kr/docs/5.3/helpers/icon-link/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/getting-started/javascript/</loc>
@@ -110,9 +98,6 @@
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/examples/navbars/</loc>
-  </url>
-  <url>
-    <loc>https://getbootstrap.kr/docs/5.3/utilities/object-fit/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/examples/offcanvas-navbar/</loc>
@@ -185,6 +170,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/utilities/spacing/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.kr/docs/5.3/utilities/object-fit/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/layout/gutters/</loc>
@@ -295,6 +283,12 @@
     <loc>https://getbootstrap.kr/docs/5.3/utilities/colors/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.kr/docs/5.3/customize/color-modes/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.kr/docs/5.3/helpers/color-background/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.kr/docs/5.3/helpers/vertical-rule/</loc>
   </url>
   <url>
@@ -320,6 +314,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/extend/icons/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.kr/docs/5.3/helpers/icon-link/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/components/accordion/</loc>
@@ -424,6 +421,9 @@
     <loc>https://getbootstrap.kr/docs/5.3/components/pagination/</loc>
   </url>
   <url>
+    <loc>https://getbootstrap.kr/docs/5.3/helpers/focus-ring/</loc>
+  </url>
+  <url>
     <loc>https://getbootstrap.kr/docs/5.3/forms/overview/</loc>
   </url>
   <url>
@@ -446,6 +446,9 @@
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/content/figures/</loc>
+  </url>
+  <url>
+    <loc>https://getbootstrap.kr/docs/5.3/arumduri/</loc>
   </url>
   <url>
     <loc>https://getbootstrap.kr/docs/5.3/helpers/stretched-link/</loc>

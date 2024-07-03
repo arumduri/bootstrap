@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/getting-started/download.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/getting-started/download/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/getting-started/download.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">다운로드</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -569,7 +603,7 @@
     <li><a href="#예시">예시</a></li>
     <li><a href="#jsdelivr를-통한-cdn">jsDelivr를 통한 CDN</a>
       <ul>
-        <li><a href="#alternative-cdns">Alternative CDNs</a></li>
+        <li><a href="#대체-cdn">대체 CDN</a></li>
       </ul>
     </li>
     <li><a href="#패키지-관리자">패키지 관리자</a>
@@ -588,8 +622,6 @@
       
 
       <div class="bd-content ps-lg-2">
-        
-
         
 
         <h2 id="컴파일된-css와-js">컴파일된 CSS와 JS <a class="anchor-link" href="#%ec%bb%b4%ed%8c%8c%ec%9d%bc%eb%90%9c-css%ec%99%80-js" aria-label="Link to this section: 컴파일된 CSS와 JS"></a></h2>
@@ -628,16 +660,16 @@
 </span></span></code></pre></div><p>이미 컴파일된 JavaScript를 사용하고 있고 Popper를 개별적으로 포함하는 것을 선호한다면 Bootstrap의 JS 이전에 CDN을 통해서 Popper를 추가하세요.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js&#34;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&#34;sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy&#34;</span> <span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h3 id="alternative-cdns">Alternative CDNs <a class="anchor-link" href="#alternative-cdns" aria-label="Link to this section: Alternative CDNs"></a></h3>
-<p>We recommend <a href="https://www.jsdelivr.com/">jsDelivr</a> and use it ourselves in our documentation. However, in some cases—like in some specific countries or environments—you may need to use other CDN providers like <a href="https://cdnjs.com/">cdnjs</a> or <a href="https://unpkg.com/">unpkg</a>.</p>
-<p>You&rsquo;ll find the same files on these CDN providers, albeit with different URLs. With cdnjs, you can <a href="https://cdnjs.com/libraries/bootstrap">use this direct Bootstrap package link</a> to copy and paste ready-to-use HTML snippets for each dist file from any version of Bootstrap.</p>
+</span></span></code></pre></div><h3 id="대체-cdn">대체 CDN <a class="anchor-link" href="#%eb%8c%80%ec%b2%b4-cdn" aria-label="Link to this section: 대체 CDN"></a></h3>
+<p>저희는 <a href="https://www.jsdelivr.com/">jsDelivr</a>를 권장하며 문서에서도 이를 직접 사용하고 있습니다. 그러나 특정 국가나 환경 등 일부 경우에는 <a href="https://cdnjs.com/">cdnjs</a> 또는 <a href="https://unpkg.com/">unpkg</a>와 같은 다른 CDN 제공업체를 사용해야 할 수도 있습니다.</p>
+<p>이러한 CDN 제공업체에서는 URL이 다르지만 동일한 파일을 찾을 수 있습니다. cdnjs를 사용하면 <a href="https://cdnjs.com/libraries/bootstrap">이 다이렉트 Bootstrap 패키지 링크</a>를 사용하여 모든 버전의 Bootstrap에서 각 배포 파일에 대해 바로 사용할 수 있는 HTML 스니펫을 복사하여 붙여넣을 수 있습니다.</p>
 <div class="bd-callout bd-callout-warning">
-<strong>If the SRI hashes differ for a given file, you shouldn&rsquo;t use the files from that CDN, because it means that the file was modified by someone else.</strong>
+<strong>특정 파일에 대해 SRI 해시가 다르면 다른 사람이 파일을 수정했음을 의미하므로 해당 CDN의 파일을 사용해서는 안 됩니다</strong>.
 </div>
 
-<p>Note that you should compare same length hashes, e.g. <code>sha384</code> with <code>sha384</code>, otherwise it&rsquo;s expected for them to be different.
-As such, you can use an online tool like <a href="https://www.srihash.org/">SRI Hash Generator</a> to make sure that the hashes are the same for a given file.
-Alternatively, assuming you have OpenSSL installed, you can achieve the same from the CLI, for example:</p>
+<p>길이가 같은 해시(예: <code>sha384</code>와 <code>sha384</code>)를 비교해야 하며, 그렇지 않을 경우 서로 다를 수 있습니다.
+따라서 <a href="https://www.srihash.org/">SRI 해시 생성기</a>와 같은 온라인 도구를 사용하여 주어진 파일에 대해 해시가 동일한지 확인할 수 있습니다.
+또는 OpenSSL이 설치되어 있다고 가정하면 CLI에서도 동일한 결과를 얻을 수 있습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">openssl dgst -sha384 -binary bootstrap.min.js <span class="p">|</span> openssl base64 -A
 </span></span></code></pre></div><h2 id="패키지-관리자">패키지 관리자 <a class="anchor-link" href="#%ed%8c%a8%ed%82%a4%ec%a7%80-%ea%b4%80%eb%a6%ac%ec%9e%90" aria-label="Link to this section: 패키지 관리자"></a></h2>
 <p>Bootstrap의 <strong>소스 파일</strong>을 유명한 패키지 관리자들을 사용해서 거의 모든 프로젝트에 Bootstrap을 사용할 수 있습니다. 패키지 관리자와 상관없이 Bootstrap은 공식 컴파일된 버전과 일치하는 구성을 위해 <strong><a href="/docs/5.3/getting-started/contribute/#sass">Sass 컴파일러</a>와 <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>를 필요로 합니다</strong>.</p>
@@ -668,7 +700,7 @@ Alternatively, assuming you have OpenSSL installed, you can achieve the same fro
 <p><a href="https://getcomposer.org/">Composer</a>로도 Bootstrap의 Sass와 JavaScript를 설치 및 관리할 수 있습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">composer require twbs/bootstrap:5.3.3
 </span></span></code></pre></div><h3 id="nuget">NuGet <a class="anchor-link" href="#nuget" aria-label="Link to this section: NuGet"></a></h3>
-<p>.NET 프레임워크으로 개발하고 있다면, <a href="https://www.nuget.org/">NuGet</a>을 사용해서 Bootstrap의 <a href="https://www.nuget.org/packages/bootstrap/">CSS</a> 또는 <a href="https://www.nuget.org/packages/bootstrap.sass/">Sass</a> 및 JavaScript를 설치 및 관리할 수 있습니다. Newer projects should use <a href="https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/">libman</a> or another method as NuGet is designed for compiled code, not frontend assets.</p>
+<p>.NET 프레임워크으로 개발하고 있다면, <a href="https://www.nuget.org/">NuGet</a>을 사용해서 Bootstrap의 <a href="https://www.nuget.org/packages/bootstrap/">CSS</a> 또는 <a href="https://www.nuget.org/packages/bootstrap.sass/">Sass</a> 및 JavaScript를 설치 및 관리할 수 있습니다. 최신 프로젝트는 NuGet이 프론트엔드 에셋이 아닌 컴파일된 코드용으로 설계되었으므로 <a href="https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/">libman</a> 또는 다른 방법을 사용해야 합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Install-Package</span> <span class="n">bootstrap</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Install-Package</span> <span class="n">bootstrap</span><span class="p">.</span><span class="py">sass</span>
 </span></span></code></pre></div>
@@ -697,7 +729,7 @@ Alternatively, assuming you have OpenSSL installed, you can achieve the same fro
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

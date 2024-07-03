@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/components/toasts.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/components/toasts/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/components/toasts.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">토스트</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -598,8 +632,6 @@
       
 
       <div class="bd-content ps-lg-2">
-        
-
         
 
         <p>토스트는 모바일 및 데스크톱 운영 체제에서 보급된 푸시 알림을 모방하여 설계된 가벼운 알림창 입니다. Flexbox로 만들어져 있어 위치 조정 및 배치가 간단합니다.</p>
@@ -1136,8 +1168,8 @@
 <h2 id="접근성">접근성 <a class="anchor-link" href="#%ec%a0%91%ea%b7%bc%ec%84%b1" aria-label="Link to this section: 접근성"></a></h2>
 <p>토스트는 방텍스트가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code> region</a>로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 <code>aria-atomic=&quot;true&quot;</code>를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 콘텐츠 일부만을 갱신한 경우나 같은 토스트의 콘텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 <a href="/docs/5.3/components/alerts/">alert component</a>를 사용해 주세요.</p>
 <p>토스트가 생성되거나 업데이트 되기 <em>전</em>에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두 가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.</p>
-<p>그리고, 내용에 따라 <code>role</code> 과 <code>aria-live</code>의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 <code>role=&quot;alert&quot; aria-live=&quot;assertive&quot;</code> 속성을 사용하고, 그렇지 않으면 <code>role=&quot;status&quot; aria-live=&quot;polite&quot;</code> 속성을 사용합니다.</p>
-<p>보여지는 콘텐츠가 바뀌면 사용자가 토스트를 읽기에 충분한 시간이 필요하므로 <a href="#options"><code>delay</code> timeout</a>을 반드시 업데이트 해 주세요.</p>
+<p>그리고, 내용에 따라 <code>role</code>과 <code>aria-live</code>의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 <code>role=&quot;alert&quot; aria-live=&quot;assertive&quot;</code> 속성을 사용하고, 그렇지 않으면 <code>role=&quot;status&quot; aria-live=&quot;polite&quot;</code> 속성을 사용합니다.</p>
+<p>보여지는 콘텐츠가 바뀌면 사용자가 토스트를 읽기에 충분한 시간이 필요하므로 <a href="#%EC%98%B5%EC%85%98"><code>delay</code> 타임아웃</a>을 반드시 업데이트 해주세요.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;toast&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">&#34;polite&#34;</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="na">data-bs-delay</span><span class="o">=</span><span class="s">&#34;10000&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;alert&#34;</span> <span class="na">aria-live</span><span class="o">=</span><span class="s">&#34;assertive&#34;</span> <span class="na">aria-atomic</span><span class="o">=</span><span class="s">&#34;true&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -1180,12 +1212,12 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만, 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에 긴 <a href="#options"><code>delay</code> timeout</a>를 주었다고 하더라도 키보드나 지원 기술 사용자가 알 수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 <code>autohide: false</code>를 사용하는 것을 권장합니다.</p>
+<p>기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만, 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에 긴 <a href="#%EC%98%B5%EC%85%98"><code>delay</code> 타임아웃</a>를 주었다고 하더라도 키보드나 지원 기술 사용자가 알 수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 <code>autohide: false</code>를 사용하는 것을 권장합니다.</p>
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 
-<p>As part of Bootstrap&rsquo;s evolving CSS variables approach, toasts now use local CSS variables on <code>.toast</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+<p>Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 토스트에서 <code>.toast</code>의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_toasts.scss">scss/_toasts.scss</a>
@@ -1244,17 +1276,17 @@
 </span></span></code></pre></div><p>또는 아래와 같이 <code>data-bs-target</code>을 사용하여 <strong>toast 외부</strong>의 버튼에서도 수행할 수 있습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn-close&#34;</span> <span class="na">data-bs-dismiss</span><span class="o">=</span><span class="s">&#34;toast&#34;</span> <span class="na">data-bs-target</span><span class="o">=</span><span class="s">&#34;#my-toast&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Close&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h3 id="옵션">옵션 <a class="anchor-link" href="#%ec%98%b5%ec%85%98" aria-label="Link to this section: 옵션"></a></h3>
-<p>옵션은 데이터 속성이나 자바스크립트를 통해 전달할 수 있으므로 <code>데이터-bs-</code>에 옵션 이름을 추가할 수 있습니다(예: <code>데이터-bs-animation=&quot;{value}&quot;</code>). 데이터 속성을 통해 옵션을 전달할 때 옵션 이름의 대/소문자 유형을 &lsquo;<em>camelCase</em>&lsquo;에서 &lsquo;<em>kebab-case</em>&lsquo;로 변경해야 합니다. 예를 들어 <code>data-bs-custom-class=&quot;beautifier&quot;</code> 대신 <code>data-bs-customClass=&quot;beautifier&quot;</code>를 사용합니다.</p>
+<p>옵션은 데이터 속성이나 JavaScript를 통해 전달할 수 있으므로 <code>data-bs-</code>에 옵션 이름을 추가할 수 있습니다(예: <code>data-bs-animation=&quot;{value}&quot;</code>). 데이터 속성을 통해 옵션을 전달할 때 옵션 이름의 대/소문자 유형을 &lsquo;<em>camelCase</em>&lsquo;에서 &lsquo;<em>kebab-case</em>&lsquo;로 변경해야 합니다. 예를 들어 <code>data-bs-custom-class=&quot;beautifier&quot;</code> 대신 <code>data-bs-customClass=&quot;beautifier&quot;</code>를 사용합니다.</p>
 <p>Bootstrap 5.2.0부터 모든 컴포넌트는 간단한 컴포넌트 구성을 JSON 문자열로 저장할 수 있는 <strong>experimental</strong> 예약 데이터 속성 <code>data-bs-config</code>를 지원합니다. 요소에 <code>data-bs-config='{&quot;delay&quot;:0,&quot;title&quot;:123}'</code> 및 <code>data-bs-title=&quot;456&quot;</code> 속성이 있는 경우 최종 <code>title</code> 값은 <code>456</code>이 되며 별도의 데이터 속성이 <code>data-bs-config</code>에 지정된 값을 재정의합니다. 또한 기존 데이터 속성에는 <code>data-bs-delay='{&quot;show&quot;:0,&quot;hide&quot;:150}'</code>와 같은 JSON 값을 저장할 수 있습니다.</p>
-<p>The final configuration object is the merged result of <code>data-bs-config</code>, <code>data-bs-</code>, and <code>js object</code> where the latest given key-value overrides the others.</p>
+<p>최종 구성 개체는 <code>data-bs-config</code>, <code>data-bs-</code>, <code>js object</code>의 병합된 결과로, 주어진 최신 key-value가 다른 key-value를 재정의합니다.</p>
 
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th>Name</th>
-<th>Type</th>
-<th>Default</th>
-<th>Description</th>
+<th>이름</th>
+<th>유형</th>
+<th>기본값</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
@@ -1262,59 +1294,59 @@
 <td><code>animation</code></td>
 <td>boolean</td>
 <td><code>true</code></td>
-<td>Apply a CSS fade transition to the toast.</td>
+<td>토스트에 CSS 페이드 전환을 적용합니다.</td>
 </tr>
 <tr>
 <td><code>autohide</code></td>
 <td>boolean</td>
 <td><code>true</code></td>
-<td>Automatically hide the toast after the delay.</td>
+<td>지연 후 자동으로 토스트를 숨깁니다.</td>
 </tr>
 <tr>
 <td><code>delay</code></td>
 <td>number</td>
 <td><code>5000</code></td>
-<td>Delay in milliseconds before hiding the toast.</td>
+<td>토스트를 숨기기 전 지연 시간(밀리초)을 설정합니다.</td>
 </tr>
 </tbody>
 </table></div>
 
 <h3 id="메소드">메소드 <a class="anchor-link" href="#%eb%a9%94%ec%86%8c%eb%93%9c" aria-label="Link to this section: 메소드"></a></h3>
 <div class="bd-callout bd-callout-danger">
-<strong>All API methods are asynchronous and start a transition.</strong> They return to the caller as soon as the transition is started, but before it ends. In addition, a method call on a transitioning component will be ignored. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">Learn more in our JavaScript docs.</a>
+<strong>모든 API 메서드는 비동기식이며 전환을 시작합니다.</strong> 전환이 시작되는 즉시 호출자에게 반환되지만 전환이 끝나기 전에 호출자에게 반환됩니다. 또한 전환 중인 컴포넌트에 대한 메서드 호출은 무시됩니다. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">JavaScript 문서에서 자세히 알아보세요.</a>
 </div>
 
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th>Method</th>
-<th>Description</th>
+<th>방법</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>dispose</code></td>
-<td>Hides an element&rsquo;s toast. Your toast will remain on the DOM but won&rsquo;t show anymore.</td>
+<td>요소의 토스트를 숨깁니다. 토스트는 DOM에 남아 있지만 더 이상 표시되지 않습니다.</td>
 </tr>
 <tr>
 <td><code>getInstance</code></td>
-<td><em>Static</em> method which allows you to get the toast instance associated with a DOM element. <br> For example: <code>const myToastEl = document.getElementById('myToastEl')</code> <code>const myToast = bootstrap.Toast.getInstance(myToastEl)</code> Returns a Bootstrap toast instance.</td>
+<td><em>정적</em> 메서드를 사용하여 DOM 엘리먼트와 연관된 토스트 인스턴스를 가져올 수 있습니다. <br> 예: <code>const myToastEl = document.getElementById('myToastEl')</code> <code>const myToast = bootstrap.Toast.getInstance(myToastEl)</code>는 Bootstrap 토스트 인스턴스를 반환합니다.</td>
 </tr>
 <tr>
 <td><code>getOrCreateInstance</code></td>
-<td><em>Static</em> method which allows you to get the toast instance associated with a DOM element, or create a new one, in case it wasn&rsquo;t initialized. <br><code>const myToastEl = document.getElementById('myToastEl')</code> <code>const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl)</code> Returns a Bootstrap toast instance.</td>
+<td><em>정적</em> 메서드를 사용하여 DOM 요소와 연결된 토스트 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. <br><code>const myToastEl = document.getElementById('myToastEl')</code> <code>const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl)</code>는 Bootstrap 토스트 인스턴스를 반환합니다.</td>
 </tr>
 <tr>
 <td><code>hide</code></td>
-<td>Hides an element&rsquo;s toast. <strong>Returns to the caller before the toast has actually been hidden</strong> (i.e. before the <code>hidden.bs.toast</code> event occurs). You have to manually call this method if you made <code>autohide</code> to <code>false</code>.</td>
+<td>요소의 토스트를 숨깁니다. <strong>토스트가 실제로 숨겨지기 전</strong>(즉, <code>hidden.bs.toast</code> 이벤트가 발생하기 전) 호출자에게 반환합니다. <code>autohide</code>를 <code>false</code>로 설정한 경우 이 메서드를 수동으로 호출해야 합니다.</td>
 </tr>
 <tr>
 <td><code>isShown</code></td>
-<td>Returns a boolean according to toast&rsquo;s visibility state.</td>
+<td>토스트의 가시성 상태에 따라 boolean을 반환합니다.</td>
 </tr>
 <tr>
 <td><code>show</code></td>
-<td>Reveals an element&rsquo;s toast. <strong>Returns to the caller before the toast has actually been shown</strong> (i.e. before the <code>shown.bs.toast</code> event occurs). You have to manually call this method, instead your toast won&rsquo;t show.</td>
+<td>요소의 토스트를 표시합니다. <strong>토스트가 실제로 표시되기 전</strong>(즉, <code>shown.bs.toast</code> 이벤트가 발생하기 전) 호출자에게 반환합니다. 이 메서드는 수동으로 호출해야 하며, 그렇지 않으면 토스트가 표시되지 않습니다.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1323,26 +1355,26 @@
 <div class="table-responsive"><table class="table">
 <thead>
 <tr>
-<th>Event</th>
-<th>Description</th>
+<th>이벤트</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>hide.bs.toast</code></td>
-<td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+<td>이 이벤트는 <code>hide</code> 인스턴스 메서드가 호출될 때 즉시 발생합니다.</td>
 </tr>
 <tr>
 <td><code>hidden.bs.toast</code></td>
-<td>This event is fired when the toast has finished being hidden from the user.</td>
+<td>이 이벤트는 토스트가 사용자에게 숨겨지는 것이 완료되면 발생합니다.</td>
 </tr>
 <tr>
 <td><code>show.bs.toast</code></td>
-<td>This event fires immediately when the <code>show</code> instance method is called.</td>
+<td>이 이벤트는 <code>show</code> 인스턴스 메서드가 호출될 때 즉시 발생합니다.</td>
 </tr>
 <tr>
 <td><code>shown.bs.toast</code></td>
-<td>This event is fired when the toast has been made visible to the user.</td>
+<td>이 이벤트는 토스트가 사용자에게 표시되었을 때 발생합니다.</td>
 </tr>
 </tbody>
 </table></div>
@@ -1377,7 +1409,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/content/tables.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/content/tables/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/content/tables.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">테이블</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -613,8 +647,6 @@
       
 
       <div class="bd-content ps-lg-2">
-        
-
         
 
         <h2 id="개요">개요 <a class="anchor-link" href="#%ea%b0%9c%ec%9a%94" aria-label="Link to this section: 개요"></a></h2>
@@ -777,7 +809,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">td</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;table-dark&#34;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span></span></span></code></pre></div>
 <div class="bd-callout bd-callout-info">
-<strong>Accessibility tip:</strong> Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies like screen readers. Please ensure the meaning is obvious from the content itself (e.g., the visible text with a <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>sufficient</em> color contrast</a>) or is included through alternative means, such as additional text hidden with the <code>.visually-hidden</code> class.
+<strong>접근성 팁:</strong> 색상을 사용하여 의미를 추가하면 시각적 표시만 제공되므로 화면 리더와 같은 보조 기술 사용자에게는 의미가 전달되지 않습니다. 콘텐츠 자체에서 의미가 명확하게 드러나거나(예: <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>충분한</em> 색상 대비</a>가 있는 가시 텍스트) <code>.visually-hidden</code> 클래스로 숨겨진 추가 텍스트 등 대체 수단을 통해 의미가 포함되었는지 확인하시기 바랍니다.
 </div>
 
 <h2 id="테이블-강조">테이블 강조 <a class="anchor-link" href="#%ed%85%8c%ec%9d%b4%eb%b8%94-%ea%b0%95%ec%a1%b0" aria-label="Link to this section: 테이블 강조"></a></h2>
@@ -1200,7 +1232,7 @@
 <ul>
 <li>먼저 <code>--bs-table-bg</code> 사용자 정의 속성으로 테이블 셀의 배경을 설정합니다. 그런 다음 모든 테이블 변형에 해당 사용자 정의 속성을 설정하여 테이블 셀을 색상화합니다. 이렇게 하면 반투명 색상을 테이블 배경으로 사용하더라도 문제가 발생하지 않습니다.</li>
 <li>그런 다음 <code>box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));</code>를 사용하여 테이블 셀에 삽입 상자 그림자를 추가하여 지정된 <code>background-color</code> 위에 레이어를 추가합니다. It uses custom cascade to override the <code>box-shadow</code>, regardless the CSS specificity. 큰 스프레드를 사용하고 블러를 사용하지 않기 때문에 색상이 모노톤이 됩니다. <code>--bs-table-accent-bg</code>는 기본적으로 설정되어 있지 않기 때문에 기본 상자 그림자가 없습니다.</li>
-<li><code>.table-striped</code>, <code>.table-striped-columns</code>, <code>.table-hover</code> 또는<code>.table-active</code> 클래스가 추가되면 <code>--bs-table-bg-type</code> 또는 <code>--bs-table-bg-state</code> (기본값은 <code>initial</code>)가 반투명 (<code>--bs-table-striped-bg</code>, <code>--bs-table-active-bg</code> or <code>--bs-table-hover-bg</code>)으로 설정되어 <code>--bs-table-accent-bg</code>를 재정의합니다.</li>
+<li><code>.table-striped</code>, <code>.table-striped-columns</code>, <code>.table-hover</code>  또는 <code>.table-active</code> 클래스가 추가되면 <code>--bs-table-bg-type</code> 또는 <code>--bs-table-bg-state</code> (기본값은 <code>initial</code>)가 반투명 (<code>--bs-table-striped-bg</code>, <code>--bs-table-active-bg</code> or <code>--bs-table-hover-bg</code>)으로 설정되어 <code>--bs-table-accent-bg</code>를 재정의합니다.</li>
 <li>각 테이블 변형에 대해 해당 색상에 따라 가장 높은 대비를 가진 <code>--bs-table-accent-bg</code> 색상을 생성합니다. 예를 들어 <code>.table-primary</code>의 강조 색상은 더 어둡고 <code>.table-dark</code>는 더 밝은 강조 색상입니다.</li>
 <li>텍스트 및 테두리 색상은 동일한 방식으로 생성되며 기본적으로 색상이 상속됩니다.</li>
 </ul>
@@ -2436,8 +2468,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></div></div>
 <h3 id="사용자-지정">사용자 지정 <a class="anchor-link" href="#%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%a7%80%ec%a0%95" aria-label="Link to this section: 사용자 지정"></a></h3>
-<p>-요인 변수 (<code>$table-striped-bg-factor</code>, <code>$table-active-bg-factor</code> &amp; <code>$table-hover-bg-factor</code>)는 테이블 변형의 대비를 결정하는 데에 사용됩니다.
--밝고 어두운 테이블 변형 외에도 테마 색상은 <code>$table-bg-scale</code> 변수에 의해 밝아집니다.</p>
+<ul>
+<li>요인 변수 (<code>$table-striped-bg-factor</code>, <code>$table-active-bg-factor</code> &amp; <code>$table-hover-bg-factor</code>)는 테이블 변형의 대비를 결정하는 데에 사용됩니다.</li>
+<li>밝고 어두운 테이블 변형 외에도 테마 색상은 <code>$table-bg-scale</code> 변수에 의해 밝아집니다.</li>
+</ul>
 
       </div>
     </main>
@@ -2464,7 +2498,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

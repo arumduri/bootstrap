@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/utilities/api.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/utilities/api/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/utilities/api.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">유틸리티 API</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -566,14 +600,14 @@
   <ul>
     <li><a href="#api-설명">API 설명</a>
       <ul>
-        <li><a href="#속성">속성</a></li>
-        <li><a href="#값">값</a></li>
-        <li><a href="#클래스">클래스</a></li>
+        <li><a href="#property">property</a></li>
+        <li><a href="#values">values</a></li>
+        <li><a href="#class">class</a></li>
         <li><a href="#css-변수-유틸리티">CSS 변수 유틸리티</a></li>
         <li><a href="#로컬-css-변수">로컬 CSS 변수</a></li>
-        <li><a href="#상태">상태</a></li>
-        <li><a href="#반응형-유틸리티">반응형 유틸리티</a></li>
-        <li><a href="#인쇄">인쇄</a></li>
+        <li><a href="#state">state</a></li>
+        <li><a href="#responsive">responsive</a></li>
+        <li><a href="#print">print</a></li>
       </ul>
     </li>
     <li><a href="#important">Important</a></li>
@@ -604,17 +638,15 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-
         <p>Bootstrap 유틸리티는 유틸리티 API로 생성되며 Sass를 통해 기본 유틸리티 클래스 세트를 수정하거나 확장하는 데 사용할 수 있습니다. 저희 유틸리티 API는 다양한 옵션으로 클래스 패밀리를 생성하기 위한 일련의 Sass맵 및 함수를 기반으로 합니다. Sass맵에 익숙하지 않은 경우 <a href="https://sass-lang.com/documentation/values/maps">official Sass docs</a>를 읽고 시작해 보세요.</p>
 <p><code>$utilities</code> 맵에는 우리의 모든 유틸리티가 포함되어 나중에는 사용자정의 <code>$utilities</code> 와 통합(파일이 있을 경우)됩니다. 유틸리티 맵에는 다음 옵션을 허용할 수 있는 유틸리티 그룹의 키 목록이 포함되어 있습니다:</p>
 <div class="table-responsive"><table class="table table-utilities">
 <thead>
 <tr>
-<th>Option</th>
-<th>Type</th>
-<th>Default value</th>
-<th>Description</th>
+<th>옵션</th>
+<th>유형</th>
+<th>기본값</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
@@ -626,30 +658,30 @@
 </tr>
 <tr>
 <td><a href="#values"><code>values</code></a></td>
-<td><strong>Required</strong></td>
+<td><strong>필수</strong></td>
 <td>–</td>
 <td>값 목록입니다. 클래스 이름이 값과 동일하지 않게 하려는 경우에는 맵입니다. <code>null</code>이 맵 키로 사용되면 <code>class</code>가 클래스명 앞에 붙지 않습니다.</td>
 </tr>
 <tr>
 <td><a href="#class"><code>class</code></a></td>
-<td>Optional</td>
+<td>선택</td>
 <td>null</td>
-<td>생성된 클래스의 이름입니다. 제공하지 않고 <code>property</code>가 문자열 배열인 경우 <code>class</code>는 기본적으로 <code>property</code> 배열의 첫 번째 요소로 설정됩니다. If not provided and <code>property</code> is a string, the <code>values</code> keys are used for the <code>class</code> names.</td>
+<td>생성된 클래스의 이름입니다. 제공하지 않고 <code>property</code>가 문자열 배열인 경우 <code>class</code>는 기본적으로 <code>property</code> 배열의 첫 번째 요소로 설정됩니다. 프로퍼티가 제공되지 않았고 <code>property</code>가 문자열이며 <code>values</code> 키가 <code>class</code> 이름에 사용됩니다.</td>
 </tr>
 <tr>
-<td><a href="#css-variable-utilities"><code>css-var</code></a></td>
+<td><a href="#css-%EB%B3%80%EC%88%98-%EC%9C%A0%ED%8B%B8%EB%A6%AC%ED%8B%B0"><code>css-var</code></a></td>
 <td>선택</td>
 <td><code>false</code></td>
 <td>CSS 규칙 대신 CSS 변수를 생성하는 불대수입니다.</td>
 </tr>
 <tr>
-<td><a href="#css-variable-utilities"><code>css-variable-name</code></a></td>
-<td>Optional</td>
+<td><a href="#css-%EB%B3%80%EC%88%98-%EC%9C%A0%ED%8B%B8%EB%A6%AC%ED%8B%B0"><code>css-variable-name</code></a></td>
+<td>선택</td>
 <td>null</td>
-<td>Custom un-prefixed name for the CSS variable inside the ruleset.</td>
+<td>규칙 집합 내에서 접두사가 없는 사용자 정의 CSS 변수의 이름입니다.</td>
 </tr>
 <tr>
-<td><a href="#local-css-variables"><code>local-vars</code></a></td>
+<td><a href="#%EB%A1%9C%EC%BB%AC-css-%EB%B3%80%EC%88%98"><code>local-vars</code></a></td>
 <td>선택</td>
 <td>null</td>
 <td>CSS 규칙 외에 생성할 로컬 CSS 변수의 맵입니다.</td>
@@ -707,9 +739,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">opacity-50</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">opacity-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">opacity-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span> <span class="p">}</span>
-</span></span></code></pre></div><h3 id="속성">속성 <a class="anchor-link" href="#%ec%86%8d%ec%84%b1" aria-label="Link to this section: 속성"></a></h3>
+</span></span></code></pre></div><h3 id="property">property <a class="anchor-link" href="#property" aria-label="Link to this section: property"></a></h3>
 <p>모든 유틸리티에 대해 필수적으로 <code>property</code> 키를 설정해야 하며 유효한 CSS 속성을 포함해야 합니다. 이 속성은 생성된 유틸리티의 규칙 집합에서 사용됩니다. <code>class</code> 키가 생략되면 기본 클래스 이름으로도 사용됩니다. <code>text-decoration</code> 유틸리티를 사용하는 것을 고려해보세요:</p>
-<p>The required <code>property</code> key must be set for any utility, and it must contain a valid CSS property. This property is used in the generated utility&rsquo;s ruleset. When the <code>class</code> key is omitted, it also serves as the default class name. Consider the <code>text-decoration</code> utility:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;text-decoration&#34;</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="na">property</span><span class="o">:</span> <span class="ni">text</span><span class="o">-</span><span class="n">decoration</span><span class="o">,</span>
@@ -720,11 +751,11 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">text-decoration-none</span> <span class="p">{</span> <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">text-decoration-underline</span> <span class="p">{</span> <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">underline</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">text-decoration-line-through</span> <span class="p">{</span> <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">line-through</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-</span></span></code></pre></div><h3 id="값">값 <a class="anchor-link" href="#%ea%b0%92" aria-label="Link to this section: 값"></a></h3>
+</span></span></code></pre></div><h3 id="values">values <a class="anchor-link" href="#values" aria-label="Link to this section: values"></a></h3>
 <p><code>values</code> 키를 사용하여 생성된 클래스 이름 및 규칙에서 지정된 <code>property</code>에 사용할 값을 지정하세요. 목록 또는 맵이 될 수 있습니다 (유틸리티 또는 Sass 변수에서 설정 가능).</p>
-<p><a href="/docs/5.3/utilities/text/#text-decoration"><code>text-decoration</code> 유틸리티</a>와 같은 목록으로:</p>
+<p><a href="/docs/5.3/utilities/text/#text-decoration"><code>text-decoration</code> 유틸리티</a>와 같은 목록:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nt">values</span><span class="nd">:</span> <span class="nt">none</span> <span class="nt">underline</span> <span class="nt">line-through</span>
-</span></span></code></pre></div><p><a href="/docs/5.3/utilities/opacity/"><code>opacity</code> 유틸리티</a>와 같은 맵은 다음과 같습니다:</p>
+</span></span></code></pre></div><p><a href="/docs/5.3/utilities/opacity/"><code>opacity</code> 유틸리티</a>와 같은 맵:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="na">values</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="na">0</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
 </span></span><span class="line"><span class="cl">  <span class="na">25</span><span class="o">:</span> <span class="mf">.25</span><span class="o">,</span>
@@ -732,9 +763,9 @@
 </span></span><span class="line"><span class="cl">  <span class="na">75</span><span class="o">:</span> <span class="mf">.75</span><span class="o">,</span>
 </span></span><span class="line"><span class="cl">  <span class="na">100</span><span class="o">:</span> <span class="mi">1</span><span class="o">,</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span></code></pre></div><p><a href="/docs/5.3/utilities/position/"><code>position</code> 유틸리티</a>처럼 목록 또는 맵을 설정하는 Sass 변수는 다음과 같습니다:</p>
+</span></span></code></pre></div><p><a href="/docs/5.3/utilities/position/"><code>position</code> 유틸리티</a>와 같은 목록 또는 맵을 설정하는 Sass 변수는 다음과 같습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nt">values</span><span class="nd">:</span> <span class="err">$</span><span class="nt">position-values</span>
-</span></span></code></pre></div><h3 id="클래스">클래스 <a class="anchor-link" href="#%ed%81%b4%eb%9e%98%ec%8a%a4" aria-label="Link to this section: 클래스"></a></h3>
+</span></span></code></pre></div><h3 id="class">class <a class="anchor-link" href="#class" aria-label="Link to this section: class"></a></h3>
 <p>컴파일된 CSS에서 사용되는 클래스 접두사를 변경하려면 <code>class</code> 옵션을 사용하세요. 예를 들어 <code>.opacity-*</code>에서 <code>.o-*</code>로 변경하려면 다음과 같이 할 수 있습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
@@ -812,7 +843,7 @@
 </span></span><span class="line"><span class="cl">  <span class="nv">--bs-bg-opacity</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">primary</span><span class="o">-</span><span class="n">rgb</span><span class="p">),</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="n">bg</span><span class="o">-</span><span class="n">opacity</span><span class="p">))</span> <span class="cp">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="상태">상태 <a class="anchor-link" href="#%ec%83%81%ed%83%9c" aria-label="Link to this section: 상태"></a></h3>
+</span></span></code></pre></div><h3 id="state">state <a class="anchor-link" href="#state" aria-label="Link to this section: state"></a></h3>
 <p>가상 클래스의 변형을 생성하려면 <code>state</code> 옵션을 사용하세요. 비슷한 클래스의 예시로는 <code>:hover</code> 및 <code>:focus</code>가 있습니다. 상태 목록이 제공되면 해당 가상 클래스에 대한 클래스 이름이 생성됩니다. 예를 들어, 호버시 불투명도를 변경하려면 <code>state: hover</code>를 추가하면 컴파일된 CSS에 <code>.opacity-hover:hover</code>가 표시됩니다.</p>
 <p>여러 개의 가상 클래스가 필요하신가요? <code>state : hover focus</code>와 같이 공백으로 구분 된 상태 목록을 사용하세요.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
@@ -835,7 +866,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">opacity-50-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.5</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">opacity-75-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">opacity-100-hover</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-</span></span></code></pre></div><h3 id="반응형-유틸리티">반응형 유틸리티 <a class="anchor-link" href="#%eb%b0%98%ec%9d%91%ed%98%95-%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0" aria-label="Link to this section: 반응형 유틸리티"></a></h3>
+</span></span></code></pre></div><h3 id="responsive">responsive <a class="anchor-link" href="#responsive" aria-label="Link to this section: responsive"></a></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="na">property</span><span class="o">:</span> <span class="ni">opacity</span><span class="o">,</span>
@@ -895,7 +926,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">opacity-xxl-75</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mf">.75</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">opacity-xxl-100</span> <span class="p">{</span> <span class="k">opacity</span><span class="p">:</span> <span class="mi">1</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="인쇄">인쇄 <a class="anchor-link" href="#%ec%9d%b8%ec%87%84" aria-label="Link to this section: 인쇄"></a></h3>
+</span></span></code></pre></div><h3 id="print">print <a class="anchor-link" href="#print" aria-label="Link to this section: print"></a></h3>
 <p><code>print</code> 옵션을 활성화하면 ** 또한 ** 인쇄용 유틸리티 클래스가 생성되며, 이는 <code>@media print {...}</code> 미디어 쿼리 내에서만 적용됩니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$utilities</span><span class="o">:</span> <span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;opacity&#34;</span><span class="o">:</span> <span class="p">(</span>
@@ -1156,7 +1187,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

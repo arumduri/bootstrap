@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/components/progress.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/components/progress/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/components/progress.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">프로그레스</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -565,9 +599,9 @@
             <nav id="TableOfContents">
   <ul>
     <li><a href="#작동-원리">작동 원리</a></li>
-    <li><a href="#bar-sizing">Bar sizing</a>
+    <li><a href="#표시줄-크기-조정">표시줄 크기 조정</a>
       <ul>
-        <li><a href="#width">Width</a></li>
+        <li><a href="#너비">너비</a></li>
         <li><a href="#높이">높이</a></li>
       </ul>
     </li>
@@ -592,27 +626,20 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
-
         <div class="bd-callout bd-callout-info">
-<strong>New markup in v5.3.0 —</strong> We&rsquo;ve deprecated the previous HTML structure for progress bars and replaced it with a more accessible one. The previous structure will continue to work until v6. <a href="/docs/5.3/migration/#improved-markup-for-progress-bars">See what&rsquo;s changed in our migration guide.</a>
+<strong>v5.3.0의 새로운 마크업 -</strong> 진행률 표시줄에 대한 이전 HTML 구조를 더 이상 사용하지 않고 더 접근하기 쉬운 구조로 대체했습니다. 이전 구조는 v6까지 계속 작동합니다. <a href="/docs/5.3/migration/#improved-markup-for-progress-bars">마이그레이션 가이드에서 변경된 내용을 확인하세요.</a>
 </div>
 
 <h2 id="작동-원리">작동 원리 <a class="anchor-link" href="#%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac" aria-label="Link to this section: 작동 원리"></a></h2>
-<p>Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don&rsquo;t use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress">the HTML5 <code>&lt;progress&gt;</code> element</a>, ensuring you can stack progress bars, animate them, and place text labels over them.</p>
+<p>프로그레스 컴포넌트는 두 개의 HTML 요소와 너비를 설정하는 몇 가지 CSS, 몇 가지 속성으로 만들어집니다. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress">HTML5 <code>&lt;progress&gt;</code> 요소</a>를 사용하지 않으므로 진행률 표시줄을 쌓고, 애니메이션을 적용하고, 그 위에 텍스트 레이블을 배치할 수 있습니다.</p>
 <ul>
-<li>We use the <code>.progress</code> as a wrapper to indicate the max value of the progress bar.</li>
-<li>The <code>.progress</code> wrapper also requires a <code>role=&quot;progressbar&quot;</code> and <code>aria</code> attributes to make it accessible, including an accessible name (using <code>aria-label</code>, <code>aria-labelledby</code>, or similar).</li>
-<li>We use the inner <code>.progress-bar</code> purely for the visual bar and label.</li>
-<li>The <code>.progress-bar</code> requires an inline style, utility class, or custom CSS to set its width.</li>
-<li>We provide a special <code>.progress-stacked</code> class to create multiple/stacked progress bars.</li>
+<li>진행률 표시줄의 최대 값을 나타내기 위해 <code>.progress</code>를 래퍼로 사용합니다.</li>
+<li><code>.progress</code> 래퍼에는 접근 가능한 이름(<code>aria-label</code>, <code>aria-labelledby</code> 등 사용)을 포함하여 <code>role=&quot;progressbar&quot;</code> 및 <code>aria</code> 속성이 필요합니다.</li>
+<li>내부의 <code>.progress-bar</code>는 시각적 표시줄과 레이블에만 사용합니다.</li>
+<li><code>.progress-bar</code>의 너비를 설정하려면 인라인 스타일, 유틸리티 클래스 또는 사용자 정의 CSS가 필요합니다.</li>
+<li>여러 개의 누적 진행률 표시줄을 만들 수 있는 특별한 <code>.progress-stacked</code> 클래스를 제공합니다.</li>
 </ul>
-<p>Put that all together, and you have the following examples.</p>
+<p>이 모든 것을 합치면 다음과 같은 예제가 됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -659,9 +686,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h2 id="bar-sizing">Bar sizing <a class="anchor-link" href="#bar-sizing" aria-label="Link to this section: Bar sizing"></a></h2>
-<h3 id="width">Width <a class="anchor-link" href="#width" aria-label="Link to this section: Width"></a></h3>
-<p>Bootstrap provides a handful of <a href="/docs/5.3/utilities/sizing/">utilities for setting width</a>. Depending on your needs, these may help with quickly configuring the width of the <code>.progress-bar</code>.</p>
+<h2 id="표시줄-크기-조정">표시줄 크기 조정 <a class="anchor-link" href="#%ed%91%9c%ec%8b%9c%ec%a4%84-%ed%81%ac%ea%b8%b0-%ec%a1%b0%ec%a0%95" aria-label="Link to this section: 표시줄 크기 조정"></a></h2>
+<h3 id="너비">너비 <a class="anchor-link" href="#%eb%84%88%eb%b9%84" aria-label="Link to this section: 너비"></a></h3>
+<p>Bootstrap은 몇 가지 <a href="/docs/5.3/utilities/sizing/">너비 설정을 위한 유틸리티</a>를 제공합니다. 필요에 따라 <code>.progress-bar</code>의 너비를 빠르게 구성하는 데 도움이 될 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -738,7 +765,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>Note that by default, the content inside the <code>.progress-bar</code> is controlled with <code>overflow: hidden</code>, so it doesn&rsquo;t bleed out of the bar. If your progress bar is shorter than its label, the content will be capped and may become unreadable. To change this behavior, you can use <code>.overflow-visible</code> from the <a href="/docs/5.3/utilities/overflow/">overflow utilities</a>, but make sure to also define an explicit <a href="/docs/5.3/utilities/colors/#colors">text color</a> so the text remains readable. Be aware though that currently this approach does not take into account <a href="/docs/5.3/customize/color-modes/">color modes</a>.</p>
+<p>기본적으로 <code>.progress-bar</code> 내부의 콘텐츠는 <code>.overflow: hidden</code>으로 제어되므로 표시줄 밖으로 흘러나오지 않습니다. 진행률 표시줄이 레이블보다 짧으면 콘텐츠가 막혀서 읽을 수 없게 될 수 있습니다. 이 동작을 변경하려면 <a href="/docs/5.3/utilities/overflow/">오버플로 유틸리티</a>에서 <code>.overflow-visible</code>을 사용할 수 있지만, 텍스트가 계속 읽을 수 있도록 명시적인 <a href="/docs/5.3/utilities/colors/#colors">텍스트 색상</a>도 정의해야 합니다. 현재 이 접근 방식은 <a href="/docs/5.3/customize/color-modes/">색상 모드</a>를 고려하지 않는다는 점에 유의하세요.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -804,10 +831,10 @@
 </div>
 
 <div class="bd-callout bd-callout-info">
-<strong>Accessibility tip:</strong> Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies like screen readers. Please ensure the meaning is obvious from the content itself (e.g., the visible text with a <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>sufficient</em> color contrast</a>) or is included through alternative means, such as additional text hidden with the <code>.visually-hidden</code> class.
+<strong>접근성 팁:</strong> 색상을 사용하여 의미를 추가하면 시각적 표시만 제공되므로 화면 리더와 같은 보조 기술 사용자에게는 의미가 전달되지 않습니다. 콘텐츠 자체에서 의미가 명확하게 드러나거나(예: <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>충분한</em> 색상 대비</a>가 있는 가시 텍스트) <code>.visually-hidden</code> 클래스로 숨겨진 추가 텍스트 등 대체 수단을 통해 의미가 포함되었는지 확인하시기 바랍니다.
 </div>
 
-<p>If you&rsquo;re adding labels to progress bars with a custom background color, make sure to also set an appropriate <a href="/docs/5.3/utilities/colors/#colors">text color</a>, so the labels remain readable and have sufficient contrast.</p>
+<p>사용자 지정 배경색으로 진행률 표시줄에 레이블을 추가하는 경우에는 적절한 <a href="/docs/5.3/utilities/colors/#colors">텍스트 색상</a>도 설정해야 레이블이 가독성을 유지하고 충분한 대비를 유지할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -848,7 +875,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>Alternatively, you can use the new combined <a href="/docs/5.3/helpers/color-background/">color and background</a> helper classes.</p>
+<p>또는 새로운 결합형 <a href="/docs/5.3/helpers/color-background/">색상 및 배경</a> 도우미 클래스를 사용할 수도 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -872,7 +899,7 @@
 </div>
 
 <h2 id="다수">다수 <a class="anchor-link" href="#%eb%8b%a4%ec%88%98" aria-label="Link to this section: 다수"></a></h2>
-<p>You can include multiple progress components inside a container with <code>.progress-stacked</code> to create a single stacked progress bar. Note that in this case, the styling to set the visual width of the progress bar <em>must</em> be applied to the <code>.progress</code> elements, rather than the <code>.progress-bar</code>s.</p>
+<p><code>.progress-stacked</code>가 있는 컨테이너 안에 여러 개의 진행률 컴포넌트를 포함시켜 하나의 누적된 진행률 표시줄을 만들 수 있습니다. 이 경우 진행률 표시줄의 시각적 너비를 설정하는 스타일링은 <code>.progress-bar</code>가 아닌 <code>.progress</code> 요소에 적용해야 합니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -987,7 +1014,7 @@
 <h3 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 
-<p>As part of Bootstrap&rsquo;s evolving CSS variables approach, progress bars now use local CSS variables on <code>.progress</code> for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.</p>
+<p>Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 진행률 표시줄은 이제 <code>.progress</code>에서 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 향상시킵니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_progress.scss">scss/_progress.scss</a>
@@ -1065,7 +1092,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

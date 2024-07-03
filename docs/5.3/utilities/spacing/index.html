@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/utilities/spacing.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/utilities/spacing/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/utilities/spacing.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">간격</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -593,43 +627,41 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-
         <h2 id="마진과-패딩">마진과 패딩 <a class="anchor-link" href="#%eb%a7%88%ec%a7%84%ea%b3%bc-%ed%8c%a8%eb%94%a9" aria-label="Link to this section: 마진과 패딩"></a></h2>
 <p>약칭 클래스를 사용하여 요소 또는 측면의 자식 집합에 반응형 <code>margin</code> 또는 <code>padding</code> 값을 할당합니다. 개별 속성, 모든 속성, 수직 및 수평 속성에 대한 지원이 포함됩니다. 클래스는 <code>.25rem</code>에서 <code>3rem</code> 범위의 기본 Sass 맵에서 빌드됩니다.</p>
 <div class="bd-callout bd-callout-info">
-<strong>CSS 그리드 시스템 모듈을 사용하십니까?</strong> 대신에 <a href="#gap">gap utility</a>를 사용해보세요.
+<strong>CSS 그리드 시스템 모듈을 사용하십니까?</strong> 대신에 <a href="#%EA%B0%AD">갭 유틸리티</a>를 사용해보세요.
 </div>
 
 <h3 id="표기">표기 <a class="anchor-link" href="#%ed%91%9c%ea%b8%b0" aria-label="Link to this section: 표기"></a></h3>
-<p><code>xs</code>에서<code>xxl</code>까지 모든 중단점에 적용되는 간격 유틸리티에는 별도의 중단점 약어가 없습니다. 이는 이러한 클래스가 <code>min-width : 0</code> 이상에서 적용되므로 미디어 쿼리에 의해 바인딩되지 않기 때문입니다. 그러나 나머지 중단점에는 중단점 약어가 포함됩니다.</p>
-<p>클래스는 <code>xs</code>의 경우 <code>{property} {sides}-{size}</code> 형식을 사용하고 <code>sm</code> , <code>md</code> , <code>lg</code> , <code>xl</code>의 경우  <code>{property} {sides}-{breakpoint}-{size}</code> 형식을 사용하여 이름이 지정됩니다.</p>
-<p>Where <em>property</em> is one of:</p>
+<p><code>xs</code>에서 <code>xxl</code>까지 모든 중단점에 적용되는 간격 유틸리티에는 별도의 중단점 약어가 없습니다. 이는 이러한 클래스가 <code>min-width : 0</code> 이상에서 적용되므로 미디어 쿼리에 의해 바인딩되지 않기 때문입니다. 그러나 나머지 중단점에는 중단점 약어가 포함됩니다.</p>
+<p>클래스는 <code>xs</code>의 경우 <code>{property} {sides}-{size}</code> 형식을 사용하고 <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>의 경우 <code>{property} {sides}-{breakpoint}-{size}</code> 형식을 사용하여 이름이 지정됩니다.</p>
+<p><em>속성</em> - property:</p>
 <ul>
-<li><code>m</code> - for classes that set <code>margin</code></li>
-<li><code>p</code> - for classes that set <code>padding</code></li>
+<li><code>m</code> - <code>margin</code> 클래스 설정</li>
+<li><code>p</code> - <code>padding</code> 클래스 설정</li>
 </ul>
-<p>Where <em>sides</em> is one of:</p>
+<p><em>방향</em> - sides:</p>
 <ul>
-<li><code>t</code> - for classes that set <code>margin-top</code> or <code>padding-top</code></li>
-<li><code>b</code> - for classes that set <code>margin-bottom</code> or <code>padding-bottom</code></li>
-<li><code>s</code> - (start) for classes that set <code>margin-left</code> or <code>padding-left</code> in LTR, <code>margin-right</code> or <code>padding-right</code> in RTL</li>
-<li><code>e</code> - (end) for classes that set <code>margin-right</code> or <code>padding-right</code> in LTR, <code>margin-left</code> or <code>padding-left</code> in RTL</li>
-<li><code>x</code> - for classes that set both <code>*-left</code> and <code>*-right</code></li>
-<li><code>y</code> - for classes that set both <code>*-top</code> and <code>*-bottom</code></li>
-<li>blank - for classes that set a <code>margin</code> or <code>padding</code> on all 4 sides of the element</li>
+<li><code>t</code> - <code>margin-top</code> 또는 <code>padding-top</code> 클래스 설정</li>
+<li><code>b</code> - <code>margin-bottom</code> 또는 <code>padding-bottom</code> 클래스 설정</li>
+<li><code>s</code> - (start) LTR에서는 <code>margin-left</code> 또는 <code>padding-left</code> 클래스, RTL에서는 <code>margin-right</code> 또는 <code>padding-right</code> 클래스 설정</li>
+<li><code>e</code> - (end) for classes that set <code>margin-right</code> 또는 <code>padding-right</code> 클래스, RTL에서는 <code>margin-left</code> 또는 <code>padding-left</code> 클래스 설정</li>
+<li><code>x</code> - <code>*-left</code>와 <code>*-right</code> 모두 클래스 설정</li>
+<li><code>y</code> - <code>*-top</code>과 <code>*-bottom</code> 모두 클래스 설정</li>
+<li>값 없음 - 요소의 4면 모두에 <code>margin</code> 또는 <code>padding</code>을 설정하는 클래스의 경우</li>
 </ul>
-<p>Where <em>size</em> is one of:</p>
+<p><em>크기</em> - size:</p>
 <ul>
-<li><code>0</code> - for classes that eliminate the <code>margin</code> or <code>padding</code> by setting it to <code>0</code></li>
-<li><code>1</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer * .25</code></li>
-<li><code>2</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer * .5</code></li>
-<li><code>3</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer</code></li>
-<li><code>4</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer * 1.5</code></li>
-<li><code>5</code> - (by default) for classes that set the <code>margin</code> or <code>padding</code> to <code>$spacer * 3</code></li>
-<li><code>auto</code> - for classes that set the <code>margin</code> to auto</li>
+<li><code>0</code> - <code>margin</code> 또는 <code>padding</code>을 <code>0</code>으로 설정하여 제거</li>
+<li><code>1</code> - (기본적으로) <code>margin</code> 또는 <code>padding</code>을 <code>$spacer * .25</code>로 설정</li>
+<li><code>2</code> - (기본적으로) <code>margin</code> 또는 <code>padding</code>을 <code>$spacer * .5</code>로 설정</li>
+<li><code>3</code> - (기본적으로) <code>margin</code> 또는 <code>padding</code>을 <code>$spacer</code>로 설정</li>
+<li><code>4</code> - (기본적으로) <code>margin</code> 또는 <code>padding</code>을 <code>$spacer * 1.5</code>로 설정</li>
+<li><code>5</code> - (기본적으로) <code>margin</code> 또는 <code>padding</code>을 <code>$spacer * 3</code>로 설정</li>
+<li><code>auto</code> - <code>margin</code>을 자동으로 설정한 클래스의 경우</li>
 </ul>
-<p>(<code>$ spacers</code> Sass 맵 변수에 항목을 추가하면 더 많은 크기를 추가할 수 있습니다.)</p>
+<p>(<code>$ spacers</code> Sass 맵 변수에 항목을 추가하면 더 많은 크기를 추가할 수 있습니다)</p>
 <h3 id="예시">예시 <a class="anchor-link" href="#%ec%98%88%ec%8b%9c" aria-label="Link to this section: 예시"></a></h3>
 <p>다음은 이러한 클래스의 몇 가지 대표적인 예입니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.mt-0</span> <span class="p">{</span>
@@ -649,7 +681,7 @@
 </span></span><span class="line"><span class="cl">  <span class="na">padding</span><span class="o">:</span> <span class="nv">$spacer</span> <span class="k">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="세로-중앙">세로 중앙 <a class="anchor-link" href="#%ec%84%b8%eb%a1%9c-%ec%a4%91%ec%95%99" aria-label="Link to this section: 세로 중앙"></a></h3>
-<p>Additionally, Bootstrap also includes an <code>.mx-auto</code> class for horizontally centering fixed-width block level content—that is, content that has <code>display: block</code> and a <code>width</code> set—by setting the horizontal margins to <code>auto</code>.</p>
+<p>또한 Bootstrap에는 가로 여백을 <code>auto</code>로 설정하여 고정 너비 블록 수준 콘텐츠, 즉 <code>display: block</code>과 <code>width</code>이 설정된 콘텐츠를 가로 중앙에 배치하는 <code>.mx-auto</code> 클래스도 포함되어 있습니다.</p>
 <div class="bd-example">
   <div class="mx-auto p-2" style="width: 200px; background-color: rgba(var(--bd-violet-rgb),.15); border: rgba(var(--bd-violet-rgb),.3) solid 1px;">
     Centered element
@@ -659,8 +691,8 @@
 </span></span><span class="line"><span class="cl">  Centered element
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h2 id="음수-마진">음수 마진 <a class="anchor-link" href="#%ec%9d%8c%ec%88%98-%eb%a7%88%ec%a7%84" aria-label="Link to this section: 음수 마진"></a></h2>
-<p>CSS에서 <code>margin</code> 속성은 음수 값을 사용할 수 있습니다 (<code>padding</code> 은 사용할 수 없음). 이러한 음수 여백은 <strong>기본적으로 사용 중지</strong> 되지만 <code>$ enable-negative-margins : true</code>를 설정하여 Sass에서 사용하도록 설정할 수 있습니다.</p>
-<p>구문은 기본 양수 margin 유틸리티와 거의 동일하지만 요청 된 크기 앞에 <code>n</code>이 추가됩니다. 다음은 <code>.mt-1</code> 과 반대되는 예시 클래스입니다:</p>
+<p>CSS에서 <code>margin</code> 속성은 음수 값을 사용할 수 있습니다 (<code>padding</code>은 사용할 수 없음). 이러한 음수 여백은 <strong>기본적으로 사용 중지</strong> 되지만 <code>$ enable-negative-margins : true</code>를 설정하여 Sass에서 사용하도록 설정할 수 있습니다.</p>
+<p>구문은 기본 양수 margin 유틸리티와 거의 동일하지만 요청 된 크기 앞에 <code>n</code>이 추가됩니다. 다음은 <code>.mt-1</code>과 반대되는 예시 클래스입니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nc">.mt-n1</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">margin-top</span><span class="o">:</span> <span class="o">-</span><span class="mi">0</span><span class="mf">.25</span><span class="kt">rem</span> <span class="k">!important</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -694,9 +726,9 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>지원에는 Bootstrap의 모든 그리드 중단점에 대한 반응형 옵션과 <code>$ spacers</code> 맵 (<code>0</code> – <code>5</code>)의 6 가지 크기가 포함됩니다. <code>.gap-auto</code> 유틸리티 클래스는 사실상<code>.gap-0</code> 과 동일하므로 별도로 없습니다.</p>
+<p>지원에는 Bootstrap의 모든 그리드 중단점에 대한 반응형 옵션과 <code>$ spacers</code> 맵 (<code>0</code> – <code>5</code>)의 6 가지 크기가 포함됩니다. <code>.gap-auto</code> 유틸리티 클래스는 사실상<code>.gap-0</code>과 동일하므로 별도로 없습니다.</p>
 <h3 id="row-gap">row-gap <a class="anchor-link" href="#row-gap" aria-label="Link to this section: row-gap"></a></h3>
-<p><code>row-gap</code> sets the vertical space between children items in the specified container.</p>
+<p><code>row-gap</code>은 지정된 컨테이너의 하위 항목 사이의 세로 간격을 설정합니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0 bd-example-cssgrid">
     
@@ -726,7 +758,7 @@
 </div>
 
 <h3 id="column-gap">column-gap <a class="anchor-link" href="#column-gap" aria-label="Link to this section: column-gap"></a></h3>
-<p><code>column-gap</code> sets the horizontal space between children items in the specified container.</p>
+<p><code>column-gap</code>은 지정된 컨테이너의 하위 항목 사이의 가로 간격을 설정합니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0 bd-example-cssgrid">
     
@@ -757,7 +789,7 @@
 
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="sass-맵">Sass 맵 <a class="anchor-link" href="#sass-%eb%a7%b5" aria-label="Link to this section: Sass 맵"></a></h3>
-<p>Spacing 유틸리티는 Sass 맵을 통해 선언된 다음 유틸리티 API로 생성됩니다.</p>
+<p>간격 유틸리티는 Sass 맵을 통해 선언된 다음 유틸리티 API로 생성됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss">scss/_variables.scss</a>
@@ -777,7 +809,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></div></div>
 <h3 id="sass-유틸리티-api">Sass 유틸리티 API <a class="anchor-link" href="#sass-%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0-api" aria-label="Link to this section: Sass 유틸리티 API"></a></h3>
-<p>Spacing 유틸리티는 <code>scss/_utilities.scss</code>의 유틸리티 API에 선언되어 있습니다. <a href="/docs/5.3/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
+<p>간격 유틸리티는 <code>scss/_utilities.scss</code>의 유틸리티 API에 선언되어 있습니다. <a href="/docs/5.3/utilities/api/#using-the-api">유틸리티 API 사용 방법에 대해 알아보세요.</a></p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_utilities.scss">scss/_utilities.scss</a>
@@ -959,7 +991,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

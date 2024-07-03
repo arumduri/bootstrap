@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/components/card.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/components/card/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/components/card.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">카드</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -621,13 +655,11 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-
         <h2 id="소개">소개 <a class="anchor-link" href="#%ec%86%8c%ea%b0%9c" aria-label="Link to this section: 소개"></a></h2>
-<p><strong>카드</strong>는 유연하고 확장이 가능한 컨테이너입니다. Headers나 footers의 옵션, 다양한 콘텐츠, 문맥에 따른 배경색, 강력한 표시 옵션이 포함되어 있습니다.  Bootstrap 3의 panels、wells、thumbnails는 카드로 바뀝니다. 이러한 컴포넌트의 기능은, 카드의 클래스로 이용할 수 있습니다.</p>
+<p><strong>카드</strong>는 유연하고 확장이 가능한 컨테이너입니다. 헤더/푸터 옵션, 다양한 콘텐츠, 문맥에 따른 배경색, 강력한 표시 옵션이 포함되어 있습니다. Bootstrap 3의 panels, wells, thumbnails는 카드로 변경되었습니다. 이러한 컴포넌트의 기능은 카드의 클래스로 이용할 수 있습니다.</p>
 <h2 id="예시">예시 <a class="anchor-link" href="#%ec%98%88%ec%8b%9c" aria-label="Link to this section: 예시"></a></h2>
 <p>카드는 적은 마크업과 스타일로 되어 있지만, 다양한 사용자 정의가 가능합니다. Flexbox로 만들어져 있어 쉽게 배치할 수 있고, 다른 컴포넌트와 조합이 가능합니다. 기본 값에는 <code>margin</code> 설정이 없어서 필요에 따라 <a href="/docs/5.3/utilities/spacing/">간격 유틸리티</a>를 사용합니다.</p>
-<p>아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 <a href="#sizing">크기 조절 옵션</a>을 통해서 간단하게 재정의할 수 있습니다.</p>
+<p>아래는, 폭이 고정된 카드의 예입니다. 카드에는 폭이 고정되어 있지 않기 때문에 자연스럽게 부모 요소의 폭에 맞춰집니다. 이것은 <a href="#%ED%81%AC%EA%B8%B0-%EC%A1%B0%EC%A0%88">크기 조절 옵션</a>을 통해서 간단하게 재정의할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -1521,7 +1553,7 @@
 <h3 id="배경과-배경색">배경과 배경색 <a class="anchor-link" href="#%eb%b0%b0%ea%b2%bd%ea%b3%bc-%eb%b0%b0%ea%b2%bd%ec%83%89" aria-label="Link to this section: 배경과 배경색"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
 
-<p>Set a <code>background-color</code> with contrasting foreground <code>color</code> with <a href="/docs/5.3/helpers/color-background/">our <code>.text-bg-{color}</code> helpers</a>. Previously it was required to manually pair your choice of <a href="/docs/5.3/utilities/colors/"><code>.text-{color}</code></a> and <a href="/docs/5.3/utilities/background/"><code>.bg-{color}</code></a> utilities for styling, which you still may use if you prefer.</p>
+<p><a href="/docs/5.3/helpers/color-background/"><code>.text-bg-{color}</code> 도우미</a>로 전경 <code>color</code>와 대비되는 <code>background-color</code>를 설정합니다. 이전에는 스타일링을 위해 <a href="/docs/5.3/utilities/colors/"><code>.text-{color}</code></a> 및 <a href="/docs/5.3/utilities/background/"><code>.bg-{color}</code></a> 유틸리티를 수동으로 조합해야 했지만, 원하는 경우 계속 사용할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -1652,7 +1684,7 @@
 </div>
 
 <div class="bd-callout bd-callout-info">
-<strong>Accessibility tip:</strong> Using color to add meaning only provides a visual indication, which will not be conveyed to users of assistive technologies like screen readers. Please ensure the meaning is obvious from the content itself (e.g., the visible text with a <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>sufficient</em> color contrast</a>) or is included through alternative means, such as additional text hidden with the <code>.visually-hidden</code> class.
+<strong>접근성 팁:</strong> 색상을 사용하여 의미를 추가하면 시각적 표시만 제공되므로 화면 리더와 같은 보조 기술 사용자에게는 의미가 전달되지 않습니다. 콘텐츠 자체에서 의미가 명확하게 드러나거나(예: <a href="/docs/5.3/getting-started/accessibility#color-contrast"><em>충분한</em> 색상 대비</a>가 있는 가시 텍스트) <code>.visually-hidden</code> 클래스로 숨겨진 추가 텍스트 등 대체 수단을 통해 의미가 포함되었는지 확인하시기 바랍니다.
 </div>
 
 <h3 id="테두리">테두리 <a class="anchor-link" href="#%ed%85%8c%eb%91%90%eb%a6%ac" aria-label="Link to this section: 테두리"></a></h3>
@@ -1974,7 +2006,7 @@
 </div>
 
 <h3 id="그리드-카드">그리드 카드 <a class="anchor-link" href="#%ea%b7%b8%eb%a6%ac%eb%93%9c-%ec%b9%b4%eb%93%9c" aria-label="Link to this section: 그리드 카드"></a></h3>
-<p>Bootstrap 그리드 시스템과 <a href="/docs/5.3/layout/grid/#row-columns"><code>.row-cols</code> 클래스</a>를 사용해, 행마다 표시하는 그리드 열의 개수(카드 주변을 감싼)를 제어합니다. 예를 들어, 여기에서는 <code>.row-cols-1</code> 은 한 줄로 카드를 배치하고, <code>.row-cols-md-2</code> 은 4개의 카드를 해당 중단점에서 그다음 줄로 넘겨 동일의 가로 폭으로 나눠주고 있습니다.</p>
+<p>Bootstrap 그리드 시스템과 <a href="/docs/5.3/layout/grid/#row-columns"><code>.row-cols</code> 클래스</a>를 사용해, 행마다 표시하는 그리드 열의 개수(카드 주변을 감싼)를 제어합니다. 예를 들어, 여기에서는 <code>.row-cols-1</code>은 한 줄로 카드를 배치하고, <code>.row-cols-md-2</code>은 4개의 카드를 해당 중단점에서 그다음 줄로 넘겨 동일의 가로 폭으로 나눠주고 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -2347,7 +2379,7 @@
 </div>
 
 <h3 id="masonry">Masonry <a class="anchor-link" href="#masonry" aria-label="Link to this section: Masonry"></a></h3>
-<p><code>v4</code>에서는 CSS 전용 기술을 사용하여 Masonry식 컬럼의 동작을 따라 했지만 이러한 기술에는 많은 영 좋지 않은 <a href="https://github.com/twbs/bootstrap/pull/28922">부작용</a>을 발생시킵니다. <code>v5</code>에서 이러한 유형의 레이아웃을 사용하려면 Masonry 플러그인을 사용하면 됩니다. Masonry는 <em>Bootstrap에 포함되어 있지 않지만</em> 시작하는 데 도움이 되는 <a href="/docs/5.3/examples/masonry/">데모 예시</a>를 만들었습니다.</p>
+<p><code>v4</code>에서는 CSS 전용 기술을 사용하여 Masonry식 컬럼의 동작을 따라 했지만 이러한 기술에는 영 좋지 않은 많은 <a href="https://github.com/twbs/bootstrap/pull/28922">부작용</a>을 발생시킵니다. <code>v5</code>에서 이러한 유형의 레이아웃을 사용하려면 Masonry 플러그인을 사용하면 됩니다. Masonry는 <em>Bootstrap에 포함되어 있지 않지만</em> 시작하는 데 도움이 되는 <a href="/docs/5.3/examples/masonry/">데모 예시</a>를 만들었습니다.</p>
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="변수">변수 <a class="anchor-link" href="#%eb%b3%80%ec%88%98" aria-label="Link to this section: 변수"></a></h3>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.2.0에서 추가됨</small>
@@ -2435,7 +2467,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

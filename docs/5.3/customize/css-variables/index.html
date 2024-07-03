@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/customize/css-variables.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/customize/css-variables/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/customize/css-variables.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">CSS 변수</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -566,14 +600,14 @@
   <ul>
     <li><a href="#최상위-변수">최상위 변수</a>
       <ul>
-        <li><a href="#default">Default</a></li>
+        <li><a href="#기본값">기본값</a></li>
         <li><a href="#다크-모드">다크 모드</a></li>
       </ul>
     </li>
     <li><a href="#컴포넌트-변수">컴포넌트 변수</a></li>
-    <li><a href="#prefix">Prefix</a></li>
+    <li><a href="#접두사">접두사</a></li>
     <li><a href="#예시">예시</a></li>
-    <li><a href="#focus-variables">Focus variables</a></li>
+    <li><a href="#초점-변수">초점 변수</a></li>
     <li><a href="#그리드-중단점">그리드 중단점</a></li>
   </ul>
 </nav>
@@ -584,19 +618,12 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
-
         <p>Bootstrap은 Sass를 재컴파일할 필요 없이 실시간 커스터마이징을 할 수 있도록 컴파일된 CSS에 많은 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS 사용자 정의 속성 (변수)</a>를 포함하고 있습니다. 이들은 브라우저의 검사기, 코드 샌드박스 또는 일반 프로토타입으로 작업할때 테마 색상, 중단점, 주요 글꼴 스택과 같이 일반적으로 자주 사용되는 값에 대해 간단하게 접근을 제공합니다.</p>
 <p>서드파티 CSS와의 충돌을 피하기 위해 <strong>모든 사용자 정의 속성 앞에 <code>bs-</code>가 붙습니다.</strong></p>
 <h2 id="최상위-변수">최상위 변수 <a class="anchor-link" href="#%ec%b5%9c%ec%83%81%ec%9c%84-%eb%b3%80%ec%88%98" aria-label="Link to this section: 최상위 변수"></a></h2>
 <p>여기에는 Bootstrap의 CSS가 포함된 곳이면 어디에서나 접근할 수 있는(<code>:root</code>가 필수인 것에 주의해 주세요) 변수가 있습니다. 이들은 <code>_root.scss</code> 파일 안에 있음며 컴파일된 dist 파일에 포함되어 있습니다.</p>
-<h3 id="default">Default <a class="anchor-link" href="#default" aria-label="Link to this section: Default"></a></h3>
-<p>These CSS variables are available everywhere, regardless of color mode.</p>
+<h3 id="기본값">기본값 <a class="anchor-link" href="#%ea%b8%b0%eb%b3%b8%ea%b0%92" aria-label="Link to this section: 기본값"></a></h3>
+<p>이러한 CSS 변수는 색상 모드에 관계없이 모든 곳에서 사용할 수 있습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">:root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -718,7 +745,7 @@
   --bs-form-invalid-border-color: #dc3545;
 }</span>
 </span></span></code></pre></div><h3 id="다크-모드">다크 모드 <a class="anchor-link" href="#%eb%8b%a4%ed%81%ac-%eb%aa%a8%eb%93%9c" aria-label="Link to this section: 다크 모드"></a></h3>
-<p>These variables are scoped to our built-in dark mode.</p>
+<p>이러한 변수는 내장된 다크 모드로 범위가 제한됩니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">[data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
@@ -775,12 +802,12 @@
   --bs-form-invalid-border-color: #ea868f;
 }</span>
 </span></span></code></pre></div><h2 id="컴포넌트-변수">컴포넌트 변수 <a class="anchor-link" href="#%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8-%eb%b3%80%ec%88%98" aria-label="Link to this section: 컴포넌트 변수"></a></h2>
-<p>Bootstrap 5 is increasingly making use of custom properties as local variables for various components. This way we reduce our compiled CSS, ensure styles aren&rsquo;t inherited in places like nested tables, and allow some basic restyling and extending of Bootstrap components after Sass compilation.</p>
-<p>Have a look at our table documentation for some <a href="/docs/5.3/content/tables/#how-do-the-variants-and-accented-tables-work">insight into how we&rsquo;re using CSS variables</a>. Our <a href="/docs/5.3/components/navbar/#css">navbars also use CSS variables</a> as of v5.2.0. We&rsquo;re also using CSS variables across our grids—primarily for gutters the <a href="/docs/5.3/layout/css-grid/">new opt-in CSS grid</a>—with more component usage coming in the future.</p>
-<p>Whenever possible, we&rsquo;ll assign CSS variables at the base component level (e.g., <code>.navbar</code> for navbar and its sub-components). This reduces guessing on where and how to customize, and allows for easy modifications by our team in future updates.</p>
-<h2 id="prefix">Prefix <a class="anchor-link" href="#prefix" aria-label="Link to this section: Prefix"></a></h2>
-<p>Most CSS variables use a prefix to avoid collisions with your own codebase. This prefix is in addition to the <code>--</code> that&rsquo;s required on every CSS variable.</p>
-<p>Customize the prefix via the <code>$prefix</code> Sass variable. By default, it&rsquo;s set to <code>bs-</code> (note the trailing dash).</p>
+<p>Bootstrap 5는 다양한 컴포넌트의 로컬 변수로 사용자 정의 속성을 점점 더 많이 사용하고 있습니다. 이렇게 하면 컴파일된 CSS를 줄이고, 중첩된 테이블과 같은 위치에서 스타일이 상속되지 않도록 하며, Sass 컴파일 후 Bootstrap 구성요소의 기본적인 스타일 변경 및 확장을 허용합니다.</p>
+<p>CSS 변수를 사용하는 방법에 대한 <a href="/docs/5.3/content/tables/#how-do-the-variants-and-accented-tables-work">부분</a>은 표 설명서를 참조하세요. v5.2.0부터 <a href="/docs/5.3/components/navbar/#css">내비게이션 바에도 CSS 변수를 사용합니다</a>. 또한 <a href="/docs/5.3/layout/css-grid/">새로운 옵트인 CSS 그리드</a>를 중심으로 그리드 전반에 걸쳐 CSS 변수를 사용하고 있으며, 앞으로 더 많은 컴포넌트에서 사용할 예정입니다.</p>
+<p>가능하면 기본 컴포넌트 수준에서 CSS 변수를 할당할 것입니다(예: 내비게이션 바와 그 하위 컴포넌트의 경우 <code>.navbar</code>). 이렇게 하면 사용자 정의할 위치와 방법에 대한 추측이 줄어들고 향후 업데이트 시 팀에서 쉽게 수정할 수 있습니다.</p>
+<h2 id="접두사">접두사 <a class="anchor-link" href="#%ec%a0%91%eb%91%90%ec%82%ac" aria-label="Link to this section: 접두사"></a></h2>
+<p>대부분의 CSS 변수는 자체 코드베이스와의 충돌을 피하기 위해 접두사를 사용합니다. 이 접두사는 모든 CSS 변수에 필수인 <code>--</code>에 추가됩니다.</p>
+<p>접두사는 <code>$prefix</code> Sass 변수를 통해 사용자 정의할 수 있습니다. 기본적으로 <code>bs-</code>로 설정되어 있습니다(뒤에 오는 대시를 참고하세요).</p>
 <h2 id="예시">예시 <a class="anchor-link" href="#%ec%98%88%ec%8b%9c" aria-label="Link to this section: 예시"></a></h2>
 <p>CSS 변수는 Sass 변수와 동일한 유연성을 제공하지만 브라우저에 제공되기 전에 컴파일할 필요는 없습니다. 예를 들어, 여기에서는 페이지의 글꼴이나 링크의 스타일을 CSS 변수로 재설정하고 있습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
@@ -789,11 +816,11 @@
 </span></span><span class="line"><span class="cl"><span class="nt">a</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">bs</span><span class="o">-</span><span class="kc">blue</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h2 id="focus-variables">Focus variables <a class="anchor-link" href="#focus-variables" aria-label="Link to this section: Focus variables"></a></h2>
+</span></span></code></pre></div><h2 id="초점-변수">초점 변수 <a class="anchor-link" href="#%ec%b4%88%ec%a0%90-%eb%b3%80%ec%88%98" aria-label="Link to this section: 초점 변수"></a></h2>
 <small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2">v5.3.0에서 추가됨</small>
 
-<p>Bootstrap provides custom <code>:focus</code> styles using a combination of Sass and CSS variables that can be optionally added to specific components and elements. We do not yet globally override all <code>:focus</code> styles.</p>
-<p>In our Sass, we set default values that can be customized before compiling.</p>
+<p>Bootstrap은 특정 컴포넌트 및 요소에 선택적으로 추가할 수 있는 Sass 및 CSS 변수의 조합을 사용하여 사용자 정의 <code>:focus</code> 스타일을 제공합니다. 아직 모든 <code>:focus</code> 스타일을 전역적으로 재정의하지는 않습니다.</p>
+<p>Sass에서는 컴파일하기 전에 사용자 정의할 수 있는 기본값을 설정합니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss">scss/_variables.scss</a>
@@ -808,7 +835,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$focus-ring-blur</span><span class="o">:</span>       <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$focus-ring-box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="nv">$focus-ring-blur</span> <span class="nv">$focus-ring-width</span> <span class="nv">$focus-ring-color</span><span class="p">;</span>
 </span></span></code></pre></div></div>
-<p>Those variables are then reassigned to <code>:root</code> level CSS variables that can be customized in real-time, including with options for <code>x</code> and <code>y</code> offsets (which default to their fallback value of <code>0</code>).</p>
+<p>그런 다음 이러한 변수는 <code>:root</code> 수준 CSS 변수에 재할당되며, <code>x</code> 및 <code>y</code> 오프셋 옵션(기본값은 <code>0</code>)을 포함하여 실시간으로 사용자 정의할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_root.scss">scss/_root.scss</a>
@@ -821,7 +848,7 @@
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-opacity</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-opacity</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-color</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
 <h2 id="그리드-중단점">그리드 중단점 <a class="anchor-link" href="#%ea%b7%b8%eb%a6%ac%eb%93%9c-%ec%a4%91%eb%8b%a8%ec%a0%90" aria-label="Link to this section: 그리드 중단점"></a></h2>
-<p>우리는 그리드 중단점을 CSS 변수로 포함시켰지만(<code>xs</code> 제외) <strong>CSS 변수는 미디어 쿼리에서 작동하지 않습니다</strong>. 이것은 변수에 대한 CSS 사양의 설계에 의한 것이지만 <code>env()</code> 변수에 대한 지원에 따라 향후 변경될 수 있습니다. 몇 가지 유용한 링크는 <a href="https://stackoverflow.com/a/47212942">이 Stack Overflow 답변</a>을 확인하세요. 그동안 다른 CSS 상황과 JavaScript에서 이러한 변수를 사용할 수 있습니다.</p>
+<p>그리드 중단점은 CSS 변수에 포함되어 있지만(<code>xs</code> 제외) <strong>CSS 변수는 미디어 쿼리에서 작동하지 않습니다</strong>. 이것은 변수에 대한 CSS 사양의 설계에 의한 것이지만 <code>env()</code> 변수에 대한 지원에 따라 향후 변경될 수 있습니다. 몇 가지 유용한 링크는 <a href="https://stackoverflow.com/a/47212942">이 Stack Overflow 답변</a>을 확인하세요. 그동안 다른 CSS 상황과 JavaScript에서 이러한 변수를 사용할 수 있습니다.</p>
 
       </div>
     </main>
@@ -848,7 +875,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

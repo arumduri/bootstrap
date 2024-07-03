@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Use the object fit utilities to modify how the content of a replaced element, such as an &lt;img&gt; or &lt;video&gt;, should be resized to fit its container.">
+<meta name="description" content="개체 맞춤 유틸리티를 사용하여 &lt;img&gt; 또는 &lt;video&gt;와 같은 대체된 요소의 콘텐츠가 컨테이너에 맞게 크기를 조정하는 방법을 수정할 수 있습니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.122.0">
 
 <meta name="docsearch:language" content="ko">
 <meta name="docsearch:version" content="5.3">
 
-<title>Object fit · Bootstrap v5.3</title>
+<title>객체 차우기 · Bootstrap v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.3/utilities/object-fit/">
 
@@ -36,13 +36,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Object fit">
-<meta name="twitter:description" content="Use the object fit utilities to modify how the content of a replaced element, such as an &lt;img&gt; or &lt;video&gt;, should be resized to fit its container.">
+<meta name="twitter:title" content="객체 차우기">
+<meta name="twitter:description" content="개체 맞춤 유틸리티를 사용하여 &lt;img&gt; 또는 &lt;video&gt;와 같은 대체된 요소의 콘텐츠가 컨테이너에 맞게 크기를 조정하는 방법을 수정할 수 있습니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.3/utilities/object-fit/">
-<meta property="og:title" content="Object fit">
-<meta property="og:description" content="Use the object fit utilities to modify how the content of a replaced element, such as an &lt;img&gt; or &lt;video&gt;, should be resized to fit its container.">
+<meta property="og:title" content="객체 차우기">
+<meta property="og:description" content="개체 맞춤 유틸리티를 사용하여 &lt;img&gt; 또는 &lt;video&gt;와 같은 대체된 요소의 콘텐츠가 컨테이너에 맞게 크기를 조정하는 방법을 수정할 수 있습니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,14 +564,17 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/utilities/object-fit.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/utilities/object-fit/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/utilities/object-fit.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
-          <h1 class="bd-title mb-0" id="content">Object fit</h1>
+          <h1 class="bd-title mb-0" id="content">객체 차우기</h1>
         </div>
-        
-        <p class="bd-lead">Use the object fit utilities to modify how the content of a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">replaced element</a>, such as an <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code>, should be resized to fit its container.</p>
+        <h6 class="text-muted" id="enContent">// Object fit</h6>
+        <p class="bd-lead">개체 맞춤 유틸리티를 사용하여 <code>&lt;img&gt;</code> 또는 <code>&lt;video&gt;</code>와 같은 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">대체된 요소</a>의 콘텐츠가 컨테이너에 맞게 크기를 조정하는 방법을 수정할 수 있습니다.</p>
         <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-2578669051257137"
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -564,10 +598,10 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#how-it-works">How it works</a></li>
-    <li><a href="#examples">Examples</a></li>
-    <li><a href="#responsive">Responsive</a></li>
-    <li><a href="#video">Video</a></li>
+    <li><a href="#작동-방식">작동 방식</a></li>
+    <li><a href="#예제">예제</a></li>
+    <li><a href="#반응형">반응형</a></li>
+    <li><a href="#동영상">동영상</a></li>
     <li><a href="#css">CSS</a>
       <ul>
         <li><a href="#sass-유틸리티-api">Sass 유틸리티 API</a></li>
@@ -582,25 +616,18 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
-
-        <h2 id="how-it-works">How it works <a class="anchor-link" href="#how-it-works" aria-label="Link to this section: How it works"></a></h2>
-<p>Change the value of the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit"><code>object-fit</code> property</a> with our responsive <code>object-fit</code> utility classes. This property tells the content to fill the parent container in a variety of ways, such as preserving the aspect ratio or stretching to take up as much space as possible.</p>
-<p>Classes for the value of <code>object-fit</code> are named using the format <code>.object-fit-{value}</code>. Choose from the following values:</p>
+        <h2 id="작동-방식">작동 방식 <a class="anchor-link" href="#%ec%9e%91%eb%8f%99-%eb%b0%a9%ec%8b%9d" aria-label="Link to this section: 작동 방식"></a></h2>
+<p>반응형 <code>object-fit</code> 유틸리티 클래스로 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit"><code>object-fit</code> 속성</a>의 값을 변경하세요. 이 속성은 가로 세로 비율을 유지하거나 가능한 한 많은 공간을 차지하도록 늘리는 등 다양한 방식으로 콘텐츠가 부모 컨테이너를 채우도록 지시합니다.</p>
+<p><code>object-fit</code> 값에 대한 클래스는 <code>.object-fit-{value}</code> 형식을 사용하여 이름이 지정됩니다. 다음 값 중에서 선택합니다:</p>
 <ul>
 <li><code>contain</code></li>
 <li><code>cover</code></li>
 <li><code>fill</code></li>
-<li><code>scale</code> (for scale-down)</li>
+<li><code>scale</code> (scale 축소)</li>
 <li><code>none</code></li>
 </ul>
-<h2 id="examples">Examples <a class="anchor-link" href="#examples" aria-label="Link to this section: Examples"></a></h2>
-<p>Add the <code>object-fit-{value}</code> class to the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">replaced element</a>:</p>
+<h2 id="예제">예제 <a class="anchor-link" href="#%ec%98%88%ec%a0%9c" aria-label="Link to this section: 예제"></a></h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">대체된 요소</a>에 <code>object-fit-{value}</code> 클래스를 추가합니다:</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0 d-flex overflow-auto">
     
@@ -627,8 +654,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;object-fit-none border rounded&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h2 id="responsive">Responsive <a class="anchor-link" href="#responsive" aria-label="Link to this section: Responsive"></a></h2>
-<p>Responsive variations also exist for each <code>object-fit</code> value using the format <code>.object-fit-{breakpoint}-{value}</code>, for the following breakpoint abbreviations: <code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>xxl</code>. Classes can be combined for various effects as you need.</p>
+<h2 id="반응형">반응형 <a class="anchor-link" href="#%eb%b0%98%ec%9d%91%ed%98%95" aria-label="Link to this section: 반응형"></a></h2>
+<p>각 <code>객체 맞춤</code> 값에 대해 <code>.object-fit-{breakpoint}-{value}</code> 형식을 사용하는 반응형 변형도 존재하며, 중단점 약어는 <code>SM</code>, <code>MD</code>, <code>LG</code>, <code>XL</code>, <code>XXL</code>이 있습니다. 필요에 따라 다양한 효과를 위해 클래스를 조합할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0 d-flex overflow-auto">
     
@@ -655,8 +682,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;object-fit-xxl-contain border rounded&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;...&#34;</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h2 id="video">Video <a class="anchor-link" href="#video" aria-label="Link to this section: Video"></a></h2>
-<p>The <code>.object-fit-{value}</code> and responsive <code>.object-fit-{breakpoint}-{value}</code> utilities also work on <code>&lt;video&gt;</code> elements.</p>
+<h2 id="동영상">동영상 <a class="anchor-link" href="#%eb%8f%99%ec%98%81%ec%83%81" aria-label="Link to this section: 동영상"></a></h2>
+<p><code>.object-fit-{value}</code> 및 반응형 <code>.object-fit-{breakpoint}-{value}</code> 유틸리티는 <code>&lt;video&gt;</code> 요소에서도 작동합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;object-fit-contain&#34;</span> <span class="na">autoplay</span><span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;object-fit-cover&#34;</span> <span class="na">autoplay</span><span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;object-fit-fill&#34;</span> <span class="na">autoplay</span><span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
@@ -664,7 +691,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">video</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;...&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;object-fit-none&#34;</span> <span class="na">autoplay</span><span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
 </span></span></code></pre></div><h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="sass-유틸리티-api">Sass 유틸리티 API <a class="anchor-link" href="#sass-%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0-api" aria-label="Link to this section: Sass 유틸리티 API"></a></h3>
-<p>Object fit utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
+<p>객체 맞춤 유틸리티는 유틸리티 API의 <code>scss/_utilities.scss</code>에 선언되어 있습니다. <a href="/docs/5.3/utilities/api/#using-the-api">유틸리티 API 사용 방법에 대해 알아보세요.</a></p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_utilities.scss">scss/_utilities.scss</a>
@@ -710,7 +737,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

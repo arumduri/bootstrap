@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/components/collapse.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/components/collapse/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/components/collapse.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">콜랩스</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -591,8 +625,6 @@
       
 
       <div class="bd-content ps-lg-2">
-        
-
         
 
         <h2 id="작동-원리">작동 원리 <a class="anchor-link" href="#%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac" aria-label="Link to this section: 작동 원리"></a></h2>
@@ -698,8 +730,8 @@
 </div>
 
 <h2 id="다중-항목-및-목표">다중 항목 및 목표 <a class="anchor-link" href="#%eb%8b%a4%ec%a4%91-%ed%95%ad%eb%aa%a9-%eb%b0%8f-%eb%aa%a9%ed%91%9c" aria-label="Link to this section: 다중 항목 및 목표"></a></h2>
-<p><code>&lt;button&gt;</code> 이나 <code>&lt;a&gt;</code> 는 그 <code>href</code> 나 <code>data-bs-target</code> 속성의 셀렉터로 여러 요소를 참조하는 것으로 여러 개의 요소를 표시하거나 숨길 수 있습니다.
-여러 개의 <code>&lt;button&gt;</code> 이나 <code>&lt;a&gt;</code> 는 각각의 <code>href</code> 나 <code>data-bs-target</code> 속성으로 요소를 참조하고 있는 경우, 어느 요소를 표시하거나 숨길 수 있습니다.</p>
+<p><code>&lt;button&gt;</code> 이나 <code>&lt;a&gt;</code>는 그 <code>href</code> 나 <code>data-bs-target</code> 속성의 셀렉터로 여러 요소를 참조하는 것으로 여러 개의 요소를 표시하거나 숨길 수 있습니다.
+여러 개의 <code>&lt;button&gt;</code> 이나 <code>&lt;a&gt;</code>는 각각의 <code>href</code> 나 <code>data-bs-target</code> 속성으로 요소를 참조하고 있는 경우, 어느 요소를 표시하거나 숨길 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -819,9 +851,9 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">collapseElementList</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.collapse&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">collapseList</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">collapseElementList</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="nx">collapseEl</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Collapse</span><span class="p">(</span><span class="nx">collapseEl</span><span class="p">))</span>
 </span></span></code></pre></div><h3 id="옵션">옵션 <a class="anchor-link" href="#%ec%98%b5%ec%85%98" aria-label="Link to this section: 옵션"></a></h3>
-<p>옵션은 데이터 속성이나 자바스크립트를 통해 전달할 수 있으므로 <code>데이터-bs-</code>에 옵션 이름을 추가할 수 있습니다(예: <code>데이터-bs-animation=&quot;{value}&quot;</code>). 데이터 속성을 통해 옵션을 전달할 때 옵션 이름의 대/소문자 유형을 &lsquo;<em>camelCase</em>&lsquo;에서 &lsquo;<em>kebab-case</em>&lsquo;로 변경해야 합니다. 예를 들어 <code>data-bs-custom-class=&quot;beautifier&quot;</code> 대신 <code>data-bs-customClass=&quot;beautifier&quot;</code>를 사용합니다.</p>
+<p>옵션은 데이터 속성이나 JavaScript를 통해 전달할 수 있으므로 <code>data-bs-</code>에 옵션 이름을 추가할 수 있습니다(예: <code>data-bs-animation=&quot;{value}&quot;</code>). 데이터 속성을 통해 옵션을 전달할 때 옵션 이름의 대/소문자 유형을 &lsquo;<em>camelCase</em>&lsquo;에서 &lsquo;<em>kebab-case</em>&lsquo;로 변경해야 합니다. 예를 들어 <code>data-bs-custom-class=&quot;beautifier&quot;</code> 대신 <code>data-bs-customClass=&quot;beautifier&quot;</code>를 사용합니다.</p>
 <p>Bootstrap 5.2.0부터 모든 컴포넌트는 간단한 컴포넌트 구성을 JSON 문자열로 저장할 수 있는 <strong>experimental</strong> 예약 데이터 속성 <code>data-bs-config</code>를 지원합니다. 요소에 <code>data-bs-config='{&quot;delay&quot;:0,&quot;title&quot;:123}'</code> 및 <code>data-bs-title=&quot;456&quot;</code> 속성이 있는 경우 최종 <code>title</code> 값은 <code>456</code>이 되며 별도의 데이터 속성이 <code>data-bs-config</code>에 지정된 값을 재정의합니다. 또한 기존 데이터 속성에는 <code>data-bs-delay='{&quot;show&quot;:0,&quot;hide&quot;:150}'</code>와 같은 JSON 값을 저장할 수 있습니다.</p>
-<p>The final configuration object is the merged result of <code>data-bs-config</code>, <code>data-bs-</code>, and <code>js object</code> where the latest given key-value overrides the others.</p>
+<p>최종 구성 개체는 <code>data-bs-config</code>, <code>data-bs-</code>, <code>js object</code>의 병합된 결과로, 주어진 최신 key-value가 다른 key-value를 재정의합니다.</p>
 
 <div class="table-responsive"><table class="table">
 <thead>
@@ -850,7 +882,7 @@
 
 <h3 id="메소드">메소드 <a class="anchor-link" href="#%eb%a9%94%ec%86%8c%eb%93%9c" aria-label="Link to this section: 메소드"></a></h3>
 <div class="bd-callout bd-callout-danger">
-<strong>All API methods are asynchronous and start a transition.</strong> They return to the caller as soon as the transition is started, but before it ends. In addition, a method call on a transitioning component will be ignored. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">Learn more in our JavaScript docs.</a>
+<strong>모든 API 메서드는 비동기식이며 전환을 시작합니다.</strong> 전환이 시작되는 즉시 호출자에게 반환되지만 전환이 끝나기 전에 호출자에게 반환됩니다. 또한 전환 중인 컴포넌트에 대한 메서드 호출은 무시됩니다. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">JavaScript 문서에서 자세히 알아보세요.</a>
 </div>
 
 <p>접을 수 있는 요소로서 콘텐츠를 활성화합니다. 옵션의 <code>object</code>를 받습니다.</p>
@@ -872,11 +904,11 @@
 </tr>
 <tr>
 <td><code>getInstance</code></td>
-<td>Static method which allows you to get the collapse instance associated to a DOM element, you can use it like this: <code>bootstrap.Collapse.getInstance(element)</code>.</td>
+<td>DOM 요소에 연결된 접기 인스턴스를 가져올 수 있는 정적 메서드는 다음과 같이 사용할 수 있습니다: <code>bootstrap.Collapse.getInstance(element)</code>.</td>
 </tr>
 <tr>
 <td><code>getOrCreateInstance</code></td>
-<td>Static method which returns a collapse instance associated to a DOM element or create a new one in case it wasn&rsquo;t initialized. You can use it like this: <code>bootstrap.Collapse.getOrCreateInstance(element)</code>.</td>
+<td>DOM 요소에 연결된 접기 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 생성하는 정적 메서드입니다. 다음과 같이 사용할 수 있습니다: <code>bootstrap.Collapse.getOrCreateInstance(element)</code>.</td>
 </tr>
 <tr>
 <td><code>hide</code></td>
@@ -952,7 +984,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

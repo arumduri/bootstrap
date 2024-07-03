@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Use our low-level z-index utilities to quickly change the stack level of an element or component.">
+<meta name="description" content="저수준의 z-index 유틸리티를 사용하여 요소 또는 컴포넌트의 스택 레벨을 빠르게 변경할 수 있습니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.122.0">
 
@@ -37,12 +37,12 @@
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
 <meta name="twitter:title" content="Z-index">
-<meta name="twitter:description" content="Use our low-level z-index utilities to quickly change the stack level of an element or component.">
+<meta name="twitter:description" content="저수준의 z-index 유틸리티를 사용하여 요소 또는 컴포넌트의 스택 레벨을 빠르게 변경할 수 있습니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.3/utilities/z-index/">
 <meta property="og:title" content="Z-index">
-<meta property="og:description" content="Use our low-level z-index utilities to quickly change the stack level of an element or component.">
+<meta property="og:description" content="저수준의 z-index 유틸리티를 사용하여 요소 또는 컴포넌트의 스택 레벨을 빠르게 변경할 수 있습니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,14 +564,17 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">v5.3에 추가됨</small><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/utilities/z-index.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">v5.3에 추가됨</small><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/utilities/z-index/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/utilities/z-index.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">Z-index</h1>
         </div>
         
-        <p class="bd-lead">Use our low-level <code>z-index</code> utilities to quickly change the stack level of an element or component.</p>
+        <p class="bd-lead">저수준의 <code>z-index</code> 유틸리티를 사용하여 요소 또는 컴포넌트의 스택 레벨을 빠르게 변경할 수 있습니다.</p>
         <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-2578669051257137"
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -566,7 +600,7 @@
   <ul>
     <li><a href="#예제">예제</a></li>
     <li><a href="#오버레이">오버레이</a></li>
-    <li><a href="#구성-요소-접근-방식">구성 요소 접근 방식</a></li>
+    <li><a href="#컴포넌트-접근-방식">컴포넌트 접근 방식</a></li>
     <li><a href="#css">CSS</a>
       <ul>
         <li><a href="#sass-맵">Sass 맵</a></li>
@@ -580,8 +614,6 @@
       
 
       <div class="bd-content ps-lg-2">
-        
-
         
 
         <h2 id="예제">예제 <a class="anchor-link" href="#%ec%98%88%ec%a0%9c" aria-label="Link to this section: 예제"></a></h2>
@@ -619,9 +651,9 @@
 <h2 id="오버레이">오버레이 <a class="anchor-link" href="#%ec%98%a4%eb%b2%84%eb%a0%88%ec%9d%b4" aria-label="Link to this section: 오버레이"></a></h2>
 <p>Bootstrap 오버레이 구성 요소인 드롭다운, 모달, 오프캔버스, 팝오버, 토스트 및 툴팁은 각각 고유한 <code>z-index</code> 값을 가지고 있어 인터페이스의 경쟁하는 &ldquo;레이어&quot;에서 사용 가능한 경험을 보장합니다.</p>
 <p><a href="/docs/5.3/layout/z-index/"><code>z-index</code> 레이아웃 페이지</a>에서 자세히 읽어보세요.</p>
-<h2 id="구성-요소-접근-방식">구성 요소 접근 방식 <a class="anchor-link" href="#%ea%b5%ac%ec%84%b1-%ec%9a%94%ec%86%8c-%ec%a0%91%ea%b7%bc-%eb%b0%a9%ec%8b%9d" aria-label="Link to this section: 구성 요소 접근 방식"></a></h2>
-<p>On some components, we use our low-level <code>z-index</code> values to manage repeating elements that overlap one another (like buttons in a button group or items in a list group).</p>
-<p>Learn about our <a href="/docs/5.3/extend/approach/#z-index-scales"><code>z-index</code> approach</a>.</p>
+<h2 id="컴포넌트-접근-방식">컴포넌트 접근 방식 <a class="anchor-link" href="#%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8-%ec%a0%91%ea%b7%bc-%eb%b0%a9%ec%8b%9d" aria-label="Link to this section: 컴포넌트 접근 방식"></a></h2>
+<p>일부 컴포넌트에서는 저수준의 <code>z-index</code> 값을 사용하여 버튼 그룹의 버튼이나 목록 그룹의 항목과 같이 서로 겹치는 반복 요소를 관리합니다.</p>
+<p><code>z-index</code> 접근 방식에 대해 <a href="/docs/5.3/extend/approach/#z-index-scales">자세히 알아보세요</a>.</p>
 <h2 id="css">CSS <a class="anchor-link" href="#css" aria-label="Link to this section: CSS"></a></h2>
 <h3 id="sass-맵">Sass 맵 <a class="anchor-link" href="#sass-%eb%a7%b5" aria-label="Link to this section: Sass 맵"></a></h3>
 <p>이 Sass 맵을 사용하여 사용 가능한 값 및 생성된 유틸리티를 변경할 수 있습니다.</p>
@@ -642,7 +674,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">);</span>
 </span></span></code></pre></div></div>
 <h3 id="sass-유틸리티-api">Sass 유틸리티 API <a class="anchor-link" href="#sass-%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0-api" aria-label="Link to this section: Sass 유틸리티 API"></a></h3>
-<p>위치 유틸리티는 <code>scss/_utilities.scss</code>의 유틸리티 API에서 선언됩니다. <a href="/docs/5.3/utilities/api/#using-the-api">유틸리티 API 사용 방법을 알아보세요.</a></p>
+<p>위치 유틸리티는 <code>scss/_utilities.scss</code>의 유틸리티 API에 선언되어 있습니다. <a href="/docs/5.3/utilities/api/#using-the-api">유틸리티 API 사용 방법을 알아보세요.</a></p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_utilities.scss">scss/_utilities.scss</a>
@@ -682,7 +714,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

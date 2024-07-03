@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/components/carousel.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/components/carousel/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/components/carousel.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">캐러셀</h1>
         </div>
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -604,8 +638,6 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-
         <h2 id="작동-원리">작동 원리 <a class="anchor-link" href="#%ec%9e%91%eb%8f%99-%ec%9b%90%eb%a6%ac" aria-label="Link to this section: 작동 원리"></a></h2>
 <ul>
 <li>
@@ -624,7 +656,7 @@
 </div>
 
 <h2 id="기본-예제">기본 예제 <a class="anchor-link" href="#%ea%b8%b0%eb%b3%b8-%ec%98%88%ec%a0%9c" aria-label="Link to this section: 기본 예제"></a></h2>
-<p>다음은 슬라이드가 3개인 캐러셀의 기본 예시입니다. 이전/다음 컨트롤에 주목하세요. <code>&lt;button&gt;</code> 요소를 사용하는 걸 권장하지만 <code>role=&quot;button&quot;</code>ㄴ이 포함된 <code>&lt;a&gt;</code> 요소를 사용할 수도 있습니다.</p>
+<p>다음은 슬라이드가 3개인 캐러셀의 기본 예시입니다. 이전/다음 컨트롤에 주목하세요. <code>&lt;button&gt;</code> 요소를 사용하는 걸 권장하지만 <code>role=&quot;button&quot;</code>이 포함된 <code>&lt;a&gt;</code> 요소를 사용할 수도 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -686,7 +718,7 @@
 <p>캐러셀은 슬라이드 크기를 자동으로 정규화하지 않습니다. 따라서 콘텐츠 크기를 적절하게 조정하려면 추가 유틸리티 또는 사용자 지정 스타일을 사용해야 할 수 있습니다. 캐러셀은 이전/다음 컨트롤 및 표시기를 지원하지만 명시적으로 필요한 것은 아닙니다. 원하는 대로 추가하고 사용자 지정하세요.</p>
 <p><strong>슬라이드 중 하나에 <code>.active</code> 클래스를 추가해야 합니다</strong>. 그렇지 않으면 캐러셀이 표시되지 않습니다. 또한 특히 한 페이지에서 여러 개의 캐러셀을 사용하는 경우 선택적 컨트롤의 경우 <code>.carousel</code>에 고유한 <code>id</code>를 설정해야 합니다. 컨트롤 및 표시기 요소에는 <code>.carousel</code> 요소의 <code>id</code>와 일치하는 <code>data-bs-target</code> 속성(링크의 경우 <code>href</code>)이 있어야 합니다.</p>
 <h3 id="인디케이터">인디케이터 <a class="anchor-link" href="#%ec%9d%b8%eb%94%94%ec%bc%80%ec%9d%b4%ed%84%b0" aria-label="Link to this section: 인디케이터"></a></h3>
-<p>그리고, 캐러셀에는 컨트롤과 함께 위치 표시(인디게이터, indicator)를 추가할 수도 있습니다. The indicators let users jump directly to a particular slide.</p>
+<p>그리고, 캐러셀에는 컨트롤과 함께 위치 표시(인디게이터)를 추가할 수도 있습니다. 인디게이터를 통해 사용자는 특정 슬라이드로 바로 이동할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -1199,12 +1231,12 @@
 </div>
 
 <h2 id="어두운-변형">어두운 변형 <a class="anchor-link" href="#%ec%96%b4%eb%91%90%ec%9a%b4-%eb%b3%80%ed%98%95" aria-label="Link to this section: 어두운 변형"></a></h2>
-<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2">Deprecated in v5.3.0</small>
+<small class="d-inline-flex mb-3 px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2">v5.3.0부터 지원 중단</small>
 
 <p>컨트롤, 위치 표시(인디게이터, indicator) 혹은 설명문(캡션, caption)을 어둡게 하기 위해서 <code>.carousel-dark</code>를 <code>.carousel</code>에 추가했습니다. 컨트롤은 <code>filter</code> CSS 속성으로 기본 흰색으로 칠해진 것이 반전됩니다. 설명문(캡션, caption)과 컨트롤에는 <code>color</code>와 <code>background-color</code>를 재정의하는 Sass 변수가 추가되었습니다.</p>
 <div class="bd-callout bd-callout-warning">
   <p>
-    <strong>Heads up!</strong> Dark variants for components were deprecated in v5.3.0 with the introduction of color modes. Instead of adding <code>.carousel-dark</code>, set <code>data-bs-theme="dark"</code> on the root element, a parent wrapper, or the component itself.
+    <strong>주의!</strong> 컴포넌트의 어두운 변형은 색상 모드가 도입된 v5.3.0에서 더 이상 사용되지 않습니다. <code>.carousel-dark를</code> 추가하는 대신 루트 요소, 부모 래퍼 또는 컴포넌트 자체에 <code>data-bs-theme="dark"</code>를 설정하세요.
   </p>
 </div>
 
@@ -1361,9 +1393,9 @@
 <p>캐러셀을 수동으로 부르는 경우:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">carousel</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">bootstrap</span><span class="p">.</span><span class="nx">Carousel</span><span class="p">(</span><span class="s1">&#39;#myCarousel&#39;</span><span class="p">)</span>
 </span></span></code></pre></div><h3 id="옵션">옵션 <a class="anchor-link" href="#%ec%98%b5%ec%85%98" aria-label="Link to this section: 옵션"></a></h3>
-<p>옵션은 데이터 속성이나 자바스크립트를 통해 전달할 수 있으므로 <code>데이터-bs-</code>에 옵션 이름을 추가할 수 있습니다(예: <code>데이터-bs-animation=&quot;{value}&quot;</code>). 데이터 속성을 통해 옵션을 전달할 때 옵션 이름의 대/소문자 유형을 &lsquo;<em>camelCase</em>&lsquo;에서 &lsquo;<em>kebab-case</em>&lsquo;로 변경해야 합니다. 예를 들어 <code>data-bs-custom-class=&quot;beautifier&quot;</code> 대신 <code>data-bs-customClass=&quot;beautifier&quot;</code>를 사용합니다.</p>
+<p>옵션은 데이터 속성이나 JavaScript를 통해 전달할 수 있으므로 <code>data-bs-</code>에 옵션 이름을 추가할 수 있습니다(예: <code>data-bs-animation=&quot;{value}&quot;</code>). 데이터 속성을 통해 옵션을 전달할 때 옵션 이름의 대/소문자 유형을 &lsquo;<em>camelCase</em>&lsquo;에서 &lsquo;<em>kebab-case</em>&lsquo;로 변경해야 합니다. 예를 들어 <code>data-bs-custom-class=&quot;beautifier&quot;</code> 대신 <code>data-bs-customClass=&quot;beautifier&quot;</code>를 사용합니다.</p>
 <p>Bootstrap 5.2.0부터 모든 컴포넌트는 간단한 컴포넌트 구성을 JSON 문자열로 저장할 수 있는 <strong>experimental</strong> 예약 데이터 속성 <code>data-bs-config</code>를 지원합니다. 요소에 <code>data-bs-config='{&quot;delay&quot;:0,&quot;title&quot;:123}'</code> 및 <code>data-bs-title=&quot;456&quot;</code> 속성이 있는 경우 최종 <code>title</code> 값은 <code>456</code>이 되며 별도의 데이터 속성이 <code>data-bs-config</code>에 지정된 값을 재정의합니다. 또한 기존 데이터 속성에는 <code>data-bs-delay='{&quot;show&quot;:0,&quot;hide&quot;:150}'</code>와 같은 JSON 값을 저장할 수 있습니다.</p>
-<p>The final configuration object is the merged result of <code>data-bs-config</code>, <code>data-bs-</code>, and <code>js object</code> where the latest given key-value overrides the others.</p>
+<p>최종 구성 개체는 <code>data-bs-config</code>, <code>data-bs-</code>, <code>js object</code>의 병합된 결과로, 주어진 최신 key-value가 다른 key-value를 재정의합니다.</p>
 
 <div class="table-responsive"><table class="table">
 <thead>
@@ -1416,7 +1448,7 @@
 
 <h3 id="메소드">메소드 <a class="anchor-link" href="#%eb%a9%94%ec%86%8c%eb%93%9c" aria-label="Link to this section: 메소드"></a></h3>
 <div class="bd-callout bd-callout-danger">
-<strong>All API methods are asynchronous and start a transition.</strong> They return to the caller as soon as the transition is started, but before it ends. In addition, a method call on a transitioning component will be ignored. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">Learn more in our JavaScript docs.</a>
+<strong>모든 API 메서드는 비동기식이며 전환을 시작합니다.</strong> 전환이 시작되는 즉시 호출자에게 반환되지만 전환이 끝나기 전에 호출자에게 반환됩니다. 또한 전환 중인 컴포넌트에 대한 메서드 호출은 무시됩니다. <a href="/docs/5.3/getting-started/javascript/#asynchronous-functions-and-transitions">JavaScript 문서에서 자세히 알아보세요.</a>
 </div>
 
 <p>캐러셀 생성자를 사용하여 캐러셀 인스턴스를 생성하고 추가 옵션을 전달할 수 있습니다. 예를 들어, 마크업 자체에서 <code>data-bs-ride=&quot;carousel&quot;</code> 속성을 사용하지 않는 경우 특정 간격으로 터치 지원을 비활성화한 상태에서 자동 재생 캐러셀을 수동으로 초기화하려면 다음을 사용할 수 있습니다:</p>
@@ -1532,7 +1564,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

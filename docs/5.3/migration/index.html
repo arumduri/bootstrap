@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인 리뷰함으로써 v4에서 v5로의 변경을 지원합니다.">
+<meta name="description" content="Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인하고 검토함으로써 v4에서 v5로의 마이그레이션을 지원합니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.122.0">
 
 <meta name="docsearch:language" content="ko">
 <meta name="docsearch:version" content="5.3">
 
-<title>v5으로 마이그레이션 · Bootstrap v5.3</title>
+<title>v5으로 마이그레이션하기 · Bootstrap v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.3/migration/">
 
@@ -36,13 +36,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="v5으로 마이그레이션">
-<meta name="twitter:description" content="Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인 리뷰함으로써 v4에서 v5로의 변경을 지원합니다.">
+<meta name="twitter:title" content="v5으로 마이그레이션하기">
+<meta name="twitter:description" content="Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인하고 검토함으로써 v4에서 v5로의 마이그레이션을 지원합니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.3/migration/">
-<meta property="og:title" content="v5으로 마이그레이션">
-<meta property="og:description" content="Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인 리뷰함으로써 v4에서 v5로의 변경을 지원합니다.">
+<meta property="og:title" content="v5으로 마이그레이션하기">
+<meta property="og:description" content="Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인하고 검토함으로써 v4에서 v5로의 마이그레이션을 지원합니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,14 +564,17 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/migration.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/migration/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/migration.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
-          <h1 class="bd-title mb-0" id="content">v5으로 마이그레이션</h1>
+          <h1 class="bd-title mb-0" id="content">v5으로 마이그레이션하기</h1>
         </div>
         <h6 class="text-muted" id="enContent">// Migrating to v5</h6>
-        <p class="bd-lead">Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인 리뷰함으로써 v4에서 v5로의 변경을 지원합니다.</p>
+        <p class="bd-lead">Bootstrap의 소스 파일, 문서 및 컴포넌트의 변경 내용을 확인하고 검토함으로써 v4에서 v5로의 마이그레이션을 지원합니다.</p>
         <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-2578669051257137"
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -566,47 +600,47 @@
   <ul>
     <li><a href="#v530">v5.3.0</a>
       <ul>
-        <li><a href="#helpers">Helpers</a></li>
-        <li><a href="#utilities">Utilities</a></li>
+        <li><a href="#도우미">도우미</a></li>
+        <li><a href="#유틸리티">유틸리티</a></li>
       </ul>
     </li>
     <li><a href="#v530-alpha2">v5.3.0-alpha2</a>
       <ul>
-        <li><a href="#css-variables">CSS variables</a></li>
-        <li><a href="#color-modes">Color modes</a></li>
-        <li><a href="#typography">Typography</a></li>
-        <li><a href="#components">Components</a></li>
-        <li><a href="#helpers-1">Helpers</a></li>
-        <li><a href="#utilities-1">Utilities</a></li>
-        <li><a href="#docs">Docs</a></li>
-        <li><a href="#tooling">Tooling</a></li>
+        <li><a href="#css-변수">CSS 변수</a></li>
+        <li><a href="#색상-모드">색상 모드</a></li>
+        <li><a href="#타이포그래피">타이포그래피</a></li>
+        <li><a href="#컴포넌트">컴포넌트</a></li>
+        <li><a href="#도우미-1">도우미</a></li>
+        <li><a href="#유틸리티-1">유틸리티</a></li>
+        <li><a href="#문서">문서</a></li>
+        <li><a href="#툴링">툴링</a></li>
       </ul>
     </li>
     <li><a href="#v530-alpha1">v5.3.0-alpha1</a>
       <ul>
-        <li><a href="#color-modes-1">Color modes!</a></li>
-        <li><a href="#css-variables-1">CSS variables</a></li>
-        <li><a href="#components-1">Components</a>
+        <li><a href="#컬러-모드">컬러 모드!</a></li>
+        <li><a href="#css-변수-1">CSS 변수</a></li>
+        <li><a href="#컴포넌트-1">컴포넌트</a>
           <ul>
-            <li><a href="#alert">Alert</a></li>
-            <li><a href="#list-group">List group</a></li>
-            <li><a href="#dropdowns">Dropdowns</a></li>
-            <li><a href="#close-button">Close button</a></li>
-            <li><a href="#navbar">Navbar</a></li>
+            <li><a href="#경고창">경고창</a></li>
+            <li><a href="#목록-그룹">목록 그룹</a></li>
+            <li><a href="#드롭다운">드롭다운</a></li>
+            <li><a href="#닫기-버튼">닫기 버튼</a></li>
+            <li><a href="#내비게이션-바">내비게이션 바</a></li>
           </ul>
         </li>
-        <li><a href="#progress-bars">Progress bars</a></li>
-        <li><a href="#forms">Forms</a></li>
-        <li><a href="#utilities-2">Utilities</a></li>
+        <li><a href="#진행률-표시줄">진행률 표시줄</a></li>
+        <li><a href="#양식">양식</a></li>
+        <li><a href="#유틸리티-2">유틸리티</a></li>
       </ul>
     </li>
     <li><a href="#v520">v5.2.0</a>
       <ul>
-        <li><a href="#refreshed-design">Refreshed design</a></li>
-        <li><a href="#more-css-variables">More CSS variables</a></li>
-        <li><a href="#new-_mapsscss">New <code>_maps.scss</code></a></li>
-        <li><a href="#new-utilities">New utilities</a></li>
-        <li><a href="#additional-changes">Additional changes</a></li>
+        <li><a href="#새로워진-디자인">새로워진 디자인</a></li>
+        <li><a href="#더-많은-css-변수">더 많은 CSS 변수</a></li>
+        <li><a href="#새로운-_mapsscss">새로운 <code>_maps.scss</code></a></li>
+        <li><a href="#새-유틸리티">새 유틸리티</a></li>
+        <li><a href="#추가-변경-사항">추가 변경 사항</a></li>
       </ul>
     </li>
     <li><a href="#v510">v5.1.0</a></li>
@@ -621,22 +655,22 @@
         <li><a href="#콘텐츠-reboot-등">콘텐츠, Reboot 등</a></li>
         <li><a href="#rtl">RTL</a></li>
         <li><a href="#폼">폼</a></li>
-        <li><a href="#컴포넌트">컴포넌트</a>
+        <li><a href="#컴포넌트-2">컴포넌트</a>
           <ul>
             <li><a href="#아코디언">아코디언</a></li>
-            <li><a href="#경고창">경고창</a></li>
+            <li><a href="#경고창-1">경고창</a></li>
             <li><a href="#배지">배지</a></li>
             <li><a href="#브레드크럼">브레드크럼</a></li>
             <li><a href="#버튼">버튼</a></li>
             <li><a href="#카드">카드</a></li>
             <li><a href="#캐러셀">캐러셀</a></li>
-            <li><a href="#닫기-버튼">닫기 버튼</a></li>
+            <li><a href="#닫기-버튼-1">닫기 버튼</a></li>
             <li><a href="#콜랩스">콜랩스</a></li>
-            <li><a href="#드롭다운">드롭다운</a></li>
+            <li><a href="#드롭다운-1">드롭다운</a></li>
             <li><a href="#점보트론">점보트론</a></li>
-            <li><a href="#목록-그룹">목록 그룹</a></li>
+            <li><a href="#목록-그룹-1">목록 그룹</a></li>
             <li><a href="#내비게이션과-탭">내비게이션과 탭</a></li>
-            <li><a href="#내비게이션-바">내비게이션 바</a></li>
+            <li><a href="#내비게이션-바-1">내비게이션 바</a></li>
             <li><a href="#오프캔버스">오프캔버스</a></li>
             <li><a href="#페이지네이션">페이지네이션</a></li>
             <li><a href="#팝오버">팝오버</a></li>
@@ -645,10 +679,10 @@
             <li><a href="#툴팁">툴팁</a></li>
           </ul>
         </li>
-        <li><a href="#유틸리티">유틸리티</a></li>
+        <li><a href="#유틸리티-3">유틸리티</a></li>
       </ul>
     </li>
-    <li><a href="#도우미">도우미</a>
+    <li><a href="#도우미-2">도우미</a>
       <ul>
         <li><a href="#javascript">JavaScript</a></li>
       </ul>
@@ -662,145 +696,140 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
-
         <h2 id="v530">v5.3.0 <a class="anchor-link" href="#v530" aria-label="Link to this section: v5.3.0"></a></h2>
-<p>If you&rsquo;re migrating from our previous alpha releases of v5.3.0, please review their changes in addition to this section.</p>
-<h3 id="helpers">Helpers <a class="anchor-link" href="#helpers" aria-label="Link to this section: Helpers"></a></h3>
+<p>이전 v5.3.0 알파 릴리즈에서 마이그레이션하는 경우 이 섹션과 함께 해당 변경 사항을 검토하세요.</p>
+<h3 id="도우미">도우미 <a class="anchor-link" href="#%eb%8f%84%ec%9a%b0%eb%af%b8" aria-label="Link to this section: 도우미"></a></h3>
 <ul>
-<li><a href="/docs/5.3/helpers/colored-links/">Colored links</a> once again have <code>!important</code> so they work better with our newly added link utilities.</li>
+<li><a href="/docs/5.3/helpers/colored-links/">컬러 링크</a>에 다시 한 번 <code>!important</code>가 추가되어 새로 추가된 링크 유틸리티와 더 잘 작동합니다.</li>
 </ul>
-<h3 id="utilities">Utilities <a class="anchor-link" href="#utilities" aria-label="Link to this section: Utilities"></a></h3>
+<h3 id="유틸리티">유틸리티 <a class="anchor-link" href="#%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0" aria-label="Link to this section: 유틸리티"></a></h3>
 <ul>
-<li>Added new <code>.d-inline-grid</code> <a href="/docs/5.3/utilities/display/">display utility</a>.</li>
+<li>새로운 <code>.d-inline-grid</code> <a href="/docs/5.3/utilities/display/">표시 유틸리티</a>를 추가했습니다.</li>
 </ul>
 <h2 id="v530-alpha2">v5.3.0-alpha2 <a class="anchor-link" href="#v530-alpha2" aria-label="Link to this section: v5.3.0-alpha2"></a></h2>
-<p>If you&rsquo;re migrating from our previous alpha release of v5.3.0, please review the changes listed below.</p>
-<h3 id="css-variables">CSS variables <a class="anchor-link" href="#css-variables" aria-label="Link to this section: CSS variables"></a></h3>
+<p>이전 v5.3.0 알파 릴리즈에서 마이그레이션하는 경우 이 섹션과 함께 해당 변경 사항을 검토하세요.</p>
+<h3 id="css-변수">CSS 변수 <a class="anchor-link" href="#css-%eb%b3%80%ec%88%98" aria-label="Link to this section: CSS 변수"></a></h3>
 <ul>
-<li>Removed several duplicate and unused root CSS variables.</li>
+<li>중복되거나 사용되지 않는 여러 루트 CSS 변수를 제거했습니다.</li>
 </ul>
-<h3 id="color-modes">Color modes <a class="anchor-link" href="#color-modes" aria-label="Link to this section: Color modes"></a></h3>
+<h3 id="색상-모드">색상 모드 <a class="anchor-link" href="#%ec%83%89%ec%83%81-%eb%aa%a8%eb%93%9c" aria-label="Link to this section: 색상 모드"></a></h3>
 <ul>
 <li>
-<p>Dark mode colors are now derived from our theme colors (e.g., <code>$primary</code>) in Sass, rather than color specific tints or shades (e.g., <code>$blue-300</code>). This allows for a more automated dark mode when customizing the default theme colors.</p>
+<p>이제 다크 모드 색상은 특정 색조나 음영(예: <code>$blue-300</code>)이 아닌 Sass의 테마 색상(예: <code>$primary</code>)에서 파생됩니다. 따라서 기본 테마 색상을 사용자 지정할 때 보다 자동화된 다크 모드를 사용할 수 있습니다.</p>
 </li>
 <li>
-<p>Added Sass maps for generating theme colors for dark mode text, subtle background, and subtle border.</p>
+<p>다크 모드 텍스트, 미묘한 배경 및 미묘한 테두리의 테마 색상을 생성하기 위한 Sass 맵을 추가했습니다.</p>
 </li>
 <li>
-<p><a href="/docs/5.3/examples/#snippets">Snippet examples</a> are now ready for dark mode with updated markup and reduced custom styles.</p>
+<p><a href="/docs/5.3/examples/#snippets">스니펫 예시</a>는 이제 마크업이 업데이트되고 사용자 정의 스타일이 축소된 다크 모드에 사용할 수 있습니다.</p>
 </li>
 <li>
-<p>Added <code>color-scheme: dark</code> to dark mode CSS to change OS level controls like scrollbars</p>
+<p>스크롤 막대와 같은 OS 레벨 컨트롤을 변경하기 위해 다크 모드 CSS에 <code>color-scheme: dark</code>를 추가했습니다.</p>
 </li>
 <li>
-<p>Form validation <code>border-color</code> and text <code>color</code> states now respond to dark mode, thanks to new Sass and CSS variables.</p>
+<p>양식 유효성 검사 <code>border-color</code> 및 텍스트 <code>color</code> 상태가 이제 새로운 Sass 및 CSS 변수 덕분에 다크 모드에 반응합니다.</p>
 </li>
 <li>
-<p>Dropped recently added form control background CSS variables and reassigned the Sass variables to use CSS variables instead. This simplifies the styling across color modes and avoids an issue where form controls in dark mode wouldn&rsquo;t update properly.</p>
+<p>최근에 추가된 양식 컨트롤 백그라운드 CSS 변수를 삭제하고 대신 CSS 변수를 사용하도록 Sass 변수를 재할당했습니다. 이렇게 하면 여러 색상 모드에서 스타일링이 단순화되고 다크 모드의 양식 컨트롤이 제대로 업데이트되지 않는 문제를 방지할 수 있습니다.</p>
 </li>
 <li>
-<p>Our <code>box-shadow</code>s will once again always stay dark instead of inverting to white when in dark mode.</p>
+<p>이제 <code>box-shadow</code>는 다크 모드에서 흰색으로 반전되는 대신 항상 어두운 상태로 유지됩니다.</p>
 </li>
 <li>
-<p>Improved HTML and JavaScript for our color mode toggle script. The selector for changing the active SVG has been improved, and the markup made more accessible with ARIA attributes.</p>
+<p>색상 모드 토글 스크립트의 HTML 및 JavaScript가 개선되었습니다. 활성 SVG 변경을 위한 선택기가 개선되었으며, ARIA 속성을 사용하여 마크업에 더 쉽게 액세스할 수 있게 되었습니다.</p>
 </li>
 <li>
-<p>Improved docs code syntax colors and more across light and dark modes.</p>
-</li>
-</ul>
-<h3 id="typography">Typography <a class="anchor-link" href="#typography" aria-label="Link to this section: Typography"></a></h3>
-<ul>
-<li>We no longer set a color for <code>$headings-color-dark</code> or <code>--bs-heading-color</code> for dark mode. To avoid several problems of headings within components appearing the wrong color, we&rsquo;ve set the Sass variable to <code>null</code> and added a <code>null</code> check like we use on the default light mode.</li>
-</ul>
-<h3 id="components">Components <a class="anchor-link" href="#components" aria-label="Link to this section: Components"></a></h3>
-<ul>
-<li>
-<p>Cards now have a <code>color</code> set on them to improve rendering across color modes.</p>
-</li>
-<li>
-<p>Added new <code>.nav-underline</code> variant for our navigation with a simpler bottom border under the active nav link. <a href="/docs/5.3/components/navs-tabs/#underline">See the docs for an example.</a></p>
-</li>
-<li>
-<p>Navs now have new <code>:focus-visible</code> styles that better match our custom button focus styles.</p>
+<p>라이트 모드와 다크 모드에서 문서 코드 구문 색상 등이 개선되었습니다.</p>
 </li>
 </ul>
-<h3 id="helpers-1">Helpers <a class="anchor-link" href="#helpers-1" aria-label="Link to this section: Helpers"></a></h3>
+<h3 id="타이포그래피">타이포그래피 <a class="anchor-link" href="#%ed%83%80%ec%9d%b4%ed%8f%ac%ea%b7%b8%eb%9e%98%ed%94%bc" aria-label="Link to this section: 타이포그래피"></a></h3>
+<ul>
+<li>더 이상 다크 모드에서 <code>$headings-color-dark</code> 또는 <code>--bs-heading-color</code>의 색상을 설정하지 않습니다. 컴포넌트 내의 제목이 잘못된 색상으로 표시되는 몇 가지 문제를 방지하기 위해 Sass 변수를 <code>null</code>로 설정하고 기본 라이트 모드에서 사용하는 것과 같은 <code>null</code> 검사를 추가했습니다.</li>
+</ul>
+<h3 id="컴포넌트">컴포넌트 <a class="anchor-link" href="#%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8" aria-label="Link to this section: 컴포넌트"></a></h3>
 <ul>
 <li>
-<p>Added new <code>.icon-link</code> helper to quickly place and align Bootstrap Icons alongside a textual link. Icon links support our new link utilities, too.</p>
+<p>이제 카드에 <code>색상</code>이 설정되어 색상 모드에서 렌더링이 개선됩니다.</p>
 </li>
 <li>
-<p>Added new focus ring helper for removing the default <code>outline</code> and setting a custom <code>box-shadow</code> focus ring.</p>
+<p>활성 탐색 링크 아래에 더 단순한 하단 테두리가 있는 탐색을 위한 새로운 <code>.nav-underline</code> 변형을 추가했습니다. <a href="/docs/5.3/components/navs-tabs/#underline">예시는 문서를 참조하세요.</a></p>
+</li>
+<li>
+<p>이제 탐색에 사용자 정의 버튼 포커스 스타일과 더 잘 어울리는 새로운 <code>:focus-visible</code> 스타일이 추가되었습니다.</p>
 </li>
 </ul>
-<h3 id="utilities-1">Utilities <a class="anchor-link" href="#utilities-1" aria-label="Link to this section: Utilities"></a></h3>
+<h3 id="도우미-1">도우미 <a class="anchor-link" href="#%eb%8f%84%ec%9a%b0%eb%af%b8-1" aria-label="Link to this section: 도우미"></a></h3>
 <ul>
 <li>
-<p>Renamed Sass and CSS variables <code>${color}-text</code> to <code>${color}-text-emphasis</code> to match their associated utilities.</p>
+<p>텍스트 링크와 함께 Bootstrap 아이콘을 빠르게 배치하고 정렬할 수 있는 새로운 <code>.icon-link</code> 도우미가 추가되었습니다. 아이콘 링크는 새로운 링크 유틸리티도 지원합니다.</p>
 </li>
 <li>
-<p>Added new <code>.link-body-emphasis</code> helper alongside our <a href="/docs/5.3/helpers/colored-links/">colored links</a>. This creates a colored link using our color mode responsive emphasis color.</p>
-</li>
-<li>
-<p>Added new link utilities for link color opacity, underline offset, underline color, and underline opacity. <a href="/docs/5.3/utilities/link/">Explore the new links utilities.</a></p>
-</li>
-<li>
-<p>CSS variable based <code>border-width</code> utilities have been reverted to set their property directly (as was done prior to v5.2.0). This avoids inheritance issues across nested elements, including tables.</p>
-</li>
-<li>
-<p>Added new <code>.border-black</code> utility to match our <code>.text-black</code> and <code>.bg-black</code> utilities.</p>
-</li>
-<li>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Deprecated the <code>.text-muted</code> utility and <code>$text-muted</code> Sass variable. It&rsquo;s been replaced by <code>.text-body-secondary</code> and <code>$body-secondary-color</code>.</p>
+<p>기본 <code>outline</code>을 제거하고 사용자 지정 <code>box-shadow</code> 포커스 링을 설정할 수 있는 새로운 포커스 링 도우미를 추가했습니다.</p>
 </li>
 </ul>
-<h3 id="docs">Docs <a class="anchor-link" href="#docs" aria-label="Link to this section: Docs"></a></h3>
+<h3 id="유틸리티-1">유틸리티 <a class="anchor-link" href="#%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0-1" aria-label="Link to this section: 유틸리티"></a></h3>
 <ul>
 <li>
-<p>Examples are now displayed with the appropriate light or dark color mode as dictated by the setting in our docs. Each example has an individual color mode picker.</p>
+<p>관련 유틸리티와 일치하도록 Sass 및 CSS 변수 <code>${color}-text</code>의 이름을 <code>${color}-text-emphasis</code>로 변경했습니다.</p>
 </li>
 <li>
-<p>Improved included JavaScript for live Toast demo.</p>
+<p><a href="/docs/5.3/helpers/colored-links/">컬러 링크</a>와 함께 새로운 <code>.link-body-emphasis</code> 헬퍼를 추가했습니다. 컬러 모드 반응형 강조 색상을 사용하여 컬러 링크를 생성합니다.</p>
 </li>
 <li>
-<p>Added <code>twbs/examples</code> repo contents to the top of the Examples page.</p>
+<p>링크 색상 불투명도, 밑줄 오프셋, 밑줄 색상 및 밑줄 불투명도를 위한 새로운 링크 유틸리티가 추가되었습니다. <a href="/docs/5.3/utilities/link/">새로운 링크 유틸리티 살펴보기</a></p>
+</li>
+<li>
+<p>(v5.2.0 이전처럼) CSS 변수 기반 <code>border-width</code> 유틸리티가 해당 속성을 직접 설정하도록 되돌려졌습니다. 이렇게 하면 표를 포함한 중첩된 요소에서 상속 문제를 방지할 수 있습니다.</p>
+</li>
+<li>
+<p><code>.text-black</code> 및 <code>.bg-black</code> 유틸리티와 일치하는 새로운 <code>.border-black</code> 유틸리티를 추가했습니다.</p>
+</li>
+<li>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> <code>.text-muted</code> 유틸리티와 <code>$text-muted</code> Sass 변수가 더 이상 사용되지 않으며 <code>.text-body-secondary</code> 및 <code>$body-secondary-color</code>로 대체되었습니다.</p>
 </li>
 </ul>
-<h3 id="tooling">Tooling <a class="anchor-link" href="#tooling" aria-label="Link to this section: Tooling"></a></h3>
+<h3 id="문서">문서 <a class="anchor-link" href="#%eb%ac%b8%ec%84%9c" aria-label="Link to this section: 문서"></a></h3>
 <ul>
 <li>
-<p>Added SCSS testing via True to help test our utilities API and other customizations.</p>
+<p>이제 예제는 문서의 설정에 따라 적절한 밝거나 어두운 색상 모드로 표시됩니다. 각 예시에는 개별 색상 모드 선택기가 있습니다.</p>
 </li>
 <li>
-<p>Replaced instances of our bootstrap-npm-starter project with the newer and more complete <a href="https://github.com/twbs/examples">twbs/examples repo</a>.</p>
+<p>라이브 토스트 데모에 포함된 JavaScript가 개선되었습니다.</p>
+</li>
+<li>
+<p>예제 페이지 상단에 <code>twbs/examples</code> 리포지토리 콘텐츠를 추가했습니다.</p>
+</li>
+</ul>
+<h3 id="툴링">툴링 <a class="anchor-link" href="#%ed%88%b4%eb%a7%81" aria-label="Link to this section: 툴링"></a></h3>
+<ul>
+<li>
+<p>유틸리티 API 및 기타 커스터마이징을 테스트할 수 있도록 True를 통한 SCSS 테스트를 추가했습니다.</p>
+</li>
+<li>
+<p>bootstrap-npm-starter 프로젝트의 인스턴스를 더 새롭고 완전한 <a href="https://github.com/twbs/examples">twbs/examples 리포지토리</a>로 교체했습니다.</p>
 </li>
 </ul>
 <hr class="mb-4">
-<p>For a complete list of changes, <a href="https://github.com/orgs/twbs/projects/13">see the v5.3.0-alpha2 project on GitHub</a>.</p>
+<p>전체 변경 사항 목록은 <a href="https://github.com/orgs/twbs/projects/13">GitHub의 v5.3.0-alpha2 프로젝트</a>를 참조하세요.</p>
 <h2 id="v530-alpha1">v5.3.0-alpha1 <a class="anchor-link" href="#v530-alpha1" aria-label="Link to this section: v5.3.0-alpha1"></a></h2>
 <hr class="mb-4">
-<h3 id="color-modes-1">Color modes! <a class="anchor-link" href="#color-modes-1" aria-label="Link to this section: Color modes!"></a></h3>
-<p>Learn more by reading the new <a href="/docs/5.3/customize/color-modes/">color modes documentation</a>.</p>
+<h3 id="컬러-모드">컬러 모드! <a class="anchor-link" href="#%ec%bb%ac%eb%9f%ac-%eb%aa%a8%eb%93%9c" aria-label="Link to this section: 컬러 모드!"></a></h3>
+<p>새로운 <a href="/docs/5.3/customize/color-modes/">컬러 모드 문서</a>에서 자세히 알아보세요.</p>
 <ul>
 <li>
-<p><strong>Global support for light (default) and dark color modes.</strong> Set color mode globally on the <code>:root</code> element, on groups of elements and components with a wrapper class, or directly on components, with <code>data-bs-theme=&quot;light|dark&quot;</code>. Also included is a new <code>color-mode()</code> mixin that can output a ruleset with the <code>data-bs-theme</code> selector or a media query, depending on your preference.</p>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> Color modes replace dark variants for components, so  <code>.btn-close-white</code>, <code>.carousel-dark</code>, <code>.dropdown-menu-dark</code>, and <code>.navbar-dark</code> are deprecated.</p>
+<p><strong>라이트(기본값) 및 다크 모드를 전역적으로 지원합니다.</strong> <code>:root</code> 요소, 래퍼 클래스가 있는 요소 및 컴포넌트 그룹 또는 <code>data-bs-theme=&quot;light|dark&quot;</code>를 사용하여 컴포넌트에 직접 색상 모드를 전역적으로 설정할 수 있습니다. 또한 <code>data-bs-theme</code> 선택기 또는 미디어 쿼리와 함께 규칙 집합을 출력할 수 있는 새로운 <code>color-mode()</code> 믹스인이 포함되어 있어 원하는 대로 설정할 수 있습니다.</p>
 </li>
 <li>
-<p><strong>New extended color system.</strong> We&rsquo;ve added new theme colors (but not in <code>$theme-colors</code>) for a more nuanced, system-wide color palette with new secondary, tertiary, and emphasis colors for <code>color</code> and <code>background-color</code>. These new colors are available as Sass variables, CSS variables, and utilities.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> 색상 모드는 컴포넌트의 어두운 변형을 대체하므로 <code>.btn-close-white</code>, <code>.carousel-dark</code>, <code>.dropdown-menu-dark</code> 및 <code>.navbar-dark</code>는 더 이상 사용되지 않습니다.</p>
 </li>
 <li>
-<p>We&rsquo;ve also expanded our theme color Sass variables, CSS variables, and utilities to include text emphasis, subtle background colors, and subtle border colors. These are available as Sass variables, CSS variables, and utilities.</p>
+<p>새로운 확장 색상 시스템: <code>color</code> 및 <code>background-color</code>에 대한 새로운 보조, 보조, 강조 색상과 함께 보다 미묘한 시스템 전반의 색상 팔레트를 위해 새로운 테마 색상(<code>$theme-colors</code>에는 없음)을 추가했습니다. 이러한 새로운 색상은 Sass 변수, CSS 변수 및 유틸리티로 사용할 수 있습니다.</p>
 </li>
 <li>
-<p>Adds new <code>_variables-dark.scss</code> stylesheet to house dark-mode specific overrides. This stylesheet should be imported immediately after the existing <code>_variables.scss</code> file in your import stack.</p>
+<p>또한 텍스트 강조색, 미묘한 배경색, 미묘한 테두리색을 포함하도록 테마 색상 Sass 변수, CSS 변수 및 유틸리티를 확장했습니다. 이러한 기능은 Sass 변수, CSS 변수 및 유틸리티로 사용할 수 있습니다.</p>
+</li>
+<li>
+<p>다크 모드 전용 오버라이드를 저장하기 위해 새로운 <code>_variables-dark.scss</code> 스타일시트를 추가합니다. 이 스타일시트는 가져오기 스택의 기존 <code>_variables.scss</code> 파일 바로 뒤에 가져와야 합니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gh">diff --git a/scss/bootstrap.scss b/scss/bootstrap.scss
 </span></span></span><span class="line"><span class="cl"><span class="gh">index 8f8296def..449d70487 100644
 </span></span></span><span class="line"><span class="cl"><span class="gh"></span><span class="gd">--- a/scss/bootstrap.scss
@@ -812,67 +841,65 @@
 </span></span><span class="line"><span class="cl"><span class="gi">+@import &#34;variables-dark&#34;;
 </span></span></span><span class="line"><span class="cl"><span class="gi"></span> @import &#34;maps&#34;;
 </span></span><span class="line"><span class="cl"> @import &#34;mixins&#34;;
-</span></span><span class="line"><span class="cl"> @import &#34;utilities&#34;;
+</span></span><span class="line"><span class="cl"> import &#34;utilities&#34;;
 </span></span></code></pre></div></li>
 </ul>
-<h3 id="css-variables-1">CSS variables <a class="anchor-link" href="#css-variables-1" aria-label="Link to this section: CSS variables"></a></h3>
+<h3 id="css-변수-1">CSS 변수 <a class="anchor-link" href="#css-%eb%b3%80%ec%88%98-1" aria-label="Link to this section: CSS 변수"></a></h3>
 <ul>
 <li>
-<p>Restores CSS variables for breakpoints, though we don&rsquo;t use them in our media queries as they&rsquo;re not supported. However, these can be useful in JS-specific contexts.</p>
+<p>중단점에 대한 CSS 변수를 복원하지만, 미디어 쿼리에서는 지원되지 않으므로 사용하지 않습니다. 그러나 JS 관련 컨텍스트에서는 유용할 수 있습니다.</p>
 </li>
 <li>
-<p>Per the color modes update, we&rsquo;ve added new utilities for new Sass CSS variables <code>secondary</code> and <code>tertiary</code> text and background colors, plus <code>{color}-bg-subtle</code>, <code>{color}-border-subtle</code>, and <code>{color}-text-emphasis</code> for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps) with the express goal of making it easier to customize across multiple colors modes like light and dark.</p>
+<p>색상 모드 업데이트에 따라 새로운 Sass CSS 변수 <code>secondary</code> 및 <code>tertiary</code> 텍스트 및 배경색에 대한 새로운 유틸리티와 테마 색상에 대한 <code>{color}-bg-subtle</code>, <code>{color}-border-subtle</code> 및 <code>{color}-text-emphasis</code>가 추가되었습니다. 이러한 새로운 색상은 밝음과 어두움 등 다양한 색상 모드에서 더 쉽게 사용자 정의할 수 있도록 하기 위해 Sass 및 CSS 변수를 통해 사용할 수 있습니다(색상 맵은 제공되지 않음).</p>
 </li>
 <li>
-<p>Adds additional variables for alerts, <code>.btn-close</code>, and <code>.offcanvas</code>.</p>
+<p>경고창, <code>.btn-close</code> 및 <code>.offcanvas</code>에 대한 변수가 추가되었습니다.</p>
 </li>
 <li>
-<p>The <code>--bs-heading-color</code> variable is back with an update and dark mode support. First, we now check for a <code>null</code> value on the associated Sass variable, <code>$headings-color</code>, before trying to output the CSS variable, so by default it&rsquo;s not present in our compiled CSS. Second, we use the CSS variable with a fallback value, <code>inherit</code>, allowing the original behavior to persist, but also allowing for overrides.</p>
+<p><code>--bs-heading-color</code> 변수가 업데이트되어 다크 모드를 지원합니다. 첫째, 이제 CSS 변수를 출력하기 전에 연결된 Sass 변수인 <code>$headings-color</code>에 <code>null</code> 값이 있는지 확인하므로 기본적으로 컴파일된 CSS에는 이 변수가 존재하지 않습니다. 둘째, 폴백 값인 <code>inherit</code>이 있는 CSS 변수를 사용하여 원래 동작이 유지되도록 하면서도 재정의도 허용합니다.</p>
 </li>
 <li>
-<p>Converts links to use CSS variables for styling <code>color</code>, but not <code>text-decoration</code>. Colors are now set with <code>--bs-link-color-rgb</code> and <code>--bs-link-opacity</code> as <code>rgba()</code> color, allowing you to customize the translucency with ease. The <code>a:hover</code> pseudo-class now overrides <code>--bs-link-color-rgb</code> instead of explicitly setting the <code>color</code> property.</p>
+<p>링크가 <code>color</code> 스타일링에 CSS 변수를 사용하도록 변환하지만 <code>text-decoration</code>은 사용하지 않습니다. 이제 <code>--bs-link-color-rgb</code> 및 <code>--bs-link-opacity</code> 색상을 <code>rgba()</code> 색상으로 설정하여 반투명도를 쉽게 사용자 지정할 수 있습니다. 이제 <code>a:hover</code> 의사 클래스가 <code>color</code> 속성을 명시적으로 설정하는 대신 <code>--bs-link-color-rgb</code>를 재정의합니다.</p>
 </li>
 <li>
-<p><code>--bs-border-width</code> is now being used in more components for greater control over default global styling.</p>
-</li>
-<li>
-<p>Adds new root CSS variables for our <code>box-shadow</code>s, including <code>--bs-box-shadow</code>, <code>--bs-box-shadow-sm</code>, <code>--bs-box-shadow-lg</code>, and <code>--bs-box-shadow-inset</code>.</p>
+<p>이제 더 많은 컴포넌트에서 <code>--bs-border-width</code>가 사용되어 기본 전역 스타일을 더 잘 제어할 수 있습니다.</p>
 </li>
 </ul>
-<h3 id="components-1">Components <a class="anchor-link" href="#components-1" aria-label="Link to this section: Components"></a></h3>
-<h4 id="alert">Alert <a class="anchor-link" href="#alert" aria-label="Link to this section: Alert"></a></h4>
+<p>-<code>b-box-shadow</code>, <code>--bs-box-shadow-sm</code>, <code>--bs-box-shadow-lg</code>, <code>--bs-box-shadow-inset</code> 등 <code>box-shadow</code>에 대한 새로운 루트 CSS 변수를 추가합니다.</p>
+<h3 id="컴포넌트-1">컴포넌트 <a class="anchor-link" href="#%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8-1" aria-label="Link to this section: 컴포넌트"></a></h3>
+<h4 id="경고창">경고창 <a class="anchor-link" href="#%ea%b2%bd%ea%b3%a0%ec%b0%bd" aria-label="Link to this section: 경고창"></a></h4>
 <ul>
 <li>
-<p>Alert variants are now styled via CSS variables.</p>
+<p>이제 CSS 변수를 통해 경고 변형의 스타일을 지정할 수 있습니다.</p>
 </li>
 <li>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The <code>alert-variant()</code> mixin is now deprecated. We now <a href="/docs/5.3/components/alerts/#sass-loops">use a Sass loop</a> directly to modify the component&rsquo;s default CSS variables for each variant.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> <code>alert-variant()</code> 믹스인은 이제 더 이상 사용되지 않습니다. 이제 <a href="/docs/5.3/components/alerts/#sass-loops">Sass 루프</a>를 직접 사용하여 각 변형에 대한 컴포넌트의 기본 CSS 변수를 수정합니다.</p>
 </li>
 </ul>
-<h4 id="list-group">List group <a class="anchor-link" href="#list-group" aria-label="Link to this section: List group"></a></h4>
+<h4 id="목록-그룹">목록 그룹 <a class="anchor-link" href="#%eb%aa%a9%eb%a1%9d-%ea%b7%b8%eb%a3%b9" aria-label="Link to this section: 목록 그룹"></a></h4>
 <ul>
 <li>
-<p>List group item variants are now styled via CSS variables.</p>
+<p>목록 그룹 항목 변형은 이제 CSS 변수를 통해 스타일을 지정할 수 있습니다.</p>
 </li>
 <li>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The <code>list-group-item-variant()</code> mixin is now deprecated. We now <a href="/docs/5.3/components/list-group/#sass-loops">use a Sass loop</a> directly to modify the component&rsquo;s default CSS variables for each variant.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> <code>list-group-item-variant()</code> 믹스인은 이제 더 이상 사용되지 않습니다. 이제 <a href="/docs/5.3/components/list-group/#sass-loops">Sass 루프</a>를 직접 사용하여 각 변형에 대한 컴포넌트의 기본 CSS 변수를 수정합니다.</p>
 </li>
 </ul>
-<h4 id="dropdowns">Dropdowns <a class="anchor-link" href="#dropdowns" aria-label="Link to this section: Dropdowns"></a></h4>
+<h4 id="드롭다운">드롭다운 <a class="anchor-link" href="#%eb%93%9c%eb%a1%ad%eb%8b%a4%ec%9a%b4" aria-label="Link to this section: 드롭다운"></a></h4>
 <ul>
-<li><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The <code>.dropdown-menu-dark</code> class has been deprecated and replaced with <code>data-bs-theme=&quot;dark&quot;</code> on the dropdown or any parent element. <a href="/docs/5.3/components/dropdowns/#dark-dropdowns">See the docs for an example.</a></li>
+<li><span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> 드롭다운 또는 상위 요소에서 <code>.dropdown-menu-dark</code> 클래스는 더 이상 사용되지 않으며 <code>data-bs-theme=&quot;dark&quot;</code>로 대체되었습니다. <a href="/docs/5.3/components/dropdowns/#dark-dropdowns">예시는 문서를 참조하세요.</a></li>
 </ul>
-<h4 id="close-button">Close button <a class="anchor-link" href="#close-button" aria-label="Link to this section: Close button"></a></h4>
+<h4 id="닫기-버튼">닫기 버튼 <a class="anchor-link" href="#%eb%8b%ab%ea%b8%b0-%eb%b2%84%ed%8a%bc" aria-label="Link to this section: 닫기 버튼"></a></h4>
 <ul>
-<li><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The <code>.btn-close-white</code> class has been deprecated and replaced with <code>data-bs-theme=&quot;dark&quot;</code> on the close button or any parent element. <a href="/docs/5.3/components/close-button/#dark-variant">See the docs for an example.</a></li>
+<li><span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> 닫기 버튼 또는 모든 상위 요소에서 <code>.btn-close-white</code> 클래스는 더 이상 사용되지 않으며 <code>data-bs-theme=&quot;dark&quot;</code>로 대체되었습니다. <a href="/docs/5.3/components/close-button/#dark-variant">예시는 문서를 참조하세요.</a></li>
 </ul>
-<h4 id="navbar">Navbar <a class="anchor-link" href="#navbar" aria-label="Link to this section: Navbar"></a></h4>
+<h4 id="내비게이션-바">내비게이션 바 <a class="anchor-link" href="#%eb%82%b4%eb%b9%84%ea%b2%8c%ec%9d%b4%ec%85%98-%eb%b0%94" aria-label="Link to this section: 내비게이션 바"></a></h4>
 <ul>
-<li><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> The <code>.navbar-dark</code> class has been deprecated and replaced with <code>data-bs-theme=&quot;dark&quot;</code> on the navbar or any parent element. <a href="/docs/5.3/components/navbar/#color-schemes">See the docs for updated examples.</a></li>
+<li><span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> <code>.navbar-dark</code> 클래스는 더 이상 사용되지 않으며 탐색 모음 또는 모든 상위 요소에서 <code>data-bs-theme=&quot;dark&quot;</code>로 대체되었습니다. <a href="/docs/5.3/components/navbar/#color-schemes">업데이트된 예제는 문서를 참조하세요.</a></li>
 </ul>
-<h3 id="progress-bars">Progress bars <a class="anchor-link" href="#progress-bars" aria-label="Link to this section: Progress bars"></a></h3>
-<p>The markup for <a href="/docs/5.3/components/progress/">progress bars</a> has been updated in v5.3.0. Due to the placement of <code>role</code> and various <code>aria-</code> attributes on the inner <code>.progress-bar</code> element, <strong>some screen readers were not announcing zero value progress bars</strong>. Now, <code>role=&quot;progressbar&quot;</code> and the relevant <code>aria-*</code> attributes are on the outer <code>.progress</code> element, leaving the <code>.progress-bar</code> purely for the visual presentation of the bar and optional label.</p>
-<p>While we recommend adopting the new markup for improved compatibility with all screen readers, note that the legacy progress bar structure will continue to work as before.</p>
+<h3 id="진행률-표시줄">진행률 표시줄 <a class="anchor-link" href="#%ec%a7%84%ed%96%89%eb%a5%a0-%ed%91%9c%ec%8b%9c%ec%a4%84" aria-label="Link to this section: 진행률 표시줄"></a></h3>
+<p><a href="/docs/5.3/components/progress/">진행률 표시줄</a>에 대한 마크업이 v5.3.0에서 업데이트되었습니다. 내부 <code>.progress-bar</code> 요소에 <code>role</code> 및 다양한 <code>aria-</code> 속성을 배치했기 때문에 <strong>일부 스크린 리더에서 0 값 진행률 표시줄이 표시되지 않았습니다</strong>. 이제 <code>role=&quot;progressbar&quot;</code> 및 관련 <code>aria-*</code> 속성은 바깥쪽 <code>.progress</code> 요소에 있으며, <code>.progress-bar</code>는 막대의 시각적 표시와 선택적 레이블만 남게 됩니다.</p>
+<p>모든 스크린 리더와의 호환성 향상을 위해 새 마크업을 채택하는 것이 좋지만, 기존 진행률 표시줄 구조는 이전처럼 계속 작동한다는 점에 유의하세요.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- Previous markup --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 25%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -882,7 +909,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Basic example&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;25&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 25%&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>We&rsquo;ve also introduced a new <code>.progress-stacked</code> class to more logically wrap <a href="/docs/5.3/components/progress/#multiple-bars">multiple progress bars</a> into a single stacked progress bar.</p>
+</span></span></code></pre></div><p>또한 <a href="/docs/5.3/components/progress/#multiple-bars">여러 개의 진행률 표시줄</a>을 하나의 누적된 진행률 표시줄로 보다 논리적으로 묶을 수 있도록 새로운 <code>.progress-stacked</code> 클래스를 도입했습니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- Previous markup --&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar&#34;</span> <span class="na">role</span><span class="o">=</span><span class="s">&#34;progressbar&#34;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&#34;Segment one&#34;</span> <span class="na">style</span><span class="o">=</span><span class="s">&#34;width: 15%&#34;</span> <span class="na">aria-valuenow</span><span class="o">=</span><span class="s">&#34;15&#34;</span> <span class="na">aria-valuemin</span><span class="o">=</span><span class="s">&#34;0&#34;</span> <span class="na">aria-valuemax</span><span class="o">=</span><span class="s">&#34;100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -902,52 +929,52 @@
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;progress-bar bg-info&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span></code></pre></div><h3 id="forms">Forms <a class="anchor-link" href="#forms" aria-label="Link to this section: Forms"></a></h3>
+</span></span></code></pre></div><h3 id="양식">양식 <a class="anchor-link" href="#%ec%96%91%ec%8b%9d" aria-label="Link to this section: 양식"></a></h3>
 <ul>
 <li>
-<p><code>.form-control</code> is now styled with CSS variables to support color modes. This includes the addition of two new root CSS variables for the default and disabled form control backgrounds.</p>
+<p><code>.form-control</code>은 이제 색상 모드를 지원하기 위해 CSS 변수로 스타일을 지정합니다. 여기에는 기본 및 비활성화된 양식 컨트롤 배경에 대한 두 개의 새로운 루트 CSS 변수가 추가되었습니다.</p>
 </li>
 <li>
-<p><code>.form-check</code> and <code>.form-switch</code> components are now built with CSS variables for setting the <code>background-image</code>. The usage here differs from other components in that the various focus, active, etc states for each component aren&rsquo;t set on the base class. Instead, the states override one variable (e.g., <code>--bs-form-switch-bg</code>).</p>
+<p><code>.form-check</code> 및 <code>.form-switch</code> 컴포넌트는 이제 <code>background-image</code> 설정을 위한 CSS 변수로 빌드됩니다. 여기서 사용법은 각 컴포넌트의 다양한 포커스, 활성 등의 상태가 베이스 클래스에 설정되지 않는다는 점에서 다른 컴포넌트와 다릅니다. 대신, 상태는 하나의 변수(예: <code>--bs-form-switch-bg</code>)를 재정의합니다.</p>
 </li>
 <li>
-<p>Floating form labels now have a <code>background-color</code> to fix support for <code>&lt;textarea&gt;</code> elements. Additional changes have been made to also support disabled states and more.</p>
+<p>플로팅 폼 레이블에 <code>background-color</code>가 추가되어 <code>&lt;textarea&gt;</code> 요소에 대한 지원이 수정되었습니다. 비활성화 상태 등을 지원하기 위해 추가 변경이 이루어졌습니다.</p>
 </li>
 <li>
-<p>Fixed display of date and time inputs in WebKit based browsers.</p>
+<p>WebKit 기반 브라우저에서 날짜 및 시간 입력 표시가 수정되었습니다.</p>
 </li>
 </ul>
-<h3 id="utilities-2">Utilities <a class="anchor-link" href="#utilities-2" aria-label="Link to this section: Utilities"></a></h3>
+<h3 id="유틸리티-2">유틸리티 <a class="anchor-link" href="#%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0-2" aria-label="Link to this section: 유틸리티"></a></h3>
 <ul>
 <li>
-<p><span class="badge text-warning-emphasis bg-warning-subtle">Deprecated</span> <code>.text-muted</code> will be replaced by <code>.text-body-secondary</code> in v6.</p>
-<p>With the addition of the expanded theme colors and variables, the <code>.text-muted</code> variables and utility have been deprecated with v5.3.0. Its default value has also been reassigned to the new <code>--bs-secondary-color</code> CSS variable to better support color modes. It will be removed in v6.0.0.</p>
+<p><span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> <code>.text-muted</code>는 v6에서 <code>.text-body-secondary</code>로 대체됩니다.</p>
+<p>확장된 테마 색상과 변수가 추가됨에 따라 <code>.text-muted</code> 변수와 유틸리티는 v5.3.0에서 더 이상 사용되지 않습니다. 또한 기본값은 색상 모드를 더 잘 지원하기 위해 새로운 <code>--bs-secondary-color</code> CSS 변수로 재할당되었습니다. 이 변수는 v6.0.0에서 제거될 예정입니다.</p>
 </li>
 <li>
-<p>Adds new <code>.overflow-x</code>, <code>.overflow-y</code>, and several <code>.object-fit-*</code> utilities. <em>The object-fit property is used to specify how an <code>&lt;img&gt;</code> or <code>&lt;video&gt;</code> should be resized to fit its container, giving us a responsive alternative to using <code>background-image</code> for a resizable fill/fit image.</em></p>
+<p>새로운 <code>.overflow-x</code>, <code>.overflow-y</code> 및 여러 <code>.object-fit-*</code> 유틸리티를 추가했습니다. object-fit 속성은 <code>&lt;img&gt;</code> 또는 <code>&lt;video&gt;</code>의 크기를 컨테이너에 맞게 조정하는 방법을 지정하는 데 사용되며, 크기 조정이 가능한 채우기/맞춤 이미지에 <code>background-image</code>를 사용하는 대신 반응형 대안을 제공합니다.</p>
 </li>
 <li>
-<p>Adds new <code>.fw-medium</code> utility.</p>
+<p>새로운 <code>.fw-medium</code> 유틸리티를 추가합니다.</p>
 </li>
 <li>
-<p>Added new <a href="/docs/5.3/utilities/z-index/"><code>.z-*</code> utilities</a> for <code>z-index</code>.</p>
+<p><code>z-index</code>를 위한 새로운 <a href="/docs/5.3/utilities/z-index/"><code>.z-*</code> 유틸리티</a>를 추가했습니다.</p>
 </li>
 <li>
-<p><a href="/docs/5.3/utilities/shadows/">Box shadow utilities</a> (and Sass variables) have been updated for dark mode. They now use <code>--bs-body-color-rgb</code> to generate the <code>rgba()</code> color values, allowing them to easily adapt to color modes based on the specified foreground color.</p>
+<p><a href="/docs/5.3/utilities/shadows/">박스 그림자 유틸리티</a>(및 Sass 변수)가 다크 모드용으로 업데이트되었습니다. 이제 <code>--bs-body-color-rgb</code>를 사용하여 <code>rgba()</code> 색상 값을 생성하므로 지정된 전경색에 따라 색상 모드에 쉽게 적응할 수 있습니다.</p>
 </li>
 </ul>
-<p>For a complete list of changes, <a href="https://github.com/twbs/bootstrap/projects/">see the v5.3.0 project on GitHub</a>.</p>
+<p>전체 변경 사항 목록은 <a href="https://github.com/twbs/bootstrap/projects/">GitHub의 v5.3.0 프로젝트</a>를 참조하세요.</p>
 <h2 id="v520">v5.2.0 <a class="anchor-link" href="#v520" aria-label="Link to this section: v5.2.0"></a></h2>
 <hr class="mb-4">
-<h3 id="refreshed-design">Refreshed design <a class="anchor-link" href="#refreshed-design" aria-label="Link to this section: Refreshed design"></a></h3>
-<p>Bootstrap v5.2.0 features a subtle design update for a handful of components and properties across the project, <strong>most notably through refined <code>border-radius</code> values on buttons and form controls</strong>. Our documentation also has been updated with a new homepage, simpler docs layout that no longer collapses sections of the sidebar, and more prominent examples of <a href="https://icons.getbootstrap.com">Bootstrap Icons</a>.</p>
-<h3 id="more-css-variables">More CSS variables <a class="anchor-link" href="#more-css-variables" aria-label="Link to this section: More CSS variables"></a></h3>
-<p><strong>We&rsquo;ve updated all our components to use CSS variables.</strong> While Sass still underpins everything, each component has been updated to include CSS variables on the component base classes (e.g., <code>.btn</code>), allowing for more real-time customization of Bootstrap. In subsequent releases, we&rsquo;ll continue to expand our use of CSS variables into our layout, forms, helpers, and utilities. Read more about CSS variables in each component on their respective documentation pages.</p>
-<p>Our CSS variable usage will be somewhat incomplete until Bootstrap 6. While we&rsquo;d love to fully implement these across the board, they do run the risk of causing breaking changes. For example, setting <code>$alert-border-width: var(--bs-border-width)</code> in our source code breaks potential Sass in your own code if you were doing <code>$alert-border-width * 2</code> for some reason.</p>
-<p>As such, wherever possible, we will continue to push towards more CSS variables, but please recognize our implementation may be slightly limited in v5.</p>
-<h3 id="new-_mapsscss">New <code>_maps.scss</code> <a class="anchor-link" href="#new-_mapsscss" aria-label="Link to this section: New _maps.scss"></a></h3>
-<p><strong>Bootstrap v5.2.0 introduced a new Sass file with <code>_maps.scss</code>.</strong> It pulls out several Sass maps from <code>_variables.scss</code> to fix an issue where updates to an original map were not applied to secondary maps that extend them. For example, updates to <code>$theme-colors</code> were not being applied to other theme maps that relied on <code>$theme-colors</code>, breaking key customization workflows. In short, Sass has a limitation where once a default variable or map has been <em>used</em>, it cannot be updated. <em>There&rsquo;s a similar shortcoming with CSS variables when they&rsquo;re used to compose other CSS variables.</em></p>
-<p>This is why variable customizations in Bootstrap have to come after <code>@import &quot;functions&quot;</code>, but before <code>@import &quot;variables&quot;</code> and the rest of our import stack. The same applies to Sass maps—you must override the defaults before they get used. The following maps have been moved to the new <code>_maps.scss</code>:</p>
+<h3 id="새로워진-디자인">새로워진 디자인 <a class="anchor-link" href="#%ec%83%88%eb%a1%9c%ec%9b%8c%ec%a7%84-%eb%94%94%ec%9e%90%ec%9d%b8" aria-label="Link to this section: 새로워진 디자인"></a></h3>
+<p>Bootstrap v5.2.0은 프로젝트 전반의 몇 가지 구성 요소와 속성에 대한 미묘한 디자인 업데이트, <strong>특히 버튼과 양식 컨트롤의 <code>border-radius</code> 값을 개선한 것이 가장 큰 특징입니다</strong>. 또한 새로운 홈페이지, 더 이상 사이드바의 섹션을 축소하지 않는 더 간단한 문서 레이아웃, <a href="https://icons.getbootstrap.com">Bootstrap Icons</a>의 더 눈에 띄는 예시로 문서가 업데이트되었습니다.</p>
+<h3 id="더-많은-css-변수">더 많은 CSS 변수 <a class="anchor-link" href="#%eb%8d%94-%eb%a7%8e%ec%9d%80-css-%eb%b3%80%ec%88%98" aria-label="Link to this section: 더 많은 CSS 변수"></a></h3>
+<p><strong>모든 컴포넌트가 CSS 변수를 사용하도록 업데이트되었습니다.</strong> Sass는 여전히 모든 것을 뒷받침하지만, 각 컴포넌트 베이스 클래스(예: <code>.btn</code>)에 CSS 변수를 포함하도록 업데이트되어 Bootstrap을 더욱 실시간으로 사용자 정의할 수 있게 되었습니다. 이후 릴리스에서는 레이아웃, 폼, 헬퍼 및 유틸리티로 CSS 변수 사용을 계속 확장할 예정입니다. 각 컴포넌트의 CSS 변수에 대한 자세한 내용은 해당 문서 페이지에서 확인하세요.</p>
+<p>Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전반적으로 완벽하게 구현하고 싶지만, 변경 사항이 발생할 수 있는 위험이 있습니다. 예를 들어, 소스 코드에서 <code>$alert-border-width: var(--bs-border-width)</code>를 설정하면 어떤 이유로 <code>$alert-border-width * 2</code>를 사용하는 경우 사용자 코드에서 잠재적인 Sass가 깨질 수 있습니다.</p>
+<p>따라서 가능한 한 더 많은 CSS 변수를 제공하기 위해 계속 노력할 것이지만, v5에서는 구현이 약간 제한될 수 있다는 점을 양해해 주시기 바랍니다.</p>
+<h3 id="새로운-_mapsscss">새로운 <code>_maps.scss</code> <a class="anchor-link" href="#%ec%83%88%eb%a1%9c%ec%9a%b4-_mapsscss" aria-label="Link to this section: 새로운 _maps.scss"></a></h3>
+<p><strong>Bootstrap v5.2.0에서는 <code>_maps.scss</code>가 포함된 새로운 Sass 파일이 도입되었습니다.</strong> <code>_variables.scss</code>에서 여러 Sass 맵을 가져와 원본 맵의 업데이트가 이를 확장하는 보조 맵에 적용되지 않는 문제를 해결합니다. 예를 들어, <code>$theme-colors</code>에 대한 업데이트가 <code>$theme-colors</code>에 의존하는 다른 테마 맵에 적용되지 않아 주요 사용자 정의 워크플로우가 중단되었습니다. 요컨대, Sass에는 기본 변수나 맵이 한 번 _사용_되면 업데이트할 수 없다는 한계가 있습니다. 다른 CSS 변수를 구성하는 데 사용되는 CSS 변수에도 비슷한 단점이 있습니다.</p>
+<p>그렇기 때문에 Bootstrap에서 변수 커스터마이징은 <code>@import &quot;functions&quot;</code> 뒤에 오는 것이 아니라 <code>@import &quot;variables&quot;</code>와 나머지 import 스택 앞에 와야 합니다. Sass 맵에도 동일하게 적용되며, 기본값을 재정의해야만 사용할 수 있습니다. 다음 맵은 새로운 <code>_maps.scss</code>로 이동되었습니다.</p>
 <ul>
 <li><code>$theme-colors-rgb</code></li>
 <li><code>$utilities-colors</code></li>
@@ -958,7 +985,7 @@
 <li><code>$negative-spacers</code></li>
 <li><code>$gutters</code></li>
 </ul>
-<p>Your custom Bootstrap CSS builds should now look something like this with a separate maps import.</p>
+<p>이제 별도의 맵을 가져와서 사용자 정의 Bootstrap CSS 빌드가 다음과 같이 보일 것입니다.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">  // Functions come first
 </span></span><span class="line"><span class="cl">  @import &#34;functions&#34;;
 </span></span><span class="line"><span class="cl">
@@ -983,75 +1010,75 @@
 </span></span><span class="line"><span class="cl">  @import &#34;root&#34;;
 </span></span><span class="line"><span class="cl">  @import &#34;reboot&#34;;
 </span></span><span class="line"><span class="cl">  // etc
-</span></span></code></pre></div><h3 id="new-utilities">New utilities <a class="anchor-link" href="#new-utilities" aria-label="Link to this section: New utilities"></a></h3>
+</span></span></code></pre></div><h3 id="새-유틸리티">새 유틸리티 <a class="anchor-link" href="#%ec%83%88-%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0" aria-label="Link to this section: 새 유틸리티"></a></h3>
 <ul>
-<li>Expanded <a href="/docs/5.3/utilities/text/#font-weight-and-italics"><code>font-weight</code> utilities</a> to include <code>.fw-semibold</code> for semibold fonts.</li>
-<li>Expanded <a href="/docs/5.3/utilities/borders/#sizes"><code>border-radius</code> utilities</a> to include two new sizes, <code>.rounded-4</code> and <code>.rounded-5</code>, for more options.</li>
+<li><a href="/docs/5.3/utilities/text/#font-weight-and-italics"><code>font-weight</code> 유틸리티</a>를 확장하여 세미볼드 글꼴용 <code>.fw-semibold</code>를 포함하도록 했습니다.</li>
+<li><a href="/docs/5.3/utilities/borders/#sizes"><code>border-radius</code> 유틸리티</a>를 확장하여 더 많은 옵션을 위해 두 가지 새로운 크기인 <code>.rounded-4</code>와 <code>.rounded-5</code>를 포함하도록 했습니다.</li>
 </ul>
-<h3 id="additional-changes">Additional changes <a class="anchor-link" href="#additional-changes" aria-label="Link to this section: Additional changes"></a></h3>
+<h3 id="추가-변경-사항">추가 변경 사항 <a class="anchor-link" href="#%ec%b6%94%ea%b0%80-%eb%b3%80%ea%b2%bd-%ec%82%ac%ed%95%ad" aria-label="Link to this section: 추가 변경 사항"></a></h3>
 <ul>
 <li>
-<p><strong>Introduced new <code>$enable-container-classes</code> option. —</strong> Now when opting into the experimental CSS Grid layout, <code>.container-*</code> classes will still be compiled, unless this option is set to <code>false</code>. Containers also now keep their gutter values.</p>
+<p><strong>새로운 <code>$enable-container-classes</code> 옵션. -</strong> 이제 실험적인 CSS 그리드 레이아웃을 선택할 때 이 옵션을 <code>false</code>로 설정하지 않는 한 <code>.container-*</code> 클래스가 계속 컴파일됩니다. 이제 컨테이너도 거터 값을 유지합니다.</p>
 </li>
 <li>
-<p><strong>Offcanvas component now has <a href="/docs/5.3/components/offcanvas/#responsive">responsive variations</a>.</strong> The original <code>.offcanvas</code> class remains unchanged—it hides content across all viewports. To make it responsive, change that <code>.offcanvas</code> class to any <code>.offcanvas-{sm|md|lg|xl|xxl}</code> class.</p>
+<p><strong>오프캔버스 컴포넌트의 <a href="/docs/5.3/components/offcanvas/#responsive">반응형 변형</a>.</strong> 원래의 <code>.offcanvas</code> 클래스는 변경되지 않고 모든 뷰포트에서 콘텐츠를 숨깁니다. 반응형으로 만들려면 해당 <code>.offcanvas</code> 클래스를 <code>.offcanvas-{sm|md|lg|xl|xxl}</code> 클래스로 변경하세요.</p>
 </li>
 <li>
-<p><strong>Thicker table dividers are now opt-in. —</strong> We&rsquo;ve removed the thicker and more difficult to override border between table groups and moved it to an optional class you can apply, <code>.table-group-divider</code>. <a href="/docs/5.3/content/tables/#table-group-dividers">See the table docs for an example.</a></p>
+<p><strong>이제 더 두꺼운 표 구분선은 선택 사항. -</strong> 더 두껍고 재정의하기 어려운 표 그룹 사이의 테두리를 제거하여 선택적으로 적용할 수 있는 <code>.table-group-divider</code> 클래스로 옮겼습니다. <a href="/docs/5.3/content/tables/#table-group-dividers">예시는 테이블 문서를 참조하세요.</a></p>
 </li>
 <li>
-<p><strong><a href="https://github.com/twbs/bootstrap/pull/33421">Scrollspy has been rewritten</a> to use the Intersection Observer API</strong>, which means you no longer need relative parent wrappers, deprecates <code>offset</code> config, and more. Look for your Scrollspy implementations to be more accurate and consistent in their nav highlighting.</p>
+<p><strong>스크롤스파이 옵저버 API를 사용하도록 <a href="https://github.com/twbs/bootstrap/pull/33421">재작성</a>되었으므로</strong> 더 이상 상대 부모 래퍼가 필요하지 않고, <code>offset</code> 구성이 더 이상 사용되지 않습니다. 탐색 강조 표시가 더 정확하고 일관성 있게 구현되도록 Scrollspy 구현을 살펴보세요.</p>
 </li>
 <li>
-<p><strong>Popovers and tooltips now use CSS variables.</strong> Some CSS variables have been updated from their Sass counterparts to reduce the number of variables. As a result, three variables have been deprecated in this release: <code>$popover-arrow-color</code>, <code>$popover-arrow-outer-color</code>, and <code>$tooltip-arrow-color</code>.</p>
+<p><strong>CSS 변수를 사용하는 팝오버와 툴팁.</strong> 일부 CSS 변수는 변수 수를 줄이기 위해 Sass에서 업데이트되었습니다. 그 결과 이번 릴리스에서는 <code>$popover-arrow-color</code>, <code>$popover-arrow-outer-color</code>, <code>$tooltip-arrow-color</code> 변수가 더 이상 사용되지 않습니다.</p>
 </li>
 <li>
-<p><strong>Added new <code>.text-bg-{color}</code> helpers.</strong> Instead of setting individual <code>.text-*</code> and <code>.bg-*</code> utilities, you can now use <a href="/docs/5.3/helpers/color-background/">the <code>.text-bg-*</code> helpers</a> to set a <code>background-color</code> with contrasting foreground <code>color</code>.</p>
+<p><strong>새로운 <code>.text-bg-{color}</code> 도우미.</strong> 이제 개별 <code>.text-*</code> 및 <code>.bg-*</code> 유틸리티를 설정하는 대신 <a href="/docs/5.3/helpers/color-background/"><code>.text-bg-*</code> 헬퍼</a>를 사용하여 전경 <code>색</code>과 대비되는 <code>배경-색</code>을 설정할 수 있습니다.</p>
 </li>
 <li>
-<p>Added <code>.form-check-reverse</code> modifier to flip the order of labels and associated checkboxes/radios.</p>
+<p>레이블과 관련 체크박스/라디오의 순서를 뒤집을 수 있는 <code>.form-check-reverse</code> 수정자를 추가했습니다.</p>
 </li>
 <li>
-<p>Added <a href="/docs/5.3/content/tables/#striped-columns">striped columns</a> support to tables via the new <code>.table-striped-columns</code> class.</p>
+<p>새로운 <code>.table-striped-columns</code> 클래스를 통해 <a href="/docs/5.3/content/tables/#striped-columns">줄무늬 열</a> 지원을 표에 추가했습니다.</p>
 </li>
 </ul>
-<p>For a complete list of changes, <a href="https://github.com/twbs/bootstrap/projects/32">see the v5.2.0 project on GitHub</a>.</p>
+<p>전체 변경사항 목록은 <a href="https://github.com/twbs/bootstrap/projects/32">GitHub의 v5.2.0 프로젝트</a>를 참조하세요.</p>
 <h2 id="v510">v5.1.0 <a class="anchor-link" href="#v510" aria-label="Link to this section: v5.1.0"></a></h2>
 <hr class="mb-4">
 <ul>
 <li>
-<p><strong>Added experimental support for <a href="/docs/5.3/layout/css-grid/">CSS Grid layout</a>. —</strong> This is a work in progress, and is not yet ready for production use, but you can opt into the new feature via Sass. To enable it, disable the default grid, by setting <code>$enable-grid-classes: false</code> and enable the CSS Grid by setting <code>$enable-cssgrid: true</code>.</p>
+<p><strong><a href="/docs/5.3/layout/css-grid/">CSS 그리드 레이아웃</a>에 대한 실험적 지원 추가. -</strong> 이 기능은 진행 중인 작업으로 아직 프로덕션용으로 사용할 준비가 되지 않았지만 Sass를 통해 새 기능을 선택할 수 있습니다. 이 기능을 사용하려면 <code>$enable-grid-classes: false</code>를 설정하여 기본 그리드를 비활성화하고 <code>$enable-cssgrid: true</code>를 설정하여 CSS 그리드를 활성화하세요.</p>
 </li>
 <li>
-<p><strong>Updated navbars to support offcanvas. —</strong> Add <a href="/docs/5.3/components/navbar/#offcanvas">offcanvas drawers in any navbar</a> with the responsive <code>.navbar-expand-*</code> classes and some offcanvas markup.</p>
+<p><strong>오프캔버스를 지원하는 내비게이션 바. -</strong> 반응형 <code>navbar-expand-*</code> 클래스와 일부 오프캔버스 마크업으로 <a href="/docs/5.3/components/navbar/#offcanvas">모든 탐색바에 오프캔버스 서랍</a>을 추가해보세요.</p>
 </li>
 <li>
-<p><strong>Added new <a href="/docs/5.3/components/placeholders/">placeholder component</a>. —</strong> Our newest component, a way to provide temporary blocks in lieu of real content to help indicate that something is still loading in your site or app.</p>
+<p><strong>새로운 <a href="/docs/5.3/components/placeholders/">플레이스홀더 컴포넌트</a>. -</strong> 사이트나 앱에서 무언가가 아직 로드 중임을 표시하기 위해 실제 콘텐츠 대신 임시 블록을 제공하는 최신 컴포넌트입니다.</p>
 </li>
 <li>
-<p><strong>Collapse plugin now supports <a href="/docs/5.3/components/collapse/#horizontal">horizontal collapsing</a>. —</strong> Add <code>.collapse-horizontal</code> to your <code>.collapse</code> to collapse the <code>width</code> instead of the <code>height</code>. Avoid browser repainting by setting a <code>min-height</code> or <code>height</code>.</p>
+<p><strong><a href="/docs/5.3/components/collapse/#horizontal">수평 콜랩스</a>. -</strong> &lsquo;.collapse&rsquo;에 <code>.collapse-horizontal</code>을 추가하면 <code>height</code> 대신 <code>width</code>를 축소할 수 있습니다. <code>min-width</code> 또는 <code>height</code>를 설정하여 브라우저가 다시 칠하는 것을 방지하세요.</p>
 </li>
 <li>
-<p><strong>Added new stack and vertical rule helpers. —</strong> Quickly apply multiple flexbox properties to quickly create custom layouts with <a href="/docs/5.3/helpers/stacks/">stacks</a>. Choose from horizontal (<code>.hstack</code>) and vertical (<code>.vstack</code>) stacks. Add vertical dividers similar to <code>&lt;hr&gt;</code> elements with the <a href="/docs/5.3/helpers/vertical-rule/">new <code>.vr</code> helpers</a>.</p>
+<p><strong>새로운 스택 및 수직 규칙 헬퍼. -</strong> <a href="/docs/5.3/helpers/stacks/">스택</a>으로 여러 플렉스박스 속성을 빠르게 적용하여 사용자 지정 레이아웃을 빠르게 만들 수 있습니다. 가로(<code>.hstack</code>) 및 세로(<code>.vstack</code>) 스택 중에서 선택하세요. <a href="/docs/5.3/helpers/vertical-rule/">새로운 <code>.vr</code> 도우미</a>로 <code>&lt;hr&gt;</code> 요소와 유사한 세로 구분자 추가하세요.</p>
 </li>
 <li>
-<p><strong>Added new global <code>:root</code> CSS variables. —</strong> Added several new CSS variables to the <code>:root</code> level for controlling <code>&lt;body&gt;</code> styles. More are in the works, including across our utilities and components, but for now read up <a href="/docs/5.3/customize/css-variables/">CSS variables in the Customize section</a>.</p>
+<p><strong>새로운 전역 <code>:root</code> CSS 변수. -</strong> <code>&lt;body&gt;</code> 스타일을 제어하기 위해 <code>:root</code> 레벨에 몇 가지 새로운 CSS 변수를 추가했습니다. 유틸리티와 컴포넌트 전반을 포함해 더 많은 기능이 추가될 예정이지만 지금은 <a href="/docs/5.3/customize/css-variables/">사용자 정의 섹션의 CSS 변수</a>를 읽어보세요.</p>
 </li>
 <li>
-<p><strong>Overhauled color and background utilities to use CSS variables, and added new <a href="/docs/5.3/utilities/text/#opacity">text opacity</a> and <a href="/docs/5.3/utilities/background/#opacity">background opacity</a> utilities. —</strong> <code>.text-*</code> and <code>.bg-*</code> utilities are now built with CSS variables and <code>rgba()</code> color values, allowing you to easily customize any utility with new opacity utilities.</p>
+<p><strong>CSS 변수를 사용하도록 변경된 색상 및 배경 유틸리티, 새로운 <a href="/docs/5.3/utilities/text/#opacity">텍스트 불투명도</a> 및 <a href="/docs/5.3/utilities/background/#opacity">배경 불투명도</a> 유틸리티. -</strong> 이제 <code>.text-*</code> 및 <code>.bg-*</code> 유틸리티는 CSS 변수와 <code>rgba()</code> 색상 값으로 빌드되므로 새로운 불투명도 유틸리티로 모든 유틸리티를 쉽게 사용자 정의할 수 있습니다.</p>
 </li>
 <li>
-<p><strong>Added new snippet examples based to show how to customize our components. —</strong> Pull ready to use customized components and other common design patterns with our new <a href="/docs/5.3/examples/#snippets">Snippets examples</a>. Includes <a href="/docs/5.3/examples/footers/">footers</a>, <a href="/docs/5.3/examples/dropdowns/">dropdowns</a>, <a href="/docs/5.3/examples/list-groups/">list groups</a>, and <a href="/docs/5.3/examples/modals/">modals</a>.</p>
+<p><strong>컴포넌트를 사용자 정의하는 방법을 보여주는 새로운 스니펫 예제. -</strong> 새로운 <a href="/docs/5.3/examples/#snippets">스니펫 예시</a>를 통해 사용자 정의 컴포넌트 및 기타 일반적인 디자인 패턴을 사용할 준비를 마쳤습니다. <a href="/docs/5.3/examples/footers/">바닥글</a>, <a href="/docs/5.3/examples/dropdowns/">드롭다운</a>, <a href="/docs/5.3/examples/list-groups/">목록 그룹</a>, <a href="/docs/5.3/examples/modals/">모달</a>을 포함합니다.</p>
 </li>
 <li>
-<p><strong>Removed unused positioning styles from popovers and tooltips</strong> as these are handled solely by Popper. <code>$tooltip-margin</code> has been deprecated and set to <code>null</code> in the process.</p>
+<p><strong>팝오버와 툴팁</strong>에서 Popper에서 처리하기 전부터 있던 위치 지정 스타일을 제거했습니다. <code>$tooltip-margin</code>은 더 이상 사용되지 않으며 이 과정에서 <code>null</code>로 설정되었습니다.</p>
 </li>
 </ul>
-<p>Want more information? <a href="https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/">Read the v5.1.0 blog post.</a></p>
+<p>더 자세한 정보를 원하시나요? <a href="https://blog.getbootstrap.com/2021/08/04/bootstrap-5-1-0/">v5.1.0 블로그 게시물을 참조하세요</a>.</p>
 <h2 id="v500">v5.0.0 <a class="anchor-link" href="#v500" aria-label="Link to this section: v5.0.0"></a></h2>
 <hr class="mb-4">
 <div class="bd-callout bd-callout-info">
-<strong>Hey there!</strong> Changes to our first major release of Bootstrap 5, v5.0.0, are documented below. They don&rsquo;t reflect the additional changes shown above.
+<strong>안녕하세요!</strong> Bootstrap 5의 첫 번째 주요 릴리스인 v5.0.0의 변경 사항은 아래에 설명되어 있습니다. 위에 표시된 추가 변경사항은 반영되지 않았습니다.
 </div>
 
 <h3 id="의존성">의존성 <a class="anchor-link" href="#%ec%9d%98%ec%a1%b4%ec%84%b1" aria-label="Link to this section: 의존성"></a></h3>
@@ -1089,36 +1116,36 @@
 <p>중복된 값을 쉽게 삭제할 수 있도록 기본 Sass 맵의 병합을 폐지하였습니다. 앞으로는 <code>$theme-colors</code>과 같은 모든 값을 Sass 맵에서 정의해야 합니다. 자세한 내용은 <a href="/docs/5.3/customize/sass/#maps-and-loops">Sass 맵</a>를 참조해 주세요.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> YIQ 색공간과 관련 없어졌기 때문에 <code>color-yiq()</code> 함수와 그에 관련된 변수들을 <code>color-contrast()</code>로 변경하였습니다. <a href="https://github.com/twbs/bootstrap/pull/30168/">#30168을 확인해주세요.</a></p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> YIQ 색공간과 관련 없어졌기 때문에 <code>color-yiq()</code> 함수와 그에 관련된 변수들을 <code>color-contrast()</code>로 변경하였습니다. <a href="https://github.com/twbs/bootstrap/pull/30168/">#30168을 확인해주세요.</a></p>
 <ul>
 <li><code>$yiq-contrasted-threshold</code>는 <code>$min-contrast-ratio</code>로 변경.</li>
 <li><code>$yiq-text-dark</code>와 <code>$yiq-text-light</code>는 각각 <code>$color-contrast-dark</code>와 <code>$color-contrast-light</code>로 변경.</li>
 </ul>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> Media query mixins parameters have changed for a more logical approach.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> Media query mixins parameters have changed for a more logical approach.</p>
 <ul>
 <li><code>media-breakpoint-down()</code> uses the breakpoint itself instead of the next breakpoint (e.g., <code>media-breakpoint-down(lg)</code> instead of <code>media-breakpoint-down(md)</code> targets viewports smaller than <code>lg</code>).</li>
 <li>Similarly, the second parameter in <code>media-breakpoint-between()</code> also uses the breakpoint itself instead of the next breakpoint (e.g., <code>media-breakpoint-between(sm, lg)</code> instead of <code>media-breakpoint-between(sm, md)</code> targets viewports between <code>sm</code> and <code>lg</code>).</li>
 </ul>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 인쇄 클래스와 <code>$enable-print-styles</code> 변수를 삭제하였습니다. 인쇄 표시 클래스는 아직 남아 있습니다. <a href="https://github.com/twbs/bootstrap/pull/28339">#28339</a>.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 인쇄 클래스와 <code>$enable-print-styles</code> 변수를 삭제하였습니다. 인쇄 표시 클래스는 아직 남아 있습니다. <a href="https://github.com/twbs/bootstrap/pull/28339">#28339</a>.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>color()</code>, <code>theme-color()</code>, 그리고 <code>gray()</code>의 함수를 폐지하고 변수를 사용하도록 하였습니다.<a href="https://github.com/twbs/bootstrap/pull/29083">#29083</a>.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>color()</code>, <code>theme-color()</code>, 그리고 <code>gray()</code>의 함수를 폐지하고 변수를 사용하도록 하였습니다.<a href="https://github.com/twbs/bootstrap/pull/29083">#29083</a>.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>theme-color-level()</code> 함수를 <code>color-level()</code>로 변경하고, <code>$theme-color</code>의 색상뿐만 아니라 임의의 색을 받을수 있게 변경하였습니다. <a href="https://github.com/twbs/bootstrap/pull/29083">#29083</a> <strong>주의:</strong> <code>v5.0.0-alpha3</code> 이후 <code>color-level()</code>은 삭제되었습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>theme-color-level()</code> 함수를 <code>color-level()</code>로 변경하고, <code>$theme-color</code>의 색상뿐만 아니라 임의의 색을 받을수 있게 변경하였습니다. <a href="https://github.com/twbs/bootstrap/pull/29083">#29083</a> <strong>주의:</strong> <code>v5.0.0-alpha3</code> 이후 <code>color-level()</code>은 삭제되었습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 간결하게 하기 위해서 <code>$enable-prefers-reduced-motion-media-query</code>와 <code>$enable-pointer-cursor-for-buttons</code>의 이름을 <code>$enable-reduced-motion</code>과 <code>$enable-button-pointers</code>로 변경하였습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 간결하게 하기 위해서 <code>$enable-prefers-reduced-motion-media-query</code>와 <code>$enable-pointer-cursor-for-buttons</code>의 이름을 <code>$enable-reduced-motion</code>과 <code>$enable-button-pointers</code>로 변경하였습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 믹스인 <code>bg-gradient-variant()</code>를 삭제 하였습니다. 요소에 그라데이션을 추가하기 위해 사용한 <code>.bg-gradient-*</code> 클래스 대신에 <code>.bg-gradient</code> 클래스를 사용해 주세요.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 믹스인 <code>bg-gradient-variant()</code>를 삭제 하였습니다. 요소에 그라데이션을 추가하기 위해 사용한 <code>.bg-gradient-*</code> 클래스 대신에 <code>.bg-gradient</code> 클래스를 사용해 주세요.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <strong>더 이상 사용되지 않는 믹스인 삭제:</strong></p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <strong>더 이상 사용되지 않는 믹스인 삭제:</strong></p>
 <ul>
 <li><code>hover</code>, <code>hover-focus</code>, <code>plain-hover-focus</code>, 그리고 <code>hover-focus-active</code></li>
 <li><code>float()</code></li>
@@ -1131,7 +1158,7 @@
 </ul>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> Sass 자신의 컬러 스케일링 기능과 충돌을 피해기 위해 <code>scale-color()</code> 함수명을 <code>shift-color()</code>로 변경하였습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> Sass 자신의 컬러 스케일링 기능과 충돌을 피해기 위해 <code>scale-color()</code> 함수명을 <code>shift-color()</code>로 변경하였습니다.</p>
 </li>
 <li>
 <p><code>box-shadow</code> 믹스인에서 <code>null</code> 값을 허용하고 많은 인수에서 <code>none</code>을 삭제 하였습니다. <a href="https://github.com/twbs/bootstrap/pull/30394">#30394</a>.</p>
@@ -1164,20 +1191,20 @@
 <p><strong>개선된 거터.</strong> 거터는 rem 단위로 설정되어, v4 보다 좁아졌습니다 (<code>1.5rem</code>, 혹은 약 <code>24px</code>, <code>30px</code>에서 감소). 이로 그리드 시스템의 거터가 여백 유틸리티와 일치 되었습니다.</p>
 <ul>
 <li>수평/수직 거터, 수평 거터, 그리고 수직 거터를 제어하는 새로운 <a href="/docs/5.3/layout/gutters/">gutter class</a>(<code>.g-*</code>, <code>.gx-*</code>, 그리고 <code>.gy-*</code>)가 추가 되었습니다.</li>
-<li><span class="badge text-bg-danger">Breaking</span> 새로운 거터 클래스에 맞춰 기존의 <code>.no-gutters</code> 클래스 이름이 <code>.g-0</code>으로 변경 되었습니다.</li>
+<li><span class="badge text-bg-danger">중요 변경사항</span> 새로운 거터 클래스에 맞춰 기존의 <code>.no-gutters</code> 클래스 이름이 <code>.g-0</code>으로 변경 되었습니다.</li>
 </ul>
 </li>
 <li>
 <p>컬럼은 더 이상 <code>position: relative</code>가 적용되지 않기 때문에 필요에 따라 해당 동작을 위해 요소에 <code>.position-relative</code> 클래스를 추가해 사용할 필요가 있습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 자주 사용되지 않는 몇몇 <code>.order-*</code> 클래스를 삭제하였습니다. 현재는 <code>.order-1</code> 부터 <code>.order-5</code>까지의 클래스만 제공하고 있습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 자주 사용되지 않는 몇몇 <code>.order-*</code> 클래스를 삭제하였습니다. 현재는 <code>.order-1</code> 부터 <code>.order-5</code>까지의 클래스만 제공하고 있습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 유틸리티로 쉽게 복제 할 수 있는 <code>.media</code> 클래스를 삭제 하였습니다. <a href="https://github.com/twbs/bootstrap/pull/28265">#28265</a>와 <a href="/docs/5.3/utilities/flex/#media-object">flex utilities page for an example</a>을 참조해 주세요.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 유틸리티로 쉽게 복제 할 수 있는 <code>.media</code> 클래스를 삭제 하였습니다. <a href="https://github.com/twbs/bootstrap/pull/28265">#28265</a>와 <a href="/docs/5.3/utilities/flex/#media-object">flex utilities page for an example</a>을 참조해 주세요.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 이제 <code>bootstrap-grid.css</code>에서는 global box-sizing을 리셋하는 대신, <code>box-sizing: border-box</code>만 적용합니다. 그렇게 함으로써 그리드 스타일을 더 많은 곳에서 간섭 없이 사용할 수 있습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 이제 <code>bootstrap-grid.css</code>에서는 global box-sizing을 리셋하는 대신, <code>box-sizing: border-box</code>만 적용합니다. 그렇게 함으로써 그리드 스타일을 더 많은 곳에서 간섭 없이 사용할 수 있습니다.</p>
 </li>
 <li>
 <p><code>$enable-grid-classes</code>에서는 컨테이너 클래스의 생성을 비활성화 시키지 않습니다. <a href="https://github.com/twbs/bootstrap/pull/29146">#29146.</a></p>
@@ -1192,7 +1219,7 @@
 <p><strong><a href="/docs/5.3/getting-started/rfs/">RFS</a>가 기본으로 활성화 되었습니다.</strong> Headings using the <code>font-size()</code> 믹스인을 사용한 제목은 뷰포트에 맞추어 자동적으로 <code>font-size</code>를 조정합니다. <em>이 기능은 이전에 v4에서 opt-in 이었습니다.</em></p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>$display-*</code> 변수를 바꾸기 위해 디스플레이 타이포그래피를 정비하고 <code>$display-font-sizes</code> Sass 맵을 사용합니다. 또한 <code>$display-*-weight</code> 변수를 삭제하고 단일 <code>$display-font-weight</code>로 변경하여 글꼴의 크기를 조정했습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>$display-*</code> 변수를 바꾸기 위해 디스플레이 타이포그래피를 정비하고 <code>$display-font-sizes</code> Sass 맵을 사용합니다. 또한 <code>$display-*-weight</code> 변수를 삭제하고 단일 <code>$display-font-weight</code>로 변경하여 글꼴의 크기를 조정했습니다.</p>
 </li>
 <li>
 <p>새로운 <code>.display-*</code> 크기로, <code>.display-5</code>와 <code>.display-6</code>를 추가했습니다.</p>
@@ -1204,28 +1231,28 @@
 <p>스타일을 새롭게 고치기 위해 <strong>테이블 디자인이 변경</strong>되고 CSS 변수를 사용하여 스타일을 보다 효과적으로 제어 할 수 있도록 재구성되었습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 중첩된 테이블이 스타일을 상속받지 않게 되었습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 중첩된 테이블이 스타일을 상속받지 않게 되었습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.thead-light</code>과 <code>.thead-dark</code>은 삭제되고, 모든 테이블 요소(<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code>, <code>td</code>)에 사용할 수 있는 <code>.table-*</code> 변형 클래스로 변경되었습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.thead-light</code>과 <code>.thead-dark</code>은 삭제되고, 모든 테이블 요소(<code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code>, <code>td</code>)에 사용할 수 있는 <code>.table-*</code> 변형 클래스로 변경되었습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>table-row-variant()</code> 믹스인은 <code>table-variant()</code>으로 이름이 변경되며 2개의 매개 변수 <code>$color</code> (colon name)와 <code>$value</code> (color code)만 받습니다. 보더 컬러와 엑센트 컬러는 테이블 인자 변수에 따라 자동으로 계산됩니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>table-row-variant()</code> 믹스인은 <code>table-variant()</code>으로 이름이 변경되며 2개의 매개 변수 <code>$color</code> (colon name)와 <code>$value</code> (color code)만 받습니다. 보더 컬러와 엑센트 컬러는 테이블 인자 변수에 따라 자동으로 계산됩니다.</p>
 </li>
 <li>
 <p>테이블 셀의 패딩 변수를 <code>-y</code>와 <code>-x</code>로 분할 했습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.pre-scrollable</code> 클래스 삭제. <a href="https://github.com/twbs/bootstrap/pull/29135">#29135</a></p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.pre-scrollable</code> 클래스 삭제. <a href="https://github.com/twbs/bootstrap/pull/29135">#29135</a></p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.text-*</code> 유틸리티는 링크에 호버와 포커스 상태를 추가하지 않습니다. 대신 <code>.link-*</code> 도우미 클래스를 사용할 수 있습니다.<a href="https://github.com/twbs/bootstrap/pull/29267">#29267</a></p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.text-*</code> 유틸리티는 링크에 호버와 포커스 상태를 추가하지 않습니다. 대신 <code>.link-*</code> 도우미 클래스를 사용할 수 있습니다.<a href="https://github.com/twbs/bootstrap/pull/29267">#29267</a></p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.text-justify</code> 클래스 삭제. <a href="https://github.com/twbs/bootstrap/pull/29793">#29793</a></p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.text-justify</code> 클래스 삭제. <a href="https://github.com/twbs/bootstrap/pull/29793">#29793</a></p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <del><code>&lt;hr&gt;</code> elements now use <code>height</code> instead of <code>border</code> to better support the <code>size</code> attribute. This also enables use of padding utilities to create thicker dividers (e.g., <code>&lt;hr class=&quot;py-1&quot;&gt;</code>).</del></p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <del><code>&lt;hr&gt;</code> elements now use <code>height</code> instead of <code>border</code> to better support the <code>size</code> attribute. This also enables use of padding utilities to create thicker dividers (e.g., <code>&lt;hr class=&quot;py-1&quot;&gt;</code>).</del></p>
 </li>
 <li>
 <p><code>&lt;ul&gt;</code>과 <code>&lt;ol&gt;</code> 요소의 수평 방항에 설정된 <code>padding-left</code>를 브라우저의 기본 <code>40px</code>에서 <code>2rem</code>으로 변경.</p>
@@ -1244,7 +1271,7 @@
 <p><strong>새로운 플로팅 폼 추가!</strong> 플로팅 라벨의 예시를 완전히 지원되는 폼 컴포넌트로 승격시켰습니다. <a href="/docs/5.3/forms/floating-labels/">새로운 플로팅 라벨 페이지 확인하러 가기</a></p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <strong>네비티브와 사용자 정의 폼 요소의 통합.</strong> 체크박스, 라디오 버튼, 셀렉트등 v4에서 네이티브와 사용자 정의 클래스를 가지고 있던 입력 요소들이 통합되었습니다. 이를 통해 모든 폼 요소가 완전히 커스텀화 되었고, 그 대부분이 사용자 정의 HTML을 필요로 하지 않게 되었습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <strong>네비티브와 사용자 정의 폼 요소의 통합.</strong> 체크박스, 라디오 버튼, 셀렉트등 v4에서 네이티브와 사용자 정의 클래스를 가지고 있던 입력 요소들이 통합되었습니다. 이를 통해 모든 폼 요소가 완전히 커스텀화 되었고, 그 대부분이 사용자 정의 HTML을 필요로 하지 않게 되었습니다.</p>
 <ul>
 <li><code>.custom-control.custom-checkbox</code>는 <code>.form-check</code>로 변경.</li>
 <li><code>.custom-control.custom-custom-radio</code>는 <code>.form-check</code>로 변경.</li>
@@ -1256,19 +1283,19 @@
 </ul>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.input-group-append</code>와 <code>.input-group-prepend</code>는 삭제. 입력 그룹의 직접 자식 요소로서 버튼과 <code>.input-group-text</code>를 추가할 수 있게 되었습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.input-group-append</code>와 <code>.input-group-prepend</code>는 삭제. 입력 그룹의 직접 자식 요소로서 버튼과 <code>.input-group-text</code>를 추가할 수 있게 되었습니다.</p>
 </li>
 <li>
 <p>오랫동안 지속 되었던 <a href="https://github.com/twbs/bootstrap/issues/25110">유효성 검사를 사용할때 입력 그룹에서 반원 경계선이 누락되는 버그</a>는 유효성 검사 폼에 포함된 입력 그룹에 <code>.has-validation</code> 클래스를 추가하는 것으로 겨우 수정 되었습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <strong>그리드 시스템을 위한 폼 고유의 레이아웃 클래스 삭제.</strong> <code>.form-group</code>, <code>.form-row</code>, <code>.form-inline</code> 대신 그리드와 유틸리티를 사용해 주세요.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <strong>그리드 시스템을 위한 폼 고유의 레이아웃 클래스 삭제.</strong> <code>.form-group</code>, <code>.form-row</code>, <code>.form-inline</code> 대신 그리드와 유틸리티를 사용해 주세요.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 폼 레벨에는 <code>.form-label</code>이 필요합니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 폼 레벨에는 <code>.form-label</code>이 필요합니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.form-text</code>는 삭제되어 <code>display</code> 되지 않으므로, HTML 요소를 변경하는 것으로 인라인 혹은 블록 도움말 텍스트를 자유롭게 만들 수 있습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.form-text</code>는 삭제되어 <code>display</code> 되지 않으므로, HTML 요소를 변경하는 것으로 인라인 혹은 블록 도움말 텍스트를 자유롭게 만들 수 있습니다.</p>
 </li>
 <li>
 <p>Form controls no longer used fixed <code>height</code> when possible, instead deferring to <code>min-height</code> to improve customization and compatibility with other components.</p>
@@ -1281,7 +1308,7 @@
 </li>
 </ul>
 <hr class="my-5">
-<h3 id="컴포넌트">컴포넌트 <a class="anchor-link" href="#%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8" aria-label="Link to this section: 컴포넌트"></a></h3>
+<h3 id="컴포넌트-2">컴포넌트 <a class="anchor-link" href="#%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8-2" aria-label="Link to this section: 컴포넌트"></a></h3>
 <ul>
 <li>경고창, 브레드크럼, 카드, 드롭다운, 목록 그룹, 모달, 팝오버 그리고 툴팁의 <code>padding</code> 값을 <code>$spacer</code> 변수를 기반으로 통일. <a href="https://github.com/twbs/bootstrap/pull/30564">#30564</a>.</li>
 </ul>
@@ -1289,7 +1316,7 @@
 <ul>
 <li><a href="/docs/5.3/components/accordion/">새로운 아코디언 컴포넌트</a> 추가.</li>
 </ul>
-<h4 id="경고창">경고창 <a class="anchor-link" href="#%ea%b2%bd%ea%b3%a0%ec%b0%bd" aria-label="Link to this section: 경고창"></a></h4>
+<h4 id="경고창-1">경고창 <a class="anchor-link" href="#%ea%b2%bd%ea%b3%a0%ec%b0%bd-1" aria-label="Link to this section: 경고창"></a></h4>
 <ul>
 <li>
 <p>경고창에 <a href="/docs/5.3/components/alerts/#icons">아이콘 사용한 예시</a>를 추가.</p>
@@ -1301,13 +1328,13 @@
 <h4 id="배지">배지 <a class="anchor-link" href="#%eb%b0%b0%ec%a7%80" aria-label="Link to this section: 배지"></a></h4>
 <ul>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 배경 유틸리티의 모든 <code>.badge-*</code> 색상 클래스 삭제 (예를 들어, <code>.badge-primary</code> 대신 <code>.bg-primary</code> 사용).</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 배경 유틸리티의 모든 <code>.badge-*</code> 색상 클래스 삭제 (예를 들어, <code>.badge-primary</code> 대신 <code>.bg-primary</code> 사용).</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.badge-pill</code> 삭제 — 대신<code>.rounded-pill</code> 유틸리티를 사용해 주세요.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.badge-pill</code> 삭제 — 대신<code>.rounded-pill</code> 유틸리티를 사용해 주세요.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>&lt;a&gt;</code>와 <code>&lt;button&gt;</code> 요소에 호버와 포커스 스타일 삭제.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>&lt;a&gt;</code>와 <code>&lt;button&gt;</code> 요소에 호버와 포커스 스타일 삭제.</p>
 </li>
 <li>
 <p>배지의 기본 패딩을<code>.25em</code>/<code>.5em</code>에서 <code>.35em</code>/<code>.65em</code>으로 변경.</p>
@@ -1325,10 +1352,10 @@
 <h4 id="버튼">버튼 <a class="anchor-link" href="#%eb%b2%84%ed%8a%bc" aria-label="Link to this section: 버튼"></a></h4>
 <ul>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <strong>체크 박스나 라디오 버튼에 있는 <a href="/docs/5.3/forms/checks-radios/#toggle-buttons">토글 버튼</a>은, JavaScript가 필요없는 새로운 마크업을 채용하고 있습니다.</strong> 더 이상 감싸는 요소는 필요하지 않고, 바로 <code>&lt;input&gt;</code>에 <code>.btn-check</code>를 추가해 <code>.btn</code> 클래스의 <code>&lt;label&gt;</code>과 조합 합니다. <a href="https://github.com/twbs/bootstrap/pull/30650">#30650</a>. <em>이 건에 관한 문서는 버튼 페이지에서 폼 섹션으로 이동하였습니다.</em></p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <strong>체크 박스나 라디오 버튼에 있는 <a href="/docs/5.3/forms/checks-radios/#toggle-buttons">토글 버튼</a>은, JavaScript가 필요없는 새로운 마크업을 채용하고 있습니다.</strong> 더 이상 감싸는 요소는 필요하지 않고, 바로 <code>&lt;input&gt;</code>에 <code>.btn-check</code>를 추가해 <code>.btn</code> 클래스의 <code>&lt;label&gt;</code>과 조합 합니다. <a href="https://github.com/twbs/bootstrap/pull/30650">#30650</a>. <em>이 건에 관한 문서는 버튼 페이지에서 폼 섹션으로 이동하였습니다.</em></p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <strong>유틸리티용 <code>.btn-block</code>를 삭제.</strong> <code>.btn</code>에 <code>.btn-block</code>을 사용하는 대신에, 버튼을 <code>.d-grid</code>와 <code>.gap-*</code> 유틸리티로 감싸고 필요에 따라 여백을 위한 클래스를 사용합니다. 보다 강력한 컨트롤을 위해 반응형 클래스로 전환 합니다. <a href="/docs/5.3/components/buttons/#block-buttons">몇 가지 예시에 대해서는 문서를 참조해 주세요</a></p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <strong>유틸리티용 <code>.btn-block</code>를 삭제.</strong> <code>.btn</code>에 <code>.btn-block</code>을 사용하는 대신에, 버튼을 <code>.d-grid</code>와 <code>.gap-*</code> 유틸리티로 감싸고 필요에 따라 여백을 위한 클래스를 사용합니다. 보다 강력한 컨트롤을 위해 반응형 클래스로 전환 합니다. <a href="/docs/5.3/components/buttons/#block-buttons">몇 가지 예시에 대해서는 문서를 참조해 주세요</a></p>
 </li>
 <li>
 <p>추가 매개 변수를 지원하기 위해 <code>button-variant()</code>와 <code>button-outline-variant()</code> 믹스인을 업데이트 했습니다.</p>
@@ -1343,13 +1370,13 @@
 <h4 id="카드">카드 <a class="anchor-link" href="#%ec%b9%b4%eb%93%9c" aria-label="Link to this section: 카드"></a></h4>
 <ul>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 그리드에 유리하게 <code>.card-deck</code>을 삭제. card decks 재현을 위해 부모에 <code>.row-cols-*</code> 컨테이너를 추가하고 카드를 column 클래스로 감쌉니다. (반응형 정렬을 보다 효과적으로 제어할 수 있습니다).</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 그리드에 유리하게 <code>.card-deck</code>을 삭제. card decks 재현을 위해 부모에 <code>.row-cols-*</code> 컨테이너를 추가하고 카드를 column 클래스로 감쌉니다. (반응형 정렬을 보다 효과적으로 제어할 수 있습니다).</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 조적식(Masonry) 레이아웃에 유리하도록 <code>.card-columns</code> 삭제. <a href="https://github.com/twbs/bootstrap/pull/28922">#28922</a>.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 조적식(Masonry) 레이아웃에 유리하도록 <code>.card-columns</code> 삭제. <a href="https://github.com/twbs/bootstrap/pull/28922">#28922</a>.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.card</code> 기반의 아코디언을 <a href="/docs/5.3/components/accordion/">새로운 아코디언 컴포넌트</a>로 교체히였습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.card</code> 기반의 아코디언을 <a href="/docs/5.3/components/accordion/">새로운 아코디언 컴포넌트</a>로 교체히였습니다.</p>
 </li>
 </ul>
 <h4 id="캐러셀">캐러셀 <a class="anchor-link" href="#%ec%ba%90%eb%9f%ac%ec%85%80" aria-label="Link to this section: 캐러셀"></a></h4>
@@ -1361,10 +1388,10 @@
 <p>캐러셀의 chevron 아이콘을 <a href="https://icons.getbootstrap.kr/">Bootstrap Icons</a>의 새로운 SVG로 대체하였습니다.</p>
 </li>
 </ul>
-<h4 id="닫기-버튼">닫기 버튼 <a class="anchor-link" href="#%eb%8b%ab%ea%b8%b0-%eb%b2%84%ed%8a%bc" aria-label="Link to this section: 닫기 버튼"></a></h4>
+<h4 id="닫기-버튼-1">닫기 버튼 <a class="anchor-link" href="#%eb%8b%ab%ea%b8%b0-%eb%b2%84%ed%8a%bc-1" aria-label="Link to this section: 닫기 버튼"></a></h4>
 <ul>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.close</code>에서 보다 일반적인 이름인 <code>.btn-close</code>으로 변경되었습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.close</code>에서 보다 일반적인 이름인 <code>.btn-close</code>으로 변경되었습니다.</p>
 </li>
 <li>
 <p>닫기 버튼은 HTML 내의 <code>&amp;times;</code> 대신에 <code>background-image</code>(embedded SVG)를 사용하게 되어 마크업 변경없이 손쉽게 재정의 할 수 있게 되었습니다.</p>
@@ -1377,7 +1404,7 @@
 <ul>
 <li>아코디언에 스크롤 고정 장치가 삭제 되었습니다.</li>
 </ul>
-<h4 id="드롭다운">드롭다운 <a class="anchor-link" href="#%eb%93%9c%eb%a1%ad%eb%8b%a4%ec%9a%b4" aria-label="Link to this section: 드롭다운"></a></h4>
+<h4 id="드롭다운-1">드롭다운 <a class="anchor-link" href="#%eb%93%9c%eb%a1%ad%eb%8b%a4%ec%9a%b4-1" aria-label="Link to this section: 드롭다운"></a></h4>
 <ul>
 <li>
 <p>어두운 드롭다운을 위해 새로운 <code>.dropdown-menu-dark</code> 변형 클래스와 관련된 변수를 추가하였습니다.</p>
@@ -1389,13 +1416,13 @@
 <p>드롭다운의 구분자를 진하게 해 색상 대비를 개선하였습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 드롭다운의 모든 이벤트는 드롭다운 토글 버튼으로 트리거 되어 이후 부모 요소에 버블링 됩니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 드롭다운의 모든 이벤트는 드롭다운 토글 버튼으로 트리거 되어 이후 부모 요소에 버블링 됩니다.</p>
 </li>
 <li>
 <p>드롭다운 메뉴에는 위치가 정적일때 또는 내비게이션 바에 있을 때에는 <code>data-bs-popper=&quot;static&quot;</code> 속성이 설정됩니다. 이것은 JavaScript를 통해 추가되며 Popper의 배치에 간섭하지 않고 사용자 정의 위치 스타일을 사용하는데 도움이 됩니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 드롭다운 플러그인에 대한 <code>flip</code> 옵션을 삭제하고 Popper의 네이티브 설정으로 변경되었습니다. <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip</a> 제어자의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements"><code>fallbackPlacements</code></a>의 빈 배열을 통해서 플립 동작을 비활성화 할 수 있습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 드롭다운 플러그인에 대한 <code>flip</code> 옵션을 삭제하고 Popper의 네이티브 설정으로 변경되었습니다. <a href="https://popper.js.org/docs/v2/modifiers/flip/">flip</a> 제어자의 <a href="https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements"><code>fallbackPlacements</code></a>의 빈 배열을 통해서 플립 동작을 비활성화 할 수 있습니다.</p>
 </li>
 <li>
 <p>드롭다운 메뉴는 새로운 <code>autoClose</code> 옵션을 추가해 <a href="/docs/5.3/components/dropdowns/#auto-close-behavior">자동 닫기 동작</a>을 처리하게 되었습니다. 이 옵션을 사용하면 드롭다운 메뉴의 안쪽 또는 바깥쪽에서 클릭을 받아 상호적인 메뉴를 만들 수 있습니다.</p>
@@ -1406,9 +1433,9 @@
 </ul>
 <h4 id="점보트론">점보트론 <a class="anchor-link" href="#%ec%a0%90%eb%b3%b4%ed%8a%b8%eb%a1%a0" aria-label="Link to this section: 점보트론"></a></h4>
 <ul>
-<li><span class="badge text-bg-danger">Breaking</span> 유틸리티로 만들수 있기 때문에 점보트론 컴포넌트는 삭제되었습니다. <a href="/docs/5.3/examples/jumbotron/">데모로 새로운 점보트론의 사용을 확인해 주세요.</a></li>
+<li><span class="badge text-bg-danger">중요 변경사항</span> 유틸리티로 만들수 있기 때문에 점보트론 컴포넌트는 삭제되었습니다. <a href="/docs/5.3/examples/jumbotron/">데모로 새로운 점보트론의 사용을 확인해 주세요.</a></li>
 </ul>
-<h4 id="목록-그룹">목록 그룹 <a class="anchor-link" href="#%eb%aa%a9%eb%a1%9d-%ea%b7%b8%eb%a3%b9" aria-label="Link to this section: 목록 그룹"></a></h4>
+<h4 id="목록-그룹-1">목록 그룹 <a class="anchor-link" href="#%eb%aa%a9%eb%a1%9d-%ea%b7%b8%eb%a3%b9-1" aria-label="Link to this section: 목록 그룹"></a></h4>
 <ul>
 <li>목록 그룹에 새로운 <a href="/docs/5.3/components/list-group/#numbered"><code>.list-group-numbered</code> 제어자 클래스</a>가 추가되었습니다.</li>
 </ul>
@@ -1416,10 +1443,10 @@
 <ul>
 <li><code>.nav-link</code> 클래스에 <code>font-size</code>, <code>font-weight</code>, <code>color</code>, <code>:hover</code> <code>color</code>에 대한 새로운 변수 <code>null</code>을 추가했습니다.</li>
 </ul>
-<h4 id="내비게이션-바">내비게이션 바 <a class="anchor-link" href="#%eb%82%b4%eb%b9%84%ea%b2%8c%ec%9d%b4%ec%85%98-%eb%b0%94" aria-label="Link to this section: 내비게이션 바"></a></h4>
+<h4 id="내비게이션-바-1">내비게이션 바 <a class="anchor-link" href="#%eb%82%b4%eb%b9%84%ea%b2%8c%ec%9d%b4%ec%85%98-%eb%b0%94-1" aria-label="Link to this section: 내비게이션 바"></a></h4>
 <ul>
-<li><span class="badge text-bg-danger">Breaking</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).</li>
-<li><span class="badge text-bg-danger">Breaking</span> 내비게이션 바는 컨테이너가 필요하게 되어 간격 요건이나 필요한 CSS가 대폭 간소화되었습니다.</li>
+<li><span class="badge text-bg-danger">중요 변경사항</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).</li>
+<li><span class="badge text-bg-danger">중요 변경사항</span> 내비게이션 바는 컨테이너가 필요하게 되어 간격 요건이나 필요한 CSS가 대폭 간소화되었습니다.</li>
 </ul>
 <h4 id="오프캔버스">오프캔버스 <a class="anchor-link" href="#%ec%98%a4%ed%94%84%ec%ba%94%eb%b2%84%ec%8a%a4" aria-label="Link to this section: 오프캔버스"></a></h4>
 <ul>
@@ -1437,7 +1464,7 @@
 <h4 id="팝오버">팝오버 <a class="anchor-link" href="#%ed%8c%9d%ec%98%a4%eb%b2%84" aria-label="Link to this section: 팝오버"></a></h4>
 <ul>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 기본 팝오버 템플릿의 <code>.arrow</code> 이름을 <code>.popover-arrow</code>로 변경하였습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 기본 팝오버 템플릿의 <code>.arrow</code> 이름을 <code>.popover-arrow</code>로 변경하였습니다.</p>
 </li>
 <li>
 <p><code>whiteList</code> 옵션명을 <code>allowList</code>로 변경하였습니다.</p>
@@ -1467,19 +1494,19 @@
 <h4 id="툴팁">툴팁 <a class="anchor-link" href="#%ed%88%b4%ed%8c%81" aria-label="Link to this section: 툴팁"></a></h4>
 <ul>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 기본 툴팁 템플렛에서 <code>.arrow</code> 이름을 <code>.tooltip-arrow</code>으로 변경하였습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 기본 툴팁 템플렛에서 <code>.arrow</code> 이름을 <code>.tooltip-arrow</code>으로 변경하였습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>fallbackPlacements</code>의 기본 값이 <code>['top', 'right', 'bottom', 'left']</code>으로 popper 요소의 배치가 개선되었습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>fallbackPlacements</code>의 기본 값이 <code>['top', 'right', 'bottom', 'left']</code>으로 popper 요소의 배치가 개선되었습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>whiteList</code> 옵션명이 <code>allowList</code>로 변경되었습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>whiteList</code> 옵션명이 <code>allowList</code>로 변경되었습니다.</p>
 </li>
 </ul>
-<h3 id="유틸리티">유틸리티 <a class="anchor-link" href="#%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0" aria-label="Link to this section: 유틸리티"></a></h3>
+<h3 id="유틸리티-3">유틸리티 <a class="anchor-link" href="#%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0-3" aria-label="Link to this section: 유틸리티"></a></h3>
 <ul>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> RTL 지원이 추가됨에 따라 방향적인 이름 대신 논리적인 속성명으로 여러 유틸리티의 이름이 변경되었습니다:</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> RTL 지원이 추가됨에 따라 방향적인 이름 대신 논리적인 속성명으로 여러 유틸리티의 이름이 변경되었습니다:</p>
 <ul>
 <li><code>.left-*</code>와 <code>.right-*</code>에서 <code>.start-*</code>와 <code>.end-*</code>로 변경.</li>
 <li><code>.float-left</code>와 <code>.float-right</code>에서 <code>.float-start</code>와 <code>.float-end</code>로 변경.</li>
@@ -1491,7 +1518,7 @@
 </ul>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 기본적으로 음수 마진을 비활성화.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 기본적으로 음수 마진을 비활성화.</p>
 </li>
 <li>
 <p><code>&lt;body&gt;</code>의 배경을 추가적인 요소로 빠르게 설정하기 위해 새롭게 <code>.bg-body</code> 클래스를 추가하였습니다.</p>
@@ -1506,25 +1533,25 @@
 <p>새로운 <a href="/docs/5.3/utilities/borders/#border-width"><code>border-width</code> 유틸리티</a>를 추가하였습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.text-monospace</code> 클래스명이 <code>.font-monospace</code>으로 변경되었습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.text-monospace</code> 클래스명이 <code>.font-monospace</code>으로 변경되었습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 텍스트를 숨기기 위한 시대 착오적인 방법으로 더 이상 사용되서는 안되는 <code>.text-hide</code>를 삭제하였습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 텍스트를 숨기기 위한 시대 착오적인 방법으로 더 이상 사용되서는 안되는 <code>.text-hide</code>를 삭제하였습니다.</p>
 </li>
 <li>
 <p><code>font-size</code> 유틸리티를 위한 <code>.fs-*</code> 유틸리티를 추가하였습니다. (RFS 사용). 이들은 HTML의 기본 제목과 동일한 크기(1-6, large ~ small)를 사용하고 있으며 Sass 맵에서 변경할 수 있습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.font-weight-*</code> 유틸리티를 간결함과 일관성을 위해 <code>.fw-*</code>로 변경하였습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.font-weight-*</code> 유틸리티를 간결함과 일관성을 위해 <code>.fw-*</code>로 변경하였습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> Renamed <code>.font-italic</code> utility to <code>.fst-italic</code> for brevity and consistency with new <code>.fst-normal</code> utility.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> Renamed <code>.font-italic</code> utility to <code>.fst-italic</code> for brevity and consistency with new <code>.fst-normal</code> utility.</p>
 </li>
 <li>
 <p>CSS 그리드와 flexbox 레이아웃용 표시를 위한 <code>.d-grid</code> 유틸리티와 새로운 <code>gap</code> 유틸리티(<code>.gap</code>)를 추가하였습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <code>.rounded-sm</code>과 <code>rounded-lg</code>를 삭제하고, 스케일로서 새로운 클래스 <code>.rounded-0</code>부터 <code>.rounded-3</code>을 도입하였습니다. <a href="https://github.com/twbs/bootstrap/pull/31687">#31687</a>.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <code>.rounded-sm</code>과 <code>rounded-lg</code>를 삭제하고, 스케일로서 새로운 클래스 <code>.rounded-0</code>부터 <code>.rounded-3</code>을 도입하였습니다. <a href="https://github.com/twbs/bootstrap/pull/31687">#31687</a>.</p>
 </li>
 <li>
 <p>새로운 <code>line-height</code> 유틸리티를 추가하였습니다: <code>.lh-1</code>, <code>.lh-sm</code>, <code>.lh-base</code>와 <code>.lh-lg</code>. <a href="/docs/5.3/utilities/text/#line-height">자세히 보기</a>.</p>
@@ -1536,10 +1563,10 @@
 <p>컨테이너 작업에도 사용할 수 있도록 <code>.visually-hidden-focusable</code> 도우미를 <code>:focus-within</code>로 확장하였습니다.</p>
 </li>
 </ul>
-<h2 id="도우미">도우미 <a class="anchor-link" href="#%eb%8f%84%ec%9a%b0%eb%af%b8" aria-label="Link to this section: 도우미"></a></h2>
+<h2 id="도우미-2">도우미 <a class="anchor-link" href="#%eb%8f%84%ec%9a%b0%eb%af%b8-2" aria-label="Link to this section: 도우미"></a></h2>
 <ul>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 더욱 편리한 CSS 변수 추가로 동작이 개선된 <strong>Responsive embed가 <a href="/docs/5.3/helpers/ratio/">ratio 도우미</a></strong> 로 이름이 변경되었습니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 더욱 편리한 CSS 변수 추가로 동작이 개선된 <strong>Responsive embed가 <a href="/docs/5.3/helpers/ratio/">ratio 도우미</a></strong> 로 이름이 변경되었습니다.</p>
 <ul>
 <li>비율을 나타내는 클래스가 <code>by</code>에서 <code>x</code>로 이름이 변경되었습니다. 예를 들어, <code>.ratio-16by9</code>는 <code>.ratio-16x9</code>가 되었습니다.</li>
 <li><code>.embed-responsive-item</code>과 요소 그룹 셀렉터를 삭제하여 더욱 단순한 <code>.ratio &gt; *</code> 셀렉터로 변경되었습니다. 이로써 클래스는 불필요해 졌고, 비율 도우미는 어떠한 HTML 요소로도 사용 가능해졌습니다.</li>
@@ -1548,7 +1575,7 @@
 </ul>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> <strong>&ldquo;Screen reader&rdquo; 클래스는 <a href="/docs/5.3/helpers/visually-hidden/">&ldquo;visually hidden&rdquo;</a>이 되었습니다.</strong></p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> <strong>&ldquo;Screen reader&rdquo; 클래스는 <a href="/docs/5.3/helpers/visually-hidden/">&ldquo;visually hidden&rdquo;</a>이 되었습니다.</strong></p>
 <ul>
 <li><code>scss/helpers/_screenreaders.scss</code>에서 <code>scss/helpers/_visually-hidden.scss</code>로 Sass 파일이 변경되었습니다.</li>
 <li><code>.sr-only</code>와 <code>.sr-only-focusable</code>에서 <code>.visually-hidden</code>과 <code>.visually-hidden-focusable</code>로 변경되었습니다.</li>
@@ -1565,7 +1592,7 @@
 <p><strong>jQuery에 대한 의존을 중단</strong>하고 플러그인을 통상적인 JavaScript로 다시 썼습니다.</p>
 </li>
 <li>
-<p><span class="badge text-bg-danger">Breaking</span> 모든 JavaScript 플러그인의 데이터 속성은 제삼자의 코드와 자체 코드에서 Bootstrap의 기능을 구별하는 데 도움이 되도록 이름을 붙이고 있습니다. 예를 들어 <code>data-toggle</code> 대신 <code>data-bs-toggle</code>을 사용합니다.</p>
+<p><span class="badge text-bg-danger">중요 변경사항</span> 모든 JavaScript 플러그인의 데이터 속성은 제삼자의 코드와 자체 코드에서 Bootstrap의 기능을 구별하는 데 도움이 되도록 이름을 붙이고 있습니다. 예를 들어 <code>data-toggle</code> 대신 <code>data-bs-toggle</code>을 사용합니다.</p>
 </li>
 <li>
 <p><strong>모든 클러그인은 첫번째 인수로서 CSS 셀렉터를 받아들일 수 있게 되었습니다.</strong> 플러그인의 새로운 인스턴스를 작성하기 위해 DOM 요소 또는 임의의 CSS 셀렉터를 전달할 수 있습니다. :</p>
@@ -1608,7 +1635,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

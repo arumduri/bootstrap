@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/extend/approach.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/extend/approach/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/extend/approach.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">접근</h1>
         </div>
@@ -558,8 +592,6 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-
         <p>시작하기 페이지는 프로젝트와 프로젝트에서 제공되는 것들에 대한 소개를 제공하지만 이 문서는 우리가 <em>왜</em> Bootstrap을 이렇게 만들었는지에 초점을 맞춥니다. 여기에서는 다른 사람들이 우리에게 배우고, 우리와 함께 기여하고, 우리의 발전을 도울 수 있도록 웹을 빌드하려는 우리의 철학을 설명합니다.</p>
 <p>올바르지 않거나 더 완벽하게 만들 필요가 있는 부분을 발견하셨나요? <a href="https://github.com/twbs/bootstrap/issues/new/choose">이슈를 열어주세요</a>. 논의는 언제든지 환영합니다.</p>
 <h2 id="요약">요약 <a class="anchor-link" href="#%ec%9a%94%ec%95%bd" aria-label="Link to this section: 요약"></a></h2>
@@ -574,7 +606,7 @@
 </ul>
 <h2 id="반응형">반응형 <a class="anchor-link" href="#%eb%b0%98%ec%9d%91%ed%98%95" aria-label="Link to this section: 반응형"></a></h2>
 <p>Bootstrap의 반응형 스타일은 반응형으로 만들어졌으며, 이는 흔히 _모바일 우선_으로 불립니다. 우리는 이 용어를 우리의 문서에 사용하고 대부분 그렇게 부르는 것에 동의하지만, 때때로 이는 너무 광범위한 표현으로 느껴질 수도 있습니다. Bootstrap의 모든 컴포넌트가 <em>무조건</em> 반응형이여야 하는 것은 아니지만 반응형 접근을 사용한다면 뷰포트가 커질 경우 스타일을 추가하도록 푸시하여 CSS 재정의를 줄일 수 있습니다.</p>
-<p>미디어 쿼리를 통해서 Bootstrap를 확인하면 이러한 사실을 가장 명확하게 확인할 수 있습니다. 대부분의 경우 우리는 <code>min-width</code> 쿼리를 사용해서 특정 중단점 (breakpoint)에 적용하며 더 높은 중단점을 통과하는 쿼리를 사용합니다. 예를 들어 <code>.d-none</code> 은 <code>min-width: 0</code>을 적용해서 무한대로 표시됩니다. <code>.d-md-none</code>을 사용해서 중형 중단점 이상에서 표시되게 할 수도 있습니다.</p>
+<p>미디어 쿼리를 통해서 Bootstrap를 확인하면 이러한 사실을 가장 명확하게 확인할 수 있습니다. 대부분의 경우 우리는 <code>min-width</code> 쿼리를 사용해서 특정 중단점 (breakpoint)에 적용하며 더 높은 중단점을 통과하는 쿼리를 사용합니다. 예를 들어 <code>.d-none</code>은 <code>min-width: 0</code>을 적용해서 무한대로 표시됩니다. <code>.d-md-none</code>을 사용해서 중형 중단점 이상에서 표시되게 할 수도 있습니다.</p>
 <p>때때로 우리는 컴포넌트의 고유한 복잡성이 <code>max-width</code>를 요구하면 이를 사용합니다. 때때로 이러한 재정의는 컴포넌트에서 핵심 기능을 다시 작성하는 것보다 구현 및 지원하기에 기능적으로나 직관성에서 더 명확합니다. 우리는 이러한 접근을 제한하도록 노력하고 있지만 수시로 사용할 것입니다.</p>
 <h2 id="클래스">클래스 <a class="anchor-link" href="#%ed%81%b4%eb%9e%98%ec%8a%a4" aria-label="Link to this section: 클래스"></a></h2>
 <p>브라우저 간 정규화 스타일시트 인 Reboot를 제외하고 모든 스타일은 클래스를 선택자로 사용하는 것을 목표로 합니다. 이것은 스타일을 너무 구체적으로 만들어 쉽게 재정의할 수 없는 유형 선택자 (예: <code>input[type=&quot;text&quot;]</code>)나 외부 부모 클래스 (예: <code>.parent .child</code>)를 피해야 한다는 것을 의미합니다.</p>
@@ -585,8 +617,8 @@
 <h3 id="컴포넌트-요소">컴포넌트 요소 <a class="anchor-link" href="#%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8-%ec%9a%94%ec%86%8c" aria-label="Link to this section: 컴포넌트 요소"></a></h3>
 <ul>
 <li>Bootstrap의 일부 컴포넌트는 <code>border</code> 속성을 수정하지 않고 이중 테두리를 방지하기 위해 겹치는 요소로 빌드됩니다. 버튼 그룹, 입력 그룹 및 페이지 매김이 여기에 해당됩니다.</li>
-<li>이러한 컴포넌트들은  <code>z-index</code>의  <code>0</code>에서 <code>3</code> 까지의 크기를 표준으로 공유합니다.</li>
-<li><code>0</code>은 기본값 (초기값), <code>1</code> 은 <code>:hover</code>, <code>2</code> 는 <code>:active</code>/<code>.active</code>, <code>3</code> 은 <code>:focus</code> 입니다.</li>
+<li>이러한 컴포넌트들은 <code>z-index</code>의 <code>0</code>에서 <code>3</code>까지의 크기를 표준으로 공유합니다.</li>
+<li><code>0</code>은 기본값 (초기값), <code>1</code>은 <code>:hover</code>, <code>2</code>는 <code>:active</code>/<code>.active</code>, <code>3</code>은 <code>:focus</code> 입니다.</li>
 <li>이 접근은 가장 높은 사용자 우선 순위에 대한 우리의 기대와 일치합니다. 요소에 포커스가 맞춰지면 뷰에 표시되며 사용자의 주의를 끕니다. 활성 요소는 상태를 나타내기 때문에 두 번째로 높습니다. 호버는 사용자 의도를 나타내기 때문에 세 번째로 높지만 거의 <em>모든</em> 항목은 호버할 수 있습니다.</li>
 </ul>
 <h3 id="오버레이-컴포넌트">오버레이 컴포넌트 <a class="anchor-link" href="#%ec%98%a4%eb%b2%84%eb%a0%88%ec%9d%b4-%ec%bb%b4%ed%8f%ac%eb%84%8c%ed%8a%b8" aria-label="Link to this section: 오버레이 컴포넌트"></a></h3>
@@ -599,12 +631,12 @@
 <p>마지막으로, 우리의 스타일은 일반적인 웹 요소의 기본 동작을 기반으로 합니다. 가능한 한 브라우저가 제공하는 것을 사용하는 것을 선호합니다. 예를 들어 거의 모든 요소에 <code>.btn</code> 클래스를 배치할 수 있지만 대부분의 요소는 시멘틱 값이나 브라우저 기능을 제공하지 않습니다. 그래서 대신 <code>&lt;button&gt;</code>과 <code>&lt;a&gt;</code>를 사용합니다.</p>
 <p>더 복잡한 컴포넌트도 마찬가지입니다. 입력 상태를 기반으로 부모 요소에 클래스를 추가하기 위해 자체 폼 유효성 검사 플러그인을 작성할 <em>수도 있고</em> 이를 통해 텍스트 스타일을 빨간색으로 지정할 수 있지만 우리는 모든 브라우저에서 제공하는 <code>:valid</code>/<code>:invalid</code>의사 요소를 사용하는 것이 좋습니다.</p>
 <h2 id="유틸리티">유틸리티 <a class="anchor-link" href="#%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0" aria-label="Link to this section: 유틸리티"></a></h2>
-<p>Bootstrap 3의 도우미 (helpers)였던 유틸리티 클래스는 CSS 과점 (bloat) 및 페이지 성능 저하를 방지하는 데에 있어서 강력한 우군입니다. 유틸리티 클래스는 일반적으로 클래스 (예: <code>.d-block</code> 는 <code>display: block;</code>을 나타냄)로 표현되는 변경 불가능한 단일 속성값 쌍입니다. 유틸리티의 주요 매력은 HTML을 작성하는 동안의 사용 속도와 작성해야 하는 커스텀 CSS의 양을 제한하는 것입니다.</p>
+<p>Bootstrap 3의 도우미 (helpers)였던 유틸리티 클래스는 CSS 과점 (bloat) 및 페이지 성능 저하를 방지하는 데에 있어서 강력한 우군입니다. 유틸리티 클래스는 일반적으로 클래스 (예: <code>.d-block</code>는 <code>display: block;</code>을 나타냄)로 표현되는 변경 불가능한 단일 속성값 쌍입니다. 유틸리티의 주요 매력은 HTML을 작성하는 동안의 사용 속도와 작성해야 하는 커스텀 CSS의 양을 제한하는 것입니다.</p>
 <p>특히 커스텀 CSS와 관련하여 유틸리티는 가장 일반적으로 반복되는 속성값 쌍을 단일 클래스로 줄임으로써 파일 크기 증가를 방지할 수 있습니다. 이는 프로젝트에서 상당한 규모의 극적인 효과를 낼 수 있습니다.</p>
 <h2 id="유연한-html">유연한 HTML <a class="anchor-link" href="#%ec%9c%a0%ec%97%b0%ed%95%9c-html" aria-label="Link to this section: 유연한 HTML"></a></h2>
 <p>항상 가능한 것은 아니지만 우리는 컴포넌트에 대한 HTML 요구 사항에서 지나치게 독단적이지 않도록 노력합니다. 따라서 CSS 선택자에서 단일 클래스에 초점을 맞추고 직접적인 자식 선택자 (<code>&gt;</code>)를 피하려고 합니다. 이는 구현에 더 많은 유연성을 제공하고 CSS를 더 단순하고 덜 복잡하도록 유지하는 데 도움이 됩니다.</p>
 <h2 id="코딩-규칙">코딩 규칙 <a class="anchor-link" href="#%ec%bd%94%eb%94%a9-%ea%b7%9c%ec%b9%99" aria-label="Link to this section: 코딩 규칙"></a></h2>
-<p>(Bootstrap공동 제작자 @mdo가 만든) <a href="https://codeguide.co/">Code Guide</a>는 Bootstrap에서 HTML과 CSS를 작성하는 방법을 설명합니다. 일반 서식, 기본 상식, 속성 및 속성 순서 등에 대한 지침을 구체적으로 설명합니다.</p>
+<p>(Bootstrap의 공동 제작자인 @mdo가 만든) <a href="https://codeguide.co/">Code Guide</a>는 Bootstrap에서 HTML과 CSS를 작성하는 방법을 설명합니다. 일반 서식, 기본 상식, 속성 및 속성 순서 등에 대한 지침을 구체적으로 설명합니다.</p>
 <p>우리는 <a href="https://stylelint.io/">Stylelint</a>를 사용하여 Sass/CSS에서 이러한 표준 등을 시행합니다. <a href="https://github.com/twbs/stylelint-config-twbs-bootstrap">우리의 커스텀 Stylelint 설정</a>은 오픈 소스이며 다른 사용자가 사용하고 확장시킬 수 있습니다.</p>
 <p>우리는 <a href="https://www.npmjs.com/package/vnu-jar">vnu-jar</a>를 사용하여 표준 및 시멘틱 HTML 뿐만 아니라 일반적인 오류에 대한 검출도 시행합니다.</p>
 
@@ -633,7 +665,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

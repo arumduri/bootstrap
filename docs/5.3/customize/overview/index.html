@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,9 +564,12 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/customize/overview.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/customize/overview/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/customize/overview.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
           <h1 class="bd-title mb-0" id="content">사용자 지정</h1>
         </div>
@@ -611,8 +645,6 @@
           </div>
         
 
-        
-
         <h2 id="개요">개요 <a class="anchor-link" href="#%ea%b0%9c%ec%9a%94" aria-label="Link to this section: 개요"></a></h2>
 <p>Bootstrap을 재정의 하는 방법은 여러 가지가 있습니다. 가장 좋은 방법은 당신의 프로젝트, 빌드 도구의 복잡성, 사용하고 있는 Bootstrap 버전, 브라우저 지원 등에 따라 달라질 수 있습니다.</p>
 <p>우리는 아래의 두 가지 방법을 선호합니다:</p>
@@ -627,13 +659,13 @@
 <p>브라우저 및 기기 간에 일관되게 스타일링하기 위해 몇몇 Bootstrap 컴포넌트는 CSS에 내장된 SVG를 포함하고 있습니다. <strong><abbr title="Content Security Policy">CSP</abbr> 형태가 보다 엄격한 조직을 위해</strong>, embedded SVG(모두 <code>background-image</code>를 통해 적용되게)의 모든 인스턴스를 문서화하여 옵션을 보다 철저하게 검토할 수 있게 하였습니다.</p>
 <ul>
 <li><a href="/docs/5.3/components/accordion/">아코디언</a></li>
-<li><a href="/docs/5.3/components/carousel/#with-controls">Carousel controls</a></li>
+<li><a href="/docs/5.3/components/carousel/#with-controls">캐러셀 제어</a></li>
 <li><a href="/docs/5.3/components/close-button/">닫기 버튼</a> (경고창과 모달에서 사용)</li>
 <li><a href="/docs/5.3/forms/checks-radios/">폼 체크 박스와 라디오 버튼</a></li>
 <li><a href="/docs/5.3/forms/checks-radios/#switches">폼 스위치</a></li>
 <li><a href="/docs/5.3/forms/validation/#server-side">폼 유효성 검사 아이콘</a></li>
-<li><a href="/docs/5.3/components/carousel/#with-controls">캐러셀 컨트롤</a></li>
-<li><a href="/docs/5.3/components/navbar/#responsive-behaviors">내비게이션 바 토글 버튼</a></li>
+<li><a href="/docs/5.3/components/carousel/#기본-예제">캐러셀 컨트롤</a></li>
+<li><a href="/docs/5.3/components/navbar/#반응형-비헤이비어">내비게이션 바 토글 버튼</a></li>
 <li><a href="/docs/5.3/forms/select/">셀렉트 메뉴</a></li>
 </ul>
 <p><a href="https://github.com/twbs/bootstrap/issues/25394">커뮤니티 정보</a>에 의하면, 사용자의 코드를 가지고 이 문제에 대처하는 방법으로는 <a href="/docs/5.3/getting-started/webpack/#extracting-svg-files">URL을 로컬 호스트한다</a>, 이미지를 삭제해 인라인으로 이미지를 사용한다 (모든 컴포넌트로 가능한 것은 아닙니다), CSP를 변경한다 등이 있습니다. 우리는 사용자가 자신의 보안 정책을 확인하고 필요에 따라 최적의 방법을 선택하는 것을 권장합니다.</p>
@@ -663,7 +695,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>

@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="ko" data-bs-theme="auto">
   <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Utility classes that allows you to add and modify custom focus ring styles to elements and components.">
+<meta name="description" content="요소와 컴포넌트에 사용자 지정 포커스 링 스타일을 추가하고 수정할 수 있는 유틸리티 클래스입니다.">
 <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
 <meta name="generator" content="Hugo 0.122.0">
 
 <meta name="docsearch:language" content="ko">
 <meta name="docsearch:version" content="5.3">
 
-<title>Focus ring · Bootstrap v5.3</title>
+<title>포커스 링 · Bootstrap v5.3</title>
 
 <link rel="canonical" href="https://getbootstrap.kr/docs/5.3/helpers/focus-ring/">
 
@@ -36,13 +36,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@getbootstrap">
 <meta name="twitter:creator" content="@getbootstrap">
-<meta name="twitter:title" content="Focus ring">
-<meta name="twitter:description" content="Utility classes that allows you to add and modify custom focus ring styles to elements and components.">
+<meta name="twitter:title" content="포커스 링">
+<meta name="twitter:description" content="요소와 컴포넌트에 사용자 지정 포커스 링 스타일을 추가하고 수정할 수 있는 유틸리티 클래스입니다.">
 <meta name="twitter:image" content="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-social.png">
 
 <meta property="og:url" content="https://getbootstrap.kr/docs/5.3/helpers/focus-ring/">
-<meta property="og:title" content="Focus ring">
-<meta property="og:description" content="Utility classes that allows you to add and modify custom focus ring styles to elements and components.">
+<meta property="og:title" content="포커스 링">
+<meta property="og:description" content="요소와 컴포넌트에 사용자 지정 포커스 링 스타일을 추가하고 수정할 수 있는 유틸리티 클래스입니다.">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-social.png">
 <meta property="og:image:type" content="image/png">
@@ -304,6 +304,37 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>
+            <hr class="d-lg-none my-2 text-white-50">
+          </li>
+
+          <li class="nav-item dropdown">
+            <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              <svg class="bi my-1 theme-icon-active"><use href="#globe2"></use></svg><span class="d-lg-none" aria-hidden="true">Bootstrap</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                  <div class="dropdown-item disabled">공식</div>
+                  <a class="dropdown-item" href="https://getbootstrap.com">영어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                  <div class="dropdown-item disabled">커뮤니티 번역</div>
+                  <a class="dropdown-item d-flex align-items-center justify-content-between active" aria-current="true" href="#">
+                    한국어
+                    <svg class="bi"><use xlink:href="#check2"></use></svg>
+                  </a>
+                  <a class="dropdown-item" href="https://getbootstrap.jp">일본어</a>
+              </li>
+              <li>
+                  <a class="dropdown-item" href="https://getbootstrap.su">러시아어</a>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/5.3/about/translations/">모든 언어</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -453,7 +484,7 @@
             <li><a href="/docs/5.3/helpers/color-background/" class="bd-links-link d-inline-block rounded">색상 &amp; 배경색</a></li>
             <li><a href="/docs/5.3/helpers/colored-links/" class="bd-links-link d-inline-block rounded">컬러 링크</a></li>
             <li><a href="/docs/5.3/helpers/focus-ring/" class="bd-links-link d-inline-block rounded active" aria-current="page">포커스 링</a></li>
-            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">Icon link</a></li>
+            <li><a href="/docs/5.3/helpers/icon-link/" class="bd-links-link d-inline-block rounded">아이콘 링크</a></li>
             <li><a href="/docs/5.3/helpers/position/" class="bd-links-link d-inline-block rounded">위치</a></li>
             <li><a href="/docs/5.3/helpers/ratio/" class="bd-links-link d-inline-block rounded">비율</a></li>
             <li><a href="/docs/5.3/helpers/stacks/" class="bd-links-link d-inline-block rounded">스택</a></li>
@@ -533,14 +564,17 @@
     <main class="bd-main order-1">
       <div class="bd-intro pt-2 ps-lg-2">
         <div class="d-md-flex flex-md-row-reverse align-items-center justify-content-between">
-          <div class="mb-3 mb-md-0 d-flex text-nowrap"><small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">v5.3에 추가됨</small><a class="btn btn-sm btn-bd-light rounded-2" href="https://github.com/twbs/bootstrap/blob/v5.3.3/site/content/docs/5.3/helpers/focus-ring.md" title="View and edit this file on GitHub" target="_blank" rel="noopener">
+          <div class="mb-3 mb-md-0 d-flex text-nowrap"><small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">v5.3에 추가됨</small><div class="btn-group btn-group-sm rounded-2"><a class="btn btn-bd-light" href="https://getbootstrap.com/docs/5.3/helpers/focus-ring/" title="영어 원문 보기" target="_blank" rel="noopener">
+                원문 보기
+              </a><a class="btn btn-bd-light" href="https://github.com/arumduri/bootstrap/tree/main/site/content/docs/5.3/helpers/focus-ring.md" title="GitHub에서 한국어로 번역된 문서 확인 및 수정하기" target="_blank" rel="noopener">
               GitHub에서 보기
-            </a>
+              </a>
+            </div>
           </div>
-          <h1 class="bd-title mb-0" id="content">Focus ring</h1>
+          <h1 class="bd-title mb-0" id="content">포커스 링</h1>
         </div>
         
-        <p class="bd-lead">Utility classes that allows you to add and modify custom focus ring styles to elements and components.</p>
+        <p class="bd-lead">요소와 컴포넌트에 사용자 지정 포커스 링 스타일을 추가하고 수정할 수 있는 유틸리티 클래스입니다.</p>
         <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-2578669051257137"
@@ -556,7 +590,7 @@
       
         <div class="bd-toc mt-3 mb-5 my-lg-0 mb-lg-5 px-sm-1 text-body-secondary">
           <button class="btn btn-link p-md-0 mb-2 mb-md-0 text-decoration-none bd-toc-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#tocContents" aria-expanded="false" aria-controls="tocContents">
-            On this page
+            목차
             <svg class="bi d-md-none ms-2" aria-hidden="true"><use xlink:href="#chevron-expand"></use></svg>
           </button>
           <strong class="d-none d-md-block h6 my-2 ms-3">목차</strong>
@@ -564,11 +598,11 @@
           <div class="collapse bd-toc-collapse" id="tocContents">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#example">Example</a></li>
-    <li><a href="#customize">Customize</a>
+    <li><a href="#예시">예시</a></li>
+    <li><a href="#사용자-지정">사용자 지정</a>
       <ul>
-        <li><a href="#css-variables">CSS variables</a></li>
-        <li><a href="#sass-variables">Sass variables</a></li>
+        <li><a href="#css-변수">CSS 변수</a></li>
+        <li><a href="#sass-변수">Sass 변수</a></li>
         <li><a href="#sass-유틸리티-api">Sass 유틸리티 API</a></li>
       </ul>
     </li>
@@ -581,16 +615,9 @@
       <div class="bd-content ps-lg-2">
         
 
-        
-          <div class="bd-callout bd-callout-info">
-    <b>이 페이지는 전체 또는 일부분이 아직 한국어로 번역되지 않았어요. 😢</b>
-    <a href="https://github.com/arumduri/bootstrap" target="_blank">GitHub에서 한국어로 번역할 수 있도록 도와주세요</a>
-</div>
-        
-
-        <p>The <code>.focus-ring</code> helper removes the default <code>outline</code> on <code>:focus</code>, replacing it with a <code>box-shadow</code> that can be more broadly customized. The new shadow is made up of a series of CSS variables, inherited from the <code>:root</code> level, that can be modified for any element or component.</p>
-<h2 id="example">Example <a class="anchor-link" href="#example" aria-label="Link to this section: Example"></a></h2>
-<p>Click directly on the link below to see the focus ring in action, or into the example below and then press <kbd>Tab</kbd>.</p>
+        <p><code>.focus-ring</code> 도우미는 <code>:focus</code>의 기본 <code>outline</code>을 제거하여 보다 광범위하게 사용자 정의할 수 있는 <code>box-shadow</code>로 대체합니다. 새 그림자는 <code>:root</code> 수준에서 상속된 일련의 CSS 변수로 구성되며, 모든 요소 또는 컴포넌트에 대해 수정할 수 있습니다.</p>
+<h2 id="예시">예시 <a class="anchor-link" href="#%ec%98%88%ec%8b%9c" aria-label="Link to this section: 예시"></a></h2>
+<p>아래 링크를 직접 클릭하여 초점 링이 작동하는 모습을 보거나 아래 예시를 클릭한 다음 <kbd>Tab</kbd> 키를 누릅니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -613,10 +640,10 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h2 id="customize">Customize <a class="anchor-link" href="#customize" aria-label="Link to this section: Customize"></a></h2>
-<p>Modify the styling of a focus ring with our CSS variables, Sass variables, utilities, or custom styles.</p>
-<h3 id="css-variables">CSS variables <a class="anchor-link" href="#css-variables" aria-label="Link to this section: CSS variables"></a></h3>
-<p>Modify the <code>--bs-focus-ring-*</code> CSS variables as needed to change the default appearance.</p>
+<h2 id="사용자-지정">사용자 지정 <a class="anchor-link" href="#%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%a7%80%ec%a0%95" aria-label="Link to this section: 사용자 지정"></a></h2>
+<p>CSS 변수, Sass 변수, 유틸리티 또는 사용자 정의 스타일을 사용하여 포커스 링의 스타일을 수정합니다.</p>
+<h3 id="css-변수">CSS 변수 <a class="anchor-link" href="#css-%eb%b3%80%ec%88%98" aria-label="Link to this section: CSS 변수"></a></h3>
+<p>필요에 따라 <code>--bs-focus-ring-*</code> CSS 변수를 수정하여 기본 모양을 변경할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -639,7 +666,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p><code>.focus-ring</code> sets styles via global CSS variables that can be overridden on any parent element, as shown above. These variables are generated from their Sass variable counterparts.</p>
+<p><code>.focus-ring</code>은 위와 같이 모든 부모 요소에서 재정의할 수 있는 전역 CSS 변수를 통해 스타일을 설정합니다. 이러한 변수는 Sass 변수에 대응하는 변수에서 생성됩니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_root.scss">scss/_root.scss</a>
@@ -651,7 +678,7 @@
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-width</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-width</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-opacity</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-opacity</span><span class="si">}</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="na">--#{$prefix}focus-ring-color</span><span class="o">:</span> <span class="si">#{</span><span class="nv">$focus-ring-color</span><span class="si">}</span><span class="p">;</span></span></span></code></pre></div></div>
-<p>By default, there is no <code>--bs-focus-ring-x</code>, <code>--bs-focus-ring-y</code>, or <code>--bs-focus-ring-blur</code>, but we provide CSS variables with fallbacks to initial <code>0</code> values. Modify them to change the default appearance.</p>
+<p>기본적으로 <code>--bs-focus-ring-x</code>, <code>--bs-focus-ring-y</code>, <code>--bs-focus-ring-blur</code>는 없지만 초기 <code>0</code> 값에 대한 폴백이 있는 CSS 변수를 제공합니다. 기본 모양을 변경하려면 해당 변수를 수정하세요.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -674,8 +701,8 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<h3 id="sass-variables">Sass variables <a class="anchor-link" href="#sass-variables" aria-label="Link to this section: Sass variables"></a></h3>
-<p>Customize the focus ring Sass variables to modify all usage of the focus ring styles across your Bootstrap-powered project.</p>
+<h3 id="sass-변수">Sass 변수 <a class="anchor-link" href="#sass-%eb%b3%80%ec%88%98" aria-label="Link to this section: Sass 변수"></a></h3>
+<p>포커스 링 Sass 변수를 사용자 정의하여 Bootstrap 기반 프로젝트에서 포커스 링 스타일의 모든 사용법을 수정할 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_variables.scss">scss/_variables.scss</a>
@@ -691,7 +718,7 @@
 </span></span><span class="line"><span class="cl"><span class="nv">$focus-ring-box-shadow</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="nv">$focus-ring-blur</span> <span class="nv">$focus-ring-width</span> <span class="nv">$focus-ring-color</span><span class="p">;</span>
 </span></span></code></pre></div></div>
 <h3 id="sass-유틸리티-api">Sass 유틸리티 API <a class="anchor-link" href="#sass-%ec%9c%a0%ed%8b%b8%eb%a6%ac%ed%8b%b0-api" aria-label="Link to this section: Sass 유틸리티 API"></a></h3>
-<p>In addition to <code>.focus-ring</code>, we have several <code>.focus-ring-*</code> utilities to modify the helper class defaults. Modify the color with any of our <a href="/docs/5.3/customize/color/#theme-colors">theme colors</a>. Note that the light and dark variants may not be visible on all background colors given current color mode support.</p>
+<p><code>.focus-ring</code> 외에도 도우미 클래스 기본값을 수정하는 여러 <code>.focus-ring-*</code> 유틸리티가 있습니다. <a href="/docs/5.3/customize/color/#theme-colors">테마 색상</a> 중 하나를 사용하여 색상을 수정하세요. 현재 색상 모드 지원으로 인해 모든 배경색에서 밝고 어두운 변형이 표시되지 않을 수 있습니다.</p>
 <div class="bd-example-snippet bd-code-snippet">
   <div class="bd-example m-0 border-0">
     
@@ -725,7 +752,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;d-inline-flex focus-ring focus-ring-dark py-1 px-2 text-decoration-none border rounded-2&#34;</span><span class="p">&gt;</span>Dark focus<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span></span></span></code></pre></div>
 </div>
 
-<p>Focus ring utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. <a href="/docs/5.3/utilities/api/#using-the-api">Learn how to use the utilities API.</a></p>
+<p>초점 링 유틸리티는 유틸리티 API의 <code>scss/_utilities.scss</code>에 선언되어 있습니다. <a href="/docs/5.3/utilities/api/#using-the-api">유틸리티 API 사용 방법에 대해 알아보세요.</a></p>
 <div class="bd-example-snippet bd-code-snippet bd-file-ref">
     <div class="d-flex align-items-center highlight-toolbar ps-3 pe-2 py-1 border-bottom">
       <a class="font-monospace link-secondary link-underline-secondary link-underline-opacity-0 link-underline-opacity-100-hover small" href="https://github.com/twbs/bootstrap/blob/v5.3.3/scss/_utilities.scss">scss/_utilities.scss</a>
@@ -766,7 +793,7 @@
         </a>
         <ul class="list-unstyled small">
           <li class="mb-2"><a href="/docs/5.3/about/team/">Bootstrap 팀</a>이 <a href="https://github.com/twbs/bootstrap/graphs/contributors">기여자 분들</a>의 도움과 세상의 모든 사랑을 받아 디자인되고 빌드되었습니다.</li>
-          <li class="mb-2"><a href="https://github.com/alexkoala">@alexkoala</a>, <a href="https://github.com/jjulee">@jjulee</a>, <a href="https://github.com/hwang1588">@hwang1588</a>님이 한국어로 번역해주셨습니다.</li>
+          <li class="mb-2"><a href="/docs/5.3/arumduri/">Arumduri 기여자 분들</a>의 도움을 받아 한국어로 번역되었습니다.</li>
           <li class="mb-2">코드 라이선스는 <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE" target="_blank" rel="license noopener">MIT</a>이며 문서 라이선스는 <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="license noopener">CC BY 3.0</a>입니다.</li>
           <li class="mb-2">현재 v5.3.3입니다.</li>
         </ul>
