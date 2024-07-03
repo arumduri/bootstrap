@@ -6,7 +6,7 @@ description: CSS를 통해 중첩 된 링크를 "확장"하여 HTML 요소 또�
 group: helpers
 ---
 
-링크에 `.stretched-link` 클래스를 추가하여 `:: after` 가상 요소를 통해 [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block)을 클릭할 수 있도록 만듭니다. 대부분의 경우 이는 링크에 `.stretched-link` 클래스가 포함되어 있고 이를 감싸고 있는 `position : relative;` 상태의 요소를 클릭할 수 있음을 의미합니다. [CSS `position`이 작동하는 방식](https://www.w3.org/TR/CSS21/visuren.html#propdef-position)을 고려하면 `.stretched-link` 는 대부분의 테이블 요소와 혼합할 수 없습니다.
+링크에 `.stretched-link` 클래스를 추가하여 `:: after` 가상 요소를 통해 [containing block](https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_block)을 클릭할 수 있도록 만듭니다. 대부분의 경우 이는 링크에 `.stretched-link` 클래스가 포함되어 있고 이를 감싸고 있는 `position : relative;` 상태의 요소를 클릭할 수 있음을 의미합니다. [CSS `position`이 작동하는 방식](https://www.w3.org/TR/CSS21/visuren.html#propdef-position)을 고려하면 `.stretched-link`는 대부분의 테이블 요소와 혼합할 수 없습니다.
 
 Bootstrap에서 card는 기본적으로 `position: relative` 상태를 갖고 있습니다. 그렇기 때문에 이 경우 사용자가 별도의 HTML 변경 없이 `.stretched-link` 클래스를 안전하게 카드의 링크 부분에 추가할 수 있습니다.
 
@@ -56,7 +56,7 @@ Bootstrap에서 card는 기본적으로 `position: relative` 상태를 갖고 �
 - `static` 이외의 `position` 값
 - `none` 이외의 `transform` 또는 `perspective` 값
 - `transform` 또는 `perspective`의 `will-change` 값
-- `none` 이외의 `filter` 값 또는 `filter`의  `will-change` 값 (Firefox에서만 작동)
+- `none` 이외의 `filter` 값 또는 `filter`의 `will-change` 값 (Firefox에서만 작동)
 
 {{< example >}}
 <div class="card" style="width: 18rem;">

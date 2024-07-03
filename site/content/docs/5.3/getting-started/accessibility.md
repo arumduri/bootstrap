@@ -38,7 +38,7 @@ Bootstrap의 구성요소는 상당히 보편적으로 설계되었으므로 작
 </p>
 ```
 
-기존의 "건너뛰기" 링크와 같이 시각적으로 숨겨진 대화형 컨트롤의 경우 `.visually-hidden-focusable` 클래스를 사용합니다. (고대비 키보드 사용자의 경우) 이렇게 초점이 맞춰지면 컨트롤이 표시됩니다. **이전 버전의 `.sr-only` 및 `.sr-only-focusable` 클래스와 달리 Bootstrap 5의 `.visually-hidden-focusable` 은 독립된 클래스이며 `.visually-hidden` 클래스와 함께 사용해서는 안됩니다.**
+기존의 "건너뛰기" 링크와 같이 시각적으로 숨겨진 대화형 컨트롤의 경우 `.visually-hidden-focusable` 클래스를 사용합니다. (고대비 키보드 사용자의 경우) 이렇게 초점이 맞춰지면 컨트롤이 표시됩니다. **이전 버전의 `.sr-only` 및 `.sr-only-focusable` 클래스와 달리 Bootstrap 5의 `.visually-hidden-focusable`은 독립된 클래스이며 `.visually-hidden` 클래스와 함께 사용해서는 안됩니다.**
 
 ```html
 <a class="visually-hidden-focusable" href="#content">Skip to main content</a>

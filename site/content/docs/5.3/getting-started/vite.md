@@ -167,7 +167,7 @@ my-project/
    import { Tooltip, Toast, Popover } from 'bootstrap';
    ```
 
-   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Bootstrap's plugins.*
+   *Bootstrap 플러그인 사용 방법에 대한 자세한 내용은 [자바스크립트 문서]({{< docsref "/getting-started/javascript/" >}})를 참고하세요.*
 
 3. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다:
 

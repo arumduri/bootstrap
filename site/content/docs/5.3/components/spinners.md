@@ -11,7 +11,7 @@ toc: true
 
 Bootstrap "스피너"는 프로젝트의 로딩 상태를 표시하기 위해 사용할 수 있습니다. 이것은 HTML과 CSS로 만들어져 있기 때문에 JavaScript를 필요로 하지 않습니다. 그러나 가시성을 바꾸기 위해 몇 가지의 사용자 정의 JavaScript가 필요합니다. 이러한 외형, 배치, 크기는 유틸리티 클래스를 통해 간단하게 재정의할 수 있습니다.
 
-접근성을 위해, 여기에서의 각 loader 는 `role="status"` 과 `<span class="visually-hidden">Loading...</span>`을 포함하고 있습니다.
+접근성을 위해, 여기에서의 각 loader 는 `role="status"`과 `<span class="visually-hidden">Loading...</span>`을 포함하고 있습니다.
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
@@ -124,7 +124,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex`로 빌드�
 
 ## 크기
 
-`.spinner-border-sm` 과 `.spinner-grow-sm`을 추가해서 다른 컴포넌트 안에서 바로 사용할 수 있는 작은 스피너를 만들 수 있습니다.
+`.spinner-border-sm`과 `.spinner-grow-sm`을 추가해서 다른 컴포넌트 안에서 바로 사용할 수 있는 작은 스피너를 만들 수 있습니다.
 
 {{< example >}}
 <div class="spinner-border spinner-border-sm" role="status">
@@ -178,17 +178,17 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex`로 빌드�
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, spinners now use local CSS variables on `.spinner-border` and `.spinner-grow` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 스피너는 `.spinner-border`와 `.spinner-grow`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
-Border spinner variables:
+테두리 스피너 변수:
 
 {{< scss-docs name="spinner-border-css-vars" file="scss/_spinners.scss" >}}
 
-Growing spinner variables:
+증가하는 스피너 변수:
 
 {{< scss-docs name="spinner-grow-css-vars" file="scss/_spinners.scss" >}}
 
-For both spinners, small spinner modifier classes are used to update the values of these CSS variables as needed. For example, the `.spinner-border-sm` class does the following:
+두 스피너 모두 작은 스피너 수정자 클래스를 사용하여 필요에 따라 이러한 CSS 변수의 값을 업데이트합니다. 예를 들어 `.spinner-border-sm` 클래스는 다음을 수행합니다:
 
 {{< scss-docs name="spinner-border-sm-css-vars" file="scss/_spinners.scss" >}}
 

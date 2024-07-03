@@ -5,19 +5,18 @@ title_en: Offcanvas
 description: 몇 가지의 클래스와 JavaScript 플러그인을 사용해 네비게이션이나 쇼핑카트 등에 유용한 숨겨진 사이드바를 사용할 수 있습니다.
 group: components
 toc: true
-untranslated: true
 ---
 
 ## 작동 원리
 
-Offcanvas is a sidebar component that can be toggled via JavaScript to appear from the left, right, top, or bottom edge of the viewport. Buttons or anchors are used as triggers that are attached to specific elements you toggle, and `data` attributes are used to invoke our JavaScript.
+오프캔버스는 JavaScript를 통해 토글하여 뷰포트의 왼쪽, 오른쪽, 위쪽 또는 아래쪽 가장자리에서 표시할 수 있는 사이드바 구성 요소입니다. 버튼 또는 앵커는 토글하는 특정 요소에 첨부되는 트리거로 사용되며, `data` 속성은 JavaScript를 호출하는 데 사용됩니다.
 
 - 오프캔버스는 모달과 같이 JavaScript 코드를 일부 공유하고 있습니다. 개념적으로는 아주 비슷하지만 이들은 다른 플러그인입니다.
 - 마찬가지로, 오프캔버승의 스타일과 치수를 위한 [Sass 소스](#sass-변수) 변수의 일부는 모달 변수로부터 상속받고 있습니다.
 - 오프캔버스를 표시하면 기본적으로 배경이 포함되어져 있어 그것을 클릭하면 오프캔버스가 사라집니다.
 - 모달과 마찬가지로 오프캔버스는 한번에 1개밖에 표시할 수 없습니다.
 
-**주의!** CSS에 의한 애니메이션 사용을 고려한다면 `.offcanvas` 요소의 `margin`이나 `translate`를 사용할 수 없습니다. 대신, 이 클래스를 독립된 포장 요소 감싸서 사용해 주세요.
+**주의!** CSS에 의한 애니메이션 사용을 고려한다면 `.offcanvas` 요소의 `margin`이나 `translate`를 사용할 수 없습니다. 대신, 이 클래스를 독립된 래퍼 요소로 사용해 주세요.
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
@@ -81,9 +80,9 @@ Offcanvas is a sidebar component that can be toggled via JavaScript to appear fr
 </div>
 {{< /example >}}
 
-### Body scrolling
+### Body 스크롤
 
-Scrolling the `<body>` element is disabled when an offcanvas and its backdrop are visible. Use the `data-bs-scroll` attribute to enable `<body>` scrolling.
+오프캔버스와 배경이 표시되면 `<body>` 요소의 스크롤이 비활성화됩니다. `<body>` 스크롤을 활성화하려면 `data-bs-scroll` 속성을 사용합니다.
 
 {{< example >}}
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
@@ -99,9 +98,9 @@ Scrolling the `<body>` element is disabled when an offcanvas and its backdrop ar
 </div>
 {{< /example >}}
 
-### Body scrolling and backdrop
+### Body 스크롤 및 배경
 
-You can also enable `<body>` scrolling with a visible backdrop.
+배경이 보이면서도 `<body>` 스크롤을 활성화할 수 있습니다.
 
 {{< example >}}
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
@@ -117,9 +116,9 @@ You can also enable `<body>` scrolling with a visible backdrop.
 </div>
 {{< /example >}}
 
-### Static backdrop
+### 정적 배경
 
-When backdrop is set to static, the offcanvas will not close when clicking outside of it.
+배경을 정적으로 설정하면 오프캔버스 외부를 클릭해도 닫히지 않습니다.
 
 {{< example >}}
 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
@@ -139,14 +138,14 @@ When backdrop is set to static, the offcanvas will not close when clicking outsi
 </div>
 {{< /example >}}
 
-## Dark offcanvas
+## 어두운 오프캔버스
 
 {{< deprecated-in "5.3.0" >}} {{< added-in "5.2.0" >}}
 
-Change the appearance of offcanvases with utilities to better match them to different contexts like dark navbars. Here we add `.text-bg-dark` to the `.offcanvas` and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas. If you have dropdowns within, consider also adding `.dropdown-menu-dark` to `.dropdown-menu`.
+유틸리티를 사용하여 오프캔버스의 모양을 변경하여 어두운 탐색 모음과 같은 다양한 컨텍스트에 더 잘 어울리도록 합니다. 여기서는 어두운 오프캔버스를 적절히 스타일링하기 위해 `.offcanvas`에 `.text-bg-dark`를 추가하고 `.btn-close-white`를 `.btn-close`에 추가합니다. 내부에 드롭다운이 있는 경우 `.dropdown-menu-dark`를 `.dropdown-menu`에 추가하는 것도 고려하세요.
 
 {{< callout warning >}}
-**Heads up!** Dark variants for components were deprecated in v5.3.0 with the introduction of color modes. Instead of manually adding classes mentioned above, set `data-bs-theme="dark"` on the root element, a parent wrapper, or the component itself.
+**주의!** 컴포넌트의 어두운 변형은 색상 모드가 도입된 v5.3.0에서 더 이상 사용되지 않습니다. 위에서 언급한 클래스를 수동으로 추가하는 대신 루트 요소, 부모 래퍼 또는 컴포넌트 자체에 `data-bs-theme="dark"`를 설정하세요.
 {{< /callout >}}
 
 {{< example class="bd-example-offcanvas p-0 bg-body-secondary overflow-hidden" >}}
@@ -161,11 +160,11 @@ Change the appearance of offcanvases with utilities to better match them to diff
 </div>
 {{< /example >}}
 
-## Responsive
+## 반응형
 
 {{< added-in "5.2.0" >}}
 
-Responsive offcanvas classes hide content outside the viewport from a specified breakpoint and down. Above that breakpoint, the contents within will behave as usual. For example, `.offcanvas-lg` hides content in an offcanvas below the `lg` breakpoint, but shows the content above the `lg` breakpoint.
+반응형 오프캔버스 클래스는 지정된 중단점 아래에서 뷰포트 외부의 콘텐츠를 숨깁니다. 해당 중단점 위에서는 내부 콘텐츠가 정상적으로 작동합니다. 예를 들어 `.offcanvas-lg`는 오프캔버스에서 `lg` 중단점 아래의 콘텐츠를 숨기지만 `lg` 중단점 위의 콘텐츠는 표시합니다.
 
 {{< example >}}
 <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
@@ -183,7 +182,7 @@ Responsive offcanvas classes hide content outside the viewport from a specified 
 </div>
 {{< /example >}}
 
-Responsive offcanvas classes are available across for each breakpoint.
+각 중단점마다 반응형 오프캔버스 클래스를 사용할 수 있습니다.
 
 - `.offcanvas`
 - `.offcanvas-sm`
@@ -255,7 +254,7 @@ Responsive offcanvas classes are available across for each breakpoint.
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, offcanvas now uses local CSS variables on `.offcanvas` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 오프캔버스는 향상된 실시간 사용자 지정을 위해 `.offcanvas`에서 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="offcanvas-css-vars" file="scss/_offcanvas.scss" >}}
 
@@ -287,12 +286,12 @@ As part of Bootstrap's evolving CSS variables approach, offcanvas now uses local
 {{% js-dismiss "offcanvas" %}}
 
 {{< callout warning >}}
-모달을 해제하는 두 가지 방법을 모두 지원하지만 모달 외부에서 해제하는 것은 [ARIA Authoring Practices Guide dialog (modal) pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/)과 일치하지 않습니다. 문제가 생길 수도 있다는 점에 주의하세요.
+모달을 해제하는 두 가지 방법을 모두 지원하지만 모달 외부에서 해제하는 것은 [ARIA Authoring Practices Guide 다이얼로그 (모달) 패턴](https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/)과 일치하지 않습니다. 문제가 생길 수도 있다는 점에 주의하세요.
 {{< /callout >}}
 
 ### JavaScript 사용하기
 
-이처럼 수동으로 활성화 합니다:
+다음과 같이 수동으로 활성화할 수 있습니다:
 
 ```js
 const offcanvasElementList = document.querySelectorAll('.offcanvas')
@@ -308,8 +307,8 @@ const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new bootstrap
 {{< bs-table "table" >}}
 | 이름 | 유형 | 기본값 | 설명 |
 | --- | --- | --- | --- |
-| `backdrop` | boolean 또는 string `static` | `true` | 오프캔버스가 열려 있는 동안, body에 배경을 적용합니다. Alternatively, specify `static` for a backdrop which doesn't close the offcanvas when clicked. |
-| `keyboard` | boolean | `true` | escape키가 눌려지면 오프캔버스를 닫습니다. |
+| `backdrop` | boolean 또는 string `static` | `true` | 오프캔버스가 열려 있는 동안, body에 배경을 적용합니다. 또는 클릭해도 오프캔버스가 닫히지 않는 배경에 static`을 지정할 수 있습니다. |
+| `keyboard` | boolean | `true` | Esc 키가 눌려지면 오프캔버스를 닫습니다. |
 | `scroll` | boolean | `false` | 오프캔버스를 여는 동안 body 스크롤링을 허용합니다. |
 {{< /bs-table >}}
 
@@ -328,14 +327,14 @@ const bsOffcanvas = new bootstrap.Offcanvas('#myOffcanvas')
 ```
 
 {{< bs-table "table" >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `dispose` | Destroys an element's offcanvas. |
-| `getInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element. |
-| `getOrCreateInstance` | *Static* method which allows you to get the offcanvas instance associated with a DOM element, or create a new one in case it wasn't initialized. |
-| `hide` | Hides an offcanvas element. **Returns to the caller before the offcanvas element has actually been hidden** (i.e. before the `hidden.bs.offcanvas` event occurs). |
-| `show` | Shows an offcanvas element. **Returns to the caller before the offcanvas element has actually been shown** (i.e. before the `shown.bs.offcanvas` event occurs). |
-| `toggle` | Toggles an offcanvas element to shown or hidden. **Returns to the caller before the offcanvas element has actually been shown or hidden** (i.e. before the `shown.bs.offcanvas` or `hidden.bs.offcanvas` event occurs). |
+| `dispose` | 요소의 오프캔버스를 제거합니다. |
+| `getInstance` | *정적* 메서드를 사용하여 DOM 요소와 연관된 오프캔버스 인스턴스를 가져올 수 있습니다. |
+| `getOrCreateInstance` | *정적* 메서드를 사용하여 DOM 요소와 연결된 오프캔버스 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. |
+| `hide` | 오프캔버스 요소를 숨깁니다. **오프캔버스 요소가 실제로 숨겨지기 전 (`hidden.bs.offcanvas` 이벤트가 발생하기 전)에 호출자에게 반환합니다.** |
+| `show` | 오프캔버스 요소를 표시합니다. **오프 캔버스 요소가 실제로 표시되기 전 (`shown.bs.offcanvas` 이벤트가 발생하기 전)에 호출자에게 반환합니다.** |
+| `toggle` | 오프캔버스 요소를 표시 또는 숨김으로 토글합니다. **오프캔버스 요소가 실제로 표시되거나 숨겨지기 전 (`shown.bs.offcanvas` 또는 `hidden.bs.offcanvas` 이벤트가 발생하기 전) 호출자에게 반환합니다.** |
 {{< /bs-table >}}
 
 ### 이벤트
@@ -343,13 +342,13 @@ const bsOffcanvas = new bootstrap.Offcanvas('#myOffcanvas')
 Bootstrap의 오프캔버스 클래스는 오프캔버스 기능에 연결하기 위한 몇 가지 이벤트를 공개하고 있습니다.
 
 {{< bs-table "table" >}}
-| Event type | Description |
+| 이벤트 유형 | 설명 |
 | --- | --- |
-| `hide.bs.offcanvas` | This event is fired immediately when the `hide` method has been called. |
-| `hidden.bs.offcanvas` | This event is fired when an offcanvas element has been hidden from the user (will wait for CSS transitions to complete). |
-| `hidePrevented.bs.offcanvas` | This event is fired when the offcanvas is shown, its backdrop is `static` and a click outside of the offcanvas is performed. The event is also fired when the escape key is pressed and the `keyboard` option is set to `false`. |
-| `show.bs.offcanvas` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.offcanvas` | This event is fired when an offcanvas element has been made visible to the user (will wait for CSS transitions to complete). |
+| `hide.bs.offcanvas` | 이 이벤트는 `hide` 메서드가 호출되면 즉시 발생합니다. |
+| `hidden.bs.offcanvas` | 이 이벤트는 오프캔버스 요소가 사용자에게 숨겨졌을 때 발생합니다. (CSS 전환이 완료될 때까지 기다립니다) |
+| `hidePrevented.bs.offcanvas` | 이 이벤트는 오프캔버스가 표시되고 배경이 `static`이며 오프캔버스 외부에서 클릭이 수행될 때 발생합니다. 이 이벤트는 Esc 키를 누르고 `keyboard` 옵션이 `false`로 설정된 경우에도 발생합니다. |
+| `show.bs.offcanvas` | 이 이벤트는 `show` 인스턴스 메서드가 호출될 때 즉시 발생합니다. |
+| `shown.bs.offcanvas` | 이 이벤트는 오프캔버스 요소가 사용자에게 표시되었을 때 발생합니다. (CSS 전환이 완료될 때까지 기다립니다) |
 {{< /bs-table >}}
 
 ```js

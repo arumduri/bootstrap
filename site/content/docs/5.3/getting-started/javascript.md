@@ -44,7 +44,7 @@ Bootstrap의 CSS는 모든 프레임워크와 함께 사용할 수 있지만 **B
 </script>
 ```
 
-JS 번들러와 비교하여 브라우저에서 ESM을 사용하려면 모듈 이름 대신 전체 경로와 파일 이름을 사용해야 합니다. [브라우저의 JS 모듈에 대해 자세히 알아보기](https://v8.dev/features/modules#specifiers) 그렇기 때문의 위처럼 `'bootstrap'` 대신에 `'bootstrap.esm.min.js'` 를 사용합니다. 그러나 이것은 Popper의 종속성으로 인해 더욱 복잡해져 있기에 아래와 같이 Popper를 JavaScript로 인포트하고 있습니다:
+JS 번들러와 비교하여 브라우저에서 ESM을 사용하려면 모듈 이름 대신 전체 경로와 파일 이름을 사용해야 합니다. [브라우저의 JS 모듈에 대해 자세히 알아보기](https://v8.dev/features/modules#specifiers) 그렇기 때문의 위처럼 `'bootstrap'` 대신에 `'bootstrap.esm.min.js'`를 사용합니다. 그러나 이것은 Popper의 종속성으로 인해 더욱 복잡해져 있기에 아래와 같이 Popper를 JavaScript로 인포트하고 있습니다:
 
 <!-- eslint-skip -->
 ```js
@@ -153,7 +153,7 @@ bootstrap.Popover.getOrCreateInstance(myPopoverEl, configObject)
 
 ### 생성자에서의 CSS 선택자
 
-모든 플러그인 생성자 메소드는 `getInstance` 및 `getOrCreateInstance` 메소드 외에도 첫 번째 인수로 DOM 요소 또는 유효한 [CSS 선택자](#selectors)를 받을 수 있습니다. 플러그인은 단일 요소만 지원하므로 `querySelector` 메소드로 플러그인 요소를 찾을 수 있습니다.
+모든 플러그인 생성자 메소드는 `getInstance` 및 `getOrCreateInstance` 메소드 외에도 첫 번째 인수로 DOM 요소 또는 유효한 [CSS 선택자](#선택자)를 받을 수 있습니다. 플러그인은 단일 요소만 지원하므로 `querySelector` 메소드로 플러그인 요소를 찾을 수 있습니다.
 
 ```js
 const modal = new bootstrap.Modal('#myModal')
@@ -304,6 +304,6 @@ $('#myTab a').on('shown.bs.tab', () => {
 })
 ```
 
-## 자바스크립트 비활성화
+## JavaScript 비활성화
 
-Bootstrap의 플러그인에는 자바스크립트가 비활성화되었을 때를 대비한 특별한 대안이 없습니다. 이 경우 사용자 환경이 걱정된다면 [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)를 사용하여 사용자에게 상황(및 JavaScript를 다시 활성화하는 방법)을 설명하거나 사용자 정의 대체 기능을 추가하세요.
+Bootstrap의 플러그인에는 JavaScript가 비활성화되었을 때를 대비한 특별한 대안이 없습니다. 이 경우 사용자 환경이 걱정된다면 [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)를 사용하여 사용자에게 상황(및 JavaScript를 다시 활성화하는 방법)을 설명하거나 사용자 정의 대체 기능을 추가하세요.

@@ -13,7 +13,6 @@ toc: true
 
 Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세해졌습니다. `secondary` 및 `tertiary` 텍스트 및 배경색에 대한 새로운 변수와 테마 색상에 대한 `{color}-bg-subtle`, `{color}-border-subtle` 및 `{color}-text-emphasis`가 추가되었습니다. 이러한 새로운 색상은 밝고 어두운 등 다양한 색상 모드에서 더 쉽게 사용자 정의할 수 있도록 하기 위해 Sass 및 CSS 변수(색상 맵이나 유틸리티 클래스 제외)를 통해 사용할 수 있습니다. 이 새로운 변수는 `:root`에 전역적으로 설정되며, 원래 테마 색상은 변경되지 않은 채 새로운 어두운 색상 모드에 맞게 조정됩니다.
 
-Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
 `-rgb`로 끝나는 색상은 `rgb()` 및 `rgba()` 색상 모드에서 사용할 `red`, `green`, `blue` 값을 제공합니다. (예: `rgba(var(--bs-secondary-bg-rgb), .5)`)
 
 {{< callout warning>}}

@@ -287,9 +287,9 @@ toc: true
 
 토스트가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두 가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
 
-그리고, 내용에 따라 `role` 과 `aria-live`의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
+그리고, 내용에 따라 `role`과 `aria-live`의 레벨을 조정할 필요가 있습니다. 만약 오류와 같은 중요한 메세지라면 `role="alert" aria-live="assertive"` 속성을 사용하고, 그렇지 않으면 `role="status" aria-live="polite"` 속성을 사용합니다.
 
-보여지는 콘텐츠가 바뀌면 사용자가 토스트를 읽기에 충분한 시간이 필요하므로 [`delay` timeout](#options)을 반드시 업데이트 해 주세요.
+보여지는 콘텐츠가 바뀌면 사용자가 토스트를 읽기에 충분한 시간이 필요하므로 [`delay` 타임아웃](#옵션)을 반드시 업데이트 해주세요.
 
 ```html
 <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-bs-delay="10000">
@@ -313,7 +313,7 @@ toc: true
 </div>
 {{< /example >}}
 
-기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만, 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에 긴 [`delay` timeout](#options)를 주었다고 하더라도 키보드나 지원 기술 사용자가 알 수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 `autohide: false`를 사용하는 것을 권장합니다.
+기술적으로 토스트 안에 포커스나 액션이 가능한 컨트롤(추가 버튼이나 링크 등)을 추가할 수는 있지만, 자동 숨김 토스트에서는 이 사용을 피해 주세요. 토스트에 긴 [`delay` 타임아웃](#옵션)를 주었다고 하더라도 키보드나 지원 기술 사용자가 알 수 있게 토스트까지(토스트는 표시된 시점에는 포커스를 받지 않기 때문에) 가기는 어려울 수 있습니다. 컨트롤이 필요한 경우에는 토스트에 반드시 `autohide: false`를 사용하는 것을 권장합니다.
 
 ## CSS
 
@@ -321,7 +321,7 @@ toc: true
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, toasts now use local CSS variables on `.toast` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 토스트에서 `.toast`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="toast-css-vars" file="scss/_toasts.scss" >}}
 
@@ -349,11 +349,11 @@ const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, o
 {{< /markdown >}}
 
 {{< bs-table "table" >}}
-| Name | Type | Default | Description |
+| 이름 | 유형 | 기본값 | 설명 |
 | --- | --- | --- | --- |
-| `animation` | boolean | `true` | Apply a CSS fade transition to the toast. |
-| `autohide` | boolean | `true` | Automatically hide the toast after the delay. |
-| `delay` | number | `5000` | Delay in milliseconds before hiding the toast. |
+| `animation` | boolean | `true` | 토스트에 CSS 페이드 전환을 적용합니다. |
+| `autohide` | boolean | `true` | 지연 후 자동으로 토스트를 숨깁니다. |
+| `delay` | number | `5000` | 토스트를 숨기기 전 지연 시간(밀리초)을 설정합니다. |
 {{< /bs-table >}}
 
 ### 메소드
@@ -363,25 +363,25 @@ const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, o
 {{< /callout >}}
 
 {{< bs-table "table" >}}
-| Method | Description |
+| 방법 | 설명 |
 | --- | --- |
-| `dispose` | Hides an element's toast. Your toast will remain on the DOM but won't show anymore. |
-| `getInstance` | *Static* method which allows you to get the toast instance associated with a DOM element. <br> For example: `const myToastEl = document.getElementById('myToastEl')` `const myToast = bootstrap.Toast.getInstance(myToastEl)` Returns a Bootstrap toast instance. |
-| `getOrCreateInstance` | *Static* method which allows you to get the toast instance associated with a DOM element, or create a new one, in case it wasn't initialized. <br>`const myToastEl = document.getElementById('myToastEl')` `const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl)` Returns a Bootstrap toast instance. |
-| `hide` | Hides an element's toast. **Returns to the caller before the toast has actually been hidden** (i.e. before the `hidden.bs.toast` event occurs). You have to manually call this method if you made `autohide` to `false`. |
-| `isShown` | Returns a boolean according to toast's visibility state. |
-| `show` | Reveals an element's toast. **Returns to the caller before the toast has actually been shown** (i.e. before the `shown.bs.toast` event occurs). You have to manually call this method, instead your toast won't show. |
+| `dispose` | 요소의 토스트를 숨깁니다. 토스트는 DOM에 남아 있지만 더 이상 표시되지 않습니다. |
+| `getInstance` | *정적* 메서드를 사용하여 DOM 엘리먼트와 연관된 토스트 인스턴스를 가져올 수 있습니다. <br> 예: `const myToastEl = document.getElementById('myToastEl')` `const myToast = bootstrap.Toast.getInstance(myToastEl)`는 Bootstrap 토스트 인스턴스를 반환합니다. |
+| `getOrCreateInstance` | *정적* 메서드를 사용하여 DOM 요소와 연결된 토스트 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. <br>`const myToastEl = document.getElementById('myToastEl')` `const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl)`는 Bootstrap 토스트 인스턴스를 반환합니다. |
+| `hide` | 요소의 토스트를 숨깁니다. **토스트가 실제로 숨겨지기 전**(즉, `hidden.bs.toast` 이벤트가 발생하기 전) 호출자에게 반환합니다. `autohide`를 `false`로 설정한 경우 이 메서드를 수동으로 호출해야 합니다. |
+| `isShown` | 토스트의 가시성 상태에 따라 boolean을 반환합니다. |
+| `show` | 요소의 토스트를 표시합니다. **토스트가 실제로 표시되기 전**(즉, `shown.bs.toast` 이벤트가 발생하기 전) 호출자에게 반환합니다. 이 메서드는 수동으로 호출해야 하며, 그렇지 않으면 토스트가 표시되지 않습니다. |
 {{< /bs-table >}}
 
 ### 이벤트
 
 {{< bs-table "table" >}}
-| Event | Description |
+| 이벤트 | 설명 |
 | --- | --- |
-| `hide.bs.toast` | This event is fired immediately when the `hide` instance method has been called. |
-| `hidden.bs.toast` | This event is fired when the toast has finished being hidden from the user. |
-| `show.bs.toast` | This event fires immediately when the `show` instance method is called. |
-| `shown.bs.toast` | This event is fired when the toast has been made visible to the user. |
+| `hide.bs.toast` | 이 이벤트는 `hide` 인스턴스 메서드가 호출될 때 즉시 발생합니다. |
+| `hidden.bs.toast` | 이 이벤트는 토스트가 사용자에게 숨겨지는 것이 완료되면 발생합니다. |
+| `show.bs.toast` | 이 이벤트는 `show` 인스턴스 메서드가 호출될 때 즉시 발생합니다. |
+| `shown.bs.toast` | 이 이벤트는 토스트가 사용자에게 표시되었을 때 발생합니다. |
 {{< /bs-table >}}
 
 ```js

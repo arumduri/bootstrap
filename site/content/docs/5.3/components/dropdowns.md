@@ -345,7 +345,7 @@ Bootstrap은 커서 키를 사용하여 개별 `.dropdown-item` 요소를 이동
 </div>
 ```
 
-## 검은색 드롭다운
+## 어두운 드롭다운
 
 {{< deprecated-in "5.3.0" >}}
 
@@ -668,7 +668,7 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 
 기본적으로, 드롭다운 메뉴는 자동으로 위에서 100% 위치와 부모의 왼쪽에 따라 배치됩니다. 이것은 방향성이 있는 `.drop*` 클래스로 변경할 수 있지만, 추가적인 제어자 클래스로 제어할 수도 있습니다.
 
-드롭다운 메뉴를 오른쪽으로 배치하려면 `.dropdown-menu`에 `.dropdown-menu-end`를 추가합니다. RTL로 사용할 경우 방향성은 반대가 되기 때문에 `.dropdown-menu-end` 는 왼쪽에 표시됩니다.
+드롭다운 메뉴를 오른쪽으로 배치하려면 `.dropdown-menu`에 `.dropdown-menu-end`를 추가합니다. RTL로 사용할 경우 방향성은 반대가 되기 때문에 `.dropdown-menu-end`는 왼쪽에 표시됩니다.
 
 {{< callout info >}}
 **주의!** 드롭다운은 네비바에 포함된 경우를 제외하고 Popper에 의해 배치되어 있습니다.
@@ -1015,7 +1015,7 @@ CSS 변수를 통한 커스터마이징은 `.dropdown-menu-dark` 클래스에서
 
 {{< scss-docs name="dropdown-variables" file="scss/_variables.scss" >}}
 
-[어두운 드롭다운](#dark-dropdowns)용 변수입니다:
+[어두운 드롭다운](#어두운-드롭다운)용 변수입니다:
 
 {{< scss-docs name="dropdown-dark-variables" file="scss/_variables.scss" >}}
 
@@ -1055,7 +1055,7 @@ data 속성이나 JavaScript를 사용해, 드롭다운 플러그인은 부모�
 ### JavaScript 사용하기
 
 {{< callout warning >}}
-드롭다운은 자바스크립트를 통해 드롭다운을 호출하든 데이터 API를 사용하든 관계없이 트리거 요소에 `data-bs-toggle="dropdown"`이 있어야 합니다.
+드롭다운은 JavaScript를 통해 드롭다운을 호출하든 데이터 API를 사용하든 관계없이 트리거 요소에 `data-bs-toggle="dropdown"`이 있어야 합니다.
 {{< /callout >}}
 
 JavaScript로 드롭다운을 호출합니다:

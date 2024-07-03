@@ -51,13 +51,13 @@ Bootstrap을 재정의 하는 방법은 여러 가지가 있습니다. 가장 �
 브라우저 및 기기 간에 일관되게 스타일링하기 위해 몇몇 Bootstrap 컴포넌트는 CSS에 내장된 SVG를 포함하고 있습니다. **<abbr title="Content Security Policy">CSP</abbr> 형태가 보다 엄격한 조직을 위해**, embedded SVG(모두 `background-image`를 통해 적용되게)의 모든 인스턴스를 문서화하여 옵션을 보다 철저하게 검토할 수 있게 하였습니다.
 
 - [아코디언]({{< docsref "/components/accordion" >}})
-- [Carousel controls]({{< docsref "/components/carousel#with-controls" >}})
+- [캐러셀 제어]({{< docsref "/components/carousel#with-controls" >}})
 - [닫기 버튼]({{< docsref "/components/close-button" >}}) (경고창과 모달에서 사용)
 - [폼 체크 박스와 라디오 버튼]({{< docsref "/forms/checks-radios" >}})
 - [폼 스위치]({{< docsref "/forms/checks-radios#switches" >}})
 - [폼 유효성 검사 아이콘]({{< docsref "/forms/validation#server-side" >}})
-- [캐러셀 컨트롤]({{< docsref "/components/carousel#with-controls" >}})
-- [내비게이션 바 토글 버튼]({{< docsref "/components/navbar#responsive-behaviors" >}})
+- [캐러셀 컨트롤]({{< docsref "/components/carousel#기본-예제" >}})
+- [내비게이션 바 토글 버튼]({{< docsref "/components/navbar#반응형-비헤이비어" >}})
 - [셀렉트 메뉴]({{< docsref "/forms/select" >}})
 
 [커뮤니티 정보](https://github.com/twbs/bootstrap/issues/25394)에 의하면, 사용자의 코드를 가지고 이 문제에 대처하는 방법으로는 [URL을 로컬 호스트한다]({{< docsref "/getting-started/webpack#extracting-svg-files" >}}), 이미지를 삭제해 인라인으로 이미지를 사용한다 (모든 컴포넌트로 가능한 것은 아닙니다), CSP를 변경한다 등이 있습니다. 우리는 사용자가 자신의 보안 정책을 확인하고 필요에 따라 최적의 방법을 선택하는 것을 권장합니다.

@@ -133,7 +133,7 @@ toc: true
 </div>
 {{< /example >}}
 
-When using `.input-group` and `.form-floating` along with form validation, the `-feedback` should be placed outside of the `.form-floating`, but inside of the `.input-group`. This means that the feedback will need to be shown using javascript.
+양식 유효성 검사와 함께 `.input-group` 및 `.form-floating`을 사용하는 경우 `-feedback`은 `.form-floating` 외부에 배치하되 `.input-group` 내부에 배치해야 합니다. 즉, 피드백은 JavaScript를 사용하여 표시되어야 합니다.
 
 {{< example >}}
 <div class="input-group has-validation">

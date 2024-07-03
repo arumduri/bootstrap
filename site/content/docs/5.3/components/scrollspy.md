@@ -5,24 +5,23 @@ title_en: Scrollspy
 description: 스크롤 위치에 따라 Bootstrap 내비게이션 또는 목록 그룹 컴포넌트를 자동으로 갱신하여 뷰포트 내에서 현재 어떤 링크가 활성화 된지를 나타냅니다.
 group: components
 toc: true
-untranslated: true
 ---
 
 ## 작동 원리
 
-Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the element with the `id` referenced by the anchor's `href` is scrolled into view. Scrollspy is best used in conjunction with a Bootstrap [nav component]({{< docsref "/components/navs-tabs" >}}) or [list group]({{< docsref "/components/list-group" >}}), but it will also work with any anchor elements in the current page. Here's how it works.
+스크롤스파이는 앵커의 `href`가 참조하는 `id`가 있는 요소가 보기로 스크롤될 때 앵커(`<a>`) 요소의 `.active` 클래스를 토글합니다. 스크롤스파이를 Bootstrap [내비게이션 컴포넌트]({{< docsref "/components/navs-tabs" >}}) 또는 [목록 그룹]({{< docsref "/components/list-group" >}})과 함께 사용하는 것이 가장 좋지만 현재 페이지의 모든 앵커 요소와도 작동합니다. 작동 방식은 다음과 같습니다.
 
-- To start, scrollspy requires two things: a navigation, list group, or a simple set of links, plus a scrollable container. The scrollable container can be the `<body>` or a custom element with a set `height` and `overflow-y: scroll`.
+- 스크롤스파이를 시작하려면 탐색, 목록 그룹 또는 간단한 링크 세트와 스크롤 가능한 컨테이너라는 두 가지가 필요합니다. 스크롤 가능한 컨테이너는 `<body>` 또는 `height` 및 `overflow-y: scroll`이 설정된 사용자 정의 요소일 수 있습니다.
 
-- On the scrollable container, add `data-bs-spy="scroll"` and `data-bs-target="#navId"` where `navId` is the unique `id` of the associated navigation. If there is no focusable element inside the element, be sure to also include a `tabindex="0"` to ensure keyboard access.
+- 스크롤 가능한 컨테이너에 `data-bs-spy="scroll"` 및 `data-bs-target="#navId"`를 추가합니다. 여기서 `navId`는 연결된 탐색의 고유 `id`입니다. 요소 안에 포커스 가능한 요소가 없는 경우 키보드 액세스를 보장하기 위해 `tabindex="0"`도 포함해야 합니다.
 
-- As you scroll the "spied" container, an `.active` class is added and removed from anchor links within the associated navigation. Links must have resolvable `id` targets, otherwise they're ignored. For example, a `<a href="#home">home</a>` must correspond to something in the DOM like `<div id="home"></div>`
+- 적용된 컨테이너를 스크롤하면 연결된 탐색 내의 앵커 링크에서 `.active` 클래스가 추가되고 제거됩니다. 링크에는 확인 가능한 `id` 타깃이 있어야 하며, 그렇지 않으면 무시됩니다. 예를 들어, `<a href="#home">home</a>`은 `<div id="home"></div>`와 같은 DOM에 해당해야 합니다.
 
-- Target elements that are not visible will be ignored. See the [Non-visible elements](#non-visible-elements) section below.
+- 표시되지 않는 대상 요소는 무시됩니다. 아래 [보이지 않는 요소](#non-visible-elements) 섹션을 참조하세요.
 
 ## 예시
 
-### Navbar
+### 내비게이션 바
 
 내비게이션 바 아래 영역을 스크롤하여 활성화된 클래스의 변화를 살펴보세요. 드롭다운 메뉴를 열면 드롭다운 아이템도 같이 강조 표시됩니다.
 
@@ -96,7 +95,7 @@ Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the elemen
 </div>
 ```
 
-### Nested nav
+### 중첩된 nav
 
 스크롤 스파이는 중첩된 `.nav`에서도 동작합니다. 중첩 된 `.nav`가 `.active`인 경우, 그 부모도 `.active`가 됩니다. 내비게이션 바 옆 영역을 스크롤해서 활성화 된 클래스의 변화를 살펴보세요.
 
@@ -216,9 +215,9 @@ Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the elemen
 </div>
 ```
 
-### List group
+### 목록 그룹
 
-스크롤 스파이는 `.list-group`에서도 동작합니다. 목록 그룹 옆의 영역을 스크롤해서 활성화 된 클래스가 변화하는 것을 보겠습니다.
+스크롤스파이는 `.list-group`에서도 동작합니다. 목록 그룹 옆의 영역을 스크롤해서 활성화 된 클래스가 변화하는 것을 보겠습니다.
 
 <div class="bd-example">
   <div class="row">
@@ -270,9 +269,9 @@ Scrollspy toggles the `.active` class on anchor (`<a>`) elements when the elemen
 </div>
 ```
 
-### Simple anchors
+### 단순 앵커
 
-Scrollspy is not limited to nav components and list groups, so it will work on any `<a>` anchor elements in the current document. Scroll the area and watch the `.active` class change.
+스크롤스파이는 탐색 컴포넌트와 목록 그룹에만 국한되지 않으므로 현재 문서의 모든 `<a>` 앵커 요소에서 작동합니다. 영역을 스크롤하여 `.active` 클래스가 변경되는 것을 확인하세요.
 
 <div class="bd-example">
   <div class="row">
@@ -330,9 +329,9 @@ Scrollspy is not limited to nav components and list groups, so it will work on a
 </div>
 ```
 
-## Non-visible elements
+## 보이지 않는 요소
 
-Target elements that aren’t visible will be ignored and their corresponding nav items won't receive an `.active` class. Scrollspy instances initialized in a non-visible wrapper will ignore all target elements. Use the `refresh` method to check for observable elements once the wrapper becomes visible.
+표시되지 않는 대상 요소는 무시되며 해당 탐색 항목은 `.active` 클래스를 받지 않습니다. 보이지 않는 래퍼에서 초기화된 스크롤스파이 인스턴스는 모든 대상 요소를 무시합니다. 래퍼가 표시되면 `refresh` 메서드를 사용하여 관찰 가능한 요소를 확인합니다.
 
 ```js
 document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
@@ -377,34 +376,34 @@ const scrollSpy = new bootstrap.ScrollSpy(document.body, {
 {{< /markdown >}}
 
 {{< bs-table "table" >}}
-| Name | Type | Default | Description |
+| 이름 | 유형 | 기본값 | 설명 |
 | --- | --- | --- | --- |
-| `rootMargin` | string | `0px 0px -25%` | Intersection Observer [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin) valid units, when calculating scroll position. |
-| `smoothScroll` | boolean | `false` | Enables smooth scrolling when a user clicks on a link that refers to ScrollSpy observables. |
-| `target` | string, DOM element | `null` | Specifies element to apply Scrollspy plugin. |
-| `threshold` | array | `[0.1, 0.5, 1]` | `IntersectionObserver` [threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold) valid input, when calculating scroll position. |
+| `rootMargin` | string | `0px 0px -25%` | 교차점 관찰자 [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin)의 스크롤 위치를 계산할 때 유효한 단위입니다. |
+| `smoothScroll` | boolean | `false` | 사용자가 스크롤스파이 옵저버를 참조하는 링크를 클릭할 때 부드럽게 스크롤할 수 있도록 합니다. |
+| `target` | string, DOM element | `null` | 스크롤스파이 플러그인을 적용할 요소를 지정합니다. |
+| `threshold` | array | `[0.1, 0.5, 1]` | `IntersectionObserver` [threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold)의 스크롤 위치를 계산할 때 유효한 단위입니다. |
 
 {{< /bs-table >}}
 
 {{< callout warning >}}
 **지원 중단**
 
-Up until v5.1.3 we were using `offset` & `method` options, which are now deprecated and replaced by `rootMargin`.
-To keep backwards compatibility, we will continue to parse a given `offset` to `rootMargin`, but this feature will be removed in **v6**.
+v5.1.3까지는 `offset` 및 `method` 옵션을 사용했지만, 이제 더 이상 사용되지 않고 `rootMargin`으로 대체되었습니다.
+이전 버전과의 호환성을 유지하기 위해 주어진 `offset`을 `rootMargin`으로 계속 파싱하지만, 이 기능은 **v6**에서 제거될 예정입니다.
 {{< /callout >}}
 
 ### 메소드
 
 {{< bs-table "table" >}}
-| Method | Description |
+| 메소드 | 설명 |
 | --- | --- |
-| `dispose` | Destroys an element's scrollspy. (Removes stored data on the DOM element) |
-| `getInstance` | *Static* method to get the scrollspy instance associated with a DOM element. |
-| `getOrCreateInstance` | *Static* method to get the scrollspy instance associated with a DOM element, or to create a new one in case it wasn't initialized. |
-| `refresh` | When adding or removing elements in the DOM, you'll need to call the refresh method. |
+| `dispose` | 요소의 스크롤스파이를 제거합니다. (DOM 요소에 저장된 데이터 제거) |
+| `getInstance` | *정적* 메서드를 사용하여 DOM 요소와 연관된 스크롤스파이 인스턴스를 가져옵니다. |
+| `getOrCreateInstance` | *정적* 메서드를 사용하여 DOM 요소와 연결된 스크롤스파이 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. |
+| `refresh` | DOM에서 요소를 추가하거나 제거할 때는 새로고침 메서드를 호출해야 합니다. |
 {{< /bs-table >}}
 
-Here's an example using the refresh method:
+다음은 refresh 메소드를 사용한 예제입니다:
 
 ```js
 const dataSpyList = document.querySelectorAll('[data-bs-spy="scroll"]')
@@ -416,9 +415,9 @@ dataSpyList.forEach(dataSpyEl => {
 ### 이벤트
 
 {{< bs-table "table" >}}
-| Event | Description |
+| 이벤트 | 설명 |
 | --- | --- |
-| `activate.bs.scrollspy` | This event fires on the scroll element whenever an anchor is activated by the scrollspy. |
+| `activate.bs.scrollspy` | 이 이벤트는 스크롤스파이에 의해 앵커가 활성화될 때마다 스크롤 요소에서 발생합니다. |
 {{< /bs-table >}}
 
 ```js

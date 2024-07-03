@@ -13,12 +13,12 @@ toc: true
 
 ## 표기법
 
- `xs`에서 `xxl` 까지 모든 [breakpoints]({{< docsref "/layout/breakpoints" >}})에 적용되는 디스플레이 유틸리티 클래스에는 중단점 축약어가 없습니다. 이는 해당 클래스가 `min-width: 0;`에서 적용되기 때문입니다. 따라서 미디어 쿼리에 의해 제한되지 않습니다. 그러나 나머지 중단점에는 중단점 축약어가 포함됩니다.
+ `xs`에서 `xxl`까지 모든 [중단점]({{< docsref "/layout/breakpoints" >}})에 적용되는 디스플레이 유틸리티 클래스에는 중단점 축약어가 없습니다. 이는 해당 클래스가 `min-width: 0;`에서 적용되기 때문입니다. 따라서 미디어 쿼리에 의해 제한되지 않습니다. 그러나 나머지 중단점에는 중단점 축약어가 포함됩니다.
 
 따라서 클래스는 다음 형식을 사용하여 이름이 지정됩니다.
 
-- `.d-{value}` for `xs`
-- `.d-{breakpoint}-{value}` for `sm` , `md` , `lg` , `xl` , and `xxl` .
+- `xs`에서의 `.d-{value}`
+- `sm`, `md`, `lg`, `xl`, `xxl`에서의 `.d-{breakpoint}-{value}`
 
 다음 *값* 중 하나일 경우:
 
@@ -36,7 +36,7 @@ toc: true
 
 디스플레이 값은 `$utilities`에 정의된 `displays` 값을 변경하고 SCSS를 다시 컴파일하여 변경할 수 있습니다.
 
-미디어 쿼리는 지정된 중단점 **보다 큰** 화면 너비에 영향을 줍니다. 예를 들어, `.d-lg-none` 설정은 `lg` 뿐만 아니라 `xl` 그리고 `xxl` 화면을 `display: none;` 합니다. 
+미디어 쿼리는 **지정된 중단점보다 큰** 화면 너비에 영향을 줍니다. 예를 들어, `.d-lg-none` 설정은 `lg` 뿐만 아니라 `xl` 그리고 `xxl` 화면을 `display: none;` 처리합니다. 
 
 ## 예시
 
@@ -110,6 +110,6 @@ toc: true
 
 ### Sass 유틸리티 API
 
-디스플레이 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법 알아보기]({{< docsref "/utilities/api#using-the-api" >}})
+디스플레이 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-display" file="scss/_utilities.scss" >}}

@@ -25,7 +25,7 @@ flexbox 정렬 유틸리티를 사용하여 가로나 세로로 열을 정렬합
 
 ### 수직 정렬
 
-Change the vertical alignment with any of the responsive `align-items-*` classes.
+반응형 `align-items-*` 클래스를 사용하여 세로 정렬을 변경합니다.
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container text-center">
@@ -75,7 +75,7 @@ Change the vertical alignment with any of the responsive `align-items-*` classes
 </div>
 {{< /example >}}
 
-Or, change the alignment of each column individually with any of the responsive `.align-self-*` classes.
+또는 반응형 `.align-self-*` 클래스를 사용하여 각 열의 정렬을 개별적으로 변경할 수 있습니다.
 
 {{< example class="bd-example-row bd-example-row-flex-cols" >}}
 <div class="container text-center">
@@ -95,7 +95,7 @@ Or, change the alignment of each column individually with any of the responsive 
 
 ### 수평 정렬
 
-Change the horizontal alignment with any of the responsive `justify-content-*` classes.
+반응형 `justify-content-*` 클래스로 가로 정렬을 변경합니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container text-center">

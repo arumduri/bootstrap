@@ -19,19 +19,19 @@ extra_js:
 Bootstrap에서 사용하고 있는 폼 유효성 검사 구조를 소개합니다:
 
 - HTML의 폼 유효성 검사는 CSS의 두개의 가상 클래스 `:invalid`와 `:valid`를 사용해 `<input>`, `<select>`, `<textarea>` 요소에 적용됩니다.
-- Bootstrap는 `:invalid` 과 `:valid` 스타일을 부모 클래스 `.was-validated`에 범위를 지정하고 일반적으로 `<form>`에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 잘못된 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)
+- Bootstrap는 `:invalid`과 `:valid` 스타일을 부모 클래스 `.was-validated`에 범위를 지정하고 일반적으로 `<form>`에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 잘못된 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)
 - 폼의 외형을 새로 적용하려면(예를 들어, AJAX를 사용한 동적인 폼 송신의 경우), 송신 후에 `.was-validated` 클래스를 `<form>`으로부터 다시 삭제합니다.
-- 폴백으로서 [server-side validation](#server-side)의 가상 클래스 대신 `.is-invalid`와 `.is-valid` 클래스를 사용할 수 있습니다. 이 클래스들은 부모 클래스인 `.was-validated`를 필요로 하지 않습니다.
+- 폴백으로서 [서버 측 검사](#서버에서-검사하기)의 가상 클래스 대신 `.is-invalid`와 `.is-valid` 클래스를 사용할 수 있습니다. 이 클래스들은 부모 클래스인 `.was-validated`를 필요로 하지 않습니다.
 - (현시점에서는)CSS 동작에 제약이 있기 때문에 사용자 정의 JavaScript의 도움을 받지 않고 DOM 내에서 폼 컨트롤의 앞에 있는 `<label>`에 스타일을 적용할 수 없습니다.
 - 모든 모던 브라우저는 폼 컨트롤을 유효성 검사하기 위한 일련의 JavaScript 메소드인 [constraint validation API](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api)를 지원합니다.
-- 전달 문구는 [browser defaults](#browser-defaults) (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다)나 HTML과 CSS를 추가한 사용자 정의 전달 스타일을 이용할 수도 있습니다.
+- 전달 문구는 [browser defaults](#브라우저-기본값) (브라우저별로 다르기 때문에 CSS에서 스타일 변경은 할 수 없습니다)나 HTML과 CSS를 추가한 사용자 정의 전달 스타일을 이용할 수도 있습니다.
 - JavaScript의 `setCustomValidity`를 사용해 사용자 정의의 유효성 문구를 제공할 수도 있습니다.
 
 이 점들을 고려하여 사용자 정의 폼 유효성 검사 스타일, 선택적인 서버 사이드 클래스 및 브라우저 기본값에 대해, 아래의 데모를 확인 부탁드립니다.
 
 ## 사용자 지정 스타일
 
-Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에 `novalidate`라고 하는 불리언 속성을 추가할 필요가 있습니다. 이는 브라우저의 기본 전달 툴팁을 비활성화시켜 JavaScript에서 폼 검증 API에 대한 접근을 제공합니다. 아래 예시의 전송 버튼을 눌러 보세요. JavaScript가 전송 버튼을 가로채고 전달합니다. 전송 버튼을 누르면, 폼 컨트롤에 `:invalid` 과 `:valid`의 스타일이 적용되고 있는 것을 알 수 있습니다.
+Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에 `novalidate`라고 하는 불리언 속성을 추가할 필요가 있습니다. 이는 브라우저의 기본 전달 툴팁을 비활성화시켜 JavaScript에서 폼 검증 API에 대한 접근을 제공합니다. 아래 예시의 전송 버튼을 눌러 보세요. JavaScript가 전송 버튼을 가로채고 전달합니다. 전송 버튼을 누르면, 폼 컨트롤에 `:invalid`과 `:valid`의 스타일이 적용되고 있는 것을 알 수 있습니다.
 
 색상, 모서리, 포커스 스타일 및 배경 아이콘을 이용해 더 나은 사용자 정의 전달 스타일을 적용하고 있습니다. `<select>`의 배경 아이콘은 `.form-select`에서만 사용 가능하며 `.form-control`에서는 사용할 수 없습니다.
 
@@ -356,11 +356,11 @@ Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에
 
 {{< added-in "5.3.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, forms now use local CSS variables for validation for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일부로, 이제 양식은 향상된 실시간 사용자 지정을 위해 유효성 검사를 위해 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="root-form-validation-variables" file="scss/_root.scss" >}}
 
-These variables are also color mode adaptive, meaning they change color while in dark mode.
+이러한 변수는 색상 모드 적응형이므로 다크 모드에서는 색상이 변경됩니다.
 
 ### Sass variables
 
@@ -372,7 +372,7 @@ These variables are also color mode adaptive, meaning they change color while in
 
 ### Sass 믹스인
 
-두 개의 믹스인을 [loop](#loop)로 조합하고, 유효성 검사의 전달 스타일을 만들고 있습니다.
+두 개의 믹스인을 [loop](#루프)로 조합하고, 유효성 검사의 전달 스타일을 만들고 있습니다.
 
 {{< scss-docs name="form-validation-mixins" file="scss/mixins/_forms.scss" >}}
 

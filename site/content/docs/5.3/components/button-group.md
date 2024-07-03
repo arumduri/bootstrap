@@ -55,7 +55,7 @@ toc: true
 
 ## 체크박스와 라디오버튼 그룹
 
-버튼과 같은 체크 박스와 라디오 [toggle buttons]({{< docsref "/forms/checks-radios" >}})을 조합하여 아주 매끄러운 외형의 버튼 그룹을 만듭니다.
+버튼과 같은 체크 박스와 라디오 [토글 버튼]({{< docsref "/forms/checks-radios" >}})을 조합하여 아주 매끄러운 외형의 버튼 그룹을 만듭니다.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
@@ -183,7 +183,7 @@ toc: true
 
 ## 수직 변수
 
-버튼 세트를 수평 방향이 아닌 수직 방향으로 표시합니다. **Split button dropdown은 여기에서는 지원되지 않습니다.**
+버튼 세트를 수평 방향이 아닌 수직 방향으로 표시합니다. **분할 버튼 드롭다운은 여기에서는 지원되지 않습니다.**
 
 {{< example >}}
 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">

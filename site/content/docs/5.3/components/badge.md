@@ -65,7 +65,7 @@ toc: true
 
 {{< added-in "5.2.0" >}}
 
-Set a `background-color` with contrasting foreground `color` with [our `.text-bg-{color}` helpers]({{< docsref "helpers/color-background" >}}). Previously it was required to manually pair your choice of [`.text-{color}`]({{< docsref "/utilities/colors" >}}) and [`.bg-{color}`]({{< docsref "/utilities/background" >}}) utilities for styling, which you still may use if you prefer.
+[`.text-bg-{color}` 도우미]({{< docsref "helpers/color-background" >}})로 전경 `color`와 대비되는 `background-color`을 설정합니다. 이전에는 스타일링을 위해 [`.text-{color}`]({{< docsref "/utilities/colors" >}}) 및 [`.bg-{color}`]({{< docsref "/utilities/background" >}}) 유틸리티를 수동으로 조합해야 했지만, 원하는 경우 계속 사용할 수 있습니다.
 
 {{< example >}}
 {{< badge.inline >}}
@@ -95,7 +95,7 @@ Set a `background-color` with contrasting foreground `color` with [our `.text-bg
 
 {{< added-in "5.2.0" >}}
 
-As part of Bootstrap's evolving CSS variables approach, badges now use local CSS variables on `.badge` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
+Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 배지 `.badge`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
 
 {{< scss-docs name="badge-css-vars" file="scss/_badge.scss" >}}
 

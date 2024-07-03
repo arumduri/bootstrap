@@ -82,7 +82,7 @@ $font-family-sans-serif:
 
 ## 제목
 
-`<h1>`—`<h6>`와 같은 모든 제목 요소는  `margin-top`이 제거되며, `margin-bottom: .5rem`이 추가되고 `line-height`가 적용됩니다. 제목은 기본적으로 `color`를 상속하지만 선택적 CSS 변수인 `--bs-heading-color`를 통해 재정의할 수도 있습니다.
+`<h1>`—`<h6>`와 같은 모든 제목 요소는 `margin-top`이 제거되며, `margin-bottom: .5rem`이 추가되고 `line-height`가 적용됩니다. 제목은 기본적으로 `color`를 상속하지만 선택적 CSS 변수인 `--bs-heading-color`를 통해 재정의할 수도 있습니다.
 
 {{< bs-table "table" >}}
 | Heading | Example |
@@ -265,7 +265,7 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 - `<label>`이 `display: inline-block`으로 설정되어 `margin`이 적용될 수 있습니다.
 - `<input>`, `<select>`, `<textarea>`, `<button>`은 대부분 Normalize에 의해 처리되지만 Reboot는 `margin`을 제거하고 `line-height: inherit`도 설정합니다.
 - 가로로 크기를 조정하면 페이지 레이아웃이 "깨지는" 경우가 많으므로 `<textarea>`은 세로로만 크기를 조정할 수 있도록 수정되었습니다.
-- `<button>`과 `<input>` 버튼 요소는`:not(:disabled)`일 때 `cursor : pointer`를 갖습니다.
+- `<button>`과 `<input>` 버튼 요소는 `:not(:disabled)`일 때 `cursor : pointer`를 갖습니다.
 
 이러한 변경 사항 등은 아래에 설명되어 있습니다.
 

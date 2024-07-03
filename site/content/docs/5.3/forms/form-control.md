@@ -32,7 +32,7 @@ toc: true
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
 {{< /example >}}
 
-## Form text
+## 폼 텍스트
 
 block-level 또는 inline-level의 폼 텍스트는 `.form-text`를 사용해서 생성할 수 있습니다.
 
@@ -180,7 +180,7 @@ Set the `type="color"` and add `.form-control-color` to the `<input>`. We use th
 
 {{< scss-docs name="form-input-variables" file="scss/_variables.scss" >}}
 
-`$form-label-*`과 `$form-text-*` 는 `<label>`과 `.form-text` 컴포넌트용입니다.
+`$form-label-*`과 `$form-text-*`는 `<label>`과 `.form-text` 컴포넌트용입니다.
 
 {{< scss-docs name="form-label-variables" file="scss/_variables.scss" >}}
 

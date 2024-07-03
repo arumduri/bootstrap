@@ -11,9 +11,9 @@ toc: true
 
 내비게이션 바를 시작하기 전에 알아야 할 것들을 설명하겠습니다:
 
-- 내비게이션 바는 `.navbar`를 `.navbar-expand{-sm|-md|-lg|-xl|-xxl}`로 감싸야 하며, [color scheme](#color-schemes)클래스가 필요합니다.
-- 내비게이션과 그 콘텐츠는 기본적으로 유동적입니다. [container](#containers)를 변경하여 다양한 방법으로 가로폭을 제한할 수 있습니다.
-- 내비게이션에서 배치 및 간격 제어는 [spacing]({{< docsref "/utilities/spacing" >}})와 [flex]({{< docsref "/utilities/flex" >}}) 유틸리티 클래스를 사용합니다.
+- 내비게이션 바는 `.navbar`를 `.navbar-expand{-sm|-md|-lg|-xl|-xxl}`로 감싸야 하며, [색상 스키마](#색상-스키마) 클래스가 필요합니다.
+- 내비게이션과 그 콘텐츠는 기본적으로 유동적입니다. [컨테이너](#컨테이너)를 변경하여 다양한 방법으로 가로폭을 제한할 수 있습니다.
+- 내비게이션에서 배치 및 간격 제어는 [간격]({{< docsref "/utilities/spacing" >}}) 및 [플렉스]({{< docsref "/utilities/flex" >}}) 유틸리티 클래스를 사용합니다.
 - 내비게이션은 기본적으로 반응형이지만 간단히 변경할 수 있습니다. 반응형 동작은 Collapse JavaScript 플러그인에 의존합니다.
 - 접근성을 확보하려면 `<nav>` 요소를 사용하거나, 혹은 `<div>`와 같이 보다 범용적인 요소를 사용하는 경우에는 `role="navigation"`을 추가하여 스크린 리더 사용자를 위해 랜드마크가 되는 곳임을 명시적으로 알려주어야 합니다.
 - 현재 페이지에는 `aria-current="page"`를, 세트 안에서의 현재 아이템에는 `aria-current="true"`를 사용하여, 현재 아이템을 표시합니다.
@@ -25,15 +25,15 @@ toc: true
 
 ## 지원 콘텐츠
 
-내비게이션에는 몇 가지의 서브 컴포넌트의 지원이 포함되어 있습니다. 필요에 따라, 아래에서 선택해 주세요.:
+내비게이션에는 몇 가지의 서브 컴포넌트의 지원이 포함되어 있습니다. 필요에 따라, 아래에서 선택해 주세요:
 
 - `.navbar-brand`으로 회사명이나 제품명, 프로젝틈명 등.
 - `.navbar-nav`으로 full-height와 보다 가벼운 네비게이션(드롭다운을 위한 지원 포함)을 실현.
-- `.navbar-toggler`은 콜랩스 플러그인과 다른 [navigation toggling](#responsive-behaviors)행동에 사용.
+- `.navbar-toggler`은 콜랩스 플러그인과 다른 [navigation toggling](#반응형-비헤이비어)행동에 사용.
 - 모든 폼 컨트롤과 액션을 위한 flex와 spacing 유틸리티.
 - 수직 방향으로 센터링된 문자열을 추가하기 위한 `.navbar-text`.
 - `.collapse.navbar-collapse`으로 부모 중단점에 따라 내비게이션 바의 콘텐츠를 그룹화하거나 감출수 있음.
-- 옵션으로 `.navbar-scroll`를 추가해 `max-height`와 [scroll expanded navbar content](#scrolling)이 가능.
+- 옵션으로 `.navbar-scroll`를 추가해 `max-height`와 [확장된 내비게이션 바 콘텐츠 스크롤](#스크롤)이 가능.
 
 여기서는 `lg` (large) 중단점에서 자동으로 접히는 라이트 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.
 
@@ -76,11 +76,11 @@ toc: true
 </nav>
 {{< /example >}}
 
-This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-body-tertiary`) and [spacing]({{< docsref "/utilities/spacing" >}}) (`me-auto`, `mb-2`, `mb-lg-0`, `me-2`) utility classes.
+이 예시는 [배경색]({{< docsref "/utilities/background" >}}) (`bg-body-tertiary`) 및 [간격]({{< docsref "/utilities/spacing" >}}) (`me-auto`, `mb-2`, `mb-lg-0`, `me-2`) 유틸리티 클래스를 사용합니다.
 
 ### 브랜드
 
-`.navbar-brand` 는 대부분의 요소에 적용이 가능하지만, 요소에 따라서 유틸리티 클래스나 사용자 정의 스타일을 필요로 하는 경우가 있기 때문에 앵커가 최적입니다.
+`.navbar-brand`는 대부분의 요소에 적용이 가능하지만, 요소에 따라서 유틸리티 클래스나 사용자 정의 스타일을 필요로 하는 경우가 있기 때문에 앵커가 최적입니다.
 
 #### 텍스트
 
@@ -133,7 +133,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-bod
 
 ### 내비게이션 바
 
-내비게이션 바의 내비게이션 링크는 `.nav` 옵션에 독자적인 변경 클래스를 추가하여 빌드되며, 적절한 반응형 스타일링을 위해 [toggler classes](#toggler) 사용을 해야 합니다. 내비게이션 바 안에서 내비게이션 링크는 **수평 방향으로 펼쳐져 깔끔하게 정렬**합니다.
+내비게이션 바의 내비게이션 링크는 `.nav` 옵션에 독자적인 변경 클래스를 추가하여 빌드되며, 적절한 반응형 스타일링을 위해 [토글 클래스](#토글) 사용을 해야 합니다. 내비게이션 바 안에서 내비게이션 링크는 **수평 방향으로 펼쳐져 깔끔하게 정렬**합니다.
 
 현재 페이지를 나타내기 위해 `.nav-link`에 `.nav-link` 클래스를 추가합니다.
 
@@ -189,7 +189,7 @@ This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-bod
 {{< /example >}}
 
 내비게이션 바에서 드롭다운을 사용할 수도 있습니다.
-드롭다운 메뉴는 배치를 위한 줄바꿈 된 요소가 필요하기 때문에 아래와 같이 `.nav-item`과 `.nav-link` 과는 다른 중첩 된 요소로 분리해 사용해 주세요.
+드롭다운 메뉴는 배치를 위한 줄바꿈 된 요소가 필요하기 때문에 아래와 같이 `.nav-item`과 `.nav-link`과는 다른 중첩 된 요소로 분리해 사용해 주세요.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -438,7 +438,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 
 ## 컨테이너
 
-필수는 아니지만, 내비게이션 바를 `.container`로 감싸 페이지 중앙에 배치할 수도 있지만 내부의 컨테이너가 필요하게 된다는 점을 주의해 주세요. 혹은, `.navbar`의 내부에 컨테이너를 추가하고 [fixed 혹은 static top navbar](#placement) 의 내용만을 중앙에 배치할 수도 있습니다.
+필수는 아니지만, 내비게이션 바를 `.container`로 감싸 페이지 중앙에 배치할 수도 있지만 내부의 컨테이너가 필요하게 된다는 점을 주의해 주세요. 혹은, `.navbar`의 내부에 컨테이너를 추가하고 [fixed나 static 상태의 상단 내비게이션 바](#배치)의 내용만을 중앙에 배치할 수도 있습니다.
 
 {{< example >}}
 <div class="container">
@@ -462,7 +462,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 
 ## 배치
 
-[위치 유틸리티]({{< docsref "/utilities/position" >}})를 사용하여 내비게이션 바를 정적이지 않은 위치에 배치할 수 있습니다. 상단고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단고정을 할지, or stickied to the bottom (scrolls with the page until it reaches the bottom, then stays there).
+[위치 유틸리티]({{< docsref "/utilities/position" >}})를 사용하여 내비게이션 바를 정적이지 않은 위치에 배치할 수 있습니다. 상단 고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단 고정, 스티커식 하단 고정 (페이지가 하단까지 스크롤한 뒤에도 그 위치에 남는)을 사용할 수있습니다
 
 고정 내비게이션 바는 `position: fixed`를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 사용자 정의 CSS(예를 들어, `<body>`의 `padding-top` 등)가 필요할 수 있습니다.
 

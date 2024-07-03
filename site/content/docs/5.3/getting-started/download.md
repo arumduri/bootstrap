@@ -53,19 +53,19 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 <script src="{{< param "cdn.js" >}}" integrity="{{< param "cdn.js_hash" >}}" crossorigin="anonymous"></script>
 ```
 
-### Alternative CDNs
+### 대체 CDN
 
-We recommend [jsDelivr](https://www.jsdelivr.com/) and use it ourselves in our documentation. However, in some cases—like in some specific countries or environments—you may need to use other CDN providers like [cdnjs](https://cdnjs.com/) or [unpkg](https://unpkg.com/).
+저희는 [jsDelivr](https://www.jsdelivr.com/)를 권장하며 문서에서도 이를 직접 사용하고 있습니다. 그러나 특정 국가나 환경 등 일부 경우에는 [cdnjs](https://cdnjs.com/) 또는 [unpkg](https://unpkg.com/)와 같은 다른 CDN 제공업체를 사용해야 할 수도 있습니다.
 
-You'll find the same files on these CDN providers, albeit with different URLs. With cdnjs, you can [use this direct Bootstrap package link](https://cdnjs.com/libraries/bootstrap) to copy and paste ready-to-use HTML snippets for each dist file from any version of Bootstrap.
+이러한 CDN 제공업체에서는 URL이 다르지만 동일한 파일을 찾을 수 있습니다. cdnjs를 사용하면 [이 다이렉트 Bootstrap 패키지 링크](https://cdnjs.com/libraries/bootstrap)를 사용하여 모든 버전의 Bootstrap에서 각 배포 파일에 대해 바로 사용할 수 있는 HTML 스니펫을 복사하여 붙여넣을 수 있습니다.
 
 {{< callout warning>}}
-**If the SRI hashes differ for a given file, you shouldn't use the files from that CDN, because it means that the file was modified by someone else.**
+**특정 파일에 대해 SRI 해시가 다르면 다른 사람이 파일을 수정했음을 의미하므로 해당 CDN의 파일을 사용해서는 안 됩니다**.
 {{< /callout >}}
 
-Note that you should compare same length hashes, e.g. `sha384` with `sha384`, otherwise it's expected for them to be different.
-As such, you can use an online tool like [SRI Hash Generator](https://www.srihash.org/) to make sure that the hashes are the same for a given file.
-Alternatively, assuming you have OpenSSL installed, you can achieve the same from the CLI, for example:
+길이가 같은 해시(예: `sha384`와 `sha384`)를 비교해야 하며, 그렇지 않을 경우 서로 다를 수 있습니다.
+따라서 [SRI 해시 생성기](https://www.srihash.org/)와 같은 온라인 도구를 사용하여 주어진 파일에 대해 해시가 동일한지 확인할 수 있습니다.
+또는 OpenSSL이 설치되어 있다고 가정하면 CLI에서도 동일한 결과를 얻을 수 있습니다:
 
 ```sh
 openssl dgst -sha384 -binary bootstrap.min.js | openssl base64 -A
@@ -129,7 +129,7 @@ composer require twbs/bootstrap:{{< param current_version >}}
 
 ### NuGet
 
-.NET 프레임워크으로 개발하고 있다면, [NuGet](https://www.nuget.org/)을 사용해서 Bootstrap의 [CSS](https://www.nuget.org/packages/bootstrap/) 또는 [Sass](https://www.nuget.org/packages/bootstrap.sass/) 및 JavaScript를 설치 및 관리할 수 있습니다. Newer projects should use [libman](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/) or another method as NuGet is designed for compiled code, not frontend assets.
+.NET 프레임워크으로 개발하고 있다면, [NuGet](https://www.nuget.org/)을 사용해서 Bootstrap의 [CSS](https://www.nuget.org/packages/bootstrap/) 또는 [Sass](https://www.nuget.org/packages/bootstrap.sass/) 및 JavaScript를 설치 및 관리할 수 있습니다. 최신 프로젝트는 NuGet이 프론트엔드 에셋이 아닌 컴파일된 코드용으로 설계되었으므로 [libman](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/) 또는 다른 방법을 사용해야 합니다.
 
 ```powershell
 Install-Package bootstrap

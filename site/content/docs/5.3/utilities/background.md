@@ -13,7 +13,7 @@ toc: true
 
 ## 배경색
 
-상황별 텍스트 색상 클래스와 비슷하게 요소의 배경을 상황별 클래스로 설정합니다. background 유틸리티는 ** `color` 는 세팅하지 않습니다 **. 따라서 경우에 따라 `.text- *` [색상 유틸리티]({{< docsref "/utilities/colors" >}})를 사용하는 것이 좋습니다.
+상황별 텍스트 색상 클래스와 비슷하게 요소의 배경을 상황별 클래스로 설정합니다. background 유틸리티는 ** `color`는 세팅하지 않습니다 **. 따라서 경우에 따라 `.text- *` [색상 유틸리티]({{< docsref "/utilities/colors" >}})를 사용하는 것이 좋습니다.
 
 {{< callout info >}}
 원래 `$theme-colors` Sass 맵에서 생성된 `.bg-*`와 같은 배경 유틸리티는 아직 색상 모드에 반응하지 않지만, `.bg-*-subtle` 유틸리티는 반응합니다. 이 문제는 v6에서 해결될 예정입니다.
@@ -145,6 +145,6 @@ RGB 색상은 별도의 Sass 맵에서 생성됩니다:
 
 ### Sass 유틸리티 API
 
-백그라운드 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+배경색 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-bg-color" file="scss/_utilities.scss" >}}

@@ -1,27 +1,27 @@
 ---
 layout: docs
-title: Object fit
-description: Use the object fit utilities to modify how the content of a [replaced element](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element), such as an `<img>` or `<video>`, should be resized to fit its container.
+title: 객체 차우기
+title_en: Object fit
+description: 개체 맞춤 유틸리티를 사용하여 `<img>` 또는 `<video>`와 같은 [대체된 요소](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)의 콘텐츠가 컨테이너에 맞게 크기를 조정하는 방법을 수정할 수 있습니다.
 group: utilities
 toc: true
-untranslated: true
 ---
 
-## How it works
+## 작동 방식
 
-Change the value of the [`object-fit` property](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) with our responsive `object-fit` utility classes. This property tells the content to fill the parent container in a variety of ways, such as preserving the aspect ratio or stretching to take up as much space as possible.
+반응형 `object-fit` 유틸리티 클래스로 [`object-fit` 속성](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)의 값을 변경하세요. 이 속성은 가로 세로 비율을 유지하거나 가능한 한 많은 공간을 차지하도록 늘리는 등 다양한 방식으로 콘텐츠가 부모 컨테이너를 채우도록 지시합니다.
 
-Classes for the value of `object-fit` are named using the format `.object-fit-{value}`. Choose from the following values:
+`object-fit` 값에 대한 클래스는 `.object-fit-{value}` 형식을 사용하여 이름이 지정됩니다. 다음 값 중에서 선택합니다:
 
 - `contain`
 - `cover`
 - `fill`
-- `scale` (for scale-down)
+- `scale` (scale 축소)
 - `none`
 
-## Examples
+## 예제
 
-Add the `object-fit-{value}` class to the [replaced element](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element):
+[대체된 요소](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)에 `object-fit-{value}` 클래스를 추가합니다:
 
 {{< example class="d-flex overflow-auto" >}}
 {{< placeholder width="140" height="120" class="object-fit-contain border rounded" text="Object fit contain" markup="img" color="#868e96" background="#dee2e6" >}}
@@ -31,9 +31,9 @@ Add the `object-fit-{value}` class to the [replaced element](https://developer.m
 {{< placeholder width="140" height="120" class="object-fit-none border rounded" text="Object fit none" markup="img" color="#868e96" background="#dee2e6" >}}
 {{< /example >}}
 
-## Responsive
+## 반응형
 
-Responsive variations also exist for each `object-fit` value using the format `.object-fit-{breakpoint}-{value}`, for the following breakpoint abbreviations: `sm`, `md`, `lg`, `xl`, and `xxl`. Classes can be combined for various effects as you need.
+각 `객체 맞춤` 값에 대해 `.object-fit-{breakpoint}-{value}` 형식을 사용하는 반응형 변형도 존재하며, 중단점 약어는 `SM`, `MD`, `LG`, `XL`, `XXL`이 있습니다. 필요에 따라 다양한 효과를 위해 클래스를 조합할 수 있습니다.
 
 {{< example class="d-flex overflow-auto" >}}
 {{< placeholder width="140" height="80" class="object-fit-sm-contain border rounded" text="Contain on sm" markup="img" color="#868e96" background="#dee2e6" >}}
@@ -43,9 +43,9 @@ Responsive variations also exist for each `object-fit` value using the format `.
 {{< placeholder width="140" height="80" class="object-fit-xxl-contain border rounded" text="Contain on xxl" markup="img" color="#868e96" background="#dee2e6" >}}
 {{< /example >}}
 
-## Video
+## 동영상
 
-The `.object-fit-{value}` and responsive `.object-fit-{breakpoint}-{value}` utilities also work on `<video>` elements.
+`.object-fit-{value}` 및 반응형 `.object-fit-{breakpoint}-{value}` 유틸리티는 `<video>` 요소에서도 작동합니다.
 
 ```html
 <video src="..." class="object-fit-contain" autoplay></video>
@@ -59,6 +59,6 @@ The `.object-fit-{value}` and responsive `.object-fit-{breakpoint}-{value}` util
 
 ### Sass 유틸리티 API
 
-Object fit utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
+객체 맞춤 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-object-fit" file="scss/_utilities.scss" >}}
