@@ -16,7 +16,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
 `-rgb`로 끝나는 색상은 `rgb()` 및 `rgba()` 색상 모드에서 사용할 `red`, `green`, `blue` 값을 제공합니다. (예: `rgba(var(--bs-secondary-bg-rgb), .5)`)
 
 {{< callout warning>}}
-**주의!** 새로운 보조 및 보조 색상과 기존 보조 테마 색상, 밝은 테마 색상과 어두운 테마 색상이 혼동될 가능성이 있습니다. 이 문제는 v6에서 해결될 것으로 예상됩니다.
+**주의!** 새로운 보조(secondary) 및 참고(tertiary) 색상과 기존 보조 테마 색상, 밝은 테마 색상과 어두운 테마 색상이 혼동될 가능성이 있습니다. 이 문제는 v6에서 해결될 것으로 예상됩니다.
 {{< /callout >}}
 
 <div class="table-responsive">
