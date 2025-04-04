@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: "Bootstrap & Vite"
-description: Vite를 사용하여 프로젝트에 Bootstrap의 CSS와 JavaScript를 포함하고 번들링하는 방법에 대한 공식 가이드입니다.
+title: Bootstrap and Vite
+description: The official guide for how to include and bundle Bootstrap's CSS and JavaScript in your project using Vite.
 group: getting-started
 toc: true
 thumbnail: guides/bootstrap-vite@2x.png
@@ -10,49 +10,50 @@ thumbnail: guides/bootstrap-vite@2x.png
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png" width="2000" height="1000" alt="">
 
 {{< callout >}}
-**끝으로 건너뛰고 싶으신가요?** 이 가이드의 소스 코드와 동작 확인을 위한 데모는 [twbs/examples repository](https://github.com/twbs/examples/tree/main/vite)에서 다운로드 하세요. [StackBlitz 예제를 열어](https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html) 실시간으로 편집할 수도 있습니다.
+**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/vite). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html) for live editing.
 {{< /callout >}}
 
-## 설정하기
+## Setup
 
-Bootstrap으로 Vite 프로젝트를 처음부터 구축하기 위해 실제로 시작하기 전에 몇 가지 전제 조건과 선행 단계가 있습니다. 이 가이드를 사용하려면 Node.js가 설치되어 있고 터미널을 어느 정도 다룰 줄 알아야 합니다.
+We're building a Vite project with Bootstrap from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
-1. **프로젝트 폴더를 만들고 npm을 설정합니다.** `my-project` 폴더를 만들고 모든 대화형 질문을 하지 않도록 `-y` 인수를 사용하여 npm을 초기화 합니다.
+1. **Create a project folder and set up npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
    ```sh
    mkdir my-project && cd my-project
    npm init -y
    ```
 
-2. **Vite를 설치합니다.** 웹팩 가이드와 달리 여기에는 빌드 도구 종속성이 하나만 있습니다. 이 종속성이 프로덕션용이 아닌 개발용으로만 사용된다는 것을 알리기 위해 `--save-dev`를 사용합니다.
+2. **Install Vite.** Unlike our Webpack guide, there’s only a single build tool dependency here. We use `--save-dev` to signal that this dependency is only for development use and not for production.
 
    ```sh
    npm i --save-dev vite
    ```
 
-3. **Bootstrap을 설치합니다.** 이제 Bootstrap을 설치할 수 있습니다. 드롭다운, 팝오버, 툴팁의 위치가 Bootstrap에 따라 달라지므로 Popper도 설치합니다. 이러한 컴포넌트를 사용하지 않을 계획이라면 여기서 Popper를 생략할 수 있습니다.
+3. **Install Bootstrap.** Now we can install Bootstrap. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
 
    ```sh
    npm i --save bootstrap @popperjs/core
    ```
-4. **추가 종속 요소를 설치합니다.** Vite와 Bootstrap 외에도 Bootstrap의 CSS를 제대로 가져와 번들링하려면 또 다른 종속성(Sass)이 필요합니다.
+
+4. **Install additional dependency.** In addition to Vite and Bootstrap, we need another dependency (Sass) to properly import and bundle Bootstrap's CSS.
 
    ```sh
    npm i --save-dev sass
    ```
 
-이제 필요한 모든 종속성을 설치하고 설정했으므로 프로젝트 파일을 만들고 Bootstrap을 가져올 수 있습니다.
+Now that we have all the necessary dependencies installed and set up, we can get to work creating the project files and importing Bootstrap.
 
-## 프로젝트 구조
+## Project structure
 
-이미 `my-project` 폴더를 생성하고 npm을 초기화했습니다. 이제 프로젝트 구조를 완성하기 위해 `src` 폴더, 스타일시트, JavaScript 파일도 생성합니다. `my-project`에서 다음을 실행하거나 아래 표시된 폴더와 파일 구조를 수동으로 생성합니다.
+We've already created the `my-project` folder and initialized npm. Now we'll also create our `src` folder, stylesheet, and JavaScript file to round out the project structure. Run the following from `my-project`, or manually create the folder and file structure shown below.
 
 ```sh
 mkdir {src,src/js,src/scss}
 touch src/index.html src/js/main.js src/scss/styles.scss vite.config.js
 ```
 
-완료되면 전체 프로젝트는 다음과 같은 모습일 것입니다:
+When you're done, your complete project should look like this:
 
 ```text
 my-project/
@@ -67,13 +68,13 @@ my-project/
 └── vite.config.js
 ```
 
-이 시점에서 모든 것이 올바른 위치에 있지만 아직 `vite.config.js`를 채우지 않았기 때문에 Vite가 작동하지 않습니다.
+At this point, everything is in the right place, but Vite won't work because we haven't filled in our `vite.config.js` yet.
 
-## Parcel 설정하기
+## Configure Vite
 
-종속성이 설치되고 코딩을 시작할 수 있는 프로젝트 폴더가 준비되었으므로 이제 Vite를 구성하고 로컬에서 프로젝트를 실행할 수 있습니다.
+With dependencies installed and our project folder ready for us to start coding, we can now configure Vite and run our project locally.
 
-1. **에디터에서 `vite.config.js` 파일을 열어 주세요.** 비어 있으므로 서버를 시작할 수 있도록 정형화된 설정을 추가해야 합니다. 이 설정 부분은 Vite에 프로젝트의 JavaScript를 찾을 위치와 개발 서버의 동작(핫 리로드를 통해 `src` 폴더에서 가져옴)을 지시하는 부분입니다.
+1. **Open `vite.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Vite where to look for our project's JavaScript and how the development server should behave (pulling from the `src` folder with hot reload).
 
    <!-- eslint-skip -->
    ```js
@@ -90,7 +91,7 @@ my-project/
    }
    ```
 
-2. **다음으로 `src/index.html`을 작성합니다.** 이는 Vite가 브라우저에서 불러오는 HTML 페이지로, 이후 단계에서 추가하는 번들 CSS와 JS를 활용하기 위한 것입니다.
+2. **Next we fill in `src/index.html`.** This is the HTML page Vite will load in the browser to utilize the bundled CSS and JS we'll add to it in later steps.
 
    ```html
    <!doctype html>
@@ -110,9 +111,9 @@ my-project/
    </html>
    ```
 
-   여기에 `div class="container"`와 `<button>`으로 약간의 Bootstrap의 스타일링을 사용하여 Bootstrap의 CSS가 Vite에서 로드되는 시점을 확인할 수 있도록 했습니다.
+   We're including a little bit of Bootstrap styling here with the `div class="container"` and `<button>` so that we see when Bootstrap's CSS is loaded by Vite.
 
-3. **이제 Vite를 실행하려면 npm 스크립트가 필요합니다.** `package.json`을 열고 아래에 표시된 `start` 스크립트를 추가합니다(이미 테스트 스크립트가 있을 것입니다). 이 스크립트를 사용하여 로컬 Vite 개발 서버를 시작하겠습니다.
+3. **Now we need an npm script to run Vite.** Open `package.json` and add the `start` script shown below (you should already have the test script). We'll use this script to start our local Vite dev server.
 
    ```json
    {
@@ -125,7 +126,7 @@ my-project/
    }
    ```
 
-4. **이제 Vite를 시작할 수 있습니다.** 터미널의 `my-project` 폴더에서 새로 추가된 npm 스크립트를 실행합니다:
+4. **And finally, we can start Vite.** From the `my-project` folder in your terminal, run that newly added npm script:
 
    ```sh
    npm start
@@ -133,20 +134,20 @@ my-project/
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server.png" alt="Vite dev server running">
 
-이 가이드의 마지막인 다음 섹션에서는 Bootstrap의 모든 CSS와 JavaScript를 가져오겠습니다.
+In the next and final section to this guide, we’ll import all of Bootstrap’s CSS and JavaScript.
 
-## Bootstrap 불러오기
+## Import Bootstrap
 
-1. **Bootstrap의 CSS를 불러오세요.** Bootstrap의 모든 소스 Sass를 가져오려면 `src/scss/styles.scss`에 다음을 추가하세요.
+1. **Import Bootstrap's CSS.** Add the following to `src/scss/styles.scss` to import all of Bootstrap's source Sass.
 
    ```scss
    // Import all of Bootstrap's CSS
    @import "bootstrap/scss/bootstrap";
    ```
 
-   *원하는 경우 스타일시트를 개별적으로 가져올 수도 있습니다. 자세한 내용은 [Sass 불러오기 문서]({{< docsref "/customize/sass#importing" >}})를 참조하세요.*
+   *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-2. **다음으로 CSS를 로드하고 Bootstrap의 JavaScript를 불러옵니다.** `src/js/main.js`에 다음을 추가하여 CSS를 로드하고 Bootstrap의 모든 JS를 임포트합니다. Popper는 Bootstrap을 통해 자동으로 임포트됩니다.
+2. **Next we load the CSS and import Bootstrap's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Bootstrap's JS. Popper will be imported automatically through Bootstrap.
 
    <!-- eslint-skip -->
    ```js
@@ -157,7 +158,7 @@ my-project/
    import * as bootstrap from 'bootstrap'
    ```
 
-   필요에 따라 JavaScript 플러그인을 개별적으로 가져와 번들 크기를 줄일 수도 있습니다:
+   You can also import JavaScript plugins individually as needed to keep bundle sizes down:
 
    <!-- eslint-skip -->
    ```js
@@ -167,13 +168,13 @@ my-project/
    import { Tooltip, Toast, Popover } from 'bootstrap';
    ```
 
-   *Bootstrap 플러그인 사용 방법에 대한 자세한 내용은 [자바스크립트 문서]({{< docsref "/getting-started/javascript/" >}})를 참고하세요.*
+   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Bootstrap's plugins.*
 
-3. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다:
+3. **And you're done! 🎉** With Bootstrap's source Sass and JS fully loaded, your local development server should now look like this:
 
    <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server-bootstrap.png" alt="Vite dev server running with Bootstrap">
 
-   이제 사용하고자 하는 Bootstrap 컴포넌트를 추가할 수 있습니다. 추가 커스텀 Sass를 포함시키고 필요한 Bootstrap의 CSS 및 JS 부분만 임포트하여 빌드를 최적화하는 방법은 [전체 Vite 예제 프로젝트 확인](https://github.com/twbs/examples/tree/main/vite)을 참조하세요.
+   Now you can start adding any Bootstrap components you want to use. Be sure to [check out the complete Vite example project](https://github.com/twbs/examples/tree/main/vite) for how to include additional custom Sass and optimize your build by importing only the parts of Bootstrap's CSS and JS that you need.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}

@@ -1,0 +1,94 @@
+---
+layout: docs
+title: CSS 변수
+title_en: CSS variables
+description: 빠르고 미래 지향적인 설계와 개발을 위해 Bootstrap의 CSS 사용자 정의를 사용합니다.
+group: customize
+toc: true
+---
+
+Bootstrap은 Sass를 재컴파일할 필요 없이 실시간 커스터마이징을 할 수 있도록 컴파일된 CSS에 많은 [CSS 사용자 정의 속성 (변수)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)를 포함하고 있습니다. 이들은 브라우저의 검사기, 코드 샌드박스 또는 일반 프로토타입으로 작업할때 테마 색상, 중단점, 주요 글꼴 스택과 같이 일반적으로 자주 사용되는 값에 대해 간단하게 접근을 제공합니다.
+
+서드파티 CSS와의 충돌을 피하기 위해 **모든 사용자 정의 속성 앞에 `bs-`가 붙습니다.**
+
+## 최상위 변수
+
+여기에는 Bootstrap의 CSS가 포함된 곳이면 어디에서나 접근할 수 있는(`:root`가 필수인 것에 주의해 주세요) 변수가 있습니다. 이들은 `_root.scss` 파일 안에 있음며 컴파일된 dist 파일에 포함되어 있습니다.
+
+### 기본값
+
+이러한 CSS 변수는 색상 모드에 관계없이 모든 곳에서 사용할 수 있습니다.
+
+```css
+{{< root.inline >}}
+{{- $css := readFile "dist/css/bootstrap.css" -}}
+{{- $match := findRE `:root,\n\[data-bs-theme=light\] {([^}]*)}` $css 1 -}}
+
+{{- if (eq (len $match) 0) -}}
+{{- errorf "Got no matches for :root in %q!" $.Page.Path -}}
+{{- end -}}
+
+{{- index $match 0 -}}
+
+{{< /root.inline >}}
+```
+
+### 다크 모드
+
+이러한 변수는 내장된 다크 모드로 범위가 제한됩니다.
+
+```css
+{{< root.inline >}}
+{{- $css := readFile "dist/css/bootstrap.css" -}}
+{{- $match := findRE `\[data-bs-theme=dark\] {([^}]*)}` $css 1 -}}
+{{- if (eq (len $match) 0) -}}
+{{- errorf "Got no matches for [data-bs-theme=dark] in %q!" $.Page.Path -}}
+{{- end -}}
+{{- index $match 0 -}}
+{{< /root.inline >}}
+```
+
+## 컴포넌트 변수
+
+Bootstrap 5는 다양한 컴포넌트의 로컬 변수로 사용자 정의 속성을 점점 더 많이 사용하고 있습니다. 이렇게 하면 컴파일된 CSS를 줄이고, 중첩된 테이블과 같은 위치에서 스타일이 상속되지 않도록 하며, Sass 컴파일 후 Bootstrap 구성요소의 기본적인 스타일 변경 및 확장을 허용합니다.
+
+CSS 변수를 사용하는 방법에 대한 [부분]({{< docsref "/content/tables#how-do-the-variants-and-accented-tables-work" >}})은 표 설명서를 참조하세요. v5.2.0부터 [내비게이션 바에도 CSS 변수를 사용합니다]({{< docsref "/components/navbar#css" >}}). 또한 [새로운 옵트인 CSS 그리드]({{< docsref "/layout/css-grid" >}})를 중심으로 그리드 전반에 걸쳐 CSS 변수를 사용하고 있으며, 앞으로 더 많은 컴포넌트에서 사용할 예정입니다.
+
+가능하면 기본 컴포넌트 수준에서 CSS 변수를 할당할 것입니다(예: 내비게이션 바와 그 하위 컴포넌트의 경우 `.navbar`). 이렇게 하면 사용자 정의할 위치와 방법에 대한 추측이 줄어들고 향후 업데이트 시 팀에서 쉽게 수정할 수 있습니다.
+
+## 접두사
+
+대부분의 CSS 변수는 자체 코드베이스와의 충돌을 피하기 위해 접두사를 사용합니다. 이 접두사는 모든 CSS 변수에 필수인 `--`에 추가됩니다.
+
+접두사는 `$prefix` Sass 변수를 통해 사용자 정의할 수 있습니다. 기본적으로 `bs-`로 설정되어 있습니다(뒤에 오는 대시를 참고하세요).
+
+## 예시
+
+CSS 변수는 Sass 변수와 동일한 유연성을 제공하지만 브라우저에 제공되기 전에 컴파일할 필요는 없습니다. 예를 들어, 여기에서는 페이지의 글꼴이나 링크의 스타일을 CSS 변수로 재설정하고 있습니다.
+
+```css
+body {
+  font: 1rem/1.5 var(--bs-font-sans-serif);
+}
+a {
+  color: var(--bs-blue);
+}
+```
+
+## 초점 변수
+
+{{< added-in "5.3.0" >}}
+
+Bootstrap은 특정 컴포넌트 및 요소에 선택적으로 추가할 수 있는 Sass 및 CSS 변수의 조합을 사용하여 사용자 정의 `:focus` 스타일을 제공합니다. 아직 모든 `:focus` 스타일을 전역적으로 재정의하지는 않습니다.
+
+Sass에서는 컴파일하기 전에 사용자 정의할 수 있는 기본값을 설정합니다.
+
+{{< scss-docs name="focus-ring-variables" file="scss/_variables.scss" >}}
+
+그런 다음 이러한 변수는 `:root` 수준 CSS 변수에 재할당되며, `x` 및 `y` 오프셋 옵션(기본값은 `0`)을 포함하여 실시간으로 사용자 정의할 수 있습니다.
+
+{{< scss-docs name="root-focus-variables" file="scss/_root.scss" >}}
+
+## 그리드 중단점
+
+그리드 중단점은 CSS 변수에 포함되어 있지만(`xs` 제외) **CSS 변수는 미디어 쿼리에서 작동하지 않습니다**. 이것은 변수에 대한 CSS 사양의 설계에 의한 것이지만 `env()` 변수에 대한 지원에 따라 향후 변경될 수 있습니다. 몇 가지 유용한 링크는 [이 Stack Overflow 답변](https://stackoverflow.com/a/47212942)을 확인하세요. 그동안 다른 CSS 상황과 JavaScript에서 이러한 변수를 사용할 수 있습니다.

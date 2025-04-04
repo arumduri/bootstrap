@@ -1,22 +1,21 @@
 ---
 layout: docs
-title: 스택
-title_en: Stacks
-description: 컴포넌트 레이아웃을 그 어느 때보다 빠르고 쉽게 만들기 위해 flexbox 유틸리티를 기반으로 하는 약칭 도우미입니다.
+title: Stacks
+description: Shorthand helpers that build on top of our flexbox utilities to make component layout faster and easier than ever.
 group: helpers
 toc: true
 added: "5.1"
 ---
 
-스택은 Bootstrap에서 레이아웃을 빠르고 쉽게 생성하기 위해 여러 flexbox 속성을 적용하는 지름길을 제공합니다. 개념 및 구현에 대한 모든 크레딧은 오픈 소스 [Pylon Project](https://almonk.github.io/pylon/)에 있습니다.
+Stacks offer a shortcut for applying a number of flexbox properties to quickly and easily create layouts in Bootstrap. All credit for the concept and implementation goes to the open source [Pylon project](https://almonk.github.io/pylon/).
 
 {{< callout warning >}}
-**주의!** 최근 Safari에 flexbox가 있는 갭 유틸리티에 대한 지원이 추가되었으므로 원하는 브라우저 지원을 확인하는 것이 좋습니다. 그리드 레이아웃에는 문제가 없어야 합니다. [자세히 알아보세요](https://caniuse.com/flexbox-gap).
+**Heads up!** Support for gap utilities with flexbox was recently added to Safari, so consider verifying your intended browser support. Grid layout should have no issues. [Read more](https://caniuse.com/flexbox-gap).
 {{< /callout >}}
 
-## 세로
+## Vertical
 
-세로 레이아웃을 만들려면 `.vstack`을 사용하세요. 스택 항목은 기본적으로 full-width입니다. 항목 사이에 공간을 추가하려면 `.gap-*` 유틸리티를 사용하세요.
+Use `.vstack` to create vertical layouts. Stacked items are full-width by default. Use `.gap-*` utilities to add space between items.
 
 {{< example class="bd-example-flex" >}}
 <div class="vstack gap-3">
@@ -26,9 +25,9 @@ added: "5.1"
 </div>
 {{< /example >}}
 
-## 가로
+## Horizontal
 
-수평 레이아웃에는 `.hstack`을 사용하세요. 중첩된 항목은 기본적으로 수직 중심으로 배치되며 필요한 너비만 차지합니다. 항목 사이에 공간을 추가하려면 `.gap-*` 유틸리티를 사용하세요.
+Use `.hstack` for horizontal layouts. Stacked items are vertically centered by default and only take up their necessary width. Use `.gap-*` utilities to add space between items.
 
 {{< example class="bd-example-flex" >}}
 <div class="hstack gap-3">
@@ -38,7 +37,7 @@ added: "5.1"
 </div>
 {{< /example >}}
 
-간격을 벌리기 위해 `.ms-auto`와 같은 수평 여백 유틸리티를 사용할 수 있습니다:
+Using horizontal margin utilities like `.ms-auto` as spacers:
 
 {{< example class="bd-example-flex" >}}
 <div class="hstack gap-3">
@@ -48,7 +47,7 @@ added: "5.1"
 </div>
 {{< /example >}}
 
-[세로줄]({{< docsref "/helpers/vertical-rule" >}})도 추가할 수 있습니다:
+And with [vertical rules]({{< docsref "/helpers/vertical-rule" >}}):
 
 {{< example class="bd-example-flex" >}}
 <div class="hstack gap-3">
@@ -59,9 +58,9 @@ added: "5.1"
 </div>
 {{< /example >}}
 
-## 예제
+## Examples
 
-`.vstack` 버튼과 다른 요소를 중첩시킬 수 있습니다:
+Use `.vstack` to stack buttons and other elements:
 
 {{< example >}}
 <div class="vstack gap-2 col-md-5 mx-auto">
@@ -70,7 +69,7 @@ added: "5.1"
 </div>
 {{< /example >}}
 
-`.hstack`을 사용하여 인라인 폼을 만들 수 있습니다:
+Create an inline form with `.hstack`:
 
 {{< example >}}
 <div class="hstack gap-3">

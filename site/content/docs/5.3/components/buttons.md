@@ -1,29 +1,28 @@
 ---
 layout: docs
-title: 버튼
-title_en: Buttons
-description: 다양한 크기, 상태 등을 지원하는 폼, 대화상자 등의 작업에 Bootstrap의 사용자 지정 버튼 스타일을 사용하세요.
+title: Buttons
+description: Use Bootstrap's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
 group: components
 toc: true
 ---
 
-## 기본 클래스
+## Base class
 
-Bootstrap에는 패딩 및 콘텐츠 정렬과 같은 기본 스타일을 설정하는 기본 `.btn` 클래스가 있습니다. 기본적으로 `.btn` 컨트롤에는 투명한 테두리와 배경색이 있으며, 명시적인 포커스 및 호버 스타일이 없습니다.
+Bootstrap has a base `.btn` class that sets up basic styles such as padding and content alignment. By default, `.btn` controls have a transparent border and background color, and lack any explicit focus and hover styles.
 
 {{< example >}}
 <button type="button" class="btn">Base class</button>
 {{< /example >}}
 
-`.btn` 클래스는 버튼 변형과 함께 사용하거나 사용자 정의 스타일의 기초로 사용하기 위한 것입니다.
+The `.btn` class is intended to be used in conjunction with our button variants, or to serve as a basis for your own custom styles.
 
 {{< callout warning >}}
-`.btn` 클래스를 단독으로 사용하는 경우 최소한 명시적인 `:focus` 및/또는 `:focus-visible` 스타일을 정의하는 것을 잊지 마세요.
+If you are using the `.btn` class on its own, remember to at least define some explicit `:focus` and/or `:focus-visible` styles.
 {{< /callout >}}
 
-## 변수
+## Variants
 
-Bootstrap에는 각각 고유한 의미적 목적을 가진 여러 가지 버튼 변형이 포함되어 있으며, 더 많은 제어를 위해 몇 가지 추가 기능이 추가되었습니다.
+Bootstrap includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -39,15 +38,15 @@ Bootstrap에는 각각 고유한 의미적 목적을 가진 여러 가지 버튼
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## 텍스트 줄바꿈 비활성화
+## Disable text wrapping
 
-버튼의 텍스트를 감싸고 싶지 않다면 `.text-nowrap` 클래스를 버튼에 추가할 수 있습니다. Sass로 `$btn-white-space: nowrap`를 설정하여 버튼별로 텍스트를 감싸지 않도록 할 수 있습니다.
+If you don't want the button text to wrap, you can add the `.text-nowrap` class to the button. In Sass, you can set `$btn-white-space: nowrap` to disable text wrapping for each button.
 
-## 버튼 태그
+## Button tags
 
-`.btn` 클래스는 `<button>` 요소로 사용되도록 설계되어 있습니다. 그러나 이런 클래스를 `<a>` 혹은 `<input>` 요소로 사용할 수도 있습니다.(브라우저에 따라 약간 다른 렌더링이 적용되는 때도 있습니다)
+The `.btn` classes are designed to be used with the `<button>` element. However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
 
-현재 페이지 내의 새로운 페이지나 섹션에 대한 링크가 아닌, 페이지 내 기능(콘텐츠 접기 등)의 트리거로 사용하는 `<a>` 요소에 버튼 클래스를 사용할 경우, 이런 링크에는 `role="button"` 이라는 역할을 주어, 스크린 리더 등의 지원 기술로 적합하게 전달해야 합니다.
+When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 
 {{< example >}}
 <a class="btn btn-primary" href="#" role="button">Link</a>
@@ -57,9 +56,9 @@ Bootstrap에는 각각 고유한 의미적 목적을 가진 여러 가지 버튼
 <input class="btn btn-primary" type="reset" value="Reset">
 {{< /example >}}
 
-## 버튼 테두리
+## Outline buttons
 
-버튼은 필요한데 무거운 배경색이 필요하지 않으신가요? 기본 변경 클래스를 `.btn-outline-*`으로 변경해서 버튼에 있는 배경색을 지울 수 있습니다.
+In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the `.btn-outline-*` ones to remove all background images and colors on any button.
 
 {{< example >}}
 {{< buttons.inline >}}
@@ -70,12 +69,12 @@ Bootstrap에는 각각 고유한 의미적 목적을 가진 여러 가지 버튼
 {{< /example >}}
 
 {{< callout info >}}
-버튼 스타일 안에는 비교적 밝은 전경색 사용하고 있어 충분한 차이를 나타내기 위해서는 어두운 배경에서만 사용할 필요가 있습니다.
+Some of the button styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
 {{< /callout >}}
 
-## 크기
+## Sizes
 
-버튼의 크기를 `.btn-lg` 나 `.btn-sm`을 적용해 변경할 수 있습니다.
+Fancy larger or smaller buttons? Add `.btn-lg` or `.btn-sm` for additional sizes.
 
 {{< example >}}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
@@ -96,9 +95,9 @@ You can even roll your own custom sizing with CSS variables:
 </button>
 {{< /example >}}
 
-## 비활성화 상태
+## Disabled state
 
-버튼을 비활성화시키기 위해 `<button>` 요소에 `disabled` 속성을 추가합니다. 비활성화된 버튼은 `pointer-events: none`을 가집니다. 아무것도 적용되지 않고 호버나 활성화된 상태로 눌리는 것을 막습니다.
+Make buttons look inactive by adding the `disabled` boolean attribute to any `<button>` element. Disabled buttons have `pointer-events: none` applied to, preventing hover and active states from triggering.
 
 {{< example >}}
 <button type="button" class="btn btn-primary" disabled>Primary button</button>
@@ -107,30 +106,30 @@ You can even roll your own custom sizing with CSS variables:
 <button type="button" class="btn btn-outline-secondary" disabled>Button</button>
 {{< /example >}}
 
-`<a>` 요소에 대해서 버튼을 비활성화하는 경우는 조금 다릅니다.
+Disabled buttons using the `<a>` element behave a bit different:
 
-- `<a>`는 `disabled` 속성을 지원하지 않음으로 시각적으로 비활성화처럼 보이게 하기 위해 `.disabled` 클래스를 추가해야 합니다.
-- 앵커 버튼의 모든 `pointer-events`를 비활성화시키기 위해 장래적으로 사용하기 쉬운 스타일이 포함되어 있습니다.
-- `<a>`를 사용하는 비활성화 버튼은 보조 기술에 대한 요소의 상태를 나타내는 `aria-disabled="true"` 속성이 포함되어야 합니다.
-- `<a>`를 사용하는 비활성화 버튼은 `href` 속성을 포함하면 *안됩니다*.
+- `<a>`s don't support the `disabled` attribute, so you must add the `.disabled` class to make it visually appear disabled.
+- Some future-friendly styles are included to disable all `pointer-events` on anchor buttons.
+- Disabled buttons using `<a>` should include the `aria-disabled="true"` attribute to indicate the state of the element to assistive technologies.
+- Disabled buttons using `<a>` *should not* include the `href` attribute.
 
 {{< example >}}
 <a class="btn btn-primary disabled" role="button" aria-disabled="true">Primary link</a>
 <a class="btn btn-secondary disabled" role="button" aria-disabled="true">Link</a>
 {{< /example >}}
 
-### 링크 기능 주의사항
+### Link functionality caveat
 
-비활성화된 링크에서 `href` 속성을 유지해야 하는 경우를 다루기 위해 `.disabled` 클래스는 `pointer-events: none`을 사용하여 `<a>`의 링크 기능을 비활성화하려고 시도합니다. 이 CSS 속성은 아직 HTML에서 표준화되지 않았지만 모든 최신 브라우저에서 지원합니다. 또한 `pointer-events: none`을 지원하는 브라우저에서도 키보드 탐색은 영향을 받지 않습니다. 따라서 확실하게 하려면 `aria-disabled="true"` 외에도 이러한 링크에 `tabindex="-1"` 속성을 포함하여 키보드 포커스를 받지 않도록 하고 사용자 지정 JavaScript를 사용하여 해당 기능을 완전히 비활성화해야 합니다.
+To cover cases where you have to keep the `href` attribute on a disabled link, the `.disabled` class uses `pointer-events: none` to try to disable the link functionality of `<a>`s. Note that this CSS property is not yet standardized for HTML, but all modern browsers support it. In addition, even in browsers that do support `pointer-events: none`, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, in addition to `aria-disabled="true"`, also include a `tabindex="-1"` attribute on these links to prevent them from receiving keyboard focus, and use custom JavaScript to disable their functionality altogether.
 
 {{< example >}}
 <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
 <a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
 {{< /example >}}
 
-## 버튼 블록
+## Block buttons
 
-Display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에 걸친 반응형 "블록 버튼"을 만듭니다. 버튼 고유의 클래스 대신 유틸리티를 사용하여, 간격, 정렬, 또는 반응형 동작을 훨씬 크게 제어할 수 있습니다.
+Create responsive stacks of full-width, "block buttons" like those in Bootstrap 4 with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
 {{< example >}}
 <div class="d-grid gap-2">
@@ -139,7 +138,7 @@ Display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 </div>
 {{< /example >}}
 
-여기서는 `.d-md-block`이 `.d-grid` 클래스로 대체되어 `gap-2` 유틸리티를 무효화 할 때까지, 버튼을 수직으로 쌓은 상태로 시작하는 반응형 변형을 만들고 있습니다. 브라우저 크기를 조절해 가며 차이를 확인해 보세요.
+Here we create a responsive variation, starting with vertically stacked buttons until the `md` breakpoint, where `.d-md-block` replaces the `.d-grid` class, thus nullifying the `gap-2` utility. Resize your browser to see them change.
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-block">
@@ -148,7 +147,7 @@ Display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 </div>
 {{< /example >}}
 
-블록 버튼의 가로 폭은, 그리드의 컬럼 가로 폭 클래스로 조정할 수 있습니다. 예를 들어, 50%의 가로 폭의 "블록 버튼"에는 `.col-6`을 사용합니다. 수평으로 중앙에 배치하고 싶을 때는 `.mx-auto`를 사용합니다.
+You can adjust the width of your block buttons with grid column width classes. For example, for a half-width "block button", use `.col-6`. Center it horizontally with `.mx-auto`, too.
 
 {{< example >}}
 <div class="d-grid gap-2 col-6 mx-auto">
@@ -157,7 +156,7 @@ Display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 </div>
 {{< /example >}}
 
-추가적인 유틸리티를 사용하여, 수평 방향 버튼의 배치를 조정할 수 있습니다. 여기서는, 이전 반응형의 예시를 참고해 버튼이 더 이상 쌓이지 않을 때, 버튼의 오른쪽 정렬을 위해 flex 유틸리티와 margin 유틸리티를 추가했습니다.
+Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they're no longer stacked.
 
 {{< example >}}
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
@@ -166,17 +165,17 @@ Display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 </div>
 {{< /example >}}
 
-## 버튼 플러그인
+## Button plugin
 
-버튼 플러그인에서는, 간단한 on/off 토글 버튼을 생성할 수 있습니다.
+The button plugin allows you to create simple on/off toggle buttons.
 
 {{< callout info >}}
-시각적으로, 이 토글 버튼은 [체크박스 토글 버트]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}})과 같습니다. 하지만, 이런 것들은 지원 기술에 따라 다르게 전달됩니다. 체크 박스는 스크린 리더에 의해, "checked"/"not checked"로 안내되며(보이는 것과 상관없이 기본적으로는 체크 박스이기 때문에), 토글 버튼은 "button"/"button pressed"로 안내됩니다. 이 두 가지 접근방식 중 어느 쪽을 선택할지는 작성하는 토글의 타입과 체크 박스 또는 실제 버튼으로 안내 되었을 때 토글이 사용자에게 의미가 있는지 여부에 따라 다릅니다.
+Visually, these toggle buttons are identical to the [checkbox toggle buttons]({{< docsref "/forms/checks-radios#checkbox-toggle-buttons" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas these toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
 {{< /callout >}}
 
-### 상태 토글
+### Toggle states
 
-버튼의 `active` 상태를 토글하기 위해, `data-bs-toggle="button"`을 추가합니다. 버튼을 미리 토글하고 있는 경우, 지원 기술에 적절하게 전달될 수 있도록 `.active` 클래스와 `aria-pressed="true"`를 수동으로 버튼에 추가해야 합니다.
+Add `data-bs-toggle="button"` to toggle a button's `active` state. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
 
 {{< example >}}
 <p class="d-inline-flex gap-1">
@@ -204,24 +203,24 @@ Display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 </p>
 {{< /example >}}
 
-### 메소드
+### Methods
 
-버튼 인스턴스는, 예를 들어 버튼의 생성자를 사용해 작성할 수 있습니다.
+You can create a button instance with the button constructor, for example:
 
 ```js
 const bsButton = new bootstrap.Button('#myButton')
 ```
 
 {{< bs-table "table" >}}
-| 메소드 | 설명 |
+| Method | Description |
 | --- | --- |
-| `dispose` | 요소의 버튼을 삭제합니다. (DOM 요소에 저장된 데이터를 제거합니다.) |
-| `getInstance` | 정적 메소드를 사용하면 DOM 요소와 연결된 버튼 인스턴스를 가져올 수 있으며, 다음과 같이 사용할 수 있습니다: `bootstrap.Button.getInstance(element)`. |
-| `getOrCreateInstance` | DOM 요소와 연관된 버튼 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 생성하는 정적 메소드입니다. 다음과 같이 사용할 수 있습니다: `bootstrap.Button.getOrCreateInstance(element)`. |
-| `toggle` | 푸시 상태를 전환합니다. 버튼이 활성화된 것처럼 보이도록 설정합니다. |
+| `dispose` | Destroys an element's button. (Removes stored data on the DOM element) |
+| `getInstance` | Static method which allows you to get the button instance associated with a DOM element, you can use it like this: `bootstrap.Button.getInstance(element)`. |
+| `getOrCreateInstance` | Static method which returns a button instance associated with a DOM element or creates a new one in case it wasn't initialized. You can use it like this: `bootstrap.Button.getOrCreateInstance(element)`. |
+| `toggle` | Toggles push state. Gives the button the appearance that it has been activated. |
 {{< /bs-table >}}
 
-예를 들어, 모든 버튼을 토글하려면:
+For example, to toggle all buttons
 
 ```js
 document.querySelectorAll('.btn').forEach(buttonElement => {
@@ -232,17 +231,17 @@ document.querySelectorAll('.btn').forEach(buttonElement => {
 
 ## CSS
 
-### 변수
+### Variables
 
 {{< added-in "5.2.0" >}}
 
-Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 버튼은 향상된 실시간 사용자 지정을 위해 `.btn`에서 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
+As part of Bootstrap's evolving CSS variables approach, buttons now use local CSS variables on `.btn` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="btn-css-vars" file="scss/_buttons.scss" >}}
 
-각 `.btn-*` 수정자 클래스는 `button-variant()`, `button-variant()`, `button-outline-variant()`, `button-size()` 믹스인을 사용하여 추가 CSS 규칙을 최소화하기 위해 적절한 CSS 변수를 업데이트합니다.
+Each `.btn-*` modifier class updates the appropriate CSS variables to minimize additional CSS rules with our `button-variant()`, `button-outline-variant()`, and `button-size()` mixins.
 
-다음은 문서에 고유한 버튼에서와 같이 자체 CSS 및 Sass 변수를 혼합하여 Bootstrap의 CSS 변수를 재할당하여 사용자 정의 `.btn-*` 수정자 클래스를 구축하는 예제입니다.
+Here's an example of building a custom `.btn-*` modifier class as we do for the buttons unique to our docs by reassigning Bootstrap's CSS variables with a mixture of our own CSS and Sass variables.
 
 <div class="bd-example">
   <button type="button" class="btn btn-bd-primary">Custom button</button>
@@ -250,13 +249,13 @@ Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 버튼
 
 {{< scss-docs name="btn-css-vars-example" file="site/assets/scss/_buttons.scss" >}}
 
-### Sass 변수
+### Sass variables
 
 {{< scss-docs name="btn-variables" file="scss/_variables.scss" >}}
 
-### Sass 믹스인
+### Sass mixins
 
-버튼에는 3개의 믹스인이 있습니다: 버튼과 버튼 아웃라인 변수 믹스인(양쪽 다 `$theme-colors`를 기반으로 사용), 그리고 버튼 크기 믹스인.
+There are three mixins for buttons: button and button outline variant mixins (both based on `$theme-colors`), plus a button size mixin.
 
 {{< scss-docs name="btn-variant-mixin" file="scss/mixins/_buttons.scss" >}}
 
@@ -264,8 +263,8 @@ Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 버튼
 
 {{< scss-docs name="btn-size-mixin" file="scss/mixins/_buttons.scss" >}}
 
-### Sass 루프
+### Sass loops
 
-버튼 종류(일반 버튼과 아웃라인 버튼)는 각각의 믹스인과 `$theme-colors`맵을 사용하여 `scss/_buttons.scss`에 제어자 클래스를 생성합니다.
+Button variants (for regular and outline buttons) use their respective mixins with our `$theme-colors` map to generate the modifier classes in `scss/_buttons.scss`.
 
 {{< scss-docs name="btn-variant-loops" file="scss/_buttons.scss" >}}

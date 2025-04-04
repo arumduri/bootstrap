@@ -1,22 +1,21 @@
 ---
 layout: docs
-title: 체크박스와 라디오버튼
-title_en: Checks and radios
-description: 완전히 새로워 진 체크 컴포넌트를 사용해 크로스 브라우저와 크로스 기기로 일관된 체크 박스와 라디오 버튼을 만들 수 있습니다.
+title: Checks and radios
+description: Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.
 group: forms
 aliases: "/docs/5.3/forms/checks/"
 toc: true
 ---
 
-## 접근
+## Approach
 
-브라우저의 기본 체크 박스와 라디오 버튼은 `.form-check`의 도움을 받아 대체할 수 있습니다. 이는 두 입력 유형을 위한 클래스로, HTML 요소의 레이아웃과 동작을 개선하여 보다 높은 맞춤성과 크로스 브라우저의 일관성을 제공합니다. 체크 박스는 목록 중 하나 또는 여러 개를 선택하고, 라디오 버튼은 여러 목록 중 하나를 선택하는 것입니다.
+Browser default checkboxes and radios are replaced with the help of `.form-check`, a series of classes for both input types that improves the layout and behavior of their HTML elements, that provide greater customization and cross browser consistency. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
 
-구조적으로 `<input>`과 `<label>`은 형제 요소이며, `<label>` 안에 `<input>`이 들어 있는 것과는 다릅니다. 이것은 `<input>` 이라고 `<label>`을 연관짓기 위해 `id`와 `for`속성을 지정해야 하기 때문에 약간 장황해 집니다. 또한 `:checked` 나 `:disabled` 등, 모든 `<input>` 상태에는 형제 셀렉터(`~`)를 사용합니다. `.form-check-label` 클래스와 함께 사용함으로써 `<input>` 상태에 따라 각 항목의 텍스트를 쉽게 표시할 수 있습니다.
+Structurally, our `<input>`s and `<label>`s are sibling elements as opposed to an `<input>` within a `<label>`. This is slightly more verbose as you must specify `id` and `for` attributes to relate the `<input>` and `<label>`. We use the sibling selector (`~`) for all our `<input>` states, like `:checked` or `:disabled`. When combined with the `.form-check-label` class, we can easily style the text for each item based on the `<input>`'s state.
 
-체크 박스에서는 Bootstrap 사용자 정의 아이콘을 사용하여 선택되었거나 선택전 상태를 표시하고 있습니다.
+Our checks use custom Bootstrap icons to indicate checked or indeterminate states.
 
-## 체크박스 
+## Checks
 
 {{< example >}}
 <div class="form-check">
@@ -33,9 +32,9 @@ toc: true
 </div>
 {{< /example >}}
 
-### 불확정
+### Indeterminate
 
-JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용할 수 있습니다 (이것을 지정하기 위해 이용 가능한 HTML 속성은 없습니다).
+Checkboxes can utilize the `:indeterminate` pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="form-check">
@@ -46,9 +45,9 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 </div>
 {{< /example >}}
 
-### 비활성화
+### Disabled
 
-`disabled` 속성을 추가하면 `<label>`과 함께 관련된 입력 폼이 흐릿한 비활성화상태로 표시됩니다.
+Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
 
 {{< example class="bd-example-indeterminate" stackblitz_add_js="true" >}}
 <div class="form-check">
@@ -71,7 +70,7 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 </div>
 {{< /example >}}
 
-## 라디오버튼
+## Radios
 
 {{< example >}}
 <div class="form-check">
@@ -88,9 +87,9 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 </div>
 {{< /example >}}
 
-### 비활성화
+### Disabled
 
-`disabled` 속성을 추가하면 `<label>`과 함께 관련된 입력 폼이 흐릿한 비활성화상태로 표시됩니다.
+Add the `disabled` attribute and the associated `<label>`s are automatically styled to match with a lighter color to help indicate the input's state.
 
 {{< example >}}
 <div class="form-check">
@@ -107,9 +106,9 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 </div>
 {{< /example >}}
 
-## 스위치
+## Switches
 
-사용자 정의 체크 박스의 마크업을 가지고 있는 스위치는 토글 스위치를 렌더링하기 위해 `.form-switch` 클래스를 사용합니다. 이 역할을 컨트롤의 특성을 지원하는 보조 기술에 보다 정확하게 전달하려면 `role="switch"`를 사용하는 것이 좋습니다. 이전 보조 기술에서는 일반적인 체크박스로으로 간단히 폴백됩니다. 스위치는 `disabled` 속성도 지원하고 있습니다.
+A switch has the markup of a custom checkbox but uses the `.form-switch` class to render a toggle switch. Consider using `role="switch"` to more accurately convey the nature of the control to assistive technologies that support this role. In older assistive technologies, it will simply be announced as a regular checkbox as a fallback. Switches also support the `disabled` attribute.
 
 {{< example >}}
 <div class="form-check form-switch">
@@ -130,9 +129,9 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 </div>
 {{< /example >}}
 
-## 기본값 (중첩됨)
+## Default (stacked)
 
-기본적으로 직계 형제인 체크 박스나 라디오 버튼은 `.form-check`로 수직으로 쌓여 적절한 간격으로 배치됩니다.
+By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with `.form-check`.
 
 {{< example >}}
 <div class="form-check">
@@ -170,9 +169,9 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 </div>
 {{< /example >}}
 
-## 인라인
+## Inline
 
-`.form-check`에 `.form-check-inline` 클래스를 추가해 체크 박스나 라디오 버튼을 같은 수평 방향에 놓아 그룹화할 수 있습니다.
+Group checkboxes or radios on the same horizontal row by adding `.form-check-inline` to any `.form-check`.
 
 {{< example >}}
 <div class="form-check form-check-inline">
@@ -204,9 +203,9 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 </div>
 {{< /example >}}
 
-## 반전
+## Reverse
 
-체크박스, 라디오, 스위치를 `.form-check-reverse` 수정자 클래스를 사용해서 반전시킬 수 있습니다.
+Put your checkboxes, radios, and switches on the opposite side with the `.form-check-reverse` modifier class.
 
 {{< example >}}
 <div class="form-check form-check-reverse">
@@ -228,9 +227,9 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 </div>
 {{< /example >}}
 
-## 라벨 없음
+## Without labels
 
-라벨 텍스트가 없는 체크 박스나 라디오 버튼을 사용하고 싶을 때에는 `.form-check`를 생략합니다. 지원 기술을 위해 어떤 형태로든 접근성에 맞는 이름을 제공해야 하는 것을 잊지 마세요.(예를 들어, `aria-label`을 사용 한다든지 등). 자세한 내용은 [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}})을 참조해 주세요.
+Omit the wrapping `.form-check` for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using `aria-label`). See the [forms overview accessibility]({{< docsref "/forms/overview#accessibility" >}}) section for details.
 
 {{< example >}}
 <div>
@@ -242,11 +241,11 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 </div>
 {{< /example >}}
 
-## 버튼 토글
+## Toggle buttons
 
-버튼과 같은 체크 박스나 라디오 버튼을 작성하기 위해서는 `<label>` 요소에 `.form-check-label`이 아닌 `.btn` 스타일을 사용합니다. 이러한 토글 버튼은 필요에 따라 다시 [button group]({{< docsref "/components/button-group" >}})으로 그룹화할 수 있습니다.
+Create button-like checkboxes and radio buttons by using `.btn` styles rather than `.form-check-label` on the `<label>` elements. These toggle buttons can further be grouped in a [button group]({{< docsref "/components/button-group" >}}) if needed.
 
-### 체크박스 토글 버튼
+### Checkbox toggle buttons
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
@@ -271,10 +270,10 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 {{< /example >}}
 
 {{< callout info >}}
-시각적으로 이러한 체크 박스 토글버튼은 [button plugin toggle buttons]({{< docsref "/components/buttons#button-plugin" >}})과 같습니다. 체크 박스의 토글 버튼은 스크린 리더에서는 "checked"/"not checked"로 표시되는데(외형은 체크 박스이기 때문에), 버튼의 토글 버튼은 "button"/"button pressed"로 표시됩니다. 이러한 두 가지 접근법 중 어느 쪽을 선택할지는 만들고자 하는 토글 유형과 그 토글이 체크 박스일 때와 실제 버튼일때 중, 어느 쪽이 사용자에게 더 의미가 있는지에 따라 달라집니다.
+Visually, these checkbox toggle buttons are identical to the [button plugin toggle buttons]({{< docsref "/components/buttons#button-plugin" >}}). However, they are conveyed differently by assistive technologies: the checkbox toggles will be announced by screen readers as "checked"/"not checked" (since, despite their appearance, they are fundamentally still checkboxes), whereas the button plugin toggle buttons will be announced as "button"/"button pressed". The choice between these two approaches will depend on the type of toggle you are creating, and whether or not the toggle will make sense to users when announced as a checkbox or as an actual button.
 {{< /callout >}}
 
-### 라디오버튼 토글 버튼
+### Radio toggle buttons
 
 {{< example >}}
 <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
@@ -304,9 +303,9 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 <label class="btn" for="option8">Radio</label>
 {{< /example >}}
 
-### 테두리 스타일
+### Outlined styles
 
-다양한 윤곽선 스타일과 같은 `.btn`의 다양한 변형이 지원됩니다.
+Different variants of `.btn`, such as the various outlined styles, are supported.
 
 {{< example >}}
 <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
@@ -324,7 +323,7 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 
 ## CSS
 
-### Sass 변수
+### Sass variables
 
 Variables for checks:
 

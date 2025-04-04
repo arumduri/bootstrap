@@ -1,41 +1,40 @@
 ---
 layout: docs
-title: 내비게이션 바
-title_en: Navbar
-description: Bootstrap의 강력하고 반응형적인 내비게이션 헤더, 내비게이션 바의 문서와 예. 콜랩스(collapse) 플러그인 지원을 포함한 브랜딩, 내비게이션 등의 지원이 포함되어 있습니다.
+title: Navbar
+description: Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
 group: components
 toc: true
 ---
 
-## 작동 원리
+## How it works
 
-내비게이션 바를 시작하기 전에 알아야 할 것들을 설명하겠습니다:
+Here's what you need to know before getting started with the navbar:
 
-- 내비게이션 바는 `.navbar`를 `.navbar-expand{-sm|-md|-lg|-xl|-xxl}`로 감싸야 하며, [색상 스키마](#색상-스키마) 클래스가 필요합니다.
-- 내비게이션과 그 콘텐츠는 기본적으로 유동적입니다. [컨테이너](#컨테이너)를 변경하여 다양한 방법으로 가로폭을 제한할 수 있습니다.
-- 내비게이션에서 배치 및 간격 제어는 [간격]({{< docsref "/utilities/spacing" >}}) 및 [플렉스]({{< docsref "/utilities/flex" >}}) 유틸리티 클래스를 사용합니다.
-- 내비게이션은 기본적으로 반응형이지만 간단히 변경할 수 있습니다. 반응형 동작은 Collapse JavaScript 플러그인에 의존합니다.
-- 접근성을 확보하려면 `<nav>` 요소를 사용하거나, 혹은 `<div>`와 같이 보다 범용적인 요소를 사용하는 경우에는 `role="navigation"`을 추가하여 스크린 리더 사용자를 위해 랜드마크가 되는 곳임을 명시적으로 알려주어야 합니다.
-- 현재 페이지에는 `aria-current="page"`를, 세트 안에서의 현재 아이템에는 `aria-current="true"`를 사용하여, 현재 아이템을 표시합니다.
-- **v5.2.0 업데이트:** 탐색 모음은 `.navbar` 기본 클래스로 범위가 지정된 CSS 변수를 사용하여 테마를 지정할 수 있습니다. `.navbar-light`는 더 이상 사용되지 않으며 추가 스타일을 추가하는 대신 CSS 변수를 재정의하도록 `.navbar-dark`가 재작성되었습니다.
+- Navbars require a wrapping `.navbar` with `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` for responsive collapsing and [color scheme](#color-schemes) classes.
+- Navbars and their contents are fluid by default. Change the [container](#containers) to limit their horizontal width in different ways.
+- Use our [spacing]({{< docsref "/utilities/spacing" >}}) and [flex]({{< docsref "/utilities/flex" >}}) utility classes for controlling spacing and alignment within navbars.
+- Navbars are responsive by default, but you can easily modify them to change that. Responsive behavior depends on our Collapse JavaScript plugin.
+- Ensure accessibility by using a `<nav>` element or, if using a more generic element such as a `<div>`, add a `role="navigation"` to every navbar to explicitly identify it as a landmark region for users of assistive technologies.
+- Indicate the current item by using `aria-current="page"` for the current page or `aria-current="true"` for the current item in a set.
+- **New in v5.2.0:** Navbars can be themed with CSS variables that are scoped to the `.navbar` base class. `.navbar-light` has been deprecated and `.navbar-dark` has been rewritten to override CSS variables instead of adding additional styles.
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## 지원 콘텐츠
+## Supported content
 
-내비게이션에는 몇 가지의 서브 컴포넌트의 지원이 포함되어 있습니다. 필요에 따라, 아래에서 선택해 주세요:
+Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:
 
-- `.navbar-brand`으로 회사명이나 제품명, 프로젝틈명 등.
-- `.navbar-nav`으로 full-height와 보다 가벼운 네비게이션(드롭다운을 위한 지원 포함)을 실현.
-- `.navbar-toggler`은 콜랩스 플러그인과 다른 [navigation toggling](#반응형-비헤이비어)행동에 사용.
-- 모든 폼 컨트롤과 액션을 위한 flex와 spacing 유틸리티.
-- 수직 방향으로 센터링된 문자열을 추가하기 위한 `.navbar-text`.
-- `.collapse.navbar-collapse`으로 부모 중단점에 따라 내비게이션 바의 콘텐츠를 그룹화하거나 감출수 있음.
-- 옵션으로 `.navbar-scroll`를 추가해 `max-height`와 [확장된 내비게이션 바 콘텐츠 스크롤](#스크롤)이 가능.
+- `.navbar-brand` for your company, product, or project name.
+- `.navbar-nav` for a full-height and lightweight navigation (including support for dropdowns).
+- `.navbar-toggler` for use with our collapse plugin and other [navigation toggling](#responsive-behaviors) behaviors.
+- Flex and spacing utilities for any form controls and actions.
+- `.navbar-text` for adding vertically centered strings of text.
+- `.collapse.navbar-collapse` for grouping and hiding navbar contents by a parent breakpoint.
+- Add an optional `.navbar-scroll` to set a `max-height` and [scroll expanded navbar content](#scrolling).
 
-여기서는 `lg` (large) 중단점에서 자동으로 접히는 라이트 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.
+Here's an example of all the sub-components included in a responsive light-themed navbar that automatically collapses at the `lg` (large) breakpoint.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -76,15 +75,15 @@ toc: true
 </nav>
 {{< /example >}}
 
-이 예시는 [배경색]({{< docsref "/utilities/background" >}}) (`bg-body-tertiary`) 및 [간격]({{< docsref "/utilities/spacing" >}}) (`me-auto`, `mb-2`, `mb-lg-0`, `me-2`) 유틸리티 클래스를 사용합니다.
+This example uses [background]({{< docsref "/utilities/background" >}}) (`bg-body-tertiary`) and [spacing]({{< docsref "/utilities/spacing" >}}) (`me-auto`, `mb-2`, `mb-lg-0`, `me-2`) utility classes.
 
-### 브랜드
+### Brand
 
-`.navbar-brand`는 대부분의 요소에 적용이 가능하지만, 요소에 따라서 유틸리티 클래스나 사용자 정의 스타일을 필요로 하는 경우가 있기 때문에 앵커가 최적입니다.
+The `.navbar-brand` can be applied to most elements, but an anchor works best, as some elements might require utility classes or custom styles.
 
-#### 텍스트
+#### Text
 
-`.navbar-brand` 클래스를 요소 내의 텍스트에 추가합니다.
+Add your text within an element with the `.navbar-brand` class.
 
 {{< example >}}
 <!-- As a link -->
@@ -102,9 +101,9 @@ toc: true
 </nav>
 {{< /example >}}
 
-#### 이미지
+#### Image
 
-`.navbar-brand` 안에 텍스트 대신 `<img>`를 사용할 수 있습니다.
+You can replace the text within the `.navbar-brand` with an `<img>`.
 
 {{< example >}}
 <nav class="navbar bg-body-tertiary">
@@ -116,9 +115,9 @@ toc: true
 </nav>
 {{< /example >}}
 
-#### 이미지와 텍스트
+#### Image and text
 
-또한 몇 가지 추가 유틸리티를 이용하여 이미지와 텍스트를 동시에 추가할 수 있습니다. `<img>`에 `.d-inline-block`과 `.align-text-top`을 추가하고 있다는 사실에 주목해 주세요.
+You can also make use of some additional utilities to add an image and text at the same time. Note the addition of `.d-inline-block` and `.align-text-top` on the `<img>`.
 
 {{< example >}}
 <nav class="navbar bg-body-tertiary">
@@ -131,14 +130,13 @@ toc: true
 </nav>
 {{< /example >}}
 
-### 내비게이션 바
+### Nav
 
-내비게이션 바의 내비게이션 링크는 `.nav` 옵션에 독자적인 변경 클래스를 추가하여 빌드되며, 적절한 반응형 스타일링을 위해 [토글 클래스](#토글) 사용을 해야 합니다. 내비게이션 바 안에서 내비게이션 링크는 **수평 방향으로 펼쳐져 깔끔하게 정렬**합니다.
+Navbar navigation links build on our `.nav` options with their own modifier class and require the use of [toggler classes](#toggler) for proper responsive styling. **Navigation in navbars will also grow to occupy as much horizontal space as possible** to keep your navbar contents securely aligned.
 
-현재 페이지를 나타내기 위해 `.nav-link`에 `.nav-link` 클래스를 추가합니다.
+Add the `.active` class on `.nav-link` to indicate the current page.
 
-현재 페이지의 `.nav-link`에는 `aria-current` 속성을 추가해 주세요.
-
+Please note that you should also add the `aria-current` attribute on the active `.nav-link`.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -167,7 +165,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-또한, 내비게이션 링크에 클래스를 사용하고 있기 때문에 목록 기반 접근법을 완전히 피할수 있습니다.
+And because we use classes for our navs, you can avoid the list-based approach entirely if you like.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -188,8 +186,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-내비게이션 바에서 드롭다운을 사용할 수도 있습니다.
-드롭다운 메뉴는 배치를 위한 줄바꿈 된 요소가 필요하기 때문에 아래와 같이 `.nav-item`과 `.nav-link`과는 다른 중첩 된 요소로 분리해 사용해 주세요.
+You can also use dropdowns in your navbar. Dropdown menus require a wrapping element for positioning, so be sure to use separate and nested elements for `.nav-item` and `.nav-link` as shown below.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -225,9 +222,9 @@ toc: true
 </nav>
 {{< /example >}}
 
-### 폼
+### Forms
 
-내비게이션 바 내에 다양한 폼 컨트롤 및 컴포넌트를 배치합니다:
+Place various form controls and components within a navbar:
 
 {{< example >}}
 <nav class="navbar bg-body-tertiary">
@@ -240,7 +237,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-`.navbar`의 바로 다음 자식 요소는 flex 레이아웃을 사용하며 기본값은 `justify-content: space-between` 입니다. 이 동작을 조정하려면 필요에 따라 추가적인 [flex utilities]({{< docsref "/utilities/flex" >}})를 사용하세요.
+Immediate child elements of `.navbar` use flex layout and will default to `justify-content: space-between`. Use additional [flex utilities]({{< docsref "/utilities/flex" >}}) as needed to adjust this behavior.
 
 {{< example >}}
 <nav class="navbar bg-body-tertiary">
@@ -254,7 +251,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 대부분이 폼인 경우라면, `<form>` 요소를 컨테이너로 사용하여 HTML을 저장할 수 있습니다.
+Input groups work, too. If your navbar is an entire form, or mostly a form, you can use the `<form>` element as the container and save some HTML.
 
 {{< example >}}
 <nav class="navbar bg-body-tertiary">
@@ -267,7 +264,7 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 </nav>
 {{< /example >}}
 
-다양한 버튼도 이러한 내비게이션 폼의 일부로서 지원되고 있습니다. 이것은 또한 세로 정렬 유틸리티를 사용하여 서로 다른 크기의 요소들을 정렬시킬 수 있습니다.
+Various buttons are supported as part of these navbar forms, too. This is also a great reminder that vertical alignment utilities can be used to align different sized elements.
 
 {{< example >}}
 <nav class="navbar bg-body-tertiary">
@@ -278,9 +275,9 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 </nav>
 {{< /example >}}
 
-### 텍스트
+### Text
 
-문자열의 수직 방향과 수평 간격을 조정하는 `.navbar-text`를 포함할 수 있습니다.
+Navbars may contain bits of text with the help of `.navbar-text`. This class adjusts vertical alignment and horizontal spacing for strings of text.
 
 {{< example >}}
 <nav class="navbar bg-body-tertiary">
@@ -292,7 +289,7 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 </nav>
 {{< /example >}}
 
-필요 시 다른 컴포넌트 및 유틸리티와 혼합하여 사용할 수 있습니다.
+Mix and match with other components and utilities as needed.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -321,17 +318,17 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 </nav>
 {{< /example >}}
 
-## 색상 스키마
+## Color schemes
 
 {{< callout warning >}}
-**v5.3.0에 추가된 새 다크 내비게이션 바 -** `.navbar-dark`는 더 이상 사용되지 않고 새로운 `data-bs-theme="dark"`가 사용됩니다. `.navbar`에 `data-bs-theme="dark"`를 추가하면 컴포넌트별 색상 모드를 활성화할 수 있습니다. [색상 모드에 대해 자세히 알아보세요.]({{< docsref "/customize/color-modes" >}})
+**New dark navbars in v5.3.0 —** We've deprecated `.navbar-dark` in favor of the new `data-bs-theme="dark"`. Add `data-bs-theme="dark"` to the `.navbar` to enable a component-specific color mode. [Learn more about our color modes.]({{< docsref "/customize/color-modes" >}})
 
 ---
 
-**v5.2.0 업데이트 —** 이제 탐색 모음 테마는 CSS 변수를 통해 제공되며 `.navbar-light`는 더 이상 사용되지 않습니다. CSS 변수는 `.navbar`에 적용되어 기본적으로 "light" 모양으로 표시되며 `.navbar-dark`로 재정의할 수 있습니다.
+**New in v5.2.0  —** Navbar theming is now powered by CSS variables and `.navbar-light` has been deprecated. CSS variables are applied to `.navbar`, defaulting to the "light" appearance, and can be overridden with `.navbar-dark`.
 {{< /callout >}}
 
-Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마가 그 어느 때보다 쉬워졌습니다. 기본값은 밝은 배경색에 사용할 수 있는 "밝은 내비게이션 바"지만, 어두운 배경색을 사용하려면 `data-bs-theme="dark"`를 `.navbar` 부모에 적용할 수도 있습니다. 그런 다음 `.bg-*` 및 추가 유틸리티를 사용하여 사용자 정의합니다.
+Navbar themes are easier than ever thanks to Bootstrap's combination of Sass and CSS variables. The default is our "light navbar" for use with light background colors, but you can also apply `data-bs-theme="dark"` to the `.navbar` parent for dark background colors. Then, customize with `.bg-*` and additional utilities.
 
 <div class="bd-example">
   <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
@@ -436,9 +433,9 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 ```
 
-## 컨테이너
+## Containers
 
-필수는 아니지만, 내비게이션 바를 `.container`로 감싸 페이지 중앙에 배치할 수도 있지만 내부의 컨테이너가 필요하게 된다는 점을 주의해 주세요. 혹은, `.navbar`의 내부에 컨테이너를 추가하고 [fixed나 static 상태의 상단 내비게이션 바](#배치)의 내용만을 중앙에 배치할 수도 있습니다.
+Although it's not required, you can wrap a navbar in a `.container` to center it on a page–though note that an inner container is still required. Or you can add a container inside the `.navbar` to only center the contents of a [fixed or static top navbar](#placement).
 
 {{< example >}}
 <div class="container">
@@ -450,7 +447,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </div>
 {{< /example >}}
 
-반응형 컨테이너 중 하나를 사용하여 내비게이션 바의 콘텐츠 표시 폭을 변경할 수 있습니다.
+Use any of the responsive containers to change how wide the content in your navbar is presented.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -460,11 +457,11 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 {{< /example >}}
 
-## 배치
+## Placement
 
-[위치 유틸리티]({{< docsref "/utilities/position" >}})를 사용하여 내비게이션 바를 정적이지 않은 위치에 배치할 수 있습니다. 상단 고정, 하단 고정, 스티커식(페이지가 상단까지 스크롤한 뒤에도 그 위치에 남는) 상단 고정, 스티커식 하단 고정 (페이지가 하단까지 스크롤한 뒤에도 그 위치에 남는)을 사용할 수있습니다
+Use our [position utilities]({{< docsref "/utilities/position" >}}) to place navbars in non-static positions. Choose from fixed to the top, fixed to the bottom, stickied to the top (scrolls with the page until it reaches the top, then stays there), or stickied to the bottom (scrolls with the page until it reaches the bottom, then stays there).
 
-고정 내비게이션 바는 `position: fixed`를 사용합니다. 이는 DOM 의 통상적인 흐름에서 취득되어 다른 요소와의 중복을 막기 위해 사용자 정의 CSS(예를 들어, `<body>`의 `padding-top` 등)가 필요할 수 있습니다.
+Fixed navbars use `position: fixed`, meaning they're pulled from the normal flow of the DOM and may require custom CSS (e.g., `padding-top` on the `<body>`) to prevent overlap with other elements.
 
 {{< example >}}
 <nav class="navbar bg-body-tertiary">
@@ -506,13 +503,13 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 {{< /example >}}
 
-## 스크롤
+## Scrolling
 
-`.navbar-nav` (혹은 다른 내비게이션 바의 서브 컴포넌트)에 `.navbar-nav-scroll`을 추가하여 접힌 내비게이션 바의 토글 가능한 콘텐츠 내에서 수직 방향 스크롤을 활성화시킵니다. 기본적으로는 `75vh`(혹은 뷰포트 높이의 75%)로 스크롤이 시작되지만 로컬 CSS 사용자 정의 속성 `--bs-navbar-height`나 사용자 정의 스타일로 덮어쓸수 있습니다. 큰 뷰포트에서 내비게이션 바를 펼치면 기본 내비게이션 바처럼 콘텐츠가 나타납니다.
+Add `.navbar-nav-scroll` to a `.navbar-nav` (or other navbar sub-component) to enable vertical scrolling within the toggleable contents of a collapsed navbar. By default, scrolling kicks in at `75vh` (or 75% of the viewport height), but you can override that with the local CSS custom property `--bs-navbar-height` or custom styles. At larger viewports when the navbar is expanded, content will appear as it does in a default navbar.
 
-이 동작에는 `overflow`의 잠재적인 결점이 따르므로 주의가 필요합니다. `overflow-y: auto`(여기서 콘텐츠를 스크롤하기 위해 필요)를 설정하면 `overflow-x`는 `auto`와 동등해져 수평 방향의 콘텐츠가 일부 잘립니다. 
+Please note that this behavior comes with a potential drawback of `overflow`—when setting `overflow-y: auto` (required to scroll the content here), `overflow-x` is the equivalent of `auto`, which will crop some horizontal content.
 
-아래는 `.navbar-nav-scroll`에 `style="--bs-scroll-height: 100px;"`를 사용한 내비게이션 바의 예시로, 최적의 간격을 확보하기 위한 여백을 갖추고 있습니다.
+Here's an example navbar using `.navbar-nav-scroll` with `style="--bs-scroll-height: 100px;"`, with some extra margin utilities for optimum spacing.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -553,18 +550,17 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 {{< /example >}}
 
-## 반응형 비헤이비어
+## Responsive behaviors
 
-`.navbar-toggler`, `.navbar-collapse`, 및 `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` 클래스를 사용하여 콘텐츠가 버튼 뒤쪽에서 접히는 시점을 결정합니다. 다른 유틸리티와 결합하여 특정 요소를 언제 표시하고 감출지 손쉽게 선택할 수 있습니다.
+Navbars can use `.navbar-toggler`, `.navbar-collapse`, and `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` classes to determine when their content collapses behind a button. In combination with other utilities, you can easily choose when to show or hide particular elements.
 
-접히지 않는 내비게이션 바의 경우, `.navbar-expand` 클래스를 내비게이션 바에 추가합니다. 항상 접히는 내비게이션 바의 경우 `.navbar-expand` 클래스를 추가하지 마십시오.
+For navbars that never collapse, add the `.navbar-expand` class on the navbar. For navbars that always collapse, don't add any `.navbar-expand` class.
 
-### 토글
+### Toggler
 
-내비게이션 바의 토글은 기본적으로 왼쪽 정렬이지만 `.navbar-brand`와 같은 형제 요소와 연결되는 경우는 자동으로 오른쪽 정렬이 됩니다. 마크업을 거꾸로 하면 토글의 배치도 반대로 바뀝니다. 아래는 색다른 토글 스타일의 예입니다.
+Navbar togglers are left-aligned by default, but should they follow a sibling element like a `.navbar-brand`, they'll automatically be aligned to the far right. Reversing your markup will reverse the placement of the toggler. Below are examples of different toggle styles.
 
-아래의 예시를 가장 작은 중단점로 확인해 보세요.
-`.navbar-brand`가 표시되지 않습니다:
+With no `.navbar-brand` shown at the smallest breakpoint:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -594,7 +590,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 {{< /example >}}
 
-왼쪽에 브랜드명이 표시되고 오른쪽에 토글이 표시되고 있습니다:
+With a brand name shown on the left and toggler on the right:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -624,7 +620,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 {{< /example >}}
 
-왼쪽에 토글이, 오른쪽에 브랜드명이 들어가 있습니다:
+With a toggler on the left and brand name on the right:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -654,9 +650,9 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 {{< /example >}}
 
-### 외부 콘텐츠
+### External content
 
-구조적으로 `.navbar` 바깥쪽에 있는 콘텐츠를 위해 콜랩스 플러그인을 사용해 컨테이너 요소를 트리거하고 싶을 수도 있습니다. 이 플러그인은 `id`와 `data-bs-target`의 매칭으로 동작하기 때문에 실행이 간단합니다.
+Sometimes you want to use the collapse plugin to trigger a container element for content that structurally sits outside of the `.navbar` . Because our plugin works on the `id` and `data-bs-target` matching, that's easily done!
 
 {{< example >}}
 <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
@@ -674,13 +670,13 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 {{< /example >}}
 
-이렇게 했을 때는 컨테이너가 열렸을 때 포커스를 이동시키기 위한 추가적인 JavaScript를 포함하는 것을 권장합니다. 그렇지 않으면, 키보드 사용자나 지원 기술 사용자는 새롭게 표시된 콘텐츠를 찾는 데 어려움을 겪을 것입니다. 특히, 열린 컨테이너가 문서의 구조상 토글러보다 *before*에 있는 경우는 더욱더 그렇습니다. 또한 토글러가 콘텐츠의 `id`를 가르키는 `aria-controls` 속성을 가지고 있는 것을 확인할 필요가 있습니다. 이론적으로는 지원 기술 사용자가 토글러에서 그것을 제어하는 콘텐츠를 직접 점프할 수 있게 되어 있지만, 현재 이 지원은 매우 애매합니다.
+When you do this, we recommend including additional JavaScript to move the focus programmatically to the container when it is opened. Otherwise, keyboard users and users of assistive technologies will likely have a hard time finding the newly revealed content - particularly if the container that was opened comes *before* the toggler in the document's structure. We also recommend making sure that the toggler has the `aria-controls` attribute, pointing to the `id` of the content container. In theory, this allows assistive technology users to jump directly from the toggler to the container it controls–but support for this is currently quite patchy.
 
-### 오프캔버스
+### Offcanvas
 
-[오프캔버스 컴포넌트]({{< docsref "/components/offcanvas" >}})를 사용하여 확장 및 콜랩스 내비바를 오프캔버스 서랍으로 변환하세요. 오프캔버스 기본 스타일을 모두 확장하고 `.navbar-expand-*` 클래스를 사용하여 동적이고 유연한 네비게이션 사이드바를 만들 수 있습니다.
+Transform your expanding and collapsing navbar into an offcanvas drawer with the [offcanvas component]({{< docsref "/components/offcanvas" >}}). We extend both the offcanvas default styles and use our `.navbar-expand-*` classes to create a dynamic and flexible navigation sidebar.
 
-아래 예에서 모든 중단점에서 항상 축소되는 오프캔버스 탐색 모음을 만들려면 `.navbar-expand-*` 클래스를 완전히 생략해야 합니다.
+In the example below, to create an offcanvas navbar that is always collapsed across all breakpoints, omit the `.navbar-expand-*` class entirely.
 
 {{< example >}}
 <nav class="navbar bg-body-tertiary fixed-top">
@@ -726,7 +722,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 {{< /example >}}
 
-`lg`와 같은 특정 중단점에서 일반 내비바로 확장되는 캔버스 내비바를 만들려면 `.navbar-expand-lg`를 사용하세요.
+To create an offcanvas navbar that expands into a normal navbar at a specific breakpoint like `lg`, use `.navbar-expand-lg`.
 
 ```html
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -740,7 +736,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 ```
 
-어두운 탐색 모음에서 오프캔버스를 사용할 때는 텍스트가 잘 보이지 않도록 오프캔버스 콘텐츠의 배경을 어둡게 설정해야 할 수 있습니다. 아래 예에서는 어두운 오프캔버스로 적절한 스타일을 지정하기 위해 `.navbar`에 `.navbar-dark`와 `.bg-dark`를, `.offcanvas`에 `.text-bg-dark`를, `.dropdown-menu-dark`에 `.dropdown-menu`를, `.btn-close-white`에 `.btn-close`를 추가합니다.
+When using offcanvas in a dark navbar, be aware that you may need to have a dark background on the offcanvas content to avoid the text becoming illegible. In the example below, we add `.navbar-dark` and `.bg-dark` to the `.navbar`, `.text-bg-dark` to the `.offcanvas`, `.dropdown-menu-dark` to `.dropdown-menu`, and `.btn-close-white` to `.btn-close` for proper styling with a dark offcanvas.
 
 {{< example >}}
 <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -788,34 +784,34 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 
 ## CSS
 
-### 변수
+### Variables
 
 {{< added-in "5.2.0" >}}
 
-Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 이제 탐색바에서 `.navbar`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
+As part of Bootstrap's evolving CSS variables approach, navbars now use local CSS variables on `.navbar` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="navbar-css-vars" file="scss/_navbar.scss" >}}
 
-일부 추가 CSS 변수는 `.navbar-nav`에도 존재합니다:
+Some additional CSS variables are also present on `.navbar-nav`:
 
 {{< scss-docs name="navbar-nav-css-vars" file="scss/_navbar.scss" >}}
 
-CSS 변수를 통한 커스터마이징은 `.navbar-dark` 클래스에서 중복된 CSS 선택기를 추가하지 않고 특정 값을 재정의하는 것을 볼 수 있습니다.
+Customization through CSS variables can be seen on the `.navbar-dark` class where we override specific values without adding duplicate CSS selectors.
 
 {{< scss-docs name="navbar-dark-css-vars" file="scss/_navbar.scss" >}}
 
-### Sass 변수
+### Sass variables
 
-모든 내비게이션 바에 대한 변수:
+Variables for all navbars:
 
 {{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
 
-[다크 내비게이션 바](#색상-스키마)에 대한 변수:
+Variables for the [dark navbar](#color-schemes):
 
 {{< scss-docs name="navbar-dark-variables" file="scss/_variables.scss" >}}
 
-### Sass 루프
+### Sass loops
 
-[반응형 내비게이션 펼치기/접기 클래스](#반응형-비헤이비어)(`.navbar-expand-lg` 등)는 `$breakpoints` 맵과 조합되어 `scss/_navbar.scss`내의 반복문으로 생성됩니다.
+[Responsive navbar expand/collapse classes](#responsive-behaviors) (e.g., `.navbar-expand-lg`) are combined with the `$breakpoints` map and generated through a loop in `scss/_navbar.scss`.
 
 {{< scss-docs name="navbar-expand-loop" file="scss/_navbar.scss" >}}

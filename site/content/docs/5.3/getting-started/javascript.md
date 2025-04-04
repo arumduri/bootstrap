@@ -1,38 +1,38 @@
 ---
 layout: docs
 title: JavaScript
-description: 선택적 JavaScript 플러그인으로 Bootstrap에 생명을 불어넣으세요. 각 플러그인, 데이터 및 프로그래밍 방식 API 옵션 등에 대해 알아보세요.
+description: Bring Bootstrap to life with our optional JavaScript plugins. Learn about each plugin, our data and programmatic API options, and more.
 group: getting-started
 toc: true
 ---
 
-## 개별 또는 컴파일
+## Individual or compiled
 
-(Bootstrap의 독립된 `js/dist/*.js`를 이용해서) 플러그인을 별도로 포함시키거나, `bootstrap.js` 또는 경량화된 `bootstrap.min.js` (둘 다 포함하면 안됨)을 이용해서 한 번에 포함하세요.
+Plugins can be included individually (using Bootstrap's individual `js/dist/*.js`), or all at once using `bootstrap.js` or the minified `bootstrap.min.js` (don't include both).
 
-번들러 (webpack, Parcel, Vite...)를 사용한다면 UMD를 위해서 준비된 `/js/dist/*.js`을 사용할 수도 있습니다.
+If you use a bundler (Webpack, Parcel, Vite...), you can use `/js/dist/*.js` files which are UMD ready.
 
-## JavaScript 프레임워크에서 사용
+## Usage with JavaScript frameworks
 
-Bootstrap의 CSS는 모든 프레임워크와 함께 사용할 수 있지만 **Bootstrap의 JavaScript는 React, Vue 및 Angular와 같은** DOM에 대한 전반적인 이해를 기반으로 하는 **JavaScript 프레임워크**와는 완전히 호환되지 않습니다. Bootstrap과 프레임워크 둘다 동일한 DOM 요소를 변경하려고 시도할 수 있으므로 드롭다운이 "열린" 상태에서 고정되어 버리는 버그등이 발생할 수 있습니다.
+While the Bootstrap CSS can be used with any framework, **the Bootstrap JavaScript is not fully compatible with JavaScript frameworks like React, Vue, and Angular** which assume full knowledge of the DOM. Both Bootstrap and the framework may attempt to mutate the same DOM element, resulting in bugs like dropdowns that are stuck in the "open" position.
 
-이러한 종류의 프레임워크를 사용하는 사람들을 위한 더 나은 대안은 **Bootstrap JavaScript 대신** 별도의 프레임워크 패키지를 사용하는 것입니다. 일반적으로 다음과 같은 선택옵션이 있습니다:
+A better alternative for those using this type of frameworks is to use a framework-specific package **instead of** the Bootstrap JavaScript. Here are some of the most popular options:
 
 - React: [React Bootstrap](https://react-bootstrap.github.io/)
   {{< callout >}}
-  **직접 사용해보세요!** [twbs/examples 리포지토리](https://github.com/twbs/examples/tree/main/react-nextjs)에서 실제로 Bootstrap과 함께 작동하는 React, Next.js, React Bootstrap 데모의 소스 코드를 다운로드해보세요. [StackBlitz에서 테스트](https://stackblitz.com/github/twbs/examples/tree/main/react-nextjs?file=src%2Fpages%2Findex.tsx)해볼 수도 있습니다.
+  **Try it yourself!** Download the source code and working demo for using Bootstrap with React, Next.js, and React Bootstrap from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/react-nextjs). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/react-nextjs?file=src%2Fpages%2Findex.tsx).
   {{< /callout >}}
 - Vue: [BootstrapVue](https://bootstrap-vue.org/) (Bootstrap 4)
-- Vue 3: [BootstrapVueNext](https://bootstrap-vue-next.github.io/bootstrap-vue-next/) (Bootstrap 5, 현재 알파 버전)
+- Vue 3: [BootstrapVueNext](https://bootstrap-vue-next.github.io/bootstrap-vue-next/) (Bootstrap 5, currently in alpha)
 - Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
 
-## Bootstrap을 모듈로 사용하기
+## Using Bootstrap as a module
 
 {{< callout >}}
-**직접 사용해 보세요!** Bootstrap를 ES 모듈로 사용하기 위한 소스코드와 데모를 [twbs/examples 저장소](https://github.com/twbs/examples/tree/main/sass-js-esm)에서 다운로드 받으세요. [StackBlitz에서의 예제](https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html)를 열어도 좋습니다.
+**Try it yourself!** Download the source code and working demo for using Bootstrap as an ES module from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/sass-js-esm). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/sass-js-esm?file=index.html).
 {{< /callout >}}
 
-[타게팅하려는 브라우저가 지원하는 경우](https://caniuse.com/es6-module) 브라우저에서 Bootstrap를 모듈로 사용할 수 있도록 `ESM` (`bootstrap.esm.js` 및 `bootstrap.esm.min.js`)으로 빌드된 버전을 제공합니다.
+We provide a version of Bootstrap built as `ESM` (`bootstrap.esm.js` and `bootstrap.esm.min.js`) which allows you to use Bootstrap as a module in the browser, if your [targeted browsers support it](https://caniuse.com/es6-module).
 
 <!-- eslint-skip -->
 ```html
@@ -44,20 +44,20 @@ Bootstrap의 CSS는 모든 프레임워크와 함께 사용할 수 있지만 **B
 </script>
 ```
 
-JS 번들러와 비교하여 브라우저에서 ESM을 사용하려면 모듈 이름 대신 전체 경로와 파일 이름을 사용해야 합니다. [브라우저의 JS 모듈에 대해 자세히 알아보기](https://v8.dev/features/modules#specifiers) 그렇기 때문의 위처럼 `'bootstrap'` 대신에 `'bootstrap.esm.min.js'`를 사용합니다. 그러나 이것은 Popper의 종속성으로 인해 더욱 복잡해져 있기에 아래와 같이 Popper를 JavaScript로 인포트하고 있습니다:
+Compared to JS bundlers, using ESM in the browser requires you to use the full path and filename instead of the module name. [Read more about JS modules in the browser.](https://v8.dev/features/modules#specifiers) That's why we use `'bootstrap.esm.min.js'` instead of `'bootstrap'` above. However, this is further complicated by our Popper dependency, which imports Popper into our JavaScript like so:
 
 <!-- eslint-skip -->
 ```js
 import * as Popper from "@popperjs/core"
 ```
 
-그대로 시도하면 콘솔에 다음과 같은 오류가 표시됩니다:
+If you try this as-is, you'll see an error in the console like the following:
 
 ```text
 Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relative references must start with either "/", "./", or "../".
 ```
 
-이 문제를 해결하기 위해서는 `importmap`을 사용해 임의의 모듈 이름을 완전한 경로로 확인할 수 있습니다. [대상 브라우저](https://caniuse.com/?search=importmap)에서 `importmap`을 지원하지 않는 경우 [es-module-shims](https://github.com/guybedford/es-module-shims) 프로젝트를 사용해야 합니다. Bootstrap과 Popper에서의 작동하는 방식은 다음과 같습니다:
+To fix this, you can use an `importmap` to resolve the arbitrary module names to complete paths. If your [targeted browsers](https://caniuse.com/?search=importmap) do not support `importmap`, you'll need to use the [es-module-shims](https://github.com/guybedford/es-module-shims) project. Here's how it works for Bootstrap and Popper:
 
 <!-- eslint-skip -->
 ```html
@@ -91,29 +91,29 @@ Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relativ
 </html>
 ```
 
-## 의존성
+## Dependencies
 
-일부 플러그인 및 CSS 컴포넌트는 다른 플러그인에 의존합니다. 플러그인을 개별적으로 포함하려면 문서에서 이러한 종속성을 확인해주세요
+Some plugins and CSS components depend on other plugins. If you include plugins individually, make sure to check for these dependencies in the docs.
 
-드롭다운, 팝오버, 툴팁도 [Popper](https://popper.js.org/)에 의존하고 있습니다.
+Our dropdowns, popovers, and tooltips also depend on [Popper](https://popper.js.org/).
 
-## 데이터 속성
+## Data attributes
 
-거의 모든 Bootstrap 플러그인은 데이터 속성 (JavaScript 기능을 사용하는 권장 방법)과 함께 HTML을 통해서만 활성화 및 구성할 수 있습니다. **단일 요소의 한 세트의 데이터 속성만 사용해야 합니다.** (예: 동일한 버튼으로 툴팁과 모달을 트리거할 수 없음)
+Nearly all Bootstrap plugins can be enabled and configured through HTML alone with data attributes (our preferred way of using JavaScript functionality). Be sure to **only use one set of data attributes on a single element** (e.g., you cannot trigger a tooltip and modal from the same button.)
 
 {{< markdown >}}
 {{< partial "js-data-attributes.md" >}}
 {{< /markdown >}}
 
-## 선택자
+## Selectors
 
-성능상의 이유로 쿼리 DOM 요소에 네이티브 메소드인 `querySelector` 및 `querySelectorAll`를 사용하기 때문에 [유효한 선택자](https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier)를 반드시 사용해야 합니다. `collapse:Example`와 같은 특수 선택자를 사용하는 경우 이스케이프를 해주셔야 합니다.
+We use the native `querySelector` and `querySelectorAll` methods to query DOM elements for performance reasons, so you must use [valid selectors](https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier). If you use special selectors like `collapse:Example`, be sure to escape them.
 
-## 이벤트
+## Events
 
-Bootstrap은 대부분의 플러그인 고유 작업에 대한 사용자 지정 이벤트를 제공합니다. 일반적으로 이것들은 부정사 (infinitive) 및 과거분사 (past participle)의 형태로 제공됩니다. 부정사 (예: `show`)는 이벤트가 시작될 때 트리거되고 과거분사 (예: `shown`)는 동작이 완료될 때 트리거됩니다.
+Bootstrap provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. `show`) is triggered at the start of an event, and its past participle form (ex. `shown`) is triggered on the completion of an action.
 
-모든 부정사 이벤트는 [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) 기능을 제공합니다. 이것은 시작하기 전에 작업 실행을 중지하는 기능을 제공합니다. 이벤트 핸들러에서 false를 반환하면 자동으로 `preventDefault()`를 호출합니다.
+All infinitive events provide [`preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) functionality. This provides the ability to stop the execution of an action before it starts. Returning false from an event handler will also automatically call `preventDefault()`.
 
 ```js
 const myModal = document.querySelector('#myModal')
@@ -123,9 +123,9 @@ myModal.addEventListener('show.bs.modal', event => {
 })
 ```
 
-## 프로그래매틱 API
+## Programmatic API
 
-모든 생성자는 선택적 옵션 객체를 허용하거나 (기본 동작으로 플러그인을 시작한다면) 아무것도 허용하지 않습니다:
+All constructors accept an optional options object or nothing (which initiates a plugin with its default behavior):
 
 ```js
 const myModalEl = document.querySelector('#myModal')
@@ -135,25 +135,25 @@ const configObject = { keyboard: false }
 const modal1 = new bootstrap.Modal(myModalEl, configObject) // initialized with no keyboard
 ```
 
-특정 플러그인 인스턴스를 가져오려면 각 플러그인이 `getInstance` 메소드를 노출합니다. 인스턴스에서 직접 가져오려면 다음과 같이 해주어야 합니다:
+If you'd like to get a particular plugin instance, each plugin exposes a `getInstance` method. For example, to retrieve an instance directly from an element:
 
 ```js
 bootstrap.Popover.getInstance(myPopoverEl)
 ```
 
-요청된 요소에 대해 인스턴스가 시작되지 않으면 이 메소드는 `null`을 반환합니다.
+This method will return `null` if an instance is not initiated over the requested element.
 
-또는 `getOrCreateInstance`를 사용하여 DOM 요소와 연결된 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다.
+Alternatively, `getOrCreateInstance` can be used to get the instance associated with a DOM element, or create a new one in case it wasn't initialized.
 
 ```js
 bootstrap.Popover.getOrCreateInstance(myPopoverEl, configObject)
 ```
 
-인스턴스가 초기화되지 않은 경우 두 번째 인수로 선택적 설정 객체를 받아 사용할 수 있습니다.
+In case an instance wasn't initialized, it may accept and use an optional configuration object as second argument.
 
-### 생성자에서의 CSS 선택자
+### CSS selectors in constructors
 
-모든 플러그인 생성자 메소드는 `getInstance` 및 `getOrCreateInstance` 메소드 외에도 첫 번째 인수로 DOM 요소 또는 유효한 [CSS 선택자](#선택자)를 받을 수 있습니다. 플러그인은 단일 요소만 지원하므로 `querySelector` 메소드로 플러그인 요소를 찾을 수 있습니다.
+In addition to the `getInstance` and `getOrCreateInstance` methods, all plugin constructors can accept a DOM element or a valid [CSS selector](#selectors) as the first argument. Plugin elements are found with the `querySelector` method since our plugins only support a single element.
 
 ```js
 const modal = new bootstrap.Modal('#myModal')
@@ -162,9 +162,9 @@ const offcanvas = bootstrap.Offcanvas.getInstance('#myOffcanvas')
 const alert = bootstrap.Alert.getOrCreateInstance('#myAlert')
 ```
 
-### 비동기 기능 및 트랜지션
+### Asynchronous functions and transitions
 
-모든 프로그래밍 가능한 API 메소드는 **비동기적**이며 트랜지션이 시작되고 **종료되기 전에** 호출자에게 반환됩니다. 트랜지션이 완료된 후 작업을 실행하기 위해 해당 이베트를 수신할 수 있습니다.
+All programmatic API methods are **asynchronous** and return to the caller once the transition is started, but **before it ends**. In order to execute an action once the transition is complete, you can listen to the corresponding event.
 
 ```js
 const myCollapseEl = document.querySelector('#myCollapse')
@@ -174,7 +174,7 @@ myCollapseEl.addEventListener('shown.bs.collapse', event => {
 })
 ```
 
-또한 **트랜지션 컴포넌트**에 대한 메소드 호출은 **무시됩니다**.
+In addition, a method call on a **transitioning component will be ignored**.
 
 ```js
 const myCarouselEl = document.querySelector('#myCarousel')
@@ -188,9 +188,9 @@ carousel.to('1') // Will start sliding to the slide 1 and returns to the caller
 carousel.to('2') // !! Will be ignored, as the transition to the slide 1 is not finished !!
 ```
 
-#### `dispose` 메소드
+#### `dispose` method
 
-`hide()`바로 뒤에 `dispose` 메소드를 사용하는 것이 옳은 것처럼 보일 수 있지만 잘못된 결과를 초래할 수 있습니다. 다음은 문제가 되는 사용 예시입니다:
+While it may seem correct to use the `dispose` method immediately after `hide()`, it will lead to incorrect results. Here's an example of the problem use:
 
 ```js
 const myModal = document.querySelector('#myModal')
@@ -201,43 +201,43 @@ myModal.addEventListener('shown.bs.hidden', event => {
 })
 ```
 
-### 기본 설정값
+### Default settings
 
-플러그인의 `Constructor.Default` 객체를 수정하여 플러그인의 기본 설정을 변경할 수 있습니다:
+You can change the default settings for a plugin by modifying the plugin's `Constructor.Default` object:
 
 ```js
 // changes default for the modal plugin's `keyboard` option to false
 bootstrap.Modal.Default.keyboard = false
 ```
 
-## 메소드와 속성
+## Methods and properties
 
-모든 Bootstrap 플러그인은 다음과 같은 메소드와 정적 속성을 공개합니다.
+Every Bootstrap plugin exposes the following methods and static properties.
 
 {{< bs-table "table" >}}
 | Method | Description |
 | --- | --- |
-| `dispose` | 요소의 모달을 파괴합니다. (DOM 요소에 저장된 데이터를 제거합니다.) |
-| `getInstance` | *정적* 메소드를 사용하여 DOM 요소와 연관된 모달 인스턴스를 가져올 수 있습니다. |
-| `getOrCreateInstance` | *정적* 메소드를 사용하여 DOM 요소와 연결된 모달 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. |
+| `dispose` | Destroys an element's modal. (Removes stored data on the DOM element) |
+| `getInstance` | *Static* method which allows you to get the modal instance associated with a DOM element. |
+| `getOrCreateInstance` | *Static* method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized. |
 {{< /bs-table >}}
 
 {{< bs-table "table" >}}
 | Static property | Description |
 | --- | --- |
-| `NAME` | 플러그인 이름을 반환합니다. (예: `bootstrap.Tooltip.NAME`) |
-| `VERSION` | Bootstrap의 각 플러그인 버전은 플러그인 생성자의 `VERSION` 속성을 통해 액세스할 수 있습니다. (예: `bootstrap.Tooltip.VERSION`) |
+| `NAME` | Returns the plugin name. (Example: `bootstrap.Tooltip.NAME`) |
+| `VERSION` | The version of each of Bootstrap's plugins can be accessed via the `VERSION` property of the plugin's constructor (Example: `bootstrap.Tooltip.VERSION`) |
 {{< /bs-table >}}
 
 ## Sanitizer
 
-툴팁 및 팝오버는 내장된 보안 모듈 (sanitizer)을 사용하여 HTML을 허용하는 옵션을 보안 처리 (sanitize)합니다.
+Tooltips and Popovers use our built-in sanitizer to sanitize options which accept HTML.
 
-기본값 `allowList` 값은 다음과 같습니다:
+The default `allowList` value is the following:
 
 {{< js-docs name="allow-list" file="js/src/util/sanitizer.js" >}}
 
-기본 `allowList`에 새 값을 추가하려면 다음과 같이 작성해야 합니다:
+If you want to add new values to this default `allowList` you can do the following:
 
 ```js
 const myDefaultAllowList = bootstrap.Tooltip.Default.allowList
@@ -253,7 +253,8 @@ myDefaultAllowList.td = ['data-bs-option']
 const myCustomRegex = /^data-my-app-[\w-]+/
 myDefaultAllowList['*'].push(myCustomRegex)
 ```
-[DOMPurify](https://www.npmjs.com/package/dompurify)와 같은 전용 라이브러리를 사용해서 보안 모듈을 우회하려면 다음과 같이 작성해야 합니다:
+
+If you want to bypass our sanitizer because you prefer to use a dedicated library, for example [DOMPurify](https://www.npmjs.com/package/dompurify), you should do the following:
 
 ```js
 const yourTooltipEl = document.querySelector('#yourTooltip')
@@ -264,9 +265,10 @@ const tooltip = new bootstrap.Tooltip(yourTooltipEl, {
 })
 ```
 
-## 선택적으로 jQuery 사용하기
+## Optionally using jQuery
 
-**Bootstrap 5에서는 jQuery가 필요하지 않지**만, jQuery와 함께 컴포넌트를 사용할 수 있습니다. Bootstrap이 `window` 객체에서 `jQuery`를 감지하면 jQuery의 플러그인 시스템에 있는 모든 컴포넌트를 추가합니다. 이를 통해 다음과 같은 작업을 수행할 수 있습니다:
+**You don't need jQuery in Bootstrap 5**, but it's still possible to use our components with jQuery. If Bootstrap detects `jQuery` in the `window` object, it'll add all of our components in jQuery's plugin system. This allows you to do the following:
+
 ```js
 // to enable tooltips with the default configuration
 $('[data-bs-toggle="tooltip"]').tooltip()
@@ -281,22 +283,22 @@ $('[data-bs-toggle="tooltip"]').tooltip({
 $('#myTooltip').tooltip('show')
 ```
 
-다른 컴포넌트도 마찬가지입니다.
+The same goes for our other components.
 
-### 충돌 방지
+### No conflict
 
-가끔 다른 UI 프레임워크와 함께 Bootstrap을 사용해야 할 수도 있습니다. 이런 경우 네임스페이스 충돌이 발생할 수도 있습니다. 이러한 문제가 발생할 경우 값을 되돌리려는 플러그인에 `.noConflict` 값을 호출할 수 있습니다.
+Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call `.noConflict` on the plugin you wish to revert the value of.
 
 ```js
 const bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
 $.fn.bootstrapBtn = bootstrapButton // give $().bootstrapBtn the Bootstrap functionality
 ```
 
-Bootstrap은 프로토타입이나 jQuery UI와 같은 타사 JavaScript 라이브러리를 공식적으로 지원하지 않습니다. `.noConflict` 및 네임스페이스 이벤트에도 불구하고 직접 해결해야 하는 호환성 문제가 있을 수 있습니다.
+Bootstrap does not officially support third-party JavaScript libraries like Prototype or jQuery UI. Despite `.noConflict` and namespaced events, there may be compatibility problems that you need to fix on your own.
 
-### jQuery 이벤트
+### jQuery events
 
-Bootstrap은 `jQuery`가 `window` 객체에 존재하고 `<body>`에 `data-bs-no-jquery` 속성이 설정되어 있지 않은 경우 jQuery를 감지합니다. jQuery가 발견되면 Bootstrap은 jQuery의 이벤트 시스템 덕분에 이벤트를 발생시킵니다. 따라서 Bootstrap의 이벤트를 수신하려면 `addEventListener` 대신 jQuery 메소드(`.on`, `.one`) 를 사용해야 합니다.
+Bootstrap will detect jQuery if `jQuery` is present in the `window` object and there is no `data-bs-no-jquery` attribute set on `<body>`. If jQuery is found, Bootstrap will emit events thanks to jQuery's event system. So if you want to listen to Bootstrap's events, you'll have to use the jQuery methods (`.on`, `.one`) instead of `addEventListener`.
 
 ```js
 $('#myTab a').on('shown.bs.tab', () => {
@@ -304,6 +306,6 @@ $('#myTab a').on('shown.bs.tab', () => {
 })
 ```
 
-## JavaScript 비활성화
+## Disabled JavaScript
 
-Bootstrap의 플러그인에는 JavaScript가 비활성화되었을 때를 대비한 특별한 대안이 없습니다. 이 경우 사용자 환경이 걱정된다면 [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript)를 사용하여 사용자에게 상황(및 JavaScript를 다시 활성화하는 방법)을 설명하거나 사용자 정의 대체 기능을 추가하세요.
+Bootstrap's plugins have no special fallback when JavaScript is disabled. If you care about the user experience in this case, use [`<noscript>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.

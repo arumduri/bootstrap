@@ -1,15 +1,14 @@
 ---
 layout: docs
-title: 플렉스
-title_en: Flex
-description: 반응형 flexbox 유틸리티 세트를 사용해 그리드 열, 네비게이션 바, 컴포넌트, 레이아웃의 정렬 및 크기 조정을 신속하게 관리합니다. 더 복잡한 구현의 경우 사용자 정의 CSS가 필요할 수 있습니다.
+title: Flex
+description: Quickly manage the layout, alignment, and sizing of grid columns, navigation, components, and more with a full suite of responsive flexbox utilities. For more complex implementations, custom CSS may be necessary.
 group: utilities
 toc: true
 ---
 
-## 플렉스 비헤이비어 활성화
+## Enable flex behaviors
 
-`display` 유틸리티를 적용하여 flexbox 컨테이너를 만들고 **직계 자식 요소** 를 플렉스 항목으로 변환합니다. flex컨테이너와 아이템은 추가적인 flex 속성을 사용하여 수정할 수 있습니다.
+Apply `display` utilities to create a flexbox container and transform **direct children elements** into flex items. Flex containers and items are able to be modified further with additional flex properties.
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex p-2">I'm a flexbox container!</div>
@@ -19,7 +18,7 @@ toc: true
 <div class="d-inline-flex p-2">I'm an inline flexbox container!</div>
 {{< /example >}}
 
-`.d-flex` 및 `.d-inline-flex`에 대한 반응형 변형도 있습니다.
+Responsive variations also exist for `.d-flex` and `.d-inline-flex`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -30,11 +29,11 @@ toc: true
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 방향
+## Direction
 
-방향 유틸리티를 사용하여 플렉스 컨테이너에서 플렉스 항목의 방향을 설정합니다. 대부분의 경우 브라우저 기본값이 `row` 이므로 여기서 수평 클래스를 생략 할 수 있습니다. 그러나 값을 명시적으로 설정해야하는 상황이 발생할 수 있습니다 (예: 반응형 레이아웃).
+Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is `row`. However, you may encounter situations where you needed to explicitly set this value (like responsive layouts).
 
-`.flex-row`를 사용하여 수평 방향 (브라우저 기본값)으로 설정하고 `.flex-row-reverse`를 사용하여 역방향에서 수평 방향을 시작합니다.
+Use `.flex-row` to set a horizontal direction (the browser default), or `.flex-row-reverse` to start the horizontal direction from the opposite side.
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex flex-row mb-3">
@@ -49,7 +48,7 @@ toc: true
 </div>
 {{< /example >}}
 
-`.flex-column`을 사용하여 수직 방향으로 설정하거나 `.flex-column-reverse`를 사용하여 역방향으로 수직 방향을 시작합니다.
+Use `.flex-column` to set a vertical direction, or `.flex-column-reverse`  to start the vertical direction from the opposite side.
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex flex-column mb-3">
@@ -64,7 +63,7 @@ toc: true
 </div>
 {{< /example >}}
 
-`flex-direction`에 대한 반응형 변형도 존재합니다.
+Responsive variations also exist for `flex-direction`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -77,9 +76,9 @@ toc: true
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 콘텐츠 채우기
+## Justify content
 
-flexbox 컨테이너에서 `justify-content` 유틸리티를 사용하여 기본 축 (시작할 x축, `flex-direction : column`인 경우 y축)에서 플렉스 항목들의 정렬을 변경합니다. `start` (브라우저 기본값), `end` , `center` , `between` , `around` 또는 `evenly` 중에서 선택합니다.
+Use `justify-content` utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if `flex-direction: column`). Choose from `start` (browser default), `end`, `center`, `between`, `around`, or `evenly`.
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex justify-content-start mb-3">
@@ -123,7 +122,7 @@ flexbox 컨테이너에서 `justify-content` 유틸리티를 사용하여 기본
 <div class="d-flex justify-content-evenly">...</div>
 ```
 
-`justify-content`에 대한 반응형 변형도 존재합니다.
+Responsive variations also exist for `justify-content`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -138,9 +137,9 @@ flexbox 컨테이너에서 `justify-content` 유틸리티를 사용하여 기본
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 항목 정렬
+## Align items
 
-flexbox 컨테이너에서 `align-items` 유틸리티를 사용하여 교차 축 (시작할 y 축, `flex-direction : column`인 경우 x축)에서 플렉스 항목의 정렬을 변경합니다. `start` , `end` , `center` , `baseline` 또는 `stretch` (브라우저 기본값) 중에서 선택합니다.
+Use `align-items` utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex align-items-start mb-3" style="height: 100px">
@@ -178,7 +177,7 @@ flexbox 컨테이너에서 `align-items` 유틸리티를 사용하여 교차 축
 <div class="d-flex align-items-stretch">...</div>
 ```
 
-`align-items`에 대한 반응형 변형도 존재합니다.
+Responsive variations also exist for `align-items`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -192,9 +191,9 @@ flexbox 컨테이너에서 `align-items` 유틸리티를 사용하여 교차 축
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 자체 정렬
+## Align self
 
-flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시작할 y 축, `flex-direction : column`인 경우 x축)에서 정렬을 개별적으로 변경합니다. `align-items` 와 동일한 옵션 인 `start` , `end` , `center` , `baseline` 또는 `stretch` (브라우저 기본값) 중에서 선택합니다.
+Use `align-self` utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if `flex-direction: column`). Choose from the same options as `align-items`: `start`, `end`, `center`, `baseline`, or `stretch` (browser default).
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex mb-3" style="height: 100px">
@@ -232,7 +231,7 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 <div class="align-self-stretch">Aligned flex item</div>
 ```
 
-`align-self`에 대한 반응형 변형도 존재합니다.
+Responsive variations also exist for `align-self`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -246,9 +245,9 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 채우기
+## Fill
 
-일련의 형제 요소에 `.flex-fill` 클래스를 사용하면 사용 가능한 모든 가로 공간을 차지하면서 콘텐츠와 동일한 너비 (또는 콘텐츠가 테두리 상자를 초과하지 않는 너비)로 강제 설정합니다.
+Use the `.flex-fill` class on a series of sibling elements to force them into widths equal to their content (or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space.
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex">
@@ -258,7 +257,7 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 </div>
 {{< /example >}}
 
-`flex-fill`에 대한 반응형 변형도 존재합니다.
+Responsive variations also exist for `flex-fill`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -268,9 +267,9 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 팽창과 수축
+## Grow and shrink
 
-`.flex-grow- *` 유틸리티는 사용 가능한 공간을 꽉 채우기 위해 확장하는 플렉스 항목 입니다. 아래 예시에서 `.flex-grow-1` 요소는 가능한 모든 공간을 사용하고 나머지 두 개의 플렉스 항목은 필요한 공간만을 허용합니다.
+Use `.flex-grow-*` utilities to toggle a flex item's ability to grow to fill available space. In the example below, the `.flex-grow-1` elements uses all available space it can, while allowing the remaining two flex items their necessary space.
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex">
@@ -280,7 +279,7 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 </div>
 {{< /example >}}
 
-필요한 경우 `.flex-shrink- *` 유틸리티를 사용하여 플렉스 항목의 수축 기능을 전환합니다. 아래 예시에서 `.flex-shrink-1`이포함 된 두 번째 플렉스 항목은 해당 내용이 강제로 새로운 row로 감싸집니다. `.w-100`이포함 된 첫번째 플렉스 항목에 더 많은 공간을 허용하기 위해 "축소" 합니다.
+Use `.flex-shrink-*` utilities to toggle a flex item's ability to shrink if necessary. In the example below, the second flex item with `.flex-shrink-1` is forced to wrap its contents to a new line, "shrinking" to allow more space for the previous flex item with `.w-100`.
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex">
@@ -289,7 +288,7 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 </div>
 {{< /example >}}
 
-`flex-grow` 와 `flex-shrink`에 대한 반응형 변형도 존재합니다.
+Responsive variations also exist for `flex-grow` and `flex-shrink`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -300,9 +299,9 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 자동 마진
+## Auto margins
 
-Flexbox는 플렉스 정렬과 자동여백을 혼합할 때 꽤 멋진 일을 할 수 있습니다. 아래는 자동 마진을 통해 플렉스 항목을 제어하는 세 가지 예시입니다. 기본값 (자동 마진 없음), 두 항목을 오른쪽으로 밀기 ( `.me-auto` ), 두 항목을 왼쪽으로 밀기 ( `.ms-auto` ).
+Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (`.me-auto`), and pushing two items to the left (`.ms-auto`).
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex mb-3">
@@ -324,9 +323,9 @@ Flexbox는 플렉스 정렬과 자동여백을 혼합할 때 꽤 멋진 일을 �
 </div>
 {{< /example >}}
 
-### align-items 사용하기
+### With align-items
 
-`align-items` , `flex-direction : column` , `margin-top : auto` 또는 `margin-bottom : auto`를 혼합하여 하나의 플렉스 항목을 컨테이너의 상단 또는 하단으로 수직 이동 시킵니다.
+Vertically move one flex item to the top or bottom of a container by mixing `align-items`, `flex-direction: column`, and `margin-top: auto` or `margin-bottom: auto`.
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex align-items-start flex-column mb-3" style="height: 200px;">
@@ -342,9 +341,9 @@ Flexbox는 플렉스 정렬과 자동여백을 혼합할 때 꽤 멋진 일을 �
 </div>
 {{< /example >}}
 
-## 줄바꿈
+## Wrap
 
-flex 컨테이너에서 플렉스 항목이 줄바꿈되는 방식을 변경합니다. `.flex-nowrap`으로 줄바꿈을 없애거나 (브라우저 기본값), `.flex-wrap`으로 줄바꿈  또는 `.flex-wrap-reverse`로 역방향으로 줄바꿈 중에서 선택하십시오.
+Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with `.flex-nowrap`, wrapping with `.flex-wrap`, or reverse wrapping with `.flex-wrap-reverse`.
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex flex-nowrap" style="width: 8rem;">
@@ -413,7 +412,7 @@ flex 컨테이너에서 플렉스 항목이 줄바꿈되는 방식을 변경합�
 ```
 
 
-`flex-wrap`에 대한 반응형 변형도 존재합니다.
+Responsive variations also exist for `flex-wrap`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -425,9 +424,9 @@ flex 컨테이너에서 플렉스 항목이 줄바꿈되는 방식을 변경합�
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 순서
+## Order
 
-몇 가지 `order` 유틸리티로 특정 플렉스 항목의 _보이는_ 순서를 변경합니다. 플렉스 항목 순서를 처음 또는 마지막으로 만드는 옵션과 DOM 순서를 사용하기 위한 재설정 만 제공합니다. `order`는 0에서 5 사이의 값을 취하므로 필요한 추가 값은 사용자 정의 CSS에 추가하십시오.
+Change the _visual_ order of specific flex items with a handful of `order` utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As `order` takes any integer value from 0 to 5, add custom CSS for any additional values needed.
 
 {{< example class="bd-example-flex" >}}
 <div class="d-flex flex-nowrap">
@@ -437,7 +436,7 @@ flex 컨테이너에서 플렉스 항목이 줄바꿈되는 방식을 변경합�
 </div>
 {{< /example >}}
 
-`order`에 대한 반응형 변형도 존재합니다.
+Responsive variations also exist for `order`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -449,7 +448,7 @@ flex 컨테이너에서 플렉스 항목이 줄바꿈되는 방식을 변경합�
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-또한 각각 `order : -1` 및 `order : 6`을 적용하여 요소의 `순서`를 변경하는 반응형 `.order-first` 및 `.order-last` 클래스도 있습니다.
+Additionally there are also responsive `.order-first` and `.order-last` classes that change the `order` of an element by applying `order: -1` and `order: 6`, respectively.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -461,11 +460,11 @@ flex 컨테이너에서 플렉스 항목이 줄바꿈되는 방식을 변경합�
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 콘텐츠 정렬
+## Align content
 
-flexbox 컨테이너에서 `align-content` 유틸리티를 사용하여 플렉스 항목을 교차 축에서 _함께_ 정렬합니다. `start` (브라우저 기본값), `end`, `center`, `between`, `around` 또는 `stretch` 중에서 선택합니다. 이러한 유틸리티를 시연하기 위해 `flex-wrap: wrap`을 시행하고 플렉스 항목의 수를 늘렸습니다.
+Use `align-content` utilities on flexbox containers to align flex items _together_ on the cross axis. Choose from `start` (browser default), `end`, `center`, `between`, `around`, or `stretch`. To demonstrate these utilities, we've enforced `flex-wrap: wrap` and increased the number of flex items.
 
-**주의!** 이 속성은 플렉스 항목의 단일 행에서는 영향을 주지 않습니다.
+**Heads up!** This property has no effect on single rows of flex items.
 
 <div class="bd-example bd-example-flex">
   <div class="d-flex align-content-start flex-wrap mb-3" style="height: 200px">
@@ -613,7 +612,7 @@ flexbox 컨테이너에서 `align-content` 유틸리티를 사용하여 플렉�
 <div class="d-flex align-content-stretch flex-wrap">...</div>
 ```
 
-`align-content`에 대한 반응형 변형도 존재합니다.
+Responsive variations also exist for `align-content`.
 
 {{< markdown >}}
 {{< flex.inline >}}
@@ -628,9 +627,9 @@ flexbox 컨테이너에서 `align-content` 유틸리티를 사용하여 플렉�
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 미디어 객체
+## Media object
 
-Bootstrap4에서 [미디어 객체 컴포넌트](https://getbootstrap.com/docs/4.6/components/media-object/)를 복제 해오고 싶으십니까? 이전보다 훨씬 더 많은 유연성과 사용자 정의를 허용하는 몇 가지 플렉스 유틸리티를 사용하여 즉시 다시 만드세요.
+Looking to replicate the [media object component](https://getbootstrap.com/docs/4.6/components/media-object/) from Bootstrap 4? Recreate it in no time with a few flex utilities that allow even more flexibility and customization than before.
 
 {{< example >}}
 <div class="d-flex">
@@ -643,7 +642,7 @@ Bootstrap4에서 [미디어 객체 컴포넌트](https://getbootstrap.com/docs/4
 </div>
 {{< /example >}}
 
-이미지 옆에 컨텐츠를 세로로 가운데에 배치하고 싶다고 가정합니다:
+And say you want to vertically center the content next to the image:
 
 {{< example >}}
 <div class="d-flex align-items-center">
@@ -658,8 +657,8 @@ Bootstrap4에서 [미디어 객체 컴포넌트](https://getbootstrap.com/docs/4
 
 ## CSS
 
-### Sass 유틸리티 API
+### Sass utilities API
 
-Flexbox 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+Flexbox utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-flex" file="scss/_utilities.scss" >}}

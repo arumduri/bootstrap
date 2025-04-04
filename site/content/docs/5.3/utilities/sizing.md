@@ -1,15 +1,14 @@
 ---
 layout: docs
-title: 크기 조절
-title_en: Sizing
-description: 너비 및 높이 유틸리티를 사용하여 요소의 폭 또는 높이를 쉽게 조정 할 수 있습니다.
+title: Sizing
+description: Easily make an element as wide or as tall with our width and height utilities.
 group: utilities
 toc: true
 ---
 
-## 부모 상대적
+## Relative to the parent
 
-너비 및 높이 유틸리티는 `_utilities.scss`의 유틸리티 API에서 생성됩니다. 기본적으로 `25 %` , `50 %` , `75 %` , `100 %` 및 `auto`에 대한 지원을 포함합니다. 여기에서 다른 유틸리티를 생성해야 하므로 해당 값을 수정하십시오.
+Width and height utilities are generated from the utility API in `_utilities.scss`. Includes support for `25%`, `50%`, `75%`, `100%`, and `auto` by default. Modify those values as you need to generate different utilities here.
 
 {{< example class="bd-example-flex" >}}
 <div class="w-25 p-3">Width 25%</div>
@@ -29,7 +28,7 @@ toc: true
 </div>
 {{< /example >}}
 
-필요에 따라 `max-width: 100%;` 및 `max-height: 100%;` 유틸리티를 사용할 수도 있습니다.
+You can also use `max-width: 100%;` and `max-height: 100%;` utilities as needed.
 
 {{< example class="bd-example-flex" >}}
 <div style="width: 50%; height: 100px;">
@@ -43,9 +42,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 뷰포트 상대적
+## Relative to the viewport
 
-유틸리티를 사용하여 뷰포트에 상대적인 너비와 높이를 설정할 수 있습니다.
+You can also use utilities to set the width and height relative to the viewport.
 
 ```html
 <div class="min-vw-100">Min-width 100vw</div>
@@ -56,8 +55,8 @@ toc: true
 
 ## CSS
 
-### Sass 유틸리티 API
+### Sass utilities API
 
-크기 조절 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+Sizing utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-sizing" file="scss/_utilities.scss" >}}
