@@ -1,6 +1,5 @@
 files:
-  - source: site/content/
+  - source: /site/content/docs/**/*.md
     ignore:
       - site/content/docs/*/examples
-      - '*.html'
-    translation: site/content-%two_letters_code%
+    translation: /site/content/docs_%two_letters_code%/**/%original_file_name%
