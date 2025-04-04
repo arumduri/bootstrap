@@ -1,24 +1,23 @@
 ---
 layout: docs
-title: 중단점
-title_en: Breakpoints
-description: Breakpoints는 Bootstrap의 반응형 레이아웃이 뷰포트 크기 또는 기기에서 어떻게 작동 할지 결정하는 사용자가 정의 가능한 넓이입니다.
+title: Breakpoints
+description: Breakpoints are customizable widths that determine how your responsive layout behaves across device or viewport sizes in Bootstrap.
 group: layout
 aliases: "/docs/5.3/layout/"
 toc: true
 ---
 
-## 핵심 개념
+## Core concepts
 
-- **Breakpoints는 반응형 디자인의 컴포넌트입니다.** Breakpoints를 사용하여 레이아웃을 특정 뷰포트 크기 또는 기기에서 조정할 수 있는 시기를 제어합니다.
+- **Breakpoints are the building blocks of responsive design.** Use them to control when your layout can be adapted at a particular viewport or device size.
 
-- **미디어 쿼리를 사용하여 Breakpoints로 CSS를 설계하세요.** 미디어 쿼리는 브라우저 및 운영체제의 매개 변수 세트를 기반으로 조건부로 스타일을 적용 할 수있는 CSS의 기능입니다. 미디어 쿼리에서는 일반적으로 `min-width`를 사용합니다.
+- **Use media queries to architect your CSS by breakpoint.** Media queries are a feature of CSS that allow you to conditionally apply styles based on a set of browser and operating system parameters. We most commonly use `min-width` in our media queries.
 
-- **반응형 디자인과 모바일 우선이 목표입니다.** Bootstrap의 CSS는 최소한의 스타일을 적용하여 가장 작은 Breakpoints에서 레이아웃이 작동하도록 설정 한 후 스타일에 계층을 적용하여 더 큰 기기에 맞게 해당 디자인이 조정 되도록 하는 것을 목표로 합니다. 이를 통해 CSS를 최적화하고 렌더링 시간을 개선하며 방텍스트에게 훌륭한 경험을 제공합니다.
+- **Mobile first, responsive design is the goal.** Bootstrap's CSS aims to apply the bare minimum of styles to make a layout work at the smallest breakpoint, and then layers on styles to adjust that design for larger devices. This optimizes your CSS, improves rendering time, and provides a great experience for your visitors.
 
-## 사용 가능한 중단점
+## Available breakpoints
 
-Bootstrap에는 반응형 제작을 위해 _grid tiers_ 라고 하는 6개의 Breakpoints가 포함되어 있습니다. 이러한 breakpoints는 Sass 소스 파일을 사용할 경우 사용자가 지정할 수 있습니다.
+Bootstrap includes six default breakpoints, sometimes referred to as _grid tiers_, for building responsively. These breakpoints can be customized if you're using our source Sass files.
 
 {{< bs-table "table" >}}
 | Breakpoint | Class infix | Dimensions |
@@ -32,21 +31,21 @@ Bootstrap에는 반응형 제작을 위해 _grid tiers_ 라고 하는 6개의 Br
 {{< /bs-table >}}
 
 
-각각의 정의된 breakpoint는 넓이가 12의 배수인 containers를 문제없이 유지하기 위해 선택 되었습니다. breakpoint는 또한 공통 기기의 크기 및 뷰포트 수치의 자식 집합을 대표하며 모든 사용 사례 또는 장치를 특별히 대상하지 않습니다. 대신, 이 사전정의된 범위들은 거의 모든 기기에서 사용할 수 있는 강력하고 일관된 기반을 제공합니다.
+Each breakpoint was chosen to comfortably hold containers whose widths are multiples of 12. Breakpoints are also representative of a subset of common device sizes and viewport dimensions—they don't specifically target every use case or device. Instead, the ranges provide a strong and consistent foundation to build on for nearly any device.
 
-중단점은 Sass를 통해 사용자 정의 할 수 있습니다. `_variables.scss` 스타일 시트의 Sass 맵에서 찾을 수 있습니다.
+These breakpoints are customizable via Sass—you'll find them in a Sass map in our `_variables.scss` stylesheet.
 
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
 
-Sass 맵과 변수를 수정하는 방법에 대한 자세한 정보와 예시는 [그리드 문서의 CSS 문단]({{< docsref "/layout/grid#css" >}})을 참고하세요.
+For more information and examples on how to modify our Sass maps and variables, please refer to [the CSS section of the Grid documentation]({{< docsref "/layout/grid#css" >}}).
 
-## 미디어 쿼리
+## Media queries
 
-Bootstrap은 모바일 우선으로 개발 되었으므로 몇 가지 [미디어 쿼리](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)를 이용하여 레이아웃에 적합한 breakpoints를 만듭니다. 이러한 breakpoints는 대부분 최소 뷰포트 넓이를 기반으로하며 뷰포트를 변경함에 따라 요소를 확장 할 수 있습니다.
+Since Bootstrap is developed to be mobile first, we use a handful of [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) to create sensible breakpoints for our layouts and interfaces. These breakpoints are mostly based on minimum viewport widths and allow us to scale up elements as the viewport changes.
 
 ### Min-width
 
-Bootstrap은 주로 레이아웃, 그리드 시스템 및 컴포넌트가 있는 Sass 소스 파일에서 다음과 같은 미디어쿼리 범위 또는 중단점을 사용합니다.
+Bootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.
 
 ```scss
 // Source mixins
@@ -70,7 +69,8 @@ Bootstrap은 주로 레이아웃, 그리드 시스템 및 컴포넌트가 있는
   }
 }
 ```
-이러한 Sass 믹스인은 Sass 변수에 선언된 값을 사용한 뒤 컴파일되어 CSS로 번역됩니다. 예를 들면:
+
+These Sass mixins translate in our compiled CSS using the values declared in our Sass variables. For example:
 
 ```scss
 // X-Small devices (portrait phones, less than 576px)
@@ -94,7 +94,7 @@ Bootstrap은 주로 레이아웃, 그리드 시스템 및 컴포넌트가 있는
 
 ### Max-width
 
-때때로 다른 방향 (주어진 화면 크기 _또는 더 작은_)으로 이동하는 미디어 쿼리를 사용합니다:
+We occasionally use media queries that go in the other direction (the given screen size _or smaller_):
 
 ```scss
 // No media query necessary for xs breakpoint as it's effectively `@media (max-width: 0) { ... }`
@@ -111,7 +111,8 @@ Bootstrap은 주로 레이아웃, 그리드 시스템 및 컴포넌트가 있는
   }
 }
 ```
-이러한 믹스인은 선언된 중단점을 갖고 와서 `.02px`를 뺀 뒤 `max-width` 값으로 사용합니다. 예를 들면:
+
+These mixins take those declared breakpoints, subtract `.02px` from them, and use them as our `max-width` values. For example:
 
 ```scss
 // `xs` returns only a ruleset and no media query
@@ -137,9 +138,9 @@ Bootstrap은 주로 레이아웃, 그리드 시스템 및 컴포넌트가 있는
 {{< partial "callouts/info-mediaqueries-breakpoints.md" >}}
 {{< /callout >}}
 
-### 단일 중단점
+### Single breakpoint
 
-최소 및 최대 중단점 넓이를 사용하여 화면 크기의 단일 세그먼트를 대상으로하는 미디어 쿼리 및 믹스인도 있습니다.
+There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.
 
 ```scss
 @include media-breakpoint-only(xs) { ... }
@@ -150,21 +151,21 @@ Bootstrap은 주로 레이아웃, 그리드 시스템 및 컴포넌트가 있는
 @include media-breakpoint-only(xxl) { ... }
 ```
 
-예를들어 `@include media-breakpoint-only(md) { ... }` 결과는 다음과 같습니다:
+For example the `@include media-breakpoint-only(md) { ... }` will result in :
 
 ```scss
 @media (min-width: 768px) and (max-width: 991.98px) { ... }
 ```
 
-### 중단점 사이
+### Between breakpoints
 
-마찬가지로 미디어쿼리는 여러 breakpoint 넓이에 걸쳐있을 수 있습니다.
+Similarly, media queries may span multiple breakpoint widths:
 
 ```scss
 @include media-breakpoint-between(md, xl) { ... }
 ```
 
-결과:
+Which results in:
 
 ```scss
 // Example

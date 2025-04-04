@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: 오버플로우
-title_en: Overflow
-description: 콘텐츠가 요소를 오버플로우 하는 방식을 빠르게 구현 하려면 이러한 단축 유틸리티를 사용하세요.
+title: Overflow
+description: Use these shorthand utilities for quickly configuring how content overflows an element.
 group: utilities
+toc: true
 ---
 
 ## Overflow
 
-네 가지 기본값과 클래스를 사용하여 즉시 `overflow` 속성을 조절합니다. 이러한 클래스는 기본적으로 반응형이 아닙니다.
+Adjust the `overflow` property on the fly with four default values and classes. These classes are not responsive by default.
 
 <div class="bd-example d-md-flex">
   <div class="overflow-auto p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary" style="max-width: 260px; max-height: 100px;">
@@ -34,7 +34,7 @@ group: utilities
 
 ### `overflow-x`
 
-콘텐츠가 가로로 넘치도록 영향을 주려면 `overflow-x` 속성을 조정합니다.
+Adjust the `overflow-x` property to affect the overflow of content horizontally.
 
 <div class="bd-example d-md-flex">
   <div class="overflow-x-auto p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px; white-space: nowrap;">
@@ -64,7 +64,7 @@ group: utilities
 
 ### `overflow-y`
 
-콘텐츠가 세로로 넘치도록 영향을 주려면 `overflow-y` 속성을 조정합니다.
+Adjust the `overflow-y` property to affect the overflow of content vertically.
 
 <div class="bd-example d-md-flex">
   <div class="overflow-y-auto p-3 mb-3 mb-md-0 me-md-3 bg-body-tertiary w-100" style="max-width: 200px; max-height: 100px;">
@@ -88,12 +88,12 @@ group: utilities
 <div class="overflow-y-scroll">...</div>
 ```
 
-Sass 변수를 사용하여 `_variables.scss`에서 `$overflows` 변수를 변경하여 overflow 유틸리티를 사용자 정의할 수 있습니다.
+Using Sass variables, you may customize the overflow utilities by changing the `$overflows` variable in `_variables.scss`.
 
 ## CSS
 
-### Sass 유틸리티 API
+### Sass utilities API
 
-Overflow 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법을 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+Overflow utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-overflow" file="scss/_utilities.scss" >}}

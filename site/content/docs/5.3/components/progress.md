@@ -1,27 +1,26 @@
 ---
 layout: docs
-title: 프로그레스
-title_en: Progress
-description: 스택형 막대, 애니메이션 배경 및 텍스트 레이블을 지원하는 Bootstrap 사용자 정의의 프로그레스 바를 위한 문서 및 예시입니다.
+title: Progress
+description: Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
 group: components
 toc: true
 ---
 
 {{< callout info >}}
-**v5.3.0의 새로운 마크업 -** 진행률 표시줄에 대한 이전 HTML 구조를 더 이상 사용하지 않고 더 접근하기 쉬운 구조로 대체했습니다. 이전 구조는 v6까지 계속 작동합니다. [마이그레이션 가이드에서 변경된 내용을 확인하세요.]({{< docsref "/migration#improved-markup-for-progress-bars" >}})
+**New markup in v5.3.0 —** We've deprecated the previous HTML structure for progress bars and replaced it with a more accessible one. The previous structure will continue to work until v6. [See what's changed in our migration guide.]({{< docsref "/migration#improved-markup-for-progress-bars" >}})
 {{< /callout >}}
 
-## 작동 원리
+## How it works
 
-프로그레스 컴포넌트는 두 개의 HTML 요소와 너비를 설정하는 몇 가지 CSS, 몇 가지 속성으로 만들어집니다. [HTML5 `<progress>` 요소](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)를 사용하지 않으므로 진행률 표시줄을 쌓고, 애니메이션을 적용하고, 그 위에 텍스트 레이블을 배치할 수 있습니다.
+Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use [the HTML5 `<progress>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress), ensuring you can stack progress bars, animate them, and place text labels over them.
 
-- 진행률 표시줄의 최대 값을 나타내기 위해 `.progress`를 래퍼로 사용합니다.
-- `.progress` 래퍼에는 접근 가능한 이름(`aria-label`, `aria-labelledby` 등 사용)을 포함하여 `role="progressbar"` 및 `aria` 속성이 필요합니다.
-- 내부의 `.progress-bar`는 시각적 표시줄과 레이블에만 사용합니다.
-- `.progress-bar`의 너비를 설정하려면 인라인 스타일, 유틸리티 클래스 또는 사용자 정의 CSS가 필요합니다.
-- 여러 개의 누적 진행률 표시줄을 만들 수 있는 특별한 `.progress-stacked` 클래스를 제공합니다.
+- We use the `.progress` as a wrapper to indicate the max value of the progress bar.
+- The `.progress` wrapper also requires a `role="progressbar"` and `aria` attributes to make it accessible, including an accessible name (using `aria-label`, `aria-labelledby`, or similar).
+- We use the inner `.progress-bar` purely for the visual bar and label.
+- The `.progress-bar` requires an inline style, utility class, or custom CSS to set its width.
+- We provide a special `.progress-stacked` class to create multiple/stacked progress bars.
 
-이 모든 것을 합치면 다음과 같은 예제가 됩니다.
+Put that all together, and you have the following examples.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
@@ -41,11 +40,11 @@ toc: true
 </div>
 {{< /example >}}
 
-## 표시줄 크기 조정
+## Bar sizing
 
-### 너비
+### Width
 
-Bootstrap은 몇 가지 [너비 설정을 위한 유틸리티]({{< docsref "/utilities/sizing" >}})를 제공합니다. 필요에 따라 `.progress-bar`의 너비를 빠르게 구성하는 데 도움이 될 수 있습니다.
+Bootstrap provides a handful of [utilities for setting width]({{< docsref "/utilities/sizing" >}}). Depending on your needs, these may help with quickly configuring the width of the `.progress-bar`.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
@@ -53,9 +52,9 @@ Bootstrap은 몇 가지 [너비 설정을 위한 유틸리티]({{< docsref "/uti
 </div>
 {{< /example >}}
 
-### 높이
+### Height
 
-`.progress`에는 `height` 값만 설정되어 있기 때문에, 이 값을 변경하면 내부 `.progress-bar`는 그에 따라 자동으로 크기가 변경됩니다.
+You only set a `height` value on the `.progress` container, so if you change that value, the inner `.progress-bar` will automatically resize accordingly.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 1px">
@@ -66,9 +65,9 @@ Bootstrap은 몇 가지 [너비 설정을 위한 유틸리티]({{< docsref "/uti
 </div>
 {{< /example >}}
 
-## 라벨
+## Labels
 
-`.progress-bar` 안에 텍스트를 배치하고 프로그레스 바에 라벨을 추가합니다.
+Add labels to your progress bars by placing text within the `.progress-bar`.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
@@ -76,7 +75,7 @@ Bootstrap은 몇 가지 [너비 설정을 위한 유틸리티]({{< docsref "/uti
 </div>
 {{< /example >}}
 
-기본적으로 `.progress-bar` 내부의 콘텐츠는 `.overflow: hidden`으로 제어되므로 표시줄 밖으로 흘러나오지 않습니다. 진행률 표시줄이 레이블보다 짧으면 콘텐츠가 막혀서 읽을 수 없게 될 수 있습니다. 이 동작을 변경하려면 [오버플로 유틸리티]({{< docsref "/utilities/overflow" >}})에서 `.overflow-visible`을 사용할 수 있지만, 텍스트가 계속 읽을 수 있도록 명시적인 [텍스트 색상]({{< docsref "/utilities/colors#colors" >}})도 정의해야 합니다. 현재 이 접근 방식은 [색상 모드]({{< docsref "/customize/color-modes" >}})를 고려하지 않는다는 점에 유의하세요.
+Note that by default, the content inside the `.progress-bar` is controlled with `overflow: hidden`, so it doesn't bleed out of the bar. If your progress bar is shorter than its label, the content will be capped and may become unreadable. To change this behavior, you can use `.overflow-visible` from the [overflow utilities]({{< docsref "/utilities/overflow" >}}), but make sure to also define an explicit [text color]({{< docsref "/utilities/colors#colors" >}}) so the text remains readable. Be aware though that currently this approach does not take into account [color modes]({{< docsref "/customize/color-modes" >}}).
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
@@ -84,9 +83,9 @@ Bootstrap은 몇 가지 [너비 설정을 위한 유틸리티]({{< docsref "/uti
 </div>
 {{< /example >}}
 
-## 배경색
+## Backgrounds
 
-Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 외형을 변경합니다.
+Use background utility classes to change the appearance of individual progress bars.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
@@ -107,7 +106,7 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-사용자 지정 배경색으로 진행률 표시줄에 레이블을 추가하는 경우에는 적절한 [텍스트 색상]({{< docsref "/utilities/colors#colors" >}})도 설정해야 레이블이 가독성을 유지하고 충분한 대비를 유지할 수 있습니다.
+If you're adding labels to progress bars with a custom background color, make sure to also set an appropriate [text color]({{< docsref "/utilities/colors#colors" >}}), so the labels remain readable and have sufficient contrast.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
@@ -124,7 +123,7 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 </div>
 {{< /example >}}
 
-또는 새로운 결합형 [색상 및 배경]({{< docsref "/helpers/color-background" >}}) 도우미 클래스를 사용할 수도 있습니다.
+Alternatively, you can use the new combined [color and background]({{< docsref "/helpers/color-background" >}}) helper classes.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
@@ -132,9 +131,9 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 </div>
 {{< /example >}}
 
-## 다수
+## Multiple bars
 
-`.progress-stacked`가 있는 컨테이너 안에 여러 개의 진행률 컴포넌트를 포함시켜 하나의 누적된 진행률 표시줄을 만들 수 있습니다. 이 경우 진행률 표시줄의 시각적 너비를 설정하는 스타일링은 `.progress-bar`가 아닌 `.progress` 요소에 적용해야 합니다.
+You can include multiple progress components inside a container with `.progress-stacked` to create a single stacked progress bar. Note that in this case, the styling to set the visual width of the progress bar *must* be applied to the `.progress` elements, rather than the `.progress-bar`s.
 
 {{< example >}}
 <div class="progress-stacked">
@@ -150,9 +149,9 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 </div>
 {{< /example >}}
 
-## 스트라이프
+## Striped
 
-임의의 `.progress-bar`에 `.progress-bar-striped`를 추가해 프로그레스 바의 배경색에 CSS 그라데이션으로 스트라이프를 적용합니다.
+Add `.progress-bar-striped` to any `.progress-bar` to apply a stripe via CSS gradient over the progress bar's background color.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
@@ -172,9 +171,9 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 </div>
 {{< /example >}}
 
-## 애니메이션 스트라이프
+## Animated stripes
 
-스트라이프 형태의 그라데이션을 애니메이션화할 수도 있습니다. `.progress-bar`에 `.progress-bar-animated`를 추가하면 CSS3 애니메이션으로 줄무늬를 오른쪽에서 왼쪽으로 애니메이션 시킬 수 있습니다.
+The striped gradient can also be animated. Add `.progress-bar-animated` to `.progress-bar` to animate the stripes right to left via CSS3 animations.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
@@ -184,20 +183,20 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 
 ## CSS
 
-### 변수
+### Variables
 
 {{< added-in "5.2.0" >}}
 
-Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 진행률 표시줄은 이제 `.progress`에서 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 향상시킵니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
+As part of Bootstrap's evolving CSS variables approach, progress bars now use local CSS variables on `.progress` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="progress-css-vars" file="scss/_progress.scss" >}}
 
-### Sass 변수
+### Sass variables
 
 {{< scss-docs name="progress-variables" file="scss/_variables.scss" >}}
 
-### 키프레임
+### Keyframes
 
-CSS 애니메이션화를 위해 `scss/_progress-bar.scss`에 포함되어 있는 `.progress-bar-animated`를 사용합니다.
+Used for creating the CSS animations for `.progress-bar-animated`. Included in `scss/_progress-bar.scss`.
 
 {{< scss-docs name="progress-keyframes" file="scss/_progress.scss" >}}

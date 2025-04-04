@@ -1,0 +1,162 @@
+---
+layout: docs
+title: 텍스트
+title_en: Text
+description: 정렬, 줄바꿈, 굵기 등을 제어하는 ​​일반적인 텍스트 유틸리티에 대한 문서 및 예제입니다.
+group: utilities
+toc: true
+---
+
+## 텍스트 정렬
+
+텍스트 정렬 클래스를 사용하여 텍스트를 컴포넌트에 쉽게 재정렬할 수 있습니다. 시작, 끝 및 중앙 정렬의 경우 그리드 시스템과 동일한 뷰포트 너비 중단점을 사용하는 반응형 클래스를 사용할 수 있습니다.
+
+{{< example >}}
+<p class="text-start">Start aligned text on all viewport sizes.</p>
+<p class="text-center">Center aligned text on all viewport sizes.</p>
+<p class="text-end">End aligned text on all viewport sizes.</p>
+
+<p class="text-sm-end">End aligned text on viewports sized SM (small) or wider.</p>
+<p class="text-md-end">End aligned text on viewports sized MD (medium) or wider.</p>
+<p class="text-lg-end">End aligned text on viewports sized LG (large) or wider.</p>
+<p class="text-xl-end">End aligned text on viewports sized XL (extra large) or wider.</p>
+<p class="text-xxl-end">End aligned text on viewports sized XXL (extra extra large) or wider.</p>
+{{< /example >}}
+
+{{< callout info >}}
+정렬된 텍스트에 대한 유틸리티 클래스는 제공하지 않습니다. 미학적으로 정렬된 텍스트는 매력적으로 보일 수 있지만 단어 간격을 무작위로 만들기 떄문에 가독성이 저하됩니다.
+
+{{< /callout >}}
+
+## 텍스트 줄바꿈과 오버플로우
+
+`.text-wrap` 클래스로 줄바꿈하세요.
+
+{{< example >}}
+<div class="badge text-bg-primary text-wrap" style="width: 6rem;">
+  This text should wrap.
+</div>
+{{< /example >}}
+
+Prevent text from wrapping with a `.text-nowrap` class.
+
+{{< example >}}
+<div class="text-nowrap bg-body-secondary border" style="width: 8rem;">
+  This text should overflow the parent.
+</div>
+{{< /example >}}
+
+## 단어 기준 줄바꿈
+
+`.text-break`를 사용하여 `word-wrap: break-word` 및 `word-break: break-word`를 설정하여 긴 텍스트 문자열이 컴포넌트의 레이아웃을 깨뜨리는 것을 막을 수 있습니다. 더 광범위한 브라우저 지원을 위해 보다 일반적인 `overflow-wrap` 대신 `word-wrap`을 사용하고 flex 컨테이너 문제를 피하기 위해 더 이상 사용되지 않는 `word-break: break-word`를 추가합니다.
+
+{{< example >}}
+<p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
+{{< /example >}}
+
+{{< callout warning >}}
+가장 많이 사용되는 RTL 언어인 [아랍어에서는 단어 기준 줄바꿈이 불가능하다는 점](https://rtlstyling.com/posts/rtl-styling#3.-line-break)을 유의해주세요. 따라서 RTL 컴파일 CSS에서는 `.text-break`가 제거되었습니다.
+{{< /callout >}}
+
+## 텍스트 대소문자
+텍스트 대소문자 클래스를 사용하여 컴포넌트의 텍스트를 변환하세요.
+
+{{< example >}}
+<p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="text-capitalize">CapiTaliZed text.</p>
+{{< /example >}}
+
+`.text-capitalize`가 각 단어의 첫 글자만 변경하고 다른 글자의 대소문자는 영향을 받지 않는다는 점에 유의하세요.
+
+## 글꼴 크기
+
+텍스트의 '글꼴 크기'를 빠르게 변경하세요. 우리의 제목 클래스 (예: `.h1`–`.h6`)는 `font-size`, `font-weight`, `line-height`를 적용하지만 이러한 유틸리티는 `font-size`만 적용합니다. 이러한 유틸리티의 크기는 HTML의 제목 요소와 일치하므로 숫자가 증가하면 크기가 줄어듭니다.
+
+{{< example >}}
+<p class="fs-1">.fs-1 text</p>
+<p class="fs-2">.fs-2 text</p>
+<p class="fs-3">.fs-3 text</p>
+<p class="fs-4">.fs-4 text</p>
+<p class="fs-5">.fs-5 text</p>
+<p class="fs-6">.fs-6 text</p>
+{{< /example >}}
+
+`$font-sizes` Sass 맵을 수정하여 사용 가능한 `font-size`를 사용자 정의하세요.
+
+## 글꼴 굵기와 기울임체
+
+이 유틸리티를 사용하여 텍스트의 `font-weight`나 `font-style`를 빠르게 변경하세요. `font-style` 유틸리티는 `.fst-*`로 축약되고 `font-weight` 유틸리티는 `.fw-*`로 축약됩니다.
+
+{{< example >}}
+<p class="fw-bold">Bold text.</p>
+<p class="fw-bolder">Bolder weight text (relative to the parent element).</p>
+<p class="fw-semibold">Semibold weight text.</p>
+<p class="fw-medium">Medium weight text.</p>
+<p class="fw-normal">Normal weight text.</p>
+<p class="fw-light">Light weight text.</p>
+<p class="fw-lighter">Lighter weight text (relative to the parent element).</p>
+<p class="fst-italic">Italic text.</p>
+<p class="fst-normal">Text with normal font style</p>
+{{< /example >}}
+
+## 행간
+
+`.lh-*` 유틸리티를 사용하여 행간을 변경하세요.
+
+{{< example >}}
+<p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-sm">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-base">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+<p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
+{{< /example >}}
+
+## 고정폭
+
+`.font-monospace`를 사용하여 선택 영역을 고정폭 글꼴 스택으로 변경하세요.
+
+{{< example >}}
+<p class="font-monospace">This is in monospace</p>
+{{< /example >}}
+
+## 색상 재설정
+
+부모 항목의 색상을 상속하도록 `.text-reset`로 텍스트나 링크의 색상을 초기화하세요.
+
+{{< example >}}
+<p class="text-body-secondary">
+  Secondary body text with a <a href="#" class="text-reset">reset link</a>.
+</p>
+{{< /example >}}
+
+## 텍스트 꾸미기
+
+텍스트 꾸미기 클래스를 사용하여 컴포넌트의 텍스트를 장식하세요.
+
+{{< example >}}
+<p class="text-decoration-underline">This text has a line underneath it.</p>
+<p class="text-decoration-line-through">This text has a line going through it.</p>
+<a href="#" class="text-decoration-none">This link has its text decoration removed</a>
+{{< /example >}}
+
+## CSS
+
+### Sass 변수
+
+Sass 변수와 관련된 기본 유형 및 글꼴입니다:
+
+{{< scss-docs name="font-variables" file="scss/_variables.scss" >}}
+
+### Sass 맵
+
+글꼴 크기 유틸리티는 유틸리티 API와 함께 이 맵에서 생성됩니다.
+
+{{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
+
+{{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}
+
+### 유틸리티 API
+
+글꼴 및 텍스트 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+
+{{< scss-docs name="utils-text" file="scss/_utilities.scss" >}}

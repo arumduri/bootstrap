@@ -1,19 +1,18 @@
 ---
 layout: docs
-title: 테두리
-title_en: Borders
-description: 테두리 유틸리티를 사용하여 요소의 테두리 및 테두리 반경 스타일을 빠르게 지정합니다. 이미지, 버튼 또는 기타 요소에 적합합니다.
+title: Borders
+description: Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
 group: utilities
 toc: true
 ---
 
-## 테두리
+## Border
 
-테두리 유틸리티를 사용하여 요소에 테두리를 추가하거나 제거합니다. 모든 테두리를 선택하거나 한 번에 하나씩 선택 하세요.
+Use border utilities to add or remove an element's borders. Choose from all borders or one at a time.
 
-### 테두리 방향
+### Additive
 
-커스텀 요소에 테두리를 추가하세요:
+Add borders to custom elements:
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border"></span>
@@ -23,9 +22,9 @@ toc: true
 <span class="border-start"></span>
 {{< /example >}}
 
-### 반전 방향
+### Subtractive
 
-또는 테두리를 제거하세요:
+Or remove borders:
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-0"></span>
@@ -35,13 +34,13 @@ toc: true
 <span class="border border-start-0"></span>
 {{< /example >}}
 
-## 색상
+## Color
 
 {{< callout info >}}
-원래 `$theme-colors` Sass 맵에서 생성된 `.border-*`와 같은 테두리 유틸리티는 아직 색상 모드에 반응하지 않지만, `.border-*-subtle` 유틸리티는 반응합니다. 이 문제는 v6에서 해결될 예정입니다.
+Border utilities like `.border-*` that generated from our original `$theme-colors` Sass map don't yet respond to color modes, however, any `.border-*-subtle` utility will. This will be resolved in v6.
 {{< /callout >}}
 
-테마 색상에 사전정의된 유틸리티를 사용하여 테두리 색상을 변경하십시오.
+Change the border color using utilities built on our theme colors.
 
 {{< example class="bd-example-border-utils" >}}
 {{< border.inline >}}
@@ -54,7 +53,7 @@ toc: true
 <span class="border border-white"></span>
 {{< /example >}}
 
-또는 컴포넌트의 기본 `border-color`를 수정합니다:
+Or modify the default `border-color` of a component:
 
 {{< example >}}
 <div class="mb-4">
@@ -71,15 +70,15 @@ toc: true
 </div>
 {{< /example >}}
 
-## 불투명도
+## Opacity
 
 {{< added-in "5.2.0" >}}
 
-Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 생성됩니다. 이를 통해 컴파일 없이 실시간으로 색상을 변경하고 동적 알파 투명도를 변경할 수 있습니다.
+Bootstrap `border-{color}` utilities are generated with Sass using CSS variables. This allows for real-time color changes without compilation and dynamic alpha transparency changes.
 
-### 작동 방식
+### How it works
 
-기본 `.border-success` 유틸리티를 살펴보겠습니다.
+Consider our default `.border-success` utility.
 
 ```css
 .border-success {
@@ -88,18 +87,18 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 }
 ```
 
-여기서는 `--bs-success`(`25, 135, 84` 값) CSS 변수의 RGB 버전을 사용하고 알파 투명도를 위해 두 번째 CSS 변수인 `--bs-border-opacity`를 첨부했습니다(로컬 CSS 변수 덕분에 기본값은 `1`입니다). 즉, 이제 `.border-success`를 사용할 때마다 계산된 `color` 값은 `rgba(25, 135, 84, 1)`가 됩니다. 각 `.border-*` 클래스 내부의 로컬 CSS 변수는 상속 문제를 방지하므로 유틸리티의 중첩된 인스턴스는 자동으로 알파 투명도가 수정되지 않습니다.
+We use an RGB version of our `--bs-success` (with the value of `25, 135, 84`) CSS variable and attached a second CSS variable, `--bs-border-opacity`, for the alpha transparency (with a default value `1` thanks to a local CSS variable). That means anytime you use `.border-success` now, your computed `color` value is `rgba(25, 135, 84, 1)`. The local CSS variable inside each `.border-*` class avoids inheritance issues so nested instances of the utilities don't automatically have a modified alpha transparency.
 
-### 예시
+### Example
 
-이 불투명도를 변경하려면 사용자 정의 스타일 또는 인라인 스타일을 통해 `--bs-border-opacity`를 재정의하면 됩니다.
+To change that opacity, override `--bs-border-opacity` via custom styles or inline styles.
 
 {{< example >}}
 <div class="border border-success p-2 mb-2">This is default success border</div>
 <div class="border border-success p-2" style="--bs-border-opacity: .5;">This is 50% opacity success border</div>
 {{< /example >}}
 
-또는 `.border-opacity` 유틸리티 중 하나를 선택해도 됩니다:
+Or, choose from any of the `.border-opacity` utilities:
 
 {{< example >}}
 <div class="border border-success p-2 mb-2">This is default success border</div>
@@ -109,7 +108,7 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 <div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div>
 {{< /example >}}
 
-## 두깨
+## Width
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-1"></span>
@@ -119,9 +118,9 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 <span class="border border-5"></span>
 {{< /example >}}
 
-## 모서리
+## Radius
 
-요소에 클래스를 추가하여 모서리를 쉽게 둥근형태로 만듭니다.
+Add classes to an element to easily round its corners.
 
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded" title="Example rounded image" >}}
@@ -133,9 +132,9 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 {{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
 {{< /example >}}
 
-### 크기
+### Sizes
 
-스케일링 클래스를 사용해 더 둥글거나 덜 둥근 모서리로 지정합니다. `0`에서 `5`까지 지정할 수 있으며 유틸리티 API를 수정하여 구성 할 수 있습니다.
+Use the scaling classes for larger or smaller rounded corners. Sizes range from `0` to `5`, and can be configured by modifying the utilities API.
 
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image" >}}
@@ -156,39 +155,39 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 
 ## CSS
 
-### 변수
+### Variables
 
 {{< added-in "5.2.0" >}}
 
 {{< scss-docs name="root-border-var" file="scss/_root.scss" >}}
 
-### Sass 변수
+### Sass variables
 
 {{< scss-docs name="border-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="border-radius-variables" file="scss/_variables.scss" >}}
 
-`.border-*-subtle` 유틸리티에서 `border-color`를 밝고 다크 모드로 설정하기 위한 변수입니다:
+Variables for setting `border-color` in `.border-*-subtle` utilities in light and dark mode:
 
 {{< scss-docs name="theme-border-subtle-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-border-subtle-dark-variables" file="scss/_variables-dark.scss" >}}
 
-### Sass 맵
+### Sass maps
 
-컬러 모드 적응형 테두리 색상은 Sass 맵으로도 사용할 수 있습니다:
+Color mode adaptive border colors are also available as a Sass map:
 
 {{< scss-docs name="theme-border-subtle-map" file="scss/_maps.scss" >}}
 
 {{< scss-docs name="theme-border-subtle-dark-map" file="scss/_maps.scss" >}}
 
-### Sass 믹스인
+### Sass mixins
 
 {{< scss-docs name="border-radius-mixins" file="scss/mixins/_border-radius.scss" >}}
 
-### Sass 유틸리티 API
+### Sass utilities API
 
-테두리 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.] ({{< docsref "/utilities/api # using-the-api" >}})
+Border utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-borders" file="scss/_utilities.scss" >}}
 

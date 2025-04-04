@@ -1,37 +1,36 @@
 ---
 layout: docs
-title: 색상
-title_en: Color
-description: Bootstrap은 우리의 스타일과 컴포넌트를 테마로 한 광범위한 컬러 시스템을 지원합니다. 어떤 프로젝트라도 보다 포괄적으로 재정의 및 확장이 가능합니다.
+title: Color
+description: Bootstrap is supported by an extensive color system that themes our styles and components. This enables more comprehensive customization and extension for any project.
 group: customize
 toc: true
 ---
 
-## 색상
+## Colors
 
 {{< added-in "5.3.0" >}}
 
-Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세해졌습니다. `secondary` 및 `tertiary` 텍스트 및 배경색에 대한 새로운 변수와 테마 색상에 대한 `{color}-bg-subtle`, `{color}-border-subtle` 및 `{color}-text-emphasis`가 추가되었습니다. 이러한 새로운 색상은 밝고 어두운 등 다양한 색상 모드에서 더 쉽게 사용자 정의할 수 있도록 하기 위해 Sass 및 CSS 변수(색상 맵이나 유틸리티 클래스 제외)를 통해 사용할 수 있습니다. 이 새로운 변수는 `:root`에 전역적으로 설정되며, 원래 테마 색상은 변경되지 않은 채 새로운 어두운 색상 모드에 맞게 조정됩니다.
+Bootstrap's color palette has continued to expand and become more nuanced in v5.3.0. We've added new variables for `secondary` and `tertiary` text and background colors, plus `{color}-bg-subtle`, `{color}-border-subtle`, and `{color}-text-emphasis` for our theme colors. These new colors are available through Sass and CSS variables (but not our color maps or utility classes) with the express goal of making it easier to customize across multiple colors modes like light and dark. These new variables are globally set on `:root` and are adapted for our new dark color mode while our original theme colors remain unchanged.
 
-`-rgb`로 끝나는 색상은 `rgb()` 및 `rgba()` 색상 모드에서 사용할 `red`, `green`, `blue` 값을 제공합니다. (예: `rgba(var(--bs-secondary-bg-rgb), .5)`)
+Colors ending in `-rgb` provide the `red, green, blue` values for use in `rgb()` and `rgba()` color modes. For example, `rgba(var(--bs-secondary-bg-rgb), .5)`.
 
 {{< callout warning>}}
-**주의!** 새로운 보조(secondary) 및 참고(tertiary) 색상과 기존 보조 테마 색상, 밝은 테마 색상과 어두운 테마 색상이 혼동될 가능성이 있습니다. 이 문제는 v6에서 해결될 것으로 예상됩니다.
+**Heads up!** There's some potential confusion with our new secondary and tertiary colors, and our existing secondary theme color, as well as our light and dark theme colors. Expect this to be ironed out in v6.
 {{< /callout >}}
 
 <div class="table-responsive">
   <table class="table table-swatches">
     <thead>
       <tr>
-        <th style="width: 340px;">설명</th>
-        <th style="width: 200px;" class="ps-0">예시</th>
-        <th>변수</th>
+        <th style="width: 340px;">Description</th>
+        <th style="width: 200px;" class="ps-0">Swatch</th>
+        <th>Variables</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td rowspan="2">
-          {{< markdown >}}**Body —** 컴포넌트를 포함한 기본 전경(색상) 및 배경입니다.{{< /markdown >}}
+          {{< markdown >}}**Body —** Default foreground (color) and background, including components.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2" style="background-color: var(--bs-body-color);">&nbsp;</div>
@@ -50,7 +49,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td rowspan="2">
-          {{< markdown >}}**Secondary —** 더 밝은 텍스트를 원하면 `color` 옵션을, 구분선 및 비활성화된 컴포넌트 상태를 표시하려면 `bg` 옵션을 사용하세요.{{< /markdown >}}
+          {{< markdown >}}**Secondary —** Use the `color` option for lighter text. Use the `bg` option for dividers and to indicate disabled component states.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2" style="background-color: var(--bs-secondary-color);">&nbsp;</div>
@@ -69,7 +68,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td rowspan="2">
-          {{< markdown >}}**Tertiary —** 더 밝은 색상의 텍스트를 원하시면 `color` 옵션을 사용하세요. `bg` 옵션을 사용하여 호버 상태, 액센트 및 우물의 배경 스타일을 지정하세요.{{< /markdown >}}
+          {{< markdown >}}**Tertiary —** Use the `color` option for even lighter text. Use the `bg` option to style backgrounds for hover states, accents, and wells.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2" style="background-color: var(--bs-tertiary-color);">&nbsp;</div>
@@ -88,7 +87,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td>
-          {{< markdown >}}**Emphasis —** 대비가 높은 텍스트의 경우에 사용됩니다. 배경에는 적용되지 않습니다.{{< /markdown >}}
+          {{< markdown >}}**Emphasis —** For higher contrast text. Not applicable for backgrounds.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2" style="background-color: var(--bs-emphasis-color);">&nbsp;</div>
@@ -99,7 +98,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td>
-          {{< markdown >}}**Border —** 컴포넌트 테두리, 디바이더 및 규칙의 경우에 사용됩니다. 배경과 `-rgba()` 값을 가진 배경과 혼합하려면 `--bs-border-color-transparent`를 사용하세요.{{< /markdown >}}
+          {{< markdown >}}**Border —** For component borders, dividers, and rules. Use `--bs-border-color-translucent` to blend with backgrounds with an `rgba()` value.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2" style="background-color: var(--bs-border-color);">&nbsp;</div>
@@ -110,7 +109,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Primary —** 하이퍼링크, 포커스 스타일, 컴포넌트 및 양식 활성 상태에 사용되는 기본 테마 색상입니다.{{< /markdown >}}
+          {{< markdown >}}**Primary —** Main theme color, used for hyperlinks, focus styles, and component and form active states.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-primary">&nbsp;</div>
@@ -145,7 +144,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Success —** 긍정적이거나 성공적인 작업 및 정보에 사용되는 테마 색상입니다.{{< /markdown >}}
+          {{< markdown >}}**Success —** Theme color used for positive or successful actions and information.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-success">&nbsp;</div>
@@ -180,7 +179,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Danger —** 오류 및 위험한 행동에 사용되는 테마 색상입니다.{{< /markdown >}}
+          {{< markdown >}}**Danger —** Theme color used for errors and dangerous actions.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-danger">&nbsp;</div>
@@ -215,7 +214,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Warning —** 덜 위험한 경고 메시지에 사용되는 테마 색상입니다.{{< /markdown >}}
+          {{< markdown >}}**Warning —** Theme color used for non-destructive warning messages.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-warning">&nbsp;</div>
@@ -250,7 +249,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Info —** 중립적이거나 정보성 콘텐츠에 사용되는 테마 색상입니다.{{< /markdown >}}
+          {{< markdown >}}**Info —** Theme color used for neutral and informative content.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-info">&nbsp;</div>
@@ -285,7 +284,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Light —** 대비가 적은 색상을 위한 추가 테마 옵션입니다.{{< /markdown >}}
+          {{< markdown >}}**Light —** Additional theme option for less contrasting colors.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-light">&nbsp;</div>
@@ -320,7 +319,7 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
       </tr>
       <tr>
         <td rowspan="4">
-          {{< markdown >}}**Dark —** 대비가 높은 색상을 위한 추가 테마 옵션입니다.{{< /markdown >}}
+          {{< markdown >}}**Dark —** Additional theme option for higher contrasting colors.{{< /markdown >}}
         </td>
         <td class="ps-0">
           <div class="p-3 rounded-2 bg-dark">&nbsp;</div>
@@ -357,9 +356,9 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
   </table>
 </div>
 
-### 새로운 색상 사용
+### Using the new colors
 
-이러한 새로운 색상은 CSS 변수와 유틸리티 클래스(예: `--bs-primary-bg-subtle` 및 `.bg-primary-subtle`)를 통해 액세스할 수 있으므로 변수를 사용하여 자신만의 CSS 규칙을 작성하거나 클래스를 통해 스타일을 빠르게 적용할 수 있습니다. 이 유틸리티는 색상과 관련된 CSS 변수를 사용하여 구축되며, 다크 모드에 맞게 사용자 정의되므로 기본적으로 색상 모드에 맞게 조정됩니다.
+These new colors are accessible via CSS variables and utility classes—like `--bs-primary-bg-subtle` and `.bg-primary-subtle`—allowing you to compose your own CSS rules with the variables, or to quickly apply styles via classes. The utilities are built with the color's associated CSS variables, and since we customize those CSS variables for dark mode, they are also adaptive to color mode by default.
 
 {{< example >}}
 <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
@@ -367,9 +366,9 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
 </div>
 {{< /example >}}
 
-### 테마 색상
+### Theme colors
 
-모든 색상의 자식 집합을 사용하여 색 구성표를 만들기 위한 더 작은 색상 팔레트를 만들며, Sass 변수와 Bootstrap의 `scss/_variables.scss` 파일의 Sass 맵으로도 사용할 수 있습니다.
+We use a subset of all colors to create a smaller color palette for generating color schemes, also available as Sass variables and a Sass map in Bootstrap's `scss/_variables.scss` file.
 
 <div class="row">
   {{< theme-colors.inline >}}
@@ -381,17 +380,17 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
   {{< /theme-colors.inline >}}
 </div>
 
-이 색상들은 모두 Sass 맵인 `$theme-colors`로 이용할 수 있습니다.
+All these colors are available as a Sass map, `$theme-colors`.
 
 {{< scss-docs name="theme-colors-map" file="scss/_variables.scss" >}}
 
-이 색상을 변경하는 방법은 [Sass 맵과 반복 문서]({{< docsref "/customize/sass#maps-and-loops" >}})를 확인해 주세요.
+Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to modify these colors.
 
-## 모든 색상
+### All colors
 
-모든 Bootstrap 색상은 `scss/_variables.scss` 파일의 Sass 변수와 Sass 맵으로 이용할 수 있습니다. 파일 크기 증가를 막기 위해서 이런 변수마다 텍스트나 배경색 클래스를 만들지 않습니다. 그 대신에, 이런 색의 자식 집합을 [테마 팔레트](#테마-색상)로 선택하고 있습니다.
+All Bootstrap colors are available as Sass variables and a Sass map in `scss/_variables.scss` file. To avoid increased file sizes, we don't create text or background color classes for each of these variables. Instead, we choose a subset of these colors for a [theme palette](#theme-colors).
 
-색을 재정의할 때는 색상 대비에 주의해 주세요. 아래 표시된 것처럼 메인 색상에 현재 색상에 대해, 흰색에 대해, 검은색에 대해서 각각 세 가지 대비 비율을 추가했습니다.
+Be sure to monitor contrast ratios as you customize colors. As shown below, we've added three contrast ratios to each of the main colors—one for the swatch's current colors, one for against white, and one for against black.
 
 <div class="row font-monospace">
   {{< theme-colors.inline >}}
@@ -432,31 +431,32 @@ Bootstrap의 색상 팔레트는 v5.3.0에서 계속 확장되고 더욱 세세�
   </div>
 </div>
 
-### Sass 참고 사항
+### Notes on Sass
 
-Sass는 프로그램적으로 변수를 만들 수 없어서 모든 색상을 위한 변수를 수동으로 만듭니다. 중간 값을 지정하고 (예를 들어, `$blue-500`), Sass의 `mix()` 색상 함수로 색조(밝게) 혹은 음영(어둡게)의 사용자 정의 색상 함수를 사용하고 있습니다.
+Sass cannot programmatically generate variables, so we manually created variables for every tint and shade ourselves. We specify the midpoint value (e.g., `$blue-500`) and use custom color functions to tint (lighten) or shade (darken) our colors via Sass's `mix()` color function.
 
-`mix()`의 사용은 `lighten()`과 `darken()`간에 조금 다릅니다. 전자는 지정한 색상을 흰색과 검은색으로 섞지만, 후자는 각 색의 밝기 값을 조정하기만 하면 됩니다. 그 결과, [CodePen 데모](https://codepen.io/emdeoh/pen/zYOQOPB)에서 보이는 것처럼 더 완전한 색을 얻을 수 있습니다.
+Using `mix()` is not the same as `lighten()` and `darken()`—the former blends the specified color with white or black, while the latter only adjusts the lightness value of each color. The result is a much more complete suite of colors, as [shown in this CodePen demo](https://codepen.io/emdeoh/pen/zYOQOPB).
 
-`tint-color()`와 `shade-color()` 함수에서는 `mix()`를 `$theme-color-interval` 변수와 함께 사용합니다. 전체 소스 코드는 `scss/_functions.scss`와 `scss/_variables.scss` 파일을 참조해 주세요.
+Our `tint-color()` and `shade-color()` functions use `mix()` alongside our `$theme-color-interval` variable, which specifies a stepped percentage value for each mixed color we produce. See the `scss/_functions.scss` and `scss/_variables.scss` files for the full source code.
 
-## 색상 Sass 맵
+## Color Sass maps
 
-Bootstrap의 소스 Sass 파일에는 색상과 그 16진수 값의 목록을 빠르고 쉽게 반복하기 위한 세가지 맵이 포함되어 있습니다.
+Bootstrap's source Sass files include three maps to help you quickly and easily loop over a list of colors and their hex values.
 
-- `$colors`는 이용 가능한 기본(`500`) 색상을 나열합니다.
-- `$theme-colors`는 의미 있는 이름을 가진 테마 색상을 나열합니다.(아래 그림 참조)
-- `$grays`는 모든 회색의 색조와 음영을 나열합니다.
+- `$colors` lists all our available base (`500`) colors
+- `$theme-colors` lists all semantically named theme colors (shown below)
+- `$grays` lists all tints and shades of gray
 
-`scss/_variables.scss` 안에는, Bootstrap의 색상 변수와 Sass 맵이 있습니다. 다음은 `$colors` Sass 맵의 예시입니다:
+Within `scss/_variables.scss`, you'll find Bootstrap's color variables and Sass map. Here's an example of the `$colors` Sass map:
 
 {{< scss-docs name="colors-map" file="scss/_variables.scss" >}}
 
-맵에서 값을 추가, 삭제, 수정하여 다른 많은 컴포넌트에서의 값을 사용하는 방법을 업데이트합니다. 안타깝게도 현시점에서는 _모든_ 컴포넌트가 이 Sass 맵을 이용하고 있는 것은 아닙니다. 추후 업데이트 시, 이 점을 개선하도록 노력하겠습니다. 그때까지는 Sass 맵과 `${color}` 변수를 이용해 주세요.
+Add, remove, or modify values within the map to update how they're used in many other components. Unfortunately at this time, not _every_ component utilizes this Sass map. Future updates will strive to improve upon this. Until then, plan on making use of the `${color}` variables and this Sass map.
 
-### 예시
+### Example
 
-Sass에서 이를 사용하는 방법입니다:
+Here's how you can use these in your Sass:
+
 ```scss
 .alpha { color: $purple; }
 .beta {
@@ -465,20 +465,19 @@ Sass에서 이를 사용하는 방법입니다:
 }
 ```
 
-[색상]({{< docsref "/utilities/colors" >}}) 및 [배경]({{< docsref "/utilities/background" >}}) 유틸리티 클래스는 `500` 색상 값을 사용하여 `color` 및 `background-color`를 설정하는 데 사용할 수도 있습니다.
+[Color]({{< docsref "/utilities/colors" >}}) and [background]({{< docsref "/utilities/background" >}}) utility classes are also available for setting `color` and `background-color` using the `500` color values.
 
-## 유틸리티 생성하기
+## Generating utilities
 
 {{< added-in "5.1.0" >}}
 
-Bootstrap에는 모든 색상 변수에 대한 `color` 및 `background-color` 유틸리티가 포함되어 있지 않지만 [유틸리티 API]({{< docsref "/utilities/api" >}}) 및 확장된 v5.1.0에 Sass 맵이 추가되어 있습니다.
+Bootstrap doesn't include `color` and `background-color` utilities for every color variable, but you can generate these yourself with our [utility API]({{< docsref "/utilities/api" >}}) and our extended Sass maps added in v5.1.0.
 
+1. To start, make sure you've imported our functions, variables, mixins, and utilities.
+2. Use our `map-merge-multiple()` function to quickly merge multiple Sass maps together in a new map.
+3. Merge this new combined map to extend any utility with a `{color}-{level}` class name.
 
-1. 시작하려면 함수, 변수, 믹스인, 유틸리티를 가져왔는지 확인하세요.
-2. `map-merge-multiple()` 함수를 사용하여 여러 Sass 맵을 새 맵에서 빠르게 병합하세요.
-3. 이 새로운 결합 맵을 병합하여 `{color}-{level}` 클래스 이름을 가진 유틸리티를 확장하세요.
-
-다음은 위의 단계를 사용하여 텍스트 색상 유틸리티 (예: `.text-purple-500`)를 생성하는 예입니다.
+Here's an example that generates text color utilities (e.g., `.text-purple-500`) using the above steps.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -510,4 +509,4 @@ $utilities: map-merge(
 @import "bootstrap/scss/utilities/api";
 ```
 
-이렇게 하면 모든 색상과 레벨에 대해 새로운 `.text-{color}-{level}` 유틸리티가 생성됩니다. 다른 유틸리티 및 속성에 대해서도 동일한 작업을 수행할 수 있습니다.
+This will generate new `.text-{color}-{level}` utilities for every color and level. You can do the same for any other utility and property as well.

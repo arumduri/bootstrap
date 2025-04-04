@@ -1,38 +1,38 @@
 ---
 layout: docs
 title: Reboot
-description: 단일 파일에 있는 요소별 CSS 변경 모음인 Reboot는 Bootstrap을 초기에 빌드하는 우아하고 일관되며 간단한 기준선을 제공합니다.
+description: Reboot, a collection of element-specific CSS changes in a single file, kickstart Bootstrap to provide an elegant, consistent, and simple baseline to build upon.
 group: content
 aliases: "/docs/5.3/content/"
 toc: true
 ---
 
-## 접근
+## Approach
 
-Reboot는 Normalize를 기반으로 빌드되어 요소 선택자만 사용하여 다소 독선적인 스타일을 가진 많은 HTML 요소를 제공합니다. 추가 스타일링은 클래스에서만 수행됩니다. 예를 들어 더 간단한 기준선을 위해 일부 `<table>` 스타일을 재부팅하고 나중에 `.table`, `.table-border` 등을 제공합니다.
+Reboot builds upon Normalize, providing many HTML elements with somewhat opinionated styles using only element selectors. Additional styling is done only with classes. For example, we reboot some `<table>` styles for a simpler baseline and later provide `.table`, `.table-bordered`, and more.
 
-다음은 재부팅에서 Reboot할 항목을 선택하는 지침과 이유입니다:
+Here are our guidelines and reasons for choosing what to override in Reboot:
 
-- 확장 가능한 컴포넌트 간격에 `em` 대신`rem`을 사용하도록 일부 브라우저의 기본값을 업데이트합니다.
-- `margin-top`을 제외합니다. 수직 margin은 구조적으로 불안정하며, 예상치 못한 결과를 가져올 수 있습니다. 더 중요한 것은 단방향 `margin`이 더 단순한 멘탈 모델이기 때문입니다.
-- 더 쉬운 기기 간 크기 확장을 위해서 블럭 요소의 `margin`에 `rem`을 사용합니다.
-- 가능하면 `inherit`를 사용하여 `font` 관련 속성의 선언을 최소한으로 유지합니다.
+- Update some browser default values to use `rem`s instead of `em`s for scalable component spacing.
+- Avoid `margin-top`. Vertical margins can collapse, yielding unexpected results. More importantly though, a single direction of `margin` is a simpler mental model.
+- For easier scaling across device sizes, block elements should use `rem`s for `margin`s.
+- Keep declarations of `font`-related properties to a minimum, using `inherit` whenever possible.
 
-## CSS 변수
+## CSS variables
 
 {{< added-in "5.2.0" >}}
 
-v5.1.1에서는 모든 CSS 번들(`bootstrap.css`, `bootstrap-reboot.css`, `bootstrap-grid.css` 포함)에서 필수 `@import`를 표준화하여 `_root.scss`를 포함하도록 했습니다. 이렇게 하면 해당 번들에서 사용되는 변수의 수에 관계없이 모든 번들에 `:root` 수준의 CSS 변수가 추가됩니다. 궁극적으로 Bootstrap 5는 시간이 지남에 따라 더 많은 [CSS 변수]({{< docsref "/customize/css-variables">}})를 추가하여 Sass를 항상 다시 컴파일할 필요 없이 더 많은 실시간 사용자 정의 기능을 제공할 것입니다. 우리의 접근 방식은 소스 Sass 변수를 가져와 CSS 변수로 변환하는 것입니다. 이렇게 하면 CSS 변수를 사용하지 않더라도 Sass의 모든 기능을 사용할 수 있습니다. **이 작업은 아직 진행 중이며 완전히 구현하는 데 시간이 걸립니다.**
+With v5.1.1, we standardized our required `@import`s across all our CSS bundles (including `bootstrap.css`, `bootstrap-reboot.css`, and `bootstrap-grid.css`) to include `_root.scss`. This adds `:root` level CSS variables to all bundles, regardless of how many of them are used in that bundle. Ultimately Bootstrap 5 will continue to see more [CSS variables]({{< docsref "/customize/css-variables" >}}) added over time, in order to provide more real-time customization without the need to always recompile Sass. Our approach is to take our source Sass variables and transform them into CSS variables. That way, even if you don't use CSS variables, you still have all the power of Sass. **This is still in-progress and will take time to fully implement.**
 
-예를 들어 일반적인 `<body>` 스타일에 대한 `:root` CSS 변수를 생각해 보겠습니다:
+For example, consider these `:root` CSS variables for common `<body>` styles:
 
 {{< scss-docs name="root-body-variables" file="scss/_root.scss" >}}
 
-실제로 이러한 변수는 다음과 같이 Reboot에 적용됩니다:
+In practice, those variables are then applied in Reboot like so:
 
 {{< scss-docs name="reboot-body-rules" file="scss/_reboot.scss" >}}
 
-이를 통해 원하는 대로 실시간 커스터마이징을 할 수 있습니다:
+Which allows you to make real-time customizations however you like:
 
 ```html
 <body style="--bs-body-color: #333;">
@@ -40,18 +40,18 @@ v5.1.1에서는 모든 CSS 번들(`bootstrap.css`, `bootstrap-reboot.css`, `boot
 </body>
 ```
 
-## 페이지 기본값
+## Page defaults
 
-페이지 전체에 더 나은 기본값을 제공하도록 `<html>` 및 `<body>` 요소가 업데이트되었습니다. 좀 더 구체적으로 설명하면:
+The `<html>` and `<body>` elements are updated to provide better page-wide defaults. More specifically:
 
-- `box-sizing`는 `*::before` 및 `*::after`이후, `border-box`를 포함한 모든 요소에서 전역적으로 설정됩니다. 이렇게 하면 패딩이나 테두리로 인해 요소의 선언된 너비가 초과되지 않습니다.
-- `<html>`에는 기본 `font-size`가 선언되지 않고 16px(브라우저 기본값)가 사용됩니다. `<body>`에는 미디어 쿼리를 통해 반응형 글꼴 크기를 쉽게 조정하는 동시에 사용자 기본 설정을 존중하고 접근성을 높일 수 있도록`font-size: 1rem`이 적용됩니다. 이 브라우저 기본값은 `$font-size-root` 변수를 수정하여 재정의할 수 있습니다.
-- `<body>`는 또한 `font-family`, `font-weight`, `line-height` 및 `color`을 설정합니다. 이는 나중에 일부 폼 요소에서 상속되어 글꼴 불일치를 방지합니다.
-- 안전을 위해 `<body>`에는 선언된 `background-color`이 있으며 기본값은 `#fff`입니다.
+- The `box-sizing` is globally set on every element—including `*::before` and `*::after`, to `border-box`. This ensures that the declared width of element is never exceeded due to padding or border.
+  - No base `font-size` is declared on the `<html>`, but `16px` is assumed (the browser default). `font-size: 1rem` is applied on the `<body>` for easy responsive type-scaling via media queries while respecting user preferences and ensuring a more accessible approach. This browser default can be overridden by modifying the `$font-size-root` variable.
+- The `<body>` also sets a global `font-family`, `font-weight`, `line-height`, and `color`. This is inherited later by some form elements to prevent font inconsistencies.
+- For safety, the `<body>` has a declared `background-color`, defaulting to `#fff`.
 
-## 기본 글꼴 스택
+## Native font stack
 
-Bootstrap은 모든 장치 및 OS에서 최적의 텍스트 렌더링을 위해 "기본 글꼴 스택" 또는 "시스템 글꼴 스택"을 사용합니다. 이러한 시스템 글꼴은 화면 렌더링 개선, 가변 글꼴 지원 등을 포함하여 오늘날의 장치를 염두에 두고 특별히 설계되었습니다. [*Smashing Magazine*의 글에서 기본 글꼴 스택](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/)에 대해서 자세히 알아보세요.
+Bootstrap utilizes a "native font stack" or "system font stack" for optimum text rendering on every device and OS. These system fonts have been designed specifically with today's devices in mind, with improved rendering on screens, variable font support, and more. Read more about [native font stacks in this *Smashing Magazine* article](https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/).
 
 ```scss
 $font-family-sans-serif:
@@ -76,13 +76,13 @@ $font-family-sans-serif:
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 
-글꼴 스택에는 이모지 글꼴이 포함되어 있기 때문에 많은 일반적인 기호/딩뱃 유니코드 텍스트가 여러 색상의 그림 텍스트로 렌더링됩니다. 브라우저/플랫폼의 기본 이모티콘 글꼴에 사용된 스타일에 따라 모양이 달라지며 CSS `color` 스타일의 영향을 받지 않습니다.
+Note that because the font stack includes emoji fonts, many common symbol/dingbat Unicode characters will be rendered as multicolored pictographs. Their appearance will vary, depending on the style used in the browser/platform's native emoji font, and they won't be affected by any CSS `color` styles.
 
-이 `font-family`는 자동으로 `<body`에 적용되며 Bootstrap을 통해 자동으로 전역 상속됩니다. 전역 `font-family`를 바꾸려면 `$font-family-base`를 업데이트한 다음 Bootstrap을 다시 컴파일해주세요.
+This `font-family` is applied to the `<body>` and automatically inherited globally throughout Bootstrap. To switch the global `font-family`, update `$font-family-base` and recompile Bootstrap.
 
-## 제목
+## Headings
 
-`<h1>`—`<h6>`와 같은 모든 제목 요소는 `margin-top`이 제거되며, `margin-bottom: .5rem`이 추가되고 `line-height`가 적용됩니다. 제목은 기본적으로 `color`를 상속하지만 선택적 CSS 변수인 `--bs-heading-color`를 통해 재정의할 수도 있습니다.
+All heading elements—`<h1>`—`<h6>` have their `margin-top` removed, `margin-bottom: .5rem` set, and `line-height` tightened. While headings inherit their `color` by default, you can also override it via optional CSS variable, `--bs-heading-color`.
 
 {{< bs-table "table" >}}
 | Heading | Example |
@@ -95,38 +95,38 @@ $font-family-sans-serif:
 | `<h6></h6>` | <span class="h6">h6. Bootstrap heading</span> |
 {{< /bs-table >}}
 
-## 단락
+## Paragraphs
 
-모든 `<p>` 요소의 `margin-top`이 제거되고 `margin-bottom: 1rem`이 설정되어 간격을 쉽게 배치할 수 있습니다.uo
+All `<p>` elements have their `margin-top` removed and `margin-bottom: 1rem` set for easy spacing.
 
 {{< example >}}
 <p>This is an example paragraph.</p>
 {{< /example >}}
 
-## 링크
+## Links
 
-링크에는 기본 `color`와 밑줄이 적용됩니다. 링크는 `:hover` 시 변경되지만 누군가 링크를 `:visited`(방문)했는지 여부에 따라 변경되지는 않습니다. 또한 특별한 `:focus` 스타일도 적용되지 않습니다.
+Links have a default `color` and underline applied. While links change on `:hover`, they don't change based on whether someone `:visited` the link. They also receive no special `:focus` styles.
 
 {{< example >}}
 <a href="#">This is an example link</a>
 {{< /example >}}
 
-v5.3.x부터 링크 `color`는 `rgba()`와 새로운 `-rgb` CSS 변수를 사용하여 설정되므로 링크 색상 불투명도를 쉽게 사용자 정의할 수 있습니다. 링크 색상 불투명도는 `--bs-link-opacity` CSS 변수를 사용하여 변경할 수 있습니다:
+As of v5.3.x, link `color` is set using `rgba()` and new `-rgb` CSS variables, allowing for easy customization of link color opacity. Change the link color opacity with the `--bs-link-opacity` CSS variable:
 
 {{< example >}}
 <a href="#" style="--bs-link-opacity: .5">This is an example link</a>
 {{< /example >}}
 
 
-플레이스홀더 링크(`href`가 없는 링크)는 보다 구체적인 선택자가 적용되며 `color` 및 `text-decoration`이 기본값으로 재설정됩니다.
+Placeholder links—those without an `href`—are targeted with a more specific selector and have their `color` and `text-decoration` reset to their default values.
 
 {{< example >}}
 <a>This is a placeholder link</a>
 {{< /example >}}
 
-## 수평 규칙
+## Horizontal rules
 
-`<hr>` 요소가 단순화되었습니다. 브라우저 기본값과 유사하게 `<hr>`는 `border-top`을 통해 스타일이 지정되고, 기본 `opacity: .25`를 가지며, 부모를 통해 `color`이 설정된 경우를 포함하여 `color`을 통해 `border-color`을 자동으로 상속받습니다. 텍스트, 테두리 및 불투명도 유틸리티를 사용하여 수정할 수 있습니다.
+The `<hr>` element has been simplified. Similar to browser defaults, `<hr>`s are styled via `border-top`, have a default `opacity: .25`, and automatically inherit their `border-color` via `color`, including when `color` is set via the parent. They can be modified with text, border, and opacity utilities.
 
 {{< example >}}
 <hr>
@@ -139,9 +139,9 @@ v5.3.x부터 링크 `color`는 `rgba()`와 새로운 `-rgb` CSS 변수를 사용
 <hr class="border border-primary border-3 opacity-75">
 {{< /example >}}
 
-## 목록
+## Lists
 
-모든 목록(`<ul>`, `<ol>`, `<dl>`)에는 `margin-top`이 제거되고 `margin-bottom: 1rem`이 적용됩니다. 중첩된 목록에는 `margin-bottom`이 없습니다. 또한`<ul>` 및 `<ol>` 요소에서 `padding-left`를 재설정했습니다.
+All lists—`<ul>`, `<ol>`, and `<dl>`—have their `margin-top` removed and a `margin-bottom: 1rem`. Nested lists have no `margin-bottom`. We've also reset the `padding-left` on `<ul>` and `<ol>` elements.
 
 <div class="bd-example">
 {{< markdown >}}
@@ -159,7 +159,7 @@ v5.3.x부터 링크 `color`는 `rgba()`와 새로운 `-rgb` CSS 변수를 사용
 {{< /markdown >}}
 </div>
 
-더 간단한 스타일, 명확한 계층 구조, 더 나은 간격을 위해 설명 목록에는 업데이트된 `margin`이 포함되어 있습니다. `<dd>`의 `margin-left`를 `0`으로 재설정하고 `margin-bottom: .5rem`을 추가합니다. `<dt>`는 **굵게 표시**됩니다.
+For simpler styling, clear hierarchy, and better spacing, description lists have updated `margin`s. `<dd>`s reset `margin-left` to `0` and add `margin-bottom: .5rem`. `<dt>`s are **bolded**.
 
 <div class="bd-example">
   <dl>
@@ -173,17 +173,17 @@ v5.3.x부터 링크 `color`는 `rgba()`와 새로운 `-rgb` CSS 변수를 사용
   </dl>
 </div>
 
-## 인라인 코드
+## Inline code
 
-인라인 코드 스니펫을 `<code>`로 묶습니다. HTML 꺾쇠 괄호를 이스케이프해야 합니다.
+Wrap inline snippets of code with `<code>`. Be sure to escape HTML angle brackets.
 
 {{< example >}}
 For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {{< /example >}}
 
-## 코드 블록
+## Code blocks
 
-여러 줄의 코드에는 `<pre>`를 사용하세요. 다시 한 번 올바른 렌더링을 위해 코드에서 꺾쇠 괄호를 이스케이프해야 합니다. `<pre>` 요소는 `margin-top`을 제거하고 `margin-bottom`에 `rem` 단위를 사용하도록 재설정됩니다.
+Use `<pre>`s for multiple lines of code. Once again, be sure to escape any angle brackets in the code for proper rendering. The `<pre>` element is reset to remove its `margin-top` and use `rem` units for its `margin-bottom`.
 
 {{< example >}}
 <pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
@@ -191,34 +191,34 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 </code></pre>
 {{< /example >}}
 
-## 변수
+## Variables
 
-변수를 나타내려면 `<var>` 태그를 사용하세요.
+For indicating variables use the `<var>` tag.
 
 {{< example >}}
 <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
 {{< /example >}}
 
-## 사용자 입력
+## User input
 
-일반적으로 키보드를 통해 입력되는 입력을 나타내려면 `<kbd>`를 사용해주세요.
+Use the `<kbd>` to indicate input that is typically entered via keyboard.
 
 {{< example >}}
 To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
 To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 {{< /example >}}
 
-## 출력 예시
+## Sample output
 
-프로그램의 출력 예시를 나타내려면 `<samp>` 태그를 사용해주세요.
+For indicating sample output from a program use the `<samp>` tag.
 
 {{< example >}}
 <samp>This text is meant to be treated as sample output from a computer program.</samp>
 {{< /example >}}
 
-## 표
+## Tables
 
-표는 스타일 `<caption>`, 테두리 축소 및 전체적으로 일관된 `text-align`을 위해 약간 조정됩니다. 테두리, 패딩 등에 대한 추가 변경 사항은 [`.table` 클래스]({{< docsref "/content/tables" >}})와 함께 제공됩니다.
+Tables are slightly adjusted to style `<caption>`s, collapse borders, and ensure consistent `text-align` throughout. Additional changes for borders, padding, and more come with [the `.table` class]({{< docsref "/content/tables" >}}).
 
 {{< example >}}
 <table>
@@ -256,18 +256,18 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 </table>
 {{< /example >}}
 
-## 폼
+## Forms
 
-더 간단한 기본 스타일을 위해 다양한 폼 요소가 Reboot되었습니다. 다음은 가장 눈에 띄는 변경 사항입니다:
+Various form elements have been rebooted for simpler base styles. Here are some of the most notable changes:
 
-- `<fieldset>`에는 테두리, 패딩 또는 여백이 없으므로 개별 입력 또는 입력 그룹의 래퍼로 쉽게 사용할 수 있습니다.
-- 필드셋과 마찬가지로 `<legend>`도 일종의 제목으로 표시되도록 스타일이 변경되었습니다.
-- `<label>`이 `display: inline-block`으로 설정되어 `margin`이 적용될 수 있습니다.
-- `<input>`, `<select>`, `<textarea>`, `<button>`은 대부분 Normalize에 의해 처리되지만 Reboot는 `margin`을 제거하고 `line-height: inherit`도 설정합니다.
-- 가로로 크기를 조정하면 페이지 레이아웃이 "깨지는" 경우가 많으므로 `<textarea>`은 세로로만 크기를 조정할 수 있도록 수정되었습니다.
-- `<button>`과 `<input>` 버튼 요소는 `:not(:disabled)`일 때 `cursor : pointer`를 갖습니다.
+- `<fieldset>`s have no borders, padding, or margin so they can be easily used as wrappers for individual inputs or groups of inputs.
+- `<legend>`s, like fieldsets, have also been restyled to be displayed as a heading of sorts.
+- `<label>`s are set to `display: inline-block` to allow `margin` to be applied.
+- `<input>`s, `<select>`s, `<textarea>`s, and `<button>`s are mostly addressed by Normalize, but Reboot removes their `margin` and sets `line-height: inherit`, too.
+- `<textarea>`s are modified to only be resizable vertically as horizontal resizing often "breaks" page layout.
+- `<button>`s and `<input>` button elements have `cursor: pointer` when `:not(:disabled)`.
 
-이러한 변경 사항 등은 아래에 설명되어 있습니다.
+These changes, and more, are demonstrated below.
 
 {{< callout warning >}}
 {{< partial "callouts/warning-input-support.md" >}}
@@ -395,19 +395,19 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
   </fieldset>
 </form>
 
-### 버튼 포인터
+### Pointers on buttons
 
-Reboot에는 기본 커서를 `pointer`로 변경하는 `role="button"`의 개선 사항이 포함되어 있습니다. 이 속성을 요소에 추가하면 요소가 상호 작용함을 나타내는 데에 도움이 됩니다. 이 역할은 자체 `cursor` 변경 사항을 갖는 `<button>` 요소에는 필요하지 않습니다.
+Reboot includes an enhancement for `role="button"` to change the default cursor to `pointer`. Add this attribute to elements to help indicate elements are interactive. This role isn't necessary for `<button>` elements, which get their own `cursor` change.
 
 {{< example >}}
 <span role="button" tabindex="0">Non-button element button</span>
 {{< /example >}}
 
-## 기타 요소
+## Misc elements
 
-### 주소
+### Address
 
-`<address>` 요소가 업데이트되어 브라우저 기본 `font-style`이 `italic`에서 `normal`로 재설정됩니다. 이제` line-height`도 상속되고 `margin-bottom: 1rem`이 추가되었습니다. `<address>`는 가장 가까운 조상 (또는 전체 작업)의 연락처 정보를 표시하기 위한 것입니다. 줄을 `<br>`로 끝내서 서식을 유지합니다.
+The `<address>` element is updated to reset the browser default `font-style` from `italic` to `normal`. `line-height` is also now inherited, and `margin-bottom: 1rem` has been added. `<address>`s are for presenting contact information for the nearest ancestor (or an entire body of work). Preserve formatting by ending lines with `<br>`.
 
 <div class="bd-example">
   <address>
@@ -423,9 +423,9 @@ Reboot에는 기본 커서를 `pointer`로 변경하는 `role="button"`의 개�
   </address>
 </div>
 
-### 인용구
+### Blockquote
 
-인용구의 기본 `margin`은 `1em 40px`이므로 다른 요소와 더 일관된 무언가를 위해 `0 0 1rem`으로 재설정합니다.
+The default `margin` on blockquotes is `1em 40px`, so we reset that to `0 0 1rem` for something more consistent with other elements.
 
 <div class="bd-example">
   <blockquote class="blockquote">
@@ -434,17 +434,17 @@ Reboot에는 기본 커서를 `pointer`로 변경하는 `role="button"`의 개�
   <p>Someone famous in <cite title="Source Title">Source Title</cite></p>
 </div>
 
-### 인라인 요소
+### Inline elements
 
-`<abbr>` 요소는 단락 텍스트 사이에서 눈에 띄도록 기본 스타일링을 받습니다.
+The `<abbr>` element receives basic styling to make it stand out amongst paragraph text.
 
 <div class="bd-example">
   The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.
 </div>
 
-### 요약
+### Summary
 
-요약의 기본 `cursor`는 `text`이므로 요소를 클릭하여 상호 작용할 수 있음을 전달하기 위해 이를 `pointer`로 재설정합니다.
+The default `cursor` on summary is `text`, so we reset that to `pointer` to convey that the element can be interacted with by clicking on it.
 
 <div class="bd-example">
   <details>
@@ -458,16 +458,16 @@ Reboot에는 기본 커서를 `pointer`로 변경하는 `role="button"`의 개�
   </details>
 </div>
 
-## HTML5 `[hidden]` 속성
+## HTML5 `[hidden]` attribute
 
-HTML5에는 [`[hidden]`이라고 불리는 새로운 전역 속성](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden)이 추가되었으며, 기본적으로 `display: none`으로 스타일링됩니다. [PureCSS](https://purecss.io/)에서 아이디어를 빌려서 `[hidden] {display: none !important; }`를 사용하여 `display`가 실수로 재정의되는 것을 방지합니다.
+HTML5 adds [a new global attribute named `[hidden]`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden), which is styled as `display: none` by default. Borrowing an idea from [PureCSS](https://purecss.io/), we improve upon this default by making `[hidden] { display: none !important; }` to help prevent its `display` from getting accidentally overridden.
 
 ```html
 <input type="text" hidden>
 ```
 
 {{< callout info >}}
-`[hidden]`은 jQuery의 `$(...).hide()` 및 `$(...).show()` 메소드와 호환되지 않습니다. 따라서 현재 요소의 `display`를 관리하는 다른 기술보다 `[hidden]`을 딱히 추천하지 않습니다.
+Since `[hidden]` is not compatible with jQuery's `$(...).hide()` and `$(...).show()` methods, we don't specifically endorse `[hidden]` over other techniques for managing the `display` of elements.
 {{< /callout >}}
 
-요소의 표시 여부를 전환하기 만하면 `display`가 수정되지 않고 요소가 문서의 흐름에 계속 영향을 미칠 수 있음을 의미합니다. 대신 [`.invisible` 클래스]({{< docsref "/utilities/visibility" >}})를 사용하세요.
+To merely toggle the visibility of an element, meaning its `display` is not modified and the element can still affect the flow of the document, use [the `.invisible` class]({{< docsref "/utilities/visibility" >}}) instead.

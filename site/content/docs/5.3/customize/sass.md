@@ -1,16 +1,16 @@
 ---
 layout: docs
 title: Sass
-description: 변수, 맵, 믹스인 그리고 함수를 활용한 소스의 Sass 파일을 이용하여 프로젝트 빌드을 고속화하고 재정의 할 수 있습니다.
+description: Utilize our source Sass files to take advantage of variables, maps, mixins, and functions to help you build faster and customize your project.
 group: customize
 toc: true
 ---
 
-변수, 맵, 믹스인 등을 활용한 소스의 Sass 파일을 이용합니다.
+Utilize our source Sass files to take advantage of variables, maps, mixins, and more.
 
-## 파일 구조
+## File structure
 
-가능한 한, Bootstrap의 핵심 파일은 수정하지 마세요. Sass에서는 Bootstrap을 가져와 자체 스타일 시트를 생성함으로써 Bootstrap을 수정하고 확장할 수 있습니다. npm과 같은 패키지 매니저를 사용하는 경우 다음과 같은 파일 구조가 됩니다:
+Whenever possible, avoid modifying Bootstrap's core files. For Sass, that means creating your own stylesheet that imports Bootstrap so you can modify and extend it. Assuming you're using a package manager like npm, you'll have a file structure that looks like this:
 
 ```text
 your-project/
@@ -23,7 +23,7 @@ your-project/
 └── index.html
 ```
 
-소스 파일을 다운로드한 후 패키지 관리자를 사용하지 않는 경우 해당 구조와 유사한 파일을 수동으로 생성하고 Bootstrap의 소스 파일을 개인 파일과는 별도로 분리해 두는 것이 좋습니다.
+If you've downloaded our source files and aren't using a package manager, you'll want to manually create something similar to that structure, keeping Bootstrap's source files separate from your own.
 
 ```text
 your-project/
@@ -35,9 +35,9 @@ your-project/
 └── index.html
 ```
 
-## 불러오기
+## Importing
 
-당신의 `custom.scss`에서 Bootstrap의 소스 Sass 파일을 가져옵니다. 두 가지 옵션이 있습니다: Bootstrap 모두를 포함할지, 필요한 부분을 선택할 지 입니다. 후자를 권하지만 컴포넌트 간에 몇 가지 요건과 의존 관계가 있다는 점에 유의해 주세요. 또한 플러그인 사용을 위해 위해 몇 가지 JavaScript를 포함해야 합니다.
+In your `custom.scss`, you'll import Bootstrap's source Sass files. You have two options: include all of Bootstrap, or pick the parts you need. We encourage the latter, though be aware there are some requirements and dependencies across our components. You also will need to include some JavaScript for our plugins.
 
 ```scss
 // Custom.scss
@@ -85,13 +85,13 @@ your-project/
 // 8. Add additional custom code here
 ```
 
-이 설정이 완료되면, `custom.scss` 안에 있는 Sass 변수나 맵을 변경할 수 있습니다. 그리고 필요에 따라 `// Optional` 섹션에 Bootstrap 일부를 추가할 수도 있습니다. 시작은 우리의 `bootstrap.scss` 파일에서 전체 가져오기 스택을 사용하기를 추천합니다.
+With that setup in place, you can begin to modify any of the Sass variables and maps in your `custom.scss`. You can also start to add parts of Bootstrap under the `// Optional` section as needed. We suggest using the full import stack from our `bootstrap.scss` file as your starting point.
 
-## 컴파일
+## Compiling
 
-브라우저에서 사용자 정의 Sass 코드를 CSS로 사용하려면 Sass 컴파일러가 필요합니다. Sass는 CLI 패키지로 제공되지만 [Gulp](https://gulpjs.com/) 또는 [Webpack](https://webpack.js.org/)과 같은 다른 빌드 도구나 GUI 애플리케이션을 사용하여 컴파일할 수도 있습니다. 일부 IDE에는 Sass 컴파일러가 기본 제공되거나 다운로드 가능한 확장 기능으로 제공되기도 합니다.
+In order to use your custom Sass code as CSS in the browser, you need a Sass compiler. Sass ships as a CLI package, but you can also compile it with other build tools like [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.js.org/), or with a GUI applications. Some IDEs also have Sass compilers built in or as downloadable extensions.
 
-저희는 CLI를 사용하여 Sass를 컴파일하는 것을 권장하지만 원하는 방법을 사용할 수도 있습니다. 명령줄에서 다음을 실행합니다:
+We like to use the CLI to compile our Sass, but you can use whichever method you prefer. From the command line, run the following:
 
 ```shell
 # Install Sass globally
@@ -101,15 +101,15 @@ npm install -g sass
 sass --watch ./scss/custom.scss ./css/custom.css
 ```
 
-옵션에 대한 자세한 내용은 [sass-lang.com/install](https://sass-lang.com/install) 및 [VS Code로 컴파일하기](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css)에서 확인하세요.
+Learn more about your options at [sass-lang.com/install](https://sass-lang.com/install) and [compiling with VS Code](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css).
 
 {{< callout info >}}
-**다른 빌드 도구와 함께 Bootstrap을 사용하시나요?** [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}) 또는 [Vite]({{< docsref "/getting-started/vite" >}})를 사용한 컴파일 가이드를 읽어보세요. 또한 [GitHub의 예제 리포지토리](https://github.com/twbs/examples)에는 프로덕션에 바로 사용할 수 있는 데모도 있습니다.
+**Using Bootstrap with another build tool?** Consider reading our guides for compiling with [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}), or [Vite]({{< docsref "/getting-started/vite" >}}). We also have production-ready demos in [our examples repository on GitHub](https://github.com/twbs/examples).
 {{< /callout >}}
 
-## Include
+## Including
 
-CSS가 컴파일되면 HTML 파일에 포함할 수 있습니다. `index.html` 안에 컴파일된 CSS 파일을 포함할 수 있습니다. 컴파일된 CSS 파일의 경로를 변경한 경우 반드시 업데이트하세요.
+Once your CSS is compiled, you can include it in your HTML files. Inside your `index.html` you'll want to include your compiled CSS file. Be sure to update the path to your compiled CSS file if you've changed it.
 
 ```html
 <!doctype html>
@@ -126,15 +126,15 @@ CSS가 컴파일되면 HTML 파일에 포함할 수 있습니다. `index.html` �
 </html>
 ```
 
-## 기본값 변수
+## Variable defaults
 
-Bootstrap의 모든 Sass 변수에는 `!default` 플래그가 포함되어 있으며, Bootstrap의 소스 코드를 수정하지 않고 당신의 Sass에서 변수의 기본값을 재정의할 수 있습니다. 필요에 따라 변수를 복사&붙여넣기 하여 값을 수정하고 `!default` 플래그를 삭제하세요. 변수가 이미 설정되어 있으면 Bootstrap의 기본값으로 재설정되지 않습니다.
+Every Sass variable in Bootstrap includes the `!default` flag allowing you to override the variable's default value in your own Sass without modifying Bootstrap's source code. Copy and paste variables as needed, modify their values, and remove the `!default` flag. If a variable has already been assigned, then it won't be re-assigned by the default values in Bootstrap.
 
-Bootstrap 변수의 전체 목록은 `scss/_variables.scss`에 있습니다. 몇 가지 변수는 `null`로 설정되어 있어, 이러한 변수는 설정에서 재정의되지 않는 한, 속성을 출력하지 않습니다.
+You will find the complete list of Bootstrap's variables in `scss/_variables.scss`. Some variables are set to `null`, these variables don't output the property unless they are overridden in your configuration.
 
-변수의 재정의는 함수를 가져온 이후 나머지를 가져오기 전에 수행해야 합니다.
+Variable overrides must come after our functions are imported, but before the rest of the imports.
 
-여기에서는 npm으로 가져온 Bootstrap을 컴파일 할 때에,`<body>`의 `background-color`와 `color`를 변경하는 예시를 보여주고 있습니다.
+Here's an example that changes the `background-color` and `color` for the `<body>` when importing and compiling Bootstrap via npm:
 
 ```scss
 // Required
@@ -157,28 +157,28 @@ $body-color: #111;
 // etc
 ```
 
-Bootstrap의 모든 변수에 대해 필요에 따라 반복, 아래 글로벌 옵션을 포함합니다.
+Repeat as necessary for any variable in Bootstrap, including the global options below.
 
 {{< callout info >}}
 {{< partial "callouts/info-npm-starter.md" >}}
 {{< /callout >}}
 
-## 맵과 루프
+## Maps and loops
 
-Bootstrap에는 관련된 CSS의 계열을 쉽게 생성하기 위한 키벨류의 한쌍으로 된 Sass 맵이 포함되어 있습니다. 색상, 그리드 중단점 등에 Sass 맵을 사용하고 있습니다. Sass 변수처럼 모든 Sass 맵은 `!default` 플래그를 포함하며 재정의나 확장이 가능합니다.
+Bootstrap includes a handful of Sass maps, key value pairs that make it easier to generate families of related CSS. We use Sass maps for our colors, grid breakpoints, and more. Just like Sass variables, all Sass maps include the `!default` flag and can be overridden and extended.
 
-일부 Sass 맵은 기본적으로 텅 빈 것으로 병합되어 있습니다. 이는 특정 Sass 맵을 쉽게 확장할 수 있도록 하기 위해서지만 대신 맵에서 아이템을 _삭제하는_ 것이 약간 어렵습니다.
+Some of our Sass maps are merged into empty ones by default. This is done to allow easy expansion of a given Sass map, but comes at the cost of making _removing_ items from a map slightly more difficult.
 
-### 맵 수정
+### Modify map
 
-All variables in the `$theme-colors` 맵의 모든 변수는 독립된 변수로 정의되어 있습니다. `$theme-colors` 맵의 기존 색을 변경하고 싶다면 사용자 정의 Sass 파일에 아래와 같이 추가합니다:
+All variables in the `$theme-colors` map are defined as standalone variables. To modify an existing color in our `$theme-colors` map, add the following to your custom Sass file:
 
 ```scss
 $primary: #0074d9;
 $danger: #ff4136;
 ```
 
-나중에 이러한 변수는 Bootstrap의 `$theme-colors` 맵에 설정됩니다:
+Later on, these variables are set in Bootstrap's `$theme-colors` map:
 
 ```scss
 $theme-colors: (
@@ -187,9 +187,9 @@ $theme-colors: (
 );
 ```
 
-### 맵에 추가
+### Add to map
 
-사용자 정의 값으로 `$theme-colors`나 기타 맵에 새로운 색을 추가하여 새로운 Sass 맵을 만들고 기존 맵과 병합할 수 있습니다. 아래 예시에서는 새로운 `$theme-colors` 맵을 만들어 `$theme-colors`와 병합할 것입니다.
+Add new colors to `$theme-colors`, or any other map, by creating a new Sass map with your custom values and merging it with the original map. In this case, we'll create a new `$custom-colors` map and merge it with `$theme-colors`.
 
 ```scss
 // Create your own map
@@ -201,9 +201,9 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors, $custom-colors);
 ```
 
-### 맵에서 제거
+### Remove from map
 
-`$theme-colors`나 그 밖의 맵에서 색을 삭제하려면 `map-remove`를 사용합니다. Be aware you must insert `$theme-colors` between our requirements just after its definition in `variables` and before its usage in `maps`:
+To remove colors from `$theme-colors`, or any other map, use `map-remove`. Be aware you must insert `$theme-colors` between our requirements just after its definition in `variables` and before its usage in `maps`:
 
 ```scss
 // Required
@@ -223,17 +223,17 @@ $theme-colors: map-remove($theme-colors, "info", "light", "dark");
 // etc
 ```
 
-## 필수 키
+## Required keys
 
-Bootstrap은 Sass 맵 내의 몇몇 특정 키를 전제로 사용하며 우리는 이들을 그대로 혹은 확장하여 사용했습니다. 포함된 맵을 재정의하면 특정 Sass 맵의 키가 사용되는 오류가 생길 수도 있습니다.
+Bootstrap assumes the presence of some specific keys within Sass maps as we used and extend these ourselves. As you customize the included maps, you may encounter errors where a specific Sass map's key is being used.
 
-예를 들어, 링크와 버튼 그리고 폼 상태에 사용되는 `$theme-colors`의 `primary`, `success`, `danger` 등의 키를 사용하고 있습니다. 이런 키의 값을 바꾸어도 문제가 없지만, 삭제하면 Sass의 컴파일에 문제가 생길 수 있습니다. 이러한 경우에는 이 값을 사용하는 Sass의 코드를 수정해야 합니다.
+For example, we use the `primary`, `success`, and `danger` keys from `$theme-colors` for links, buttons, and form states. Replacing the values of these keys should present no issues, but removing them may cause Sass compilation issues. In these instances, you'll need to modify the Sass code that makes use of those values.
 
-## 기능
+## Functions
 
-### 색상
+### Colors
 
-[Sass 맵]({{< docsref "/customize/color#color-sass-maps" >}})의 사용 외에 `$primary`과 같이 독립된 변수로 사용할 수 있습니다.
+Next to the [Sass maps]({{< docsref "/customize/color#color-sass-maps" >}}) we have, theme colors can also be used as standalone variables, like `$primary`.
 
 ```scss
 .custom-element {
@@ -242,14 +242,13 @@ Bootstrap은 Sass 맵 내의 몇몇 특정 키를 전제로 사용하며 우리�
 }
 ```
 
-Bootstrap의 `tint-color()`와 `shade-color()` 함수로, 색을 밝게 혹은 어둡게 만들 수 있습니다. 이들 함수는 Sass의 순수한 `lighten()`과 `darken()` 함수와는 달리 색을 검은색 혹은 흰색과 섞어 밝기를 일정량 변화시켜 원하는 효과를 얻지 못하는 경우가 많습니다.
-
+You can lighten or darken colors with Bootstrap's `tint-color()` and `shade-color()` functions. These functions will mix colors with black or white, unlike Sass' native `lighten()` and `darken()` functions which will change the lightness by a fixed amount, which often doesn't lead to the desired effect.
 
 `shift-color()` combines these two functions by shading the color if the weight is positive and tinting the color if the weight is negative.
 
 {{< scss-docs name="color-functions" file="scss/_functions.scss" >}}
 
-실제로는 이 함수를 호출하여 색상과 중량의 파라미터를 전달합니다.
+In practice, you'd call the function and pass in the color and weight parameters.
 
 ```scss
 .custom-element {
@@ -266,13 +265,13 @@ Bootstrap의 `tint-color()`와 `shade-color()` 함수로, 색을 밝게 혹은 �
 }
 ```
 
-### 색상 대비
+### Color contrast
 
-[Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG/) 색 대비 조건을 만족시키기 위해서는, 극소수의 예외를 제외하고 만드는 사람은 최소 [4.5:1의 텍스트 색 대비](https://www.w3.org/TR/WCAG/#contrast-minimum) 및 최소 [비-텍스트 색 대비 3:1](https://www.w3.org/TR/WCAG/#non-text-contrast)을 제공**해야 합니다.**
+In order to meet the [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/TR/WCAG/) contrast requirements, authors **must** provide a minimum [text color contrast of 4.5:1](https://www.w3.org/TR/WCAG/#contrast-minimum) and a minimum [non-text color contrast of 3:1](https://www.w3.org/TR/WCAG/#non-text-contrast), with very few exceptions.
 
-이것을 돕기 위해서 Bootstrap에는 `color-contrast` 함수가 내장되어 있습니다. [WCAG contrast ratio algorithm](https://www.w3.org/TR/WCAG/#dfn-contrast-ratio)을 이용해 `sRGB` 색 공간의 [상대 휘도](https://www.w3.org/TR/WCAG/#dfn-relative-luminance)에 근거한 대비 임계치를 계산하여 자동으로 light (`#fff`), dark (`#212529`), black (`#000`)을 반환합니다. 이 함수는 복수의 클래스를 만드는 믹스인이나 반복에 특히 유용합니다.
+To help with this, we included the `color-contrast` function in Bootstrap. It uses the [WCAG contrast ratio algorithm](https://www.w3.org/TR/WCAG/#dfn-contrast-ratio) for calculating contrast thresholds based on [relative luminance](https://www.w3.org/TR/WCAG/#dfn-relative-luminance) in an `sRGB` color space to automatically return a light (`#fff`), dark (`#212529`) or black (`#000`) contrast color based on the specified base color. This function is especially useful for mixins or loops where you're generating multiple classes.
 
-예를 들어, `$theme-colors` 맵에서 swatch의 색상을 만드는 경우입니다:
+For example, to generate color swatches from our `$theme-colors` map:
 
 ```scss
 @each $color, $value in $theme-colors {
@@ -282,7 +281,7 @@ Bootstrap의 `tint-color()`와 `shade-color()` 함수로, 색을 밝게 혹은 �
 }
 ```
 
-또한, 단발적인 요구에도 대응할 수 있습니다:
+It can also be used for one-off contrast needs:
 
 ```scss
 .custom-element {
@@ -290,7 +289,7 @@ Bootstrap의 `tint-color()`와 `shade-color()` 함수로, 색을 밝게 혹은 �
 }
 ```
 
-그리고 색상 map 함수로 기본 색을 지정할 수도 있습니다:
+You can also specify a base color with our color map functions:
 
 ```scss
 .custom-element {
@@ -298,15 +297,15 @@ Bootstrap의 `tint-color()`와 `shade-color()` 함수로, 색을 밝게 혹은 �
 }
 ```
 
-### SVG 이스케이프
+### Escape SVG
 
-SVG 배경 이미지 코드에서 `<`, `>`, `#`의 텍스트를 사용하지 않기 위해 `escape-svg` 함수를 사용합니다. `escape-svg` 함수를 사용할 때에는 data URI를 인용해야 합니다.
+We use the `escape-svg` function to escape the `<`, `>` and `#` characters for SVG background images. When using the `escape-svg` function, data URIs must be quoted.
 
-### 더하기 및 빼기 기능
+### Add and Subtract functions
 
-CSS `calc` 함수 사용을 위해 `add`와 `subtract` 함수를 사용합니다. 이들 함수의 주된 목적은 "단위가 없다", `calc`의 식에 `0`의 값이 들어갔을 때 에러를 피하는 것입니다. `calc(10px - 0)`과 같은 식은 수학적 의미로는 맞지만, 모든 브라우저에서 오류를 반환합니다.
+We use the `add` and `subtract` functions to wrap the CSS `calc` function. The primary purpose of these functions is to avoid errors when a "unitless" `0` value is passed into a `calc` expression. Expressions like `calc(10px - 0)` will return an error in all browsers, despite being mathematically correct.
 
-calc 계산이 유효한 예시:
+Example where the calc is valid:
 
 ```scss
 $border-radius: .25rem;
@@ -323,7 +322,7 @@ $border-width: 1px;
 }
 ```
 
-calc 계산이 잘못된 예시:
+Example where the calc is invalid:
 
 ```scss
 $border-radius: .25rem;
@@ -340,13 +339,13 @@ $border-width: 0;
 }
 ```
 
-## 믹스인
+## Mixins
 
-`scss/mixins/` 폴더에는 Bootstrap을 강화하는 많은 믹스인이 있으며, 우리의 프로젝트에도 사용할 수 있습니다.
+Our `scss/mixins/` directory has a ton of mixins that power parts of Bootstrap and can also be used across your own project.
 
-### 색상 스킴
+### Color schemes
 
-`prefers-color-scheme` 미디어 쿼리의 간단한 믹스인은 `light` 및 `dark` 색상 배합을 지원합니다. 색상 모드 믹스인에 대한 정보는 [색상 모드 문서]({{< docsref "/customize/color-modes" >}})에서 확인할 수 있습니다.
+A shorthand mixin for the `prefers-color-scheme` media query is available with support for `light` and `dark` color schemes. See [the color modes documentation]({{< docsref "/customize/color-modes" >}}) for information on our color mode mixin.
 
 {{< scss-docs name="mixin-color-scheme" file="scss/mixins/_color-scheme.scss" >}}
 

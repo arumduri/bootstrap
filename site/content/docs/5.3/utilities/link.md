@@ -1,16 +1,15 @@
 ---
 layout: docs
-title: 링크
-title_en: Link
-description: 링크 유틸리티는 앵커의 색상, 불투명도, 밑줄 오프셋, 밑줄 색상 등을 조정하여 앵커의 스타일을 지정하는 데 사용됩니다.
+title: Link
+description: Link utilities are used to stylize your anchors to adjust their color, opacity, underline offset, underline color, and more.
 group: utilities
 toc: true
 added: 5.3
 ---
 
-## 링크 불투명도
+## Link opacity
 
-유틸리티를 사용하여 링크 `rgba()` 색상 값의 알파 불투명도를 변경합니다. 색상의 불투명도를 변경하면 링크의 [대비율이 *부족*해질 수 있다]({{< docsref "getting-started/accessibility#color-contrast" >}})는 점에 유의하세요.
+Change the alpha opacity of the link `rgba()` color value with utilities. Please be aware that changes to a color's opacity can lead to links with [*insufficient* contrast]({{< docsref "getting-started/accessibility#color-contrast" >}}).
 
 {{< example >}}
 <p><a class="link-opacity-10" href="#">Link opacity 10</a></p>
@@ -20,7 +19,7 @@ added: 5.3
 <p><a class="link-opacity-100" href="#">Link opacity 100</a></p>
 {{< /example >}}
 
-마우스오버 시 불투명도 레벨을 변경할 수도 있습니다.
+You can even change the opacity level on hover.
 
 {{< example >}}
 <p><a class="link-opacity-10-hover" href="#">Link hover opacity 10</a></p>
@@ -30,11 +29,11 @@ added: 5.3
 <p><a class="link-opacity-100-hover" href="#">Link hover opacity 100</a></p>
 {{< /example >}}
 
-## 링크 밑줄
+## Link underlines
 
-### 밑줄 색상
+### Underline color
 
-링크 텍스트 색상과 관계없이 밑줄의 색상을 변경합니다.
+Change the underline's color independent of the link text color.
 
 {{< example >}}
 {{< link-underline-colors.inline >}}
@@ -44,9 +43,9 @@ added: 5.3
 {{< /link-underline-colors.inline >}}
 {{< /example >}}
 
-### 밑줄 오프셋
+### Underline offset
 
-텍스트에서 밑줄의 여백 수준을 변경합니다. 오프셋은 요소의 현재 `font-size`에 따라 자동으로 크기가 조정되도록 `em` 단위로 설정됩니다.
+Change the underline's distance from your text. Offset is set in `em` units to automatically scale with the element's current `font-size`.
 
 {{< example >}}
 <p><a href="#">Default link</a></p>
@@ -55,9 +54,9 @@ added: 5.3
 <p><a class="link-offset-3" href="#">Offset 3 link</a></p>
 {{< /example >}}
 
-### 불투명도 밑줄
+### Underline opacity
 
-밑줄의 불투명도를 변경합니다. `.link-underline`을 추가하여 먼저 알파 불투명도를 수정하는 데 사용하는 `rgba()` 색상을 설정해야 합니다.
+Change the underline's opacity. Requires adding `.link-underline` to first set an `rgba()` color we use to then modify the alpha opacity.
 
 {{< example >}}
 <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="#">Underline opacity 0</a></p>
@@ -68,9 +67,9 @@ added: 5.3
 <p><a class="link-offset-2 link-underline link-underline-opacity-100" href="#">Underline opacity 100</a></p>
 {{< /example >}}
 
-### 호버 변형
+### Hover variants
 
-`.link-opacity-*-hover` 유틸리티와 마찬가지로 `.link-offset` 및 `.link-underline-opacity` 유틸리티에는 기본적으로 `:hover` 변형이 포함되어 있습니다. 조합해서 고유한 링크 스타일을 만들 수 있습니다.
+Just like the `.link-opacity-*-hover` utilities, `.link-offset` and `.link-underline-opacity` utilities include `:hover` variants by default. Mix and match to create unique link styles.
 
 {{< example >}}
 <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="#">
@@ -78,9 +77,9 @@ added: 5.3
 </a>
 {{< /example >}}
 
-## 컬러 링크
+## Colored links
 
-[컬러 링크 도우미]({{< docsref "/helpers/colored-links/" >}})가 링크 유틸리티와 짝을 이루도록 업데이트되었습니다. 새로운 유틸리티를 사용하여 링크 불투명도, 밑줄 불투명도, 밑줄 오프셋을 수정할 수 있습니다.
+[Colored link helpers]({{< docsref "/helpers/colored-links/" >}}) have been updated to pair with our link utilities. Use the new utilities to modify the link opacity, underline opacity, and underline offset.
 
 {{< example >}}
 {{< colored-links.inline >}}
@@ -97,10 +96,10 @@ added: 5.3
 
 ## CSS
 
-다음 Sass 기능 외에도 색상 등을 위해 포함된 [CSS 사용자 정의 속성]({{< docsref "/customize/css-variables" >}})(CSS 변수)에 대해 읽어보세요.
+In addition to the following Sass functionality, consider reading about our included [CSS custom properties]({{< docsref "/customize/css-variables" >}}) (aka CSS variables) for colors and more.
 
-### Sass 유틸리티 API
+### Sass utilities API
 
-링크 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+Link utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-links" file="scss/_utilities.scss" >}}
