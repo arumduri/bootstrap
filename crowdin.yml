@@ -1,3 +1,6 @@
 files:
   - source: site/content/
+    ignore:
+      - site/content/docs/*/examples
+      - '*.html'
     translation: site/content-%two_letters_code%
