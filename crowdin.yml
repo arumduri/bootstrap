@@ -1,4 +1,5 @@
 files:
   - source: /site/content/docs/**/*.md
-    ignore: /site/content/404.md
+    ignore:
+      - /site/content/docs/versions.md
     translation: /site/content_%two_letters_code%/docs/**/%original_file_name%
