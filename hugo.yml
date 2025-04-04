@@ -36,7 +36,7 @@ module:
       target:           static/docs/5.3/dist
     - source:           site/assets
       target:           assets
-    - source:           site/content-ko
+    - source:           site-ko/content
       target:           content
     - source:           site/data
       target:           data
