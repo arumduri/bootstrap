@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file id="907" original="/site/content/docs/5.3/about/license.md" source-language="en" target-language="ko" datatype="plaintext" project-id="778342" tool-id="crowdin">
+    <header>
+      <tool tool-id="crowdin" tool-name="Crowdin" tool-version="1.1"/>
+    </header>
+    <body>
+      <trans-unit id="56209">
+        <source>docs</source>
+        <target state="needs-translation">docs</target>
+        <context-group purpose="information">
+          <context context-type="source">Block element text (div)&#13;
+XPath: /div[@id=front-matter]/ul/li[1]/div[2]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56211">
+        <source>License FAQs</source>
+        <target state="needs-translation">License FAQs</target>
+        <context-group purpose="information">
+          <context context-type="source">Block element text (div)&#13;
+XPath: /div[@id=front-matter]/ul/li[2]/div[2]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56213">
+        <source>Commonly asked questions about Bootstrap's open source license.</source>
+        <target state="needs-translation">Commonly asked questions about Bootstrap's open source license.</target>
+        <context-group purpose="information">
+          <context context-type="source">Block element text (div)&#13;
+XPath: /div[@id=front-matter]/ul/li[3]/div[2]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56215">
+        <source>about</source>
+        <target state="needs-translation">about</target>
+        <context-group purpose="information">
+          <context context-type="source">Block element text (div)&#13;
+XPath: /div[@id=front-matter]/ul/li[4]/div[2]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56217">
+        <source>Bootstrap is released under the MIT license and is copyright {{&lt; year &gt;}}. Boiled down to smaller chunks, it can be described with the following conditions.</source>
+        <target state="needs-translation">Bootstrap is released under the MIT license and is copyright {{&lt; year &gt;}}. Boiled down to smaller chunks, it can be described with the following conditions.</target>
+        <context-group purpose="information">
+          <context context-type="source">Paragraph text&#13;
+XPath: /p[1]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56219">
+        <source>It requires you to:</source>
+        <target state="needs-translation">It requires you to:</target>
+        <context-group purpose="information">
+          <context context-type="source">Headline 2&#13;
+XPath: /h2[1]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56221">
+        <source>Keep the license and copyright notice included in Bootstrap's CSS and JavaScript files when you use them in your works</source>
+        <target state="needs-translation">Keep the license and copyright notice included in Bootstrap's CSS and JavaScript files when you use them in your works</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[1]/li</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56223">
+        <source>It permits you to:</source>
+        <target state="needs-translation">It permits you to:</target>
+        <context-group purpose="information">
+          <context context-type="source">Headline 2&#13;
+XPath: /h2[2]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56225">
+        <source>Freely download and use Bootstrap, in whole or in part, for personal, private, company internal, or commercial purposes</source>
+        <target state="needs-translation">Freely download and use Bootstrap, in whole or in part, for personal, private, company internal, or commercial purposes</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[2]/li[1]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56227">
+        <source>Use Bootstrap in packages or distributions that you create</source>
+        <target state="needs-translation">Use Bootstrap in packages or distributions that you create</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[2]/li[2]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56229">
+        <source>Modify the source code</source>
+        <target state="needs-translation">Modify the source code</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[2]/li[3]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56231">
+        <source>Grant a sublicense to modify and distribute Bootstrap to third parties not included in the license</source>
+        <target state="needs-translation">Grant a sublicense to modify and distribute Bootstrap to third parties not included in the license</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[2]/li[4]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56233">
+        <source>It forbids you to:</source>
+        <target state="needs-translation">It forbids you to:</target>
+        <context-group purpose="information">
+          <context context-type="source">Headline 2&#13;
+XPath: /h2[3]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56235">
+        <source>Hold the authors and license owners liable for damages as Bootstrap is provided without warranty</source>
+        <target state="needs-translation">Hold the authors and license owners liable for damages as Bootstrap is provided without warranty</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[3]/li[1]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56237">
+        <source>Hold the creators or copyright holders of Bootstrap liable</source>
+        <target state="needs-translation">Hold the creators or copyright holders of Bootstrap liable</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[3]/li[2]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56239">
+        <source>Redistribute any piece of Bootstrap without proper attribution</source>
+        <target state="needs-translation">Redistribute any piece of Bootstrap without proper attribution</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[3]/li[3]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56241">
+        <source>Use any marks owned by Bootstrap in any way that might state or imply that Bootstrap endorses your distribution</source>
+        <target state="needs-translation">Use any marks owned by Bootstrap in any way that might state or imply that Bootstrap endorses your distribution</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[3]/li[4]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56243">
+        <source>Use any marks owned by Bootstrap in any way that might state or imply that you created the Bootstrap software in question</source>
+        <target state="needs-translation">Use any marks owned by Bootstrap in any way that might state or imply that you created the Bootstrap software in question</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[3]/li[5]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56245">
+        <source>It does not require you to:</source>
+        <target state="needs-translation">It does not require you to:</target>
+        <context-group purpose="information">
+          <context context-type="source">Headline 2&#13;
+XPath: /h2[4]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56247">
+        <source>Include the source of Bootstrap itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it</source>
+        <target state="needs-translation">Include the source of Bootstrap itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[4]/li[1]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56249">
+        <source>Submit changes that you make to Bootstrap back to the Bootstrap project (though such feedback is encouraged)</source>
+        <target state="needs-translation">Submit changes that you make to Bootstrap back to the Bootstrap project (though such feedback is encouraged)</target>
+        <context-group purpose="information">
+          <context context-type="source">List Item&#13;
+XPath: /ul[4]/li[2]</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56251">
+        <source>The full Bootstrap license is located &lt;a href=&quot;{{&amp;#060; param repo &amp;#062;}}/blob/v{{&lt; param current_version &gt;}}/LICENSE&quot;&gt;in the project repository&lt;/a&gt; for more information.</source>
+        <target state="needs-translation">The full Bootstrap license is located &lt;a href=&quot;{{&amp;#060; param repo &amp;#062;}}/blob/v{{&lt; param current_version &gt;}}/LICENSE&quot;&gt;in the project repository&lt;/a&gt; for more information.</target>
+        <context-group purpose="information">
+          <context context-type="source">Paragraph text&#13;
+XPath: /p[2]</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
