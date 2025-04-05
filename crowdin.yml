@@ -3,3 +3,5 @@ files:
     ignore:
       - /site/content/docs/versions.md
     translation: /site/content_%two_letters_code%/docs/**/%original_file_name%
+bundles:
+  - 5
