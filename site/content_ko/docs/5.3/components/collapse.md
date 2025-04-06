@@ -1,13 +1,12 @@
 ---
 layout: docs
-title: 콜랩스
-title_en: Collapse
+title: Collapse
 description: 몇 가지 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체 콘텐츠의 표시 방식을 전환합니다.
 group: components
 toc: true
 ---
 
-## 작동 원리
+## How it works
 
 Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에 사용됩니다. 버튼과 앵커는, 토글 하는 특정 요소에 매핑된 트리거로 사용됩니다. 요소를 접으면 `height`가 기존 값에서 `0`으로 애니메이션화 됩니다. CSS 가 애니메이션화를 어떻게 다룰지 고려하면, `.collapse` 요소에 `padding`을 사용할 수 없습니다. 대신, 이 클래스를 독립된 줄바꿈 요소로 사용합니다.
 
@@ -41,7 +40,7 @@ Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에
 </div>
 {{< /example >}}
 
-## 콜랩스
+## Horizontal
 
 콜랩스 플러그인은 수평 콜랩스도 지원합니다. `.collapse-horizontal` 수정자 클래스를 추가하여 `height` 대신 `width`를 트랜지션하고 직계 자식 요소에 `width`를 설정하세요. 자유롭게 사용자 정의 Sass를 작성하거나 인라인 스타일을 사용하거나 [너비 유틸리티]({{< docsref "/utilities/sizing" >}})를 사용할 수 있습니다.
 
@@ -66,8 +65,7 @@ Collapse(콜랩스) JavaScript 플러그인은, 콘텐츠의 표시와 숨김에
 
 ## 다중 항목 및 목표
 
-`<button>` 이나 `<a>`는 그 `href` 나 `data-bs-target` 속성의 셀렉터로 여러 요소를 참조하는 것으로 여러 개의 요소를 표시하거나 숨길 수 있습니다.
-여러 개의 `<button>` 이나 `<a>`는 각각의 `href` 나 `data-bs-target` 속성으로 요소를 참조하고 있는 경우, 어느 요소를 표시하거나 숨길 수 있습니다.
+`<button>` 이나 `<a>`는 그 `href` 나 `data-bs-target` 속성의 셀렉터로 여러 요소를 참조하는 것으로 여러 개의 요소를 표시하거나 숨길 수 있습니다. 여러 개의 `<button>` 이나 `<a>`는 각각의 `href` 나 `data-bs-target` 속성으로 요소를 참조하고 있는 경우, 어느 요소를 표시하거나 숨길 수 있습니다.
 
 {{< example >}}
 <p class="d-inline-flex gap-1">
@@ -109,13 +107,13 @@ Bootstrap의 현재 구현은, [ARIA Authoring Practices Guide accordion pattern
 
 ### 클래스
 
-콜랩스 트랜지션 클래스는 다른 컴포넌트와 함께 사용되고 있기 때문에 `scss/_transitions.scss`에 들어있습니다. (콜랩스와 아코디언).
+콜랩스 트랜지션 클래스는 다른 컴포넌트와 함께 사용되고 있기 때문에 `scss/_transitions.scss`에 들어있습니다.
 
 {{< scss-docs name="collapse-classes" file="scss/_transitions.scss" >}}
 
 ## 사용 방법
 
-콜랩스 플러그인은, 여러 클래스를 이용하여 중요한 작업을 처리합니다.
+The collapse plugin utilizes a few classes to handle the heavy lifting:
 
 - `.collapse` 콘텐츠를 숨김
 - `.collapse.show` 콘텐츠를 표시
@@ -146,9 +144,11 @@ const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Co
 
 {{< bs-table "table" >}}
 | 이름 | 유형 | 기본값 | 설명 |
-| --- | --- | --- | --- |
-`parent` | selector, DOM element | `null` | parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될 때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다 (기존 아코디언 동작과 비슷하며 `card` 클래스에 의존합니다). 속성은 접을 수 있는 타깃 영역으로 설정해야 합니다. |
-`toggle` | boolean | `true` | 호출 시에 접을 수 있는 요소를 토글합니다. |
+| -- | -- | --- | -- |
+|    |    |     |    |
+
+
+`parent` | selector, DOM element | `null` | parent 가 지정된 경우, 이 접을 수 있는 아이템이 표시될 때 지정된 부모 아래에 있는 접을 수 있는 모든 요소가 닫힙니다 (기존 아코디언 동작과 비슷하며 `card` 클래스에 의존합니다). (similar to traditional accordion behavior - this is dependent on the `card` class). 속성은 접을 수 있는 타깃 영역으로 설정해야 합니다. | `toggle` | boolean | `true` | Toggles the collapsible element on invocation. |
 {{< /bs-table >}}
 
 ### 메소드
@@ -168,14 +168,14 @@ const bsCollapse = new bootstrap.Collapse('#myCollapse', {
 ```
 
 {{< bs-table >}}
-| 메소드 | 설명 |
-| --- | --- |
-| `dispose` | 요소의 콜랩스를 처리합니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다) |
-| `getInstance` | DOM 요소에 연결된 접기 인스턴스를 가져올 수 있는 정적 메서드는 다음과 같이 사용할 수 있습니다: `bootstrap.Collapse.getInstance(element)`. |
-| `getOrCreateInstance` | DOM 요소에 연결된 접기 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 생성하는 정적 메서드입니다. 다음과 같이 사용할 수 있습니다: `bootstrap.Collapse.getOrCreateInstance(element)`. |
-| `hide` | 접을 수 있는 요소를 숨깁니다. **접을 수 있는 요소가 실제로 숨겨지기 전에 호출하여 원래 위치로 돌아갑니다** (예를 들어, hidden.bs.collapse 이벤트가 발생하기 전으로). |
-| `show` | 접을 수 있는 요소를 표시합니다. **접을 수 있는 요소가 나타나기 전에 호출하여 원래대로 돌아갑니다** (예를 들어, shown.bs.collapse 이벤트가 발생하기 전으로). |
-| `toggle` | 접을 수 있는 요소의 표시/숨김을 바꿉니다. **접을 수 있는 요소가 실제로 표시 혹은 숨겨지기 전에 호출되어 원래대로 돌아갑니다** (즉, `shown.bs.collapse` 혹은 `hidden.bs.collapse` 이벤트가 발생하기 전). |
+| 메소드                   | 설명                                                                                                                                       |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `dispose`             | 요소의 콜랩스를 처리합니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다)                                                                                             |
+| `getInstance`         | DOM 요소에 연결된 접기 인스턴스를 가져올 수 있는 정적 메서드는 다음과 같이 사용할 수 있습니다: `bootstrap.Collapse.getInstance(element)`.                                      |
+| `getOrCreateInstance` | DOM 요소에 연결된 접기 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 생성하는 정적 메서드입니다. 다음과 같이 사용할 수 있습니다: `bootstrap.Collapse.getOrCreateInstance(element)`.     |
+| `hide`                | 접을 수 있는 요소를 숨깁니다. **접을 수 있는 요소가 실제로 숨겨지기 전에 호출하여 원래 위치로 돌아갑니다** (예를 들어, hidden.bs.collapse 이벤트가 발생하기 전으로).                               |
+| `show`                | 접을 수 있는 요소를 표시합니다. **접을 수 있는 요소가 나타나기 전에 호출하여 원래대로 돌아갑니다** (예를 들어, shown.bs.collapse 이벤트가 발생하기 전으로).                                     |
+| `toggle`              | 접을 수 있는 요소의 표시/숨김을 바꿉니다. **접을 수 있는 요소가 실제로 표시 혹은 숨겨지기 전에 호출되어 원래대로 돌아갑니다** (즉, `shown.bs.collapse` 혹은 `hidden.bs.collapse` 이벤트가 발생하기 전). |
 {{< /bs-table >}}
 
 ### 이벤트
@@ -183,12 +183,12 @@ const bsCollapse = new bootstrap.Collapse('#myCollapse', {
 Bootstrap의 콜랩스 클래스는, 콜랩스 기능을 후킹하기 위한 몇 가지 이벤트를 공개하고 있습니다.
 
 {{< bs-table >}}
-| 이벤트 유형 | 설명 |
-| --- | --- |
-| `hide.bs.collapse` | 이 이벤트는 `hide` 메소드가 호출될 때 바로 발생합니다. |
+| 이벤트 유형               | 설명                                                                |
+| -------------------- | ----------------------------------------------------------------- |
+| `hide.bs.collapse`   | 이 이벤트는 `hide` 메소드가 호출될 때 바로 발생합니다.                                |
 | `hidden.bs.collapse` | 이 이벤트는 collapse 요소가 사용자에게 숨겨졌을 때 발생합니다 (CSS 트랜지션이 완료될 때까지 기다립니다). |
-| `show.bs.collapse` | 이 이벤트는 `show` 인스턴스 메소드가 호출될 때 바로 발생합니다. |
-| `shown.bs.collapse` | 이 이벤트는 collapse 요소가 사용자에게 보여질 때 발생합니다 (CSS 트랜지션이 완료되는 것을 기다립니다). |
+| `show.bs.collapse`   | 이 이벤트는 `show` 인스턴스 메소드가 호출될 때 바로 발생합니다.                           |
+| `shown.bs.collapse`  | 이 이벤트는 collapse 요소가 사용자에게 보여질 때 발생합니다 (CSS 트랜지션이 완료되는 것을 기다립니다).  |
 {{< /bs-table >}}
 
 ```js
