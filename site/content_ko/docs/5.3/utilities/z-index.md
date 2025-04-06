@@ -23,7 +23,7 @@ added: "5.3"
 <div class="z-n1 position-absolute p-5 rounded-3"><span>z-n1</span></div>
 {{< /example >}}
 
-## 오버레이
+## Overlays
 
 Bootstrap 오버레이 구성 요소인 드롭다운, 모달, 오프캔버스, 팝오버, 토스트 및 툴팁은 각각 고유한 `z-index` 값을 가지고 있어 인터페이스의 경쟁하는 "레이어"에서 사용 가능한 경험을 보장합니다.
 
