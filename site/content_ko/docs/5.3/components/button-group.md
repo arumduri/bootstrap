@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 버튼 그룹
-title_en: Button group
+title: Button group
 description: 여러 개의 버튼을 묶어 그룹화하거나, 세로로 겹쳐 놓을 수 있습니다.
 group: components
 toc: true
@@ -146,12 +145,14 @@ toc: true
   <button type="button" class="btn btn-outline-primary">Middle</button>
   <button type="button" class="btn btn-outline-primary">Right</button>
 </div>
+
 <br>
 <div class="btn-group" role="group" aria-label="Default button group">
   <button type="button" class="btn btn-outline-primary">Left</button>
   <button type="button" class="btn btn-outline-primary">Middle</button>
   <button type="button" class="btn btn-outline-primary">Right</button>
 </div>
+
 <br>
 <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
   <button type="button" class="btn btn-outline-primary">Left</button>
@@ -160,7 +161,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## 중첩
+## Nesting
 
 드롭다운과 버튼 그룹을 조합하는 경우는 다른 `.btn-group` 안에 `.btn-group`을 배치합니다.
 
