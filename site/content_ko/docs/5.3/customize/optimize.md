@@ -1,13 +1,12 @@
 ---
 layout: docs
-title: 최적화
-title_en: Optimize
+title: Optimize
 description: 프로젝트를 단순하고, 대응력이 뛰어나며, 유지 관리할 수 있도록 하여 최고의 경험을 제공하고 보다 중요한 일에 집중할 수 있습니다.
 group: customize
 toc: true
 ---
 
-## Sass 불러오기 경량화
+## Lean Sass imports
 
 asset pipeline에서 Sass를 사용하는 경우, 필요한 컴포넌트만 `@import`해서 Bootstrap을 최적화 하십시오. 가장 큰 최적화는 `bootstrap.scss` 섹션의 `Layout & Components`에서 얻을 수 있습니다.
 
@@ -43,7 +42,7 @@ import 'bootstrap/js/dist/modal';
 이렇게 하면 버튼, 캐러셀, 툴팁과 같은 사용할 예정이 없는 컴포넌트에 JavaScript를 포함하지 않도록 할 수 있습니다. 드롭다운, 툴팁, 팝오버를 포함하는 경우에는 반드시 `package.json` 파일에 Popper의 의존 관계를 기술해 주세요.
 
 {{< callout info >}}
-**중요!** `bootstrap/js/dist`에 있는 파일은 **default export**를 사용하고 있기 때문에, 그 중 하나를 사용하고 싶다면 아래와 같이 해야 합니다::
+**중요!** `bootstrap/js/dist`에 있는 파일은 **default export**를 사용하고 있기 때문에, 그 중 하나를 사용하고 싶다면 아래와 같이 해야 합니다:: To use them, do the following:
 
 <!-- eslint-skip -->
 ```js
