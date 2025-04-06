@@ -35,7 +35,7 @@ your-project/
 └── index.html
 ```
 
-## 불러오기
+## Importing
 
 당신의 `custom.scss`에서 Bootstrap의 소스 Sass 파일을 가져옵니다. 두 가지 옵션이 있습니다: Bootstrap 모두를 포함할지, 필요한 부분을 선택할 지 입니다. 후자를 권하지만 컴포넌트 간에 몇 가지 요건과 의존 관계가 있다는 점에 유의해 주세요. 또한 플러그인 사용을 위해 위해 몇 가지 JavaScript를 포함해야 합니다.
 
@@ -201,7 +201,7 @@ $custom-colors: (
 $theme-colors: map-merge($theme-colors, $custom-colors);
 ```
 
-### 맵에서 제거
+### Remove from map
 
 `$theme-colors`나 그 밖의 맵에서 색을 삭제하려면 `map-remove`를 사용합니다. Be aware you must insert `$theme-colors` between our requirements just after its definition in `variables` and before its usage in `maps`:
 
@@ -243,7 +243,6 @@ Bootstrap은 Sass 맵 내의 몇몇 특정 키를 전제로 사용하며 우리�
 ```
 
 Bootstrap의 `tint-color()`와 `shade-color()` 함수로, 색을 밝게 혹은 어둡게 만들 수 있습니다. 이들 함수는 Sass의 순수한 `lighten()`과 `darken()` 함수와는 달리 색을 검은색 혹은 흰색과 섞어 밝기를 일정량 변화시켜 원하는 효과를 얻지 못하는 경우가 많습니다.
-
 
 `shift-color()` combines these two functions by shading the color if the weight is positive and tinting the color if the weight is negative.
 
@@ -340,7 +339,7 @@ $border-width: 0;
 }
 ```
 
-## 믹스인
+## Mixins
 
 `scss/mixins/` 폴더에는 Bootstrap을 강화하는 많은 믹스인이 있으며, 우리의 프로젝트에도 사용할 수 있습니다.
 
