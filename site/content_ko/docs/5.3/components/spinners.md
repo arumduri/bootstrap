@@ -28,7 +28,7 @@ Border 스피너를 사용해 가벼운 로딩 인디게이터를 실현합니�
 
 ### 색상
 
-Border 스피너는 `border-color`에 `currentColor`을 사용합니다. 표준 스피너에서는 [text color utilities][color] 를 사용할 수 있습니다.
+Border 스피너는 `border-color`에 `currentColor`을 사용합니다. 표준 스피너에서는 \[text color utilities\]\[color\] 를 사용할 수 있습니다.
 
 {{< example >}}
 {{< spinner.inline >}}
@@ -54,7 +54,7 @@ Border 스피너를 싫어하는 분은, grow 스피너를 사용하세요. 기�
 </div>
 {{< /example >}}
 
-다시 한번 말씀드리지만, 이 스피너는 `currentColor`로 만들어졌기 때문에 [text color utilities][color]로 외형을 쉽게 바꿀 수 있습니다.
+다시 한번 말씀드리지만, 이 스피너는 `currentColor`로 만들어졌기 때문에 \[text color utilities\]\[color\]로 외형을 쉽게 바꿀 수 있습니다. Here it is in blue, along with the supported variants.
 
 {{< example >}}
 {{< spinner.inline >}}
@@ -72,7 +72,7 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex`로 빌드�
 
 ### 마진
 
-`.m-5`와 같이 [margin utilities][margin] 을 사용하면 간단하게 간격을 둘 수 있습니다.
+`.m-5`와 같이 \[margin utilities\]\[margin\] 을 사용하면 간단하게 간격을 둘 수 있습니다.
 
 {{< example >}}
 <div class="spinner-border m-5" role="status">
@@ -82,9 +82,9 @@ Bootstrap 스피너는, `rem`, `currentColor`, `display: inline-flex`로 빌드�
 
 ### 배치
 
-[Flexbox utilities][flex], [float utilities][float], 혹은 [text alignment][text] 유틸리티를 사용하여 어떤 상황에서도 스피너를 원하는 위치에 정확히 배치시킬 수 있습니다.
+\[Flexbox utilities\]\[flex\], \[float utilities\]\[float\], 혹은 \[text alignment\]\[text\] 유틸리티를 사용하여 어떤 상황에서도 스피너를 원하는 위치에 정확히 배치시킬 수 있습니다.
 
-#### 유동
+#### Flex
 
 {{< example >}}
 <div class="d-flex justify-content-center">
@@ -202,10 +202,4 @@ Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 스�
 {{< scss-docs name="spinner-border-keyframes" file="scss/_spinners.scss" >}}
 
 {{< scss-docs name="spinner-grow-keyframes" file="scss/_spinners.scss" >}}
-
-
-[color]:   {{< docsref "/utilities/colors" >}}
-[flex]:    {{< docsref "/utilities/flex" >}}
-[float]:   {{< docsref "/utilities/float" >}}
-[margin]:  {{< docsref "/utilities/spacing" >}}
-[text]:    {{< docsref "/utilities/text" >}}
+[color]:   {{< docsref "/utilities/colors" >}} [flex]:    {{< docsref "/utilities/flex" >}} [float]:   {{< docsref "/utilities/float" >}} [margin]:  {{< docsref "/utilities/spacing" >}} [text]:    {{< docsref "/utilities/text" >}}
