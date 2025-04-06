@@ -42,7 +42,7 @@ Sass 맵과 변수를 수정하는 방법에 대한 자세한 정보와 예시�
 
 ## 미디어 쿼리
 
-Bootstrap은 모바일 우선으로 개발 되었으므로 몇 가지 [미디어 쿼리](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)를 이용하여 레이아웃에 적합한 breakpoints를 만듭니다. 이러한 breakpoints는 대부분 최소 뷰포트 넓이를 기반으로하며 뷰포트를 변경함에 따라 요소를 확장 할 수 있습니다.
+Bootstrap은 모바일 우선으로 개발 되었으므로 몇 가지 [미디어 쿼리](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)를 이용하여 레이아웃에 적합한 breakpoints를 만듭니다. 이러한 breakpoints는 대부분 최소 뷰포트 넓이를 기반으로하며 뷰포트를 변경함에 따라 요소를 확장 할 수 있습니다.
 
 ### Min-width
 

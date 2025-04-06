@@ -5,13 +5,20 @@ description: Vite를 사용하여 프로젝트에 Bootstrap의 CSS와 JavaScript
 group: getting-started
 toc: true
 thumbnail: guides/bootstrap-vite@2x.png
+added:
+  show_badge: false
+  version: "5.2"
 ---
 
-<img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png" width="2000" height="1000" alt="">
+<img class="d-block mx-auto mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-vite.png" width="800" height="400" alt="">
 
 {{< callout >}}
 **끝으로 건너뛰고 싶으신가요?** 이 가이드의 소스 코드와 동작 확인을 위한 데모는 [twbs/examples repository](https://github.com/twbs/examples/tree/main/vite)에서 다운로드 하세요. [StackBlitz 예제를 열어](https://stackblitz.com/github/twbs/examples/tree/main/vite?file=index.html) 실시간으로 편집할 수도 있습니다.
 {{< /callout >}}
+
+## Vite이 뭐에요?
+
+[Vite](https://vite.dev/)는 속도와 단순성을 위해 설계된 최신 프런트엔드 빌드 도구입니다. 특히 최신 JavaScript 프레임워크에 대해 효율적이고 간소화된 개발 경험을 제공합니다.
 
 ## 설정하기
 
@@ -131,7 +138,7 @@ my-project/
    npm start
    ```
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server.png" alt="Vite dev server running">
+   ![Vite dev server running](/assets/img/guides/vite-dev-server.png)
 
 이 가이드의 마지막인 다음 섹션에서는 Bootstrap의 모든 CSS와 JavaScript를 가져오겠습니다.
 
@@ -171,7 +178,7 @@ my-project/
 
 3. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다:
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/vite-dev-server-bootstrap.png" alt="Vite dev server running with Bootstrap">
+   ![Vite dev server running with Bootstrap](/assets/img/guides/vite-dev-server-bootstrap.png)
 
    이제 사용하고자 하는 Bootstrap 컴포넌트를 추가할 수 있습니다. 추가 커스텀 Sass를 포함시키고 필요한 Bootstrap의 CSS 및 JS 부분만 임포트하여 빌드를 최적화하는 방법은 [전체 Vite 예제 프로젝트 확인](https://github.com/twbs/examples/tree/main/vite)을 참조하세요.
 

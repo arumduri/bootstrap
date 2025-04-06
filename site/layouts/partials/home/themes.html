@@ -7,17 +7,17 @@
     <p class="lead fw-normal">
       <a href="{{ .Site.Params.themes }}">Bootstrap 공식 테마 마켓플레이스</a>의 프리미엄 테마를 통해서 Bootstrap를 다음 단계로 올려놓으세요. 테마는 Bootstrap을 기반으로 확장된 고유의 프레임워크, 풍부한 새로운 컴포넌트 및 플러그인, 문서, 강력한 빌드 도구로 만들어졌습니다.
     </p>
-    <p class="d-flex justify-content-start lead fw-normal mb-md-0">
+    <p class="d-flex lead fw-normal mb-md-0">
       <a href="{{ .Site.Params.themes }}" class="icon-link icon-link-hover fw-semibold">
         Bootstrap Themes에 대해서 알아보기
-        <svg class="bi"><use xlink:href="#arrow-right"></use></svg>
+        <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
       </a>
     </p>
   </div>
   <div class="col-lg-6">
-      <img class="img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes.png,
-                                                  /docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes@2x.png 2x"
-                                          src="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-themes.png"
-                                          alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    {{ partial "responsive-img" (dict "context" .
+      "imgPath" "/assets/img/bootstrap-themes.png"
+      "alt" "Bootstrap Themes"
+      "classes" "d-block mt-3") }}
   </div>
 </section>

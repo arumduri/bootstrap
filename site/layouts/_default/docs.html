@@ -21,8 +21,9 @@
             {{- if .Page.Params.untranslated -}}
               <small class="d-inline-flex px-2 py-1 fw-semibold text-warning-emphasis bg-warning-subtle border border-warning-subtle rounded-2 me-2">번역되지 않음</small>
             {{- end -}}
-            {{- if .Page.Params.added -}}
-              <small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">v{{ .Page.Params.added }}에 추가됨</small>
+            {{- /* This is needed because we want to show the badge if show_badge isn't present or is set to false */ -}}
+            {{- if (or (and (.Page.Params.added) (not (isset .Page.Params.added "show_badge"))) (and (.Page.Params.added) (isset .Page.Params.added "show_badge") (not (eq .Page.Params.added.show_badge false)))) -}}
+              <small class="d-inline-flex px-2 py-1 fw-semibold text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 me-2">v{{ .Page.Params.added.version }}에 추가됨</small>
             {{- end -}}
             <div class="btn-group btn-group-sm rounded-2">
               {{- if not .Page.Params.origin -}}
@@ -78,7 +79,7 @@
 {{ end }}
 {{ define "footer" }}
   {{ range .Page.Params.extra_js -}}
-    <script{{ with .async }} async{{ end }} src="{{ .src }}"></script>
+    <script{{ with .async }} async{{ end }}{{ with .defer }} defer{{ end }} src="{{ .src }}"></script>
   {{- end -}}
   <div class="position-fixed" aria-hidden="true"><input type="text" tabindex="-1"></div>
 {{ end }}

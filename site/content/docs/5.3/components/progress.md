@@ -76,13 +76,16 @@ Bootstrap은 몇 가지 [너비 설정을 위한 유틸리티]({{< docsref "/uti
 </div>
 {{< /example >}}
 
-기본적으로 `.progress-bar` 내부의 콘텐츠는 `.overflow: hidden`으로 제어되므로 표시줄 밖으로 흘러나오지 않습니다. 진행률 표시줄이 레이블보다 짧으면 콘텐츠가 막혀서 읽을 수 없게 될 수 있습니다. 이 동작을 변경하려면 [오버플로 유틸리티]({{< docsref "/utilities/overflow" >}})에서 `.overflow-visible`을 사용할 수 있지만, 텍스트가 계속 읽을 수 있도록 명시적인 [텍스트 색상]({{< docsref "/utilities/colors#colors" >}})도 정의해야 합니다. 현재 이 접근 방식은 [색상 모드]({{< docsref "/customize/color-modes" >}})를 고려하지 않는다는 점에 유의하세요.
+### 긴 라벨
 
-{{< example >}}
-<div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar overflow-visible text-dark" style="width: 10%">Long label text for the progress bar, set to a dark color</div>
-</div>
-{{< /example >}}
+
+기본적으로 `.progress-bar` 내부의 콘텐츠는 `overflow: hidden`으로 제어되므로 막대 밖으로 흘러나오지 않습니다. 진행률 막대가 레이블보다 짧은 경우 콘텐츠가 캡핑되어 읽을 수 없게 될 수 있습니다. 이 동작을 변경하려면 [overflow 유틸리티]({{< docsref "/utilities/overflow" >}})에서 `.overflow-visible`을 사용할 수 있습니다.
+
+{{< callout warning >}}
+프로그레스보다 긴 레이블은 이 방법을 사용하여 완전히 확인하지 못할 수도 있습니다. 이 방법은 텍스트 색상이 `.progress` 및 `.progress-bar` 배경색과 모두 올바른 대비율을 가져야 하기 때문입니다. 이 예시를 구현할 때는 주의하세요.
+
+텍스트가 프로그레스와 겹칠 수 있는 경우 접근성을 높이기 위해 진행률 막대 외부에 레이블을 표시하는 것이 좋습니다.
+{{< /callout >}}
 
 ## 배경색
 
@@ -107,28 +110,20 @@ Background 유틸리티 클래스를 사용해 각각의 프로그레스 바의 
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-사용자 지정 배경색으로 진행률 표시줄에 레이블을 추가하는 경우에는 적절한 [텍스트 색상]({{< docsref "/utilities/colors#colors" >}})도 설정해야 레이블이 가독성을 유지하고 충분한 대비를 유지할 수 있습니다.
+사용자 지정 배경색으로 진행률 표시줄에 레이블을 추가하는 경우에는 적절한 [텍스트 색상]({{< docsref "/utilities/colors#colors" >}})도 설정해야 레이블이 가독성을 유지하고 충분한 대비를 유지할 수 있습니다. [색상 및 배경]({{< docsref "/helpers/color-background" >}}) 헬퍼 클래스 사용을 권장합니다.
 
 {{< example >}}
 <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-success" style="width: 25%">25%</div>
+  <div class="progress-bar text-bg-success" style="width: 25%">25%</div>
 </div>
 <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+  <div class="progress-bar text-bg-info" style="width: 50%">50%</div>
 </div>
-<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
-</div>
-<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-danger" style="width: 100%">100%</div>
-</div>
-{{< /example >}}
-
-또는 새로운 결합형 [색상 및 배경]({{< docsref "/helpers/color-background" >}}) 도우미 클래스를 사용할 수도 있습니다.
-
-{{< example >}}
 <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
   <div class="progress-bar text-bg-warning" style="width: 75%">75%</div>
+</div>
+<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar text-bg-danger" style="width: 100%">100%</div>
 </div>
 {{< /example >}}
 

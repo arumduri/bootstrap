@@ -75,7 +75,7 @@ _이 부분은 여러분의 도움이 필요합니다. PR을 만들어 주세요
 
 압축을 최소화해 사용하는 것만으로도 충분할 수 있지만, 파일을 차단하지 않고 만드는 데 있어 사이트를 최적화하고 빠르게 만드는데 있어 아주 중요합니다.
 
-Google Chrome에서 [Lighthouse](https://developers.google.com/web/tools/lighthouse/) 플러그인을 사용하고 있다면 FCP를 잘 아실 것입니다. [The First Contentful Paint](https://web.dev/fcp/) 라는 지표는 페이지를 불러오기 시작한 후 페이지의 콘텐츠 일부가 화면에 표시될 때까지의 시간을 측정합니다.
+Google Chrome에서 [Lighthouse](https://developers.google.com/web/tools/lighthouse/) 플러그인을 사용하고 있다면 FCP를 잘 아실 것입니다. [The First Contentful Paint](https://web.dev/articles/fcp/) 라는 지표는 페이지를 불러오기 시작한 후 페이지의 콘텐츠 일부가 화면에 표시될 때까지의 시간을 측정합니다.
 
 중요하지 않은 JavaScript나 CSS를 늦게 호출함으로써 FCP를 개선할 수 있습니다. 이게 무슨 의미일까요? 간단히 말하면 첫 화면에 굳이 필요하지 않은 JavaScript나 스타일 시트에는 `async`나 `defer` 속성을 붙여야 합니다.
 
@@ -83,8 +83,8 @@ Google Chrome에서 [Lighthouse](https://developers.google.com/web/tools/lightho
 
 이것에 대해 좀 더 자세히 알고 싶다면 이미 훌륭한 기사들이 많이 있습니다:
 
-- <https://web.dev/render-blocking-resources/>
-- <https://web.dev/defer-non-critical-css/>
+- <https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/>
+- <https://web.dev/articles/defer-non-critical-css>
 
 ## 항상 HTTPS 사용하기
 

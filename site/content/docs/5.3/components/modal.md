@@ -202,7 +202,7 @@ myModal.addEventListener('shown.bs.modal', () => {
         <h1 class="modal-title fs-5" id="exampleModalLongTitle">Modal title</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body" style="min-height: 1500px">
+      <div class="modal-body" style="min-height: 100vh">
         <p>This is some placeholder content to show the scrolling behavior for modals. Instead of repeating the text in the modal, we use an inline style to set a minimum height, thereby extending the length of the overall modal and demonstrating the overflow scrolling. When content becomes longer than the height of the viewport, scrolling will move the modal as needed.</p>
       </div>
       <div class="modal-footer">
@@ -482,7 +482,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 </div>
 {{< /example >}}
 
-{{< js-docs name="varying-modal-content" file="site/assets/js/snippets.js" >}}
+{{< js-docs name="varying-modal-content" file="site/assets/js/partials/snippets.js" >}}
 
 ### 모달 간 토글
 
@@ -857,7 +857,7 @@ Bootstrap의 모달 클래스는 모달 기능으로 연결하기 위한 몇 가
 {{< bs-table >}}
 | 이벤트 | 설명 |
 | --- | --- |
-| `hide.bs.modal` | 이 이벤트는 `hide` 인스턴스/메소드가 불렸을 때 바로 발생합니다. |
+| `hide.bs.modal` | 이 이벤트는 `hide` 인스턴스/메소드가 불렸을 때 바로 발생합니다. `event.preventDefault()`를 호출하여 방지할 수 있습니다. 이벤트 방지에 대한 자세한 내용은 [JavaScript 이벤트 문서]({{< docsref "/getting-started/javascript#events" >}})를 참조하세요. |
 | `hidden.bs.modal` | 이 이벤트는 모달을 숨길 때 발생합니다 (CSS 트랜지션이 완료되기를 기다립니다). |
 | `hidePrevented.bs.modal` | 이 이벤트는 모달이 표시되고 그 배경이 `static`이고, 키보드 옵션 또는 `data-bs-keyboard`가 `false`로 설정되어 있는 상태에서 모달 바깥쪽 클릭이나 escape key를 누루면 됩니다. |
 | `show.bs.modal` | 이 이벤트는 `show` 인스턴스/메소드가 불렸을 때 바로 발생합니다. 클릭으로 인해 발생했을 때 클릭된 요소는 이벤트의 `relatedTarget` 속성으로 이용 가능합니다. |

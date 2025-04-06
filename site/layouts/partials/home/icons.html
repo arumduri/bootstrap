@@ -7,17 +7,17 @@
     <p class="lead fw-normal">
       <a href="{{ .Site.Params.icons }}">Bootstrap Icons</a>는 1,800개 이상의 글리프를 가지고 있는 오픈소스 SVG 아이콘 라이브러리이며, 아이콘은 매 버전마다 계속 추가되고 있습니다. 꼭 Bootstrap을 사용하는 프로젝트가 아니더라도 작동하도록 디자인되었습니다. SVG 또는 아이콘 폰트로 사용 가능하며, 두 옵션 모두 벡터 스케일링과 CSS를 통한 쉬운 사용자 지정이 가능합니다.
     </p>
-    <p class="d-flex justify-content-start lead fw-normal mb-md-0">
+    <p class="d-flex lead fw-normal mb-md-0">
       <a href="{{ .Site.Params.icons }}" class="icon-link icon-link-hover fw-semibold">
         Bootstrap Icons 사용해보기
-        <svg class="bi"><use xlink:href="#arrow-right"></use></svg>
+        <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
       </a>
     </p>
   </div>
   <div class="col-lg-6">
-      <img class="img-fluid mt-3 mx-auto" srcset="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-icons.png,
-                                                  /docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-icons@2x.png 2x"
-                                          src="/docs/{{ .Site.Params.docs_version }}/assets/img/bootstrap-icons.png"
-                                          alt="Bootstrap Icons" width="700" height="425" loading="lazy">
+    {{ partial "responsive-img" (dict "context" .
+      "imgPath" "/assets/img/bootstrap-icons.png"
+      "alt" "Bootstrap Icons"
+      "classes" "d-block mt-3") }}
   </div>
 </section>

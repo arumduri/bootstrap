@@ -88,7 +88,7 @@ toc: true
 
 다음 JavaScript를 사용하여 라이브 토스트 데모를 트리거할 수 있습니다:
 
-{{< js-docs name="live-toast" file="site/assets/js/snippets.js" >}}
+{{< js-docs name="live-toast" file="site/assets/js/partials/snippets.js" >}}
 
 ### 반투명
 

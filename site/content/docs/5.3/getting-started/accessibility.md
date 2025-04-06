@@ -11,7 +11,7 @@ Bootstrap은 개발자가 시각적으로 매력적이고 기능이 풍부하며
 
 ## 개요와 한계
 
-Bootstrap으로 개발한 프로젝트의 전반적인 접근성은 작성자가 추가한 마크업, 추가 스타일 및 스크립트에 큰 영향을 받습니다. 이 부분이 올바르게 구현되었다면 [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/) 및 유사한 접근성 표준 및 요구사항을 충족하는 Bootstrap을 사용하여 웹사이트와 애플리케이션을 만드는 것이 완벽하게 가능해야 합니다.
+Bootstrap으로 개발한 프로젝트의 전반적인 접근성은 작성자가 추가한 마크업, 추가 스타일 및 스크립트에 큰 영향을 받습니다. 이 부분이 올바르게 구현되었다면 [<abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2](https://www.w3.org/TR/WCAG/) (A/AA/AAA), [Section 508](https://www.section508.gov/) 및 유사한 접근성 표준 및 요구사항을 충족하는 Bootstrap을 사용하여 웹사이트와 애플리케이션을 만드는 것이 완벽하게 가능해야 합니다.
 
 ### 구조적 마크업
 
@@ -25,7 +25,7 @@ Bootstrap의 구성요소는 상당히 보편적으로 설계되었으므로 작
 
 ### 색상 대비
 
-현재 Bootstrap의 단추 변형, 경고 변형, 폼 유효성 검사 표시기 등을 위해 프레임워크 전체에서 사용되는 기본 팔레트를 구성하는 일부 색상조합은 색상 대비가 *불충분*할 수 있습니다. ([WCAG 2.1 글꼴 색상 대비 4.5:1](https://www.w3.org/TR/WCAG21/#contrast-minimum) 미만 및 [WCAG 2.1 글꼴 외 색상 대비 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast) 미만이 권장됨). 이 부분은 밝은배경에서 더 강하게 발생하기 때문에 작성자는 특정 색상들을 테스트 한 뒤 필요할 경우 이러한 기본색상을 수동으로 수정/확장하여 적절한 색상 대비를 확인하는 것이 좋습니다.
+현재 Bootstrap의 단추 변형, 경고 변형, 폼 유효성 검사 표시기 등을 위해 프레임워크 전체에서 사용되는 기본 팔레트를 구성하는 일부 색상조합은 색상 대비가 *불충분*할 수 있습니다. ([WCAG 2.1 글꼴 색상 대비 4.5:1](https://www.w3.org/TR/WCAG21/#contrast-minimum) 미만 및 [WCAG 2.2 글꼴 외 색상 대비 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast) 미만이 권장됨). 이 부분은 밝은배경에서 더 강하게 발생하기 때문에 작성자는 특정 색상들을 테스트 한 뒤 필요할 경우 이러한 기본색상을 수동으로 수정/확장하여 적절한 색상 대비를 확인하는 것이 좋습니다.
 
 ### 시각적으로 숨겨진 콘텐츠
 
@@ -52,7 +52,7 @@ Bootstrap에는 [`prefers-reduced-motion` 미디어 기능](https://www.w3.org/T
 
 ## 추가 자료
 
-- [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/)
+- [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG/)
 - [The A11Y Project](https://www.a11yproject.com/)
 - [MDN 접근성 문서](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [Tenon.io Accessibility Checker](https://tenon.io/)

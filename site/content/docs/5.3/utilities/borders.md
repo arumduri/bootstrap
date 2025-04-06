@@ -129,13 +129,11 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 {{< placeholder width="75" height="75" class="rounded-end" title="Example right rounded image" >}}
 {{< placeholder width="75" height="75" class="rounded-bottom" title="Example bottom rounded image" >}}
 {{< placeholder width="75" height="75" class="rounded-start" title="Example left rounded image" >}}
-{{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" >}}
-{{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
 {{< /example >}}
 
 ### 크기
 
-스케일링 클래스를 사용해 더 둥글거나 덜 둥근 모서리로 지정합니다. `0`에서 `5`까지 지정할 수 있으며 유틸리티 API를 수정하여 구성 할 수 있습니다.
+스케일링 클래스를 사용해 더 둥글거나 덜 둥근 모서리로 지정합니다. `circle`과 `pill`을 포함해서 `0`에서 `5`까지 지정할 수 있으며 유틸리티 API를 수정하여 구성 할 수 있습니다.
 
 {{< example class="bd-example-rounded-utils" >}}
 {{< placeholder width="75" height="75" class="rounded-0" title="Example non-rounded image" >}}
@@ -144,6 +142,8 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 {{< placeholder width="75" height="75" class="rounded-3" title="Example large rounded image" >}}
 {{< placeholder width="75" height="75" class="rounded-4" title="Example larger rounded image" >}}
 {{< placeholder width="75" height="75" class="rounded-5" title="Example extra large rounded image" >}}
+{{< placeholder width="75" height="75" class="rounded-circle" title="Completely round image" >}}
+{{< placeholder width="150" height="75" class="rounded-pill" title="Rounded pill image" >}}
 {{< /example >}}
 
 {{< example class="bd-example-rounded-utils" >}}
@@ -188,7 +188,7 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 
 ### Sass 유틸리티 API
 
-테두리 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.] ({{< docsref "/utilities/api # using-the-api" >}})
+테두리 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.] ({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-borders" file="scss/_utilities.scss" >}}
 

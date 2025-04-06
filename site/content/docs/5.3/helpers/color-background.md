@@ -5,7 +5,8 @@ title_en: Color and background
 description: 전경색과 대비되는 배경색을 설정합니다.
 group: helpers
 toc: true
-added: "5.2"
+added:
+  version: "5.2"
 ---
 
 ## 개요

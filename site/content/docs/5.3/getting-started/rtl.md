@@ -167,9 +167,19 @@ LTR과 RTL을 결합한 구현으로 작업할 때 고려해야 할 **경계 조
 3. 이런 식으로 스타일을 중첩하면 `form-validation-state()` 믹스인이 의도한 대로 작동하지 않음으로 어느정도 직접 조정이 필요합니다. [#31223을 참고](https://github.com/twbs/bootstrap/issues/31223)해주세요.
 {{< /callout >}}
 
-## 브레드크럼
+이 프로세스를 자동화하고 단일 스타일시트 내에서 양방향과 관련된 여러 가지 예외 사례를 해결하고 싶으신가요? 그렇다면 [PostCSS RTLCSS](https://github.com/elchininet/postcss-rtlcss)를 [PostCSS](https://github.com/postcss/postcss) 플러그인으로 사용하여 소스 파일을 처리하는 것을 고려하세요. PostCSS RTLCSS는 방향 전환 프로세스를 관리하기 위해 [RTLCSS](https://rtlcss.com)를 백그라운드에서 사용하지만, 뒤집힌 선언을 LTR 및 RTL에 대한 다른 접두사가 있는 규칙으로 분리하여 동일한 스타일시트 파일 내에서 양방향을 사용할 수 있습니다. 이렇게 하면 페이지의 `dir`을 변경하기만 하면(또는 플러그인을 적절히 구성한 경우 특정 클래스를 수정하여) LTR 및 RTL 방향을 전환할 수 있습니다.
 
-브레드크럼 구분자는 `$breadcrumb-divider-flipped`라는 고유한 새로운 변수가 필요한 유일한 경우이며 기본값은 `$breadcrumb-divider`입니다.
+{{< callout warning >}}
+**PostCSS RTLCSS를 사용하여 결합된 LTR 및 RTL 구현을 빌드할 때 고려해야 할 중요 사항**:
+
+1. `html` 요소에 `dir` 속성을 추가하는 것이 좋습니다. 이렇게 하면 방향을 변경할 때 전체 페이지가 영향을 받습니다. 또한 `lang` 속성도 그에 따라 추가해야 합니다.
+2. 두 방향의 단일 번들을 사용하면 최종 스타일시트의 크기가 증가합니다. (평균적으로 20%-30%) [최적화]({{< docsref "/customize/optimize" >}})를 고려하세요.
+3. PostCSS RTLCSS는 CSS 규칙을 제거하지 않기 때문에 `/* rtl:remove */` 지시문과 호환되지 않는다는 점을 고려하세요. `/* rtl:remove */`, `/* rtl:begin:remove */` 및 `/* rtl:end:remove */` 지시어를 각각 `/* rtl:freeze */`, `/* rtl:begin:freeze */` 및 `/* rtl:end:freeze */` 지시어로 바꿔야 합니다. 이러한 지시어는 대상 규칙 또는 선언에 현재 방향을 접두사로 붙이지만 RTL 대응물을 생성하지는 않습니다. (RTLCSS의 `remove`와 동일한 결과)
+{{< /callout >}}
+
+## 브래드크럼의 경우
+
+[브래드크럼 구분 기호]({{< docsref "/components/breadcrumb#dividers" >}})는 `$breadcrumb-divider`로 기본 설정된 자체 새 변수인 `$breadcrumb-divider-flipped`가 필요한 유일한 경우입니다.
 
 ## 추가 자료
 

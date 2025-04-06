@@ -6,6 +6,9 @@ description: 설명서 빌드 스크립트 및 테스트를 통해 Bootstrap 개
 group: getting-started
 toc: true
 aliases: "/docs/5.3/getting-started/build-tools/"
+added:
+  show_badge: false
+  version: "5.1"
 ---
 
 ## 준비하기
@@ -39,7 +42,7 @@ Bootstrap은 [npm 스크립트](https://docs.npmjs.com/misc/scripts/)를 사용�
 
 ## Sass
 
-Bootstrap은 빌드할 때 Sass 소스 파일을 CSS 파일로 컴파일하기 위해 [Dart Sass](https://sass-lang.com/dart-sass) (빌드 과정에 포함됨)를 사용하며 자체 자산 파이프라인을 사용해서 Sass를 컴파일하는 경우에도 동일한 작업을 수행하는 것이 좋습니다. 이전 Bootstrap v4에는 Node Sass를 사용했지만 Node Sass를 포함하여 그 위에 빌드된 LibSass 및 패키지는 이제 더 이상 [사용되지 않습니다](https://sass-lang.com/blog/libsass-is-deprecated).
+Bootstrap은 빌드할 때 Sass 소스 파일을 CSS 파일로 컴파일하기 위해 [Dart Sass](https://sass-lang.com/dart-sass) (빌드 과정에 포함됨)를 사용하며 자체 자산 파이프라인을 사용해서 Sass를 컴파일하는 경우에도 동일한 작업을 수행하는 것이 좋습니다. 이전 Bootstrap v4에는 Node Sass를 사용했지만 Node Sass를 포함하여 그 위에 빌드된 LibSass 및 패키지는 이제 더 이상 [사용되지 않습니다](https://sass-lang.com/blog/libsass-is-deprecated/).
 
 Dart Sass는 10의 반올림 정밀도를 사용하며 이 값은 효율성을 위해서 조정할 수 없습니다. 경량화와 같이 생성된 CSS를 추가적으로 처리하는 동안에는 정밀도를 낮추지 않지만 그렇게 선택한다면 브라우저 반올림 문제를 방지하기 위해서 정밀도를 6 이상으로 유지하는 것이 좋습니다.
 

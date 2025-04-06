@@ -432,7 +432,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 새로운 Sass 변수로서, 모든 색상에 새로운 색조와 음영을 추가해 각 기본 색상에 9개의 별도 색상을 제공합니다.
 
-- 색상 대비(color contrast)를 개선하였습니다. 색상 대비 비율을 3:1에서 4.5:1로 변경하고 WCAG 2.1 AA contrast를 확보하기 위해 blue, green, cyan, pink 색상을 수정하였습니다. 그리고 색상 대비에서 사용하는 어두운 색($color-contrast-dark)을 `$gray-900`에서 `$black`으로 변경하였습니다.
+- 색상 대비(color contrast)를 개선하였습니다. 색상 대비 비율을 3:1에서 4.5:1로 변경하고 WCAG 2.2 AA contrast를 확보하기 위해 blue, green, cyan, pink 색상을 수정하였습니다. 그리고 색상 대비에서 사용하는 어두운 색($color-contrast-dark)을 `$gray-900`에서 `$black`으로 변경하였습니다.
 
 - 색상을 적절하게 혼합한 새로운 사용자 정의 `tint-color()`와 `shade-color()` 함수를 사용해 컬러 시스템을 지원합니다.
 
@@ -446,7 +446,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 컬럼은 더 이상 `position: relative`가 적용되지 않기 때문에 필요에 따라 해당 동작을 위해 요소에 `.position-relative` 클래스를 추가해 사용할 필요가 있습니다.
 
-- <span class="badge text-bg-danger">중요 변경사항</span> 자주 사용되지 않는 몇몇 `.order-*` 클래스를 삭제하였습니다. 현재는 `.order-1` 부터 `.order-5`까지의 클래스만 제공하고 있습니다.
+- <span class="badge text-bg-danger">중요 변경사항</span> 자주 사용되지 않는 몇몇 `.order-*` 클래스를 삭제하였습니다. 현재는 `.order-0` 부터 `.order-5`까지의 클래스만 제공하고 있습니다.
 
 - <span class="badge text-bg-danger">중요 변경사항</span> 유틸리티로 쉽게 복제 할 수 있는 `.media` 클래스를 삭제 하였습니다. [#28265](https://github.com/twbs/bootstrap/pull/28265)와 [flex utilities page for an example]({{< docsref "/utilities/flex#media-object" >}})을 참조해 주세요.
 
@@ -738,3 +738,5 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 - 팝오버 요소의 보다 나은 배치를 위해 `fallbackPlacements` 기본값이 `['top', 'right', 'bottom', 'left']`로 변경되었습니다. **드롭다운, 팝오버, 툴팁에 적용됩니다.**
 
 - `_getInstance()` → `getInstance()`와 같이 공공의 정적 메소드에서 밑줄표시 삭제하였습니다.
+
+- `util.js`를 제거했으며, 이제 해당 기능이 개별 플러그인에 통합되었습니다. 이전에 `util.js`를 수동으로 포함했다면 더 이상 필요하지 않으므로 안전하게 제거할 수 있습니다. 각 플러그인은 이제 필요한 유틸리티만 포함하므로 모듈성이 향상되고 종속성이 줄어듭니다.

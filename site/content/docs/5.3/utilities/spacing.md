@@ -104,11 +104,11 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 `display: grid` 또는 `display: flex`를 사용할 때 부모 그리드 컨테이너에서 `gap` 유틸리티를 사용할 수 있습니다. 이렇게 하면 개별 그리드 또는 flex 항목에 여백 유틸리티를 추가할 필요가 없습니다. 간격 유틸리티는 기본적으로 반응형이며 `$spacers` Sass 맵을 기반으로 유틸리티 API를 통해 생성됩니다.
 
 {{< example class="bd-example-cssgrid" >}}
-<div class="grid gap-3">
-  <div class="p-2 g-col-6">Grid item 1</div>
-  <div class="p-2 g-col-6">Grid item 2</div>
-  <div class="p-2 g-col-6">Grid item 3</div>
-  <div class="p-2 g-col-6">Grid item 4</div>
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-3">
+  <div class="p-2">Grid item 1</div>
+  <div class="p-2">Grid item 2</div>
+  <div class="p-2">Grid item 3</div>
+  <div class="p-2">Grid item 4</div>
 </div>
 {{< /example >}}
 
@@ -119,11 +119,11 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 `row-gap`은 지정된 컨테이너의 하위 항목 사이의 세로 간격을 설정합니다.
 
 {{< example class="bd-example-cssgrid" >}}
-<div class="grid gap-0 row-gap-3">
-  <div class="p-2 g-col-6">Grid item 1</div>
-  <div class="p-2 g-col-6">Grid item 2</div>
-  <div class="p-2 g-col-6">Grid item 3</div>
-  <div class="p-2 g-col-6">Grid item 4</div>
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-0 row-gap-3">
+  <div class="p-2">Grid item 1</div>
+  <div class="p-2">Grid item 2</div>
+  <div class="p-2">Grid item 3</div>
+  <div class="p-2">Grid item 4</div>
 </div>
 {{< /example >}}
 
@@ -132,11 +132,11 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 `column-gap`은 지정된 컨테이너의 하위 항목 사이의 가로 간격을 설정합니다.
 
 {{< example class="bd-example-cssgrid" >}}
-<div class="grid gap-0 column-gap-3">
-  <div class="p-2 g-col-6">Grid item 1</div>
-  <div class="p-2 g-col-6">Grid item 2</div>
-  <div class="p-2 g-col-6">Grid item 3</div>
-  <div class="p-2 g-col-6">Grid item 4</div>
+<div style="grid-template-columns: 1fr 1fr;" class="d-grid gap-0 column-gap-3">
+  <div class="p-2">Grid item 1</div>
+  <div class="p-2">Grid item 2</div>
+  <div class="p-2">Grid item 3</div>
+  <div class="p-2">Grid item 4</div>
 </div>
 {{< /example >}}
 

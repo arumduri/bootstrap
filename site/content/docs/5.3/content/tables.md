@@ -142,8 +142,9 @@ toc: true
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td colspan="2" class="table-active">Larry the Bird</td>
-        <td>@twitter</td>
+        <td>John</td>
+        <td>Doe</td>
+        <td class="table-active">@social</td>
       </tr>
     </tbody>
   </table>
@@ -163,8 +164,9 @@ toc: true
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2" class="table-active">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>John</td>
+      <td>Doe</td>
+      <td class="table-active">@social</td>
     </tr>
   </tbody>
 </table>
@@ -195,8 +197,9 @@ toc: true
       </tr>
       <tr>
         <th scope="row">3</th>
-        <td colspan="2" class="table-active">Larry the Bird</td>
-        <td>@twitter</td>
+        <td>John</td>
+        <td>Doe</td>
+        <td class="table-active">@social</td>
       </tr>
     </tbody>
   </table>
@@ -216,8 +219,9 @@ toc: true
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2" class="table-active">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>John</td>
+      <td>Doe</td>
+      <td class="table-active">@social</td>
     </tr>
   </tbody>
 </table>
@@ -294,8 +298,9 @@ toc: true
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
     </tr>
   </tbody>
 </table>
@@ -419,9 +424,9 @@ toc: true
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
     </tr>
   </tbody>
 </table>
@@ -483,9 +488,9 @@ toc: true
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
     </tr>
   </tbody>
 </table>
@@ -527,9 +532,9 @@ toc: true
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
     </tr>
   </tbody>
 </table>
@@ -573,9 +578,9 @@ toc: true
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
     </tr>
   </tbody>
   <tfoot>
@@ -654,9 +659,9 @@ toc: true
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>John</td>
+      <td>Doe</td>
+      <td>@social</td>
     </tr>
   </tbody>
 </table>

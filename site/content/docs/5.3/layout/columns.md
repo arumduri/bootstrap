@@ -204,7 +204,7 @@ flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있
 
 ### 정렬 클래스
 
-콘텐츠의 **시각적 순서**를 제어하려면 `.order-` 클래스를 사용하세요. 이러한 클래스는 반응형이므로 중단점으로 `order`를 설정할 수 있습니다 (예: `.order-1.order-md-2`). 여기에는 6개의 모든 그리드 계층에서 `1`부터 `5`까지에 대한 지원이 포함됩니다. 더 많은 `.order-*` 클래스가 필요하다면 Sass 변수를 통해서 기본 숫자를 변경할 수 있습니다.
+콘텐츠의 **시각적 순서**를 제어하려면 `.order-` 클래스를 사용하세요. 이러한 클래스는 반응형이므로 중단점으로 `order`를 설정할 수 있습니다 (예: `.order-1.order-md-2`). 여기에는 6개의 모든 그리드 계층에서 `1`부터 `5`까지에 대한 지원이 포함됩니다.
 
 {{< example class="bd-example-row" >}}
 <div class="container text-center">
@@ -239,6 +239,28 @@ flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있
   </div>
 </div>
 {{< /example >}}
+
+더 많은 `.order-*` 클래스가 필요하다면 `$utilities` Sass 맵을 수정하여 새로운 클래스를 추가할 수 있습니다. 자세한 내용은 [Sass 맵 및 루프 문서]({{< docsref "/customize/sass#maps-and-loops" >}}) 또는 [유틸리티 수정 문서]({{< docsref "/utilities/api#modify-utilities" >}})를 참조하세요.
+
+```scss
+$utilities: map-merge(
+  $utilities,
+  (
+    "order": map-merge(
+      map-get($utilities, "order"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "order"), "values"),
+          (
+            6: 6, // Add a new `.order-{breakpoint}-6` utility
+            last: 7 // Change the `.order-{breakpoint}-last` utility to use the next number
+          )
+        ),
+      ),
+    ),
+  )
+);
+```
 
 ### 열 오프셋
 

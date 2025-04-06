@@ -4,7 +4,8 @@ title: 포커스 링
 description: 요소와 컴포넌트에 사용자 지정 포커스 링 스타일을 추가하고 수정할 수 있는 유틸리티 클래스입니다.
 group: helpers
 toc: true
-added: "5.3"
+added:
+  version: "5.3"
 ---
 
 `.focus-ring` 도우미는 `:focus`의 기본 `outline`을 제거하여 보다 광범위하게 사용자 정의할 수 있는 `box-shadow`로 대체합니다. 새 그림자는 `:root` 수준에서 상속된 일련의 CSS 변수로 구성되며, 모든 요소 또는 컴포넌트에 대해 수정할 수 있습니다.

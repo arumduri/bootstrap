@@ -6,11 +6,16 @@ group: getting-started
 toc: true
 thumbnail: guides/bootstrap-parcel@2x.png
 ---
-<img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png" width="2000" height="1000" alt="">
+
+<img class="d-block mx-auto mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-parcel.png" width="800" height="400" alt="">
 
 {{< callout >}}
 **끝으로 건너뛰고 싶으신가요?** 이 가이드의 소스 코드와 동작 확인을 위한 데모는 [twbs/examples repository](https://github.com/twbs/examples/tree/main/parcel)에서 다운로드 하세요. [StackBlitz 예제 보기](https://stackblitz.com/github/twbs/examples/tree/main/parcel?file=index.html)에서도 가능하지만 현재 Parcel은 지원되지 않아 실행할 수 없습니다.
 {{< /callout >}}
+
+## Parcel이 뭐에요?
+
+[Parcel](https://parceljs.org/)은 개발 프로세스를 단순화하도록 설계된 웹 애플리케이션 번들러로, 설정 없이 바로 사용할 수 있어 개발 프로세스를 간소화합니다. 사용 편의성에 초점을 맞추면서도 고급 번들러에서 제공하는 기능을 제공하므로 빠른 시작을 원하는 개발자에게 이상적입니다.
 
 ## 설정하기
 
@@ -110,7 +115,7 @@ my-project/
    npm start
    ```
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server.png" alt="Parcel dev server running">
+   ![Parcel dev server running](/assets/img/guides/parcel-dev-server.png)
 
 이 가이드의 마지막인 다음 섹션에서는 Bootstrap의 모든 CSS와 JavaScript를 가져오겠습니다.
 
@@ -149,7 +154,7 @@ Bootstrap을 Parcel로 가져오려면 두 개의 임포트가 필요한데, 하
 
 3. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다:
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/parcel-dev-server-bootstrap.png" alt="Parcel dev server running with Bootstrap">
+   ![Parcel dev server running with Bootstrap](/assets/img/guides/parcel-dev-server-bootstrap.png)
 
    이제 사용하려는 Bootstrap 컴포넌트를 추가할 수 있습니다. 추가 커스텀 Sass를 포함시키고 필요한 부분만 Bootstrap의 CSS와 JS를 임포트하여 빌드를 최적화하는 방법은 [전체 Parcel 예제 프로젝트](https://github.com/twbs/examples/tree/main/parcel)를 참조하세요.
 

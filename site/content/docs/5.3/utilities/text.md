@@ -59,7 +59,8 @@ Prevent text from wrapping with a `.text-nowrap` class.
 {{< /callout >}}
 
 ## 텍스트 대소문자
-텍스트 대소문자 클래스를 사용하여 컴포넌트의 텍스트를 변환하세요.
+
+`text-lowercase`, `text-uppercase` 또는 `text-capitalize`와 같은 텍스트 대소문자 클래스를 사용하여 컴포넌트의 텍스트를 변환하세요.
 
 {{< example >}}
 <p class="text-lowercase">Lowercased text.</p>

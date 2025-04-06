@@ -5,6 +5,8 @@ title_en: Object fit
 description: 개체 맞춤 유틸리티를 사용하여 `<img>` 또는 `<video>`와 같은 [대체된 요소](https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element)의 콘텐츠가 컨테이너에 맞게 크기를 조정하는 방법을 수정할 수 있습니다.
 group: utilities
 toc: true
+added:
+  version: "5.3"
 ---
 
 ## 작동 방식

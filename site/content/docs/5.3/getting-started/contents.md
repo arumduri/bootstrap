@@ -63,7 +63,7 @@ bootstrap/
     └── bootstrap.min.js.map
 ```
 
-이것은 어떤 웹 프로젝트에서도 빠르게 사용할 수 있는 Bootstrap의 가장 기본적인 형태인 컴파일된 파일입니다. 우리는 컴파일된 CSS와 JS (`bootstrap.*`), 그리고 컴파일 및 경량화된 CSS와 JS (`bootstrap.min.*`)도 제공합니다. [소스 맵](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`)은 몇몇 브라우저의 개발자 도구에서 사용할 수 있습니다. 번들된 JS 파일 (`bootstrap.bundle.js` 및 경량화된 `bootstrap.bundle.min.js`)에는 [Popper](https://popper.js.org/)가 포함되어 있습니다.
+이것은 어떤 웹 프로젝트에서도 빠르게 사용할 수 있는 Bootstrap의 가장 기본적인 형태인 컴파일된 파일입니다. 우리는 컴파일된 CSS와 JS (`bootstrap.*`), 그리고 컴파일 및 경량화된 CSS와 JS (`bootstrap.min.*`)도 제공합니다. [소스 맵](https://web.dev/articles/source-maps) (`bootstrap.*.map`)은 몇몇 브라우저의 개발자 도구에서 사용할 수 있습니다. 번들된 JS 파일 (`bootstrap.bundle.js` 및 경량화된 `bootstrap.bundle.min.js`)에는 [Popper](https://popper.js.org/docs/v2/)가 포함되어 있습니다.
 
 ### CSS 파일
 

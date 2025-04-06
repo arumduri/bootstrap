@@ -16,7 +16,7 @@ toc: true
 
 여기에는 문서, 소스 파일, 그리고 Popper같은 선택적 JavaScript 의존성이 포함되어 있지 않습니다.
 
-<a href="{{< param "download.dist" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Bootstrap');">다운로드</a>
+<a href="{{< param "download.dist" >}}" class="btn btn-bd-primary">다운로드</a>
 
 ## 소스 파일
 Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 파이프라인을 통해서 BootStrap를 컴파일할 수 있습니다. 이를 위해서는 다음 도구들이 필요합니다:
@@ -29,13 +29,13 @@ Sass, JavaScript, 그리고 문서 소스를 다운로드해서 고유 자산 �
 
 필요한 경우 [빌드 도구]({{< docsref "/getting-started/contribute#tooling-setup" >}})를 사용할 수도 있습니다. Bootstrap 및 문서 개발을 위해 포함되어 있긴 하지만, 목적에 적합하지 않을 수도 있습니다.
 
-<a href="{{< param "download.source" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">소스 다운로드</a>
+<a href="{{< param "download.source" >}}" class="btn btn-bd-primary">소스 다운로드</a>
 
 ## 예시
 
 [예시]({{< docsref "/examples" >}})를 다운로드하고 확인하고 싶다면 이미 만들어진 예시를 사용해 볼 수도 있습니다:
 
-<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Examples');">예시 다운로드</a>
+<a href="{{< param "download.dist_examples" >}}" class="btn btn-bd-primary">예시 다운로드</a>
 
 ## jsDelivr를 통한 CDN
 
@@ -103,9 +103,20 @@ Bootstrap의 `package.json`에는 다음 키에 몇몇 메타데이터가 포함
 yarn add bootstrap@{{< param "current_version" >}}
 ```
 
+{{< callout warning >}}
+**Yarn 2+ (aka Yarn Berry) doesn't support the `node_modules` directory by default**: using our [Sass & JS example](https://github.com/twbs/examples/tree/main/sass-js) needs some adjustments:
+
+```sh
+yarn config set nodeLinker node-modules # Use the node_modules linker
+touch yarn.lock # Create an empty yarn.lock file
+yarn install # Install the dependencies
+yarn start # Start the project
+```
+{{< /callout >}}
+
 ### RubyGems
 
-[Bundler](https://bundler.io/) (**권장**)와 [RubyGems](https://rubygems.org/) by adding the following line to your [`Gemfile`](https://bundler.io/gemfile.html)에 다음 줄을 추가해 [Bundler](https://bundler.io/) (**권장**)와 [RubyGems](https://rubygems.org/)를 사용해서 Ruby 앱에 Bootstrap을 설치할 수 있습니다:
+[`Gemfile`](https://bundler.io/guides/gemfile.html)에 다음 줄을 추가해 [Bundler](https://bundler.io/) (**권장**)와 [RubyGems](https://rubygems.org/)를 사용해서 Ruby 앱에 Bootstrap을 설치할 수 있습니다:
 
 ```ruby
 gem 'bootstrap', '~> {{< param current_ruby_version >}}'
@@ -129,7 +140,7 @@ composer require twbs/bootstrap:{{< param current_version >}}
 
 ### NuGet
 
-.NET 프레임워크으로 개발하고 있다면, [NuGet](https://www.nuget.org/)을 사용해서 Bootstrap의 [CSS](https://www.nuget.org/packages/bootstrap/) 또는 [Sass](https://www.nuget.org/packages/bootstrap.sass/) 및 JavaScript를 설치 및 관리할 수 있습니다. 최신 프로젝트는 NuGet이 프론트엔드 에셋이 아닌 컴파일된 코드용으로 설계되었으므로 [libman](https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/) 또는 다른 방법을 사용해야 합니다.
+.NET 프레임워크으로 개발하고 있다면, [NuGet](https://www.nuget.org/)을 사용해서 Bootstrap의 [CSS](https://www.nuget.org/packages/bootstrap/) 또는 [Sass](https://www.nuget.org/packages/bootstrap.sass/) 및 JavaScript를 설치 및 관리할 수 있습니다. 최신 프로젝트는 NuGet이 프론트엔드 에셋이 아닌 컴파일된 코드용으로 설계되었으므로 [libman](https://learn.microsoft.com/en-us/aspnet/core/client-side/libman/) 또는 다른 방법을 사용해야 합니다.
 
 ```powershell
 Install-Package bootstrap

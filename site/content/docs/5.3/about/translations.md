@@ -11,7 +11,7 @@ Bootstrap의 문서들이 커뮤니티 멤버들에 의해서 여러 언어로 �
 {{< translations.inline >}}
 <ul>
 {{ range .Site.Data.translations -}}
-  <li><a href="{{ .url }}" hreflang="{{ .code }}">{{ .description }} ({{ .name }})</a></li>
+  <li><a href="{{ .url }}" hreflang="{{ .code }}" lang="{{ .code }}">{{ .description }} ({{ .name }})</a></li>
 {{ end -}}
 </ul>
 {{< /translations.inline >}}

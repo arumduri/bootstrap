@@ -4,7 +4,8 @@ title: Z-index
 description: 저수준의 `z-index` 유틸리티를 사용하여 요소 또는 컴포넌트의 스택 레벨을 빠르게 변경할 수 있습니다.
 group: utilities
 toc: true
-added: "5.3"
+added:
+  version: "5.3"
 ---
 
 ## 예제

@@ -4,7 +4,8 @@ title: 불투명도
 title_en: Opacity
 description: 요소의 불투명도를 제어할 수 있습니다.
 group: utilities
-added: "5.1"
+added:
+  version: "5.1"
 ---
 
 `opacity` 속성은 요소의 불투명도 수준을 설정합니다. `1`은 불투명, `.5`는 반투명, `0` 투명을 의미합니다.

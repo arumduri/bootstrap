@@ -47,7 +47,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-Sass 를 통해 수정할 때, 문자열의 주변에 따옴표를 만들기 위해 [quote](https://sass-lang.com/documentation/modules/string#quote) 함수가 필요합니다. 예를 들어, `>`을 구분자로 사용하려면 이렇게 사용합니다.
+Sass 를 통해 수정할 때, 문자열의 주변에 따옴표를 만들기 위해 [quote](https://sass-lang.com/documentation/modules/string/#quote) 함수가 필요합니다. 예를 들어, `>`을 구분자로 사용하려면 이렇게 사용합니다.
 
 ```scss
 $breadcrumb-divider: quote(">");

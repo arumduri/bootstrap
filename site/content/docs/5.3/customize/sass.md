@@ -101,7 +101,7 @@ npm install -g sass
 sass --watch ./scss/custom.scss ./css/custom.css
 ```
 
-옵션에 대한 자세한 내용은 [sass-lang.com/install](https://sass-lang.com/install) 및 [VS Code로 컴파일하기](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css)에서 확인하세요.
+옵션에 대한 자세한 내용은 [sass-lang.com/install](https://sass-lang.com/install/) 및 [VS Code로 컴파일하기](https://code.visualstudio.com/docs/languages/css#_transpiling-sass-and-less-into-css)에서 확인하세요.
 
 {{< callout info >}}
 **다른 빌드 도구와 함께 Bootstrap을 사용하시나요?** [Webpack]({{< docsref "/getting-started/webpack" >}}), [Parcel]({{< docsref "/getting-started/parcel" >}}) 또는 [Vite]({{< docsref "/getting-started/vite" >}})를 사용한 컴파일 가이드를 읽어보세요. 또한 [GitHub의 예제 리포지토리](https://github.com/twbs/examples)에는 프로덕션에 바로 사용할 수 있는 데모도 있습니다.

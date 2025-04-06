@@ -12,6 +12,10 @@ thumbnail: guides/bootstrap-webpack@2x.png
 **끝으로 건너뛰고 싶으신가요?** 이 가이드의 소스 코드와 워킹 데모를 [twbs/examples 리포지토리](https://github.com/twbs/examples/tree/main/webpack)에서 다운로드 하세요. [StackBlitz에서 예제를 열어](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) 실시간으로 편집할 수도 있습니다.
 {{< /callout >}}
 
+## Webpack이 뭐에요?
+
+[Webpack](https://webpack.js.org/)은 모듈과 종속성을 처리하여 정적 자산을 생성하는 JavaScript 모듈 번들러입니다. 여러 파일과 종속성이 있는 복잡한 웹 애플리케이션을 관리하는 것을 간소화합니다.
+
 ## 설정하기
 
 Bootstrap으로 웹팩 프로젝트를 처음부터 구축하는 것이라 실제로 시작하기 전에 몇 가지 전제 조건과 선행 단계가 필요합니다. 이 가이드를 사용하려면 Node.js가 설치되어 있고 터미널에 어느 정도 익숙해야 합니다.
@@ -140,7 +144,7 @@ my-project/
    npm start
    ```
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server.png" alt="Webpack dev server running">
+   ![Webpack dev server running](/assets/img/guides/webpack-dev-server.png)
 
 이 가이드의 다음이자 마지막 섹션에서는 Webpack 로더를 설정하고 Bootstrap의 모든 CSS와 JavaScript를 가져오겠습니다.
 
@@ -243,7 +247,7 @@ Bootstrap을 Webpack으로 가져오려면 첫 번째 섹션에서 설치한 로
 
 4. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다:
 
-   <img class="img-fluid" src="/docs/{{< param docs_version >}}/assets/img/guides/webpack-dev-server-bootstrap.png" alt="Webpack dev server running with Bootstrap">
+   ![Webpack dev server running with Bootstrap](/assets/img/guides/webpack-dev-server-bootstrap.png)
 
    이제 사용하려는 Bootstrap 컴포넌트를 추가하기 시작할 수 있습니다. 추가 커스텀 Sass를 포함시키고 필요한 Bootstrap의 CSS 및 JS 부분만 임포트하여 빌드를 최적화하는 방법은 [Webpack 예제 프로젝트](https://github.com/twbs/examples/tree/main/webpack)를 확인하세요.
 

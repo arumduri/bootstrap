@@ -57,7 +57,7 @@ Internet Explorer는 지원되지 않습니다. **Internet Explorer 지원이 �
 
 ### 오버플로우와 스크롤
 
-`<body>` 요소에서 `overflow: hidden;` 지원은 iOS와 Android에서 제한되어 있습니다. 이를 위해 장치의 브라우저에서 모달 상단 또는 하단을 스크롤하면 `<body>` 콘텐츠가 스크롤되기 시작합니다. [Chrome 버그 #175502](https://bugs.chromium.org/p/chromium/issues/detail?id=175502) (Chrome v40에서 수정됨)과 [WebKit 버그 #153852](https://bugs.webkit.org/show_bug.cgi?id=153852)를 확인해주세요.
+`<body>` 요소에서 `overflow: hidden;` 지원은 iOS와 Android에서 제한되어 있습니다. 이를 위해 장치의 브라우저에서 모달 상단 또는 하단을 스크롤하면 `<body>` 콘텐츠가 스크롤되기 시작합니다. [Chrome 버그 #175502](https://issues.chromium.org/issues/40301599) (Chrome v40에서 수정됨)과 [WebKit 버그 #153852](https://bugs.webkit.org/show_bug.cgi?id=153852)를 확인해주세요.
 
 ### iOS 텍스트 필드와 스크롤
 

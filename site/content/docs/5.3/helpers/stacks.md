@@ -5,13 +5,14 @@ title_en: Stacks
 description: 컴포넌트 레이아웃을 그 어느 때보다 빠르고 쉽게 만들기 위해 flexbox 유틸리티를 기반으로 하는 약칭 도우미입니다.
 group: helpers
 toc: true
-added: "5.1"
+added:
+  version: "5.1"
 ---
 
 스택은 Bootstrap에서 레이아웃을 빠르고 쉽게 생성하기 위해 여러 flexbox 속성을 적용하는 지름길을 제공합니다. 개념 및 구현에 대한 모든 크레딧은 오픈 소스 [Pylon Project](https://almonk.github.io/pylon/)에 있습니다.
 
 {{< callout warning >}}
-**주의!** 최근 Safari에 flexbox가 있는 갭 유틸리티에 대한 지원이 추가되었으므로 원하는 브라우저 지원을 확인하는 것이 좋습니다. 그리드 레이아웃에는 문제가 없어야 합니다. [자세히 알아보세요](https://caniuse.com/flexbox-gap).
+**주의!** Safari는 flexbox가 있는 갭 유틸리티에 대한 지원을 14.5 이전 버전에서는 제공되지 않으므로 원하는 브라우저 지원을 확인하는 것이 좋습니다. 그리드 레이아웃에는 문제가 없어야 합니다. [자세히 알아보세요](https://caniuse.com/flexbox-gap).
 {{< /callout >}}
 
 ## 세로

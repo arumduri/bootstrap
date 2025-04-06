@@ -21,6 +21,7 @@ group: customize
 | `$enable-transitions`          | `true` (기본) 혹은 `false`        | 다양한 컴포넌트에서 정의된 `transition`의 사용 유무. |
 | `$enable-reduced-motion`       | `true` (기본) 혹은 `false`        | 사용자의 브라우저/운영 체제 기본 설정에 따라 특정 애니메이션/트랜지션을 억제하는 [`prefers-reduced-motion` 미디어 쿼리]({{< docsref "/getting-started/accessibility#reduced-motion" >}})를 사용합니다.|
 | `$enable-grid-classes`         | `true` (기본) 혹은 `false`        | 그리드 시스템용 CSS 클래스(예를 들어, `.row`, `.col-md-1`, 등등)를 사용합니다. |
+| `$enable-cssgrid`              | `true` or `false` (기본)        | 실험적 CSS 그리드 시스템 (예: `.grid`, `.g-col-md-1` 등)을 활성화합니다. |
 | `$enable-container-classes`    | `true` (default) or `false`        | 레이아웃 컨테이너에 대한 CSS 클래스를 생성할 수 있습니다. (v5.2.0에 추가됨) |
 | `$enable-caret`                | `true` (기본) 혹은 `false`        | `.dropdown-toggle`의 가상 요소의 화살표(캐럿)를 사용합니다. |
 | `$enable-button-pointers`      | `true` (기본) 혹은 `false`        | 비활성화 되지 않은 버튼 요소에 "손모양(hand)" 커서 추가합니다. |

@@ -166,7 +166,7 @@ toc: true
 {{< callout info >}}
 접근성을 위해 자동 재생 캐러셀은 사용하지 않는 것이 좋습니다. 페이지에 자동 재생 캐러셀이 포함되어 있는 경우 캐러셀을 명시적으로 일시 중지/정지할 수 있는 추가 버튼이나 컨트롤을 제공하는 것이 좋습니다.
 
-[WCAG 2.1 Success Criterion 2.2.2 Pause, Stop, Hide](https://www.w3.org/TR/WCAG21/#pause-stop-hide)를 참고해주세요.
+[WCAG 2.2 Success Criterion 2.2.2 Pause, Stop, Hide](https://www.w3.org/TR/WCAG21/#pause-stop-hide)를 참고해주세요.
 {{< /callout >}}
 
 {{< example >}}

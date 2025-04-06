@@ -8,7 +8,7 @@ aliases: "/docs/5.3/utilities/"
 toc: true
 ---
 
-Bootstrap 유틸리티는 유틸리티 API로 생성되며 Sass를 통해 기본 유틸리티 클래스 세트를 수정하거나 확장하는 데 사용할 수 있습니다. 저희 유틸리티 API는 다양한 옵션으로 클래스 패밀리를 생성하기 위한 일련의 Sass맵 및 함수를 기반으로 합니다. Sass맵에 익숙하지 않은 경우 [official Sass docs](https://sass-lang.com/documentation/values/maps)를 읽고 시작해 보세요.
+Bootstrap 유틸리티는 유틸리티 API로 생성되며 Sass를 통해 기본 유틸리티 클래스 세트를 수정하거나 확장하는 데 사용할 수 있습니다. 저희 유틸리티 API는 다양한 옵션으로 클래스 패밀리를 생성하기 위한 일련의 Sass맵 및 함수를 기반으로 합니다. Sass맵에 익숙하지 않은 경우 [공식 Sass 문서](https://sass-lang.com/documentation/values/maps/)를 읽고 시작해 보세요.
 
 
 `$utilities` 맵에는 우리의 모든 유틸리티가 포함되어 나중에는 사용자정의 `$utilities` 와 통합(파일이 있을 경우)됩니다. 유틸리티 맵에는 다음 옵션을 허용할 수 있는 유틸리티 그룹의 키 목록이 포함되어 있습니다:
@@ -453,7 +453,8 @@ $utilities: map-merge(
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
-  $utilities, (
+  $utilities,
+  (
     "border": map-merge(
       map-get($utilities, "border"),
       ( responsive: true ),
@@ -509,7 +510,8 @@ This will now generate responsive variations of `.border` and `.border-0` for ea
 @import "bootstrap/scss/utilities";
 
 $utilities: map-merge(
-  $utilities, (
+  $utilities,
+  (
     "margin-start": map-merge(
       map-get($utilities, "margin-start"),
       ( class: ml ),
@@ -522,7 +524,7 @@ $utilities: map-merge(
 
 ### 유틸리티 제거
 
-Remove any of the default utilities with the [`map-remove()` Sass function](https://sass-lang.com/documentation/modules/map#remove).
+Remove any of the default utilities with the [`map-remove()` Sass function](https://sass-lang.com/documentation/modules/map/#remove).
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -538,7 +540,7 @@ $utilities: map-remove($utilities, "width", "float");
 @import "bootstrap/scss/utilities/api";
 ```
 
-You can also use the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map#merge) and set the group key to `null` to remove the utility.
+You can also use the [`map-merge()` Sass function](https://sass-lang.com/documentation/modules/map/#merge) and set the group key to `null` to remove the utility.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -560,8 +562,7 @@ $utilities: map-merge(
 
 ### 추가, 제거, 수정
 
-
-[`map-merge()` Sass 함수](https://sass-lang.com/documentation/modules/map#merge)를 사용해서 한 번에 다수의 유틸리티들을 추가, 제거, 수정할 수 있습니다. 다음은 하나의 큰 맵 안에 위에 있는 예제들을 포함하는 예시입니다.
+[`map-merge()` Sass 함수](https://sass-lang.com/documentation/modules/map/#merge)를 사용해서 한 번에 다수의 유틸리티들을 추가, 제거, 수정할 수 있습니다. 다음은 하나의 큰 맵 안에 위에 있는 예제들을 포함하는 예시입니다.
 
 ```scss
 @import "bootstrap/scss/functions";
@@ -576,13 +577,11 @@ $utilities: map-merge(
   (
     // Remove the `width` utility
     "width": null,
-
     // Make an existing utility responsive
     "border": map-merge(
       map-get($utilities, "border"),
       ( responsive: true ),
     ),
-
     // Add new utilities
     "cursor": (
       property: cursor,

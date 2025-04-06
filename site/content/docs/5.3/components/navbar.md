@@ -33,7 +33,7 @@ toc: true
 - 모든 폼 컨트롤과 액션을 위한 flex와 spacing 유틸리티.
 - 수직 방향으로 센터링된 문자열을 추가하기 위한 `.navbar-text`.
 - `.collapse.navbar-collapse`으로 부모 중단점에 따라 내비게이션 바의 콘텐츠를 그룹화하거나 감출수 있음.
-- 옵션으로 `.navbar-scroll`를 추가해 `max-height`와 [확장된 내비게이션 바 콘텐츠 스크롤](#스크롤)이 가능.
+- 옵션으로 `.navbar-nav-scroll`를 추가해 `max-height`와 [확장된 내비게이션 바 콘텐츠 스크롤](#스크롤)이 가능.
 
 여기서는 `lg` (large) 중단점에서 자동으로 접히는 라이트 테마를 사용한 반응형 내비게이션 바에 포함된 서브 컴포넌트의 예시를 보여주고 있습니다.
 
@@ -431,7 +431,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
   <!-- Navbar content -->
 </nav>
 
-<nav class="navbar" style="background-color: #e3f2fd;">
+<nav class="navbar" style="background-color: #e3f2fd;" data-bs-theme="light">
   <!-- Navbar content -->
 </nav>
 ```

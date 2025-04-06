@@ -51,7 +51,7 @@ toc: true
    </html>
    ```
 
-   [Popper](https://popper.js.org/)와 JS를 개별로 포함시킬 수도 있습니다. 드롭다운, 팝오버 또는 툴팁을 사용할 생각이 없다면 Popper를 제외해서 수십 킬로바이트를 아낄 수 있습니다.
+   [Popper](https://popper.js.org/docs/v2/)와 JS를 개별로 포함시킬 수도 있습니다. 드롭다운, 팝오버 또는 툴팁을 사용할 생각이 없다면 Popper를 제외해서 수십 킬로바이트를 아낄 수 있습니다.
 
    ```html
    <script src="{{< param "cdn.popper" >}}" integrity="{{< param "cdn.popper_hash" >}}" crossorigin="anonymous"></script>
@@ -84,18 +84,19 @@ CDN을 사용하여 [콘텐츠 페이지에 나열된 추가 빌드]({{< docsref
 
 어떤 컴포넌트가 JavaScript나 Popper를 요구하는지 궁금하신가요? 일반적인 페이지 구조에 대해 전혀 확신하지 못하신다면 예시 페이지 템플릿을 계속 읽어보세요.
 
+- 콜랩스 플러그인 확장을 위한 아코디언
 - 경고 닫기
 - 상태 및 체크 박스/라디오 기능 버튼
 - 캐러셀의 모든 슬라이드 동작, 제어 및 인디케이터
 - 콘텐츠 가시성 접기 전환
-- 드롭다운에서의 표시 및 위치 ([Popper](https://popper.js.org/)도 필요)
+- 드롭다운에서의 표시 및 위치 ([Popper](https://popper.js.org/docs/v2/)도 필요)
 - 모달에서의 표시, 위치, 스크롤 행동
 - 네비게이션 바와 오프캔버스에서의 반응형 동작 구현을 위한 접기 플러그인 확장
 - 콘텐츠 창 전환을 위한 탭 플러그인이 있는 네비게이션
 - 표시, 위치 지정, 스크롤 동작을 위한 오프캔버스
 - 스크롤 동작 및 네비게이션 갱신을 위한 스크롤스파이
 - 토스트 표시 및 닫기
-- 툴팁과 팝오버에서의 표시 및 위치 ([Popper](https://popper.js.org/)도 필요)
+- 툴팁과 팝오버에서의 표시 및 위치 ([Popper](https://popper.js.org/docs/v2/)도 필요)
 
 ## 중요한 전역 속성
 
@@ -148,9 +149,9 @@ CSS에서 보다 간단한 크기 조절을 위해서 우리는 `content-box`에
 
 - [공식 Bootstrap 블로그]({{< param blog >}})를 읽고 구독해 보세요.
 - [GitHub Discussions](https://github.com/twbs/bootstrap/discussions)에서 질문을 하거나 추가적인 정보를 얻을 수 있습니다.
-- [커뮤니티 Discord](https://discord.gg/bZUvakRU3M) 또는 [Bootstrap subreddit](https://reddit.com/r/bootstrap)에서 토론, 질문 등을 할 수 있습니다.
+- [커뮤니티 Discord](https://discord.gg/bZUvakRU3M) 또는 [Bootstrap subreddit](https://www.reddit.com/r/bootstrap)에서 토론, 질문 등을 할 수 있습니다.
 - 다른 Bootstrap 유저들과 IRC에서 대화해 보세요. `irc.libera.chat` 서버의 `#bootstrap` 채널에서 만나실 수 있습니다.
 - 구현 방법에 대한 도움을 Stack Overflow (태그는 [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5))에서 받으실 수 있습니다.
 - 개발자 분들은 [npm](https://www.npmjs.com/search?q=keywords:bootstrap) 또는 비슷한 전송 매커니즘에서 Bootstrap 수정 패키지 또는 기능 추가 패키지에서 `bootstrap` 단어를 사용해서 찾기 쉽도록 해주셔야 합니다.
 
-[Twitter에서 @getbootstrap을 팔로우](https://twitter.com/{{< param twitter >}})해서 최신 가십이나 멋진 뮤직 비디오들을 확인하실 수도 있습니다.
+[X에서 @getbootstrap을 팔로우](https://x.com/{{< param x >}})해서 최신 가십이나 멋진 뮤직 비디오들을 확인하실 수도 있습니다.

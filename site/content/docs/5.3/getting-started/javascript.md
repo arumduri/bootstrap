@@ -24,7 +24,7 @@ Bootstrap의 CSS는 모든 프레임워크와 함께 사용할 수 있지만 **B
   {{< /callout >}}
 - Vue: [BootstrapVue](https://bootstrap-vue.org/) (Bootstrap 4)
 - Vue 3: [BootstrapVueNext](https://bootstrap-vue-next.github.io/bootstrap-vue-next/) (Bootstrap 5, 현재 알파 버전)
-- Angular: [ng-bootstrap](https://ng-bootstrap.github.io/)
+- Angular: [ng-bootstrap](https://ng-bootstrap.github.io/) 또는 [ngx-bootstrap](https://valor-software.com/ngx-bootstrap)
 
 ## Bootstrap을 모듈로 사용하기
 
@@ -95,7 +95,7 @@ Uncaught TypeError: Failed to resolve module specifier "@popperjs/core". Relativ
 
 일부 플러그인 및 CSS 컴포넌트는 다른 플러그인에 의존합니다. 플러그인을 개별적으로 포함하려면 문서에서 이러한 종속성을 확인해주세요
 
-드롭다운, 팝오버, 툴팁도 [Popper](https://popper.js.org/)에 의존하고 있습니다.
+드롭다운, 팝오버, 툴팁도 [Popper](https://popper.js.org/docs/v2/)에 의존하고 있습니다.
 
 ## 데이터 속성
 

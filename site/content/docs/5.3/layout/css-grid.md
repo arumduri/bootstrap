@@ -5,7 +5,8 @@ title_en: CSS Grid
 description: 예제와 코드 스니펫을 사용하여 CSS 그리드에 빌드된 대체 레이아웃 시스템을 활성화, 사용 및 사용자 지정하는 방법을 알아보세요.
 group: layout
 toc: true
-added: "5.1"
+added:
+  version: "5.1"
 ---
 
 Bootstrap의 기본 그리드 시스템은 수백만 명의 사람들이 시도하고 테스트한 10년 이상의 CSS 레이아웃 기술의 정점을 나타냅니다. 그러나 그것은 또한 우리가 새로운 브라우저에서 볼 수 있는 CSS 그리드와 같은 많은 최신 CSS 기능과 기술 없이 만들어졌습니다.
@@ -149,7 +150,7 @@ Bootstrap 5에서는 CSS 그리드를 기반으로 하지만 Bootstrap에 맞게
 실제로 이것은 기본 그리드 시스템과 비교할 때 더 복잡하고 사용자 정의가 가능한 레이아웃을 가능하게 해줍니다.
 
 {{< example class="bd-example-cssgrid" >}}
-<div class="grid text-center" style="--bs-columns: 3;">
+<div class="grid text-center overflow-x-auto" style="--bs-columns: 3;">
   <div>
     First auto-column
     <div class="grid">

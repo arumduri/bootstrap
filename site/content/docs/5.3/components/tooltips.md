@@ -11,7 +11,7 @@ toc: true
 
 툴팁 플러그인을 사용할 때 알아두어야 할 점:
 
-- 툴팁의 배치는 서드파티 라이브러리인 [Popper](https://popper.js.org/)에 의존하고 있습니다. `bootstrap.js` 앞에 [popper.min.js]({{< param "cdn.popper" >}})를 사용하거나, 팝오버가 포함되어 있는 `bootstrap.bundle.min.js`를 사용해야 합니다.
+- 툴팁의 배치는 서드파티 라이브러리인 [Popper](https://popper.js.org/docs/v2/)에 의존하고 있습니다. `bootstrap.js` 앞에 [popper.min.js]({{< param "cdn.popper" >}})를 사용하거나, 팝오버가 포함되어 있는 `bootstrap.bundle.min.js`를 사용해야 합니다.
 - 툴팁은 퍼포먼스를 위해 opt-in 되어 있기 때문에 **스스로 초기화를 해야 합니다.**
 - 길이가 0의 타이틀을 가진 툴팁은 표시되지 않습니다.
 - 더 복잡한 컴포넌트(입력 그룹, 버튼 그룹 등)의 렌더링 문제를 피하기 위해 `container: 'body'`를 지정해 주십시오.
@@ -110,8 +110,8 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 SVG에도 가능합니다:
 
 <div class="bd-example tooltip-demo">
-  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
-    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+  <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip" aria-label="Hover or focus to see default tooltip">
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
       <rect width="100%" height="100%" fill="#563d7c"/>
       <circle cx="50" cy="50" r="30" fill="#007bff"/>
     </svg>
@@ -204,7 +204,7 @@ const tooltip = new bootstrap.Tooltip('#example', {
 | `delay` | number, object | `0` | 도구 설명 표시/숨기기를 (ms 단위로)지연시키며, 수동 트리거 유형에는 적용되지 않습니다. 숫자를 지정하면 표시/숨기기 모두에 지연이 적용됩니다. 객체 구조는 `delay: { "show": 500, "hide": 100 }`입니다. |
 | `fallbackPlacements` | array | `['top', 'right', 'bottom', 'left']` | 배열에 배치 목록을 제공함으로써 (원하는 순서대로) 대체 배치를 정의합니다. 자세한 내용은 Popper의 [동작 문서](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements)를 참조하세요. |
 | `html` | boolean | `false` | 툴팁에서 HTML을 허용합니다. true이면 툴팁의 `title`에 있는 HTML 태그가 툴팁에 렌더링됩니다. false인 경우 `innerText` 속성을 사용하여 DOM에 콘텐츠를 삽입합니다. XSS 공격이 걱정된다면 텍스트를 사용하세요. |
-| `offset` | array, string, function | `[0, 0]` | 대상에 대한 툴팁의 오프셋입니다. 데이터 속성에 쉼표로 구분된 값으로 문자열을 전달할 수 있습니다 (예: `data-bs-offset="10,20"`). 오프셋을 결정하는 데 함수를 사용하는 경우 Popper 배치, 참조 및 Popper 레코드가 포함된 객체를 첫 번째 인수로 사용하여 호출됩니다. 트리거링 요소 DOM 노드는 두 번째 인수로 전달됩니다. 이 함수는 [스키딩](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1)과 [거리](https://popper.js.org/docs/v2/modifiers/offset/#distance-1)가 포함된 숫자 배열을 반환해야 합니다:. 자세한 내용은 Popper의 [오프셋 문서](https://popper.js.org/docs/v2/modifiers/offset/#options)를 참조하세요. |
+| `offset` | array, string, function | `[0, 6]` | 대상에 대한 툴팁의 오프셋입니다. 데이터 속성에 쉼표로 구분된 값으로 문자열을 전달할 수 있습니다 (예: `data-bs-offset="10,20"`). 오프셋을 결정하는 데 함수를 사용하는 경우 Popper 배치, 참조 및 Popper 레코드가 포함된 객체를 첫 번째 인수로 사용하여 호출됩니다. 트리거링 요소 DOM 노드는 두 번째 인수로 전달됩니다. 이 함수는 [스키딩](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1)과 [거리](https://popper.js.org/docs/v2/modifiers/offset/#distance-1)가 포함된 숫자 배열을 반환해야 합니다:. 자세한 내용은 Popper의 [오프셋 문서](https://popper.js.org/docs/v2/modifiers/offset/#options)를 참조하세요. |
 | `placement` | string, function | `'top'` | `auto, top, bottom, left, right`로 툴팁 위치를 지정하면 툴팁의 방향이 동적으로 변경됩니다. 함수를 사용하여 위치를 결정하는 경우 첫 번째 인수로 툴팁 DOM 노드를, 두 번째 인수로 트리거링 요소 DOM 노드를 사용하여 함수를 호출합니다. `this` 컨텍스트는 툴팁 인스턴스로 설정됩니다. |
 | `popperConfig` | null, object, function | `null` | Bootstrap의 기본 Popper 구성을 변경하려면 [Popper 구성](https://popper.js.org/docs/v2/constructors/#options)을 참조하세요. 함수를 사용하여 Popper 구성을 생성하는 경우 Bootstrap의 기본 Popper 구성이 포함된 객체와 함께 호출됩니다. 이 함수를 사용하면 기본 구성을 사용하고 자신만의 구성과 병합할 수 있습니다. 함수는 Popper에 대한 구성 객체를 반환해야 합니다. |
 | `sanitize` | boolean | `true` | 새니타이징을 활성화 또는 비활성화합니다. `'template'`을 활성화하면 `'content'`, `'title'` 옵션이 새니타이징 처리됩니다. |
