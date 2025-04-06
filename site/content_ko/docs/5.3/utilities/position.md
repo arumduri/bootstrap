@@ -48,7 +48,7 @@ edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 
 </div>
 {{< /example >}}
 
-## 중앙 정렬
+## Center elements
 
 또한 변환 유틸리티 클래스 `.translate-middle`을 사용하여 요소를 중앙에 배치할 수도 있습니다.
 
@@ -84,7 +84,7 @@ edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 
 </div>
 {{< /example >}}
 
-## 예시
+## Examples
 
 다음은 해당 클래스의 실제 예시입니다.
 
