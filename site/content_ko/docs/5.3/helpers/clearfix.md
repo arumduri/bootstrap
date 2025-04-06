@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 클리어픽스
-title_en: Clearfix
+title: Clearfix
 description: clearfix 유틸리티를 추가하여 컨테이너 내에서 floating 된 콘텐츠를 빠르고 쉽게 정렬합니다.
 group: helpers
 aliases: "/docs/5.3/helpers/"
