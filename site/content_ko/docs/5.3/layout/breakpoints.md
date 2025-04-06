@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 중단점
-title_en: Breakpoints
+title: Breakpoints
 description: Breakpoints는 Bootstrap의 반응형 레이아웃이 뷰포트 크기 또는 기기에서 어떻게 작동 할지 결정하는 사용자가 정의 가능한 넓이입니다.
 group: layout
 aliases: "/docs/5.3/layout/"
@@ -21,14 +20,14 @@ toc: true
 Bootstrap에는 반응형 제작을 위해 _grid tiers_ 라고 하는 6개의 Breakpoints가 포함되어 있습니다. 이러한 breakpoints는 Sass 소스 파일을 사용할 경우 사용자가 지정할 수 있습니다.
 
 {{< bs-table "table" >}}
-| Breakpoint | Class infix | Dimensions |
-| --- | --- | --- |
-| Extra small | <em>None</em> |&lt;576px |
-| Small | `sm` | &ge;576px |
-| Medium | `md` | &ge;768px |
-| Large | `lg` | &ge;992px |
-| Extra large | `xl` | &ge;1200px |
-| Extra extra large | `xxl` | &ge;1400px |
+| Breakpoint        | Class infix               | Dimensions      |
+| ----------------- | ------------------------- | --------------- |
+| Extra small       | <em>None</em> | &lt;576px |
+| Small             | `sm`                      | &ge;576px       |
+| Medium            | `md`                      | &ge;768px       |
+| Large             | `lg`                      | &ge;992px       |
+| Extra large       | `xl`                      | &ge;1200px      |
+| Extra extra large | `xxl`                     | &ge;1400px      |
 {{< /bs-table >}}
 
 
@@ -70,6 +69,7 @@ Bootstrap은 주로 레이아웃, 그리드 시스템 및 컴포넌트가 있는
   }
 }
 ```
+
 이러한 Sass 믹스인은 Sass 변수에 선언된 값을 사용한 뒤 컴파일되어 CSS로 번역됩니다. 예를 들면:
 
 ```scss
@@ -111,6 +111,7 @@ Bootstrap은 주로 레이아웃, 그리드 시스템 및 컴포넌트가 있는
   }
 }
 ```
+
 이러한 믹스인은 선언된 중단점을 갖고 와서 `.02px`를 뺀 뒤 `max-width` 값으로 사용합니다. 예를 들면:
 
 ```scss
