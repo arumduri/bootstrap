@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: 시각적으로 숨기기
-description: 이러한 도우미를 사용하여 요소를 시각적으로 숨기되 보조 기술이 접근할 수 있도록 유지해 보세요.
+title: Visually hidden
+description: Use these helpers to visually hide elements but keep them accessible to assistive technologies.
 group: helpers
 aliases: "/docs/5.3/helpers/screen-readers/"
 ---
 
-`.visually-hidden`을 사용하여 요소가 스크린 리더와 같은 보조 기술에 노출되도록 하면서 시각적으로는 보이지 않게 숨길 수 있습니다. `.visually-hidden-focusable`을 사용하면 요소를 시각적으로 숨긴상태가 기본이지만 초점이 맞춰질 때는 표시 (예: 키보드 전용 사용자)됩니다. `.visually-hidden-focusable`은 컨테이너에도 적용 할 수 있습니다. `: focus-within` 덕분에 컨테이너의 자식 요소가 focus 될 때 컨테이너가 나타납니다.
+Visually hide an element while still allowing it to be exposed to assistive technologies (such as screen readers) with `.visually-hidden`. Use `.visually-hidden-focusable` to visually hide an element by default, but to display it when it's focused (e.g. by a keyboard-only user). `.visually-hidden-focusable` can also be applied to a container–thanks to `:focus-within`, the container will be displayed when any child element of the container receives focus.
 
 {{< example >}}
 <h2 class="visually-hidden">Title for screen readers</h2>
@@ -14,7 +14,7 @@ aliases: "/docs/5.3/helpers/screen-readers/"
 <div class="visually-hidden-focusable">A container with a <a href="#">focusable element</a>.</div>
 {{< /example >}}
 
-`visually-hidden`과 `visually-hidden-focusable` 모두 믹스인으로 사용 할 수 있습니다.
+Both `visually-hidden` and `visually-hidden-focusable` can also be used as mixins.
 
 ```scss
 // Usage as a mixin
