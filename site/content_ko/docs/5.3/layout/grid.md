@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 그리드 시스템
-title_en: Grid system
+title: Grid system
 description: 강력한 모바일 우선 flexbox 그리드를 사용하여 12개의 열 시스템, 6개의 기본 반응형 계층, Sass 변수 및 믹스인, 수십 개의 사전 정의된 클래스 덕분에 모든 모양과 크기의 레이아웃을 빌드할 수 있습니다.
 group: layout
 toc: true
@@ -33,7 +32,7 @@ Bootstrap의 그리드 시스템은 일련의 컨테이너, 행, 열을 사용�
 
 위의 예에서는 사전 정의된 그리드 클래스를 사용하여 모든 기기와 뷰포트에 동일한 너비의 열 3개를 만듭니다. 이러한 열은 부모 `.container`가 있는 페이지 중앙에 있습니다.
 
-## 작동 원리
+## How it works
 
 이를 세분화하면 그리드 시스템이 함께 제공되는 방법은 다음과 같습니다:
 
@@ -124,7 +123,7 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">사용자 지정 거터</th>
-        <td colspan="6"><a href="{{< docsref "/layout/gutters" >}}">Yes</a></td>
+        <td colspan="6"><a href="{{< docsref ">}}">Yes</a></td>
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Nestable</th>
@@ -132,7 +131,7 @@ Bootstrap의 그리드 시스템은 6개의 기본 중단점과 사용자 정의
       </tr>
       <tr>
         <th class="text-nowrap" scope="row">Column ordering</th>
-        <td colspan="6"><a href="{{< docsref "/layout/columns#reordering" >}}">Yes</a></td>
+        <td colspan="6"><a href="{{< docsref ">}}">Yes</a></td>
       </tr>
     </tbody>
   </table>
@@ -201,7 +200,7 @@ flexbox 그리드 열에 대한 자동 레이아웃은 또한 한 열의 너비�
 </div>
 {{< /example >}}
 
-### 가변 너비 콘텐츠
+### Variable width content
 
 `col-{breakpoint}-auto` 클래스를 사용하여 콘텐츠의 자연스러운 너비에 따라 열의 크기를 조정합니다.
 
@@ -233,6 +232,7 @@ flexbox 그리드 열에 대한 자동 레이아웃은 또한 한 열의 너비�
 {{< /example >}}
 
 ## 반응형 클래스
+
 Bootstrap의 그리드에는 복잡한 반응형 레이아웃을 빌드하기 위한 6개 계층의 사전 정의된 클래스가 포함되어 있습니다. small, small, medium, large, extra large 기기에서 열의 크기를 원하는 대로 사용자 정의하세요.
 
 ### 모든 중단점
@@ -272,7 +272,7 @@ Bootstrap의 그리드에는 복잡한 반응형 레이아웃을 빌드하기 �
 </div>
 {{< /example >}}
 
-### 섞기
+### Mix and match
 
 열이 일부 그리드 계층에 쌓이는 것을 원하지 않으시나요? 필요에 따라 각 계층에 대해 서로 다른 클래스를 조합하여 사용하세요. 모든 작동 방식에 대한 더 나은 아이디어는 아래 예를 참조하세요.
 
@@ -385,7 +385,7 @@ Bootstrap의 그리드에는 복잡한 반응형 레이아웃을 빌드하기 �
 }
 ```
 
-## 중첩
+## Nesting
 
 기본 그리드로 콘텐츠를 중첩하려면 기존 `.col-sm-*` 열 내에 새로운 `.row`와 `.col-sm-*` 열 세트를 추가하세요. 중첩된 행에는 최대 12개 이하의 열을 추가하는 열 집합이 포함되어야 합니다 (사용 가능한 열 12개를 모두 사용할 필요는 없음).
 
@@ -508,7 +508,7 @@ $grid-gutter-width: 1.5rem !default;
 $grid-row-columns: 6 !default;
 ```
 
-### 그리드 계층
+### Grid tiers
 
 열 자체를 넘어 그리드 계층의 수를 사용자 정의할 수도 있습니다. 4개의 그리드 계층만 필요하다면 `$grid-breakpoints` 및 `$container-max-widths`를 다음과 같이 업데이트하면 됩니다:
 
