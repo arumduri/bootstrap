@@ -24,7 +24,7 @@ Bootstrap의 구성요소는 상당히 보편적으로 설계되었으므로 작
 
 ### 색상 대비
 
-현재 Bootstrap의 단추 변형, 경고 변형, 폼 유효성 검사 표시기 등을 위해 프레임워크 전체에서 사용되는 기본 팔레트를 구성하는 일부 색상조합은 색상 대비가 *불충분*할 수 있습니다. ([WCAG 2.1 글꼴 색상 대비 4.5:1](https://www.w3.org/TR/WCAG21/#contrast-minimum) 미만 및 [WCAG 2.1 글꼴 외 색상 대비 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast) 미만이 권장됨). 이 부분은 밝은배경에서 더 강하게 발생하기 때문에 작성자는 특정 색상들을 테스트 한 뒤 필요할 경우 이러한 기본색상을 수동으로 수정/확장하여 적절한 색상 대비를 확인하는 것이 좋습니다.
+현재 Bootstrap의 단추 변형, 경고 변형, 폼 유효성 검사 표시기 등을 위해 프레임워크 전체에서 사용되는 기본 팔레트를 구성하는 일부 색상조합은 색상 대비가 *불충분*할 수 있습니다. ([WCAG 2.1 글꼴 색상 대비 4.5:1](https://www.w3.org/TR/WCAG21/#contrast-minimum) 미만 및 [WCAG 2.1 글꼴 외 색상 대비 3:1](https://www.w3.org/TR/WCAG21/#non-text-contrast) 미만이 권장됨). 이 부분은 밝은배경에서 더 강하게 발생하기 때문에 작성자는 특정 색상들을 테스트 한 뒤 필요할 경우 이러한 기본색상을 수동으로 수정/확장하여 적절한 색상 대비를 확인하는 것이 좋습니다. Authors are encouraged to test their specific uses of color and, where necessary, manually modify/extend these default colors to ensure adequate color contrast ratios.
 
 ### 시각적으로 숨겨진 콘텐츠
 
@@ -55,7 +55,7 @@ Bootstrap에는 [`prefers-reduced-motion` 미디어 기능](https://www.w3.org/T
 - [The A11Y Project](https://www.a11yproject.com/)
 - [MDN 접근성 문서](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 - [Tenon.io Accessibility Checker](https://tenon.io/)
-- [Color Contrast Analyser (CCA)](https://developer.paciellogroup.com/resources/contrastanalyser/)
+- [Color Contrast Analyser (CCA)](https://www.tpgi.com/color-contrast-checker/)
 - [접근성 문제를 식별하기 위한 "HTML Codesniffer" 북마크릿](https://github.com/squizlabs/HTML_CodeSniffer)
 - [Microsoft Accessibility Insights](https://accessibilityinsights.io/)
 - [Deque Axe 테스트 도구](https://www.deque.com/axe/)
