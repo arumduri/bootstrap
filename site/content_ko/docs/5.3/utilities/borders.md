@@ -10,7 +10,7 @@ toc: true
 
 테두리 유틸리티를 사용하여 요소에 테두리를 추가하거나 제거합니다. 모든 테두리를 선택하거나 한 번에 하나씩 선택 하세요.
 
-### 테두리 방향
+### Additive
 
 커스텀 요소에 테두리를 추가하세요:
 
@@ -22,7 +22,7 @@ toc: true
 <span class="border-start"></span>
 {{< /example >}}
 
-### 반전 방향
+### Subtractive
 
 또는 테두리를 제거하세요:
 
@@ -108,7 +108,7 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 <div class="border border-success p-2 border-opacity-10">This is 10% opacity success border</div>
 {{< /example >}}
 
-## 두깨
+## Width
 
 {{< example class="bd-example-border-utils" >}}
 <span class="border border-1"></span>
@@ -118,7 +118,7 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 <span class="border border-5"></span>
 {{< /example >}}
 
-## 모서리
+## Radius
 
 요소에 클래스를 추가하여 모서리를 쉽게 둥근형태로 만듭니다.
 
@@ -187,7 +187,7 @@ Bootstrap `border-{color}` 유틸리티는 CSS 변수를 사용하여 Sass로 �
 
 ### Sass 유틸리티 API
 
-테두리 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.] ({{< docsref "/utilities/api # using-the-api" >}})
+테두리 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. \[유틸리티 API 사용 방법에 대해 알아보세요.\] ({{< docsref "/utilities/api # using-the-api" >}})
 
 {{< scss-docs name="utils-borders" file="scss/_utilities.scss" >}}
 
