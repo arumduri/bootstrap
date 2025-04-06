@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 프로그레스
-title_en: Progress
+title: Progress
 description: 스택형 막대, 애니메이션 배경 및 텍스트 레이블을 지원하는 Bootstrap 사용자 정의의 프로그레스 바를 위한 문서 및 예시입니다.
 group: components
 toc: true
@@ -11,7 +10,7 @@ toc: true
 **v5.3.0의 새로운 마크업 -** 진행률 표시줄에 대한 이전 HTML 구조를 더 이상 사용하지 않고 더 접근하기 쉬운 구조로 대체했습니다. 이전 구조는 v6까지 계속 작동합니다. [마이그레이션 가이드에서 변경된 내용을 확인하세요.]({{< docsref "/migration#improved-markup-for-progress-bars" >}})
 {{< /callout >}}
 
-## 작동 원리
+## How it works
 
 프로그레스 컴포넌트는 두 개의 HTML 요소와 너비를 설정하는 몇 가지 CSS, 몇 가지 속성으로 만들어집니다. [HTML5 `<progress>` 요소](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress)를 사용하지 않으므로 진행률 표시줄을 쌓고, 애니메이션을 적용하고, 그 위에 텍스트 레이블을 배치할 수 있습니다.
 
@@ -198,6 +197,6 @@ Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 진행률 표
 
 ### 키프레임
 
-CSS 애니메이션화를 위해 `scss/_progress-bar.scss`에 포함되어 있는 `.progress-bar-animated`를 사용합니다.
+CSS 애니메이션화를 위해 `scss/_progress-bar.scss`에 포함되어 있는 `.progress-bar-animated`를 사용합니다. Included in `scss/_progress-bar.scss`.
 
 {{< scss-docs name="progress-keyframes" file="scss/_progress.scss" >}}
