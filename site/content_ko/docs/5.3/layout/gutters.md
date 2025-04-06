@@ -6,7 +6,7 @@ group: layout
 toc: true
 ---
 
-## 작동 원리
+## How they work
 
 - **거터는 가로 `padding`에 의해 생성되는 열 콘텐츠 사이의 간격입니다.** 각 열에 `padding-right` 및 `padding-left`를 설정하고 음수 `margin`을 사용하여 각 행의 시작과 끝에서 이를 오프셋하여 콘텐츠를 정렬합니다.
 
@@ -133,7 +133,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## 거터 제거
+## No gutters
 
 사전 정의된 그리드 클래스의 열 사이의 거터는 `.g-0`으로 제거할 수 있습니다. 이렇게 하면 `.row`에서 음수 `margin`이 제거되고 모든 직계 자식 열에서 가로 `padding`이 제거됩니다.
 
