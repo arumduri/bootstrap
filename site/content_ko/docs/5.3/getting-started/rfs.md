@@ -82,4 +82,5 @@ Bootstrap의 사이드 프로젝트인 [RFS](https://github.com/twbs/rfs/tree/{{
 ```
 
 ## 확장된 문서
+
 RFS는 Bootstrap 조직 아래의 별도 프로젝트입니다. RFS 및 구성에 대한 자세한 내용은 [GitHub 저장소](https://github.com/twbs/rfs/tree/{{< param "rfs_version" >}})에서 찾을 수 있습니다.
