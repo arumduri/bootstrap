@@ -7,18 +7,18 @@ group: about
 
 Bootstrap은 MIT 라이선스로 {{< year >}} Bootstrap이 배포하고 있습니다. 이를 요약하면 다음과 같습니다.
 
-## 필수
+## It requires you to:
 
 - 작업물에서 Bootstrap의 CSS와 Javascript 내에 포함되어 있는 라이선스 및 저작권 고지를 유지
 
-## 허용
+## It permits you to:
 
 - Bootstrap을 자유롭게 다운로드하고 일부분 또는 전체를 개인적인 용도, 사적인 용도, 사내 용도, 상업적 목적으로 사용
 - Bootstrap을 여러분들이 개발하는 패키지 또는 배포물에 사용
 - 소스 코드 수정
 - 라이센스에 포함되지 않은 제3자에게 Bootstrap을 수정하고 배포할 수 있는 서브라이센스를 부여
 
-## 금지
+## It forbids you to:
 
 - Bootstrap은 보증 없이 제공되므로 작성자와 라이센스 소유자에게 손해에 대한 책임을 묻기
 - Bootstrap의 제작자 또는 저작권 소유자에게 책임을 묻기
