@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 수직 정렬
-title_en: Vertical alignment
+title: Vertical alignment
 description: 인라인, 인라인 블록, 인라인 테이블 및 테이블 셀 요소의 수직 정렬을 쉽게 변경할 수 있습니다.
 group: utilities
 ---
