@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 번역
-title_en: Translations
+title: Translations
 description: 커뮤니티 번역된 Bootstrap 문서들의 링크입니다.
 group: about
 ---
