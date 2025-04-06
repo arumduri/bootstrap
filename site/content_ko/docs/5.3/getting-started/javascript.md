@@ -215,23 +215,23 @@ bootstrap.Modal.Default.keyboard = false
 모든 Bootstrap 플러그인은 다음과 같은 메소드와 정적 속성을 공개합니다.
 
 {{< bs-table "table" >}}
-| Method | Description |
-| --- | --- |
-| `dispose` | 요소의 모달을 파괴합니다. (DOM 요소에 저장된 데이터를 제거합니다.) |
-| `getInstance` | *정적* 메소드를 사용하여 DOM 요소와 연관된 모달 인스턴스를 가져올 수 있습니다. |
+| Method                | Description                                                               |
+| --------------------- | ------------------------------------------------------------------------- |
+| `dispose`             | 요소의 모달을 파괴합니다. (DOM 요소에 저장된 데이터를 제거합니다.)                                  |
+| `getInstance`         | *정적* 메소드를 사용하여 DOM 요소와 연관된 모달 인스턴스를 가져올 수 있습니다.                           |
 | `getOrCreateInstance` | *정적* 메소드를 사용하여 DOM 요소와 연결된 모달 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. |
 {{< /bs-table >}}
 
 {{< bs-table "table" >}}
-| Static property | Description |
-| --- | --- |
-| `NAME` | 플러그인 이름을 반환합니다. (예: `bootstrap.Tooltip.NAME`) |
-| `VERSION` | Bootstrap의 각 플러그인 버전은 플러그인 생성자의 `VERSION` 속성을 통해 액세스할 수 있습니다. (예: `bootstrap.Tooltip.VERSION`) |
+| Static property | Description                                                                                    |
+| --------------- | ---------------------------------------------------------------------------------------------- |
+| `NAME`          | 플러그인 이름을 반환합니다. (예: `bootstrap.Tooltip.NAME`)                                                  |
+| `VERSION`       | Bootstrap의 각 플러그인 버전은 플러그인 생성자의 `VERSION` 속성을 통해 액세스할 수 있습니다. (예: `bootstrap.Tooltip.VERSION`) |
 {{< /bs-table >}}
 
 ## Sanitizer
 
-툴팁 및 팝오버는 내장된 보안 모듈 (sanitizer)을 사용하여 HTML을 허용하는 옵션을 보안 처리 (sanitize)합니다.
+Tooltips and Popovers use our built-in sanitizer to sanitize options which accept HTML.
 
 기본값 `allowList` 값은 다음과 같습니다:
 
@@ -253,6 +253,7 @@ myDefaultAllowList.td = ['data-bs-option']
 const myCustomRegex = /^data-my-app-[\w-]+/
 myDefaultAllowList['*'].push(myCustomRegex)
 ```
+
 [DOMPurify](https://www.npmjs.com/package/dompurify)와 같은 전용 라이브러리를 사용해서 보안 모듈을 우회하려면 다음과 같이 작성해야 합니다:
 
 ```js
@@ -267,6 +268,7 @@ const tooltip = new bootstrap.Tooltip(yourTooltipEl, {
 ## 선택적으로 jQuery 사용하기
 
 **Bootstrap 5에서는 jQuery가 필요하지 않지**만, jQuery와 함께 컴포넌트를 사용할 수 있습니다. Bootstrap이 `window` 객체에서 `jQuery`를 감지하면 jQuery의 플러그인 시스템에 있는 모든 컴포넌트를 추가합니다. 이를 통해 다음과 같은 작업을 수행할 수 있습니다:
+
 ```js
 // to enable tooltips with the default configuration
 $('[data-bs-toggle="tooltip"]').tooltip()
@@ -283,7 +285,7 @@ $('#myTooltip').tooltip('show')
 
 다른 컴포넌트도 마찬가지입니다.
 
-### 충돌 방지
+### No conflict
 
 가끔 다른 UI 프레임워크와 함께 Bootstrap을 사용해야 할 수도 있습니다. 이런 경우 네임스페이스 충돌이 발생할 수도 있습니다. 이러한 문제가 발생할 경우 값을 되돌리려는 플러그인에 `.noConflict` 값을 호출할 수 있습니다.
 
