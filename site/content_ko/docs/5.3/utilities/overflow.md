@@ -1,8 +1,9 @@
 ---
 layout: docs
-title: 오버플로우
+title: Overflow
 description: 콘텐츠가 요소를 오버플로우 하는 방식을 빠르게 구현 하려면 이러한 단축 유틸리티를 사용하세요.
 group: utilities
+toc: true
 ---
 
 ## Overflow
