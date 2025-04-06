@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: 내비게이션 바
+title: Navbar
 description: Bootstrap의 강력하고 반응형적인 내비게이션 헤더, 내비게이션 바의 문서와 예. 콜랩스(collapse) 플러그인 지원을 포함한 브랜딩, 내비게이션 등의 지원이 포함되어 있습니다.
 group: components
 toc: true
 ---
 
-## 작동 원리
+## How it works
 
 내비게이션 바를 시작하기 전에 알아야 할 것들을 설명하겠습니다:
 
@@ -130,14 +130,13 @@ toc: true
 </nav>
 {{< /example >}}
 
-### 내비게이션 바
+### Nav
 
 내비게이션 바의 내비게이션 링크는 `.nav` 옵션에 독자적인 변경 클래스를 추가하여 빌드되며, 적절한 반응형 스타일링을 위해 [토글 클래스](#토글) 사용을 해야 합니다. 내비게이션 바 안에서 내비게이션 링크는 **수평 방향으로 펼쳐져 깔끔하게 정렬**합니다.
 
 현재 페이지를 나타내기 위해 `.nav-link`에 `.nav-link` 클래스를 추가합니다.
 
 현재 페이지의 `.nav-link`에는 `aria-current` 속성을 추가해 주세요.
-
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -187,8 +186,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-내비게이션 바에서 드롭다운을 사용할 수도 있습니다.
-드롭다운 메뉴는 배치를 위한 줄바꿈 된 요소가 필요하기 때문에 아래와 같이 `.nav-item`과 `.nav-link`과는 다른 중첩 된 요소로 분리해 사용해 주세요.
+내비게이션 바에서 드롭다운을 사용할 수도 있습니다. 드롭다운 메뉴는 배치를 위한 줄바꿈 된 요소가 필요하기 때문에 아래와 같이 `.nav-item`과 `.nav-link`과는 다른 중첩 된 요소로 분리해 사용해 주세요.
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -224,7 +222,7 @@ toc: true
 </nav>
 {{< /example >}}
 
-### 폼
+### Forms
 
 내비게이션 바 내에 다양한 폼 컨트롤 및 컴포넌트를 배치합니다:
 
@@ -279,7 +277,7 @@ Input group도 사용 가능합니다. 내비게이션 바가 폼 전체 혹은 
 
 ### 텍스트
 
-문자열의 수직 방향과 수평 간격을 조정하는 `.navbar-text`를 포함할 수 있습니다.
+문자열의 수직 방향과 수평 간격을 조정하는 `.navbar-text`를 포함할 수 있습니다. This class adjusts vertical alignment and horizontal spacing for strings of text.
 
 {{< example >}}
 <nav class="navbar bg-body-tertiary">
@@ -509,7 +507,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 
 `.navbar-nav` (혹은 다른 내비게이션 바의 서브 컴포넌트)에 `.navbar-nav-scroll`을 추가하여 접힌 내비게이션 바의 토글 가능한 콘텐츠 내에서 수직 방향 스크롤을 활성화시킵니다. 기본적으로는 `75vh`(혹은 뷰포트 높이의 75%)로 스크롤이 시작되지만 로컬 CSS 사용자 정의 속성 `--bs-navbar-height`나 사용자 정의 스타일로 덮어쓸수 있습니다. 큰 뷰포트에서 내비게이션 바를 펼치면 기본 내비게이션 바처럼 콘텐츠가 나타납니다.
 
-이 동작에는 `overflow`의 잠재적인 결점이 따르므로 주의가 필요합니다. `overflow-y: auto`(여기서 콘텐츠를 스크롤하기 위해 필요)를 설정하면 `overflow-x`는 `auto`와 동등해져 수평 방향의 콘텐츠가 일부 잘립니다. 
+이 동작에는 `overflow`의 잠재적인 결점이 따르므로 주의가 필요합니다. `overflow-y: auto`(여기서 콘텐츠를 스크롤하기 위해 필요)를 설정하면 `overflow-x`는 `auto`와 동등해져 수평 방향의 콘텐츠가 일부 잘립니다.
 
 아래는 `.navbar-nav-scroll`에 `style="--bs-scroll-height: 100px;"`를 사용한 내비게이션 바의 예시로, 최적의 간격을 확보하기 위한 여백을 갖추고 있습니다.
 
@@ -552,7 +550,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 </nav>
 {{< /example >}}
 
-## 반응형 비헤이비어
+## Responsive behaviors
 
 `.navbar-toggler`, `.navbar-collapse`, 및 `.navbar-expand{-sm|-md|-lg|-xl|-xxl}` 클래스를 사용하여 콘텐츠가 버튼 뒤쪽에서 접히는 시점을 결정합니다. 다른 유틸리티와 결합하여 특정 요소를 언제 표시하고 감출지 손쉽게 선택할 수 있습니다.
 
@@ -562,8 +560,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 
 내비게이션 바의 토글은 기본적으로 왼쪽 정렬이지만 `.navbar-brand`와 같은 형제 요소와 연결되는 경우는 자동으로 오른쪽 정렬이 됩니다. 마크업을 거꾸로 하면 토글의 배치도 반대로 바뀝니다. 아래는 색다른 토글 스타일의 예입니다.
 
-아래의 예시를 가장 작은 중단점로 확인해 보세요.
-`.navbar-brand`가 표시되지 않습니다:
+아래의 예시를 가장 작은 중단점로 확인해 보세요. `.navbar-brand`가 표시되지 않습니다:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -675,7 +672,7 @@ Bootstrap의 Sass와 CSS 변수의 조합 덕분에 내비게이션 바 테마�
 
 이렇게 했을 때는 컨테이너가 열렸을 때 포커스를 이동시키기 위한 추가적인 JavaScript를 포함하는 것을 권장합니다. 그렇지 않으면, 키보드 사용자나 지원 기술 사용자는 새롭게 표시된 콘텐츠를 찾는 데 어려움을 겪을 것입니다. 특히, 열린 컨테이너가 문서의 구조상 토글러보다 *before*에 있는 경우는 더욱더 그렇습니다. 또한 토글러가 콘텐츠의 `id`를 가르키는 `aria-controls` 속성을 가지고 있는 것을 확인할 필요가 있습니다. 이론적으로는 지원 기술 사용자가 토글러에서 그것을 제어하는 콘텐츠를 직접 점프할 수 있게 되어 있지만, 현재 이 지원은 매우 애매합니다.
 
-### 오프캔버스
+### Offcanvas
 
 [오프캔버스 컴포넌트]({{< docsref "/components/offcanvas" >}})를 사용하여 확장 및 콜랩스 내비바를 오프캔버스 서랍으로 변환하세요. 오프캔버스 기본 스타일을 모두 확장하고 `.navbar-expand-*` 클래스를 사용하여 동적이고 유연한 네비게이션 사이드바를 만들 수 있습니다.
 
