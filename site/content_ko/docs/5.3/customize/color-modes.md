@@ -109,7 +109,7 @@ $color-mode-type: data;
 }
 ```
 
-결과는 다음과 같습니다.
+Outputs to:
 
 ```css
 [data-bs-theme=dark] .element {
@@ -131,7 +131,7 @@ $color-mode-type: media-query;
 }
 ```
 
-결과는 다음과 같습니다.
+Outputs to:
 
 ```css
 @media (prefers-color-scheme: dark) {
