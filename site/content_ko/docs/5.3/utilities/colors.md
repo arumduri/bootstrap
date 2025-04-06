@@ -38,7 +38,7 @@ toc: true
 {{< /example >}}
 
 {{< callout warning >}}
-**지원 중단:** `.text-opacity-*` 유틸리티 및 텍스트 유틸리티용 CSS 변수가 추가되면서 `.text-black-50` 및 `.text-white-50`은 v5.1.0부터 더 이상 사용되지 않으며 v6.0.0에서 제거될 예정입니다.
+**지원 중단:** `.text-opacity-*` 유틸리티 및 텍스트 유틸리티용 CSS 변수가 추가되면서 `.text-black-50` 및 `.text-white-50`은 v5.1.0부터 더 이상 사용되지 않으며 v6.0.0에서 제거될 예정입니다. They'll be removed in v6.0.0.
 {{< /callout >}}
 
 {{< callout warning >}}
@@ -51,7 +51,7 @@ toc: true
 
 v5.1.0부터 텍스트 색상 유틸리티는 CSS 변수를 사용하여 Sass로 생성됩니다. 이를 통해 컴파일 및 동적 알파 투명도 변경 없이 실시간 색상 변경이 가능합니다.
 
-### 작동 원리
+### How it works
 
 기본 `.text-primary` 유틸리티를 고려해보세요.
 
@@ -61,6 +61,7 @@ v5.1.0부터 텍스트 색상 유틸리티는 CSS 변수를 사용하여 Sass로
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }
 ```
+
 우리는 `--bs-primary` (값 `13, 110, 253`) CSS 변수의 RGB 버전을 사용하고 알파 투명도를 위해 두 번째 CSS 변수 `--bs-text-opacity`를 첨부했습니다. (로컬 CSS 변수 덕분에 기본값 '1' 사용). 즉, 지금 `.text-primary`를 사용할 때마다 계산된 `color` 값은 `rgba(13, 110, 253, 1)`입니다. 각 `.text-*` 클래스 내부의 로컬 CSS 변수는 상속 문제를 방지하므로 유틸리티의 중첩 인스턴스는 자동으로 수정된 알파 투명도를 갖지 않습니다.
 
 ### 예제
@@ -81,7 +82,7 @@ v5.1.0부터 텍스트 색상 유틸리티는 CSS 변수를 사용하여 Sass로
 <div class="text-primary text-opacity-25">This is 25% opacity primary text</div>
 {{< /example >}}
 
-## 상황별
+## Specificity
 
 다른 선택자의 특수성으로 인해 상황별 클래스를 적용 할 수 없는 경우가 있습니다. 해결 방법은 요소의 컨텐츠를  `<div>` 또는 원하는 클래스의 의미 요소로 감싸는 것입니다.
 
@@ -90,7 +91,6 @@ v5.1.0부터 텍스트 색상 유틸리티는 CSS 변수를 사용하여 Sass로
 다음 Sass 기능 외에도 색상 등에 대해 포함 된 [CSS 사용자 정의 속성]({{< docsref "/customize/css-variables" >}}) (일명 CSS 변수)에 대해 읽어보십시오.
 
 ### Sass 변수
-
 
 대부분의 `color` 유틸리티는 일반 색상 팔레트 변수에서 재할당 된 테마 색상에 의해 생성됩니다.
 
