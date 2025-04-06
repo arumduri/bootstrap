@@ -1,32 +1,32 @@
 ---
 layout: docs
-title: 드롭다운
-description: Bootstrap의 드롭다운 플러그인으로 링크 목록 등을 표시하기 위한 상황별 오버레이를 토글합니다.
+title: Dropdowns
+description: Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
 group: components
 toc: true
 ---
 
-## 개요
+## Overview
 
-드롭다운은 링크 목록 등을 표시하기 위한 상황별 오버레이를 토글합니다. 이들은 Bootstrap에 포함된 드롭다운 JavaScript 플러그인으로 작동합니다. 토글은 호버링이 아닌 클릭을 통해 작동합니다. 참고 [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
+Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included Bootstrap dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is [an intentional design decision](https://markdotto.com/2012/02/27/bootstrap-explained-dropdowns/).
 
-드롭다운은 동적인 포지셔닝과 뷰포트 검출을 제공하는 서드 파티의 라이브러리인 [Popper](https://popper.js.org/)로 빌드되어 있습니다. 반드시 Bootstrap의 JavaScript 전에 [popper.min.js]({{< param "cdn.popper" >}})를 넣거나 Popper를 포함한 `bootstrap.bundle.min.js` / `bootstrap.bundle.js`를 사용해 주십시오. Popper는 동적인 배치가 필요하지 않기 때문에, navbars의 드롭다운 배치에는 사용하지 않습니다.
+Dropdowns are built on a third party library, [Popper](https://popper.js.org/), which provides dynamic positioning and viewport detection. Be sure to include [popper.min.js]({{< param "cdn.popper" >}}) before Bootstrap's JavaScript or use `bootstrap.bundle.min.js` / `bootstrap.bundle.js` which contains Popper. Popper isn't used to position dropdowns in navbars though as dynamic positioning isn't required.
 
-## 접근성
+## Accessibility
 
-[<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) 표준에서는 실질적인 [`role="menu"` 위젯](https://www.w3.org/WAI/PF/aria/roles#menu)이 정의되어 있지만, 이것은 액션이나 기능을 트리거로 하는 애플리케이션형 메뉴에 특화한 것입니다. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> 메뉴는 메뉴 항목, 체크 박스 메뉴 항목, 라디오 버튼 메뉴 항목, 라디오 버튼 그룹, 서브 메뉴만을 포함할 수 있습니다.
+The [<abbr title="Web Accessibility Initiative">WAI</abbr> <abbr title="Accessible Rich Internet Applications">ARIA</abbr>](https://www.w3.org/TR/wai-aria/) standard defines an actual [`role="menu"` widget](https://www.w3.org/TR/wai-aria/#menu), but this is specific to application-like menus which trigger actions or functions. <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
 
 Bootstrap's dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Bootstrap does not expect (nor automatically add) any of the `role` and `aria-` attributes required for true <abbr title="Accessible Rich Internet Applications">ARIA</abbr> menus. Authors will have to include these more specific attributes themselves.
 
-Bootstrap은 커서 키를 사용하여 개별 `.dropdown-item` 요소를 이동하고 <kbd>Esc</kbd> 키로 메뉴를 닫는 기능 등 대부분의 표준 키보드 메뉴 상호 작용을 기본적으로 지원합니다.
+However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual `.dropdown-item` elements using the cursor keys and close the menu with the <kbd>Esc</kbd> key.
 
 ## Examples
 
-드롭다운의 토글(버튼 또는 링크)과 드롭다운 메뉴를 `.dropdown` 또는 `position: relative;`를 선언하는 다른 요소로 감싸세요. 드롭다운 트리거로 `<button>` 요소를 사용하는 것이 이상적이지만 플러그인은 `<a>` 요소에서도 작동합니다. 여기에 표시된 예제에서는 적절한 경우 시맨틱 `<ul>` 요소를 사용하지만 사용자 정의 마크업도 지원됩니다.
+Wrap the dropdown's toggle (your button or link) and the dropdown menu within `.dropdown`, or another element that declares `position: relative;`. Ideally, you should use a `<button>` element as the dropdown trigger, but the plugin will work with `<a>` elements as well. The examples shown here use semantic `<ul>` elements where appropriate, but custom markup is supported.
 
-### 분할 버튼
+### Single button
 
-마크업을 변경하는 것만으로, 임의의 단일 `.btn`을 드롭다운 토글로 바꿀 수 있습니다. 여기에서는, `<button>` 요소의 어느 쪽인가로 동작하는 방법을 설명합니다.
+Any single `.btn` can be turned into a dropdown toggle with some markup changes. Here's how you can put them to work with `<button>` elements:
 
 {{< example >}}
 <div class="dropdown">
@@ -41,7 +41,7 @@ Bootstrap은 커서 키를 사용하여 개별 `.dropdown-item` 요소를 이동
 </div>
 {{< /example >}}
 
-드롭다운 토글에는 `<button>` 컨트롤이 권장되지만 `<a>` 요소를 사용해야 하는 상황이 있을 수 있습니다. 이 경우 스크린 리더와 같은 보조 기술에 컨트롤의 목적을 적절히 전달할 수 있도록 `role="button"` 속성을 추가하는 것이 좋습니다.
+While `<button>` is the recommended control for a dropdown toggle, there might be situations where you have to use an `<a>` element. If you do, we recommend adding a `role="button"` attribute to appropriately convey control's purpose to assistive technologies such as screen readers.
 
 {{< example >}}
 <div class="dropdown">
@@ -57,7 +57,7 @@ Bootstrap은 커서 키를 사용하여 개별 `.dropdown-item` 요소를 이동
 </div>
 {{< /example >}}
 
-가장 좋은 것은 버튼의 종류를 불문하고 전부 가능하다는 것입니다:
+The best part is you can do this with any button variant, too:
 
 <div class="bd-example">
   <div class="btn-group">
@@ -140,9 +140,9 @@ Bootstrap은 커서 키를 사용하여 개별 `.dropdown-item` 요소를 이동
 
 ### Split button
 
-마찬가지로, 단일 버튼의 드롭다운과 실질적으로 같은 마크업으로 분할된 버튼의 드롭다운을 만드는데, 드롭다운의 화살표 주위의 적절한 간격을 확보하기 위해서 `.dropdown-toggle-split`를 추가합니다.
+Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of `.dropdown-toggle-split` for proper spacing around the dropdown caret.
 
-이 추가 클래스를 사용하여, 화살표 양쪽의 좌우 `padding`을 25% 줄이고, 일반적인 버튼 트롭다운을 위해 추가되었던 `margin-left`를 삭제합니다. 이러한 추가 변경으로 인해 화살표는 분할된 버튼의 중앙에 오게 되고 메인 버튼 옆에서의 클릭 영역의 크기가 더욱 적절해집니다.
+We use this extra class to reduce the horizontal `padding` on either side of the caret by 25% and remove the `margin-left` that's added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.
 
 <div class="bd-example">
   <div class="btn-group">
@@ -242,9 +242,9 @@ Bootstrap은 커서 키를 사용하여 개별 `.dropdown-item` 요소를 이동
 </div>
 ```
 
-## 크기 조절
+## Sizing
 
-버튼의 드롭다운은 기본적인 드롭다운 버튼이나 분할된 드롭다운 버튼 등 모든 크기의 버튼으로 동작합니다.
+Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
 
 <div class="bd-example">
   <div class="btn-group">
@@ -347,11 +347,11 @@ Bootstrap은 커서 키를 사용하여 개별 `.dropdown-item` 요소를 이동
 </div>
 ```
 
-## 어두운 드롭다운
+## Dark dropdowns
 
 {{< deprecated-in "5.3.0" >}}
 
-기존의 `.dropdown-menu`에 `.dropdown-menu-dark`를 추가해 어두운 내비게이션 바나 사용자 정의 스타일에 맞추어 어두운 드롭다운을 만들 수 있습니다. 드롭다운 항목을 변경을 할 필요는 없습니다.
+Opt into darker dropdowns to match a dark navbar or custom style by adding `.dropdown-menu-dark` onto an existing `.dropdown-menu`. No changes are required to the dropdown items.
 
 {{< callout-deprecated-dark-variants "dropdown-menu" >}}
 
@@ -370,7 +370,7 @@ Bootstrap은 커서 키를 사용하여 개별 `.dropdown-item` 요소를 이동
 </div>
 {{< /example >}}
 
-그리고, 이걸 navbar에 넣어 사용:
+And putting it to use in a navbar:
 
 {{< example >}}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -397,15 +397,15 @@ Bootstrap은 커서 키를 사용하여 개별 `.dropdown-item` 요소를 이동
 </nav>
 {{< /example >}}
 
-## 방향성
+## Directions
 
 {{< callout info >}}
-**RTL 모드에서는 방향성이 반대입니다.** 한 예시로 `.dropstart`는 오른쪽에 표시됩니다.
+**Directions are flipped in RTL mode.** As such, `.dropstart` will appear on the right side.
 {{< /callout >}}
 
-### 가운데
+### Centered
 
-드롭다운 메뉴가 토글 아래 중앙에 위치하도록 부모 요소에 `.dropdown-center`를 사용합니다.
+Make the dropdown menu centered below the toggle with `.dropdown-center` on the parent element.
 
 {{< example >}}
 <div class="dropdown-center">
@@ -422,7 +422,7 @@ Bootstrap은 커서 키를 사용하여 개별 `.dropdown-item` 요소를 이동
 
 ### Dropup
 
-부모 요소에 `.dropup`을 추가하여 요소의 위쪽으로 표시할 수 있습니다.
+Trigger dropdown menus above elements by adding `.dropup` to the parent element.
 
 <div class="bd-example">
   <div class="btn-group dropup">
@@ -498,7 +498,7 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 
 ### Dropend
 
-부모 요소에 `.dropend`를 추가하여 요소의 오른쪽에 표시할 수 있습니다.
+Trigger dropdown menus at the right of the elements by adding `.dropend` to the parent element.
 
 <div class="bd-example">
   <div class="btn-group dropend">
@@ -557,7 +557,7 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 
 ### Dropstart
 
-부모 요소에 `.dropstart`를 추가하여 요소의 왼쪽에 표시할 수 있습니다.
+Trigger dropdown menus at the left of the elements by adding `.dropstart` to the parent element.
 
 <div class="bd-example">
   <div class="btn-group dropstart">
@@ -614,9 +614,9 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 </div>
 ```
 
-## 메뉴 정렬
+## Menu items
 
-`<a>`나 `<button>` 요소를 드롭다운 항목으로 사용할 수 있습니다.
+You can use `<a>` or `<button>` elements as dropdown items.
 
 {{< example >}}
 <div class="dropdown">
@@ -631,7 +631,7 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 </div>
 {{< /example >}}
 
-또한, `.dropdown-item-text`으로 non-interactive 드롭다운을 만들 수 있습니다. 사용자 정의 CSS 나 text 유틸리티를 사용하여 자유롭게 스타일을 설정해 주십시오.
+You can also create non-interactive dropdown items with `.dropdown-item-text`. Feel free to style further with custom CSS or text utilities.
 
 {{< example >}}
 <ul class="dropdown-menu">
@@ -642,9 +642,9 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 </ul>
 {{< /example >}}
 
-### 비활성화
+### Active
 
-드롭다운 아이템에 `.active`를 추가하여 **활성화** 스타일을 만듭니다. 활성화된 상태를 스크린 리더에 전달하기 위해 `aria-current` 속성을 사용합니다. 현재 페이지에는 `page` 값을, 세트 내 현재 아이템에는 `true`를 사용합니다.
+Add `.active` to items in the dropdown to **style them as active**. To convey the active state to assistive technologies, use the `aria-current` attribute — using the `page` value for the current page, or `true` for the current item in a set.
 
 {{< example >}}
 <ul class="dropdown-menu">
@@ -654,9 +654,9 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 </ul>
 {{< /example >}}
 
-### 활성화
+### Disabled
 
-드롭다운 아이템에 `.disabled`를 추가해 **disabled** 의 스타일을 만듭니다.
+Add `.disabled` to items in the dropdown to **style them as disabled**.
 
 {{< example >}}
 <ul class="dropdown-menu">
@@ -666,14 +666,14 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 </ul>
 {{< /example >}}
 
-## 메뉴 항목
+## Menu alignment
 
-기본적으로, 드롭다운 메뉴는 자동으로 위에서 100% 위치와 부모의 왼쪽에 따라 배치됩니다. 이것은 방향성이 있는 `.drop*` 클래스로 변경할 수 있지만, 추가적인 제어자 클래스로 제어할 수도 있습니다.
+By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. You can change this with the directional `.drop*` classes, but you can also control them with additional modifier classes.
 
-드롭다운 메뉴를 오른쪽으로 배치하려면 `.dropdown-menu`에 `.dropdown-menu-end`를 추가합니다. RTL로 사용할 경우 방향성은 반대가 되기 때문에 `.dropdown-menu-end`는 왼쪽에 표시됩니다.
+Add `.dropdown-menu-end` to a `.dropdown-menu` to right align the dropdown menu. Directions are mirrored when using Bootstrap in RTL, meaning `.dropdown-menu-end` will appear on the left side.
 
 {{< callout info >}}
-**주의!** 드롭다운은 네비바에 포함된 경우를 제외하고 Popper에 의해 배치되어 있습니다.
+**Heads up!** Dropdowns are positioned thanks to Popper except when they are contained in a navbar.
 {{< /callout >}}
 
 {{< example >}}
@@ -689,11 +689,11 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 </div>
 {{< /example >}}
 
-### 반응형 정렬
+### Responsive alignment
 
-반응형 배치를 사용하고 싶을 경우, `data-bs-display="static"` 속성을 추가하여 동적 배치를 비활성화하고 반응형 변형 클래스를 사용합니다.
+If you want to use responsive alignment, disable dynamic positioning by adding the `data-bs-display="static"` attribute and use the responsive variation classes.
 
-드롭다운 메뉴를 지정된 중단점 혹은 그 이상일 경우 **오른쪽**에 배치하려면 `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end`를 추가합니다.
+To align **right** the dropdown menu with the given breakpoint or larger, add `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end`.
 
 {{< example >}}
 <div class="btn-group">
@@ -708,7 +708,7 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 </div>
 {{< /example >}}
 
-**왼쪽**의 드롭다운 메뉴를 지정된 중단점 이상의 크기에 배치하려면, `.dropdown-menu-end`와 `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start`를 추가합니다.
+To align **left** the dropdown menu with the given breakpoint or larger, add `.dropdown-menu-end` and `.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-start`.
 
 {{< example >}}
 <div class="btn-group">
@@ -723,9 +723,9 @@ Make the dropup menu centered above the toggle with `.dropup-center` on the pare
 </div>
 {{< /example >}}
 
-navbars 의 드롭다운 버튼에 `data-bs-display="static"` 속성을 추가할 필요가 없다는 점에 주의하십시오.
+Note that you don't need to add a `data-bs-display="static"` attribute to dropdown buttons in navbars, since Popper isn't used in navbars.
 
-### 정렬 옵션
+### Alignment options
 
 Taking most of the options shown above, here's a small kitchen sink demo of various dropdown alignment options in one place.
 
@@ -808,11 +808,11 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
 </div>
 {{< /example >}}
 
-## 메뉴 콘텐츠
+## Menu content
 
-### 헤더
+### Headers
 
-임의의 드롭다운 메뉴 액션 섹션 라벨에 헤더를 추가합니다.
+Add a header to label sections of actions in any dropdown menu.
 
 {{< example >}}
 <ul class="dropdown-menu">
@@ -824,7 +824,7 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
 
 ### Dividers
 
-관련 메뉴 아이템을 구분선으로 나눕니다.
+Separate groups of related menu items with a divider.
 
 {{< example >}}
 <ul class="dropdown-menu">
@@ -836,9 +836,9 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
 </ul>
 {{< /example >}}
 
-### 텍스트
+### Text
 
-자유롭게 드롭다운 메뉴 내에 텍스트로 배치하고 [간격 유틸리티]({{< docsref "/utilities/spacing" >}})를 사용합니다. 메뉴의 너비를 제한하기 위해 추가로 인라인 스타일이 필요할 가능성이 크다는 점에 유의하십시오.
+Place any freeform text within a dropdown menu with text and use [spacing utilities]({{< docsref "/utilities/spacing" >}}). Note that you'll likely need additional sizing styles to constrain the menu width.
 
 {{< example >}}
 <div class="dropdown-menu p-4 text-body-secondary" style="max-width: 200px;">
@@ -853,7 +853,7 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
 
 ### Forms
 
-드롭다운 메뉴 안에 폼을 넣거나 드롭다운 메뉴로 해서 [margin 혹은 padding utilities]({{< docsref "/utilities/spacing" >}})를 사용하여 여백을 제공합니다.
+Put a form within a dropdown menu, or make it into a dropdown menu, and use [margin or padding utilities]({{< docsref "/utilities/spacing" >}}) to give it the negative space you require.
 
 {{< example >}}
 <div class="dropdown-menu">
@@ -909,9 +909,9 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
 </div>
 {{< /example >}}
 
-## 드롭다운 옵션
+## Dropdown options
 
-드롭다운의 위치를 변경하려면 `data-bs-offset` 나 `data-bs-reference`를 사용합니다.
+Use `data-bs-offset` or `data-bs-reference` to change the location of the dropdown.
 
 {{< example >}}
 <div class="d-flex">
@@ -943,7 +943,7 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
 
 ### Auto close behavior
 
-기본적으로, 드롭다운 메뉴의 안쪽 또는 바깥쪽을 클릭하면 드롭 다운 메뉴가 닫힙니다. `autoClose` 옵션을 사용하면, 이 동작을 변경할 수 있습니다.
+By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the `autoClose` option to change this behavior of the dropdown.
 
 {{< example >}}
 <div class="btn-group">
@@ -993,55 +993,55 @@ Taking most of the options shown above, here's a small kitchen sink demo of vari
 
 ## CSS
 
-### 변수
+### Variables
 
 {{< added-in "5.2.0" >}}
 
-Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 드롭다운에서 `.dropdown-menu` 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
+As part of Bootstrap's evolving CSS variables approach, dropdowns now use local CSS variables on `.dropdown-menu` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="dropdown-css-vars" file="scss/_dropdown.scss" >}}
 
 {{< callout info >}}
-드롭다운 항목에는 `.dropdown`에 설정되지 않은 변수가 하나 이상 포함되어 있습니다. 이렇게 하면 Bootstrap이 기본값으로 폴백 값을 사용하는 동안 새 값을 제공할 수 있습니다.
+Dropdown items include at least one variable that is not set on `.dropdown`. This allows you to provide a new value while Bootstrap defaults to a fallback value.
 
 - `--bs-dropdown-item-border-radius`
 {{< /callout >}}
 
-CSS 변수를 통한 커스터마이징은 `.dropdown-menu-dark` 클래스에서 중복된 CSS 선택기를 추가하지 않고 특정 값을 재정의하는 것을 볼 수 있습니다.
+Customization through CSS variables can be seen on the `.dropdown-menu-dark` class where we override specific values without adding duplicate CSS selectors.
 
 {{< scss-docs name="dropdown-dark-css-vars" file="scss/_dropdown.scss" >}}
 
-### Sass 믹스인
+### Sass variables
 
-모든 드롭다운의 변수:
+Variables for all dropdowns:
 
 {{< scss-docs name="dropdown-variables" file="scss/_variables.scss" >}}
 
-[어두운 드롭다운](#어두운-드롭다운)용 변수입니다:
+Variables for the [dark dropdown](#dark-dropdowns):
 
 {{< scss-docs name="dropdown-dark-variables" file="scss/_variables.scss" >}}
 
-드롭다운의 상호작용성을 나타내는 CSS 기반의 화살표 기호용 변수입니다:
+Variables for the CSS-based carets that indicate a dropdown's interactivity:
 
 {{< scss-docs name="caret-variables" file="scss/_variables.scss" >}}
 
 ### Sass mixins
 
-믹스인은 CSS 기반의 화살표 기호를 생성하기 위한 `scss/mixins/_caret.scss`을 사용합니다.
+Mixins are used to generate the CSS-based carets and can be found in `scss/mixins/_caret.scss`.
 
 {{< scss-docs name="caret-mixins" file="scss/mixins/_caret.scss" >}}
 
-## 사용 방법
+## Usage
 
-data 속성이나 JavaScript를 사용해, 드롭다운 플러그인은 부모의 `.dropdown-menu`의 `.show` 클래스를 토글하는 것으로 숨기는 콘텐츠(드롭다운 메뉴)를 토글합니다. `data-bs-toggle="dropdown"` 속성은 어플리케이션 레벨에서 드롭다운 메뉴를 닫기 위해 이용됩니다.
+Via data attributes or JavaScript, the dropdown plugin toggles hidden content (dropdown menus) by toggling the `.show` class on the parent `.dropdown-menu`. The `data-bs-toggle="dropdown"` attribute is relied on for closing dropdown menus at an application level, so it's a good idea to always use it.
 
 {{< callout info >}}
-터치 대응 기기에서는, 드롭다운을 열면 빈 `mouseover` 핸들러가 `<body>` 요소의 바로 아래 자식 요소에 추가됩니다. 이렇게 보기 싫은 hack은  [iOS' event delegation](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html)을 피하고자 필요한 것으로, 그렇지 않으면 드롭다운 바깥쪽의 임의의 곳을 탭 해도 드롭다운을 닫는 코드를 트리거 할 수 없습니다. 드롭다운이 닫히면, 이렇게 추가된 빈 `mouseover` 핸들러는 삭제됩니다.
+On touch-enabled devices, opening a dropdown adds empty `mouseover` handlers to the immediate children of the `<body>` element. This admittedly ugly hack is necessary to work around a [quirk in iOS' event delegation](https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html), which would otherwise prevent a tap anywhere outside of the dropdown from triggering the code that closes the dropdown. Once the dropdown is closed, these additional empty `mouseover` handlers are removed.
 {{< /callout >}}
 
-### 데이터 속성 사용하기
+### Via data attributes
 
-링크나 버튼에 `data-bs-toggle="dropdown"`을 추가하고, 드롭다운을 바꾸도록 합니다.
+Add `data-bs-toggle="dropdown"` to a link or button to toggle a dropdown.
 
 ```html
 <div class="dropdown">
@@ -1054,37 +1054,37 @@ data 속성이나 JavaScript를 사용해, 드롭다운 플러그인은 부모�
 </div>
 ```
 
-### JavaScript 사용하기
+### Via JavaScript
 
 {{< callout warning >}}
-드롭다운은 JavaScript를 통해 드롭다운을 호출하든 데이터 API를 사용하든 관계없이 트리거 요소에 `data-bs-toggle="dropdown"`이 있어야 합니다.
+Dropdowns must have `data-bs-toggle="dropdown"` on their trigger element, regardless of whether you call your dropdown via JavaScript or use the data-api.
 {{< /callout >}}
 
-JavaScript로 드롭다운을 호출합니다:
+Call the dropdowns via JavaScript:
 
 ```js
 const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
 const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
 ```
 
-### 옵션
+### Options
 
 {{< markdown >}}
 {{< partial "js-data-attributes.md" >}}
 {{< /markdown >}}
 
 {{< bs-table "table" >}}
-| 이름             | 유형                      | 기본값                 | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| -------------- | ----------------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `autoClose`    | boolean, string         | `true`              | 드롭다운의 자동 닫기 동작 구성하기: <ul class="my-2"><li>`true` - 드롭다운 메뉴의 외부 또는 내부를 클릭하면 드롭다운이 닫힙니다.</li><li>`false` - 토글 버튼을 클릭하고 `hide` 또는 `toggle` 메소드를 수동으로 호출하면 드롭다운이 닫힙니다. (<kbd>Esc</kbd> 키를 눌러도 닫히지 않습니다)</li><li>`'inside'` - 클릭하면 드롭다운 메뉴 내부를 클릭하여 드롭다운이 닫힙니다.</li> <li>`'outside'` - 클릭하면 드롭다운 메뉴 외부를 클릭하여 드롭다운이 닫힙니다.</li></ul> 참고: 항상 <kbd>Esc</kbd> 키를 눌러서 드롭다운을 닫을 수 있습니다.                                                                                                                                                                                                                                                                                                                                                                                        |
-| `boundary`     | string, element         | `'clippingParents'` | 드롭다운 메뉴의 (Popper의 preventOverflow 수정자에만 적용되는) 오버플로 제약 조건 경계(boundary)입니다. 기본값은 `clippingParents`이며 (JavaScript를 통해서만) HTMLElement 참조를 받을 수 있습니다. 자세한 내용은 Popper의 [detectOverflow 문서](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary)를 참조하세요.                                                                                                                                                                                                                        |
-| `display`      | string                  | `'dynamic'`         | 기본적으로 동적 위치 지정에는 포퍼를 사용합니다. `static`으로 비활성화할 수 있습니다.                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `offset`       | array, string, function | `[0, 2]`            | 대상에 대한 드롭다운의 오프셋입니다. 데이터 속성에 쉼표로 구분된 값으로 `data-bs-offset="10,20"`처럼 문자열을 전달할 수 있습니다. 오프셋을 결정하는 데 함수가 사용되는 경우 popper 배치, 참조 및 popper 레코드가 포함된 객체를 첫 번째 인수로 사용하여 함수가 호출됩니다. 트리거링 요소 DOM 노드는 두 번째 인수로 전달됩니다. 이 함수는 [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1)의 두 숫자가 포함된 배열을 반환해야 합니다. 자세한 내용은 Popper의 [오프셋 문서](https://popper.js.org/docs/v2/modifiers/offset/#options)를 참고해주세요. |
-| `popperConfig` | null, object, function  | `null`              | Bootstrap의 기본 Popper 설정값 (config)을 변경하려면 [Popper 설정](https://popper.js.org/docs/v2/constructors/#options)을 확인해주세요. 함수를 사용하여 Popper 구성을 생성하는 경우 Bootstrap의 기본 Popper 구성이 포함된 객체와 함께 함수가 호출됩니다. 이 함수를 사용하면 기본 구성을 사용하고 자신만의 구성과 병합할 수 있습니다. 함수는 Popper에 대한 구성 객체를 반환해야 합니다.                                                                                                                                                                                                          |
-| `reference`    | string, element, object | `'toggle'`          | 드롭다운 메뉴의 참조 요소입니다. `'toggle'`, `'parent'`, HTMLElement 참조 또는 `getBoundingClientRect`를 제공하는 객체의 값을 받습니다. 자세한 내용은 Popper의 [생성자 문서](https://popper.js.org/docs/v2/constructors/#createpopper)와 [가상 요소 문서](https://popper.js.org/docs/v2/virtual-elements/)를 참고해 주세요.                                                                                                                                                                                                                  |
+| Name           | Type                    | Default             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| -------------- | ----------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `autoClose`    | boolean, string         | `true`              | Configure the auto close behavior of the dropdown: <ul class="my-2"><li>`true` - the dropdown will be closed by clicking outside or inside the dropdown menu.</li><li>`false` - the dropdown will be closed by clicking the toggle button and manually calling `hide` or `toggle` method. (Also will not be closed by pressing <kbd>Esc</kbd> key)</li><li>`'inside'` - the dropdown will be closed (only) by clicking inside the dropdown menu.</li> <li>`'outside'` - the dropdown will be closed (only) by clicking outside the dropdown menu.</li></ul> Note: the dropdown can always be closed with the <kbd>Esc</kbd> key.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `boundary`     | string, element         | `'clippingParents'` | Overflow constraint boundary of the dropdown menu (applies only to Popper's preventOverflow modifier). By default it's `clippingParents` and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's [detectOverflow docs](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary).                                                                                                                                                                                                                                                                                                                                                                          |
+| `display`      | string                  | `'dynamic'`         | By default, we use Popper for dynamic positioning. Disable this with `static`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `offset`       | array, string, function | `[0, 2]`            | Offset of the dropdown relative to its target. You can pass a string in data attributes with comma separated values like: `data-bs-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
+| `popperConfig` | null, object, function  | `null`              | To change Bootstrap's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the Bootstrap's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper.                                                                                                                                                                                                                                                                                            |
+| `reference`    | string, element, object | `'toggle'`          | Reference element of the dropdown menu. Accepts the values of `'toggle'`, `'parent'`, an HTMLElement reference or an object providing `getBoundingClientRect`. For more information refer to Popper's [constructor docs](https://popper.js.org/docs/v2/constructors/#createpopper) and [virtual element docs](https://popper.js.org/docs/v2/virtual-elements/).                                                                                                                                                                                                                                                                                                                                               |
 {{< /bs-table >}}
 
-#### `popperConfig`으로 기능 사용하기
+#### Using function with `popperConfig`
 
 ```js
 const dropdown = new bootstrap.Dropdown(element, {
@@ -1096,31 +1096,31 @@ const dropdown = new bootstrap.Dropdown(element, {
 })
 ```
 
-### 메소드
+### Methods
 
 {{< bs-table >}}
-| 메소드                   | 설명                                                                                                                               |
-| --------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `dispose`             | 요소의 드롭다운을 없앱니다. (DOM 요소에 지정되어 있는 데이터를 삭제합니다)                                                                                     |
-| `getInstance`         | 정적 메소드를 사용하면 DOM 요소에 연결된 드롭다운 인스턴스를 가져올 수 있으며, `bootstrap.Dropdown.getInstance(element)`처럼 사용할 수 있습니다.                           |
-| `getOrCreateInstance` | DOM 요소에 연결된 드롭다운 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 생성하는 정적 메소드입니다. `bootstrap.Dropdown.getOrCreateInstance(element)`처럼 사용할 수 있습니다. |
-| `hide`                | 지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 숨깁니다.                                                                                            |
-| `show`                | 지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 표시합니다.                                                                                           |
-| `toggle`              | 지정된 navbar 또는 탭 내비게이션의 드롭다운 메뉴를 바꿉니다.                                                                                            |
-| `update`              | 요소의 드롭다운 위치를 업데이트합니다.                                                                                                            |
+| Method                | Description                                                                                                                                                                                                 |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dispose`             | Destroys an element's dropdown. (Removes stored data on the DOM element)                                                                                                                                    |
+| `getInstance`         | Static method which allows you to get the dropdown instance associated to a DOM element, you can use it like this: `bootstrap.Dropdown.getInstance(element)`.                                               |
+| `getOrCreateInstance` | Static method which returns a dropdown instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `bootstrap.Dropdown.getOrCreateInstance(element)`. |
+| `hide`                | Hides the dropdown menu of a given navbar or tabbed navigation.                                                                                                                                             |
+| `show`                | Shows the dropdown menu of a given navbar or tabbed navigation.                                                                                                                                             |
+| `toggle`              | Toggles the dropdown menu of a given navbar or tabbed navigation.                                                                                                                                           |
+| `update`              | Updates the position of an element's dropdown.                                                                                                                                                              |
 {{< /bs-table >}}
 
-### 이벤트
+### Events
 
-모든 드롭다운 이벤트는 토글링 요소로 시작해 이후 버블 업 됩니다. 그 때문에 `.dropdown-menu`의 부모 요소에 이벤트 리스너를 추가할 수도 있습니다. `hide.bs.dropdown`과 `hidden.bs.dropdown` 이벤트는, 클릭 이벤트의 이벤트 객체를 포함한 `clickEvent` 속성(원래의 이벤트 타입이 `click` 경우만)을 가집니다.
+All dropdown events are fired at the toggling element and then bubbled up. So you can also add event listeners on the `.dropdown-menu`'s parent element. `hide.bs.dropdown` and `hidden.bs.dropdown` events have a `clickEvent` property (only when the original Event type is `click`) that contains an Event Object for the click event.
 
 {{< bs-table >}}
-| 이벤트 유형               | 설명                                             |
-| -------------------- | ---------------------------------------------- |
-| `hide.bs.dropdown`   | 이 이벤트는 `hide` 인스턴스 메소드가 호출되자마자 발생합니다.          |
-| `hidden.bs.dropdown` | 이 이벤트는 드롭다운 메뉴가 비표시되어 CSS 트랜지션이 완료되었을 때 발생합니다. |
-| `show.bs.dropdown`   | 이 이벤트는 `show` 인스턴스 메소드가 호출되지마자 발생합니다.          |
-| `shown.bs.dropdown`  | 이 이벤트는 드롭다운 메뉴가 표시되어 CSS 트랜지션이 완료되었을 때 발생합니다.  |
+| Event type           | Description                                                                                         |
+| -------------------- | --------------------------------------------------------------------------------------------------- |
+| `hide.bs.dropdown`   | Fires immediately when the `hide` instance method has been called.                                  |
+| `hidden.bs.dropdown` | Fired when the dropdown has finished being hidden from the user and CSS transitions have completed. |
+| `show.bs.dropdown`   | Fires immediately when the `show` instance method is called.                                        |
+| `shown.bs.dropdown`  | Fired when the dropdown has been made visible to the user and CSS transitions have completed.       |
 {{< /bs-table >}}
 
 ```js
