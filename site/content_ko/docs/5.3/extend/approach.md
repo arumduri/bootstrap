@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 접근
-title_en: Approach
+title: Approach
 description: Bootstrap을 빌드하고 유지 관리하는 데에 사용되는 기본 원칙, 전략 및 기술에 대해 알아본 다음 직접 사용자 지정하고 확장해보세요.
 group: extend
 aliases:
@@ -10,7 +9,7 @@ aliases:
 
 시작하기 페이지는 프로젝트와 프로젝트에서 제공되는 것들에 대한 소개를 제공하지만 이 문서는 우리가 _왜_ Bootstrap을 이렇게 만들었는지에 초점을 맞춥니다. 여기에서는 다른 사람들이 우리에게 배우고, 우리와 함께 기여하고, 우리의 발전을 도울 수 있도록 웹을 빌드하려는 우리의 철학을 설명합니다.
 
-올바르지 않거나 더 완벽하게 만들 필요가 있는 부분을 발견하셨나요? [이슈를 열어주세요]({{< param repo >}}/issues/new/choose). 논의는 언제든지 환영합니다.
+See something that doesn't sound right, or perhaps could be done better? [이슈를 열어주세요]({{< param repo >}}/issues/new/choose). 논의는 언제든지 환영합니다.
 
 ## 요약
 
@@ -35,7 +34,7 @@ Bootstrap의 반응형 스타일은 반응형으로 만들어졌으며, 이는 �
 
 브라우저 간 정규화 스타일시트 인 Reboot를 제외하고 모든 스타일은 클래스를 선택자로 사용하는 것을 목표로 합니다. 이것은 스타일을 너무 구체적으로 만들어 쉽게 재정의할 수 없는 유형 선택자 (예: `input[type="text"]`)나 외부 부모 클래스 (예: `.parent .child`)를 피해야 한다는 것을 의미합니다.
 
-따라서 컴포넌트는 `.btn` 이나 `.btn-primary` 처럼 재정의되지 않는 공통 속성값 쌍을 포함하는 기본 클래스로 빌드해야 합니다. 우리는 `display`, `padding`, `border-width`와 같은 모든 일반적인 스타일에 `.btn`을 사용합니다. 그런 다음 `.btn-primary`와 같은 수정자를 사용하여 색상, 배경색, 테두리 색상 등을 추가합니다.
+따라서 컴포넌트는 `.btn` 이나 `.btn-primary` 처럼 재정의되지 않는 공통 속성값 쌍을 포함하는 기본 클래스로 빌드해야 합니다. For example, `.btn` and `.btn-primary`. 우리는 `display`, `padding`, `border-width`와 같은 모든 일반적인 스타일에 `.btn`을 사용합니다. 그런 다음 `.btn-primary`와 같은 수정자를 사용하여 색상, 배경색, 테두리 색상 등을 추가합니다.
 
 수정자 클래스는 여러 변형에서 변경할 속성이나 값이 여러 개인 경우에만 사용해야 합니다. 수정자가 항상 필요한 것은 아니므로 실제로 불필요한 코드를 줄이거나 불필요한 재정의를 방지할 수 있을 때에만 사용해야 합니다. 수정자의 좋은 예는 테마 색상 클래스와 크기 변형입니다.
 
@@ -52,7 +51,7 @@ Bootstrap에는 두 가지 `z-index` 크기가 있습니다. 하나는 컴포넌
 
 ### 오버레이 컴포넌트
 
-Bootstrap에는 일종의 오버레이로 작동하는 여러 컴포넌트가 포함되어 있습니다. 여기에는 `z-index `, 드롭다운, 상단 네비바와 고정 네비바, 모달, 툴팁 및 팝오버가 포함됩니다. 이러한 컴포넌트에는 `1000` 부터 시작하는 자체적인 `z-index` 크기가 있습니다. 이 시작 번호는 임의로 선택되었으며 우리 스타일과 프로젝트의 커스텀 스타일 사이에 작은 버퍼 역할을 합니다.
+Bootstrap에는 일종의 오버레이로 작동하는 여러 컴포넌트가 포함되어 있습니다. 여기에는 `z-index`, 드롭다운, 상단 네비바와 고정 네비바, 모달, 툴팁 및 팝오버가 포함됩니다. 이러한 컴포넌트에는 `1000` 부터 시작하는 자체적인 `z-index` 크기가 있습니다. 이 시작 번호는 임의로 선택되었으며 우리 스타일과 프로젝트의 커스텀 스타일 사이에 작은 버퍼 역할을 합니다.
 
 각 오버레이의 컴포넌트는 공통 UI 원칙을 통해 사용자가 초점을 맞추거나 마우스를 올려놓은 요소가 항상 뷰에 유지되도록 허용하는 방식으로 `z-index` 값을 약간 증가시킵니다. 예를 들어, 모달은 문서 차단 (예: 모달 작업에 대해 다른 작업을 저장할 수 없음)하므로 네비바 위에 배치됩니다.
 
@@ -62,7 +61,7 @@ Bootstrap에는 일종의 오버레이로 작동하는 여러 컴포넌트가 �
 
 우리는 가능하면 JavaScript보다 HTML과 CSS로 작성하는 것을 선호합니다. 일반적으로 HTML과 CSS는 다양한 경험 수준을 가진 더 많은 사람들이 더 많이 사용할 수 있습니다. HTML과 CSS는 브라우저에서 JavaScript보다 빠르며 일반적으로 브라우저는 많은 기능을 제공합니다.
 
-이 원칙은 `data` 속성을 사용하는 우리의 일급 JavaScript API입니다. JavaScript 플러그인을 사용하기 위해서 거의 모든 JavaScript를 작성하지 않아도 됩니다. 그 대신에 HTML을 작성할 수 있습니다. [JavaScript 개요 페이지]({{< docsref "/getting-started/javascript#data-attributes" >}})에 대해서 자세히 알아보세요.
+이 원칙은 `data` 속성을 사용하는 우리의 일급 JavaScript API입니다. JavaScript 플러그인을 사용하기 위해서 거의 모든 JavaScript를 작성하지 않아도 됩니다. [JavaScript 개요 페이지]({{< docsref "/getting-started/javascript#data-attributes" >}})에 대해서 자세히 알아보세요.
 
 마지막으로, 우리의 스타일은 일반적인 웹 요소의 기본 동작을 기반으로 합니다. 가능한 한 브라우저가 제공하는 것을 사용하는 것을 선호합니다. 예를 들어 거의 모든 요소에 `.btn` 클래스를 배치할 수 있지만 대부분의 요소는 시멘틱 값이나 브라우저 기능을 제공하지 않습니다. 그래서 대신 `<button>`과 `<a>`를 사용합니다.
 
@@ -80,7 +79,7 @@ Bootstrap 3의 도우미 (helpers)였던 유틸리티 클래스는 CSS 과점 (b
 
 ## 코딩 규칙
 
- (Bootstrap의 공동 제작자인 @mdo가 만든) [Code Guide](https://codeguide.co/)는 Bootstrap에서 HTML과 CSS를 작성하는 방법을 설명합니다. 일반 서식, 기본 상식, 속성 및 속성 순서 등에 대한 지침을 구체적으로 설명합니다.
+(Bootstrap의 공동 제작자인 @mdo가 만든) [Code Guide](https://codeguide.co/)는 Bootstrap에서 HTML과 CSS를 작성하는 방법을 설명합니다. 일반 서식, 기본 상식, 속성 및 속성 순서 등에 대한 지침을 구체적으로 설명합니다.
 
 우리는 [Stylelint](https://stylelint.io/)를 사용하여 Sass/CSS에서 이러한 표준 등을 시행합니다. [우리의 커스텀 Stylelint 설정](https://github.com/twbs/stylelint-config-twbs-bootstrap)은 오픈 소스이며 다른 사용자가 사용하고 확장시킬 수 있습니다.
 
