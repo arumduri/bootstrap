@@ -1,14 +1,13 @@
 ---
 layout: docs
-title: 세로줄
-title_en: Vertical rule
+title: Vertical rule
 description: 사용자 지정 세로줄 도우미를 사용하여 `<hr>` 요소와 같은 세로 구분선을 만드세요.
 group: helpers
 toc: true
 added: "5.1"
 ---
 
-## 작동 원리
+## How it works
 
 세로줄은 `<hr>` 요소에서 영감을 받았으며 공통 레이아웃에서 수직 구분선을 만들 수 있습니다. 세로줄은 `<hr>` 요소처럼 스타일이 지정되어 있습니다:
 
