@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: 폼 컨트롤
-description: 텍스트 형식의 `<input>`이나 `<textarea>`과 같은 폼 컨트롤에 사용자 정의 스타일, 크기 조정, 포커스 상태등의 업그레이드를 실시할 수 있습니다.
+title: Form controls
+description: Give textual form controls like `<input>`s and `<textarea>`s an upgrade with custom styles, sizing, focus states, and more.
 group: forms
 toc: true
 ---
 
-## 예시
+## Example
 
-양식 컨트롤은 Sass 및 CSS 변수를 혼합하여 스타일을 지정하므로 색상 모드에 적응하고 모든 사용자 정의 방법을 지원할 수 있습니다.
+Form controls are styled with a mix of Sass and CSS variables, allowing them to adapt to color modes and support any customization method.
 
 {{< example >}}
 <div class="mb-3">
@@ -21,9 +21,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 크기 조절
+## Sizing
 
-`.form-control-lg`와 `.form-control-sm` 클래스를 사용해서 크기를 다르게 설정할 수 있습니다.
+Set heights using classes like `.form-control-lg` and `.form-control-sm`.
 
 {{< example >}}
 <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example" />
@@ -31,15 +31,15 @@ toc: true
 <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" />
 {{< /example >}}
 
-## 폼 텍스트
+## Form text
 
-block-level 또는 inline-level의 폼 텍스트는 `.form-text`를 사용해서 생성할 수 있습니다.
+Block-level or inline-level form text can be created using `.form-text`.
 
 {{< callout warning >}}
-양식 텍스트는 `aria-describedby` 속성을 사용하여 관련 양식 컨트롤과 명시적으로 연결해야 합니다. 이렇게 하면 화면 리더와 같은 보조 기술이 사용자가 컨트롤에 초점을 맞추거나 입력할 때 이 양식 텍스트를 알릴 수 있습니다.
+Form text should be explicitly associated with the form control it relates to using the `aria-describedby` attribute. This will ensure that assistive technologies—such as screen readers—will announce this form text when the user focuses or enters the control.
 {{< /callout >}}
 
-입력 아래 양식 텍스트는 `.form-text`로 스타일을 지정할 수 있습니다. 블록 수준 요소를 사용하는 경우 위 입력과 간격을 쉽게 맞출 수 있도록 상단 여백이 추가됩니다.
+Form text below inputs can be styled with `.form-text`. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
 
 {{< example >}}
 <label for="inputPassword5" class="form-label">Password</label>
@@ -49,7 +49,7 @@ block-level 또는 inline-level의 폼 텍스트는 `.form-text`를 사용해서
 </div>
 {{< /example >}}
 
-인라인 텍스트는 `.form-text` 클래스만 있으면 일반적인 인라인 HTML 요소(`<span>`, `<small>` 등)를 모두 사용할 수 있습니다.
+Inline text can use any typical inline HTML element (be it a `<span>`, `<small>`, or something else) with nothing more than the `.form-text` class.
 
 {{< example >}}
 <div class="row g-3 align-items-center">
@@ -67,26 +67,26 @@ block-level 또는 inline-level의 폼 텍스트는 `.form-text`를 사용해서
 </div>
 {{< /example >}}
 
-## 비활성화
+## Disabled
 
-`disabled` 불리언 속성을 추가하면 비활성화 외형이 되며, 포인터 이벤트가 삭제되면서 포커싱되지 않습니다.
+Add the `disabled` boolean attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
 {{< example >}}
 <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled />
 <input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly />
 {{< /example >}}
 
-## 읽기 전용
+## Readonly
 
-`readonly` 불리언 속성을 추가함으로써 입력 값의 변경을 막을 수 있습니다. `disabled`와 달리 `readonly` 입려값은 계속 포커싱 및 선택이 가능합니다.
+Add the `readonly` boolean attribute on an input to prevent modification of the input's value. `readonly` inputs can still be focused and selected, while `disabled` inputs cannot.
 
 {{< example >}}
 <input class="form-control" type="text" value="Readonly input here..." aria-label="readonly input example" readonly />
 {{< /example >}}
 
-## 읽기 전용 일반 텍스트
+## Readonly plain text
 
-폼 내의 `<input readonly>` 요소를 일반 텍스트로 표시하고 싶은 경우, `.form-control-plaintext` 클래스를 사용합니다. 기본 폼 필드의 스타일을 삭제하고 그에 맞는 마진과 패딩을 유지한 일반 텍스트로 보여집니다.
+If you want to have `<input readonly>` elements in your form styled as plain text, replace `.form-control` with `.form-control-plaintext` to remove the default form field styling and preserve the correct `margin` and `padding`.
 
 {{< example >}}
   <div class="mb-3 row">
@@ -144,7 +144,7 @@ block-level 또는 inline-level의 폼 텍스트는 `.form-text`를 사용해서
 </div>
 {{< /example >}}
 
-## 색상
+## Color
 
 Set the `type="color"` and add `.form-control-color` to the `<input>`. We use the modifier class to set fixed `height`s and override some inconsistencies between browsers.
 
@@ -153,11 +153,11 @@ Set the `type="color"` and add `.form-control-color` to the `<input>`. We use th
 <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color" />
 {{< /example >}}
 
-## 데이터 목록
+## Datalists
 
-데이터 목록을 사용하면 `<input>` 안에서 엑세스(및 자동 보완) 할 수 있는 `<option>` 그룹을 작성할 수 있습니다. 이들은 `<select>` 요소와 비슷하지만 목록 표시에는 많은 제한과 차이가 있습니다. 대부분의 브라우저나 운영 체계는 `<datalist>` 요소를 어느 정도 지원하고 있지만, 그 표시에는 일관성이 없습니다.
+Datalists allow you to create a group of `<option>`s that can be accessed (and autocompleted) from within an `<input>`. These are similar to `<select>` elements, but come with more menu styling limitations and differences. While most browsers and operating systems include some support for `<datalist>` elements, their styling is inconsistent at best.
 
-자세한 내용은 [support for datalist elements](https://caniuse.com/datalist)를 참고해 주세요.
+Learn more about [support for datalist elements](https://caniuse.com/datalist).
 
 {{< example >}}
 <label for="exampleDataList" class="form-label">Datalist example</label>
@@ -173,18 +173,18 @@ Set the `type="color"` and add `.form-control-color` to the `<input>`. We use th
 
 ## CSS
 
-### Sass 변수
+### Sass variables
 
-`$input-*`는 (버튼빼고)대부분의 폼 컨트롤로 공유되고 있습니다.
+`$input-*` are shared across most of our form controls (and not buttons).
 
 {{< scss-docs name="form-input-variables" file="scss/_variables.scss" >}}
 
-`$form-label-*`과 `$form-text-*`는 `<label>`과 `.form-text` 컴포넌트용입니다.
+`$form-label-*` and `$form-text-*` are for our `<label>`s and `.form-text` component.
 
 {{< scss-docs name="form-label-variables" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="form-text-variables" file="scss/_variables.scss" >}}
 
-`$form-file-*`은 파일 선택용입니다.
+`$form-file-*` are for file input.
 
 {{< scss-docs name="form-file-variables" file="scss/_variables.scss" >}}
