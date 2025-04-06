@@ -140,7 +140,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 
 목록 그룹의 아이템 레이아웃을 모든 중단점에서 수직에서 수평으로 변경하려면 `.list-group-horizontal`를 추가합니다. 혹은 반응형 변수 `.list-group-horizontal-{sm|md|lg|xl|xxl}`를 선택하고 중단점의 `min-width`로 시작하는 목록 그룹을 수평으로 합니다. 현재 **수평 목록 그룹을 flush 목록 그룹과 조합할 수 없습니다.**
 
-**꿀팁:** 목록 그룹의 아이템을 수평 방향의 동일한 너비로 하고 싶을 경우, 목록 그룹의 각 아이템에 `.flex-fill`을 추가합니다.
+**꿀팁:** 목록 그룹의 아이템을 수평 방향의 동일한 너비로 하고 싶을 경우, 목록 그룹의 각 아이템에 `.flex-fill`을 추가합니다. Add `.flex-fill` to each list group item.
 
 {{< example >}}
 {{< list-group.inline >}}
@@ -192,7 +192,7 @@ _actionable_ 한 목록 그룹 아이템을 작성하려면 `<a>` 나 `<button>`
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## 배지 포함
+## With badges
 
 [utilities]({{< docsref "/utilities/flex" >}})를 사용해, 아직 읽지 않은 수나 액티비티 등을 표시하기 위한 배지를 목록 그룹의 아이템에 추가합니다.
 
@@ -461,12 +461,12 @@ const bsTab = new bootstrap.Tab('#myTab')
 ```
 
 {{< bs-table >}}
-| 메소드 | 설명 |
-| --- | --- |
-| `dispose` | 요소의 탭을 없앱니다. |
-| `getInstance` | DOM 요소와 연관된 탭의 인스턴스를 가져오는 Static 메소드입니다.`bootstrap.Tab.getInstance(element)`처럼 사용할 수 있습니다. |
+| 메소드                   | 설명                                                                                                                                                                                                |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dispose`             | Destroys an element's tab.                                                                                                                                                                        |
+| `getInstance`         | DOM 요소와 연관된 탭의 인스턴스를 가져오는 Static 메소드입니다.`bootstrap.Tab.getInstance(element)`처럼 사용할 수 있습니다.                                                                                                        |
 | `getOrCreateInstance` | Static method which returns a tab instance associated to a DOM element or create a new one in case it wasn't initialized. You can use it like this: `bootstrap.Tab.getOrCreateInstance(element)`. |
-| `show` | 지정된 목록 아이템을 선택하고 관련 판넬을 표시합니다. 이전에 선택되었던 다른 목록 아이템은 선택되지 않은 상태로 돌아가고, 관련된 판넬은 숨김이 됩니다. **탭 판넬이 실제로 표시되기 전에 호출한 곳으로 돌아갑니다** (예를 들어, `shown.bs.tab` 이벤트가 발생하기 전 등). |
+| `show`                | 지정된 목록 아이템을 선택하고 관련 판넬을 표시합니다. 이전에 선택되었던 다른 목록 아이템은 선택되지 않은 상태로 돌아가고, 관련된 판넬은 숨김이 됩니다. **탭 판넬이 실제로 표시되기 전에 호출한 곳으로 돌아갑니다** (예를 들어, `shown.bs.tab` 이벤트가 발생하기 전 등).                                 |
 {{< /bs-table >}}
 
 ### 이벤트
@@ -481,12 +481,12 @@ const bsTab = new bootstrap.Tab('#myTab')
 이미 활성화 된 탭이 없는 경우, `hide.bs.tab`과 `hidden.bs.tab` 이벤트는 발생하지 않습니다.
 
 {{< bs-table >}}
-| 이벤트 유형 | 설명 |
-| --- | --- |
-| `hide.bs.tab` | 이 이벤트는 새로운 탭이 표시될 (따라서 이전에 활성화 한 탭이 숨겨집니다) 때 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 현재 활성화된 탭과 곧 활성화 될 새로운 탭을 타깃으로 합니다. |
-| `hidden.bs.tab` | 이 이벤트는 새로운 탭이 표시된 후에 발생합니다 (따라서 이전 활성화 탭은 숨겨집니다). `event.target`과 `event.relatedTarget`을 사용하여 각각 이전 활성화 탭과 새로운 활성화 탭을 타깃으로 합니다. |
-| `show.bs.tab` | 이 이벤트는 탭 표시시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭 (이용 가능한 경우)을 타깃으로 합니다. |
-| `shown.bs.tab` | 이 이벤트는 탭이 표시된 이후 탭을 표시할 때 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭(이용 가능한 경우)을 타깃으로 합니다. |
+| 이벤트 유형          | 설명                                                                                                                                     |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `hide.bs.tab`   | 이 이벤트는 새로운 탭이 표시될 (따라서 이전에 활성화 한 탭이 숨겨집니다) 때 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 현재 활성화된 탭과 곧 활성화 될 새로운 탭을 타깃으로 합니다. |
+| `hidden.bs.tab` | 이 이벤트는 새로운 탭이 표시된 후에 발생합니다 (따라서 이전 활성화 탭은 숨겨집니다). `event.target`과 `event.relatedTarget`을 사용하여 각각 이전 활성화 탭과 새로운 활성화 탭을 타깃으로 합니다.        |
+| `show.bs.tab`   | 이 이벤트는 탭 표시시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭 (이용 가능한 경우)을 타깃으로 합니다.     |
+| `shown.bs.tab`  | 이 이벤트는 탭이 표시된 이후 탭을 표시할 때 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 활성화된 탭과 이전의 활성화된 탭(이용 가능한 경우)을 타깃으로 합니다.               |
 {{< /bs-table >}}
 
 ```js
