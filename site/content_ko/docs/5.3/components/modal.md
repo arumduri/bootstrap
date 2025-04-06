@@ -1,21 +1,21 @@
 ---
 layout: docs
 title: Modal
-description: Bootstrap JavaScript 모달 플러그인을 사용하여 라이트박스, 사용자 알림 또는 사용자 정의 콘텐츠를 만들 수 있습니다.
+description: Use Bootstrap's JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
 group: components
 toc: true
 ---
 
 ## How it works
 
-모달 컴포넌트의 메뉴 옵션이 최근 변경되었으니 사용하기 전에 아래 내용을 꼭 읽어보시기 바랍니다.
+Before getting started with Bootstrap's modal component, be sure to read the following as our menu options have recently changed.
 
-- 모달은 HTML, CSS, 그리고 JavaScript로 빌드됩니다. 모달은 문서 내의 다른 모든 것 위에 배치되어 `<body>`의 스크롤을 제거하고 모달의 콘텐츠가 스크롤 되도록 합니다.
+- Modals are built with HTML, CSS, and JavaScript. They're positioned over everything else in the document and remove scroll from the `<body>` so that modal content scrolls instead.
 - Clicking on the modal "backdrop" will automatically close the modal.
-- Bootstrap은 한번에 하나의 모달을 지원합니다. 중첩된 모달은 지원되지 않습니다.
-- 모달은 `position: fixed`를 사용합니다. 가능한 다른 요소와의 간섭을 피하기 위해, 모달 HTML을 최상단의 위치에 넣어 주세요. 다른 고정 요소안에 `.modal`을 중첩해 넣으면 문제가 발생할 가능성이 높습니다.
-- 다시 한번 말씀드리지만, `position: fixed` 때문에 모바일 기기에서 모달을 사용할 때 주의할 사항이 몇가지 있습니다. 자세한 내용은 [browser support docs]({{< docsref "/getting-started/browsers-devices#modals-and-dropdowns-on-mobile" >}})를 참조해 주십시오.
-- HTML5가 시멘틱하게 정의하는 방법 때문에, [`autofocus` HTML 속성](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus)은 Bootstrap 모달에 영향을 줄 수 없습니다. 같은 효과를 얻으려면 몇개의 사용자 정의 JavaScript를 사용해 주십시오:
+- Bootstrap only supports one modal window at a time. Nested modals aren't supported as we believe them to be poor user experiences.
+- Modals use `position: fixed`, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You'll likely run into issues when nesting a `.modal` within another fixed element.
+- Once again, due to `position: fixed`, there are some caveats with using modals on mobile devices. [See our browser support docs]({{< docsref "/getting-started/browsers-devices#modals-and-dropdowns-on-mobile" >}}) for details.
+- Due to how HTML5 defines its semantics, [the `autofocus` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-autofocus) has no effect in Bootstrap modals. To achieve the same effect, use some custom JavaScript:
 
 ```js
 const myModal = document.getElementById('myModal')
@@ -30,13 +30,13 @@ myModal.addEventListener('shown.bs.modal', () => {
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-데모와 사용 가이드를 계속해서 읽어 주세요.
+Keep reading for demos and usage guidelines.
 
 ## Examples
 
-### 모달 컴포넌트
+### Modal components
 
-아래는 _static_ 모달의 예입니다. (즉, `position`과 `display`가 오버라이드되는 것을 의미합니다) 여기에는 모달 header, 모달 body (`padding` 때문에 필요), 모달 footer (선택)가 포함되어 있습니다. 가능한 한 모달을 닫을 수 있는 것을 포함시키거나 닫을 수 있는 다른 명시적인 요소를 제공하도록 부탁드립니다.
+Below is a _static_ modal example (meaning its `position` and `display` have been overridden). Included are the modal header, modal body (required for `padding`), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
 
 <div class="bd-example bg-body-tertiary">
   <div class="modal position-static d-block" tabindex="-1">
@@ -79,10 +79,10 @@ myModal.addEventListener('shown.bs.modal', () => {
 ```
 
 {{< callout info >}}
-위의 정적 예제에서는 `<h5>`를 사용하여 문서 페이지의 제목 계층 구조 문제를 피했습니다. 그러나 구조적으로 모달 대화 상자는 별도의 문서/컨텍스트를 나타내므로 `.modal-title`은 이상적으로는 `<h1>`이여야 합니다. 필요한 경우 [글꼴 크기 유틸리티]({{< docsref "/utilities/text#font-size" >}})를 사용하여 제목의 모양을 제어할 수 있습니다. 다음의 모든 라이브 예제에서는 이 방식을 사용합니다.
+In the above static example, we use `<h5>`, to avoid issues with the heading hierarchy in the documentation page. Structurally, however, a modal dialog represents its own separate document/context, so the `.modal-title` should ideally be an `<h1>`. If necessary, you can use the [font size utilities]({{< docsref "/utilities/text#font-size" >}}) to control the heading's appearance. All the following live examples use this approach.
 {{< /callout >}}
 
-### 라이브 데모
+### Live demo
 
 Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.
 
@@ -136,9 +136,9 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 </div>
 ```
 
-### 정적 백드롭
+### Static backdrop
 
-백드롭을 static으로 설정하면, 배경을 클릭해도 모달은 닫히지 않습니다. 아래 버튼을 클릭해 시도해 보세요.
+When backdrop is set to static, the modal will not close when clicking outside of it. Click the button below to try it.
 
 <div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -190,9 +190,9 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 </div>
 ```
 
-### 기다란 콘텐츠 스크롤
+### Scrolling long content
 
-사용자의 뷰포트나 기기가 너무 길면 모달 페이지가 자체적으로 스크롤을 생성합니다. 아래 버튼을 클릭해 시도해 보십시오.
+When modals become too long for the user's viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
 
 <div class="modal fade" id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog">
@@ -218,7 +218,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
   </button>
 </div>
 
-또한 `.modal-dialog`에 `.modal-dialog-scrollable`를 추가하는 것으로, 모달 본체를 스크롤할 수 있는 스크롤 가능한 모달로 만들 수 있습니다.
+You can also create a scrollable modal that allows scrolling the modal body by adding `.modal-dialog-scrollable` to `.modal-dialog`.
 
 <div class="modal fade" id="exampleModalScrollable" tabindex="-1" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable">
@@ -253,9 +253,9 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 </div>
 ```
 
-### 세로 중앙
+### Vertically centered
 
-모달을 중앙에 배치하기 위해서 `.modal-dialog`에 `.modal-dialog-centered`를 추가합니다.
+Add `.modal-dialog-centered` to `.modal-dialog` to vertically center the modal.
 
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -318,7 +318,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 
 ### Tooltips and popovers
 
-[툴팁]({{< docsref "/components/tooltips" >}})과 [팝오버]({{< docsref "/components/popovers" >}})는 필요에 따라 모달 안에 배치시킬 수 있습니다. 모달이 닫히면 그 안에 있는 툴팁이나 팝오버도 자동으로 삭제됩니다.
+[Tooltips]({{< docsref "/components/tooltips" >}}) and [popovers]({{< docsref "/components/popovers" >}}) can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.
 
 <div class="modal fade" id="exampleModalPopovers" tabindex="-1" aria-labelledby="exampleModalPopoversLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -358,9 +358,9 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 </div>
 ```
 
-### 그리드 사용하기
+### Using the grid
 
-`.modal-body` 안에 `.container-fluid`를 중첩시켜 모달 안에 Bootstrap 그리드 시스템을 이용할 수 있습니다. 다른 곳에서 사용하듯이 일반적인 그리드 시스템 클래스를 사용합니다.
+Utilize the Bootstrap grid system within a modal by nesting `.container-fluid` within the `.modal-body`. Then, use the normal grid system classes as you would anywhere else.
 
 <div class="modal fade" id="gridSystemModal" tabindex="-1" aria-labelledby="gridModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -444,9 +444,9 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 
 ### Varying modal content
 
-같은 모달을 트리거하는 버튼들이 있는데, 그것들이 미묘하게 다른 내용의 모달을 트리거하고 있나요? `event.relatedTarget`과 [HTML `data-bs-*` 속성](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)를 사용하여 어떤 버튼이 클릭 되었는지에 따라 모달의 내용을 변화시킬 수 있습니다.
+Have a bunch of buttons that all trigger the same modal with slightly different contents? Use `event.relatedTarget` and [HTML `data-bs-*` attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) to vary the contents of the modal depending on which button was clicked.
 
-다음은 HTML과 JavaScript의 예시가 포함된 라이브 데모입니다. `relatedTarget`의 자세한 내용은 [모달 이벤트 문서](#이벤트)를 참조해 주세요.
+Below is a live demo followed by example HTML and JavaScript. For more information, [read the modal events docs](#events) for details on `relatedTarget`.
 
 {{< example stackblitz_add_js="true" >}}
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
@@ -485,7 +485,7 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 
 ### Toggle between modals
 
-`data-bs-target`과 `data-bs-toggle` 속성을 교묘하게 배치함으로써 여러 모달을 토글할 수 있습니다. 예를 들어 이미 열려있는 로그인 모달에서 비밀번호 재설정의 모달을 열수 있습니다. **여러 개의 모달을 동시에 열 수 없으므로 주의해 주세요.** 이 방법으로 손쉽게 두 개의 다른 모달을 표시할 수 있습니다.
+Toggle between multiple modals with some clever placement of the `data-bs-target` and `data-bs-toggle` attributes. For example, you could toggle a password reset modal from within an already open sign in modal. **Please note multiple modals cannot be open at the same time**—this method simply toggles between two separate modals.
 
 {{< example >}}
 <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
@@ -523,38 +523,37 @@ Toggle a working modal demo by clicking the button below. It will slide down and
 <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
 {{< /example >}}
 
-### 애니메이션 변경
+### Change animation
 
-`$modal-fade-transform` 변수는 모달 페이드인 애니메이션 이전 `.modal-dialog`의 전환 상태를 결정하고, `$modal-show-transform` 변수는 모달 페이드인 애니메이션 종료시 `.modal-dialog`의 전환 상태를 결정합니다.
+The `$modal-fade-transform` variable determines the transform state of `.modal-dialog` before the modal fade-in animation, the `$modal-show-transform` variable determines the transform of `.modal-dialog` at the end of the modal fade-in animation.
 
-예를 들어, zoom-in애니메이션을 만들고 싶다면 `$modal-fade-transform: scale(.8)`을 설정합니다.
+If you want for example a zoom-in animation, you can set `$modal-fade-transform: scale(.8)`.
 
-### 애니메이션 제거
+### Remove animation
 
-화면에 페이드인 하는 것이 아니라 단순히 표시만 하는 경우에는, 마크업에서 `.fade` 클래스를 삭제합니다.
+For modals that simply appear rather than fade in to view, remove the `.fade` class from your modal markup.
 
 ```html
-<!-- Full screen modal -->
-<div class="modal-dialog modal-fullscreen-sm-down">
+<div class="modal" tabindex="-1" aria-labelledby="..." aria-hidden="true">
   ...
 </div>
 ```
 
-### 동적 높이
+### Dynamic heights
 
-모달이 열려있는데 높이가 변경된 경우에는 스크롤바가 표시되었을 때 모달의 위치를 재조정하기 위해 `myModal.handleUpdate()`를 호출해야 합니다.
+If the height of a modal changes while it is open, you should call `myModal.handleUpdate()` to readjust the modal's position in case a scrollbar appears.
 
-### 접근성
+### Accessibility
 
-반드시 `.modal`에 모달 타이틀을 참조하는 `aria-labelledby="..."`를 추가해 주세요. 게다가 `.modal`에 `aria-describedby`를 추가하는 것으로, 모달 다이얼로그의 설명을 줄 수 있습니다. JavaScript로 이미 추가하고 있음으로 `role="dialog"`를 추가할 필요가 없다는 점에 주의해 주세요.
+Be sure to add `aria-labelledby="..."`, referencing the modal title, to `.modal`. Additionally, you may give a description of your modal dialog with `aria-describedby` on `.modal`. Note that you don't need to add `role="dialog"` since we already add it via JavaScript.
 
-### YouTube 동영상 포함시키키
+### Embedding YouTube videos
 
-YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaScript를 추가해 자동으로 재생을 정지하는 등의 처리가 필요합니다. 자세한 내용은 [도움이 되는 Stack Overflow 글](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal)을 참조해 주세요.
+Embedding YouTube videos in modals requires additional JavaScript not in Bootstrap to automatically stop playback and more. [See this helpful Stack Overflow post](https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal) for more information.
 
-## 선택적 크기
+## Optional sizes
 
-모달에는 3개의 옵션 크기가 있어, 제어자 클래스를 통해 `.modal-dialog`로 배치할 수 있습니다. 이들 크기는 좁은 뷰포트에서의 가로 스크롤 바를 피하기 위해 특정 중단점에서 유효하게 됩니다.
+Modals have three optional sizes, available via modifier classes to be placed on a `.modal-dialog`. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
 
 {{< bs-table "table" >}}
 | Size        | Class                                         | Modal max-width |
@@ -565,7 +564,7 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 | Extra large | `.modal-xl`                                   | `1140px`        |
 {{< /bs-table >}}
 
-제어자 클래스를 가지고 있지 않은 기본 모달은, "medium" 크기의 모달로 보여집니다.
+Our default modal without modifier class constitutes the "medium" size modal.
 
 <div class="bd-example">
   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalXl">Extra large modal</button>
@@ -621,19 +620,19 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
   </div>
 </div>
 
-## 전체화면 모달
+## Fullscreen Modal
 
-`.modal-dialog`에는 아래와 같은 클래스를 추가하는 것으로 화면을 꽉채운 모달을 이용할 수 있습니다.
+Another override is the option to pop up a modal that covers the user viewport, available via modifier classes that are placed on a `.modal-dialog`.
 
 {{< bs-table >}}
-| Class                        | 가용성      |
-| ---------------------------- | -------- |
-| `.modal-fullscreen`          | 항상       |
-| `.modal-fullscreen-sm-down`  | `576px`  |
-| `.modal-fullscreen-md-down`  | `768px`  |
-| `.modal-fullscreen-lg-down`  | `992px`  |
-| `.modal-fullscreen-xl-down`  | `1200px` |
-| `.modal-fullscreen-xxl-down` | `1400px` |
+| Class                        | Availability |
+| ---------------------------- | ------------ |
+| `.modal-fullscreen`          | Always       |
+| `.modal-fullscreen-sm-down`  | `576px`      |
+| `.modal-fullscreen-md-down`  | `768px`      |
+| `.modal-fullscreen-lg-down`  | `992px`      |
+| `.modal-fullscreen-xl-down`  | `1200px`     |
+| `.modal-fullscreen-xxl-down` | `1400px`     |
 {{< /bs-table >}}
 
 <div class="bd-example">
@@ -646,10 +645,10 @@ YouTube 동영상을 모달에 포함시키려면, Bootstrap에는 없는 JavaSc
 </div>
 
 ```html
-const myModalEl = document.getElementById('myModal')
-myModalEl.addEventListener('hidden.bs.modal', event => {
-  // do something...
-})
+<!-- Full screen modal -->
+<div class="modal-dialog modal-fullscreen-sm-down">
+  ...
+</div>
 ```
 
 <div class="modal fade" id="exampleModalFullscreen" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
@@ -756,51 +755,51 @@ myModalEl.addEventListener('hidden.bs.modal', event => {
 
 ## CSS
 
-### 변수
+### Variables
 
 {{< added-in "5.2.0" >}}
 
-Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 경고창에서 `.modal` 및 `.modal-backdrop`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
+As part of Bootstrap's evolving CSS variables approach, modals now use local CSS variables on `.modal` and `.modal-backdrop` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="modal-css-vars" file="scss/_modal.scss" >}}
 
 {{< scss-docs name="modal-backdrop-css-vars" file="scss/_modal.scss" >}}
 
-### Sass 변수
+### Sass variables
 
 {{< scss-docs name="modal-variables" file="scss/_variables.scss" >}}
 
-### Sass 루프
+### Sass loops
 
-[반응형 전체화면 모달](#전체화면-모달)은 `$breakpoints` 맵과 `scss/_modal.scss`내의 반복에 의해 생성됩니다.
+[Responsive fullscreen modals](#fullscreen-modal) are generated via the `$breakpoints` map and a loop in `scss/_modal.scss`.
 
 {{< scss-docs name="modal-fullscreen-loop" file="scss/_modal.scss" >}}
 
-## 사용 방법
+## Usage
 
-모달 플러그인은, data 속성이나 JavaScript를 사용하고, 필요에 따라 숨겨서 콘텐츠를 바꿉니다. 또한 기본 스크롤 동작을 덮어쓰고 모달의 바깥쪽을 클릭했을 때 표시된 모달을 삭제하기 위한 클릭 영역을 제공하기 위해서 `.modal-backdrop`을 생성합니다.
+The modal plugin toggles your hidden content on demand, via data attributes or JavaScript. It also overrides default scrolling behavior and generates a `.modal-backdrop` to provide a click area for dismissing shown modals when clicking outside the modal.
 
-### 데이터 속성 사용하기
+### Via data attributes
 
 #### Toggle
 
-JavaScript를 쓰지 않고 모달을 활성화 시킵니다. 버튼과 같은 컨트롤러 요소에 `data-bs-toggle="modal"`을 설정하고, 추가로 `data-bs-target="#foo"` 또는 `href="#foo"`를 지정하고, 토글하는 특정 모달을 타깃으로 합니다.
+Activate a modal without writing JavaScript. Set `data-bs-toggle="modal"` on a controller element, like a button, along with a `data-bs-target="#foo"` or `href="#foo"` to target a specific modal to toggle.
 
 ```html
 <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Launch modal</button>
 ```
 
-#### 해제
+#### Dismiss
 
 {{% js-dismiss "modal" %}}
 
 {{< callout warning >}}
-모달을 해제하는 두 가지 방법을 모두 지원하지만 모달 외부에서 해제하는 것은 [ARIA Authoring Practices Guide dialog (modal) pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/)과 일치하지 않습니다. 문제가 생길 수도 있다는 점에 주의하세요.
+While both ways to dismiss a modal are supported, keep in mind that dismissing from outside a modal does not match the [ARIA Authoring Practices Guide dialog (modal) pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialogmodal/). Do this at your own risk.
 {{< /callout >}}
 
-### JavaScript 사용하기
+### Via JavaScript
 
-JavaScript 한 줄로 모달을 생성합니다:
+Create a modal with a single line of JavaScript:
 
 ```js
 const myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
@@ -808,29 +807,29 @@ const myModal = new bootstrap.Modal(document.getElementById('myModal'), options)
 const myModalAlternative = new bootstrap.Modal('#myModal', options)
 ```
 
-### 옵션
+### Options
 
 {{< markdown >}}
 {{< partial "js-data-attributes.md" >}}
 {{< /markdown >}}
 
 {{< bs-table "table" >}}
-| 이름         | 유형                  | Default | 설명                                                   |
-| ---------- | ------------------- | ------- | ---------------------------------------------------- |
-| `backdrop` | boolean, `'static'` | `true`  | 모달 배경 요소를 포함합니다. 또는 클릭 시 모달이 닫히지 않는 배경에 '정적'을 지정합니다. |
-| `focus`    | boolean             | `true`  | 초기화 시 모달에 초점을 맞춥니다.                                  |
-| `keyboard` | boolean             | `true`  | Closes the modal when escape key is pressed.         |
+| Name       | Type                | Default | Description                                                                                                                   |
+| ---------- | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `backdrop` | boolean, `'static'` | `true`  | Includes a modal-backdrop element. Alternatively, specify `static` for a backdrop which doesn't close the modal when clicked. |
+| `focus`    | boolean             | `true`  | Puts the focus on the modal when initialized.                                                                                 |
+| `keyboard` | boolean             | `true`  | Closes the modal when escape key is pressed.                                                                                  |
 {{< /bs-table >}}
 
-### 메소드
+### Methods
 
 {{< callout danger >}}
 {{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
-#### 옵션 전달
+#### Passing options
 
-모달로서 콘텐츠를 활성화합니다. 옵션의 `object`를 받습니다.
+Activates your content as a modal. Accepts an optional options `object`.
 
 ```js
 const myModal = new bootstrap.Modal('#myModal', {
@@ -839,29 +838,29 @@ const myModal = new bootstrap.Modal('#myModal', {
 ```
 
 {{< bs-table "table" >}}
-| 메소드                   | 설명                                                                                                                                                                                                                                                     |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `dispose`             | 모달의 요소를 없앱니다. (DOM 요소에 저장되어 있는 데이터를 삭제합니다)                                                                                                                                                                                                             |
-| `getInstance`         | DOM 요소와 연관된 모달 인스턴스를 취득하는 *Static* 메소드 입니다.                                                                                                                                                                                                            |
-| `getOrCreateInstance` | _Static_ 메서드를 사용하여 DOM 요소와 연결된 모달 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다.                                                                                                                                                                          |
-| `handleUpdate`        | 열려 있는 동안에 모달의 높이가 바뀌었을 경우, 모달의 위치를 수동으로 재조정합니다 (즉, 스크롤 바가 표시되어 있는 경우 등).                                                                                                                                                                               |
-| `hide`                | 수동으로 모달을 숨깁니다. **모달이 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.modal` 이벤트가 발생하기 전).                                                                                                                                                                   |
-| `show`                | 모달을 수동으로 엽니다. **모달이 실제로 표시되기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.modal` 이벤트가 발생하기 전). 또한, 모달 이벤트로 받을 수 있는 DOM 요소를 (`relatedTarget` 속성으로서) 인수로 건네줄 수도 있습니다. (예: `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)`) |
-| `toggle`              | 모달을 수동으로 바꿉니다. **모달이 실제로 표시 또는 숨기기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.modal` 또는 `hidden.bs.modal` 이벤트가 발생하기 전).                                                                                                                                          |
+| Method                | Description                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `dispose`             | Destroys an element's modal. (Removes stored data on the DOM element)                                                                                                                                                                                                                                                                                                    |
+| `getInstance`         | _Static_ method which allows you to get the modal instance associated with a DOM element.                                                                                                                                                                                                                                                                                |
+| `getOrCreateInstance` | _Static_ method which allows you to get the modal instance associated with a DOM element, or create a new one in case it wasn't initialized.                                                                                                                                                                                                                             |
+| `handleUpdate`        | Manually readjust the modal's position if the height of a modal changes while it is open (i.e. in case a scrollbar appears).                                                                                                                                                                                                                                             |
+| `hide`                | Manually hides a modal. **Returns to the caller before the modal has actually been hidden** (i.e. before the `hidden.bs.modal` event occurs).                                                                                                                                                                                                                            |
+| `show`                | Manually opens a modal. **Returns to the caller before the modal has actually been shown** (i.e. before the `shown.bs.modal` event occurs). Also, you can pass a DOM element as an argument that can be received in the modal events (as the `relatedTarget` property). (i.e. `const modalToggle = document.getElementById('toggleMyModal'); myModal.show(modalToggle)`. |
+| `toggle`              | Manually toggles a modal. **Returns to the caller before the modal has actually been shown or hidden** (i.e. before the `shown.bs.modal` or `hidden.bs.modal` event occurs).                                                                                                                                                                                             |
 {{< /bs-table >}}
 
-### 이벤트
+### Events
 
-Bootstrap의 모달 클래스는 모달 기능으로 연결하기 위한 몇 가지 이벤트를 공개하고 있습니다. 모든 모달 이벤트는, 모달 자체(즉, `<div class="modal">`)에서 발생합니다.
+Bootstrap's modal class exposes a few events for hooking into modal functionality. All modal events are fired at the modal itself (i.e. at the `<div class="modal">`).
 
 {{< bs-table >}}
-| 이벤트                      | 설명                                                                                                                                                                                                                                          |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `hide.bs.modal`          | 이 이벤트는 `hide` 인스턴스/메소드가 불렸을 때 바로 발생합니다.                                                                                                                                                                                                     |
-| `hidden.bs.modal`        | 이 이벤트는 모달을 숨길 때 발생합니다 (CSS 트랜지션이 완료되기를 기다립니다).                                                                                                                                                                                              |
-| `hidePrevented.bs.modal` | This event is fired when the modal is shown, its backdrop is `static` and a click outside of the modal is performed. 이 이벤트는 모달이 표시되고 그 배경이 `static`이고, 키보드 옵션 또는 `data-bs-keyboard`가 `false`로 설정되어 있는 상태에서 모달 바깥쪽 클릭이나 escape key를 누루면 됩니다. |
-| `show.bs.modal`          | 이 이벤트는 `show` 인스턴스/메소드가 불렸을 때 바로 발생합니다. 클릭으로 인해 발생했을 때 클릭된 요소는 이벤트의 `relatedTarget` 속성으로 이용 가능합니다.                                                                                                                                          |
-| `shown.bs.modal`         | This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). 이 이벤트는 모달이 사용자에게 표시될 때 발생합니다.(CSS 트랜지션이 완료되기를 기다립니다) 클릭이 원인인 경우, 클릭된 요소는 이벤트의 `relatedTarget` 속성으로 이용 가능합니다.              |
+| Event                    | Description                                                                                                                                                                                                              |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `hide.bs.modal`          | This event is fired immediately when the `hide` instance method has been called.                                                                                                                                         |
+| `hidden.bs.modal`        | This event is fired when the modal has finished being hidden from the user (will wait for CSS transitions to complete).                                                                                                  |
+| `hidePrevented.bs.modal` | This event is fired when the modal is shown, its backdrop is `static` and a click outside of the modal is performed. The event is also fired when the escape key is pressed and the `keyboard` option is set to `false`. |
+| `show.bs.modal`          | This event fires immediately when the `show` instance method is called. If caused by a click, the clicked element is available as the `relatedTarget` property of the event.                                             |
+| `shown.bs.modal`         | This event is fired when the modal has been made visible to the user (will wait for CSS transitions to complete). If caused by a click, the clicked element is available as the `relatedTarget` property of the event.   |
 {{< /bs-table >}}
 
 ```js
