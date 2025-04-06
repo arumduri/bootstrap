@@ -8,7 +8,7 @@ toc: true
 
 ## 기본 예시
 
-추가 기능(add-on) 이나 버튼을 입력의 한쪽 혹은 양쪽에 배치할 수 있습니다. `<label>`은 입력 그룹 밖에 작성해야 합니다.
+추가 기능(add-on) 이나 버튼을 입력의 한쪽 혹은 양쪽에 배치할 수 있습니다. You may also place one on both sides of an input. `<label>`은 입력 그룹 밖에 작성해야 합니다.
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -48,7 +48,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## 줄 바꿈
+## Wrapping
 
 입력 그룹은 입력 그룹 내의 사용자 정의 폼 유효성 검사에 대응하기 위해 기본적으로 `flex-wrap: wrap`으로 감싸고 있습니다. 이것을 비활성화하려면 `.flex-nowrap`을 추가하여 사용합니다.
 
