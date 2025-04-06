@@ -6,13 +6,13 @@ group: utilities
 toc: true
 ---
 
-## 작동 원리
+## How it works
 
 반응형 디스플레이 유틸리티 클래스를 사용하여 [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)의 값을 변경합니다. 의도적으로 `디스플레이`에 대해 가능한 모든 값의 자식 집합만 지원합니다. 클래스는 다양한 효과를 위해 필요에 따라 결합 시킬 수 있습니다.
 
 ## 표기법
 
- `xs`에서 `xxl`까지 모든 [중단점]({{< docsref "/layout/breakpoints" >}})에 적용되는 디스플레이 유틸리티 클래스에는 중단점 축약어가 없습니다. 이는 해당 클래스가 `min-width: 0;`에서 적용되기 때문입니다. 따라서 미디어 쿼리에 의해 제한되지 않습니다. 그러나 나머지 중단점에는 중단점 축약어가 포함됩니다.
+`xs`에서 `xxl`까지 모든 [중단점]({{< docsref "/layout/breakpoints" >}})에 적용되는 디스플레이 유틸리티 클래스에는 중단점 축약어가 없습니다. 이는 해당 클래스가 `min-width: 0;`에서 적용되기 때문입니다. 따라서 미디어 쿼리에 의해 제한되지 않습니다. 그러나 나머지 중단점에는 중단점 축약어가 포함됩니다.
 
 따라서 클래스는 다음 형식을 사용하여 이름이 지정됩니다.
 
@@ -35,9 +35,9 @@ toc: true
 
 디스플레이 값은 `$utilities`에 정의된 `displays` 값을 변경하고 SCSS를 다시 컴파일하여 변경할 수 있습니다.
 
-미디어 쿼리는 **지정된 중단점보다 큰** 화면 너비에 영향을 줍니다. 예를 들어, `.d-lg-none` 설정은 `lg` 뿐만 아니라 `xl` 그리고 `xxl` 화면을 `display: none;` 처리합니다. 
+미디어 쿼리는 **지정된 중단점보다 큰** 화면 너비에 영향을 줍니다. 예를 들어, `.d-lg-none` 설정은 `lg` 뿐만 아니라 `xl` 그리고 `xxl` 화면을 `display: none;` 처리합니다.
 
-## 예시
+## Examples
 
 {{< example >}}
 <div class="d-inline p-2 text-bg-primary">d-inline</div>
@@ -58,22 +58,22 @@ toc: true
 특정한 화면 크기 간격에서만 요소를 표시하려면 `.d-*-none` 클래스를 `.d-*-*` 클래스와 결합 하세요. (예: `.d-none .d-md-block .d-xl-none .d-xxl-none`). 이렇게하면 중형(md) 및 대형(lg) 장치를 제외한 모든 화면 크기의 요소를 숨길 수 있습니다.
 
 {{< bs-table >}}
-| 화면 크기 | 클래스 |
-| --- | --- |
-| 모두 숨기기 | `.d-none` |
-| xs에서만 숨기기 | `.d-none .d-sm-block` |
-| sm에서만 숨기기 | `.d-sm-none .d-md-block` |
-| md에서만 숨기기 | `.d-md-none .d-lg-block` |
-| lg에서만 숨기기 | `.d-lg-none .d-xl-block` |
-| xl에서만 숨기기 | `.d-xl-none` |
-| xxl에서만 숨기기 | `.d-xxl-none` |
-| 모두 보이기 | `.d-block` |
-| xs에서만 보이기 | `.d-block .d-sm-none` |
-| sm에서만 보이기 | `.d-none .d-sm-block .d-md-none` |
-| md에서만 보이기 | `.d-none .d-md-block .d-lg-none` |
-| lg에서만 보이기 | `.d-none .d-lg-block .d-xl-none` |
-| xl에서만 보이기 | `.d-none .d-xl-block .d-xxl-none` |
-| xxl에서만 보이기 | `.d-none .d-xxl-block` |
+| 화면 크기      | 클래스                               |
+| ---------- | --------------------------------- |
+| 모두 숨기기     | `.d-none`                         |
+| xs에서만 숨기기  | `.d-none .d-sm-block`             |
+| sm에서만 숨기기  | `.d-sm-none .d-md-block`          |
+| md에서만 숨기기  | `.d-md-none .d-lg-block`          |
+| lg에서만 숨기기  | `.d-lg-none .d-xl-block`          |
+| xl에서만 숨기기  | `.d-xl-none`                      |
+| xxl에서만 숨기기 | `.d-xxl-none`                     |
+| 모두 보이기     | `.d-block`                        |
+| xs에서만 보이기  | `.d-block .d-sm-none`             |
+| sm에서만 보이기  | `.d-none .d-sm-block .d-md-none`  |
+| md에서만 보이기  | `.d-none .d-md-block .d-lg-none`  |
+| lg에서만 보이기  | `.d-none .d-lg-block .d-xl-none`  |
+| xl에서만 보이기  | `.d-none .d-xl-block .d-xxl-none` |
+| xxl에서만 보이기 | `.d-none .d-xxl-block`            |
 {{< /bs-table >}}
 
 {{< example >}}
