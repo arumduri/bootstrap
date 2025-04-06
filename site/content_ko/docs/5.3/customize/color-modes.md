@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: 색상 모드
-description: Bootstrap은 이제 v5.3.0부터 색상 모드 또는 테마를 지원합니다. 기본값인 라이트 모드와 새로운 다크 모드를 살펴보거나 스타일을 템플릿으로 사용하여 나만의 모드를 만들어 보세요.
+title: Color modes
+description: Bootstrap now supports color modes, or themes, as of v5.3.0. Explore our default light color mode and the new dark mode, or create your own using our styles as your template.
 group: customize
 toc: true
 added: "5.3"
 ---
 
 {{< callout >}}
-**직접 사용해보세요!** [twbs/examples 저장소](https://github.com/twbs/examples/tree/main/color-modes)에서 Bootstrap과 Stylelint 및 색상 모드를 사용하기 위한 소스 코드와 작업 데모를 다운로드하세요. [StackBlitz에서 예제를 열어볼 수도 있습니다](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
+**Try it yourself!** Download the source code and working demo for using Bootstrap with Stylelint, and the color modes from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/color-modes). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/color-modes?file=index.html).
 {{< /callout >}}
 
-## 다크 모드
+## Dark mode
 
-**이제 Bootstrap에서 어두운 모드부터 색상 모드를 지원합니다!** v5.3.0에서는 자체 색상 모드 토글을 구현하고(아래 Bootstrap 문서에서 예시를 참조하세요) 원하는 대로 다양한 색상 모드를 적용할 수 있습니다. 기본값인 라이트 모드, 그리고 새로운 다크 모드가 지원됩니다. 색상 모드는 `<html>` 요소에서 전역적으로 토글하거나 'data-bs-theme' 속성을 사용하여 특정 컴포넌트 및 요소에서 토글할 수 있습니다.
+**Bootstrap now supports color modes, starting with dark mode!** With v5.3.0 you can implement your own color mode toggler (see below for an example from Bootstrap's docs) and apply the different color modes as you see fit. We support a light mode (default) and now dark mode. Color modes can be toggled globally on the `<html>` element, or on specific components and elements, thanks to the `data-bs-theme` attribute.
 
-또는 컬러 모드 믹스인(자세한 내용은 사용 섹션 참조)(#building-with-sass) 덕분에 미디어 쿼리 구현으로 전환할 수도 있습니다. 주의할 점은 아래 그림과 같이 컴포넌트별로 테마를 변경할 수 없다는 점입니다.
+Alternatively, you can also switch to a media query implementation thanks to our color mode mixin—see [the usage section for details](#building-with-sass). Heads up though—this eliminates your ability to change themes on a per-component basis as shown below.
 
-## 예제
+## Example
 
-예를 들어 드롭다운 메뉴의 색상 모드를 변경하려면 `data-bs-theme="light"` 또는 `data-bs-theme="dark"`를 부모 `.dropdown`에 추가하면 됩니다. 이제 전역 색상 모드에 관계없이 이러한 드롭다운은 지정된 테마 값으로 표시됩니다.
+For example, to change the color mode of a dropdown menu, add `data-bs-theme="light"` or `data-bs-theme="dark"` to the parent `.dropdown`. Now, no matter the global color mode, these dropdowns will display with the specified theme value.
 
 {{< example class="d-flex justify-content-between" >}}
 <div class="dropdown" data-bs-theme="light">
@@ -51,11 +51,11 @@ added: "5.3"
 </div>
 {{< /example >}}
 
-## 작동 방식
+## How it works
 
-- 위에 표시된 것처럼 색상 모드 스타일은 `data-bs-theme` 속성으로 제어됩니다. 이 속성은 `<html>` 요소 또는 다른 요소나 Bootstrap 컴포넌트에 적용할 수 있습니다. `<html>` 요소에 적용하면 모든 요소에 적용됩니다. 컴포넌트나 요소에 적용하면 해당 특정 컴포넌트나 요소로 범위가 지정됩니다.
+- As shown above, color mode styles are controlled by the `data-bs-theme` attribute. This attribute can be applied to the `<html>` element, or to any other element or Bootstrap component. If applied to the `<html>` element, it will apply to everything. If applied to a component or element, it will be scoped to that specific component or element.
 
-- 지원하려는 각 색상 모드에 대해 공유 전역 CSS 변수에 대한 새로운 오버라이드를 추가해야 합니다. 다크 모드의 경우 `_root.scss` 스타일시트에서 이미 이 작업을 수행했으며 라이트 모드가 기본값으로 설정되어 있습니다. 컬러 모드별 스타일을 작성할 때는 믹스인을 사용하세요:
+- For each color mode you wish to support, you'll need to add new overrides for the shared global CSS variables. We do this already in our `_root.scss` stylesheet for dark mode, with light mode being the default values. In writing color mode specific styles, use the mixin:
 
   ```scss
   // Color mode variables in _root.scss
@@ -64,13 +64,13 @@ added: "5.3"
   }
   ```
 
-- 사용자 정의 `_variables-dark.scss`를 사용하여 다크 모드에 대한 공유 전역 CSS 변수 오버라이드를 강화합니다. 이 파일은 사용자 정의 색상 모드에는 필요하지 않지만 두 가지 이유로 다크 모드에는 필요합니다. 첫째, 전역 색상을 재설정할 수 있는 단일 위치가 있는 것이 좋습니다. 둘째, 아코디언, 양식 컴포넌트 등을 위해 CSS에 포함된 배경 이미지에 대해 일부 Sass 변수를 재정의해야 했기 때문입니다.
+- We use a custom `_variables-dark.scss` to power those shared global CSS variable overrides for dark mode. This file isn't required for your own custom color modes, but it's required for our dark mode for two reasons. First, it's better to have a single place to reset global colors. Second, some Sass variables had to be overridden for background images embedded in our CSS for accordions, form components, and more.
 
-## 사용법
+## Usage
 
-### 다크 모드 활성화
+### Enable dark mode
 
-`<html>` 요소에 `data-bs-theme="dark"` 속성을 추가하여 전체 프로젝트에서 기본 제공 어두운 색상 모드를 사용하도록 설정합니다. 이렇게 하면 특정 `data-bs-theme` 속성이 적용된 요소를 제외한 모든 컴포넌트와 요소에 어두운 색상 모드가 적용됩니다. 아래는 [빠른 시작 템플릿]({{< docsref "/getting-started/introduction#quick-start" >}})을 기반으로 만들어진 예시입니다:
+Enable the built in dark color mode across your entire project by adding the `data-bs-theme="dark"` attribute to the `<html>` element. This will apply the dark color mode to all components and elements, other than those with a specific `data-bs-theme` attribute applied. Building on the [quick start template]({{< docsref "/getting-started/introduction#quick-start" >}}):
 
 ```html
 <!doctype html>
@@ -88,15 +88,15 @@ added: "5.3"
 </html>
 ```
 
-Bootstrap에는 아직 내장된 색상 모드 선택기가 제공되지 않지만 원하는 경우 자체 문서에 있는 색상 모드 선택기를 사용할 수 있습니다. [JavaScript 문단에서 자세히 확인해보세요.](#javascript)
+Bootstrap does not yet ship with a built-in color mode picker, but you can use the one from our own documentation if you like. [Learn more in the JavaScript section.](#javascript)
 
-### Sass로 빌드하기
+### Building with Sass
 
-새로운 다크 모드 옵션은 Bootstrap의 모든 사용자가 사용할 수 있지만 미디어 쿼리 대신 데이터 속성을 통해 제어되며 프로젝트의 색상 모드를 자동으로 전환하지 않습니다. Sass를 통해 `$enable-dark-mode`를 `false`로 변경하여 다크 모드를 완전히 비활성화할 수 있습니다.
+Our new dark mode option is available to use for all users of Bootstrap, but it's controlled via data attributes instead of media queries and does not automatically toggle your project's color mode. You can disable our dark mode entirely via Sass by changing `$enable-dark-mode` to `false`.
 
-색상 모드가 _어떻게_ 적용되는지 제어할 수 있도록 사용자 정의 Sass 믹스인 `color-mode()`를 사용합니다. 기본적으로 `data` 속성 접근 방식을 사용하여 (이 문서처럼) 방문자가 자동 다크 모드를 선택하거나 기본 설정을 제어할 수 있는 보다 사용자 친화적인 환경을 만들 수 있습니다. 또한 라이트/다크 외에도 다양한 테마와 사용자 정의 색상 모드를 추가할 수 있는 쉽고 확장 가능한 방법입니다.
+We use a custom Sass mixin, `color-mode()`, to help you control _how_ color modes are applied. By default, we use a `data` attribute approach, allowing you to create more user-friendly experiences where your visitors can choose to have an automatic dark mode or control their preference (like in our own docs here). This is also an easy and scalable way to add different themes and more custom color modes beyond light and dark.
 
-미디어 쿼리를 사용하고 색상 모드만 자동으로 만들려면 Sass 변수를 통해 믹싱의 기본 유형을 변경할 수 있습니다. 다음 스니펫과 컴파일된 CSS 출력을 살펴보세요.
+In case you want to use media queries and only make color modes automatic, you can change the mixin's default type via Sass variable. Consider the following snippet and its compiled CSS output.
 
 ```scss
 $color-mode-type: data;
@@ -118,7 +118,7 @@ Outputs to:
 }
 ```
 
-`media-query` 설정 시를 사용한 예시입니다.
+And when setting to `media-query`:
 
 ```scss
 $color-mode-type: media-query;
@@ -142,11 +142,11 @@ Outputs to:
 }
 ```
 
-## 사용자 지정 색상 모드
+## Custom color modes
 
-색상 모드의 주요 사용 사례는 라이트/다크 모드이지만 사용자 정의 색상 모드도 가능합니다. 사용자 정의 값을 색상 모드의 이름으로 사용하여 나만의 `data-bs-theme` 선택기를 만든 다음 필요에 따라 Sass 및 CSS 변수를 수정합니다. 저희는 Bootstrap의 다크 모드 전용 Sass 변수를 저장하기 위해 별도의 `_variables-dark.scss` 스타일시트를 만들기로 선택했지만, 반드시 필요한 것은 아닙니다.
+While the primary use case for color modes is light and dark mode, custom color modes are also possible. Create your own `data-bs-theme` selector with a custom value as the name of your color mode, then modify our Sass and CSS variables as needed. We opted to create a separate `_variables-dark.scss` stylesheet to house Bootstrap's dark mode specific Sass variables, but that's not required for you.
 
-예를 들어 `data-bs-theme="blue"` 선택기를 사용하여 "파란색 테마"를 만들 수 있습니다. 사용자 정의 Sass 또는 CSS 파일에서 새 선택기를 추가하고 필요에 따라 전역 또는 컴포넌트 CSS 변수를 재정의합니다. Sass를 사용하는 경우 CSS 변수 오버라이드 내에서 Sass의 함수를 사용할 수도 있습니다.
+For example, you can create a "blue theme" with the selector `data-bs-theme="blue"`. In your custom Sass or CSS file, add the new selector and override any global or component CSS variables as needed. If you're using Sass, you can also use Sass's functions within your CSS variable overrides.
 
 {{< scss-docs name="custom-color-mode" file="site/assets/scss/_content.scss" >}}
 
@@ -179,9 +179,9 @@ Outputs to:
 
 ## JavaScript
 
-방문자나 사용자가 색상 모드를 전환할 수 있도록 하려면 루트 요소인 `<html>`의 `data-bs-theme` 속성을 제어하는 토글 요소를 만들어야 합니다. 처음에는 사용자의 현재 시스템 색상 모드를 따르지만, 이를 재정의하고 특정 색상 모드를 선택할 수 있는 옵션을 제공하는 토글러를 문서에 작성했습니다.
+To allow visitors or users to toggle color modes, you'll need to create a toggle element to control the `data-bs-theme` attribute on the root element, `<html>`. We've built a toggler in our documentation that initially defers to a user's current system color mode, but provides an option to override that and pick a specific color mode.
 
-이 기능을 구동하는 JavaScript를 살펴보세요. 자체 컴포넌트에서 HTML과 CSS를 사용하여 어떻게 구현되었는지 보려면 자체 문서 내비게이션 바를 살펴보시기 바랍니다. 사이트 새로고침 시 발생할 수 있는 화면 깜박임을 줄이려면 페이지 상단에 JavaScript를 포함하는 것이 좋습니다. 색상 모드에 미디어 쿼리를 사용하기로 결정한 경우, 암시적 제어를 선호하는 경우 JavaScript를 수정하거나 제거해야 할 수 있습니다.
+Here's a look at the JavaScript that powers it. Feel free to inspect our own documentation navbar to see how it's implemented using HTML and CSS from our own components. It is suggested to include the JavaScript at the top of your page to reduce potential screen flickering during reloading of your site. Note that if you decide to use media queries for your color modes, your JavaScript may need to be modified or removed if you prefer an implicit control.
 
 {{< example lang="js" show_preview="false" >}}
 {{< js.inline >}}
@@ -189,11 +189,11 @@ Outputs to:
 {{< /js.inline >}}
 {{< /example >}}
 
-## 테마 색상 추가
+## Adding theme colors
 
-[경고창]({{< docsref "/components/alerts" >}})이나 [목록 그룹]({{< docsref "/components/list-group" >}})과 같은 일부 컴포넌트의 경우 `$theme-colors`에 새 색상을 추가하는 것만으로는 충분하지 않습니다. 밝은 테마의 경우 `$theme-colors-text`, `$theme-colors-bg-subtle` 및 `$theme-colors-border-subtle`에도 새 색상을 정의해야 하며 어두운 테마의 경우 `$theme-colors-text-dark`, `$theme-colors-bg-subtle-dark` 및 `$theme-colors-border-subtle-dark`에도 새 색상을 정의해야 합니다.
+Adding a new color in `$theme-colors` is not enough for some of our components like [alerts]({{< docsref "/components/alerts" >}}) and [list groups]({{< docsref "/components/list-group" >}}). New colors must also be defined in `$theme-colors-text`, `$theme-colors-bg-subtle`, and `$theme-colors-border-subtle` for light theme; but also in `$theme-colors-text-dark`, `$theme-colors-bg-subtle-dark`, and `$theme-colors-border-subtle-dark` for dark theme.
 
-Sass는 기존 변수나 맵에서 자체 Sass 변수를 생성할 수 없으므로 이 과정은 수동으로 진행해야 합니다. 향후 버전의 Bootstrap에서는 중복을 줄이기 위해 이 설정을 다시 검토할 예정입니다.
+This is a manual process because Sass cannot generate its own Sass variables from an existing variable or map. In future versions of Bootstrap, we'll revisit this setup to reduce the duplication.
 
 ```scss
 // Required
@@ -239,20 +239,20 @@ $theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $c
 
 ## CSS
 
-### 변수
+### Variables
 
-수십 개의 루트 수준 CSS 변수가 다크 모드에 대한 오버라이드로 반복됩니다. 이러한 변수의 범위는 색상 모드 선택기에 한정되며, 기본값은 `data-bs-theme`이지만 [직접 구성 가능한](#sass로-빌드하기) 미디어 쿼리에서 `prefers-color-scheme`을 사용하도록 설정할 수 있습니다. 이 변수를 새 색상 모드를 생성할 때 가이드라인으로 사용하세요.
+Dozens of root level CSS variables are repeated as overrides for dark mode. These are scoped to the color mode selector, which defaults to `data-bs-theme` but [can be configured](#building-with-sass) to use a `prefers-color-scheme` media query. Use these variables as a guideline for generating your own new color modes.
 
 {{< scss-docs name="root-dark-mode-vars" file="scss/_root.scss" >}}
 
-### Sass 변수
+### Sass variables
 
-다크 컬러 모드의 CSS 변수는 부분적으로 `_variables-dark.scss`의 다크 모드 전용 Sass 변수에서 생성됩니다. 여기에는 컴포넌트 전체에 사용되는 임베디드 SVG의 색상을 변경하기 위한 몇 가지 사용자 정의 오버라이드도 포함됩니다.
+CSS variables for our dark color mode are partially generated from dark mode specific Sass variables in `_variables-dark.scss`. This also includes some custom overrides for changing the colors of embedded SVGs used throughout our components.
 
 {{< scss-docs name="sass-dark-mode-vars" file="scss/_variables-dark.scss" >}}
 
-### Sass 믹스인
+### Sass mixins
 
-다크 모드의 스타일과 사용자가 만든 모든 사용자 정의 색상 모드는 사용자 정의 가능한 `color-mode()` 믹스인을 사용하여 `data-bs-theme` 속성 선택기 또는 미디어 쿼리에 적절하게 범위를 지정할 수 있습니다. 자세한 내용은 [Sass 사용법 문단](#sass로-빌드하기)을 참조하세요.
+Styles for dark mode, and any custom color modes you create, can be scoped appropriately to the `data-bs-theme` attribute selector or media query with the customizable `color-mode()` mixin. See the [Sass usage section](#building-with-sass) for more details.
 
 {{< scss-docs name="color-mode-mixin" file="scss/mixins/_color-mode.scss" >}}
