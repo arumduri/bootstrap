@@ -1,15 +1,14 @@
 ---
 layout: docs
-title: 텍스트
-title_en: Text
-description: 정렬, 줄바꿈, 굵기 등을 제어하는 ​​일반적인 텍스트 유틸리티에 대한 문서 및 예제입니다.
+title: Text
+description: Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.
 group: utilities
 toc: true
 ---
 
-## 텍스트 정렬
+## Text alignment
 
-텍스트 정렬 클래스를 사용하여 텍스트를 컴포넌트에 쉽게 재정렬할 수 있습니다. 시작, 끝 및 중앙 정렬의 경우 그리드 시스템과 동일한 뷰포트 너비 중단점을 사용하는 반응형 클래스를 사용할 수 있습니다.
+Easily realign text to components with text alignment classes. For start, end, and center alignment, responsive classes are available that use the same viewport width breakpoints as the grid system.
 
 {{< example >}}
 <p class="text-start">Start aligned text on all viewport sizes.</p>
@@ -24,13 +23,12 @@ toc: true
 {{< /example >}}
 
 {{< callout info >}}
-정렬된 텍스트에 대한 유틸리티 클래스는 제공하지 않습니다. 미학적으로 정렬된 텍스트는 매력적으로 보일 수 있지만 단어 간격을 무작위로 만들기 떄문에 가독성이 저하됩니다.
-
+Note that we don't provide utility classes for justified text. While, aesthetically, justified text might look more appealing, it does make word-spacing more random and therefore harder to read.
 {{< /callout >}}
 
-## 텍스트 줄바꿈과 오버플로우
+## Text wrapping and overflow
 
-`.text-wrap` 클래스로 줄바꿈하세요.
+Wrap text with a `.text-wrap` class.
 
 {{< example >}}
 <div class="badge text-bg-primary text-wrap" style="width: 6rem;">
@@ -46,20 +44,21 @@ Prevent text from wrapping with a `.text-nowrap` class.
 </div>
 {{< /example >}}
 
-## 단어 기준 줄바꿈
+## Word break
 
-`.text-break`를 사용하여 `word-wrap: break-word` 및 `word-break: break-word`를 설정하여 긴 텍스트 문자열이 컴포넌트의 레이아웃을 깨뜨리는 것을 막을 수 있습니다. 더 광범위한 브라우저 지원을 위해 보다 일반적인 `overflow-wrap` 대신 `word-wrap`을 사용하고 flex 컨테이너 문제를 피하기 위해 더 이상 사용되지 않는 `word-break: break-word`를 추가합니다.
+Prevent long strings of text from breaking your components' layout by using `.text-break` to set `word-wrap: break-word` and `word-break: break-word`. We use `word-wrap` instead of the more common `overflow-wrap` for wider browser support, and add the deprecated `word-break: break-word` to avoid issues with flex containers.
 
 {{< example >}}
 <p class="text-break">mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm</p>
 {{< /example >}}
 
 {{< callout warning >}}
-가장 많이 사용되는 RTL 언어인 [아랍어에서는 단어 기준 줄바꿈이 불가능하다는 점](https://rtlstyling.com/posts/rtl-styling#3.-line-break)을 유의해주세요. 따라서 RTL 컴파일 CSS에서는 `.text-break`가 제거되었습니다.
+Note that [breaking words isn't possible in Arabic](https://rtlstyling.com/posts/rtl-styling#3.-line-break), which is the most used RTL language. Therefore `.text-break` is removed from our RTL compiled CSS.
 {{< /callout >}}
 
-## 텍스트 대소문자
-텍스트 대소문자 클래스를 사용하여 컴포넌트의 텍스트를 변환하세요.
+## Text transform
+
+Transform text in components with text capitalization classes.
 
 {{< example >}}
 <p class="text-lowercase">Lowercased text.</p>
@@ -67,11 +66,11 @@ Prevent text from wrapping with a `.text-nowrap` class.
 <p class="text-capitalize">CapiTaliZed text.</p>
 {{< /example >}}
 
-`.text-capitalize`가 각 단어의 첫 글자만 변경하고 다른 글자의 대소문자는 영향을 받지 않는다는 점에 유의하세요.
+Note how `.text-capitalize` only changes the first letter of each word, leaving the case of any other letters unaffected.
 
-## 글꼴 크기
+## Font size
 
-텍스트의 '글꼴 크기'를 빠르게 변경하세요. 우리의 제목 클래스 (예: `.h1`–`.h6`)는 `font-size`, `font-weight`, `line-height`를 적용하지만 이러한 유틸리티는 `font-size`만 적용합니다. 이러한 유틸리티의 크기는 HTML의 제목 요소와 일치하므로 숫자가 증가하면 크기가 줄어듭니다.
+Quickly change the `font-size` of text. While our heading classes (e.g., `.h1`–`.h6`) apply `font-size`, `font-weight`, and `line-height`, these utilities _only_ apply `font-size`. Sizing for these utilities matches HTML's heading elements, so as the number increases, their size decreases.
 
 {{< example >}}
 <p class="fs-1">.fs-1 text</p>
@@ -82,11 +81,11 @@ Prevent text from wrapping with a `.text-nowrap` class.
 <p class="fs-6">.fs-6 text</p>
 {{< /example >}}
 
-`$font-sizes` Sass 맵을 수정하여 사용 가능한 `font-size`를 사용자 정의하세요.
+Customize your available `font-size`s by modifying the `$font-sizes` Sass map.
 
-## 글꼴 굵기와 기울임체
+## Font weight and italics
 
-이 유틸리티를 사용하여 텍스트의 `font-weight`나 `font-style`를 빠르게 변경하세요. `font-style` 유틸리티는 `.fst-*`로 축약되고 `font-weight` 유틸리티는 `.fw-*`로 축약됩니다.
+Quickly change the `font-weight` or `font-style` of text with these utilities. `font-style` utilities are abbreviated as `.fst-*` and `font-weight` utilities are abbreviated as `.fw-*`.
 
 {{< example >}}
 <p class="fw-bold">Bold text.</p>
@@ -100,9 +99,9 @@ Prevent text from wrapping with a `.text-nowrap` class.
 <p class="fst-normal">Text with normal font style</p>
 {{< /example >}}
 
-## 행간
+## Line height
 
-`.lh-*` 유틸리티를 사용하여 행간을 변경하세요.
+Change the line height with `.lh-*` utilities.
 
 {{< example >}}
 <p class="lh-1">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
@@ -111,17 +110,17 @@ Prevent text from wrapping with a `.text-nowrap` class.
 <p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
 {{< /example >}}
 
-## 고정폭
+## Monospace
 
-`.font-monospace`를 사용하여 선택 영역을 고정폭 글꼴 스택으로 변경하세요.
+Change a selection to our monospace font stack with `.font-monospace`.
 
 {{< example >}}
 <p class="font-monospace">This is in monospace</p>
 {{< /example >}}
 
-## 색상 재설정
+## Reset color
 
-부모 항목의 색상을 상속하도록 `.text-reset`로 텍스트나 링크의 색상을 초기화하세요.
+Reset a text or link's color with `.text-reset`, so that it inherits the color from its parent.
 
 {{< example >}}
 <p class="text-body-secondary">
@@ -129,9 +128,9 @@ Prevent text from wrapping with a `.text-nowrap` class.
 </p>
 {{< /example >}}
 
-## 텍스트 꾸미기
+## Text decoration
 
-텍스트 꾸미기 클래스를 사용하여 컴포넌트의 텍스트를 장식하세요.
+Decorate text in components with text decoration classes.
 
 {{< example >}}
 <p class="text-decoration-underline">This text has a line underneath it.</p>
@@ -141,22 +140,22 @@ Prevent text from wrapping with a `.text-nowrap` class.
 
 ## CSS
 
-### Sass 변수
+### Sass variables
 
-Sass 변수와 관련된 기본 유형 및 글꼴입니다:
+Default type and font related Sass variables:
 
 {{< scss-docs name="font-variables" file="scss/_variables.scss" >}}
 
-### Sass 맵
+### Sass maps
 
-글꼴 크기 유틸리티는 유틸리티 API와 함께 이 맵에서 생성됩니다.
+Font-size utilities are generated from this map, in combination with our utilities API.
 
 {{< scss-docs name="font-sizes" file="scss/_variables.scss" >}}
 
 {{< scss-docs name="theme-text-map" file="scss/_maps.scss" >}}
 
-### 유틸리티 API
+### Sass utilities API
 
-글꼴 및 텍스트 유틸리티는 유틸리티 API의 `scss/_utilities.scss`에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+Font and text utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-text" file="scss/_utilities.scss" >}}

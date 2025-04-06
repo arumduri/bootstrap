@@ -1,37 +1,37 @@
 ---
 layout: docs
 title: RTL
-description: 레이아웃, 컴포넌트 및 유틸리티에서 Bootstrap의 오른쪽에서 왼쪽으로 읽는 텍스트의 지원을 활성화하는 방법을 알아보세요.
+description: Learn how to enable support for right-to-left text in Bootstrap across our layout, components, and utilities.
 group: getting-started
 toc: true
 ---
 
-## 익숙해지기
+## Get familiar
 
-먼저 [시작하기 페이지]({{< docsref "/getting-started/introduction" >}})를 읽고 Bootstrap에 익숙해지는 것이 좋습니다. 어느정도 읽어보았다면 RTL을 활성화하는 방법에 대해 계속 읽어보세요.
+We recommend getting familiar with Bootstrap first by reading through our [Getting Started Introduction page]({{< docsref "/getting-started/introduction" >}}). Once you've run through it, continue reading here for how to enable RTL.
 
-또한 RTL에 대한 우리의 접근 방식을 주도하는 [RTLCSS 프로젝트](https://rtlcss.com/)에 대해서도 읽어보시길 바랍니다.
+You may also want to read up on [the RTLCSS project](https://rtlcss.com/), as it powers our approach to RTL.
 
 {{< callout warning >}}
-**Bootstrap의 RTL 기능은 아직 실험 단계이며** 사용자 피드백을 바탕으로 발전해 나갈 예정입니다. 무언가를 발견했거나 개선할 점이 있나요? [이슈를 열어서]({{< param repo >}}/issues/new/choose) 여러분들의 의견을 듣고 싶습니다.
+**Bootstrap's RTL feature is still experimental** and will evolve based on user feedback. Spotted something or have an improvement to suggest? [Open an issue]({{< param repo >}}/issues/new/choose), we'd love to get your insights.
 {{< /callout >}}
 
-## HTML 요구 사항
+## Required HTML
 
-현재 Bootstrap 기반 페이지에서 RTL을 활성화하기 위한 두 가지 엄격한 요구 사항이 있습니다.
+There are two strict requirements for enabling RTL in Bootstrap-powered pages.
 
-1. `<html>` 요소에 `dir="rtl"`을 설정하세요.
-2. `<html>` 요소에 `lang="ar"`와 같은 적절한 `lang` 속성을 추가해주세요.
+1. Set `dir="rtl"` on the `<html>` element.
+2. Add an appropriate `lang` attribute, like `lang="ar"`, on the `<html>` element.
 
-여기서 CSS의 RTL 버전을 포함해야 합니다. 예를 들어, 다음은 RTL이 활성화된 컴파일 및 경량화된 CSS의 스타일시트입니다:
+From there, you'll need to include an RTL version of our CSS. For example, here's the stylesheet for our compiled and minified CSS with RTL enabled:
 
 ```html
 <link rel="stylesheet" href="{{< param "cdn.css_rtl" >}}" integrity="{{< param "cdn.css_rtl_hash" >}}" crossorigin="anonymous">
 ```
 
-### 스타터 템플릿
+### Starter template
 
-수정된 RTL 스타터 템플릿에 상기된 요구사항이 반영되어 있음을 알 수 있습니다.
+You can see the above requirements reflected in this modified RTL starter template.
 
 ```html
 <!doctype html>
@@ -63,34 +63,35 @@ toc: true
 </html>
 ```
 
-### RTL 예시
+### RTL examples
 
-여러 [RTL 예시]({{< docsref "/examples/#rtl" >}}) 중 하나로 시작하세요.
+Get started with one of our several [RTL examples]({{< docsref "/examples/#rtl" >}}).
 
-## 접근
+## Approach
 
-RTL 지원을 Bootstrap에 빌드하는 방법에는 CSS를 작성하고 사용하는 방법에 영향을 주는 두 가지 중요한 결정사항이 있습니다:
+Our approach to building RTL support into Bootstrap comes with two important decisions that impact how we write and use our CSS:
 
-1. **먼저 우리는 [RTLCSS](https://rtlcss.com/) 프로젝트로 빌드하기로 결정했습니다.** 이를 통해 LTR에서 RTL로 이동할 때 변경 및 재정의를 관리하기 위한 몇 가지 강력한 기능이 제공됩니다. 또한 하나의 코드베이스에서 두 가지 버전의 Bootstrap을 빌드할 수 있습니다.
+1. **First, we decided to build it with the [RTLCSS](https://rtlcss.com/) project.** This gives us some powerful features for managing changes and overrides when moving from LTR to RTL. It also allows us to build two versions of Bootstrap from one codebase.
 
-2. **두번째로 논리적 속성 접근 방식을 채택하기 위해 몇 가지 방향성 클래스의 이름을 변경했습니다.** 대부분의 사용자는 flex 유틸리티 덕분에 이미 논리적 속성과 상호작용을 했습니다. 이것들은 `left`, `right`와 같은 방향 속성을 `start`와 `end`로 대체합니다. 이를 통해 오버헤드 없이 LTR 및 RTL에 적합한 클래스 이름과 값을 만듭니다.
+2. **Second, we've renamed a handful of directional classes to adopt a logical properties approach.** Most of you have already interacted with logical properties thanks to our flex utilities—they replace direction properties like `left` and `right` in favor `start` and `end`. That makes the class names and values appropriate for LTR and RTL without any overhead.
 
-  예를 들어 `margin-left`에서 `.ml-3` 대신에 `.ms-3`을 사용할 수 있습니다.
+  For example, instead of `.ml-3` for `margin-left`, use `.ms-3`.
 
-Sass 소스 또는 컴파일된 CSS를 통한 RTL 작업은 기본 LTR과 크게 다르지 않습니다.
+Working with RTL, through our source Sass or compiled CSS, shouldn't be much different from our default LTR though.
 
-## 사용자 지정 소스
-[사용자 지정]({{< docsref "/customize/sass" >}})과 관련하여 선호되는 방법은 변수, 맵 및 믹스인을 활용하는 것입니다. 이 접근 방식은 [RTLCSS가 작동하는 방식](https://rtlcss.com/learn/getting-started/why-rtlcss/) 덕분에 컴파일된 파일에서 사후 처리 되더라도 RTL에 대해 동일하게 작동합니다.
+## Customize from source
 
-### 사용자 지정 RTL 값
+When it comes to [customization]({{< docsref "/customize/sass" >}}), the preferred way is to take advantage of variables, maps, and mixins. This approach works the same for RTL, even if it's post-processed from the compiled files, thanks to [how RTLCSS works](https://rtlcss.com/learn/getting-started/why-rtlcss/).
 
-RTLCSS 값 지시문을 사용하여 변수 출력을 RTL에 대해 다른 값으로 만들 수 있습니다. 예를 들어, 코드베이스 전체에서 `$font-weight-bold`의 가중치를 줄이려면 `/*rtl: {value}*/` 구문을 사용할 수 있습니다:
+### Custom RTL values
+
+Using [RTLCSS value directives](https://rtlcss.com/learn/usage-guide/value-directives/), you can make a variable output a different value for RTL. For example, to decrease the weight for `$font-weight-bold` throughout the codebase, you may use the `/*rtl: {value}*/` syntax:
 
 ```scss
 $font-weight-bold: 700 #{/* rtl:600 */} !default;
 ```
 
-이렇게 하면 기본 CSS 및 RTL CSS에 대해 다음과 같이 출력됩니다:
+Which would output to the following for our default CSS and RTL CSS:
 
 ```css
 /* bootstrap.css */
@@ -104,11 +105,11 @@ dt {
 }
 ```
 
-### 대체 글꼴 스택
+### Alternative font stack
 
-맞춤 글꼴을 사용하는 경우 모든 글꼴이 라틴어가 아닌 알파벳을 지원하는 것은 아닙니다. 범유럽 계열에서 아랍어 계열로 전환하려면 글꼴 스택에서 `/*rtl:insert: {value}*/`를 사용하여 글꼴 계열의 이름을 수정해야 할 수 있습니다.
+In the case you're using a custom font, be aware that not all fonts support the non-Latin alphabet. To switch from Pan-European to Arabic family, you may need to use `/*rtl:insert: {value}*/` in your font stack to modify the names of font families.
 
-예를 들어 LTR용 `Helvetica Neue` 폰트에서 RTL용 `Helvetica Neue Arabic`으로 전환하는 경우 Sass 코드는 다음과 같을 수 있습니다:
+For example, to switch from `Helvetica Neue` font for LTR to `Helvetica Neue Arabic` for RTL, your Sass code could look like this:
 
 ```scss
 $font-family-sans-serif:
@@ -133,9 +134,9 @@ $font-family-sans-serif:
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 ```
 
-### LTR과 RTL을 동시에 사용하기
+### LTR and RTL at the same time
 
-동일한 페이지에 LTR과 RTL이 모두 필요하신가요? [RTLCSS String Maps](https://rtlcss.com/learn/usage-guide/string-map/) 덕분에 이것은 매우 간단합니다. `@import`를 클래스로 줄바꿈하고 RTLCSS에 대한 커스텀 이름 바꾸기 규칙을 다음과 같이 설정하면 됩니다:
+Need both LTR and RTL on the same page? Thanks to [RTLCSS String Maps](https://rtlcss.com/learn/usage-guide/string-map/), this is pretty straightforward. Wrap your `@import`s with a class, and set a custom rename rule for RTLCSS:
 
 ```scss
 /* rtl:begin:options: {
@@ -157,21 +158,21 @@ $font-family-sans-serif:
 /*rtl:end:options*/
 ```
 
-Sass를 실행한 다음 RTLCSS를 실행하면 CSS 파일의 각 선택자에 `.ltr`이 추가되고 RTL 파일의 경우 `.rtl`이 추가됩니다. 이제 동일한 페이지에서 두 파일을 모두 사용할 수 있으며 컴포넌트 래퍼에서 .ltr 또는 .rtl을 사용하여 둘 중 하나의 방향을 사용할 수 있습니다.
+After running Sass then RTLCSS, each selector in your CSS files will be prepended by `.ltr`, and `.rtl` for RTL files. Now you're able to use both files on the same page, and simply use `.ltr` or `.rtl` on your components wrappers to use one or the other direction.
 
 {{< callout warning >}}
-LTR과 RTL을 결합한 구현으로 작업할 때 고려해야 할 **경계 조건과 알려진 한계**입니다.
+**Edge cases and known limitations** to consider when working with a combined LTR and RTL implementation:
 
-1. `.ltr`과 `.rtl` 간에서 전환할 때 그에 따른 `dir` 및 `lang` 속성을 추가해야 합니다.
-2. 두 파일을 모두 불러오면 실제 성능에 병목 현상이 발생할 수 있습니다. [최적화]({{< docsref "/customize/optimize" >}})를 고려하고 둘 중 하나의 파일만 [비동기적으로 로드](https://www.filamentgroup.com/lab/load-css-simpler/)해보세요.
-3. 이런 식으로 스타일을 중첩하면 `form-validation-state()` 믹스인이 의도한 대로 작동하지 않음으로 어느정도 직접 조정이 필요합니다. [#31223을 참고](https://github.com/twbs/bootstrap/issues/31223)해주세요.
+1. When switching `.ltr` and `.rtl`, make sure you add `dir` and `lang` attributes accordingly.
+2. Loading both files can be a real performance bottleneck: consider some [optimization]({{< docsref "/customize/optimize" >}}), and maybe try to [load one of those files asynchronously](https://www.filamentgroup.com/lab/load-css-simpler/).
+3. Nesting styles this way will prevent our `form-validation-state()` mixin from working as intended, thus require you tweak it a bit by yourself. [See #31223](https://github.com/twbs/bootstrap/issues/31223).
 {{< /callout >}}
 
-## 브레드크럼
+## The breadcrumb case
 
-브레드크럼 구분자는 `$breadcrumb-divider-flipped`라는 고유한 새로운 변수가 필요한 유일한 경우이며 기본값은 `$breadcrumb-divider`입니다.
+The [breadcrumb separator]({{< docsref "/components/breadcrumb" >}}/#changing-the-separator) is the only case requiring its own brand-new variable— namely `$breadcrumb-divider-flipped` —defaulting to `$breadcrumb-divider`.
 
-## 추가 자료
+## Additional resources
 
 - [RTLCSS](https://rtlcss.com/)
-- [RTL 스타일링 기초 과정](https://rtlstyling.com/posts/rtl-styling)
+- [RTL Styling 101](https://rtlstyling.com/posts/rtl-styling)

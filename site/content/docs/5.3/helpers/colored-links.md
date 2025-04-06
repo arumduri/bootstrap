@@ -1,18 +1,17 @@
 ---
 layout: docs
-title: 컬러 링크
-title_en: Colored links
-description: 호버상태가 있는 컬러 링크
+title: Colored links
+description: Colored links with hover states
 group: helpers
-toc: false
+toc: true
 ---
 
-## 링크 색상
+## Link colors
 
-`.link-*` 클래스를 사용하여 링크를 색상을 입힐 수 있습니다. [`.text-*` 클래스]({{< docsref "/utilities/colors" >}})와는 다르게, 이 클래스들에는 `:hover`와 `:focus` 상태가 있습니다. 일부 링크 스타일은 비교적 밝은 전경색을 사용하므로 충분한 대비를 위해 어두운 배경에만 사용해야 합니다.
+You can use the `.link-*` classes to colorize links. Unlike the [`.text-*` classes]({{< docsref "/utilities/colors" >}}), these classes have a `:hover` and `:focus` state. Some of the link styles use a relatively light foreground color, and should only be used on a dark background in order to have sufficient contrast.
 
 {{< callout info >}}
-**주의!** `.link-body-emphasis`는 현재 색상 모드에 맞게 조정되는 유일한 색상 링크입니다. v6가 출시되어 컬러 모드에 맞게 테마 색상을 보다 철저하게 재구성할 수 있을 때까지는 특수한 경우로 취급됩니다. 그때까지는 사용자 정의 `:hover` 및 `:focus` 스타일이 적용된 고유한 고대비 링크 색상이 적용됩니다. 하지만 새로운 링크 유틸리티에는 여전히 반응합니다.
+**Heads up!** `.link-body-emphasis` is currently the only colored link that adapts to color modes. It's treated as a special case until v6 arrives and we can more thoroughly rebuild our theme colors for color modes. Until then, it's a unique, high-contrast link color with custom `:hover` and `:focus` styles. However, it still responds to the new link utilities.
 {{< /callout >}}
 
 {{< example >}}
@@ -28,11 +27,11 @@ toc: false
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## 링크 유틸리티
+## Link utilities
 
 {{< added-in "5.3.0" >}}
 
-링크 색상은 [링크 유틸리티]({{< docsref "/utilities/link/" >}})로도 수정할 수 있습니다.
+Colored links can also be modified by our [link utilities]({{< docsref "/utilities/link/" >}}).
 
 {{< example >}}
 {{< colored-links.inline >}}

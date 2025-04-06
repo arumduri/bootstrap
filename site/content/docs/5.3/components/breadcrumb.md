@@ -1,15 +1,14 @@
 ---
 layout: docs
-title: 브레드크럼
-title_en: Breadcrumb
-description: CSS로 구분자를 자동으로 추가해 내비게이션 계층 내에서 현재 페이지의 위치를 표시합니다.
+title: Breadcrumb
+description: Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.
 group: components
 toc: true
 ---
 
-## 예시
+## Example
 
-순서를 가진 목록 또는 순서를 가지지 않은 목록을 사용해, 최소 스타일의 브레드크럼을 작성합니다. 유틸리티를 사용해 원하는 스타일을 추가할 수 있습니다.
+Use an ordered or unordered list with linked list items to create a minimally styled breadcrumb. Use our utilities to add additional styles as desired.
 
 {{< example >}}
 <nav aria-label="breadcrumb">
@@ -34,9 +33,9 @@ toc: true
 </nav>
 {{< /example >}}
 
-## 구분자
+## Dividers
 
-구분자는 CSS의 [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before)과 [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content)를 통해 자동으로 추가됩니다. 이들은 로컬 CSS 사용자 지정 속성 `--bs-breadcrumb-divider`를 변경하거나, `$breadcrumb-divider` Sass 변수와 `$breadcrumb-divider-flipped`를 사용해 RTL에 대응하는 것으로 변경할 수 있습니다. 사용자 지정 속성의 fallback 으로 설정되어 있는 Sass 변수를 기본으로 사용하고 있습니다. 이렇게 하여, 언제든지 CSS를 다시 컴파일하지 않고 재정의할 수 있는 글로벌한 구분자를 얻을 수 있습니다.
+Dividers are automatically added in CSS through [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) and [`content`](https://developer.mozilla.org/en-US/docs/Web/CSS/content). They can be changed by modifying a local CSS custom property `--bs-breadcrumb-divider`, or through the `$breadcrumb-divider` Sass variable — and `$breadcrumb-divider-flipped` for its RTL counterpart, if needed. We default to our Sass variable, which is set as a fallback to the custom property. This way, you get a global divider that you can override without recompiling CSS at any time.
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -47,16 +46,16 @@ toc: true
 </nav>
 {{< /example >}}
 
-Sass 를 통해 수정할 때, 문자열의 주변에 따옴표를 만들기 위해 [quote](https://sass-lang.com/documentation/modules/string#quote) 함수가 필요합니다. 예를 들어, `>`을 구분자로 사용하려면 이렇게 사용합니다.
+When modifying via Sass, the [quote](https://sass-lang.com/documentation/modules/string#quote) function is required to generate the quotes around a string. For example, using `>` as the divider, you can use this:
 
 ```scss
 $breadcrumb-divider: quote(">");
 ```
 
-또한 **내장된 SVG 아이콘**을 사용할 수도 있습니다. CSS 사용자 지정 속성을 통해 적용하거나 Sass 변수를 사용하세요.
+It's also possible to use an **embedded SVG icon**. Apply it via our CSS custom property, or use the Sass variable.
 
 {{< callout info >}}
-**인라인 SVG에는 올바르게 이스케이프된 문자가 필요합니다.** `<`, `>` 및 `#`와 같은 일부 예약 문자는 URL 인코딩 또는 이스케이프되어야 합니다. 이 작업은 [`escape-svg()` Sass 함수]({{< docsref "/customize/sass#escape-svg" >}})를 사용하여 `$breadcrumb-divider` 변수를 통해 수행합니다. CSS 변수를 사용자 정의할 때는 직접 처리해야 합니다. 자세한 내용은 [CodePen에서의 Kevin Weber의 설명](https://codepen.io/kevinweber/pen/dXWoRw)을 참조하세요.
+**Inlined SVG requires properly escaped characters.** Some reserved characters, such as `<`, `>` and `#`, must be URL-encoded or escaped. We do this with the `$breadcrumb-divider` variable using our [`escape-svg()` Sass function]({{< docsref "/customize/sass#escape-svg" >}}). When customizing the CSS variable, you must handle this yourself. Read [Kevin Weber's explanations on CodePen](https://codepen.io/kevinweber/pen/dXWoRw ) for more info.
 {{< /callout >}}
 
 {{< example >}}
@@ -72,7 +71,7 @@ $breadcrumb-divider: quote(">");
 $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><path d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='#{$breadcrumb-divider-color}'/></svg>");
 ```
 
-또한 divider 설정인 `--bs-breadcrumb-divider: '';`을 빈 값으로 넣거나 (CSS 사용자 지정 속성의 빈 문자열은 값으로 카운터 됨), Sass 변수를 `$breadcrumb-divider: none;`으로 설정할 수도 있습니다.
+You can also remove the divider setting `--bs-breadcrumb-divider: '';` (empty strings in CSS custom properties counts as a value), or setting the Sass variable to `$breadcrumb-divider: none;`.
 
 {{< example >}}
 <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
@@ -88,22 +87,22 @@ $breadcrumb-divider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
 $breadcrumb-divider: none;
 ```
 
-## 접근성
+## Accessibility
 
-브레드크럼은 내비게이션을 제공하기 때문에, 요소에서 제공되는 내비게이션 타입을 나타내기 위해 `<nav>` 요소에 `aria-label="breadcrumb"`과 같은 의미가 있는 라벨을 추가하고, 세트의 마지막 아이템에는 현재 페이지를 나타내는 `aria-current="page"`를 추가하는 것이 좋습니다.
+Since breadcrumbs provide a navigation, it's a good idea to add a meaningful label such as `aria-label="breadcrumb"` to describe the type of navigation provided in the `<nav>` element, as well as applying an `aria-current="page"` to the last item of the set to indicate that it represents the current page.
 
-자세한 내용은 [ARIA Authoring Practices Guide breadcrumb pattern](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/)을 확인해주세요.
+For more information, see the [ARIA Authoring Practices Guide breadcrumb pattern](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/).
 
 ## CSS
 
-### 변수
+### Variables
 
 {{< added-in "5.2.0" >}}
 
-Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 브레드크럼에서 `.breadcrumb`의 로컬 CSS 변수를 사용하여 실시간 사용자 정의 기능을 강화합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
+As part of Bootstrap's evolving CSS variables approach, breadcrumbs now use local CSS variables on `.breadcrumb` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="breadcrumb-css-vars" file="scss/_breadcrumb.scss" >}}
 
-### Sass 변수
+### Sass variables
 
 {{< scss-docs name="breadcrumb-variables" file="scss/_variables.scss" >}}
