@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: 팀
-description: Bootstrap 초기 팀과 핵심 기여자들에 대한 요약입니다.
+title: Team
+description: An overview of the founding team and core contributors to Bootstrap.
 group: about
 ---
 
-Bootstrap은 초기 팀과 귀중한 핵심 기여자들에 의해 관리되며 우리 커뮤니티로부터 막대한 지원과 참여를 받고 있습니다.
+Bootstrap is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.
 
 {{< team.inline >}}
 <div class="list-group mb-3">
@@ -20,4 +20,4 @@ Bootstrap은 초기 팀과 귀중한 핵심 기여자들에 의해 관리되며 
 </div>
 {{< /team.inline >}}
 
-Bootstrap 개발에 참여하려면 [이슈를 열거나]({{< param repo >}}/issues/new/choose) 풀 리퀘스트를 제출해주세요. 우리가 어떻게 개발하는지에 대한 정보를 알고 싶으시다면 [기여 가이드라인]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md)을 읽어보세요.
+Get involved with Bootstrap development by [opening an issue]({{< param repo >}}/issues/new/choose) or submitting a pull request. Read our [contributing guidelines]({{< param repo >}}/blob/v{{< param current_version >}}/.github/CONTRIBUTING.md) for information on how we develop.
