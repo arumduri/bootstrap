@@ -52,7 +52,7 @@ toc: true
 
 ## 반응형 하단 고정
 
- `.sticky-bottom` 유틸리티의 반응형 변형도 있습니다.
+`.sticky-bottom` 유틸리티의 반응형 변형도 있습니다.
 
 ```html
 <div class="sticky-sm-bottom">Stick to the bottom on viewports sized SM (small) or wider</div>
