@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 테이블
-title_en: Tables
+title: Tables
 description: Bootstrap을 사용한 테이블의 opt-in 스타일에 대한 문서 및 예시 (JavaScript 플러그인에서 널리 사용됨)입니다.
 group: content
 toc: true
@@ -60,17 +59,22 @@ toc: true
 
 <!-- On rows -->{{< table.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-<tr class="table-{{ .name }}">...</tr>
+<tr class="table-{{ .name }}">
+  ...
+</tr>
 {{- end -}}
 {{< /table.inline >}}
 
 <!-- On cells (`td` or `th`) -->
-<tr>{{< table.inline >}}
+{{< table.inline >}}
 {{- range (index $.Site.Data "theme-colors") }}
-  <td class="table-{{ .name }}">...</td>
+  
+
+<td class="table-{{ .name }}">
+  ...
+</td>
 {{- end -}}
-{{< /table.inline >}}
-</tr>
+{{< /table.inline >}} 
 {{< /highlight >}}
 
 {{< callout info >}}
@@ -233,7 +237,7 @@ toc: true
 - 각 테이블 변형에 대해 해당 색상에 따라 가장 높은 대비를 가진 `--bs-table-accent-bg` 색상을 생성합니다. 예를 들어 `.table-primary`의 강조 색상은 더 어둡고 `.table-dark`는 더 밝은 강조 색상입니다.
 - 텍스트 및 테두리 색상은 동일한 방식으로 생성되며 기본적으로 색상이 상속됩니다.
 
-내용을 보면 다음과 같습니다:
+Behind the scenes it looks like this:
 
 {{< scss-docs name="table-variant" file="scss/mixins/_table-variants.scss" >}}
 
@@ -366,7 +370,7 @@ toc: true
 </div>
 ```
 
-## 중첩
+## Nesting
 
 테두리 스타일, 활성화 스타일 및 테이블 변형은 중첩된 테이블에 상속되지 않습니다.
 
@@ -446,13 +450,13 @@ toc: true
 </table>
 ```
 
-## 중첩 작동 원리
+## How nesting works
 
 중첩된 테이블로 스타일이 유출되는 것을 방지하기 위해 CSS에서 자식 결합기(`>`) 선택기를 사용합니다. `thead`, `tbody`, `tfoot`의 모든 `td`와 `th`를 대상으로 해야 하므로 선택기가 없으면 선택기가 꽤 길어 보일 것입니다. 따라서 다소 이상하게 보이는 `.table > :not(caption) > * > *` 선택기를 사용하여 `.table`의 모든 `td`와 `th`를 대상으로 하고 있습니다. 하지만, 잠재적인 중첩된 테이블은 대상으로 하지 않습니다.
 
 테이블의 직계 자식으로 `<tr>`을 추가하면 해당 `<tr>`은 기본적으로 `<tbody>`에 줄바꿈되므로 선택자가 의도한 대로 작동합니다.
 
-## 구조
+## Anatomy
 
 ### 테이블 머리글
 
@@ -603,7 +607,7 @@ toc: true
 </table>
 ```
 
-### 캡션
+### Captions
 
 `<caption>`은 테이블 이름과 같은 기능을 합니다. 스크린 리더를 사용하는 사용자가 테이블을 찾고 그 내용을 이해하고 읽을 것인지 결정할 수 있도록 도와줍니다.
 
@@ -663,6 +667,7 @@ toc: true
 {{< /example >}}
 
 ## 반응형 테이블
+
 반응형 테이블을 사용하면 테이블을 쉽게 가로로 스크롤할 수 있습니다. `.table`을 `.table-responsive`로 줄바꿈하여 모든 뷰포트에서 테이블이 반응하도록 만듭니다. 또는 `.table-responsive{-sm|-md|-lg|-xl|-xxl}`을 사용하여 반응형 테이블을 가질 최대 중단점을 선택합니다.
 
 {{< callout warning >}}
@@ -834,5 +839,6 @@ toc: true
 {{< scss-docs name="table-loop" file="scss/_variables.scss" >}}
 
 ### 사용자 지정
+
 - 요인 변수 (`$table-striped-bg-factor`, `$table-active-bg-factor` & `$table-hover-bg-factor`)는 테이블 변형의 대비를 결정하는 데에 사용됩니다.
 - 밝고 어두운 테이블 변형 외에도 테마 색상은 `$table-bg-scale` 변수에 의해 밝아집니다.
