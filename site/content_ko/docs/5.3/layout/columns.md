@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 열
-title_en: Columns
+title: Columns
 description: flexbox 그리드 시스템을 통해 정렬, 순서 지정 및 오프셋을 위한 소수의 옵션으로 열을 수정하는 방법을 알아보세요. 또한 column 클래스를 사용하여 그리드가 아닌 요소의 너비를 관리하는 방법을 알아보세요.
 group: layout
 toc: true
@@ -11,7 +10,7 @@ toc: true
 **주의!** 그리드 열을 수정하고 사용자 지정하는 방법에 대해 자세히 알아보기 전에 먼저 [그리드 페이지를 읽어보세요]({{< docsref "/layout/grid" >}}).
 {{< /callout >}}
 
-## 작동 원리
+## How they work
 
 - **열은 그리드의 flexbox 아키텍처를 기반으로 합니다.** flexbox는 개별 열을 변경하고 [행 수준에서 열 그룹을 수정하는 옵션]({{< docsref "/layout/grid#row-columns" >}})이 있음을 의미합니다. 열이 커지거나 줄어들거나 변경되는 방식을 선택할 수 있습니다.
 
@@ -164,7 +163,7 @@ flexbox 정렬 유틸리티를 사용하여 가로나 세로로 열을 정렬합
 </div>
 {{< /example >}}
 
-### 열 분할
+### Column breaks
 
 flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있습합니다. 열을 새 줄로 묶고 싶은 곳에 `width: 100%` 요소를 추가하세요. 일반적으로 이건 여러 `.row`로 수행되지만 모든 구현 방법이 이를 지원하지는 않습니다.
 
@@ -240,7 +239,7 @@ flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있
 </div>
 {{< /example >}}
 
-### 열 오프셋
+### Offsetting columns
 
 반응형 `.offset-` 그리드 클래스와 [여백 유틸리티]({{< docsref "/utilities/spacing" >}})의 두 가지 방법으로 그리드 열을 오프셋할 수 있습니다. 그리드 클래스는 열과 일치하도록 크기가 조정되는 반면 여백은 오프셋 너비가 가변적인 빠른 레이아웃에 더 유용합니다.
 
@@ -279,7 +278,7 @@ flexbox에서 열을 줄바꿈하려면 약간 다르게 생각할 필요가 있
 </div>
 {{< /example >}}
 
-#### 여백 유틸리티
+#### Margin utilities
 
 v4에서 flexbox으로 이동하면서 `.me-auto`와 같은 여백 유틸리티를 사용하여 맞닿아 있는 열을 강제로 서로 멀리 떨어뜨릴 수 있습니다.
 
