@@ -34,10 +34,10 @@ Bootstrap은 그냥 **Bootstrap**으로만 언급되어야 합니다. _s_ 를 �
 <div class="bd-brand-logos d-sm-flex text-center border rounded-3 overflow-hidden w-100 mb-3">
   <div class="bd-brand-item w-100 px-2 py-5">
     <div class="h3">Bootstrap</div>
-    <strong class="text-success">허용</strong>
+    <strong class="text-success">Correct</strong>
   </div>
   <div class="bd-brand-item w-100 px-2 py-5">
     <div class="h3 text-body-secondary">BootStrap</div>
-    <strong class="text-danger">허용되지 않음</strong>
+    <strong class="text-danger">Incorrect</strong>
   </div>
 </div>
