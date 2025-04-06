@@ -1,13 +1,13 @@
 ---
 layout: docs
-title: 카드
-title_en: Cards
+title: Cards
 description: 여러 가지 종류와 옵션을 가진 유연하고 확장 가능한 콘텐츠를 제공합니다.
 group: components
 toc: true
 ---
 
 ## 소개
+
 **카드**는 유연하고 확장이 가능한 컨테이너입니다. 헤더/푸터 옵션, 다양한 콘텐츠, 문맥에 따른 배경색, 강력한 표시 옵션이 포함되어 있습니다. Bootstrap 3의 panels, wells, thumbnails는 카드로 변경되었습니다. 이러한 컴포넌트의 기능은 카드의 클래스로 이용할 수 있습니다.
 
 ## 예시
@@ -29,7 +29,7 @@ toc: true
 
 ## 콘텐츠 유형
 
-이미지나 텍스트, 목록, 링크 등의 카드는 아래와 같은 다양한 콘텐츠를 지원하고 있습니다.
+이미지나 텍스트, 목록, 링크 등의 카드는 아래와 같은 다양한 콘텐츠를 지원하고 있습니다. Below are examples of what's supported.
 
 ### Body
 
@@ -45,9 +45,9 @@ toc: true
 
 ### 제목, 텍스트, 링크
 
-카드 타이틀은 `<h*>` 태그에 `.card-title`을 적용합니다. `<a>` 태그에 `.card-link`를 적용하면 링크가 추가됩니다. 서브 타이틀은, `<h*>` 태그에 `.card-subtitle`을 적용합니다.
+카드 타이틀은 `<h*>` 태그에 `.card-title`을 적용합니다. `<a>` 태그에 `.card-link`를 적용하면 링크가 추가됩니다.
 
-`.card-title`과 `.card-subtitle`을 `.card-body` 안에 배치하면 카드 제목과 서브 타이틀이 깔끔하게 적용됩니다.
+서브 타이틀은, `<h*>` 태그에 `.card-subtitle`을 적용합니다. `.card-title`과 `.card-subtitle`을 `.card-body` 안에 배치하면 카드 제목과 서브 타이틀이 깔끔하게 적용됩니다.
 
 {{< example >}}
 <div class="card" style="width: 18rem;">
@@ -294,7 +294,7 @@ Grid를 사용해, 필요에 따라 카드를 행과 열 안에 넣어서 사용
 </div>
 {{< /example >}}
 
-## 내비게이션
+## Navigation
 
 [Nav components]({{< docsref "/components/navs-tabs" >}})을 사용해 카드의 헤더 (혹은 block)에 내비게이션을 적용할 수 있습니다.
 
@@ -348,7 +348,7 @@ Grid를 사용해, 필요에 따라 카드를 행과 열 안에 넣어서 사용
 
 카드에는, 이미지를 다루기 위한 몇 가지의 옵션이 있습니다. 카드의 양 끝에 "image caps"를 추가하거나, 카드의 내용에 이미지를 겹쳐 맞추거나 또는 그저 이미지를 카드에 삽입할 수 있습니다.
 
-### 이미지 설명문
+### Image caps
 
 Header나 footer와 같이, 카드에는 카드의 상부와 하부의 "image caps"(카드의 상부 또는 하부의 이미지)을 포함할 수 있습니다.
 
@@ -457,7 +457,7 @@ Header나 footer와 같이, 카드에는 카드의 상부와 하부의 "image ca
 {{< /card.inline >}}
 {{< /example >}}
 
-### 믹스인 유틸리티
+### Mixins utilities
 
 필요에 따라서 카드의 header나 footer의 라인을 변경하거나, `.bg-transparent`를 사용해 `background-color`를 삭제할 수 있습니다.
 
