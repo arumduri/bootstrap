@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 텍스트
-title_en: Text
+title: Text
 description: 정렬, 줄바꿈, 굵기 등을 제어하는 ​​일반적인 텍스트 유틸리티에 대한 문서 및 예제입니다.
 group: utilities
 toc: true
@@ -25,7 +24,6 @@ toc: true
 
 {{< callout info >}}
 정렬된 텍스트에 대한 유틸리티 클래스는 제공하지 않습니다. 미학적으로 정렬된 텍스트는 매력적으로 보일 수 있지만 단어 간격을 무작위로 만들기 떄문에 가독성이 저하됩니다.
-
 {{< /callout >}}
 
 ## 텍스트 줄바꿈과 오버플로우
@@ -46,7 +44,7 @@ Prevent text from wrapping with a `.text-nowrap` class.
 </div>
 {{< /example >}}
 
-## 단어 기준 줄바꿈
+## Word break
 
 `.text-break`를 사용하여 `word-wrap: break-word` 및 `word-break: break-word`를 설정하여 긴 텍스트 문자열이 컴포넌트의 레이아웃을 깨뜨리는 것을 막을 수 있습니다. 더 광범위한 브라우저 지원을 위해 보다 일반적인 `overflow-wrap` 대신 `word-wrap`을 사용하고 flex 컨테이너 문제를 피하기 위해 더 이상 사용되지 않는 `word-break: break-word`를 추가합니다.
 
@@ -59,6 +57,7 @@ Prevent text from wrapping with a `.text-nowrap` class.
 {{< /callout >}}
 
 ## 텍스트 대소문자
+
 텍스트 대소문자 클래스를 사용하여 컴포넌트의 텍스트를 변환하세요.
 
 {{< example >}}
@@ -100,7 +99,7 @@ Prevent text from wrapping with a `.text-nowrap` class.
 <p class="fst-normal">Text with normal font style</p>
 {{< /example >}}
 
-## 행간
+## Line height
 
 `.lh-*` 유틸리티를 사용하여 행간을 변경하세요.
 
@@ -111,7 +110,7 @@ Prevent text from wrapping with a `.text-nowrap` class.
 <p class="lh-lg">This is a long paragraph written to show how the line-height of an element is affected by our utilities. Classes are applied to the element itself or sometimes the parent element. These classes can be customized as needed with our utility API.</p>
 {{< /example >}}
 
-## 고정폭
+## Monospace
 
 `.font-monospace`를 사용하여 선택 영역을 고정폭 글꼴 스택으로 변경하세요.
 
