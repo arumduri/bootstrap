@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 체크박스와 라디오버튼
-title_en: Checks and radios
+title: Checks and radios
 description: 완전히 새로워 진 체크 컴포넌트를 사용해 크로스 브라우저와 크로스 기기로 일관된 체크 박스와 라디오 버튼을 만들 수 있습니다.
 group: forms
 aliases: "/docs/5.3/forms/checks/"
@@ -16,7 +15,7 @@ toc: true
 
 체크 박스에서는 Bootstrap 사용자 정의 아이콘을 사용하여 선택되었거나 선택전 상태를 표시하고 있습니다.
 
-## 체크박스 
+## 체크박스
 
 {{< example >}}
 <div class="form-check">
@@ -33,7 +32,7 @@ toc: true
 </div>
 {{< /example >}}
 
-### 불확정
+### Indeterminate
 
 JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용할 수 있습니다 (이것을 지정하기 위해 이용 가능한 HTML 속성은 없습니다).
 
@@ -249,24 +248,24 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 ### 체크박스 토글 버튼
 
 {{< example >}}
-<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
 <label class="btn btn-primary" for="btn-check">Single toggle</label>
 
-<input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+<input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off" />
 <label class="btn btn-primary" for="btn-check-2">Checked</label>
 
-<input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
+<input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled />
 <label class="btn btn-primary" for="btn-check-3">Disabled</label>
 {{< /example >}}
 
 {{< example >}}
-<input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+<input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off" />
 <label class="btn" for="btn-check-4">Single toggle</label>
 
-<input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
+<input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off" />
 <label class="btn" for="btn-check-5">Checked</label>
 
-<input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" disabled>
+<input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" disabled />
 <label class="btn" for="btn-check-6">Disabled</label>
 {{< /example >}}
 
@@ -277,30 +276,30 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 ### 라디오버튼 토글 버튼
 
 {{< example >}}
-<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked />
 <label class="btn btn-secondary" for="option1">Checked</label>
 
-<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" />
 <label class="btn btn-secondary" for="option2">Radio</label>
 
-<input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
+<input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled />
 <label class="btn btn-secondary" for="option3">Disabled</label>
 
-<input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+<input type="radio" class="btn-check" name="options" id="option4" autocomplete="off" />
 <label class="btn btn-secondary" for="option4">Radio</label>
 {{< /example >}}
 
 {{< example >}}
-<input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+<input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked />
 <label class="btn" for="option5">Checked</label>
 
-<input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+<input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off" />
 <label class="btn" for="option6">Radio</label>
 
-<input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off" disabled>
+<input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off" disabled />
 <label class="btn" for="option7">Disabled</label>
 
-<input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+<input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off" />
 <label class="btn" for="option8">Radio</label>
 {{< /example >}}
 
@@ -309,16 +308,14 @@ JavaScript를 수동으로 설정해 `:indeterminate` 가상 클래스를 사용
 다양한 윤곽선 스타일과 같은 `.btn`의 다양한 변형이 지원됩니다.
 
 {{< example >}}
-<input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+<input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off" /> <label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
 
-<input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
-<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+<input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off" /> <label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
 
-<input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+<input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked />
 <label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
 
-<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off" />
 <label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
 {{< /example >}}
 
