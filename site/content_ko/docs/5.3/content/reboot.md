@@ -45,7 +45,7 @@ v5.1.1에서는 모든 CSS 번들(`bootstrap.css`, `bootstrap-reboot.css`, `boot
 페이지 전체에 더 나은 기본값을 제공하도록 `<html>` 및 `<body>` 요소가 업데이트되었습니다. 좀 더 구체적으로 설명하면:
 
 - `box-sizing`는 `*::before` 및 `*::after`이후, `border-box`를 포함한 모든 요소에서 전역적으로 설정됩니다. 이렇게 하면 패딩이나 테두리로 인해 요소의 선언된 너비가 초과되지 않습니다.
-- `<html>`에는 기본 `font-size`가 선언되지 않고 16px(브라우저 기본값)가 사용됩니다. `<body>`에는 미디어 쿼리를 통해 반응형 글꼴 크기를 쉽게 조정하는 동시에 사용자 기본 설정을 존중하고 접근성을 높일 수 있도록`font-size: 1rem`이 적용됩니다. 이 브라우저 기본값은 `$font-size-root` 변수를 수정하여 재정의할 수 있습니다.
+  - `<html>`에는 기본 `font-size`가 선언되지 않고 16px(브라우저 기본값)가 사용됩니다. `<body>`에는 미디어 쿼리를 통해 반응형 글꼴 크기를 쉽게 조정하는 동시에 사용자 기본 설정을 존중하고 접근성을 높일 수 있도록`font-size: 1rem`이 적용됩니다. 이 브라우저 기본값은 `$font-size-root` 변수를 수정하여 재정의할 수 있습니다.
 - `<body>`는 또한 `font-family`, `font-weight`, `line-height` 및 `color`을 설정합니다. 이는 나중에 일부 폼 요소에서 상속되어 글꼴 불일치를 방지합니다.
 - 안전을 위해 `<body>`에는 선언된 `background-color`이 있으며 기본값은 `#fff`입니다.
 
@@ -80,13 +80,13 @@ $font-family-sans-serif:
 
 이 `font-family`는 자동으로 `<body`에 적용되며 Bootstrap을 통해 자동으로 전역 상속됩니다. 전역 `font-family`를 바꾸려면 `$font-family-base`를 업데이트한 다음 Bootstrap을 다시 컴파일해주세요.
 
-## 제목
+## Headings
 
 `<h1>`—`<h6>`와 같은 모든 제목 요소는 `margin-top`이 제거되며, `margin-bottom: .5rem`이 추가되고 `line-height`가 적용됩니다. 제목은 기본적으로 `color`를 상속하지만 선택적 CSS 변수인 `--bs-heading-color`를 통해 재정의할 수도 있습니다.
 
 {{< bs-table "table" >}}
-| Heading | Example |
-| --- | --- |
+| Heading                 | Example                                       |
+| ----------------------- | --------------------------------------------- |
 | `<h1></h1>` | <span class="h1">h1. Bootstrap heading</span> |
 | `<h2></h2>` | <span class="h2">h2. Bootstrap heading</span> |
 | `<h3></h3>` | <span class="h3">h3. Bootstrap heading</span> |
@@ -95,7 +95,7 @@ $font-family-sans-serif:
 | `<h6></h6>` | <span class="h6">h6. Bootstrap heading</span> |
 {{< /bs-table >}}
 
-## 단락
+## 인용구
 
 모든 `<p>` 요소의 `margin-top`이 제거되고 `margin-bottom: 1rem`이 설정되어 간격을 쉽게 배치할 수 있습니다.uo
 
@@ -129,14 +129,14 @@ v5.3.x부터 링크 `color`는 `rgba()`와 새로운 `-rgb` CSS 변수를 사용
 `<hr>` 요소가 단순화되었습니다. 브라우저 기본값과 유사하게 `<hr>`는 `border-top`을 통해 스타일이 지정되고, 기본 `opacity: .25`를 가지며, 부모를 통해 `color`이 설정된 경우를 포함하여 `color`을 통해 `border-color`을 자동으로 상속받습니다. 텍스트, 테두리 및 불투명도 유틸리티를 사용하여 수정할 수 있습니다.
 
 {{< example >}}
-<hr>
+<hr />
 
 <div class="text-success">
   <hr>
 </div>
 
-<hr class="border border-danger border-2 opacity-50">
-<hr class="border border-primary border-3 opacity-75">
+<hr class="border border-danger border-2 opacity-50" />
+<hr class="border border-primary border-3 opacity-75" />
 {{< /example >}}
 
 ## 목록
@@ -177,8 +177,7 @@ v5.3.x부터 링크 `color`는 `rgba()`와 새로운 `-rgb` CSS 변수를 사용
 
 인라인 코드 스니펫을 `<code>`로 묶습니다. HTML 꺾쇠 괄호를 이스케이프해야 합니다.
 
-{{< example >}}
-For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+{{< example >}} For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 {{< /example >}}
 
 ## 코드 블록
@@ -203,9 +202,7 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
 
 일반적으로 키보드를 통해 입력되는 입력을 나타내려면 `<kbd>`를 사용해주세요.
 
-{{< example >}}
-To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br>
-To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
+{{< example >}} To switch directories, type <kbd>cd</kbd> followed by the name of the directory.<br> To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 {{< /example >}}
 
 ## 출력 예시
@@ -256,7 +253,7 @@ To edit settings, press <kbd><kbd>Ctrl</kbd> + <kbd>,</kbd></kbd>
 </table>
 {{< /example >}}
 
-## 폼
+## Forms
 
 더 간단한 기본 스타일을 위해 다양한 폼 요소가 Reboot되었습니다. 다음은 가장 눈에 띄는 변경 사항입니다:
 
@@ -407,7 +404,7 @@ Reboot에는 기본 커서를 `pointer`로 변경하는 `role="button"`의 개�
 
 ### 주소
 
-`<address>` 요소가 업데이트되어 브라우저 기본 `font-style`이 `italic`에서 `normal`로 재설정됩니다. 이제` line-height`도 상속되고 `margin-bottom: 1rem`이 추가되었습니다. `<address>`는 가장 가까운 조상 (또는 전체 작업)의 연락처 정보를 표시하기 위한 것입니다. 줄을 `<br>`로 끝내서 서식을 유지합니다.
+`<address>` 요소가 업데이트되어 브라우저 기본 `font-style`이 `italic`에서 `normal`로 재설정됩니다. 이제`line-height`도 상속되고 `margin-bottom: 1rem`이 추가되었습니다. `<address>`는 가장 가까운 조상 (또는 전체 작업)의 연락처 정보를 표시하기 위한 것입니다. 줄을 `<br>`로 끝내서 서식을 유지합니다.
 
 <div class="bd-example">
   <address>
@@ -423,7 +420,7 @@ Reboot에는 기본 커서를 `pointer`로 변경하는 `role="button"`의 개�
   </address>
 </div>
 
-### 인용구
+### Blockquote
 
 인용구의 기본 `margin`은 `1em 40px`이므로 다른 요소와 더 일관된 무언가를 위해 `0 0 1rem`으로 재설정합니다.
 
