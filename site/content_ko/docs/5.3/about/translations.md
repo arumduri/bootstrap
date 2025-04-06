@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: 번역
-description: 커뮤니티 번역된 Bootstrap 문서들의 링크입니다.
+title: Translations
+description: Links to community-translated Bootstrap documentation sites.
 group: about
 ---
 
-Bootstrap의 문서들이 커뮤니티 멤버들에 의해서 여러 언어로 번역되었습니다. 모두 공식적으로 지원되지 않으며 최신 버전이 아닐 수도 있습니다.
+Community members have translated Bootstrap's documentation into various languages. None are officially supported and they may not always be up-to-date.
 
 {{< translations.inline >}}
 <ul>
@@ -15,6 +15,6 @@ Bootstrap의 문서들이 커뮤니티 멤버들에 의해서 여러 언어로 �
 </ul>
 {{< /translations.inline >}}
 
-**우리는 번역을 돕거나 호스트하지 않으며, 링크만 걸어줍니다.**
+**We don't help organize or host translations, we just link to them.**
 
-새롭거나 더 나은 번역을 완료하셨나요? 풀 리퀘스트를 열어 우리 목록에 추가하세요.
+Finished a new or better translation? Open a pull request to add it to our list.
