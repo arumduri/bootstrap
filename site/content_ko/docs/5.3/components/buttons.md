@@ -51,9 +51,9 @@ Bootstrap에는 각각 고유한 의미적 목적을 가진 여러 가지 버튼
 {{< example >}}
 <a class="btn btn-primary" href="#" role="button">Link</a>
 <button class="btn btn-primary" type="submit">Button</button>
-<input class="btn btn-primary" type="button" value="Input">
-<input class="btn btn-primary" type="submit" value="Submit">
-<input class="btn btn-primary" type="reset" value="Reset">
+<input class="btn btn-primary" type="button" value="Input" />
+<input class="btn btn-primary" type="submit" value="Submit" />
+<input class="btn btn-primary" type="reset" value="Reset" />
 {{< /example >}}
 
 ## 버튼 테두리
@@ -74,7 +74,7 @@ Bootstrap에는 각각 고유한 의미적 목적을 가진 여러 가지 버튼
 
 ## 크기
 
-버튼의 크기를 `.btn-lg` 나 `.btn-sm`을 적용해 변경할 수 있습니다.
+Fancy larger or smaller buttons? 버튼의 크기를 `.btn-lg` 나 `.btn-sm`을 적용해 변경할 수 있습니다.
 
 {{< example >}}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
@@ -97,7 +97,7 @@ You can even roll your own custom sizing with CSS variables:
 
 ## 비활성화 상태
 
-버튼을 비활성화시키기 위해 `<button>` 요소에 `disabled` 속성을 추가합니다. 비활성화된 버튼은 `pointer-events: none`을 가집니다. 아무것도 적용되지 않고 호버나 활성화된 상태로 눌리는 것을 막습니다.
+버튼의 `active` 상태를 토글하기 위해, `data-bs-toggle="button"`을 추가합니다. 버튼을 미리 토글하고 있는 경우, 지원 기술에 적절하게 전달될 수 있도록 `.active` 클래스와 `aria-pressed="true"`를 수동으로 버튼에 추가해야 합니다.
 
 {{< example >}}
 <button type="button" class="btn btn-primary" disabled>Primary button</button>
@@ -175,7 +175,7 @@ Display와 gap 유틸리티를 조합해, Bootstrap 4와 같은 전체 너비에
 
 ### 상태 토글
 
-버튼의 `active` 상태를 토글하기 위해, `data-bs-toggle="button"`을 추가합니다. 버튼을 미리 토글하고 있는 경우, 지원 기술에 적절하게 전달될 수 있도록 `.active` 클래스와 `aria-pressed="true"`를 수동으로 버튼에 추가해야 합니다.
+버튼을 비활성화시키기 위해 `<button>` 요소에 `disabled` 속성을 추가합니다. If you're pre-toggling a button, you must manually add the `.active` class **and** `aria-pressed="true"` to ensure that it is conveyed appropriately to assistive technologies.
 
 {{< example >}}
 <p class="d-inline-flex gap-1">
@@ -212,12 +212,12 @@ const bsButton = new bootstrap.Button('#myButton')
 ```
 
 {{< bs-table "table" >}}
-| 메소드 | 설명 |
-| --- | --- |
-| `dispose` | 요소의 버튼을 삭제합니다. (DOM 요소에 저장된 데이터를 제거합니다.) |
-| `getInstance` | 정적 메소드를 사용하면 DOM 요소와 연결된 버튼 인스턴스를 가져올 수 있으며, 다음과 같이 사용할 수 있습니다: `bootstrap.Button.getInstance(element)`. |
+| 메소드                   | 설명                                                                                                                                 |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `dispose`             | 요소의 버튼을 삭제합니다. (DOM 요소에 저장된 데이터를 제거합니다.)                                                                                           |
+| `getInstance`         | 정적 메소드를 사용하면 DOM 요소와 연결된 버튼 인스턴스를 가져올 수 있으며, 다음과 같이 사용할 수 있습니다: `bootstrap.Button.getInstance(element)`.                           |
 | `getOrCreateInstance` | DOM 요소와 연관된 버튼 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 생성하는 정적 메소드입니다. 다음과 같이 사용할 수 있습니다: `bootstrap.Button.getOrCreateInstance(element)`. |
-| `toggle` | 푸시 상태를 전환합니다. 버튼이 활성화된 것처럼 보이도록 설정합니다. |
+| `toggle`              | 푸시 상태를 전환합니다. 버튼이 활성화된 것처럼 보이도록 설정합니다.                                                                                             |
 {{< /bs-table >}}
 
 예를 들어, 모든 버튼을 토글하려면:
