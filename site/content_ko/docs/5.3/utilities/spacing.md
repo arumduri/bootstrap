@@ -47,7 +47,7 @@ toc: true
 
 (`$ spacers` Sass 맵 변수에 항목을 추가하면 더 많은 크기를 추가할 수 있습니다)
 
-### 예시
+### Examples
 
 다음은 이러한 클래스의 몇 가지 대표적인 예입니다.
 
@@ -86,7 +86,7 @@ toc: true
 </div>
 ```
 
-## 음수 마진
+## Negative margin
 
 CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`은 사용할 수 없음). 이러한 음수 여백은 **기본적으로 사용 중지** 되지만 `$ enable-negative-margins : true`를 설정하여 Sass에서 사용하도록 설정할 수 있습니다.
 
@@ -98,7 +98,7 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 }
 ```
 
-## 갭
+## Gap
 
 `display: grid` 또는 `display: flex`를 사용할 때 부모 그리드 컨테이너에서 `gap` 유틸리티를 사용할 수 있습니다. 이렇게 하면 개별 그리드 또는 flex 항목에 여백 유틸리티를 추가할 필요가 없습니다. 간격 유틸리티는 기본적으로 반응형이며 `$spacers` Sass 맵을 기반으로 유틸리티 API를 통해 생성됩니다.
 
