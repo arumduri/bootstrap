@@ -18,13 +18,13 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 
 이러한 스타일은 `_reboot.scss`에서 찾을 수 있으며 전역 변수는 `_variables.scss`에서 정의됩니다. `rem`에 `$ font-size-base`를 설정해야 합니다.
 
-## 제목
+## Headings
 
 `<h1>`부터 `<h6>`까지의 모든 제목을 사용할 수 있습니다.
 
 {{< bs-table >}}
-| 제목 | 예시 |
-| --- | --- |
+| Heading                 | 예시                                            |
+| ----------------------- | --------------------------------------------- |
 | `<h1></h1>` | <span class="h1">h1. Bootstrap heading</span> |
 | `<h2></h2>` | <span class="h2">h2. Bootstrap heading</span> |
 | `<h3></h3>` | <span class="h3">h3. Bootstrap heading</span> |
@@ -66,7 +66,7 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 
 ## 제목 표시
 
-기존 제목 요소는 페이지 콘텐츠의 핵심에서 가장 잘 작동하도록 설계되었습니다. 눈에 띄는 제목이 필요한 경우 **표시 제목**을 사용하는 것이 좋습니다. 이 제목은 좀 더 크고 약간 더 독선적인 제목 스타일입니다.
+기존 제목 요소는 페이지 콘텐츠의 핵심에서 가장 잘 작동하도록 설계되었습니다. 눈에 띄는 제목이 필요한 경우 **표시 제목**을 사용하는 것이 좋습니다.
 
 <div class="bd-example">
   <div class="display-1 pb-3 mb-3 border-bottom">Display 1</div>
@@ -92,7 +92,7 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 
 {{< scss-docs name="display-headings" file="scss/_variables.scss" >}}
 
-## 선두
+## Lead
 
 `.lead`를 추가하여 단락을 눈에 띄게 만드십시오.
 
@@ -201,7 +201,7 @@ HTML 사양에서는 인용구 속성이 `<blockquote>`외부에 배치되어야
 
 ## 목록
 
-### 스타일 제거
+### Unstyled
 
 기본 `list-style`과 목록 항목의 왼쪽 여백을 제거합니다 (직계 자식만 해당). **이 부분은 직계 자식 목록 항목에만 적용됩니다**. 즉, 중첩된 목록에 대해서도 클래스를 추가해야 합니다.
 
