@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: 위치
-description: 요소의 위치를 빠르게 구성하려면 이러한 단축 유틸리티를 사용하세요.
+title: Position
+description: Use these shorthand utilities for quickly configuring the position of an element.
 group: utilities
 toc: true
 ---
 
-## 위치 값
+## Position values
 
-빠른 위치 지정 클래스를 사용할 수 있지만 반응형은 없습니다.
+Quick positioning classes are available, though they are not responsive.
 
 ```html
 <div class="position-static">...</div>
@@ -18,24 +18,24 @@ toc: true
 <div class="position-sticky">...</div>
 ```
 
-## 요소 정렬
+## Arrange elements
 
-edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 형식은 `{property}-{position}`입니다.
+Arrange elements easily with the edge positioning utilities. The format is `{property}-{position}`.
 
-*속성* - property:
+Where *property* is one of:
 
-- `top` - 수직 `top` 위치
-- `start` - 가로 `left` 위치 (LTR 기준)
-- `bottom` - 수직 `bottom` 위치
-- `end` - 가로 `right` 위치 (LTR 기준)
+- `top` - for the vertical `top` position
+- `start` - for the horizontal `left` position (in LTR)
+- `bottom` - for the vertical `bottom` position
+- `end` - for the horizontal `right` position (in LTR)
 
-*위치* - position:
+Where *position* is one of:
 
-- `0` - 가장자리 위치가 `0`인 경우
-- `50` - 가장자리 위치가 `50%`인 경우
-- `100` - 가장자리 위치가 `100%`인 경우
+- `0` - for `0` edge position
+- `50` - for `50%` edge position
+- `100` - for `100%` edge position
 
-(`$ position-values` Sass 맵 변수에 항목을 추가하면 더 많은 위치 값을 추가할 수 있습니다.)
+(You can add more position values by adding entries to the `$position-values` Sass map variable.)
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -50,9 +50,9 @@ edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 
 
 ## Center elements
 
-또한 변환 유틸리티 클래스 `.translate-middle`을 사용하여 요소를 중앙에 배치할 수도 있습니다.
+In addition, you can also center the elements with the transform utility class `.translate-middle`.
 
-이 클래스는 요소에 `translateX (-50 %)` 및 `translateY (-50 %)` 변환을 요소에 적용하여 edge positioning 유틸리티와 함께 요소를 absolute center 로 지정할 수 있습니다.
+This class applies the transformations `translateX(-50%)` and `translateY(-50%)` to the element which, in combination with the edge positioning utilities, allows you to absolute center an element.
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -68,7 +68,7 @@ edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 
 </div>
 {{< /example >}}
 
-`.translate-middle-x` 또는 `.translate-middle-y` 클래스를 추가하면 요소를 가로 또는 세로 방향으로만 배치할 수 있습니다.
+By adding `.translate-middle-x` or `.translate-middle-y` classes, elements can be positioned only in horizontal or vertical direction.
 
 {{< example class="bd-example-position-utils" >}}
 <div class="position-relative">
@@ -86,7 +86,7 @@ edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 
 
 ## Examples
 
-다음은 해당 클래스의 실제 예시입니다.
+Here are some real life examples of these classes:
 
 {{< example class="bd-example-position-examples d-flex justify-content-around align-items-center" >}}
 <button type="button" class="btn btn-primary position-relative">
@@ -102,7 +102,7 @@ edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 
 </button>
 {{< /example >}}
 
-해당 클래스를 기존 컴포넌트와 함께 사용하여 새 컴포넌트를 만들 수 있습니다. `$ position-values` 변수에 항목을 추가하여 기능을 확장 할 수 있습니다.
+You can use these classes with existing components to create new ones. Remember that you can extend its functionality by adding entries to the `$position-values` variable.
 
 {{< example class="bd-example-position-examples" >}}
 <div class="position-relative m-4">
@@ -117,14 +117,14 @@ edge positioning 유틸리티를 사용하여 요소를 쉽게 정렬합니다. 
 
 ## CSS
 
-### Sass 맵
+### Sass maps
 
-기본 Position 유틸리티 값은 Sass 맵에 선언된 다음 유틸리티를 생성하는 데 사용됩니다.
+Default position utility values are declared in a Sass map, then used to generate our utilities.
 
 {{< scss-docs name="position-map" file="scss/_variables.scss" >}}
 
-### Sass 유틸리티 API
+### Sass utilities API
 
-위치 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+Position utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-position" file="scss/_utilities.scss" >}}
