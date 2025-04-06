@@ -26,9 +26,9 @@ toc: true
 `.form-control-lg`와 `.form-control-sm` 클래스를 사용해서 크기를 다르게 설정할 수 있습니다.
 
 {{< example >}}
-<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example">
-<input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
-<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example">
+<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example" />
+<input class="form-control" type="text" placeholder="Default input" aria-label="default input example" />
+<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example" />
 {{< /example >}}
 
 ## 폼 텍스트
@@ -43,7 +43,7 @@ block-level 또는 inline-level의 폼 텍스트는 `.form-text`를 사용해서
 
 {{< example >}}
 <label for="inputPassword5" class="form-label">Password</label>
-<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+<input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" />
 <div id="passwordHelpBlock" class="form-text">
   Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
 </div>
@@ -72,8 +72,8 @@ block-level 또는 inline-level의 폼 텍스트는 `.form-text`를 사용해서
 `disabled` 불리언 속성을 추가하면 비활성화 외형이 되며, 포인터 이벤트가 삭제되면서 포커싱되지 않습니다.
 
 {{< example >}}
-<input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
-<input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
+<input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled />
+<input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly />
 {{< /example >}}
 
 ## 읽기 전용
@@ -81,7 +81,7 @@ block-level 또는 inline-level의 폼 텍스트는 `.form-text`를 사용해서
 `readonly` 불리언 속성을 추가함으로써 입력 값의 변경을 막을 수 있습니다. `disabled`와 달리 `readonly` 입려값은 계속 포커싱 및 선택이 가능합니다.
 
 {{< example >}}
-<input class="form-control" type="text" value="Readonly input here..." aria-label="readonly input example" readonly>
+<input class="form-control" type="text" value="Readonly input here..." aria-label="readonly input example" readonly />
 {{< /example >}}
 
 ## 읽기 전용 일반 텍스트
@@ -119,7 +119,7 @@ block-level 또는 inline-level의 폼 텍스트는 `.form-text`를 사용해서
 </form>
 {{< /example >}}
 
-## 파일 선택
+## File input
 
 {{< example >}}
 <div class="mb-3">
@@ -150,7 +150,7 @@ Set the `type="color"` and add `.form-control-color` to the `<input>`. We use th
 
 {{< example >}}
 <label for="exampleColorInput" class="form-label">Color picker</label>
-<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color" />
 {{< /example >}}
 
 ## 데이터 목록
@@ -161,7 +161,7 @@ Set the `type="color"` and add `.form-control-color` to the `<input>`. We use th
 
 {{< example >}}
 <label for="exampleDataList" class="form-label">Datalist example</label>
-<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." />
 <datalist id="datalistOptions">
   <option value="San Francisco">
   <option value="New York">
