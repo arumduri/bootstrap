@@ -1,44 +1,44 @@
 ---
 layout: docs
-title: 컴포넌트
-description: 기본 클래스와 제어자 클래스를 가지고 거의 모든 컴포넌트를 반응하는 방식으로 빌드하는 방법과 이유를 소개합니다.
+title: Components
+description: Learn how and why we build nearly all our components responsively and with base and modifier classes.
 group: customize
 toc: true
 ---
 
-## 기본 클래스
+## Base classes
 
-Bootstrap의 컴포넌트는 주로 기본-제어자(base-modifier) 명명법으로 만들어졌습니다. 가능한 한 많은 공유 속성을 `.btn`과 같은 기본 클래스로 그룹화 하고, 각 변형 개개의 스타일은 `.btn-primary` 혹은 `.btn-success`와 같은 제어자 클래스로 그룹화 하고 있습니다.
+Bootstrap's components are largely built with a base-modifier nomenclature. We group as many shared properties as possible into a base class, like `.btn`, and then group individual styles for each variant into modifier classes, like `.btn-primary` or `.btn-success`.
 
-제어자 클래스를 만들기 위해, Sass의 `@each` 반복문을 사용하여 Sass 맵을 반복합니다. 이는 특히 `$theme-colors`로 컴포넌트의 변형을 만들고 중단점별로 반응하는 변형을 만들때 도움이 됩니다. 이 Sass 맵을 재정의하고 다시 컴파일하면 자동으로 반복문에 변경이 반영됩니다.
+To build our modifier classes, we use Sass's `@each` loops to iterate over a Sass map. This is especially helpful for generating variants of a component by our `$theme-colors` and creating responsive variants for each breakpoint. As you customize these Sass maps and recompile, you'll automatically see your changes reflected in these loops.
 
-이러한 반복문을 재정의하고 Bootstrap의 기본 제어자 클래스 접근법을 당신의 코드로 확장하는 방법에 대해서는 [Sass 맵과 루프 문서]({{< docsref "/customize/sass#maps-and-loops" >}})를 확인해 주세요.
+Check out [our Sass maps and loops docs]({{< docsref "/customize/sass#maps-and-loops" >}}) for how to customize these loops and extend Bootstrap's base-modifier approach to your own code.
 
 ## Modifiers
 
-Bootstrap의 컴포넌트의 대부분은 기본-제어자 클래스 접근법으로 만들어졌습니다. 즉, 스타일의 대부분은 기본 클래스(예를 들어, `.btn`)에 포함되어 스타일의 변형(예를 들어, `.btn-danger`)은 제어자 클래스로 한정되어 있습니다. 이 제어자 클래스는 `$theme-colors` 맵에서 빌드되어 제어자 클래스의 수와 이름을 재정의 합니다.
+Many of Bootstrap's components are built with a base-modifier class approach. This means the bulk of the styling is contained to a base class (e.g., `.btn`) while style variations are confined to modifier classes (e.g., `.btn-danger`). These modifier classes are built from the `$theme-colors` map to make customizing the number and name of our modifier classes.
 
-여기서는 `$theme-colors` 맵을 반복해 `.alert`와 `.list-group` 컴포넌트의 제어자를 생성하는 방법의 두가지 예시입니다.
+Here are two examples of how we loop over the `$theme-colors` map to generate modifiers to the `.alert` and `.list-group` components.
 
 {{< scss-docs name="alert-modifiers" file="scss/_alert.scss" >}}
 
 {{< scss-docs name="list-group-modifiers" file="scss/_list-group.scss" >}}
 
-## 반응형
+## Responsive
 
-이러한 Sass 반복은 색상 맵 뿐만이 아닙니다. 컴포넌트의 반응적인 변형을 생성할 수도 있습니다. 예를 들면, `$grid-breakpoints` Sass 맵에 대해 `@each` 반복을 미디어 쿼리와 혼합하는 드롭다운의 반응적 배치는 다음과 같습니다.
+These Sass loops aren't limited to color maps, either. You can also generate responsive variations of your components. Take for example our responsive alignment of the dropdowns where we mix an `@each` loop for the `$grid-breakpoints` Sass map with a media query include.
 
 {{< scss-docs name="responsive-breakpoints" file="scss/_dropdown.scss" >}}
 
-`$grid-breakpoints`를 변경하면, 그 맵을 반복 처리하는 모든 반복문에 적용됩니다.
+Should you modify your `$grid-breakpoints`, your changes will apply to all the loops iterating over that map.
 
 {{< scss-docs name="grid-breakpoints" file="scss/_variables.scss" >}}
 
-Sass 맵과 변수를 변경하는 방법에 대한 자세한 예시는 [그리드 문서의 CSS 섹션]({{< docsref "/layout/grid#css" >}})을 참조해 주세요.
+For more information and examples on how to modify our Sass maps and variables, please refer to [the CSS section of the Grid documentation]({{< docsref "/layout/grid#css" >}}).
 
-## 직접 만들기
+## Creating your own
 
-Bootstrap을 사용하여 직접 컴포넌트를 작성할 때는 이러한 지침을 따르는 것이 좋습니다. 이 접근 방식을 문서나 예시의 사용자 정의 컴포넌트에도 적용하고 있습니다. callout 같은 컴포넌트는 기본 클래스와 제어자 클래스가 있는 제공된 컴포넌트처럼 작성됩니다.
+We encourage you to adopt these guidelines when building with Bootstrap to create your own components. We've extended this approach ourselves to the custom components in our documentation and examples. Components like our callouts are built just like our provided components with base and modifier classes.
 
 <div class="bd-example">
   <div class="bd-callout my-0">
@@ -50,7 +50,7 @@ Bootstrap을 사용하여 직접 컴포넌트를 작성할 때는 이러한 지�
 <div class="callout">...</div>
 ```
 
-아래와 같이 CSS에는 대부분이 `.callout`으로 이루어지고 있습니다. 그리고 각 변형 간의 독자적인 스타일은 제어자 클래스로 제어합니다.
+In your CSS, you'd have something like the following where the bulk of the styling is done via `.callout`. Then, the unique styles between each variant is controlled via modifier class.
 
 ```scss
 // Base class
@@ -62,7 +62,7 @@ Bootstrap을 사용하여 직접 컴포넌트를 작성할 때는 이러한 지�
 .callout-danger {}
 ```
 
-callout의 경우, `border-left-color`라는 독자적인 스타일을 사용하고 있습니다. 이 기본 클래스와 제어자 클래스를 조합하면 컴포넌트 계열이 완성됩니다:
+For the callouts, that unique styling is just a `border-left-color`. When you combine that base class with one of those modifier classes, you get your complete component family:
 
 {{< callout info >}}
 **This is an info callout.** Example text to show it in action.
