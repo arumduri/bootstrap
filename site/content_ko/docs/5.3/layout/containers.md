@@ -6,7 +6,7 @@ group: layout
 toc: true
 ---
 
-## 작동 원리
+## How they work
 
 컨테이너는 Bootstrap에서 가장 기본적인 레이아웃 요소이며 **기본 그리드 시스템을 사용할 때 필요합니다**. 컨테이너는 내용을 포함하고 채우고 (때로는) 내용을 중앙 정렬하는 데에 사용됩니다. 컨테이너는 &*중첩될 수 있지만* 대부분의 레이아웃에는 중첩된 컨테이너가 필요하지 않습니다.
 
@@ -21,14 +21,14 @@ Bootstrap에는 세 가지 다른 컨테이너가 있습니다:
 [그리드 예시]({{< docsref "/examples/grid#containers" >}})에서 실제로 보고 비교헤보세요.
 
 {{< bs-table "table" >}}
-|  | Extra small<div class="fw-normal">&lt;576px</div> | Small<div class="fw-normal">&ge;576px</div> | Medium<div class="fw-normal">&ge;768px</div> | Large<div class="fw-normal">&ge;992px</div> | X-Large<div class="fw-normal">&ge;1200px</div> | XX-Large<div class="fw-normal">&ge;1400px</div> |
-| --- | --- | --- | --- | --- | --- | --- |
-| `.container` | <span class="text-body-secondary">100%</span> | 540px | 720px | 960px | 1140px | 1320px |
-| `.container-sm` | <span class="text-body-secondary">100%</span> | 540px | 720px | 960px | 1140px | 1320px |
-| `.container-md` | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | 720px | 960px | 1140px | 1320px |
-| `.container-lg` | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | 960px | 1140px | 1320px |
-| `.container-xl` | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | 1140px | 1320px |
-| `.container-xxl` | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | 1320px |
+|                    | Extra small<div class="fw-normal">&lt;576px</div>          | Small<div class="fw-normal">&ge;576px</div>                | Medium<div class="fw-normal">&ge;768px</div>               | Large<div class="fw-normal">&ge;992px</div>                | X-Large<div class="fw-normal">&ge;1200px</div>              | XX-Large<div class="fw-normal">&ge;1400px</div>             |
+| ------------------ | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| `.container`       | <span class="text-body-secondary">100%</span> | 540px                                         | 720px                                         | 960px                                         | 1140px                                        | 1320px                                        |
+| `.container-sm`    | <span class="text-body-secondary">100%</span> | 540px                                         | 720px                                         | 960px                                         | 1140px                                        | 1320px                                        |
+| `.container-md`    | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | 720px                                         | 960px                                         | 1140px                                        | 1320px                                        |
+| `.container-lg`    | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | 960px                                         | 1140px                                        | 1320px                                        |
+| `.container-xl`    | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | 1140px                                        | 1320px                                        |
+| `.container-xxl`   | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | 1320px                                        |
 | `.container-fluid` | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> | <span class="text-body-secondary">100%</span> |
 {{< /bs-table >}}
 
