@@ -1,36 +1,35 @@
 ---
 layout: docs
-title: 폼
-title_en: Forms
+title: Forms
 description: 다양한 폼 사용을 위한 폼 컨트롤 스타일, 레이아웃 옵션, 사용자 정의 컴포넌트의 예시와 사용 가이드입니다.
 group: forms
 toc: true
 aliases: "/docs/5.3/forms/"
 sections:
-  - title: 폼 컨트롤
-    link: Form control
+  - 
+    title: Form control
     description: 다양한 상태를 지원하는 텍스트 입력과 텍스트 영역의 스타일을 설정할 수 있습니다.
-  - title: 셀렉트
-    link: Select
+  - 
+    title: Select
     description: 브라우저의 기본 셀렉트 요소의 초기 표시를 재정의할 수 있게 개선하였습니다.
-  - title: 체크박스 & 라디오버튼
-    link: Checks & radios
+  - 
+    title: Checks & radios
     description: 우리가 개선한 라디오 버튼과 체크 박스를 폼으로 사용하여, 입력 옵션을 선택할 수 있습니다.
-  - title: 범위
-    link: Range
+  - 
+    title: Range
     description: 브라우저의 기본 범위 선택 폼을 우리가 개선한 버전으로 사용할 수 있습니다.
-  - title: 입력 그룹
-    link: Input group
+  - 
+    title: Input group
     description: 입력 폼에 라벨과 버튼을 함께 사용하여 시멘틱한 마크업을 할 수 있습니다.
-  - title: 플로팅 라벨
-    link: Floating labels
+  - 
+    title: Floating labels
     description: 입력 필드 위로 떠오르는 동적인 폼 라벨을 간단하게 만들 수 있습니다.
-  - title: 레이아웃
-    link: Layout
+  - 
+    title: Layout
     description: 인라인, 수평 또는 복잡한 그리드 레이아웃을 폼으로 만들 수 있습니다.
-  - title: 유효성 검사
-    link: Validation
-    description: 사용자 정의 또는 브라우저 기본 동작과 스타일을 통해 폼의 유효성 검사를 할 수 있습니다.
+  - 
+    title: Validation
+    description: Validate your forms with custom or native validation behaviors and styles.
 ---
 
 ## 개요
@@ -60,7 +59,7 @@ Bootstrap의 폼 컨트롤은 [Reboot된 폼 스타일]({{< docsref "/content/re
 </form>
 {{< /example >}}
 
-## 비활성화된 폼
+## Disabled forms
 
 입력 폼에 `disabled` 불리언 속성을 추가하여 사용자의 조작을 막고 표시를 흐리게 할 수 있습니다.
 
@@ -70,7 +69,7 @@ Bootstrap의 폼 컨트롤은 [Reboot된 폼 스타일]({{< docsref "/content/re
 
 `<fieldset>`에 `disabled` 속성을 추가하면 그 안의 모든 폼 컨트롤이 비활성화됩니다. 브라우저는 `<fieldset disabled>` 내의 모든 기본 폼 컨트롤(`<input>`, `<select>`, 그리고 `<button>` 요소)을 비활성화시키면서 키보드와 마우스의 양쪽 조작을 막습니다.
 
-그러나, 만약에 폼에 `<a class="btn btn-*">...</a>`과 같은 사용자 정의 버튼과 같은 요소가 포함되어 있다면, 이 경우 버튼 요소에는 `pointer-events: none` 스타일 밖에 적용되지 않습니다. 즉 포커스가 가고 키보드 사용도 가능합니다. 이 경우 이들 컨트롤을 수동으로 수정하고 포커스를 받지 않게 하기 위해 `tabindex="-1"`를 추가하여 지원 기술에도 그 상태를 알리기 위해 `aria-disabled="disabled"`를 추가해야 합니다.
+그러나, 만약에 폼에 `<a class="btn btn-*">...</a>`과 같은 사용자 정의 버튼과 같은 요소가 포함되어 있다면, 이 경우 버튼 요소에는 `pointer-events: none` 스타일 밖에 적용되지 않습니다. 이 경우 이들 컨트롤을 수동으로 수정하고 포커스를 받지 않게 하기 위해 `tabindex="-1"`를 추가하여 지원 기술에도 그 상태를 알리기 위해 `aria-disabled="disabled"`를 추가해야 합니다.
 
 {{< example >}}
 <form>
