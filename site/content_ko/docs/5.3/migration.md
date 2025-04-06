@@ -11,7 +11,7 @@ toc: true
 
 이전 v5.3.0 알파 릴리즈에서 마이그레이션하는 경우 이 섹션과 함께 해당 변경 사항을 검토하세요.
 
-### 도우미 
+### Helpers
 
 - [컬러 링크]({{< docsref "/helpers/colored-links" >}})에 다시 한 번 `!important`가 추가되어 새로 추가된 링크 유틸리티와 더 잘 작동합니다.
 
@@ -59,7 +59,7 @@ toc: true
 
 - 이제 탐색에 사용자 정의 버튼 포커스 스타일과 더 잘 어울리는 새로운 `:focus-visible` 스타일이 추가되었습니다.
 
-### 도우미
+### Helpers
 
 - 텍스트 링크와 함께 Bootstrap 아이콘을 빠르게 배치하고 정렬할 수 있는 새로운 `.icon-link` 도우미가 추가되었습니다. 아이콘 링크는 새로운 링크 유틸리티도 지원합니다.
 
@@ -77,7 +77,7 @@ toc: true
 
 - `.text-black` 및 `.bg-black` 유틸리티와 일치하는 새로운 `.border-black` 유틸리티를 추가했습니다.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> `.text-muted` 유틸리티와 `$text-muted` Sass 변수가 더 이상 사용되지 않으며 `.text-body-secondary` 및 `$body-secondary-color`로 대체되었습니다.
+- <span class="badge text-bg-danger">중요 변경사항</span> `$display-*` 변수를 바꾸기 위해 디스플레이 타이포그래피를 정비하고 `$display-font-sizes` Sass 맵을 사용합니다. 또한 `$display-*-weight` 변수를 삭제하고 단일 `$display-font-weight`로 변경하여 글꼴의 크기를 조정했습니다.
 
 ### 문서
 
@@ -87,19 +87,19 @@ toc: true
 
 - 예제 페이지 상단에 `twbs/examples` 리포지토리 콘텐츠를 추가했습니다.
 
-### 툴링
+### Tooling
 
 - 유틸리티 API 및 기타 커스터마이징을 테스트할 수 있도록 True를 통한 SCSS 테스트를 추가했습니다.
 
 - bootstrap-npm-starter 프로젝트의 인스턴스를 더 새롭고 완전한 [twbs/examples 리포지토리](https://github.com/twbs/examples)로 교체했습니다.
 
-<hr class="mb-4">
+<hr class="mb-4" />
 
 전체 변경 사항 목록은 [GitHub의 v5.3.0-alpha2 프로젝트](https://github.com/orgs/twbs/projects/13)를 참조하세요.
 
 ## v5.3.0-alpha1
 
-<hr class="mb-4">
+<hr class="mb-4" />
 
 ### 컬러 모드!
 
@@ -107,7 +107,7 @@ toc: true
 
 - **라이트(기본값) 및 다크 모드를 전역적으로 지원합니다.** `:root` 요소, 래퍼 클래스가 있는 요소 및 컴포넌트 그룹 또는 `data-bs-theme="light|dark"`를 사용하여 컴포넌트에 직접 색상 모드를 전역적으로 설정할 수 있습니다. 또한 `data-bs-theme` 선택기 또는 미디어 쿼리와 함께 규칙 집합을 출력할 수 있는 새로운 `color-mode()` 믹스인이 포함되어 있어 원하는 대로 설정할 수 있습니다.
 
-- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> 색상 모드는 컴포넌트의 어두운 변형을 대체하므로 `.btn-close-white`, `.carousel-dark`, `.dropdown-menu-dark` 및 `.navbar-dark`는 더 이상 사용되지 않습니다.
+<span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> 색상 모드는 컴포넌트의 어두운 변형을 대체하므로 `.btn-close-white`, `.carousel-dark`, `.dropdown-menu-dark` 및 `.navbar-dark`는 더 이상 사용되지 않습니다.
 
 - 새로운 확장 색상 시스템: `color` 및 `background-color`에 대한 새로운 보조, 보조, 강조 색상과 함께 보다 미묘한 시스템 전반의 색상 팔레트를 위해 새로운 테마 색상(`$theme-colors`에는 없음)을 추가했습니다. 이러한 새로운 색상은 Sass 변수, CSS 변수 및 유틸리티로 사용할 수 있습니다.
 
@@ -144,19 +144,19 @@ toc: true
 
 - 이제 더 많은 컴포넌트에서 `--bs-border-width`가 사용되어 기본 전역 스타일을 더 잘 제어할 수 있습니다.
 
--`b-box-shadow`, `--bs-box-shadow-sm`, `--bs-box-shadow-lg`, `--bs-box-shadow-inset` 등 `box-shadow`에 대한 새로운 루트 CSS 변수를 추가합니다.
+- `b-box-shadow`, `--bs-box-shadow-sm`, `--bs-box-shadow-lg`, `--bs-box-shadow-inset` 등 `box-shadow`에 대한 새로운 루트 CSS 변수를 추가합니다.
 
 ### 컴포넌트
 
 #### 경고창
 
-- 이제 CSS 변수를 통해 경고 변형의 스타일을 지정할 수 있습니다.
+- 목록 그룹 항목 변형은 이제 CSS 변수를 통해 스타일을 지정할 수 있습니다.
 
 - <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> `alert-variant()` 믹스인은 이제 더 이상 사용되지 않습니다. 이제 [Sass 루프]({{< docsref "/components/alerts#sass-loops" >}})를 직접 사용하여 각 변형에 대한 컴포넌트의 기본 CSS 변수를 수정합니다.
 
 #### 목록 그룹
 
-- 목록 그룹 항목 변형은 이제 CSS 변수를 통해 스타일을 지정할 수 있습니다.
+- 이제 CSS 변수를 통해 경고 변형의 스타일을 지정할 수 있습니다.
 
 - <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> `list-group-item-variant()` 믹스인은 이제 더 이상 사용되지 않습니다. 이제 [Sass 루프]({{< docsref "/components/list-group#sass-loops" >}})를 직접 사용하여 각 변형에 대한 컴포넌트의 기본 CSS 변수를 수정합니다.
 
@@ -242,7 +242,7 @@ toc: true
 
 ## v5.2.0
 
-<hr class="mb-4">
+<hr class="mb-4" />
 
 ### 새로워진 디자인
 
@@ -327,7 +327,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 ## v5.1.0
 
-<hr class="mb-4">
+<hr class="mb-4" />
 
 - **[CSS 그리드 레이아웃]({{< docsref "/layout/css-grid" >}})에 대한 실험적 지원 추가. -** 이 기능은 진행 중인 작업으로 아직 프로덕션용으로 사용할 준비가 되지 않았지만 Sass를 통해 새 기능을 선택할 수 있습니다. 이 기능을 사용하려면 `$enable-grid-classes: false`를 설정하여 기본 그리드를 비활성화하고 `$enable-cssgrid: true`를 설정하여 CSS 그리드를 활성화하세요.
 
@@ -351,7 +351,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 ## v5.0.0
 
-<hr class="mb-4">
+<hr class="mb-4" />
 
 {{< callout info >}}
 **안녕하세요!** Bootstrap 5의 첫 번째 주요 릴리스인 v5.0.0의 변경 사항은 아래에 설명되어 있습니다. 위에 표시된 추가 변경사항은 반영되지 않았습니다.
@@ -373,11 +373,11 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 - iOS Safari 12 미만 지원 종료
 - Chrome 60 미만 지원 종료
 
-<hr class="my-5">
+<hr class="my-5" />
 
 ### 문서 변경사항
 
-- 첫페이지, 문서 레이아웃과 하단의 디자인 변경.
+- Redesigned homepage, docs layout, and footer.
 - [new Parcel guide]({{< docsref "/customize/overview" >}}) 추가.
 - [new Customize section]({{< docsref "/customize/overview" >}}) 추가하고, [v4's Theming page](https://getbootstrap.com/docs/4.6/getting-started/theming/) 대체하여, Sass, 글로벌 설정 옵션, 색상 조합, CSS 변수 등의 세부사항 추가.
 - 모든 폼 문서를 [new Forms section]({{< docsref "/forms/overview" >}})으로 재편성하여 콘텐츠를 좀 더 집중적인 페이지로 재편성.
@@ -401,7 +401,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - <span class="badge text-bg-danger">중요 변경사항</span> 인쇄 클래스와 `$enable-print-styles` 변수를 삭제하였습니다. 인쇄 표시 클래스는 아직 남아 있습니다. [#28339](https://github.com/twbs/bootstrap/pull/28339).
 
-- <span class="badge text-bg-danger">중요 변경사항</span> `color()`, `theme-color()`, 그리고 `gray()`의 함수를 폐지하고 변수를 사용하도록 하였습니다.[#29083](https://github.com/twbs/bootstrap/pull/29083).
+- <span class="badge text-bg-danger">중요 변경사항</span> `.pre-scrollable` 클래스 삭제. [#29135](https://github.com/twbs/bootstrap/pull/29135)
 
 - <span class="badge text-bg-danger">중요 변경사항</span> `theme-color-level()` 함수를 `color-level()`로 변경하고, `$theme-color`의 색상뿐만 아니라 임의의 색을 받을수 있게 변경하였습니다. [#29083](https://github.com/twbs/bootstrap/pull/29083) **주의:** `v5.0.0-alpha3` 이후 `color-level()`은 삭제되었습니다.
 
@@ -459,7 +459,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - **[RFS]({{< docsref "/getting-started/rfs" >}})가 기본으로 활성화 되었습니다.** Headings using the `font-size()` 믹스인을 사용한 제목은 뷰포트에 맞추어 자동적으로 `font-size`를 조정합니다. _이 기능은 이전에 v4에서 opt-in 이었습니다._
 
-- <span class="badge text-bg-danger">중요 변경사항</span> `$display-*` 변수를 바꾸기 위해 디스플레이 타이포그래피를 정비하고 `$display-font-sizes` Sass 맵을 사용합니다. 또한 `$display-*-weight` 변수를 삭제하고 단일 `$display-font-weight`로 변경하여 글꼴의 크기를 조정했습니다.
+- <span class="badge text-warning-emphasis bg-warning-subtle">지원 중단</span> `.text-muted` 유틸리티와 `$text-muted` Sass 변수가 더 이상 사용되지 않으며 `.text-body-secondary` 및 `$body-secondary-color`로 대체되었습니다. Also removed the individual `$display-*-weight` variables for a single `$display-font-weight` and adjusted `font-size`s.
 
 - 새로운 `.display-*` 크기로, `.display-5`와 `.display-6`를 추가했습니다.
 
@@ -475,11 +475,11 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 테이블 셀의 패딩 변수를 `-y`와 `-x`로 분할 했습니다.
 
-- <span class="badge text-bg-danger">중요 변경사항</span> `.pre-scrollable` 클래스 삭제. [#29135](https://github.com/twbs/bootstrap/pull/29135)
-
-- <span class="badge text-bg-danger">중요 변경사항</span> `.text-*` 유틸리티는 링크에 호버와 포커스 상태를 추가하지 않습니다. 대신 `.link-*` 도우미 클래스를 사용할 수 있습니다.[#29267](https://github.com/twbs/bootstrap/pull/29267)
-
 - <span class="badge text-bg-danger">중요 변경사항</span> `.text-justify` 클래스 삭제. [#29793](https://github.com/twbs/bootstrap/pull/29793)
+
+- <span class="badge text-bg-danger">Breaking</span> `.text-*` utilities do not add hover and focus states to links anymore. `.link-*` helper classes can be used instead. [See #29267](https://github.com/twbs/bootstrap/pull/29267)
+
+- <span class="badge text-bg-danger">중요 변경사항</span> 조적식(Masonry) 레이아웃에 유리하도록 `.card-columns` 삭제. [#28922](https://github.com/twbs/bootstrap/pull/28922).
 
 - <span class="badge text-bg-danger">중요 변경사항</span> ~~`<hr>` elements now use `height` instead of `border` to better support the `size` attribute. This also enables use of padding utilities to create thicker dividers (e.g., `<hr class="py-1">`).~~
 
@@ -491,7 +491,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 수평 방항으로 특화된 변수, 유틸리티 그리고 믹스인의 이름이 플레스 박스의 레이아웃에서 볼수 있는 - 예를 들어, `left` 와 `right` 대신에 `start`와 `end`과 같이 - 논리적인 속성으로 변경되었습니다.
 
-### 폼
+### Forms
 
 - **새로운 플로팅 폼 추가!** 플로팅 라벨의 예시를 완전히 지원되는 폼 컴포넌트로 승격시켰습니다. [새로운 플로팅 라벨 페이지 확인하러 가기]({{< docsref "/forms/floating-labels" >}})
 
@@ -520,13 +520,13 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 입력 그룹 스타일을 포함하여, `scss/forms/` 아래의 Sass 파일을 재배치 하였습니다.
 
-<hr class="my-5">
+<hr class="my-5" />
 
 ### 컴포넌트
 
 - 경고창, 브레드크럼, 카드, 드롭다운, 목록 그룹, 모달, 팝오버 그리고 툴팁의 `padding` 값을 `$spacer` 변수를 기반으로 통일. [#30564](https://github.com/twbs/bootstrap/pull/30564).
 
-#### 아코디언
+#### Accordion
 
 - [새로운 아코디언 컴포넌트]({{< docsref "/components/accordion" >}}) 추가.
 
@@ -536,7 +536,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 각 경고창에서 `currentColor`를 사용하게 되어 `<hr>` 사용자 정의 스타일은 삭제.
 
-#### 배지
+#### Badges
 
 - <span class="badge text-bg-danger">중요 변경사항</span> 배경 유틸리티의 모든 `.badge-*` 색상 클래스 삭제 (예를 들어, `.badge-primary` 대신 `.bg-primary` 사용).
 
@@ -546,7 +546,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 배지의 기본 패딩을`.25em`/`.5em`에서 `.35em`/`.65em`으로 변경.
 
-#### 브레드크럼
+#### Breadcrumbs
 
 - `padding`, `background-color`, 그리고 `border-radius`를 제거하여 브레드크럼의 기본 모양을 단순화했습니다.
 
@@ -568,7 +568,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - <span class="badge text-bg-danger">중요 변경사항</span> 그리드에 유리하게 `.card-deck`을 삭제. card decks 재현을 위해 부모에 `.row-cols-*` 컨테이너를 추가하고 카드를 column 클래스로 감쌉니다. (반응형 정렬을 보다 효과적으로 제어할 수 있습니다).
 
-- <span class="badge text-bg-danger">중요 변경사항</span> 조적식(Masonry) 레이아웃에 유리하도록 `.card-columns` 삭제. [#28922](https://github.com/twbs/bootstrap/pull/28922).
+- <span class="badge text-bg-danger">중요 변경사항</span> `.rounded-sm`과 `rounded-lg`를 삭제하고, 스케일로서 새로운 클래스 `.rounded-0`부터 `.rounded-3`을 도입하였습니다. [#31687](https://github.com/twbs/bootstrap/pull/31687).
 
 - <span class="badge text-bg-danger">중요 변경사항</span> `.card` 기반의 아코디언을 [새로운 아코디언 컴포넌트]({{< docsref "/components/accordion" >}})로 교체히였습니다.
 
@@ -586,9 +586,9 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 어두운 배경에서 고대비 닫기 아이콘을 활성화하려고 `filter: invert(1)`를 사용한 새로운 `.btn-close-white` 변형 클래스가 추가되었습니다.
 
-#### 콜랩스
+#### Collapse
 
-- 아코디언에 스크롤 고정 장치가 삭제 되었습니다.
+- Removed scroll anchoring for accordions.
 
 #### 드롭다운
 
@@ -608,7 +608,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 드롭다운이 이제 `<li>`에 싸여진 `.dropdown-item`를 지원합니다.
 
-#### 점보트론
+#### Jumbotron
 
 - <span class="badge text-bg-danger">중요 변경사항</span> 유틸리티로 만들수 있기 때문에 점보트론 컴포넌트는 삭제되었습니다. [데모로 새로운 점보트론의 사용을 확인해 주세요.]({{< docsref "/examples/jumbotron" >}})
 
@@ -623,7 +623,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 #### 내비게이션 바
 
 - <span class="badge text-bg-danger">중요 변경사항</span> Navbars now require a container within (to drastically simplify spacing requirements and CSS required).
-- <span class="badge text-bg-danger">중요 변경사항</span> 내비게이션 바는 컨테이너가 필요하게 되어 간격 요건이나 필요한 CSS가 대폭 간소화되었습니다.
+- <span class="badge text-bg-danger">Breaking</span> The `.active` class can no longer be applied to `.nav-item`s, it must be applied directly on `.nav-link`s.
 
 #### 오프캔버스
 
@@ -635,7 +635,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 페이지네이션 링크에 `트랜지션`을 추가하였습니다.
 
-#### 팝오버
+#### Popovers
 
 - <span class="badge text-bg-danger">중요 변경사항</span> 기본 팝오버 템플릿의 `.arrow` 이름을 `.popover-arrow`로 변경하였습니다.
 
@@ -655,7 +655,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 토스트에서 `overflow: hidden`을 삭제하고 `calc()` 함수로 적절한 `border-radius`를 대체하였습니다.
 
-#### 툴팁
+#### Tooltips
 
 - <span class="badge text-bg-danger">중요 변경사항</span> 기본 툴팁 템플렛에서 `.arrow` 이름을 `.tooltip-arrow`으로 변경하였습니다.
 
@@ -666,11 +666,10 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 ### 유틸리티
 
 - <span class="badge text-bg-danger">중요 변경사항</span> RTL 지원이 추가됨에 따라 방향적인 이름 대신 논리적인 속성명으로 여러 유틸리티의 이름이 변경되었습니다:
-  - `.left-*`와 `.right-*`에서 `.start-*`와 `.end-*`로 변경.
   - `.float-left`와 `.float-right`에서 `.float-start`와 `.float-end`로 변경.
   - `.border-left`와 `.border-right`에서 `.border-start`와 `.border-end`로 변경.
-  - `.rounded-left`와 `.rounded-right`에서 `.rounded-start`와 `.rounded-end`로 변경.
-  -`.ml-*`과 `.mr-*`에서 `.ms-*`와 `.me-*`로 변경.
+  - `.left-*`와 `.right-*`에서 `.start-*`와 `.end-*`로 변경.
+  - -`.ml-*`과 `.mr-*`에서 `.ms-*`와 `.me-*`로 변경.
   - `.pl-*`과 `.pr-*`에서 `.ps-*`와 `.pe-*`로 변경.
   - `.text-left`와 `.text-right`에서 `.text-start`와 `.text-end`로 변경.
 
@@ -696,7 +695,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - CSS 그리드와 flexbox 레이아웃용 표시를 위한 `.d-grid` 유틸리티와 새로운 `gap` 유틸리티(`.gap`)를 추가하였습니다.
 
-- <span class="badge text-bg-danger">중요 변경사항</span> `.rounded-sm`과 `rounded-lg`를 삭제하고, 스케일로서 새로운 클래스 `.rounded-0`부터 `.rounded-3`을 도입하였습니다. [#31687](https://github.com/twbs/bootstrap/pull/31687).
+- <span class="badge text-bg-danger">중요 변경사항</span> `.text-*` 유틸리티는 링크에 호버와 포커스 상태를 추가하지 않습니다. 대신 `.link-*` 도우미 클래스를 사용할 수 있습니다.[#29267](https://github.com/twbs/bootstrap/pull/29267)
 
 - 새로운 `line-height` 유틸리티를 추가하였습니다: `.lh-1`, `.lh-sm`, `.lh-base`와 `.lh-lg`. [자세히 보기]({{< docsref "/utilities/text#line-height" >}}).
 
@@ -704,7 +703,7 @@ Bootstrap 6까지는 CSS 변수 사용이 다소 불완전할 것입니다. 전�
 
 - 컨테이너 작업에도 사용할 수 있도록 `.visually-hidden-focusable` 도우미를 `:focus-within`로 확장하였습니다.
 
-## 도우미
+### Helpers
 
 - <span class="badge text-bg-danger">중요 변경사항</span> 더욱 편리한 CSS 변수 추가로 동작이 개선된 **Responsive embed가 [ratio 도우미]({{< docsref "/helpers/ratio" >}})** 로 이름이 변경되었습니다.
   - 비율을 나타내는 클래스가 `by`에서 `x`로 이름이 변경되었습니다. 예를 들어, `.ratio-16by9`는 `.ratio-16x9`가 되었습니다.
