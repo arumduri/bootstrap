@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 토스트
-title_en: Toasts
+title: Toasts
 description: 가볍고 쉽게 재정의할 수 있는 알림메시로 푸시 알림을 보냅니다.
 group: components
 toc: true
@@ -20,7 +19,7 @@ toc: true
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## 예시
+## Examples
 
 ### 기본
 
@@ -46,7 +45,7 @@ toc: true
 이전에 스크립트는 토스트를 완전히 숨기기 위해 (`opacity:0`이 아닌 `display:none`으로) `.hide` 클래스를 동적으로 추가했습니다. 이것은 이제 더 이상 필요하지 않습니다. 그러나 이전 버전과의 호환성을 위해 스크립트는 다음 메이저 버전 전까지 클래스를 계속 토글합니다 (실제로 필요하지는 않음).
 {{< /callout >}}
 
-### 실시간
+### Live example
 
 아래 버튼을 클릭하면 기본적으로 숨겨져 있는 알림 (오른쪽 하단 모서리에 있는 유틸리티와 함께 ​​위치함)을 표시합니다.
 
@@ -92,7 +91,7 @@ toc: true
 
 ### 반투명
 
-토스트는 아래의 콘텐츠와 어울려져 보이도록 약간 비치게 보여집니다.
+Toasts are slightly translucent to blend in with what's below them.
 
 {{< example class="bg-dark" >}}
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -108,9 +107,9 @@ toc: true
 </div>
 {{< /example >}}
 
-### 중첩
+### 트리거
 
-토스트를 `toast container`로 감싸면 여러 개 사용할 수 있습니다.
+You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.
 
 {{< example >}}
 <div class="toast-container position-static">
@@ -283,7 +282,7 @@ toc: true
 
 ## 접근성
 
-토스트는 방텍스트가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 `aria-atomic="true"`를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 콘텐츠 일부만을 갱신한 경우나 같은 토스트의 콘텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용해 주세요.
+토스트는 방텍스트가 사용자에게 방해가 되지 않도록 하기 위해 스크린 리더나 동일한 지원 기술을 사용하는 사람을 돕기 위해 토스트를 [`aria-live` region](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)로 감싸줘야 합니다. 라이브 리젼으로의 변경(토스트 컴포넌트 주입/갱신 등)은 사용자의 포커스를 이동시키거나 사용자를 중단시키지 않고 스크린 리더에 의해 자동으로 안내됩니다. 게다가 `aria-atomic="true"`를 포함함으로써 변경된 내용만 안내되는것이 아니라 토스트 전체가 항상 하나의(atomic) 유닛으로서 안내되게 됩니다.(토스트의 콘텐츠 일부만을 갱신한 경우나 같은 토스트의 콘텐츠를 나중의 시점에서 표시한 경우 등 문제가 생길수 있습니다) 필요한 정보가 프로세스에 중요한 경우, 예를 들어 폼 오류 목록 등의 경우는 토스트 대신 [alert component]({{< docsref "/components/alerts" >}})를 사용해 주세요. If the information needed is important for the process, e.g. for a list of errors in a form, then use the [alert component]({{< docsref "/components/alerts" >}}) instead of toast.
 
 토스트가 생성되거나 업데이트 되기 *전*에 라이브리전이 마크업에 존재해야 한다는 점에 주의하십시오. 두 가지를 동시에 동적으로 생성하여 페이지에 주입하면 일반적으로 지원기술을 통해 공지되지 않습니다.
 
@@ -338,7 +337,7 @@ const toastElList = document.querySelectorAll('.toast')
 const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, option))
 ```
 
-### 트리거
+### Triggers
 
 {{% js-dismiss "toast" %}}
 
@@ -349,11 +348,11 @@ const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, o
 {{< /markdown >}}
 
 {{< bs-table "table" >}}
-| 이름 | 유형 | 기본값 | 설명 |
-| --- | --- | --- | --- |
-| `animation` | boolean | `true` | 토스트에 CSS 페이드 전환을 적용합니다. |
-| `autohide` | boolean | `true` | 지연 후 자동으로 토스트를 숨깁니다. |
-| `delay` | number | `5000` | 토스트를 숨기기 전 지연 시간(밀리초)을 설정합니다. |
+| 이름          | 유형      | 기본값    | 설명                            |
+| ----------- | ------- | ------ | ----------------------------- |
+| `animation` | boolean | `true` | 토스트에 CSS 페이드 전환을 적용합니다.       |
+| `autohide`  | boolean | `true` | 지연 후 자동으로 토스트를 숨깁니다.          |
+| `delay`     | number  | `5000` | 토스트를 숨기기 전 지연 시간(밀리초)을 설정합니다. |
 {{< /bs-table >}}
 
 ### 메소드
@@ -363,25 +362,25 @@ const toastList = [...toastElList].map(toastEl => new bootstrap.Toast(toastEl, o
 {{< /callout >}}
 
 {{< bs-table "table" >}}
-| 방법 | 설명 |
-| --- | --- |
-| `dispose` | 요소의 토스트를 숨깁니다. 토스트는 DOM에 남아 있지만 더 이상 표시되지 않습니다. |
-| `getInstance` | *정적* 메서드를 사용하여 DOM 엘리먼트와 연관된 토스트 인스턴스를 가져올 수 있습니다. <br> 예: `const myToastEl = document.getElementById('myToastEl')` `const myToast = bootstrap.Toast.getInstance(myToastEl)`는 Bootstrap 토스트 인스턴스를 반환합니다. |
+| 방법                    | 설명                                                                                                                                                                                                                                         |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `dispose`             | 요소의 토스트를 숨깁니다. 토스트는 DOM에 남아 있지만 더 이상 표시되지 않습니다.                                                                                                                                                                                            |
+| `getInstance`         | *정적* 메서드를 사용하여 DOM 엘리먼트와 연관된 토스트 인스턴스를 가져올 수 있습니다. <br> 예: `const myToastEl = document.getElementById('myToastEl')` `const myToast = bootstrap.Toast.getInstance(myToastEl)`는 Bootstrap 토스트 인스턴스를 반환합니다.                             |
 | `getOrCreateInstance` | *정적* 메서드를 사용하여 DOM 요소와 연결된 토스트 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. <br>`const myToastEl = document.getElementById('myToastEl')` `const myToast = bootstrap.Toast.getOrCreateInstance(myToastEl)`는 Bootstrap 토스트 인스턴스를 반환합니다. |
-| `hide` | 요소의 토스트를 숨깁니다. **토스트가 실제로 숨겨지기 전**(즉, `hidden.bs.toast` 이벤트가 발생하기 전) 호출자에게 반환합니다. `autohide`를 `false`로 설정한 경우 이 메서드를 수동으로 호출해야 합니다. |
-| `isShown` | 토스트의 가시성 상태에 따라 boolean을 반환합니다. |
-| `show` | 요소의 토스트를 표시합니다. **토스트가 실제로 표시되기 전**(즉, `shown.bs.toast` 이벤트가 발생하기 전) 호출자에게 반환합니다. 이 메서드는 수동으로 호출해야 하며, 그렇지 않으면 토스트가 표시되지 않습니다. |
+| `hide`                | 요소의 토스트를 숨깁니다. **토스트가 실제로 숨겨지기 전**(즉, `hidden.bs.toast` 이벤트가 발생하기 전) 호출자에게 반환합니다. `autohide`를 `false`로 설정한 경우 이 메서드를 수동으로 호출해야 합니다.                                                                                                        |
+| `isShown`             | 토스트의 가시성 상태에 따라 boolean을 반환합니다.                                                                                                                                                                                                            |
+| `show`                | 요소의 토스트를 표시합니다. **토스트가 실제로 표시되기 전**(즉, `shown.bs.toast` 이벤트가 발생하기 전) 호출자에게 반환합니다. 이 메서드는 수동으로 호출해야 하며, 그렇지 않으면 토스트가 표시되지 않습니다.                                                                                                             |
 {{< /bs-table >}}
 
 ### 이벤트
 
 {{< bs-table "table" >}}
-| 이벤트 | 설명 |
-| --- | --- |
-| `hide.bs.toast` | 이 이벤트는 `hide` 인스턴스 메서드가 호출될 때 즉시 발생합니다. |
-| `hidden.bs.toast` | 이 이벤트는 토스트가 사용자에게 숨겨지는 것이 완료되면 발생합니다. |
-| `show.bs.toast` | 이 이벤트는 `show` 인스턴스 메서드가 호출될 때 즉시 발생합니다. |
-| `shown.bs.toast` | 이 이벤트는 토스트가 사용자에게 표시되었을 때 발생합니다. |
+| 이벤트               | 설명                                      |
+| ----------------- | --------------------------------------- |
+| `hide.bs.toast`   | 이 이벤트는 `hide` 인스턴스 메서드가 호출될 때 즉시 발생합니다. |
+| `hidden.bs.toast` | 이 이벤트는 토스트가 사용자에게 숨겨지는 것이 완료되면 발생합니다.   |
+| `show.bs.toast`   | 이 이벤트는 `show` 인스턴스 메서드가 호출될 때 즉시 발생합니다. |
+| `shown.bs.toast`  | 이 이벤트는 토스트가 사용자에게 표시되었을 때 발생합니다.        |
 {{< /bs-table >}}
 
 ```js
