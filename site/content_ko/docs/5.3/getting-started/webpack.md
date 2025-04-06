@@ -1,7 +1,7 @@
 ---
 layout: docs
-title: Bootstrap & Webpack
-description: Webpack을 사용하여 프로젝트에 Bootstrap의 CSS와 JavaScript를 포함하고 번들링하는 방법에 대한 공식 가이드입니다.
+title: Bootstrap and Webpack
+description: The official guide for how to include and bundle Bootstrap's CSS and JavaScript in your project using Webpack.
 group: getting-started
 toc: true
 thumbnail: guides/bootstrap-webpack@2x.png
@@ -10,50 +10,50 @@ thumbnail: guides/bootstrap-webpack@2x.png
 <img class="mb-4 img-fluid rounded-3" srcset="/docs/{{< param docs_version  mark=" />}}/assets/img/guides/bootstrap-webpack.png, /docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack@2x.png 2x" src="/docs/{{< param docs_version >}}/assets/img/guides/bootstrap-webpack.png" width="2000" height="1000" alt="">
 
 {{< callout >}}
-**끝으로 건너뛰고 싶으신가요?** 이 가이드의 소스 코드와 워킹 데모를 [twbs/examples 리포지토리](https://github.com/twbs/examples/tree/main/webpack)에서 다운로드 하세요. [StackBlitz에서 예제를 열어](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) 실시간으로 편집할 수도 있습니다.
+**Want to skip to the end?** Download the source code and working demo for this guide from the [twbs/examples repository](https://github.com/twbs/examples/tree/main/webpack). You can also [open the example in StackBlitz](https://stackblitz.com/github/twbs/examples/tree/main/webpack?file=index.html) for live editing.
 {{< /callout >}}
 
-## 설정하기
+## Setup
 
-Bootstrap으로 웹팩 프로젝트를 처음부터 구축하는 것이라 실제로 시작하기 전에 몇 가지 전제 조건과 선행 단계가 필요합니다. 이 가이드를 사용하려면 Node.js가 설치되어 있고 터미널에 어느 정도 익숙해야 합니다.
+We're building a Webpack project with Bootstrap from scratch, so there are some prerequisites and upfront steps before we can really get started. This guide requires you to have Node.js installed and some familiarity with the terminal.
 
-1. `my-project` 폴더를 만들고 npm이 모든 대화형 질문을 하지 않도록 `-y` 인수를 사용하여 초기화 합니다.
+1. **Create a project folder and set up npm.** We'll create the `my-project` folder and initialize npm with the `-y` argument to avoid it asking us all the interactive questions.
 
    ```sh
    mkdir my-project && cd my-project
    npm init -y
    ```
 
-2. **Webpack을 설치합니다.** 다음으로 Webpack 개발 종속 요소를 설치해야 합니다: Webpack의 핵심인 `webpack`, 터미널에서 Webpack 명령을 실행하기 위한 `webpack-cli`, 로컬 개발 서버를 실행하기 위한 `webpack-dev-server`입니다. 추가적으로 `src` 폴더에 `index.html`을 저장하기 위해서 `html-webpack-plugin`을 설치합니다. 이러한 종속성이 프로덕션이 아닌 개발 전용임을 알리기 위해 `--save-dev`를 사용합니다.
+2. **Install Webpack.** Next we need to install our Webpack development dependencies: `webpack` for the core of Webpack, `webpack-cli` so we can run Webpack commands from the terminal, and `webpack-dev-server` so we can run a local development server. Additionally, we'll install `html-webpack-plugin` to be able to store our `index.html` in `src` directory instead of the default `dist` one. We use `--save-dev` to signal that these dependencies are only for development use and not for production.
 
    ```sh
    npm i --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin
    ```
 
-3. **Bootstrap을 설치합니다.** 이제 Bootstrap을 설치할 수 있습니다. 드롭다운, 팝오버, 툴팁의 위치가 Popper에 따라 달라지므로 Popper도 설치합니다. 이러한 컴포넌트를 사용할 계획이 없다면 여기서 Popper를 생략할 수 있습니다.
+3. **Install Bootstrap.** Now we can install Bootstrap. We'll also install Popper since our dropdowns, popovers, and tooltips depend on it for their positioning. If you don't plan on using those components, you can omit Popper here.
 
    ```sh
    npm i --save bootstrap @popperjs/core
    ```
 
-4. **추가 종속 요소를 설치합니다.** Webpack과 Bootstrap 외에도 Bootstrap의 CSS와 JS를 웹팩으로 제대로 가져와 번들링하려면 몇 가지 종속성이 더 필요합니다. 여기에는 Sass, 일부 로더 및 자동 프리픽서가 포함됩니다.
+4. **Install additional dependencies.** In addition to Webpack and Bootstrap, we need a few more dependencies to properly import and bundle Bootstrap's CSS and JS with Webpack. These include Sass, some loaders, and Autoprefixer.
 
    ```sh
    npm i --save-dev autoprefixer css-loader postcss-loader sass sass-loader style-loader
    ```
 
-이제 필요한 모든 종속 요소가 설치되었으므로 프로젝트 파일을 만들고 Bootstrap을 가져올 수 있습니다.
+Now that we have all the necessary dependencies installed, we can get to work creating the project files and importing Bootstrap.
 
-## 프로젝트 구조
+## Project structure
 
-이미 `my-project` 폴더를 생성하고 npm을 초기화했습니다. 이제 프로젝트 구조를 완성하기 위해 `src` 및 `dist` 폴더도 생성하겠습니다. `my-project`에서 다음을 실행하거나 아래에 표시된 폴더와 파일 구조를 수동으로 생성합니다.
+We've already created the `my-project` folder and initialized npm. Now we'll also create our `src` and `dist` folders to round out the project structure. Run the following from `my-project`, or manually create the folder and file structure shown below.
 
 ```sh
 mkdir {src,src/js,src/scss}
 touch src/index.html src/js/main.js src/scss/styles.scss webpack.config.js
 ```
 
-완료되면 전체 프로젝트의 모습은 다음과 같아야 합니다:
+When you're done, your complete project should look like this:
 
 ```text
 my-project/
@@ -68,13 +68,13 @@ my-project/
 └── webpack.config.js
 ```
 
-이 시점에서 모든 것이 올바른 위치에 있지만 아직 `webpack.config.js`를 채우지 않았기 때문에 Webpack이 작동하지 않습니다.
+At this point, everything is in the right place, but Webpack won't work because we haven't filled in our `webpack.config.js` yet.
 
-## Webpack 구성
+## Configure Webpack
 
-종속성이 설치되고 코딩을 시작할 수 있는 프로젝트 폴더가 준비되었으므로 이제 Webpack을 구성하고 로컬에서 프로젝트를 실행할 수 있습니다.
+With dependencies installed and our project folder ready for us to start coding, we can now configure Webpack and run our project locally.
 
-1. **에디터에서 `webpack.config.js`를 엽니다.** 비어 있으므로 서버를 시작할 수 있도록 상용구 구성을 추가해야 합니다. 이 구성 부분은 Webpack이 프로젝트의 JavaScript를 어디에서 찾을지, 컴파일된 코드를 어디에 출력할지(`dist`), 개발 서버가 어떻게 동작해야 하는지(핫 리로드를 통해 `dist` 폴더에서 가져오기)를 알려줍니다.
+1. **Open `webpack.config.js` in your editor.** Since it's blank, we'll need to add some boilerplate config to it so we can start our server. This part of the config tells Webpack where to look for our project's JavaScript, where to output the compiled code to (`dist`), and how the development server should behave (pulling from the `dist` folder with hot reload).
 
    ```js
    'use strict'
@@ -100,7 +100,7 @@ my-project/
    }
    ```
 
-2. **다음으로 `src/index.html`을 작성합니다.** 이것은 이후 단계에서 추가할 번들 CSS와 JS를 활용하기 위해 Webpack이 브라우저에 로드할 HTML 페이지입니다. 그러기 전에 렌더링할 무언가를 제공하고 이전 단계의 `output` JS를 포함시켜야 합니다.
+2. **Next we fill in our `src/index.html`.** This is the HTML page Webpack will load in the browser to utilize the bundled CSS and JS we'll add to it in later steps. Before we can do that, we have to give it something to render and include the `output` JS from the previous step.
 
    ```html
    <!doctype html>
@@ -119,9 +119,9 @@ my-project/
    </html>
    ```
 
-   여기에 `div class="container"`와 `<button>`을 사용하여 약간의 Bootstrap 스타일링을 포함시켜 웹팩에서 Bootstrap의 CSS가 로드될 때를 확인할 수 있도록 했습니다.
+   We're including a little bit of Bootstrap styling here with the `div class="container"` and `<button>` so that we see when Bootstrap's CSS is loaded by Webpack.
 
-3. `package.json`을 열고 아래에 표시된 `start` 스크립트를 추가합니다(이미 테스트 스크립트가 있어야 합니다). 이 스크립트를 사용하여 로컬 Webpack 개발 서버를 시작하겠습니다. 아래의 `build` 스크립트를 추가해서 프로젝트를 빌드할 수도 있습니다.
+3. **Now we need an npm script to run Webpack.** Open `package.json` and add the `start` script shown below (you should already have the test script). We'll use this script to start our local Webpack dev server. You can also add a `build` script shown below to build your project.
 
    ```json
    {
@@ -135,7 +135,7 @@ my-project/
    }
    ```
 
-4. **마지막으로 Webpack을 시작합니다.** 터미널의 `my-project` 폴더에서 새로 추가된 npm 스크립트를 실행합니다:
+4. **And finally, we can start Webpack.** From the `my-project` folder in your terminal, run that newly added npm script:
 
    ```sh
    npm start
@@ -143,13 +143,13 @@ my-project/
 
    ![](/docs/{{< param docs_version  mark=) {.img-fluid}}}/assets/img/guides/webpack-dev-server.png" alt="Webpack dev server running">
 
-이 가이드의 다음이자 마지막 섹션에서는 Webpack 로더를 설정하고 Bootstrap의 모든 CSS와 JavaScript를 가져오겠습니다.
+In the next and final section to this guide, we'll set up the Webpack loaders and import all of Bootstrap's CSS and JavaScript.
 
-## Bootstrap 가져오기
+## Import Bootstrap
 
-Bootstrap을 Webpack으로 가져오려면 첫 번째 섹션에서 설치한 로더가 필요합니다. npm을 사용하여 설치했지만 이제 이를 사용하도록 Webpack을 구성해야 합니다.
+Importing Bootstrap into Webpack requires the loaders we installed in the first section. We've installed them with npm, but now Webpack needs to be configured to use them.
 
-1. **`webpack.config.js`에서 로더를 설정합니다.** 이제 구성 파일이 완성되었으며 아래 스니펫과 일치해야 합니다. 여기서 유일하게 새로 추가된 부분은 `module` 섹션입니다.
+1. **Set up the loaders in `webpack.config.js`.** Your configuration file is now complete and should match the snippet below. The only new part here is the `module` section.
 
    ```js
    'use strict'
@@ -208,18 +208,18 @@ Bootstrap을 Webpack으로 가져오려면 첫 번째 섹션에서 설치한 로
    }
    ```
 
-   이 모든 로더가 필요한 이유를 요약하면 다음과 같습니다. `style-loader`는 HTML 페이지의 `<head>`에 있는 `<style>` 요소에 CSS를 삽입하고, `css-loader`는 `@import`와 `url()`을 사용하는 데 도움을 주며, `postcss-loader`는 Autoprefixer에 필요하고, `sass-loader`는 Sass를 사용할 수 있도록 합니다.
+   Here's a recap of why we need all these loaders. `style-loader` injects the CSS into a `<style>` element in the `<head>` of the HTML page, `css-loader` helps with using `@import` and `url()`, `postcss-loader` is required for Autoprefixer, and `sass-loader` allows us to use Sass.
 
-2. **이제 Bootstrap의 CSS를 가져와 보겠습니다.** Bootstrap의 모든 소스 Sass를 가져오려면 `src/scss/styles.scss`에 다음을 추가하세요.
+2. **Now, let's import Bootstrap's CSS.** Add the following to `src/scss/styles.scss` to import all of Bootstrap's source Sass.
 
    ```scss
    // Import all of Bootstrap's CSS
    @import "bootstrap/scss/bootstrap";
    ```
 
-   *원하는 경우 스타일시트를 개별적으로 가져올 수도 있습니다. 자세한 내용은 [Sass import 문서를 참조하세요.]({{< docsref "/customize/sass#importing" >}})*
+   *You can also import our stylesheets individually if you want. [Read our Sass import docs]({{< docsref "/customize/sass#importing" >}}) for details.*
 
-3. **다음으로 CSS를 로드하고 Bootstrap의 JavaScript를 가져옵니다.** `src/js/main.js`에 다음을 추가하여 CSS를 로드하고 Bootstrap의 모든 JS를 가져옵니다. Popper는 Bootstrap을 통해 자동으로 임포트됩니다.
+3. **Next we load the CSS and import Bootstrap's JavaScript.** Add the following to `src/js/main.js` to load the CSS and import all of Bootstrap's JS. Popper will be imported automatically through Bootstrap.
 
    <!-- eslint-skip -->
    ```js
@@ -230,7 +230,7 @@ Bootstrap을 Webpack으로 가져오려면 첫 번째 섹션에서 설치한 로
    import * as bootstrap from 'bootstrap'
    ```
 
-   필요에 따라 JavaScript 플러그인을 개별적으로 가져와 번들 크기를 줄일 수도 있습니다:
+   You can also import JavaScript plugins individually as needed to keep bundle sizes down:
 
    <!-- eslint-skip -->
    ```js
@@ -240,31 +240,31 @@ Bootstrap을 Webpack으로 가져오려면 첫 번째 섹션에서 설치한 로
    import { Tooltip, Toast, Popover } from 'bootstrap'
    ```
 
-   *Bootstrap의 플러그인 사용 방법에 대한 자세한 내용은 [JavaScript 문서를 참조하세요]({{< docsref "/getting-started/javascript/" >}}) .*
+   *[Read our JavaScript docs]({{< docsref "/getting-started/javascript/" >}}) for more information on how to use Bootstrap's plugins.*
 
-4. **이제 끝났습니다! 🎉** Bootstrap의 소스 Sass와 JS가 완전히 로드되면 이제 로컬 개발 서버는 다음과 같은 모습일 것입니다:
+4. **And you're done! 🎉** With Bootstrap's source Sass and JS fully loaded, your local development server should now look like this:
 
    ![](/docs/{{< param docs_version  mark=) {.img-fluid}}}/assets/img/guides/webpack-dev-server-bootstrap.png" alt="Webpack dev server running with Bootstrap">
 
-   이제 사용하려는 Bootstrap 컴포넌트를 추가하기 시작할 수 있습니다. 추가 커스텀 Sass를 포함시키고 필요한 Bootstrap의 CSS 및 JS 부분만 임포트하여 빌드를 최적화하는 방법은 [Webpack 예제 프로젝트](https://github.com/twbs/examples/tree/main/webpack)를 확인하세요.
+   Now you can start adding any Bootstrap components you want to use. Be sure to [check out the complete Webpack example project](https://github.com/twbs/examples/tree/main/webpack) for how to include additional custom Sass and optimize your build by importing only the parts of Bootstrap's CSS and JS that you need.
 
-## 프로덕션 최적화
+## Production optimizations
 
-설정에 따라 프로덕션 환경에서 프로젝트를 실행하는 데 유용한 몇 가지 추가 보안 및 속도 최적화를 구현할 수 있습니다. 이러한 최적화는 [Webpack 예제 프로젝트](https://github.com/twbs/examples/tree/main/webpack)에 적용되지 않으며 구현은 사용자의 몫입니다.
+Depending on your setup, you may want to implement some additional security and speed optimizations useful for running the project in production. Note that these optimizations are not applied on [the Webpack example project](https://github.com/twbs/examples/tree/main/webpack) and are up to you to implement.
 
-### CSS 추출
+### Extracting CSS
 
-위에서 구성한 `style-loader`는 번들로 CSS를 편리하게 내보내므로 `dist/index.html`에서 CSS 파일을 수동으로 로드할 필요가 없습니다. 그러나 이 접근 방식은 엄격한 콘텐츠 보안 정책에서는 작동하지 않을 수 있으며, 번들 크기가 커서 애플리케이션에서 병목 현상이 발생할 수 있습니다.
+The `style-loader` we configured above conveniently emits CSS into the bundle so that manually loading a CSS file in `dist/index.html` isn't necessary. This approach may not work with a strict Content Security Policy, however, and it may become a bottleneck in your application due to the large bundle size.
 
-`dist/index.html`에서 직접 로드할 수 있도록 CSS를 분리하려면 `mini-css-extract-loader` 웹팩 플러그인을 사용하세요.
+To separate the CSS so that we can load it directly from `dist/index.html`, use the `mini-css-extract-loader` Webpack plugin.
 
-먼저 플러그인을 설치합니다:
+First, install the plugin:
 
 ```sh
 npm install --save-dev mini-css-extract-plugin
 ```
 
-그런 다음 웹팩 구성에서 플러그인을 인스턴스화하여 사용합니다:
+Then instantiate and use the plugin in the Webpack configuration:
 
 ```diff
 --- a/webpack.config.js
@@ -299,7 +299,7 @@ npm install --save-dev mini-css-extract-plugin
            {
 ```
 
-`npm run build`를 다시 실행하면 `src/js/main.js`에서 가져온 CSS가 모두 포함된 `dist/main.css`라는 파일이 새로 생성될 것입니다. 이제 브라우저에서 `dist/index.html`을 보면 `dist/main.css`에 있는 것처럼 스타일이 누락되어 있을 것입니다. 이렇게 생성된 CSS는 다음과 같이 `dist/index.html`에 포함시킬 수 있습니다:
+After running `npm run build` again, there will be a new file `dist/main.css`, which will contain all of the CSS imported by `src/js/main.js`. If you view `dist/index.html` in your browser now, the style will be missing, as it is now in `dist/main.css`. You can include the generated CSS in `dist/index.html` like this:
 
 ```diff
 --- a/dist/index.html
@@ -314,11 +314,11 @@ npm install --save-dev mini-css-extract-plugin
    <body>
 ```
 
-### SVG 파일 추출하기
+### Extracting SVG files
 
-Bootstrap의 CSS에는 인라인 `data:` URI를 통해 SVG 파일에 대한 여러 참조가 포함되어 있습니다. 프로젝트에 이미지에 대한 `data:` URI를 차단하는 콘텐츠 보안 정책을 정의하면 이러한 SVG 파일이 로드되지 않습니다. Webpack의 에셋 모듈 기능을 사용하여 인라인 SVG 파일을 추출하면 이 문제를 해결할 수 있습니다.
+Bootstrap's CSS includes multiple references to SVG files via inline `data:` URIs. If you define a Content Security Policy for your project that blocks `data:` URIs for images, then these SVG files will not load. You can get around this problem by extracting the inline SVG files using Webpack's asset modules feature.
 
-다음과 같이 인라인 SVG 파일을 추출하도록 Webpack을 구성합니다:
+Configure Webpack to extract inline SVG files like this:
 
 ```diff
 --- a/webpack.config.js
@@ -340,7 +340,7 @@ Bootstrap의 CSS에는 인라인 `data:` URI를 통해 SVG 파일에 대한 여�
          use: [
 ```
 
-`npm run build`를 다시 실행하면 `dist/icons`로 추출되고 CSS에서 적절하게 참조된 SVG 파일을 찾을 수 있습니다.
+After running `npm run build` again, you'll find the SVG files extracted into `dist/icons` and properly referenced from CSS.
 
 {{< markdown >}}
 {{< partial "guide-footer.md" >}}
