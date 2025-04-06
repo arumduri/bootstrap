@@ -1,8 +1,7 @@
 ---
 layout: docs
-title: 범위
-title_en: Range
-description: 사용자 범위 컨트롤을 사용하여 크로스 브라우저에서 일관되게 표시할 수 있으며 맞춤 제작도 가능합니다.
+title: Range
+description: Use our custom range inputs for consistent cross-browser styling and built-in customization.
 group: forms
 toc: true
 ---
@@ -13,7 +12,7 @@ toc: true
 
 {{< example >}}
 <label for="customRange1" class="form-label">Example range</label>
-<input type="range" class="form-range" id="customRange1">
+<input type="range" class="form-range" id="customRange1" />
 {{< /example >}}
 
 ## 비활성화
@@ -22,7 +21,7 @@ toc: true
 
 {{< example >}}
 <label for="disabledRange" class="form-label">Disabled range</label>
-<input type="range" class="form-range" id="disabledRange" disabled>
+<input type="range" class="form-range" id="disabledRange" disabled />
 {{< /example >}}
 
 ## 최소와 최대
@@ -31,7 +30,7 @@ toc: true
 
 {{< example >}}
 <label for="customRange2" class="form-label">Example range</label>
-<input type="range" class="form-range" min="0" max="5" id="customRange2">
+<input type="range" class="form-range" min="0" max="5" id="customRange2" />
 {{< /example >}}
 
 ## 단계
@@ -40,7 +39,7 @@ toc: true
 
 {{< example >}}
 <label for="customRange3" class="form-label">Example range</label>
-<input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+<input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3" />
 {{< /example >}}
 
 ## CSS
