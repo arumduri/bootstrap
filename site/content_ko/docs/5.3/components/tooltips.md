@@ -1,26 +1,26 @@
 ---
 layout: docs
 title: Tooltips
-description: CSS3를 사용한 애니메이션이나 data-bs-attributes를 사용한 CSS와 JavaScript로 사용자 정의 Bootstrap의 툴팁을 추가하기 위한 문서와 예시입니다.
+description: Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for animations and data-bs-attributes for local title storage.
 group: components
 toc: true
 ---
 
-## 개요
+## Overview
 
-툴팁 플러그인을 사용할 때 알아두어야 할 점:
+Things to know when using the tooltip plugin:
 
-- 툴팁의 배치는 서드파티 라이브러리인 [Popper](https://popper.js.org/)에 의존하고 있습니다. `bootstrap.js` 앞에 [popper.min.js]({{< param "cdn.popper" >}})를 사용하거나, 팝오버가 포함되어 있는 `bootstrap.bundle.min.js`를 사용해야 합니다.
-- 툴팁은 퍼포먼스를 위해 opt-in 되어 있기 때문에 **스스로 초기화를 해야 합니다.**
-- 길이가 0의 타이틀을 가진 툴팁은 표시되지 않습니다.
-- 더 복잡한 컴포넌트(입력 그룹, 버튼 그룹 등)의 렌더링 문제를 피하기 위해 `container: 'body'`를 지정해 주십시오.
-- 숨겨진 요소에서 툴팁을 트리거 해도 제 기능을 하지 않습니다.
-- `.disabled`나 `disabled` 요소의 툴팁은 그 위(바깥) 요소에서 트리거 해야 합니다.
-- 여러 라인에 걸쳐 있는 하이퍼링크에서 트리거된 툴팁은 중앙에 배치됩니다. 이 동작을 피하기 위해서는 `<a>`에 `white-space: nowrap;`을 사용해 주십시오.
-- 툴팁은 대응 요소가 DOM에서 삭제되기 전에 숨겨야 합니다.
-- 툴팁은 shadow DOM 내의 요소 덕분에 트리거할 수 있습니다.
+- Tooltips rely on the third party library [Popper](https://popper.js.org/) for positioning. You must include [popper.min.js]({{< param "cdn.popper" >}}) before `bootstrap.js`, or use one `bootstrap.bundle.min.js` which contains Popper.
+- Tooltips are opt-in for performance reasons, so **you must initialize them yourself**.
+- Tooltips with zero-length titles are never displayed.
+- Specify `container: 'body'` to avoid rendering problems in more complex components (like our input groups, button groups, etc).
+- Triggering tooltips on hidden elements will not work.
+- Tooltips for `.disabled` or `disabled` elements must be triggered on a wrapper element.
+- When triggered from hyperlinks that span multiple lines, tooltips will be centered. Use `white-space: nowrap;` on your `<a>`s to avoid this behavior.
+- Tooltips must be hidden before their corresponding elements have been removed from the DOM.
+- Tooltips can be triggered thanks to an element inside a shadow DOM.
 
-Got all that? 몇 가지 예를 들어보겠습니다.
+Got all that? Great, let's see how they work with some examples.
 
 {{< callout info >}}
 {{< partial "callouts/info-sanitizer.md" >}}
@@ -34,16 +34,16 @@ Got all that? 몇 가지 예를 들어보겠습니다.
 
 ### Enable tooltips
 
-As mentioned above, you must initialize tooltips before they can be used. 위에서 설명했듯이 팝오버를 사용하려면 사용하기 전에 팝오버를 초기화해주어야 합니다.페이지 상의 모든 툴팁을 초기화 하는 방법 중 하나는 아래처럼 `data-bs-toggle` 속성으로 선택하는 것입니다:
+As mentioned above, you must initialize tooltips before they can be used. One way to initialize all tooltips on a page would be to select them by their `data-bs-toggle` attribute, like so:
 
 ```js
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 ```
 
-### 링크의 툴팁
+### Tooltips on links
 
-아래 링크에 커서를 맞추면 툴팁이 나타납니다:
+Hover over the links below to see tooltips:
 
 {{< example class="tooltip-demo" stackblitz_add_js="true" >}}
 <p class="muted">Placeholder text to demonstrate some <a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip">inline links</a> with tooltips. This is now just filler, no killer. Content placed here just to mimic the presence of <a href="#" data-bs-toggle="tooltip" data-bs-title="Another tooltip">real text</a>. And all that just to give you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how <a href="#" data-bs-toggle="tooltip" data-bs-title="Another one here too">these tooltips on links</a> can work in practice, once you use them on <a href="#" data-bs-toggle="tooltip" data-bs-title="The last tip!">your own</a> site or project.</p>
@@ -53,11 +53,11 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 {{< partial "callouts/warning-data-bs-title-vs-title.md" >}}
 {{< /callout >}}
 
-### 사용자 지정 도구 설명
+### Custom tooltips
 
 {{< added-in "5.2.0" >}}
 
-[CSS 변수](#변수)를 사용하여 툴팁의 모양을 사용자 지정할 수 있습니다. `data-bs-custom-class="custom-tooltip"`로 사용자 정의 클래스를 설정하여 사용자 정의 모양의 범위를 지정하고 이를 사용하여 로컬 CSS 변수를 재정의합니다.
+You can customize the appearance of tooltips using [CSS variables](#variables). We set a custom class with `data-bs-custom-class="custom-tooltip"` to scope our custom appearance and use it to override a local CSS variable.
 
 {{< scss-docs name="custom-tooltip" file="site/assets/scss/_component-examples.scss" >}}
 
@@ -100,7 +100,7 @@ Hover over the buttons below to see the four tooltips directions: top, right, bo
 </button>
 ```
 
-그리고 사용자 정의 HTML을 추가할 수 있습니다:
+And with custom HTML added:
 
 ```html
 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
@@ -108,7 +108,7 @@ Hover over the buttons below to see the four tooltips directions: top, right, bo
 </button>
 ```
 
-SVG에도 가능합니다:
+With an SVG:
 
 <div class="bd-example tooltip-demo">
   <a href="#" class="d-inline-block" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
@@ -121,21 +121,21 @@ SVG에도 가능합니다:
 
 ## CSS
 
-### 변수
+### Variables
 
 {{< added-in "5.2.0" >}}
 
-Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로, 이제 툴팁은 향상된 실시간 사용자 지정을 위해 `.tooltip`의 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
+As part of Bootstrap’s evolving CSS variables approach, tooltips now use local CSS variables on `.tooltip` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="tooltip-css-vars" file="scss/_tooltip.scss" >}}
 
-### Sass 변수
+### Sass variables
 
 {{< scss-docs name="tooltip-variables" file="scss/_variables.scss" >}}
 
-## 사용 방법
+## Usage
 
-툴팁 플러그인은 필요에 따라 콘텐츠와 마크업을 생성하고 기본 값으로는 트리거 요소 뒤에 툴팁을 배치합니다. JavaScript를 사용해 툴팁을 트리거 합니다:
+The tooltip plugin generates content and markup on demand, and by default places tooltips after their trigger element. Trigger the tooltip via JavaScript:
 
 ```js
 const exampleEl = document.getElementById('example')
@@ -143,7 +143,7 @@ const tooltip = new bootstrap.Tooltip(exampleEl, options)
 ```
 
 {{< callout warning >}}
-부모 컨테이너가 `overflow: auto` 혹은 `overflow: scroll`로 되어 있으면 툴팁의 위치가 자동으로 변경되려고는 하지만, 위치는 원래대로 유지되고 있습니다. 그것을 해결하기 위해서는, [`boundary` 옵션](https://popper.js.org/docs/v2/modifiers/flip/#boundary) (`popperConfig` 옵션을 사용한 flip 제어자의 경우)을 기본값으로 가지고 있는 `'clippingParents'`를 임의의 HTML 요소, 예를 들어 `document.body`등으로 오버라이드하여 설정하면 됩니다:
+Tooltips automatically attempt to change positions when a parent container has `overflow: auto` or `overflow: scroll`, but still keeps the original placement's positioning. Set the [`boundary` option](https://popper.js.org/docs/v2/modifiers/flip/#boundary) (for the flip modifier using the `popperConfig` option) to any HTMLElement to override the default value, `'clippingParents'`, such as `document.body`:
 
 ```js
 const tooltip = new bootstrap.Tooltip('#example', {
@@ -152,12 +152,12 @@ const tooltip = new bootstrap.Tooltip('#example', {
 ```
 {{< /callout >}}
 
-### 마크업
+### Markup
 
-툴팁에 필요한 마크업은 툴팁을 작성하고자 하는 HTML 요소의 `data` 속성과 `title` 뿐입니다. 툴팁 마크업은 단순하지만 위치를 지정해야 합니다 (플러그인에 의해 기본 `top`이설정되어 있습니다).
+The required markup for a tooltip is only a `data` attribute and `title` on the HTML element you wish to have a tooltip. The generated markup of a tooltip is rather simple, though it does require a position (by default, set to `top` by the plugin).
 
 {{< callout warning >}}
-**키보드 및 보조 기술 사용자가 툴팁에 액세스할 수 있도록 하려면** 링크 또는 양식 컨트롤과 같이 전통적으로 키보드로 초점을 맞출 수 있고 상호 작용이 가능한 HTML 요소에만 툴팁을 추가하세요. 임의의 HTML 요소(`<span>` 등)는 `tabindex="0"` 속성을 추가하여 포커스가 가능하게 할 수 있지만 이는 키보드 사용자에게 상호작용할 수 없는 요소에 탭 멈춤이 추가되어 키보드 사용자를 곤란하게 하거나 혼란스럽게 할 수 있으며 현재 대부분의 스크린 리더는 이러한 상황에서 툴팁을 제공하지 않습니다. 게다가 툴팁의 트리거로서 `hover`에만 의지해서는 안됩니다. 이것은 키보드 사용자가 툴팁을 트리거 할 수 없게 되기 때문입니다.
+**Keep tooltips accessible to keyboard and assistive technology users** by only adding them to HTML elements that are traditionally keyboard-focusable and interactive (such as links or form controls). While other HTML elements can be made focusable by adding `tabindex="0"`, this can create annoying and confusing tab stops on non-interactive elements for keyboard users, and most assistive technologies currently do not announce tooltips in this situation. Additionally, do not rely solely on `hover` as the trigger for your tooltips as this will make them impossible to trigger for keyboard users.
 {{< /callout >}}
 
 ```html
@@ -173,9 +173,9 @@ const tooltip = new bootstrap.Tooltip('#example', {
 </div>
 ```
 
-### 비활성화 요소
+### Disabled elements
 
-`disabled` 속성을 갖는 요소는 상호작용할 수 없습니다. 즉, 사용자가 포커스를 맞추거나 호버하거나 클릭하여 툴팁 (혹은 팝오버)을 구동할 수 없습니다. 해결책으로는 `<div>` 나 `<span>`으로 툴팁을 트리거하여, 이상적으로 `tabindex="0"`을 사용해서 키보드로 포커스가 가능하도록 해야합니다.
+Elements with the `disabled` attribute aren't interactive, meaning users cannot focus, hover, or click them to trigger a tooltip (or popover). As a workaround, you'll want to trigger the tooltip from a wrapper `<div>` or `<span>`, ideally made keyboard-focusable using `tabindex="0"`.
 
 {{< example class="tooltip-demo" stackblitz_add_js="true" >}}
 <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-title="Disabled tooltip">
@@ -183,46 +183,46 @@ const tooltip = new bootstrap.Tooltip('#example', {
 </span>
 {{< /example >}}
 
-### 옵션
+### Options
 
 {{< markdown >}}
 {{< partial "js-data-attributes.md" >}}
 {{< /markdown >}}
 
 {{< callout warning >}}
-보안상의 이유로, `sanitize`, `sanitizeFn`, `allowList` 옵션을 data 속성으로 지정할 수 없다는 것에 주의해 주세요.
+Note that for security reasons the `sanitize`, `sanitizeFn`, and `allowList` options cannot be supplied using data attributes.
 {{< /callout >}}
 
 
 {{< bs-table "table" >}}
-| 이름                   | 유형                        | 기본값                                                                                                                                                  | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| -------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `allowList`          | object                    | [기본값]({{< docsref "/getting-started/javascript#sanitizer" >}})                                                                                       | 허용된 속성 및 태그가 포함된 개체입니다.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `animation`          | boolean                   | `true`                                                                                                                                               | 도구 설명에 CSS 페이드 전환을 적용합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `boundary`           | string, element           | `'clippingParents'`                                                                                                                                  | 툴팁의 제약 조건 경계를 검사하여 오버플로를 방지할 수 있습니다(Popper의 preventOverflow 수정자에만 적용됨). 기본값은 `'clippingParents'`이며 (JavaScript를 통해서만) HTMLElement 참조를 받을 수 있습니다. 자세한 내용은 Popper의 [detectOverflow 문서](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary)를 참조하세요.                                                                                                                                                                                                       |
-| `container`          | string, element, false    | `false`                                                                                                                                              | 특정 요소에 툴팁을 추가합니다. Example: `container: 'body'`. (예: `container: 'body'`) 이 옵션은 문서 흐름에서 도구 설명을 트리거 요소 근처에 배치할 수 있다는 점에서 특히 유용하며, 창 크기를 조정하는 동안 도구 설명이 트리거 요소에서 멀어지는 것을 방지할 수 있습니다.                                                                                                                                                                                                                                                                                 |
-| `customClass`        | string, function          | `''`                                                                                                                                                 | 툴팁이 표시되면 클래스를 추가합니다. 이러한 클래스는 템플릿에 지정된 모든 클래스에 추가됩니다. 여러 클래스를 추가하려면 `'class-1 class-2'`처럼 공백으로 구분하면 됩니다. 추가 클래스 이름이 포함된 단일 문자열을 반환하는 함수를 전달할 수도 있습니다.                                                                                                                                                                                                                                                                                                             |
-| `delay`              | number, object            | `0`                                                                                                                                                  | 도구 설명 표시/숨기기를 (ms 단위로)지연시키며, 수동 트리거 유형에는 적용되지 않습니다. 숫자를 지정하면 표시/숨기기 모두에 지연이 적용됩니다. 객체 구조는 `delay: { "show": 500, "hide": 100 }`입니다.                                                                                                                                                                                                                                                                                                                               |
-| `fallbackPlacements` | array                     | `['top', 'right', 'bottom', 'left']`                                                                                                                 | 배열에 배치 목록을 제공함으로써 (원하는 순서대로) 대체 배치를 정의합니다. 자세한 내용은 Popper의 [동작 문서](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements)를 참조하세요.                                                                                                                                                                                                                                                                                                                      |
-| `html`               | boolean                   | `false`                                                                                                                                              | 툴팁에서 HTML을 허용합니다. true이면 툴팁의 `title`에 있는 HTML 태그가 툴팁에 렌더링됩니다. false인 경우 `innerText` 속성을 사용하여 DOM에 콘텐츠를 삽입합니다. XSS 공격이 걱정된다면 텍스트를 사용하세요.                                                                                                                                                                                                                                                                                                                           |
-| `offset`             | array, string, function   | `[0, 0]`                                                                                                                                             | 대상에 대한 툴팁의 오프셋입니다. 데이터 속성에 쉼표로 구분된 값으로 문자열을 전달할 수 있습니다 (예: `data-bs-offset="10,20"`). 오프셋을 결정하는 데 함수를 사용하는 경우 Popper 배치, 참조 및 Popper 레코드가 포함된 객체를 첫 번째 인수로 사용하여 호출됩니다. 트리거링 요소 DOM 노드는 두 번째 인수로 전달됩니다. 이 함수는 [스키딩](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1)과 [거리](https://popper.js.org/docs/v2/modifiers/offset/#distance-1)가 포함된 숫자 배열을 반환해야 합니다:. 자세한 내용은 Popper의 [오프셋 문서](https://popper.js.org/docs/v2/modifiers/offset/#options)를 참조하세요. |
-| `placement`          | string, function          | `'top'`                                                                                                                                              | How to position the tooltip: auto, top, bottom, left, right. When `auto` is specified, it will dynamically reorient the tooltip. 함수를 사용하여 위치를 결정하는 경우 첫 번째 인수로 툴팁 DOM 노드를, 두 번째 인수로 트리거링 요소 DOM 노드를 사용하여 함수를 호출합니다. `this` 컨텍스트는 툴팁 인스턴스로 설정됩니다.                                                                                                                                                                                                                  |
-| `popperConfig`       | null, object, function    | `null`                                                                                                                                               | Bootstrap의 기본 Popper 구성을 변경하려면 [Popper 구성](https://popper.js.org/docs/v2/constructors/#options)을 참조하세요. 함수를 사용하여 Popper 구성을 생성하는 경우 Bootstrap의 기본 Popper 구성이 포함된 객체와 함께 호출됩니다. 이 함수를 사용하면 기본 구성을 사용하고 자신만의 구성과 병합할 수 있습니다. 함수는 Popper에 대한 구성 객체를 반환해야 합니다.                                                                                                                                                                                                        |
-| `sanitize`           | boolean                   | `true`                                                                                                                                               | 새니타이징을 활성화 또는 비활성화합니다. `'template'`을 활성화하면 `'content'`, `'title'` 옵션이 새니타이징 처리됩니다.                                                                                                                                                                                                                                                                                                                                                                                |
-| `sanitizeFn`         | null, function            | `null`                                                                                                                                               | 여기에서 자체 새니타이징 기능을 제공할 수 있습니다. 전용 라이브러리를 사용하여 새니타이징을 수행할 때 유용할 수 있습니다.                                                                                                                                                                                                                                                                                                                                                                                             |
-| `selector`           | string, false             | `false`                                                                                                                                              | 선택기가 제공되면 도구 설명 개체가 지정된 대상에 위임됩니다. 실제로는 동적으로 추가된 DOM 요소에 도구 설명을 적용하는 데에도 사용됩니다(`jQuery.on` 지원). [이 이슈]({{< param repo >}}/issues/4215)나 [유익한 예제](https://codepen.io/Johann-S/pen/djJYPb)를 참조하세요. **참고**: `title` 속성을 선택자로 사용해서는 안 됩니다.                                                                                                                                                                                                                            |
-| `template`           | string                    | `'<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'` | 툴팁을 만들 때 사용할 기본 HTML입니다. 툴팁의 `title`은 `.tooltip-inner`에 삽입됩니다. `.tooltip-arrow`는 툴팁의 화살표가 됩니다. 가장 바깥쪽 래퍼 요소는 `.tooltip` 클래스와 `role="tooltip"`을 가져야 합니다.                                                                                                                                                                                                                                                                                                           |
-| `title`              | string, element, function | `''`                                                                                                                                                 | 툴팁 제목입니다. 함수가 지정되면 팝오버가 연결된 요소에 대한 `this` 참조가 설정된 상태로 호출됩니다.                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `trigger`            | string                    | `'hover focus'`                                                                                                                                      | How tooltip is triggered: click, hover, focus, manual. You may pass multiple triggers; separate them with a space. `'manual'`은 `.tooltip('show')`, `.tooltip('hide')` 및 `.tooltip('toggle')` 메서드를 통해 프로그래밍 방식으로 도구 설명이 트리거됨을 나타내며, 이 값은 다른 트리거와 결합할 수 없습니다. `'hover'`를 단독으로 사용하면 키보드를 통해 트리거할 수 없는 도구 설명이 생성되므로 키보드 사용자에게 동일한 정보를 전달할 수 있는 대체 메서드가 있는 경우에만 사용해야 합니다.                                                                                              |
+| Name                 | Type                      | Default                                                                                                                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| -------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `allowList`          | object                    | [Default value]({{< docsref "/getting-started/javascript#sanitizer" >}})                                                                             | Object which contains allowed attributes and tags.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `animation`          | boolean                   | `true`                                                                                                                                               | Apply a CSS fade transition to the tooltip.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `boundary`           | string, element           | `'clippingParents'`                                                                                                                                  | Overflow constraint boundary of the tooltip (applies only to Popper's preventOverflow modifier). By default, it's `'clippingParents'` and can accept an HTMLElement reference (via JavaScript only). For more information refer to Popper's [detectOverflow docs](https://popper.js.org/docs/v2/utils/detect-overflow/#boundary).                                                                                                                                                                                                                                                                                                                                                                            |
+| `container`          | string, element, false    | `false`                                                                                                                                              | Appends the tooltip to a specific element. Example: `container: 'body'`. This option is particularly useful in that it allows you to position the tooltip in the flow of the document near the triggering element - which will prevent the tooltip from floating away from the triggering element during a window resize.                                                                                                                                                                                                                                                                                                                                                                                    |
+| `customClass`        | string, function          | `''`                                                                                                                                                 | Add classes to the tooltip when it is shown. Note that these classes will be added in addition to any classes specified in the template. To add multiple classes, separate them with spaces: `'class-1 class-2'`. You can also pass a function that should return a single string containing additional class names.                                                                                                                                                                                                                                                                                                                                                                                         |
+| `delay`              | number, object            | `0`                                                                                                                                                  | Delay showing and hiding the tooltip (ms)—doesn't apply to manual trigger type. If a number is supplied, delay is applied to both hide/show. Object structure is: `delay: { "show": 500, "hide": 100 }`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `fallbackPlacements` | array                     | `['top', 'right', 'bottom', 'left']`                                                                                                                 | Define fallback placements by providing a list of placements in array (in order of preference). For more information refer to Popper's [behavior docs](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `html`               | boolean                   | `false`                                                                                                                                              | Allow HTML in the tooltip. If true, HTML tags in the tooltip's `title` will be rendered in the tooltip. If false, `innerText` property will be used to insert content into the DOM. Use text if you're worried about XSS attacks.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `offset`             | array, string, function   | `[0, 0]`                                                                                                                                             | Offset of the tooltip relative to its target. You can pass a string in data attributes with comma separated values like: `data-bs-offset="10,20"`. When a function is used to determine the offset, it is called with an object containing the popper placement, the reference, and popper rects as its first argument. The triggering element DOM node is passed as the second argument. The function must return an array with two numbers: [skidding](https://popper.js.org/docs/v2/modifiers/offset/#skidding-1), [distance](https://popper.js.org/docs/v2/modifiers/offset/#distance-1). For more information refer to Popper's [offset docs](https://popper.js.org/docs/v2/modifiers/offset/#options). |
+| `placement`          | string, function          | `'top'`                                                                                                                                              | How to position the tooltip: auto, top, bottom, left, right. When `auto` is specified, it will dynamically reorient the tooltip. When a function is used to determine the placement, it is called with the tooltip DOM node as its first argument and the triggering element DOM node as its second. The `this` context is set to the tooltip instance.                                                                                                                                                                                                                                                                                                                                                      |
+| `popperConfig`       | null, object, function    | `null`                                                                                                                                               | To change Bootstrap's default Popper config, see [Popper's configuration](https://popper.js.org/docs/v2/constructors/#options). When a function is used to create the Popper configuration, it's called with an object that contains the Bootstrap's default Popper configuration. It helps you use and merge the default with your own configuration. The function must return a configuration object for Popper.                                                                                                                                                                                                                                                                                           |
+| `sanitize`           | boolean                   | `true`                                                                                                                                               | Enable or disable the sanitization. If activated `'template'`, `'content'` and `'title'` options will be sanitized.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `sanitizeFn`         | null, function            | `null`                                                                                                                                               | Here you can supply your own sanitize function. This can be useful if you prefer to use a dedicated library to perform sanitization.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `selector`           | string, false             | `false`                                                                                                                                              | If a selector is provided, tooltip objects will be delegated to the specified targets. In practice, this is used to also apply tooltips to dynamically added DOM elements (`jQuery.on` support). See [this issue]({{< param repo >}}/issues/4215) and [an informative example](https://codepen.io/Johann-S/pen/djJYPb). **Note**: `title` attribute must not be used as a selector.                                                                                                                                                                                                                                                                                                                          |
+| `template`           | string                    | `'<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'` | Base HTML to use when creating the tooltip. The tooltip's `title` will be injected into the `.tooltip-inner`. `.tooltip-arrow` will become the tooltip's arrow. The outermost wrapper element should have the `.tooltip` class and `role="tooltip"`.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `title`              | string, element, function | `''`                                                                                                                                                 | The tooltip title. If a function is given, it will be called with its `this` reference set to the element that the popover is attached to.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `trigger`            | string                    | `'hover focus'`                                                                                                                                      | How tooltip is triggered: click, hover, focus, manual. You may pass multiple triggers; separate them with a space. `'manual'` indicates that the tooltip will be triggered programmatically via the `.tooltip('show')`, `.tooltip('hide')` and `.tooltip('toggle')` methods; this value cannot be combined with any other trigger. `'hover'` on its own will result in tooltips that cannot be triggered via the keyboard, and should only be used if alternative methods for conveying the same information for keyboard users is present.                                                                                                                                                                  |
 {{< /bs-table >}}
 
 {{< callout info >}}
-#### 개별 툴팁의 데이터 속성
+#### Data attributes for individual tooltips
 
-개별 툴팁 옵션은 위에서 설명한 것처럼 data 속성을 사용해 지정할 수도 있습니다.
+Options for individual tooltips can alternatively be specified through the use of data attributes, as explained above.
 {{< /callout >}}
 
-#### `popperConfig`으로 기능 사용하기
+#### Using function with `popperConfig`
 
 ```js
 const tooltip = new bootstrap.Tooltip(element, {
@@ -234,26 +234,26 @@ const tooltip = new bootstrap.Tooltip(element, {
 })
 ```
 
-### 메소드
+### Methods
 
 {{< callout danger >}}
 {{< partial "callouts/danger-async-methods.md" >}}
 {{< /callout >}}
 
 {{< bs-table "table" >}}
-| 메소드                   | 설명                                                                                                                                             |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `disable`             | 요소의 툴팁을 표시하는 기능을 삭제합니다. 툴팁은 재활성화 된 경우에만 표시합니다.                                                                                                 |
-| `dispose`             | 요소의 툴팁을 숨기고 없앱니다 (DOM 요소에 보존되어 있는 데이터를 삭제). 위임을 사용하는 툴팁([`selector` 옵션](#옵션)을 사용하여 작성된 것)은 후손의 트리거 요소상에서 개별적으로 없앨수 없습니다.                       |
-| `enable`              | 요소의 툴팁을 표시하는 기능을 부여합니다. **툴팁은 기본적으로 활성화되어 있습니다.**                                                                                              |
-| `getInstance`         | *Static* method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized. |
-| `getOrCreateInstance` | *정적* 메서드를 사용하여 DOM 요소와 연결된 툴팁 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 만들 수 있습니다.                                                                       |
-| `hide`                | 요소의 툴팁을 숨깁니다. **툴팁이 실제로 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `hidden.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 “수동” 트리거로 간주됩니다.                                 |
-| `setContent`          | 초기화 후 툴팁의 내용을 변경하는 방법을 제공합니다.                                                                                                                  |
-| `show`                | 요소의 툴팁을 표시합니다. **툴팁이 실제로 나타나기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 “수동” 트리거로 간주합니다. 길이가 0 을 가진 타이틀은 절대 표시되지 않습니다.   |
-| `toggle`              | 요소의 툴팁을 토글합니다. **툴팁이 실제로 표시되거나 숨겨지기 전에 호출한 곳으로 돌아갑니다** (즉, `shown.bs.tooltip` 혹은 `hidden.bs.tooltip` 이벤트가 발생하기 전). 이것은 툴팁의 “수동” 트리거로 간주됩니다.    |
-| `toggleEnabled`       | 요소의 툴팁 표시 및 숨김을 변경합니다.                                                                                                                         |
-| `update`              | 요소의 툴팁 위치를 갱신합니다.                                                                                                                              |
+| Method                | Description                                                                                                                                                                                                                                                          |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `disable`             | Removes the ability for an element's tooltip to be shown. The tooltip will only be able to be shown if it is re-enabled.                                                                                                                                             |
+| `dispose`             | Hides and destroys an element's tooltip (Removes stored data on the DOM element). Tooltips that use delegation (which are created using [the `selector` option](#options)) cannot be individually destroyed on descendant trigger elements.                          |
+| `enable`              | Gives an element's tooltip the ability to be shown. **Tooltips are enabled by default.**                                                                                                                                                                             |
+| `getInstance`         | *Static* method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized.                                                                                                                       |
+| `getOrCreateInstance` | *Static* method which allows you to get the tooltip instance associated with a DOM element, or create a new one in case it wasn't initialized.                                                                                                                       |
+| `hide`                | Hides an element's tooltip. **Returns to the caller before the tooltip has actually been hidden** (i.e. before the `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip.                                                       |
+| `setContent`          | Gives a way to change the tooltip's content after its initialization.                                                                                                                                                                                                |
+| `show`                | Reveals an element's tooltip. **Returns to the caller before the tooltip has actually been shown** (i.e. before the `shown.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip. Tooltips with zero-length titles are never displayed. |
+| `toggle`              | Toggles an element's tooltip. **Returns to the caller before the tooltip has actually been shown or hidden** (i.e. before the `shown.bs.tooltip` or `hidden.bs.tooltip` event occurs). This is considered a "manual" triggering of the tooltip.                      |
+| `toggleEnabled`       | Toggles the ability for an element's tooltip to be shown or hidden.                                                                                                                                                                                                  |
+| `update`              | Updates the position of an element's tooltip.                                                                                                                                                                                                                        |
 {{< /bs-table >}}
 
 ```js
@@ -265,19 +265,19 @@ tooltip.setContent({ '.tooltip-inner': 'another title' })
 ```
 
 {{< callout info >}}
-`setContent` 메서드는 `object` 인수를 받는데, 각 속성 키는 툴팁 템플릿 내에서 유효한 `string` 선택자이며, 각 관련 속성 값은 `string` | `element` | `function` | `null`일 수 있습니다.
+The `setContent` method accepts an `object` argument, where each property-key is a valid `string` selector within the tooltip template, and each related property-value can be `string` | `element` | `function` | `null`
 {{< /callout >}}
 
-### 이벤트
+### Events
 
 {{< bs-table >}}
-| 이벤트                   | 설명                                                            |
-| --------------------- | ------------------------------------------------------------- |
-| `hide.bs.tooltip`     | 이 이벤트는 `hide` 인스턴스 메소드가 호출되었을 때 바로 발생합니다.                     |
-| `hidden.bs.tooltip`   | 이 이벤트는 툴팁이 사용자로부터 숨김 상태가 되었을 때 발생합니다 (CSS 트렌지션이 완료되기를 기다립니다). |
-| `inserted.bs.tooltip` | 이 이벤트는 `show.bs.tooltip` 이벤트 후 툴팁 템플릿이 DOM에 추가되었을 때 발생합니다.    |
-| `show.bs.tooltip`     | 이 이벤트는 `show` 인스턴스 메소드가 호출되었을 때 바로 발생합니다.                     |
-| `shown.bs.tooltip`    | 이 이벤트는 툴팁이 사용자에게 보일 때 발생합니다 (CSS 트렌지션이 완료되기를 기다립니다).          |
+| Event                 | Description                                                                                                               |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `hide.bs.tooltip`     | This event is fired immediately when the `hide` instance method has been called.                                          |
+| `hidden.bs.tooltip`   | This event is fired when the tooltip has finished being hidden from the user (will wait for CSS transitions to complete). |
+| `inserted.bs.tooltip` | This event is fired after the `show.bs.tooltip` event when the tooltip template has been added to the DOM.                |
+| `show.bs.tooltip`     | This event fires immediately when the `show` instance method is called.                                                   |
+| `shown.bs.tooltip`    | This event is fired when the tooltip has been made visible to the user (will wait for CSS transitions to complete).       |
 {{< /bs-table >}}
 
 ```js
