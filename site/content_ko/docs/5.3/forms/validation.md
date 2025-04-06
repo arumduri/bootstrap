@@ -5,7 +5,8 @@ description: HTML5 폼 유효성 검사에서는 브라우저의 기본 동작�
 group: forms
 toc: true
 extra_js:
-  - src: "/docs/5.3/assets/js/validate-forms.js"
+  - 
+    src: "/docs/5.3/assets/js/validate-forms.js"
     async: true
 ---
 
@@ -13,11 +14,11 @@ extra_js:
 현재 클라이언트 측의 재정의하는 유효성 검사 스타일과 툴팁은 지원 기술에 공개되지 않아 접근할 수 없다는 것을 알고 있습니다. 해결책을 검토하는 동안 서버사이드 옵션을 사용하거나 브라우저의 기본 유효성 검사 방법을 사용하는 것을 권장합니다.
 {{< /callout >}}
 
-## 작동 원리
+## How it works
 
 Bootstrap에서 사용하고 있는 폼 유효성 검사 구조를 소개합니다:
 
-- HTML의 폼 유효성 검사는 CSS의 두개의 가상 클래스 `:invalid`와 `:valid`를 사용해 `<input>`, `<select>`, `<textarea>` 요소에 적용됩니다.
+- HTML의 폼 유효성 검사는 CSS의 두개의 가상 클래스 `:invalid`와 `:valid`를 사용해 `<input>`, `<select>`, `<textarea>` 요소에 적용됩니다. It applies to `<input>`, `<select>`, and `<textarea>` elements.
 - Bootstrap는 `:invalid`과 `:valid` 스타일을 부모 클래스 `.was-validated`에 범위를 지정하고 일반적으로 `<form>`에 적용합니다. 그렇지 않으면 값이 없는 필수 필드는 페이지 로드 시 잘못된 상태로 표시됩니다. 이와 같이 해서 그것들을 유효하게 하는 시기를 선택할 수 있습니다.(보통은 폼의 송신이 시도된 후)
 - 폼의 외형을 새로 적용하려면(예를 들어, AJAX를 사용한 동적인 폼 송신의 경우), 송신 후에 `.was-validated` 클래스를 `<form>`으로부터 다시 삭제합니다.
 - 폴백으로서 [서버 측 검사](#서버에서-검사하기)의 가상 클래스 대신 `.is-invalid`와 `.is-valid` 클래스를 사용할 수 있습니다. 이 클래스들은 부모 클래스인 `.was-validated`를 필요로 하지 않습니다.
@@ -159,7 +160,7 @@ Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에
 </form>
 {{< /example >}}
 
-## 서버에서 검사하기
+## Server-side
 
 클라이언트 측의 유효성 검사를 권장하지만, 서버 측의 유효성 검사가 필요한 경우에는 `.is-invalid`와 `.is-valid`를 사용해 잘못된 폼 필드와 잘된 폼 필드를 각각 표현할 수 있습니다. 이러한 클래스에서는 `.invalid-feedback`도 지원되고 있다는 점을 주의해 주세요.
 
@@ -240,7 +241,7 @@ Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에
 
 - `.form-control`을 사용하고 있는 `<input>`과 `<textarea>` (입력 그룹에 최대 한 개의 `.form-control`을 포함)
 - `.form-select`를 사용하는 `<select>`
-- `.form-check`
+- .form-check
 
 {{< example >}}
 <form class="was-validated">
@@ -289,7 +290,7 @@ Bootstrap 폼 유효성 검사 문구를 사용자 정의 하려면, `<form>`에
 </form>
 {{< /example >}}
 
-## 툴팁
+## Tooltips
 
 폼의 레이아웃이 허락된다면, 유효성 검사 전달을 `.{valid|invalid}-feedback` 클래스와 교체하여 스타일 있는 툴팁으로 표시할 수 있습니다. 툴팁의 위치를 정하기 위해서 반드시 부모 요소에 `position: relative`를 지정해야 합니다. 아래 예시에서는 컬럼 클래스에 이 설정을 추가했지만, 프로젝트에 따라 다른 설정이 필요할 수도 있습니다.
 
