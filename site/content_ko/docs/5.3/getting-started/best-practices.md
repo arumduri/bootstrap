@@ -1,20 +1,20 @@
 ---
 layout: docs
-title: 모범 사례
-description: 수년간 Bootstrap을 사용하고 작업하면서 수집한 몇 가지 모범 사례에 대해 알아보세요.
+title: Best practices
+description: Learn about some of the best practices we've gathered from years of working on and using Bootstrap.
 group: getting-started
 ---
 
-우리는 다양한 환경에서 작동하도록 Bootstrap을 설계하고 개발했습니다. 다음은 수년간 직접 작업하고 사용하면서 수집한 몇 가지 모범 사례입니다.
+We've designed and developed Bootstrap to work in a number of environments. Here are some of the best practices we've gathered from years of working on and using it ourselves.
 
 {{< callout info >}}
-**주의!** 이 부분은 아직 작업 중입니다.
+**Heads up!** This copy is a work in progress.
 {{< /callout >}}
 
-### 일반 개요
+### General outline
 
-- CSS로 작업하기
-- Sass 파일로 작업하기
-- 새로운 CSS 컴포넌트 빌드하기
-- flexbox로 작업하기
-- [GitHub Discussions](https://github.com/twbs/bootstrap/discussions)에서 물어보기
+- Working with CSS
+- Working with Sass files
+- Building new CSS components
+- Working with flexbox
+- Ask in [our GitHub Discussions](https://github.com/twbs/bootstrap/discussions)
