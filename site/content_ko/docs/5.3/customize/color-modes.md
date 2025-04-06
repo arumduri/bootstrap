@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 색상 모드
-title_en: Color modes
+title: Color modes
 description: Bootstrap은 이제 v5.3.0부터 색상 모드 또는 테마를 지원합니다. 기본값인 라이트 모드와 새로운 다크 모드를 살펴보거나 스타일을 템플릿으로 사용하여 나만의 모드를 만들어 보세요.
 group: customize
 toc: true
@@ -110,7 +109,7 @@ $color-mode-type: data;
 }
 ```
 
-결과는 다음과 같습니다.
+Outputs to:
 
 ```css
 [data-bs-theme=dark] .element {
@@ -132,7 +131,7 @@ $color-mode-type: media-query;
 }
 ```
 
-결과는 다음과 같습니다.
+Outputs to:
 
 ```css
 @media (prefers-color-scheme: dark) {
