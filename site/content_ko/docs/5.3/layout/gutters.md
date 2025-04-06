@@ -1,22 +1,22 @@
 ---
 layout: docs
-title: 거터
-description: 거터는 열 사이의 패딩으로, Bootstrap 그리드 시스템에서 콘텐츠의 간격을 맞추고 정렬하는 데에 사용됩니다.
+title: Gutters
+description: Gutters are the padding between your columns, used to responsively space and align content in the Bootstrap grid system.
 group: layout
 toc: true
 ---
 
 ## How they work
 
-- **거터는 가로 `padding`에 의해 생성되는 열 콘텐츠 사이의 간격입니다.** 각 열에 `padding-right` 및 `padding-left`를 설정하고 음수 `margin`을 사용하여 각 행의 시작과 끝에서 이를 오프셋하여 콘텐츠를 정렬합니다.
+- **Gutters are the gaps between column content, created by horizontal `padding`.** We set `padding-right` and `padding-left` on each column, and use negative `margin` to offset that at the start and end of each row to align content.
 
-- **거터의 너비는 `1.5rem` (`24px`)에서 시작합니다.** 이를 통해 그리드를 [패딩 및 마진 스페이서 스케일]({{< docsref "/utilities/spacing" >}})과 일치시킬 수 있습니다.
+- **Gutters start at `1.5rem` (`24px`) wide.** This allows us to match our grid to the [padding and margin spacers]({{< docsref "/utilities/spacing" >}}) scale.
 
-- **거터는 반응형으로 조정될 수 있습니다.** 중단점별 (breakpoint-specific) 거터 클래스를 사용하여 세로 거터, 가로 거터 및 모든 거터를 수정할 수 있습니다.
+- **Gutters can be responsively adjusted.** Use breakpoint-specific gutter classes to modify horizontal gutters, vertical gutters, and all gutters.
 
-## 수평 거터
+## Horizontal gutters
 
-`.gx-*` 클래스를 사용하여 수평 거터 너비를 제어할 수 있습니다. `.container`  또는 `.container-fluid` 부모는 일치하는 패딩 유틸리티를 사용하여 원하지 않는 오버플로를 방지하기 위해 더 큰 거터를 사용하는 경우 조정해야할 수 있습니다. 예를 들어, 다음 예시에서는 `.px-4`로 패딩을 늘렸습니다:
+`.gx-*` classes can be used to control the horizontal gutter widths. The `.container` or `.container-fluid` parent may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility. For example, in the following example we've increased the padding with `.px-4`:
 
 {{< example class="bd-example-cols" >}}
 <div class="container px-4 text-center">
@@ -31,7 +31,7 @@ toc: true
 </div>
 {{< /example >}}
 
-대안은 `.overflow-hidden` 클래스로 `.row` 주위에 래퍼를 추가하는 것입니다.
+An alternative solution is to add a wrapper around the `.row` with the `.overflow-hidden` class:
 
 {{< example class="bd-example-cols" >}}
 <div class="container overflow-hidden text-center">
@@ -46,9 +46,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 수직 거터
+## Vertical gutters
 
-`.gy-*` 클래스는 열이 새 줄로 줄 바꿈될 때 행 내의 세로 거터 너비를 제어하는 ​​데에 사용할 수 있습니다. 가로 거터와 마찬가지로 세로 거터는 페이지 끝의 `.row` 아래에 약간의 오버플로를 유발할 수 있습니다. 이 경우 `.overflow-hidden` 클래스로`.row` 주위에 래퍼를 추가합니다.
+`.gy-*` classes can be used to control the vertical gutter widths within a row when columns wrap to new lines. Like the horizontal gutters, the vertical gutters can cause some overflow below the `.row` at the end of a page. If this occurs, you add a wrapper around `.row` with the `.overflow-hidden` class:
 
 {{< example class="bd-example-cols" >}}
 <div class="container overflow-hidden text-center">
@@ -69,9 +69,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 수평 & 수직 거터
+## Horizontal & vertical gutters
 
-`.g-*` 클래스를 사용하여 거터 너비를 제어할 수 있습니다. 다음 예시에서는 더 작은 거터 너비를 사용하므로 `.overflow-hidden` 래퍼 클래스를 추가할 필요가 없습니다.
+Use `.g-*` classes to control the horizontal and vertical grid gutters. In the example below, we use a smaller gutter width, so there isn't a need for the `.overflow-hidden` wrapper class.
 
 {{< example class="bd-example-cols" >}}
 <div class="container text-center">
@@ -92,9 +92,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 행열 거터
+## Row columns gutters
 
-행 열에 거터 클래스를 추가할 수도 있습니다. 다음 예시에서는 반응형 행열과 반응형 거터 클래스를 사용합니다.
+Gutter classes can also be added to [row columns]({{< docsref "/layout/grid#row-columns" >}}). In the following example, we use responsive row columns and responsive gutter classes.
 
 {{< example class="bd-example-cols" >}}
 <div class="container text-center">
@@ -135,11 +135,11 @@ toc: true
 
 ## No gutters
 
-사전 정의된 그리드 클래스의 열 사이의 거터는 `.g-0`으로 제거할 수 있습니다. 이렇게 하면 `.row`에서 음수 `margin`이 제거되고 모든 직계 자식 열에서 가로 `padding`이 제거됩니다.
+The gutters between columns in our predefined grid classes can be removed with `.g-0`. This removes the negative `margin`s from `.row` and the horizontal `padding` from all immediate children columns.
 
-**edge-to-edge 디자인이 필요하신가요?** 부모 `.container` 또는 `.container-fluid`를 삭제하고 `.row`에 `.mx-0`을 추가해서 오버플로우를 방지하세요.
+**Need an edge-to-edge design?** Drop the parent `.container` or `.container-fluid` and add `.mx-0` to the `.row` to prevent overflow.
 
-실제로는 다음과 같이 보입니다. 다른 모든 사전 정의된 그리드 클래스 (열 너비, 반응형 계층, 재정렬 등)와 함께 계속해서 사용할 수 있습니다.
+In practice, here's how it looks. Note that you can continue to use this with all other predefined grid classes (including column widths, responsive tiers, reorders, and more).
 
 {{< example class="bd-example-row" >}}
 <div class="row g-0 text-center">
@@ -148,9 +148,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 거터 수정
+## Change the gutters
 
-클래스는 `$spacers` Sass 맵에서 상속된 `$gutters` Sass 맵에서 빌드됩니다.
+Classes are built from the `$gutters` Sass map which is inherited from the `$spacers` Sass map.
 
 ```scss
 $grid-gutter-width: 1.5rem;
