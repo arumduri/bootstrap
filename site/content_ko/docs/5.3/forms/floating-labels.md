@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 플로팅 라벨
-title_en: Floating labels
+title: Floating labels
 description: 입력 필드 위로 떠오르는 예쁘고 간단한 폼 라벨을 작성할 수 있습니다.
 group: forms
 toc: true
@@ -51,7 +50,7 @@ toc: true
 </div>
 {{< /example >}}
 
-`<textarea>`의 높이를 변경하고 싶다면, `rows`속성 대신, 명시적인 `height`를 사용해 설정해 주세요(인라인 또는 사용자 CSS를 사용합니다).
+`<textarea>`의 높이를 변경하고 싶다면, `rows`속성 대신, 명시적인 `height`를 사용해 설정해 주세요(인라인 또는 사용자 CSS를 사용합니다). Instead, set an explicit `height` (either inline or via custom CSS).
 
 {{< example >}}
 <div class="form-floating">
