@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 내비게이션과 탭
-title_en: Navs and tabs
+title: Navs and tabs
 description: Bootstrap에 포함된 내비게이션 컴포넌트를 어떻게 사용하는지 문서와 예시입니다.
 group: components
 aliases: "/docs/5.3/components/navs/"
@@ -96,7 +95,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 ### 수직
 
-`.flex-column` 유틸리티를 사용해 flex item(플렉스 아이템)의 방향을 변경해 내비게이션을 세로로 만들 수 있습니다. 일부 뷰포트에서는 세로로, 또 다른 뷰포트에서는 세로로 하고 싶지 않을 경우, `.flex-sm-column`을 사용해 주세요.
+`.flex-column` 유틸리티를 사용해 flex item(플렉스 아이템)의 방향을 변경해 내비게이션을 세로로 만들 수 있습니다. Need to stack them on some viewports but not others? Use the responsive versions (e.g., `.flex-sm-column`).
 
 {{< example >}}
 <ul class="nav flex-column">
@@ -126,7 +125,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </nav>
 {{< /example >}}
 
-### 탭
+### Tabs
 
 `.nav-tabs` 클래스를 추가해 탭이 있는 인터페이스를 만들 수 있습니다. [탭 JavaScript 플러그인](#javascript-비헤이비어)으로 탭 가능한 영역을 만듭니다。
 
@@ -147,7 +146,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-### 필
+### Pills
 
 동일한 HTML로, `.nav-pills`도 사용할 수 있습니다.
 
@@ -168,7 +167,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-### 밑줄
+### Underline
 
 동일한 HTML을 사용하되, 대신 '.nav-underline'을 사용합니다:
 
@@ -189,7 +188,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-### 필과 채우기
+### Fill and justify
 
 `.nav`의 콘텐츠가 두 가지 수정자 클래스 중 하나를 사용하여 사용 가능한 전체 너비를 확장하도록 강제합니다. `.nav-item`에서 사용 가능한 모든 여백을 비교하고 채우기 위해 `.nav-fill`을 사용합니다. 내비게이션 아이템의 가로 폭이 모두 동일한 것이 아니므로 주의해 주세요.
 
@@ -251,8 +250,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </nav>
 
 {{< /example >}}
-
-## 플렉스 유틸리티
+## Working with flex utilities
 
 반응형 내비게이션의 변화가 필요한 경우에는 [flexbox 유틸리티]({{< docsref "/utilities/flex" >}})를 사용합니다. 이 유틸리티들은 좀 장황스럽지만, 반응형 중단점 간에 더 많은 사용자 지정이 가능합니다. 아래의 예시에서 내비게이션은 가장 좁은 화면의 경우 세로로, 폭을 넓힘으로써 수평 레이아웃이 됩니다.
 
@@ -275,8 +273,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 
 드롭다운에 HTML을 조금 추가하고, [JavaScript 드롭다운 플러그인]({{< docsref "/components/dropdowns#usage" >}})으로 드롭다운 메뉴를 추가합니다.
 
-
-### 드롭다운이 있는 탭
+### Tabs with dropdowns
 
 {{< example >}}
 <ul class="nav nav-tabs">
@@ -302,7 +299,7 @@ Bootstrap에서 이용할 수 있는 내비게이션은 기본 `.nav` 클래스�
 </ul>
 {{< /example >}}
 
-### 드롭다운이 있는 필
+### Pills with dropdowns
 
 {{< example >}}
 <ul class="nav nav-pills">
@@ -664,12 +661,12 @@ const bsTab = new bootstrap.Tab('#myTab')
 ```
 
 {{< bs-table >}}
-| 메소드 | 설명 |
-| --- | --- |
-| `dispose` | 탭 요소를 없앱니다. |
-| `getInstance` | DOM 요소에 연관된 탭의 인스턴스를 가져오는 Static 메소드입니다. `bootstrap.Tab.getInstance(element)`처럼 사용할 수 있습니다. |
-| `getOrCreateInstance` | DOM 요소에 연결된 탭 인스턴스를 반환하거나 초기화되지 않은 경우 새 탭 인스턴스를 생성하는 정적 메서드입니다. 다음과 같이 사용할 수 있습니다: `bootstrap.Tab.getOrCreateInstance(element)`. |
-| `show` | 지정된 탭을 선택해 관련 창을 표시합니다. 이전에 선택되어 있던 다른 탭은 선택되지 않은 상태가 되고 관련된 창도 비표시 됩니다. **탭 창이 실제로 표시되기 전에 (`shown.bs.tab` 이벤트가 발생하기 전) 호출된 곳으로 돌아옵니다**. |
+| 메소드                   | 설명                                                                                                                                        |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `dispose`             | Destroys an element's tab.                                                                                                                |
+| `getInstance`         | DOM 요소에 연관된 탭의 인스턴스를 가져오는 Static 메소드입니다. `bootstrap.Tab.getInstance(element)`처럼 사용할 수 있습니다.                                               |
+| `getOrCreateInstance` | DOM 요소에 연결된 탭 인스턴스를 반환하거나 초기화되지 않은 경우 새 탭 인스턴스를 생성하는 정적 메서드입니다. 다음과 같이 사용할 수 있습니다: `bootstrap.Tab.getOrCreateInstance(element)`.          |
+| `show`                | 지정된 탭을 선택해 관련 창을 표시합니다. 이전에 선택되어 있던 다른 탭은 선택되지 않은 상태가 되고 관련된 창도 비표시 됩니다. **탭 창이 실제로 표시되기 전에 (`shown.bs.tab` 이벤트가 발생하기 전) 호출된 곳으로 돌아옵니다**. |
 {{< /bs-table >}}
 
 ### 이벤트
@@ -684,12 +681,12 @@ const bsTab = new bootstrap.Tab('#myTab')
 이미 활성화된 탭이 없는 경우, `hide.bs.tab` 및 `hidden.bs.tab` 이벤트는 발생하지 않습니다.
 
 {{< bs-table >}}
-| 이벤트 유형 | 설명 |
-| --- | --- |
-| `hide.bs.tab` | 이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타깃으로 합니다. |
-| `hidden.bs.tab` | 이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) `event.target`과 `event.relatedTarget`을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타깃으로 합니다. |
-| `show.bs.tab` | 이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다. |
-| `shown.bs.tab` | 	이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다. |
+| 이벤트 유형          | 설명                                                                                                                                     |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `hide.bs.tab`   | 이 이벤트는 새로운 탭이 표시될 (즉, 이전에 활성화 된 탭이 감춰질) 때 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 현재의 활성화된 탭과 다음에 활성화 될 새로운 탭을 타깃으로 합니다. |
+| `hidden.bs.tab` | 이 이벤트는 새로운 탭이 표시된 후에 발생합니다.(따라서 앞의 활성화한 탭은 숨김이 됩니다.) `event.target`과 `event.relatedTarget`을 사용하여 각각 이전 활성화된 탭과 새로운 활성화된 탭을 타깃으로 합니다.   |
+| `show.bs.tab`   | 이 이벤트는 탭 표시 시 발생하는데, 새로운 탭이 표시되기 전에 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다.                 |
+| `shown.bs.tab`  | 이 이벤트는 탭이 표시된 이후 탭 표시 시 발생합니다. `event.target`과 `event.relatedTarget`을 사용하여 각각 활성화된 탭과 이전 활성화된 탭을 타깃으로 합니다.                             |
 {{< /bs-table >}}
 
 ```js
