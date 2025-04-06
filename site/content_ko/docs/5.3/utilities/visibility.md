@@ -4,6 +4,7 @@ title: 가시성
 description: 가시성 유틸리티를 사용하여 표시를 수정하지 않고 요소의 가시성을 제어합니다.
 group: utilities
 ---
+
 가시성 유틸리티를 사용하여 요소의 `visibility`를 설정합니다. 이러한 유틸리티 클래스는 `display` 값을 전혀 수정하지 않으며 레이아웃에 영향을 미치지 않습니다. `.invisible` 요소는 여전히 페이지의 공간을 차지합니다.
 
 {{< callout warning >}}
