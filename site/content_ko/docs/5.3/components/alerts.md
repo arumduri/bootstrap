@@ -6,7 +6,8 @@ group: components
 toc: true
 ---
 
-## 예시
+## Examples
+
 텍스트 길이에 상관없이 메세지를 표시할 수 있으며 옵션으로 닫기 버튼을 제공합니다. 올바른 스타일링을 위해, 8가지의 테마 컬러(예를 들면, `.alert-success`) 로 사용 가능합니다. 인라인으로 경고창을 닫기 위해서는, [경고창 JavaScript 플러그인](#무시)을 사용합니다.
 
 {{< callout info >}}
@@ -26,7 +27,7 @@ toc: true
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-### 실시간
+### Live example
 
 아래 버튼을 클릭하여 경고 (시작할 인라인 스타일로 숨겨짐)를 표시한 다음 내장된 닫기 버튼으로 경고를 해제 (및 삭제)합니다.
 
@@ -53,6 +54,7 @@ toc: true
 {{< /example >}}
 
 ### 추가 콘텐츠
+
 경고창에는 제목, 단락 및 구분선 등과 같은 HTML 요소를 포함할 수도 있습니다.
 
 {{< example >}}
@@ -121,14 +123,15 @@ toc: true
 {{< /example >}}
 
 ### 무시
-경고창의 JavaScript 플러그인을 사용하면, 경고창을 인라인으로 닫을 수 있습니다.
+
+경고창의 JavaScript 플러그인을 사용하면, 경고창을 인라인으로 닫을 수 있습니다. Here's how:
 
 - JavaScript 플러그인 또는 Bootstrap JavaScript를 가지고 옵니다.
 - [close button]({{< docsref "/components/close-button" >}}) 에 `.alert-dismissible`의 클래스를 추가하면 경고창의 오른쪽에 여백이 추가되고, 닫기 버튼의 위치가 결정됩니다.
 - 닫기 버튼에 `data-bs-dismiss="alert"` 속성을 추가합니다. 그러면 JavaScript 기능이 트리거 됩니다. 모든 기기에서 올바르게 동작시키려면 반드시 `<button>` 요소를 사용해 주세요.
 - 경고창을 닫을 때 애니메이션을 적용하려면, 반드시 `.fade`와 `.show`의 클래스를 추가해 주세요.
 
-실시간 데모로 확인할 수 있습니다:
+You can see this in action with a live demo:
 
 {{< example >}}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -179,13 +182,12 @@ const alerts = [...alertList].map(element => new bootstrap.Alert(element))
 ```
 
 {{< callout info >}}
-
 경고만 해제할 목적이라면 JS API를 통해 컴포넌트를 수동으로 초기화할 필요는 없습니다. `data-bs-dismiss="alert"`를 사용하면 컴포넌트가 자동으로 적절하게 초기화되고 해제됩니다.
 
 자세한 내용은 [트리거](#트리거) 섹션을 참조하세요.
 {{< /callout >}}
 
-### 트리거
+### Triggers
 
 {{% js-dismiss "alert" %}}
 
@@ -202,11 +204,11 @@ const bsAlert = new bootstrap.Alert('#myAlert')
 이렇게 하면 `data-bs-dismiss="alert"` 속성이 있는 하위 요소의 클릭 이벤트에 대해 알림을 수신합니다. (데이터 API의 자동 초기화를 사용할 때는 필요하지 않습니다.)
 
 {{< bs-table >}}
-| 메소드 | 설명 |
-| --- | --- |
-| `close` | DOM에서 제거되고 경고창을 닫습니다. `.fade` 와 `.show` 클래스가 요소에 있으면, 경고창은 제거 되기전에 사라집니다. |
-| `dispose` | 경고창을 없앱니다. (DOM 요소에 저장되어 있는 데이터를 삭제) |
-| `getInstance` | DOM 요소와 관련된 경고창의 인스턴스를 가져오는 Static 메소드입니다. 사용법: `bootstrap.Alert.getInstance(alert)` |
+| 메소드                   | 설명                                                                                                                |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `close`               | DOM에서 제거되고 경고창을 닫습니다. `.fade` 와 `.show` 클래스가 요소에 있으면, 경고창은 제거 되기전에 사라집니다.                                         |
+| `dispose`             | 경고창을 없앱니다. (DOM 요소에 저장되어 있는 데이터를 삭제)                                                                              |
+| `getInstance`         | DOM 요소와 관련된 경고창의 인스턴스를 가져오는 Static 메소드입니다. 사용법: `bootstrap.Alert.getInstance(alert)`                              |
 | `getOrCreateInstance` | DOM 요소와 연결된 경고 인스턴스를 반환하거나 초기화되지 않은 경우 새 인스턴스를 만드는 정적 메소드입니다. 사용법: `bootstrap.Alert.getOrCreateInstance(element)` |
 {{< /bs-table >}}
 
@@ -218,13 +220,14 @@ alert.close()
 ```
 
 ### 이벤트
+
 Bootstrap 경고창 플러그인은, 경고창 기능에 연결하기 위한 몇 가지의 이벤트를 제공합니다.
 
 {{< bs-table >}}
-| 이벤트 | 설명 |
-| --- | --- |
-| `close.bs.alert` | `close` 인스턴스 메소드가 호출되면 바로 발생합니다. |
-| `closed.bs.alert` | 경고창이 닫히고, CSS 트렌지션이 완료되면 발생합니다. |
+| 이벤트               | 설명                               |
+| ----------------- | -------------------------------- |
+| `close.bs.alert`  | `close` 인스턴스 메소드가 호출되면 바로 발생합니다. |
+| `closed.bs.alert` | 경고창이 닫히고, CSS 트렌지션이 완료되면 발생합니다.  |
 {{< /bs-table >}}
 
 ```js
