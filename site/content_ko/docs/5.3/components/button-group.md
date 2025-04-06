@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: 버튼 그룹
-description: 여러 개의 버튼을 묶어 그룹화하거나, 세로로 겹쳐 놓을 수 있습니다.
+title: Button group
+description: Group a series of buttons together on a single line or stack them in a vertical column.
 group: components
 toc: true
 ---
 
-## 기본 예시
+## Basic example
 
-`.btn-group`으로 `.btn` 요소를 포장합니다.
+Wrap a series of buttons with `.btn` in `.btn-group`.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic example">
@@ -19,10 +19,10 @@ toc: true
 {{< /example >}}
 
 {{< callout info >}}
-버튼 그룹에는 적절한 `role` 속성과 명시적인 레이블이 있어야 스크린 리더와 같은 접근성 기술이 버튼을 그룹으로 식별하고 이를 알릴 수 있습니다. 버튼 그룹에는 `role="group"`을, 버튼 도구 모음에는 `role="toolbar"`을 사용합니다. 그런 다음 `aria-label` 또는 `aria-labelledby`를 사용하여 레이블을 지정합니다.
+Button groups require an appropriate `role` attribute and explicit label to ensure assistive technologies like screen readers identify buttons as grouped and announce them. Use `role="group"` for button groups or `role="toolbar"` for button toolbars. Then use `aria-label` or `aria-labelledby` to label them.
 {{< /callout >}}
 
-이 클래스는 [`.nav` 내비게이션 컴포넌트]({{< docsref "/components/navs-tabs" >}})를 대체하여 링크 그룹에 추가할 수도 있습니다.
+These classes can also be added to groups of links, as an alternative to the [`.nav` navigation components]({{< docsref "/components/navs-tabs" >}}).
 
 {{< example >}}
 <div class="btn-group">
@@ -32,7 +32,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## 혼합 스타일
+## Mixed styles
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic mixed styles example">
@@ -42,7 +42,7 @@ toc: true
 </div>
 {{< /example >}}
 
-## 테두리 스타일
+## Outlined styles
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic outlined example">
@@ -52,9 +52,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 체크박스와 라디오버튼 그룹
+## Checkbox and radio button groups
 
-버튼과 같은 체크 박스와 라디오 [토글 버튼]({{< docsref "/forms/checks-radios" >}})을 조합하여 아주 매끄러운 외형의 버튼 그룹을 만듭니다.
+Combine button-like checkbox and radio [toggle buttons]({{< docsref "/forms/checks-radios" >}}) into a seamless looking button group.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
@@ -82,9 +82,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 버튼 툴바
+## Button toolbar
 
-버튼 그룹의 세트를 버튼 툴바와 결합해, 더욱 복잡한 컴포넌트를 만들 수 있습니다. 필요에 따라서 유틸리티 클래스를 사용해 그룹과 버튼 등에 여백을 줄 수 있습니다.
+Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.
 
 {{< example >}}
 <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -105,7 +105,7 @@ toc: true
 </div>
 {{< /example >}}
 
-입력그룹과 버튼 그룹을 자유롭게 조합해 주세요. 위의 예시와 같이, 적절한 여백을 갖기 위해서는 몇 개의 유틸리티가 필요합니다.
+Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you'll likely need some utilities though to space things properly.
 
 {{< example >}}
 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
@@ -135,9 +135,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 크기 조절
+## Sizing
 
-그룹 내의 모든 버튼에 버튼 크기 클래스를 적용하는 대신에, 각각의 버튼을 포함한 `.btn-group`에 `.btn-group-*`을 추가하면 됩니다.
+Instead of applying button sizing classes to every button in a group, just add `.btn-group-*` to each `.btn-group`, including each one when nesting multiple groups.
 
 {{< example >}}
 <div class="btn-group btn-group-lg" role="group" aria-label="Large button group">
@@ -163,7 +163,7 @@ toc: true
 
 ## Nesting
 
-드롭다운과 버튼 그룹을 조합하는 경우는 다른 `.btn-group` 안에 `.btn-group`을 배치합니다.
+Place a `.btn-group` within another `.btn-group` when you want dropdown menus mixed with a series of buttons.
 
 {{< example >}}
 <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -182,9 +182,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 수직 변수
+## Vertical variation
 
-버튼 세트를 수평 방향이 아닌 수직 방향으로 표시합니다. **분할 버튼 드롭다운은 여기에서는 지원되지 않습니다.**
+Make a set of buttons appear vertically stacked rather than horizontally. **Split button dropdowns are not supported here.**
 
 {{< example >}}
 <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
