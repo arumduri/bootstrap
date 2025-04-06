@@ -1,29 +1,29 @@
 ---
 layout: docs
-title: 타이포그래피
-description: 전역 설정, 제목, 본문 텍스트, 목록 등을 포함하여 Bootstrap 타이포그래피에 대한 문서 및 예시입니다.
+title: Typography
+description: Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists, and more.
 group: content
 toc: true
 ---
 
-## 전역 설정
+## Global settings
 
-Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 설정합니다. 더 많은 제어가 필요한 경우 [텍스트 유틸리티 클래스]({{< docsref "/utilities/text" >}})를 확인해보세요.
+Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the [textual utility classes]({{< docsref "/utilities/text" >}}).
 
-- 각 OS 및 기기에 가장 적합한 `font-family`를 선택하는 [기본 글꼴 스택]({{< docsref "/content/reboot#native-font-stack" >}})을 사용합니다.
-- 보다 포괄적이고 접근 가능한 유형 척도를 위해 브라우저의 기본 루트 `font-size` (일반적으로 16px)를 사용하여 방텍스트가 필요에 따라 브라우저 기본값을 사용자 지정할 수 있습니다.
-- `<body>`에 적용된 타이포그래피 기반으로 `$font-family-base`, `$font-size-base` 및`$line-height-base` 속성을 사용합니다.
-- `$link-color`를 통해 글로벌 링크 색상을 설정합니다.
-- `$body-bg`를 사용하여 `<body>`에 `background-color`를 설정합니다 (기본적으로 `#fff`).
+- Use a [native font stack]({{< docsref "/content/reboot#native-font-stack" >}}) that selects the best `font-family` for each OS and device.
+- For a more inclusive and accessible type scale, we use the browser's default root `font-size` (typically 16px) so visitors can customize their browser defaults as needed.
+- Use the `$font-family-base`, `$font-size-base`, and `$line-height-base` attributes as our typographic base applied to the `<body>`.
+- Set the global link color via `$link-color`.
+- Use `$body-bg` to set a `background-color` on the `<body>` (`#fff` by default).
 
-이러한 스타일은 `_reboot.scss`에서 찾을 수 있으며 전역 변수는 `_variables.scss`에서 정의됩니다. `rem`에 `$ font-size-base`를 설정해야 합니다.
+These styles can be found within `_reboot.scss`, and the global variables are defined in `_variables.scss`. Make sure to set `$font-size-base` in `rem`.
 
 ## Headings
 
-`<h1>`부터 `<h6>`까지의 모든 제목을 사용할 수 있습니다.
+All HTML headings, `<h1>` through `<h6>`, are available.
 
 {{< bs-table >}}
-| Heading                 | 예시                                            |
+| Heading                 | Example                                       |
 | ----------------------- | --------------------------------------------- |
 | `<h1></h1>` | <span class="h1">h1. Bootstrap heading</span> |
 | `<h2></h2>` | <span class="h2">h2. Bootstrap heading</span> |
@@ -42,7 +42,7 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 <h6>h6. Bootstrap heading</h6>
 ```
 
-제목의 글꼴 스타일과 일치시키고 싶지만 관련 HTML 요소를 사용할 수 없는 경우 `.h1`부터 `.h6` 클래스도 사용할 수 있습니다.
+`.h1` through `.h6` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
 
 {{< example >}}
 <p class="h1">h1. Bootstrap heading</p>
@@ -53,9 +53,9 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 <p class="h6">h6. Bootstrap heading</p>
 {{< /example >}}
 
-### 사용자 정의 제목
+### Customizing headings
 
-포함된 유틸리티 클래스를 사용하여 Bootstrap 3에서의 작은 보조 제목 텍스트를 다시 만듭니다.
+Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.
 
 {{< example >}}
 <h3>
@@ -64,9 +64,9 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 </h3>
 {{< /example >}}
 
-## 제목 표시
+## Display headings
 
-기존 제목 요소는 페이지 콘텐츠의 핵심에서 가장 잘 작동하도록 설계되었습니다. 눈에 띄는 제목이 필요한 경우 **표시 제목**을 사용하는 것이 좋습니다.
+Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a **display heading**—a larger, slightly more opinionated heading style.
 
 <div class="bd-example">
   <div class="display-1 pb-3 mb-3 border-bottom">Display 1</div>
@@ -86,15 +86,15 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 <h1 class="display-6">Display 6</h1>
 ```
 
-디스플레이 제목은 `$display-font-sizes` Sass 맵과 두 개의 변수 `$display-font-weight` 및 `$display-line-height`를 통해 구성됩니다.
+Display headings are configured via the `$display-font-sizes` Sass map and two variables, `$display-font-weight` and `$display-line-height`.
 
-디스플레이 제목은 두 가지 변수인 `$display-font-family` 및 `$display-font-style`을 통해 사용자 지정할 수 있습니다.
+Display headings are customizable via two variables, `$display-font-family` and `$display-font-style`.
 
 {{< scss-docs name="display-headings" file="scss/_variables.scss" >}}
 
 ## Lead
 
-`.lead`를 추가하여 단락을 눈에 띄게 만드십시오.
+Make a paragraph stand out by adding `.lead`.
 
 {{< example >}}
 <p class="lead">
@@ -102,9 +102,9 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 </p>
 {{< /example >}}
 
-## 인라인 텍스트 요소
+## Inline text elements
 
-일반적인 인라인 HTML5 요소의 스타일링입니다.
+Styling for common inline HTML5 elements.
 
 {{< example >}}
 <p>You can use the mark tag to <mark>highlight</mark> text.</p>
@@ -117,40 +117,40 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 <p><em>This line rendered as italicized text.</em></p>
 {{< /example >}}
 
-이러한 태그는 시맨틱 목적으로 사용되어야합니다:
+Beware that those tags should be used for semantic purpose:
 
-- `<mark>`는 참조 또는 표기 목적으로 표시되거나 강조된 텍스트를 나타냅니다.
-- `<small>`은 저작권 및 법적 텍스트와 같은 부가적인 댓글과 작은 텍스트를 나타냅니다.
-- `<s>`는 더 이상 관련이 없거나 더 이상 정확하지 않은 요소를 나타냅니다.
-- `<u>`는 텍스트가 아닌 주석이 있음을 나타내는 방식으로 렌더링되어야 하는 인라인 텍스트의 범위를 나타냅니다.
+- `<mark>` represents text which is marked or highlighted for reference or notation purposes.
+- `<small>` represents side-comments and small print, like copyright and legal text.
+- `<s>` represents element that are no longer relevant or no longer accurate.
+- `<u>` represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation.
 
-텍스트 스타일을 지정해야 된다면 다음 클래스를 사용할 수도 있습니다.
+If you want to style your text, you should use the following classes instead:
 
-- `.mark`는 `<mark>`와 동일한 스타일을 적용합니다.
-- `.small`은 `<small>`과 동일한 스타일을 적용합니다.
-- `.text-decoration-underline`은 `<u>`와 동일한 스타일을 적용합니다.
-- `.text-decoration-line-through`는 `<s>`와 동일한 스타일을 적용합니다.
+- `.mark` will apply the same styles as `<mark>`.
+- `.small` will apply the same styles as `<small>`.
+- `.text-decoration-underline` will apply the same styles as `<u>`.
+- `.text-decoration-line-through` will apply the same styles as `<s>`.
 
-위에는 표시되지 않았지만 HTML5에서 `<b>` 및 `<i>`를 자유롭게 사용하세요. `<b>`는 추가 중요성을 전달하지 않고 단어나 구문을 강조하는 반면 `<i>`는 대부분 음성, 기술 용어 등에 사용됩니다.
+While not shown above, feel free to use `<b>` and `<i>` in HTML5. `<b>` is meant to highlight words or phrases without conveying additional importance, while `<i>` is mostly for voice, technical terms, etc.
 
-## 텍스트 유틸리티
+## Text utilities
 
-[텍스트 유틸리티]({{< docsref "/utilities/text" >}}) 및 [색상 유틸리티]({{< docsref "/utilities/colors" >}})를 사용하여 텍스트 정렬, 변형, 스타일, 두께, 선 높이, 장식 및 색상을 변경하십시오.
+Change text alignment, transform, style, weight, line-height, decoration and color with our [text utilities]({{< docsref "/utilities/text" >}}) and [color utilities]({{< docsref "/utilities/colors" >}}).
 
-## 약어
+## Abbreviations
 
-약어 및 두텍스트어에 대한 HTML의 `<abbr>` 요소를 스타일링하여 마우스 오버시 확장된 버전을 표시합니다. 약어에는 기본 밑줄이 있으며 도움말 커서를 통해 마우스 오버 시 및 보조 기술 사용자에게 추가 컨텍스트를 제공합니다.
+Stylized implementation of HTML's `<abbr>` element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
 
-약간 더 작은 글꼴 크기의 약어에 `.initialism`을 추가합니다.
+Add `.initialism` to an abbreviation for a slightly smaller font-size.
 
 {{< example >}}
 <p><abbr title="attribute">attr</abbr></p>
 <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
 {{< /example >}}
 
-## 인용문
+## Blockquotes
 
-문서 내의 다른 소스에서 콘텐츠 블록을 인용합니다. HTML을 인용문으로 `<blockquote class="blockquote">`로 감쌉니다.
+For quoting blocks of content from another source within your document. Wrap `<blockquote class="blockquote">` around any HTML as the quote.
 
 {{< example >}}
 <blockquote class="blockquote">
@@ -158,9 +158,9 @@ Bootstrap은 기본 전역 표시, 타이포그래피 및 링크 스타일을 �
 </blockquote>
 {{< /example >}}
 
-### 출처 표기
+### Naming a source
 
-HTML 사양에서는 인용구 속성이 `<blockquote>`외부에 배치되어야 합니다. 어트리뷰션을 제공할 때 `<blockquote>`를 `<figure>`로 감싸고 `<figcaption>` 또는 블록 레벨 요소 (예: `<p>`)를 `.blockquote-footer` 클래스와 함께 사용하세요. 소스 작품의 이름도 `<cite>`로 감싸야 합니다.
+The HTML spec requires that blockquote attribution be placed outside the `<blockquote>`. When providing attribution, wrap your `<blockquote>` in a `<figure>` and use a `<figcaption>` or a block level element (e.g., `<p>`) with the `.blockquote-footer` class. Be sure to wrap the name of the source work in `<cite>` as well.
 
 {{< example >}}
 <figure>
@@ -173,9 +173,9 @@ HTML 사양에서는 인용구 속성이 `<blockquote>`외부에 배치되어야
 </figure>
 {{< /example >}}
 
-### 정렬
+### Alignment
 
-인용구의 정렬을 변경하려면 필요에 따라 텍스트 유틸리티를 사용하세요.
+Use text utilities as needed to change the alignment of your blockquote.
 
 {{< example >}}
 <figure class="text-center">
@@ -199,11 +199,11 @@ HTML 사양에서는 인용구 속성이 `<blockquote>`외부에 배치되어야
 </figure>
 {{< /example >}}
 
-## 목록
+## Lists
 
 ### Unstyled
 
-기본 `list-style`과 목록 항목의 왼쪽 여백을 제거합니다 (직계 자식만 해당). **이 부분은 직계 자식 목록 항목에만 적용됩니다**. 즉, 중첩된 목록에 대해서도 클래스를 추가해야 합니다.
+Remove the default `list-style` and left margin on list items (immediate children only). **This only applies to immediate children list items**, meaning you will need to add the class for any nested lists as well.
 
 {{< example >}}
 <ul class="list-unstyled">
@@ -222,9 +222,9 @@ HTML 사양에서는 인용구 속성이 `<blockquote>`외부에 배치되어야
 </ul>
 {{< /example >}}
 
-### 인라인
+### Inline
 
-목록의 글 머리 기호를 제거하고 `.list-inline`과 `.list-inline-item`의 두 클래스 조합으로 약간의 `margin`을 적용합니다.
+Remove a list's bullets and apply some light `margin` with a combination of two classes, `.list-inline` and `.list-inline-item`.
 
 {{< example >}}
 <ul class="list-inline">
@@ -234,9 +234,9 @@ HTML 사양에서는 인용구 속성이 `<blockquote>`외부에 배치되어야
 </ul>
 {{< /example >}}
 
-### 설명 목록 정렬
+### Description list alignment
 
-그리드 시스템의 사전 정의된 클래스 (또는 시맨틱 믹스인)를 사용하여 용어와 설명을 수평으로 정렬합니다. 더 긴 용어의 경우 선택적으로 `.text-truncate` 클래스를 추가하여 줄임표로 텍스트를 자를 수 있습니다.
+Align terms and descriptions horizontally by using our grid system's predefined classes (or semantic mixins). For longer terms, you can optionally add a `.text-truncate` class to truncate the text with an ellipsis.
 
 {{< example >}}
 <dl class="row">
@@ -265,22 +265,22 @@ HTML 사양에서는 인용구 속성이 `<blockquote>`외부에 배치되어야
 </dl>
 {{< /example >}}
 
-## 반응형 글꼴 크기
+## Responsive font sizes
 
-Bootstrap 5에서는 기본적으로 반응형 글꼴 크기를 활성화하여 텍스트가 장치 및 뷰포트 크기에 따라 더 자연스럽게 확장될 수 있도록 했습니다. 어떻게 작동하는지 알아보려면 [RFS 페이지]({{< docsref "/getting-started/rfs" >}})를 살펴보십시오.
+In Bootstrap 5, we've enabled responsive font sizes by default, allowing text to scale more naturally across device and viewport sizes. Have a look at the [RFS page]({{< docsref "/getting-started/rfs" >}}) to find out how this works.
 
 ## CSS
 
-### Sass 변수
+### Sass variables
 
-제목에는 크기 및 간격에 대한 전용 변수가 있습니다.
+Headings have some dedicated variables for sizing and spacing.
 
 {{< scss-docs name="headings-variables" file="scss/_variables.scss" >}}
 
-여기와 [Reboot]({{< docsref "/content/reboot" >}})에서 다루는 기타 타이포그래피 요소에도 전용 변수가 있습니다.
+Miscellaneous typography elements covered here and in [Reboot]({{< docsref "/content/reboot" >}}) also have dedicated variables.
 
 {{< scss-docs name="type-variables" file="scss/_variables.scss" >}}
 
-### Sass 믹스인
+### Sass mixins
 
-타이포그래피 전용 믹스인은 없지만 Bootstrap은 [반응형 글꼴 크기 (Responsive Font Sizing, RFS)]({{< docsref "/getting-started/rfs" >}})을 사용합니다.
+There are no dedicated mixins for typography, but Bootstrap does use [Responsive Font Sizing (RFS)]({{< docsref "/getting-started/rfs" >}}).
