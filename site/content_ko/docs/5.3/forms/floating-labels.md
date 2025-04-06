@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: 플로팅 라벨
-description: 입력 필드 위로 떠오르는 예쁘고 간단한 폼 라벨을 작성할 수 있습니다.
+title: Floating labels
+description: Create beautifully simple form labels that float over your input fields.
 group: forms
 toc: true
 ---
 
-## 예시
+## Example
 
-`<input class="form-control">`과 `<label>` 요소를 함께 `.form-floating`으로 감싸면, Bootstrap의 텍스트 형식의 폼 필드에서 플로팅 라벨 사용이 가능합니다. CSS만으로 플로팅 라벨을 실현하는 방법은 `:placeholder-shown` 가상 요소를 사용하기 때문에 각 `<input>`에는 `placeholder`가 필요합니다. 또한 형제 셀렉터(예를 들어, `~`)를 사용하기 때문에 `<input>`이 처음에 와야 하는 순서에 주의해 주세요.
+Wrap a pair of `<input class="form-control">` and `<label>` elements in `.form-floating` to enable floating labels with Bootstrap's textual form fields. A `placeholder` is required on each `<input>` as our method of CSS-only floating labels uses the `:placeholder-shown` pseudo-element. Also note that the `<input>` must come first so we can utilize a sibling selector (e.g., `~`).
 
 {{< example >}}
 <div class="form-floating mb-3">
@@ -21,7 +21,7 @@ toc: true
 </div>
 {{< /example >}}
 
-`value`가 이미 정의되어 있는 경우에는 `<label>`이 자동으로 플로팅 되어져 있습니다.
+When there's a `value` already defined, `<label>`s will automatically adjust to their floated position.
 
 {{< example >}}
 <form class="form-floating">
@@ -30,7 +30,7 @@ toc: true
 </form>
 {{< /example >}}
 
-또한, 폼 유효성 검사에서도 기대한대로 잘 동작합니다.
+Form validation styles also work as expected.
 
 {{< example >}}
 <form class="form-floating">
@@ -39,9 +39,9 @@ toc: true
 </form>
 {{< /example >}}
 
-## Textarea
+## Textareas
 
-기본적으로, `.form-control`을 사용하는 `<textarea>`는 `<input>`의 높이와 동일합니다.
+By default, `<textarea>`s with `.form-control` will be the same height as `<input>`s.
 
 {{< example >}}
 <div class="form-floating">
@@ -50,7 +50,7 @@ toc: true
 </div>
 {{< /example >}}
 
-`<textarea>`의 높이를 변경하고 싶다면, `rows`속성 대신, 명시적인 `height`를 사용해 설정해 주세요(인라인 또는 사용자 CSS를 사용합니다). Instead, set an explicit `height` (either inline or via custom CSS).
+To set a custom height on your `<textarea>`, do not use the `rows` attribute. Instead, set an explicit `height` (either inline or via custom CSS).
 
 {{< example >}}
 <div class="form-floating">
@@ -59,9 +59,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 셀렉트
+## Selects
 
-`.form-control` 이외에서의 플로팅 라벨은 `.form-select`에서만 사용할 수 있습니다. 이들은 똑같이 동작하지만, `<input>`과는 다르게 `<label>`이 항상 플로팅 된 상태로 표시됩니다. **`size`와 `multiple` 선택자는 지원되지 않습니다.**
+Other than `.form-control`, floating labels are only available on `.form-select`s. They work in the same way, but unlike `<input>`s, they'll always show the `<label>` in its floated state. **Selects with `size` and `multiple` are not supported.**
 
 {{< example >}}
 <div class="form-floating">
@@ -75,9 +75,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 비활성화
+## Disabled
 
-입력, 텍스트 영역 또는 선택 영역에 `disabled` 부울 속성을 추가하여 회색으로 표시하고 포인터 이벤트를 제거하며 포커싱을 방지할 수 있습니다.
+Add the `disabled` boolean attribute on an input, a textarea or a select to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
 {{< example >}}
 <div class="form-floating mb-3">
@@ -103,9 +103,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 읽기 전용 일반 텍스트
+## Readonly plaintext
 
-플로팅 라벨은 페이지 레이아웃에 영향을 주지 않고 편집 가능한 `<input>`에서 일반 텍스트 값으로 전환하는 데 유용한 `.form-control-plaintext`도 지원합니다.
+Floating labels also support `.form-control-plaintext`, which can be helpful for toggling from an editable `<input>` to a plaintext value without affecting the page layout.
 
 {{< example >}}
 <div class="form-floating mb-3">
@@ -118,9 +118,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 입력 그룹
+## Input groups
 
-플로팅 라벨은 `.input-group`도 지원합니다.
+Floating labels also support `.input-group`.
 
 {{< example >}}
 <div class="input-group mb-3">
@@ -132,7 +132,7 @@ toc: true
 </div>
 {{< /example >}}
 
-양식 유효성 검사와 함께 `.input-group` 및 `.form-floating`을 사용하는 경우 `-feedback`은 `.form-floating` 외부에 배치하되 `.input-group` 내부에 배치해야 합니다. 즉, 피드백은 JavaScript를 사용하여 표시되어야 합니다.
+When using `.input-group` and `.form-floating` along with form validation, the `-feedback` should be placed outside of the `.form-floating`, but inside of the `.input-group`. This means that the feedback will need to be shown using javascript.
 
 {{< example >}}
 <div class="input-group has-validation">
@@ -147,9 +147,9 @@ toc: true
 </div>
 {{< /example >}}
 
-## 레이아웃
+## Layout
 
-Bootstrap 그리드 시스템을 사용할 경우, 폼 요소는 반드시 컬럼 클래스 내에 배치해야 합니다.
+When working with the Bootstrap grid system, be sure to place form elements within column classes.
 
 {{< example >}}
 <div class="row g-2">
@@ -175,6 +175,6 @@ Bootstrap 그리드 시스템을 사용할 경우, 폼 요소는 반드시 컬�
 
 ## CSS
 
-### Sass 변수
+### Sass variables
 
 {{< scss-docs name="form-floating-variables" file="scss/_variables.scss" >}}
