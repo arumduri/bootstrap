@@ -1,16 +1,16 @@
 ---
 layout: docs
 title: Z-index
-description: z-index는 Bootstrap 그리드 시스템의 일부는 아니지만 컴포넌트가 서로 중첩되고 상호 작용하는 방식에서 중요한 역할을 담당합니다.
+description: While not a part of Bootstrap's grid system, z-indexes play an important part in how our components overlay and interact with one another.
 group: layout
 ---
 
-다수의 Bootstrap 컴포넌트는 콘텐츠를 정렬하는 제3의 축을 제공하여 레이아웃을 제어하는 데에 도움이 되는 CSS 속성인 `z-index`를 사용합니다. 우리는 내비게이션, 툴팁 및 팝오버, 모달 등을 적절하게 계층화하도록 설계된 Bootstrap의 기본 z-index 스케일을 사용합니다.
+Several Bootstrap components utilize `z-index`, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that's been designed to properly layer navigation, tooltips and popovers, modals, and more.
 
-이러한 높은 값은 임의의 숫자에서 시작하며 충돌을 이상적으로 피할 수 있을만큼 높고 구체적입니다. 툴팁, 팝오버, 내비게이션, 드롭다운, 모달 등 계층화된 컴포넌트 전반에 걸쳐 이러한 표준 세트가 필요하므로 동작에서 합리적으로 일관성을 유지할 수 있습니다. `100`+ 또는 `500`+를 사용할 수 없을 이유가 없습니다.
+These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There's no reason we couldn't have used `100`+ or `500`+.
 
-이러한 값을 개별적으로 사용자 지정하는 것은 권장되지 않습니다. 하나를 변경하면 모두 변경해야 합니다.
+We don't encourage customization of these individual values; should you change one, you likely need to change them all.
 
 {{< scss-docs name="zindex-stack" file="scss/_variables.scss" >}}
 
-컴포넌트 (예: 입력 그룹의 버튼 및 입력) 내에서 겹치는 테두리를 처리하기 위해 기본, 호버, 활성 상태에 대해 `1`, `2`, `3`의 낮은 한 자리 `z-index` 값을 사용합니다. hover/focus/active에서 우리는 형제 요소 위에 테두리를 표시하기 위해 더 높은 `z-index` 값으로 특정 요소를 맨 앞으로 가져옵니다.
+To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit `z-index` values of `1`, `2`, and `3` for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher `z-index` value to show their border over the sibling elements.
