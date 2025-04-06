@@ -1,14 +1,14 @@
 ---
 layout: docs
 title: Contents
-description: 컴파일 및 소스 코드 버전을 포함해서 Bootstrap에 무엇이 포함되어 있는지 알아보세요.
+description: Discover what's included in Bootstrap, including our compiled and source code flavors.
 group: getting-started
 toc: true
 ---
 
-## 컴파일된 Bootstrap
+## Compiled Bootstrap
 
-다운로드 한 후 압축을 해제하면 다음과 같은 것들을 확인하실 수 있습니다:
+Once downloaded, unzip the compressed folder and you'll see something like this:
 
 <!-- NOTE: This info is intentionally duplicated in the README. Copy any changes made here over to the README too, but be sure to keep in mind to add the `dist` folder. -->
 
@@ -62,35 +62,35 @@ bootstrap/
     └── bootstrap.min.js.map
 ```
 
-이것은 어떤 웹 프로젝트에서도 빠르게 사용할 수 있는 Bootstrap의 가장 기본적인 형태인 컴파일된 파일입니다. 우리는 컴파일된 CSS와 JS (`bootstrap.*`), 그리고 컴파일 및 경량화된 CSS와 JS (`bootstrap.min.*`)도 제공합니다. [소스 맵](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`)은 몇몇 브라우저의 개발자 도구에서 사용할 수 있습니다. 번들된 JS 파일 (`bootstrap.bundle.js` 및 경량화된 `bootstrap.bundle.min.js`)에는 [Popper](https://popper.js.org/)가 포함되어 있습니다.
+This is the most basic form of Bootstrap: compiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/).
 
-### CSS 파일
+### CSS files
 
-Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 몇 가지 선택지가 포함되어 있습니다.
-
-{{< bs-table "table" >}}
-| CSS 파일                                                                                                                                                | 레이아웃                                       | 콘텐츠                                          | 컴포넌트 | 유틸리티                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | -------------------------------------------- | ---- | ---------------------------------------------- |
-| `bootstrap.css`<br> `bootstrap.min.css`<br> `bootstrap.rtl.css`<br> `bootstrap.rtl.min.css`                                         | 포함                                         | 포함                                           | 포함   | 포함                                             |
-| `bootstrap-grid.css`<br> `bootstrap-grid.rtl.css`<br> `bootstrap-grid.min.css`<br> `bootstrap-grid.rtl.min.css`                     | [그리드 시스템만]({{< docsref "/layout/grid" >}}) | —                                            | —    | [플렉스 유틸리티만]({{< docsref "/utilities/flex" >}}) |
-| `bootstrap-utilities.css`<br> `bootstrap-utilities.rtl.css`<br> `bootstrap-utilities.min.css`<br> `bootstrap-utilities.rtl.min.css` | —                                          | —                                            | —    | 포함                                             |
-| `bootstrap-reboot.css`<br> `bootstrap-reboot.rtl.css`<br> `bootstrap-reboot.min.css`<br> `bootstrap-reboot.rtl.min.css`             | —                                          | [Reboot만]({{< docsref "/content/reboot" >}}) | —    | —                                              |
-{{< /bs-table >}}
-
-### JS 파일
-
-마찬가지로 컴파일된 JavaScript의 일부 또는 전체를 포함할 수 있는 선택지가 있습니다.
+Bootstrap includes a handful of options for including some or all of our compiled CSS.
 
 {{< bs-table "table" >}}
-| JS 파일                                                               | Popper |
-| ------------------------------------------------------------------- | ------ |
-| `bootstrap.bundle.js`<br> `bootstrap.bundle.min.js`<br> | 포함     |
-| `bootstrap.js`<br> `bootstrap.min.js`<br>               | –      |
+| CSS files                                                                                                                                             | Layout                                             | Content                                          | Components | Utilities                                                |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------ | ---------- | -------------------------------------------------------- |
+| `bootstrap.css`<br> `bootstrap.min.css`<br> `bootstrap.rtl.css`<br> `bootstrap.rtl.min.css`                                         | Included                                           | Included                                         | Included   | Included                                                 |
+| `bootstrap-grid.css`<br> `bootstrap-grid.rtl.css`<br> `bootstrap-grid.min.css`<br> `bootstrap-grid.rtl.min.css`                     | [Only grid system]({{< docsref "/layout/grid" >}}) | —                                                | —          | [Only flex utilities]({{< docsref "/utilities/flex" >}}) |
+| `bootstrap-utilities.css`<br> `bootstrap-utilities.rtl.css`<br> `bootstrap-utilities.min.css`<br> `bootstrap-utilities.rtl.min.css` | —                                                  | —                                                | —          | Included                                                 |
+| `bootstrap-reboot.css`<br> `bootstrap-reboot.rtl.css`<br> `bootstrap-reboot.min.css`<br> `bootstrap-reboot.rtl.min.css`             | —                                                  | [Only Reboot]({{< docsref "/content/reboot" >}}) | —          | —                                                        |
 {{< /bs-table >}}
 
-## Bootstrap 소스 코드
+### JS files
 
-Bootstrap 소스 코드 다운로드에는 컴파일된 CSS 및 JavaScript 에셋, Sass 소스, JavaScript 및 문서가 포함되어 있습니다. 구체적으로는 다음에 나와있는 것 외에도 추가적인 것들이 포함되어 있습니다:
+Similarly, we have options for including some or all of our compiled JavaScript.
+
+{{< bs-table "table" >}}
+| JS Files                                                            | Popper   |
+| ------------------------------------------------------------------- | -------- |
+| `bootstrap.bundle.js`<br> `bootstrap.bundle.min.js`<br> | Included |
+| `bootstrap.js`<br> `bootstrap.min.js`<br>               | –        |
+{{< /bs-table >}}
+
+## Bootstrap source code
+
+The Bootstrap source code download includes the compiled CSS and JavaScript assets, along with source Sass, JavaScript, and documentation. More specifically, it includes the following and more:
 
 ```text
 bootstrap/
@@ -106,6 +106,6 @@ bootstrap/
 └── scss/
 ```
 
-`scss/` 및 `js/`는 우리 CSS 및 JavaScript의 소스 코드입니다. `dist/` 폴더에는 사전 컴파일 다운로드 부분에 나와있는 모든 것들이 포함되어 있습니다. `site/content/docs/` 폴더에는 호스팅되는 문서의 소스 코드가 포함되어 있으며, Bootstrap의 라이브 예제도 포함되어 있습니다.
+The `scss/` and `js/` are the source code for our CSS and JavaScript. The `dist/` folder includes everything listed in the compiled download section above. The `site/content/docs/` folder includes the source code for our hosted documentation, including our live examples of Bootstrap usage.
 
 Beyond that, any other included file provides support for packages, license information, and development.
