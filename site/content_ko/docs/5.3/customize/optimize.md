@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: 최적화
-description: 프로젝트를 단순하고, 대응력이 뛰어나며, 유지 관리할 수 있도록 하여 최고의 경험을 제공하고 보다 중요한 일에 집중할 수 있습니다.
+title: Optimize
+description: Keep your projects lean, responsive, and maintainable so you can deliver the best experience and focus on more important jobs.
 group: customize
 toc: true
 ---
 
 ## Lean Sass imports
 
-asset pipeline에서 Sass를 사용하는 경우, 필요한 컴포넌트만 `@import`해서 Bootstrap을 최적화 하십시오. 가장 큰 최적화는 `bootstrap.scss` 섹션의 `Layout & Components`에서 얻을 수 있습니다.
+When using Sass in your asset pipeline, make sure you optimize Bootstrap by only `@import`ing the components you need. Your largest optimizations will likely come from the `Layout & Components` section of our `bootstrap.scss`.
 
 {{< scss-docs name="import-stack" file="scss/bootstrap.scss" >}}
 
 
-컴포넌트를 사용하지 않을 때는 주석 처리를 하거나 완전히 삭제해 주세요. 예를 들어, 캐러셀(carousel)을 사용하지 않을 경우 해당 import를 삭제하여 컴파일한 CSS의 파일 크기를 절약할 수 있습니다. Sass import에는 몇 가지 의존 관계가 있어 파일을 생략하기가 어려울 수도 있으니 주의해 주세요.
+If you're not using a component, comment it out or delete it entirely. For example, if you're not using the carousel, remove that import to save some file size in your compiled CSS. Keep in mind there are some dependencies across Sass imports that may make it more difficult to omit a file.
 
-## JavaScript 경량화
+## Lean JavaScript
 
-Bootstrap의 JavaScript는 기본적인 dist 파일(`bootstrap.js`와 `bootstrap.min.js`)안에 모든 컴포넌트를 포함하고 있으며, 번들 파일(`bootstrap.bundle.js`와 `bootstrap.bundle.min.js`)안의 기본 의존 관계(Popper)도 제공합니다. Sass를 통해 재정의 하는 동안에는 반드시 관련된 JavaScript는 삭제해 주세요.
+Bootstrap's JavaScript includes every component in our primary dist files (`bootstrap.js` and `bootstrap.min.js`), and even our primary dependency (Popper) with our bundle files (`bootstrap.bundle.js` and `bootstrap.bundle.min.js`). While you're customizing via Sass, be sure to remove related JavaScript.
 
-예를 들어, Webpack, Parcel, 또는 Vite 같은 자체 JavaScript 번들러를 사용하고 있다면 사용할 JavaScript만 포함하면 됩니다. 아래의 예시에서는, 모달의 JavaScript를 포함하는 방법을 보여주고 있습니다:
+For instance, assuming you're using your own JavaScript bundler like Webpack, Parcel, or Vite, you'd only import the JavaScript you plan on using. In the example below, we show how to just include our modal JavaScript:
 
 <!-- eslint-skip -->
 ```js
@@ -39,10 +39,10 @@ import 'bootstrap/js/dist/modal';
 // import 'bootstrap/js/dist/tooltip';
 ```
 
-이렇게 하면 버튼, 캐러셀, 툴팁과 같은 사용할 예정이 없는 컴포넌트에 JavaScript를 포함하지 않도록 할 수 있습니다. 드롭다운, 툴팁, 팝오버를 포함하는 경우에는 반드시 `package.json` 파일에 Popper의 의존 관계를 기술해 주세요.
+This way, you're not including any JavaScript you don't intend to use for components like buttons, carousels, and tooltips. If you're importing dropdowns, tooltips or popovers, be sure to list the Popper dependency in your `package.json` file.
 
 {{< callout info >}}
-**중요!** `bootstrap/js/dist`에 있는 파일은 **default export**를 사용하고 있기 때문에, 그 중 하나를 사용하고 싶다면 아래와 같이 해야 합니다:: To use them, do the following:
+**Heads up!** Files in `bootstrap/js/dist` use the **default export**. To use them, do the following:
 
 <!-- eslint-skip -->
 ```js
@@ -53,40 +53,40 @@ const modal = new Modal(document.getElementById('myModal'))
 
 ## Autoprefixer .browserslistrc
 
-Bootstrap은 특정 CSS 속성에 브라우저 접두어(prefixes)를 자동으로 추가하기 위해 Autoprefixer에 의존합니다. 접두어는 Bootstrap의 루트에 있는 `.browserslistrc` 파일에 의해 결정됩니다. 브라우저의 이 목록을 재정의하여 Sass를 컴파일하면 해당 브라우저나 버전에 고유한 벤더 접두어가 있는 경우 컴파일된 CSS에서 일부 CSS가 자동으로 삭제됩니다.
+Bootstrap depends on Autoprefixer to automatically add browser prefixes to certain CSS properties. Prefixes are dictated by our `.browserslistrc` file, found in the root of the Bootstrap repo. Customizing this list of browsers and recompiling the Sass will automatically remove some CSS from your compiled CSS, if there are vendor prefixes unique to that browser or version.
 
-## 사용되지 않은 CSS
+## Unused CSS
 
-_이 부분은 여러분의 도움이 필요합니다. PR을 만들어 주세요. 감사합니다!_
+_Help wanted with this section, please consider opening a PR. Thanks!_
 
-[PurgeCSS](https://github.com/FullHuman/purgecss)를  Bootstrap과 함께 사용하기 위한 사전 빌드된 예시는 없지만, 커뮤니티에 올라온 글 중 도움이 되는 기사나 공략 글을 소개합니다. 몇 가지의 선택지가 있으니 확인해 주세요:
+While we don't have a prebuilt example for using [PurgeCSS](https://github.com/FullHuman/purgecss) with Bootstrap, there are some helpful articles and walkthroughs that the community has written. Here are some options:
 
 - <https://medium.com/dwarves-foundation/remove-unused-css-styles-from-bootstrap-using-purgecss-88395a2c5772>
 - <https://lukelowrey.com/automatically-removeunused-css-from-bootstrap-or-other-frameworks/>
 
-마지막으로, [사용되지 않은 CSS에 대한 CSS Tricks 문서](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/)에서는 PurgeCSS나 다른 유사한 도구를 사용하는 방법을 소개하고 있습니다.
+Lastly, this [CSS Tricks article on unused CSS](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) shows how to use PurgeCSS and other similar tools.
 
-## 경량화와 gzip
+## Minify and gzip
 
-가능한 한 방텍스트에게 제공하는 모든 코드를 압축해야 합니다. Bootstrap의 dist 파일을 사용하는 경우에는, 경량화된 버전(`.min.css`와 `.min.js` 확장자로 표시)을 고수해 주세요. 자체 빌드 시스템으로 소스에서 Bootstrap을 빌드하는 경우 HTML, CSS, JS용으로 자체 압축 파일을 빌드해야 합니다.
+Whenever possible, be sure to compress all the code you serve to your visitors. If you're using Bootstrap dist files, try to stick to the minified versions (indicated by the `.min.css` and `.min.js` extensions). If you're building Bootstrap from the source with your own build system, be sure to implement your own minifiers for HTML, CSS, and JS.
 
-## 파일을 차단하지 않기
+## Non-blocking files
 
-압축을 최소화해 사용하는 것만으로도 충분할 수 있지만, 파일을 차단하지 않고 만드는 데 있어 사이트를 최적화하고 빠르게 만드는데 있어 아주 중요합니다.
+While minifying and using compression might seem like enough, making your files non-blocking ones is also a big step in making your site well-optimized and fast enough.
 
-Google Chrome에서 [Lighthouse](https://developers.google.com/web/tools/lighthouse/) 플러그인을 사용하고 있다면 FCP를 잘 아실 것입니다. [The First Contentful Paint](https://web.dev/fcp/) 라는 지표는 페이지를 불러오기 시작한 후 페이지의 콘텐츠 일부가 화면에 표시될 때까지의 시간을 측정합니다.
+If you are using a [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) plugin in Google Chrome, you may have stumbled over FCP. [The First Contentful Paint](https://web.dev/fcp/) metric measures the time from when the page starts loading to when any part of the page's content is rendered on the screen.
 
-중요하지 않은 JavaScript나 CSS를 늦게 호출함으로써 FCP를 개선할 수 있습니다. 이게 무슨 의미일까요? 간단히 말하면 첫 화면에 굳이 필요하지 않은 JavaScript나 스타일 시트에는 `async`나 `defer` 속성을 붙여야 합니다.
+You can improve FCP by deferring non-critical JavaScript or CSS. What does that mean? Simply, JavaScript or stylesheets that don't need to be present on the first paint of your page should be marked with `async` or `defer` attributes.
 
-이렇게 되면 덜 중요한 자원은 나중에 읽혀 첫 화면을 그리는 데 방해를 하지 않습니다. 한편 중요한 자원은 인라인의 스크립트나 스타일로서 포함할 수 있습니다.
+This ensures that the less important resources are loaded later and not blocking the first paint. On the other hand, critical resources can be included as inline scripts or styles.
 
-이것에 대해 좀 더 자세히 알고 싶다면 이미 훌륭한 기사들이 많이 있습니다:
+If you want to learn more about this, there are already a lot of great articles about it:
 
 - <https://web.dev/render-blocking-resources/>
 - <https://web.dev/defer-non-critical-css/>
 
-## 항상 HTTPS 사용하기
+## Always use HTTPS
 
-실제 환경에서 웹사이트는 HTTPS 접속으로만 이용하도록 해 주세요. HTTPS는, 모든 사이트의 보안, 개인 정보 보호 및 가용성을 향상시키며, [민감하지 않은 웹 트래픽은 없습니다](https://https.cio.gov/everything/). 웹 사이트가 HTTPS에서만 제공되도록 설정하는 순서는 아키텍처나 웹 호스팅 공급자에 따라 크게 다르기 때문에 이 문서에서는 설명하지 않습니다.
+Your website should only be available over HTTPS connections in production. HTTPS improves the security, privacy, and availability of all sites, and [there is no such thing as non-sensitive web traffic](https://https.cio.gov/everything/). The steps to configure your website to be served exclusively over HTTPS vary widely depending on your architecture and web hosting provider, and thus are beyond the scope of these docs.
 
-HTTPS를 통해 제공되는 사이트도 HTTPS 연결을 통해 모든 스타일 시트, 스크립트, 그 외 기타 어셋에 접근해야 합니다. 그렇지 않으면 사용자에게 [혼합된 활성 콘텐츠](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content)를 보내 종속성을 변경하여 사이트가 위험에 노출되는 잠재적인 취약성이 발생합니다. 이로 인해 사용자에게 보안 문제나 브라우저 내의 경고로 표시될 수 있습니다. CDN에서 Bootstrap을 호출하든 직접 제공하든 관계없이 HTTPS를 통해서만 접근해 주세요.
+Sites served over HTTPS should also access all stylesheets, scripts, and other assets over HTTPS connections. Otherwise, you'll be sending users [mixed active content](https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content), leading to potential vulnerabilities where a site can be compromised by altering a dependency. This can lead to security issues and in-browser warnings displayed to users. Whether you're getting Bootstrap from a CDN or serving it yourself, ensure that you only access it over HTTPS connections.
