@@ -1,55 +1,55 @@
 ---
 layout: docs
-title: 간격
-description: Bootstrap에는 요소의 모양을 수정하기 위한 광범위한 반응형 gap, padding 및 margin 유틸리티 클래스가 포함되어 있습니다.
+title: Spacing
+description: Bootstrap includes a wide range of shorthand responsive margin, padding, and gap utility classes to modify an element's appearance.
 group: utilities
 toc: true
 ---
 
-## 마진과 패딩
+## Margin and padding
 
-약칭 클래스를 사용하여 요소 또는 측면의 자식 집합에 반응형 `margin` 또는 `padding` 값을 할당합니다. 개별 속성, 모든 속성, 수직 및 수평 속성에 대한 지원이 포함됩니다. 클래스는 `.25rem`에서 `3rem` 범위의 기본 Sass 맵에서 빌드됩니다.
+Assign responsive-friendly `margin` or `padding` values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are built from a default Sass map ranging from `.25rem` to `3rem`.
 
 {{< callout >}}
-**CSS 그리드 시스템 모듈을 사용하십니까?** 대신에 [갭 유틸리티](#갭)를 사용해보세요.
+**Using the CSS Grid layout module?** Consider using [the gap utility](#gap) instead.
 {{< /callout >}}
 
-### 표기
+### Notation
 
-`xs`에서 `xxl`까지 모든 중단점에 적용되는 간격 유틸리티에는 별도의 중단점 약어가 없습니다. 이는 이러한 클래스가 `min-width : 0` 이상에서 적용되므로 미디어 쿼리에 의해 바인딩되지 않기 때문입니다. 그러나 나머지 중단점에는 중단점 약어가 포함됩니다.
+Spacing utilities that apply to all breakpoints, from `xs` to `xxl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
-클래스는 `xs`의 경우 `{property} {sides}-{size}` 형식을 사용하고 `sm`, `md`, `lg`, `xl`의 경우 `{property} {sides}-{breakpoint}-{size}` 형식을 사용하여 이름이 지정됩니다.
+The classes are named using the format `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, `xl`, and `xxl`.
 
-*속성* - property:
+Where *property* is one of:
 
-- `m` - `margin` 클래스 설정
-- `p` - `padding` 클래스 설정
+- `m` - for classes that set `margin`
+- `p` - for classes that set `padding`
 
-*방향* - sides:
+Where *sides* is one of:
 
-- `t` - `margin-top` 또는 `padding-top` 클래스 설정
-- `b` - `margin-bottom` 또는 `padding-bottom` 클래스 설정
-- `s` - (start) LTR에서는 `margin-left` 또는 `padding-left` 클래스, RTL에서는 `margin-right` 또는 `padding-right` 클래스 설정
-- `e` - (end) for classes that set `margin-right` 또는 `padding-right` 클래스, RTL에서는 `margin-left` 또는 `padding-left` 클래스 설정
-- `x` - `*-left`와 `*-right` 모두 클래스 설정
-- `y` - `*-top`과 `*-bottom` 모두 클래스 설정
-- 값 없음 - 요소의 4면 모두에 `margin` 또는 `padding`을 설정하는 클래스의 경우
+- `t` - for classes that set `margin-top` or `padding-top`
+- `b` - for classes that set `margin-bottom` or `padding-bottom`
+- `s` - (start) for classes that set `margin-left` or `padding-left` in LTR, `margin-right` or `padding-right` in RTL
+- `e` - (end) for classes that set `margin-right` or `padding-right` in LTR, `margin-left` or `padding-left` in RTL
+- `x` - for classes that set both `*-left` and `*-right`
+- `y` - for classes that set both `*-top` and `*-bottom`
+- blank - for classes that set a `margin` or `padding` on all 4 sides of the element
 
-*크기* - size:
+Where *size* is one of:
 
-- `0` - `margin` 또는 `padding`을 `0`으로 설정하여 제거
-- `1` - (기본적으로) `margin` 또는 `padding`을 `$spacer * .25`로 설정
-- `2` - (기본적으로) `margin` 또는 `padding`을 `$spacer * .5`로 설정
-- `3` - (기본적으로) `margin` 또는 `padding`을 `$spacer`로 설정
-- `4` - (기본적으로) `margin` 또는 `padding`을 `$spacer * 1.5`로 설정
-- `5` - (기본적으로) `margin` 또는 `padding`을 `$spacer * 3`로 설정
-- `auto` - `margin`을 자동으로 설정한 클래스의 경우
+- `0` - for classes that eliminate the `margin` or `padding` by setting it to `0`
+- `1` - (by default) for classes that set the `margin` or `padding` to `$spacer * .25`
+- `2` - (by default) for classes that set the `margin` or `padding` to `$spacer * .5`
+- `3` - (by default) for classes that set the `margin` or `padding` to `$spacer`
+- `4` - (by default) for classes that set the `margin` or `padding` to `$spacer * 1.5`
+- `5` - (by default) for classes that set the `margin` or `padding` to `$spacer * 3`
+- `auto` - for classes that set the `margin` to auto
 
-(`$ spacers` Sass 맵 변수에 항목을 추가하면 더 많은 크기를 추가할 수 있습니다)
+(You can add more sizes by adding entries to the `$spacers` Sass map variable.)
 
 ### Examples
 
-다음은 이러한 클래스의 몇 가지 대표적인 예입니다.
+Here are some representative examples of these classes:
 
 ```scss
 .mt-0 {
@@ -70,9 +70,9 @@ toc: true
 }
 ```
 
-### 세로 중앙
+### Horizontal centering
 
-또한 Bootstrap에는 가로 여백을 `auto`로 설정하여 고정 너비 블록 수준 콘텐츠, 즉 `display: block`과 `width`이 설정된 콘텐츠를 가로 중앙에 배치하는 `.mx-auto` 클래스도 포함되어 있습니다.
+Additionally, Bootstrap also includes an `.mx-auto` class for horizontally centering fixed-width block level content—that is, content that has `display: block` and a `width` set—by setting the horizontal margins to `auto`.
 
 <div class="bd-example">
   <div class="mx-auto p-2" style="width: 200px; background-color: rgba(var(--bd-violet-rgb),.15); border: rgba(var(--bd-violet-rgb),.3) solid 1px;">
@@ -88,9 +88,9 @@ toc: true
 
 ## Negative margin
 
-CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`은 사용할 수 없음). 이러한 음수 여백은 **기본적으로 사용 중지** 되지만 `$ enable-negative-margins : true`를 설정하여 Sass에서 사용하도록 설정할 수 있습니다.
+In CSS, `margin` properties can utilize negative values (`padding` cannot). These negative margins are **disabled by default**, but can be enabled in Sass by setting `$enable-negative-margins: true`.
 
-구문은 기본 양수 margin 유틸리티와 거의 동일하지만 요청 된 크기 앞에 `n`이 추가됩니다. 다음은 `.mt-1`과 반대되는 예시 클래스입니다:
+The syntax is nearly the same as the default, positive margin utilities, but with the addition of `n` before the requested size. Here's an example class that's the opposite of `.mt-1`:
 
 ```scss
 .mt-n1 {
@@ -100,7 +100,7 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 
 ## Gap
 
-`display: grid` 또는 `display: flex`를 사용할 때 부모 그리드 컨테이너에서 `gap` 유틸리티를 사용할 수 있습니다. 이렇게 하면 개별 그리드 또는 flex 항목에 여백 유틸리티를 추가할 필요가 없습니다. 간격 유틸리티는 기본적으로 반응형이며 `$spacers` Sass 맵을 기반으로 유틸리티 API를 통해 생성됩니다.
+When using `display: grid` or `display: flex`, you can make use of `gap` utilities on the parent element. This can save on having to add margin utilities to individual children of a grid or flex container. Gap utilities are responsive by default, and are generated via our utilities API, based on the `$spacers` Sass map.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid gap-3">
@@ -111,11 +111,11 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 </div>
 {{< /example >}}
 
-지원에는 Bootstrap의 모든 그리드 중단점에 대한 반응형 옵션과 `$ spacers` 맵 (`0` – `5`)의 6 가지 크기가 포함됩니다. `.gap-auto` 유틸리티 클래스는 사실상`.gap-0`과 동일하므로 별도로 없습니다.
+Support includes responsive options for all of Bootstrap's grid breakpoints, as well as six sizes from the `$spacers` map (`0`–`5`). There is no `.gap-auto` utility class as it's effectively the same as `.gap-0`.
 
 ### row-gap
 
-`row-gap`은 지정된 컨테이너의 하위 항목 사이의 세로 간격을 설정합니다.
+`row-gap` sets the vertical space between children items in the specified container.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid gap-0 row-gap-3">
@@ -128,7 +128,7 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 
 ### column-gap
 
-`column-gap`은 지정된 컨테이너의 하위 항목 사이의 가로 간격을 설정합니다.
+`column-gap` sets the horizontal space between children items in the specified container.
 
 {{< example class="bd-example-cssgrid" >}}
 <div class="grid gap-0 column-gap-3">
@@ -141,14 +141,14 @@ CSS에서 `margin` 속성은 음수 값을 사용할 수 있습니다 (`padding`
 
 ## CSS
 
-### Sass 맵
+### Sass maps
 
-간격 유틸리티는 Sass 맵을 통해 선언된 다음 유틸리티 API로 생성됩니다.
+Spacing utilities are declared via Sass map and then generated with our utilities API.
 
 {{< scss-docs name="spacer-variables-maps" file="scss/_variables.scss" >}}
 
-### Sass 유틸리티 API
+### Sass utilities API
 
-간격 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+Spacing utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-spacing" file="scss/_utilities.scss" >}}
