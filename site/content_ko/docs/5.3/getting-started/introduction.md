@@ -64,10 +64,10 @@ toc: true
 다음은 기본 CDN의 링크입니다.
 
 {{< bs-table >}}
-| 설명 | URL |
-| --- | --- |
-| CSS | `{{< param "cdn.css" >}}` |
-| JS | `{{< param "cdn.js_bundle" >}}` |
+| 설명  | URL                                   |
+| --- | ------------------------------------- |
+| CSS | `{{< param "cdn.css" >}}`       |
+| JS  | `{{< param "cdn.js_bundle" >}}` |
 {{< /bs-table >}}
 
 CDN을 사용하여 [콘텐츠 페이지에 나열된 추가 빌드]({{< docsref "/getting-started/contents" >}})를 가져올 수도 있습니다.
@@ -86,7 +86,7 @@ CDN을 사용하여 [콘텐츠 페이지에 나열된 추가 빌드]({{< docsref
 - 경고 닫기
 - 상태 및 체크 박스/라디오 기능 버튼
 - 캐러셀의 모든 슬라이드 동작, 제어 및 인디케이터
-- 콘텐츠 가시성 접기 전환
+- Collapse for toggling visibility of content
 - 드롭다운에서의 표시 및 위치 ([Popper](https://popper.js.org/)도 필요)
 - 모달에서의 표시, 위치, 스크롤 행동
 - 네비게이션 바와 오프캔버스에서의 반응형 동작 구현을 위한 접기 플러그인 확장
@@ -125,7 +125,7 @@ Bootstrap은 *모바일 우선*으로 개발되기 때문에 모바일 기기에
 
 CSS에서 보다 간단한 크기 조절을 위해서 우리는 `content-box`에서 `border-box`까지 전역 `box-sizing` 값을 사용하고 있습니다. 이렇게 하면 `padding`이 요소의 최종 계산된 너비에 영향을 미치지는 않지만 Google Maps나 Google Custom Search Engine같은 서드 파티 소프트웨어에서 문제가 발생할 수 있습니다.
 
-드물지만 재정의를 해야 한다면 다음과 같이 사용할 수 있습니다.
+On the rare occasion you need to override it, use something like the following:
 
 ```css
 .selector-for-some-widget {
