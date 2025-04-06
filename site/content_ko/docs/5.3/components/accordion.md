@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Accordion
-description: Collapse(콜랩스) JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언을 만듭니다.
+description: Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
 group: components
 aliases:
   - "/components/"
@@ -11,19 +11,19 @@ toc: true
 
 ## How it works
 
-아코디언은 내부적으로 [콜랩스]({{< docsref "/components/collapse" >}})를 사용하여 접기가 가능합니다.
+The accordion uses [collapse]({{< docsref "/components/collapse" >}}) internally to make it collapsible.
 
 {{< callout info >}}
 {{< partial "callouts/info-prefersreducedmotion.md" >}}
 {{< /callout >}}
 
-## 예시
+## Example
 
 Click the accordions below to expand/collapse the accordion content.
 
 To render an accordion that's expanded by default:
-- `.accordion-collapse` 요소에 `.show` 클래스를 추가합니다.
-- `.accordion-button` 요소에서 `.collapsed` 클래스를 삭제하고 `aria-expanded` 속성을 `true`로 설정합니다.
+- add the `.show` class on the `.accordion-collapse` element.
+- drop the `.collapsed` class from the `.accordion-button` element and set its `aria-expanded` attribute to `true`.
 
 {{< example >}}
 <div class="accordion" id="accordionExample">
@@ -66,9 +66,9 @@ To render an accordion that's expanded by default:
 </div>
 {{< /example >}}
 
-### 채우기
+### Flush
 
-`.accordion-flush`를 추가하여 몇 개의 둥근 모서리를 삭제해, 아코디언을 부모 컨테이너와 함께 edge-to-edge로 렌더링합니다.
+Add `.accordion-flush` to remove some borders and rounded corners to render accordions edge-to-edge with their parent container.
 
 {{< example class="bg-body-secondary" >}}
 <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -105,9 +105,9 @@ To render an accordion that's expanded by default:
 </div>
 {{< /example >}}
 
-### 항상 열기
+### Always open
 
-다른 항목이 열렸을 때도 이전 아코디언 항목이 열린 상태로 유지되게 하고 싶으면 각 `.accordion-collapse`의 `data-bs-parent` 속성을 생략하면 됩니다.
+Omit the `data-bs-parent` attribute on each `.accordion-collapse` to make accordion items stay open when another item is opened.
 
 {{< example >}}
 <div class="accordion" id="accordionPanelsStayOpenExample">
@@ -150,20 +150,20 @@ To render an accordion that's expanded by default:
 </div>
 {{< /example >}}
 
-## 접근성
+## Accessibility
 
-자세한 내용은 [콜랩스 문서의 접근성 문단]({{< docsref "/components/collapse#accessibility" >}})을 참고해 주세요.
+Please read the [collapse accessibility section]({{< docsref "/components/collapse#accessibility" >}}) for more information.
 
 ## CSS
 
-### 변수
+### Variables
 
 {{< added-in "5.2.0" >}}
 
-Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 아코디언은 이제 향상된 실시간 사용자 지정을 위해 `.accordion`에서 로컬 CSS 변수를 사용합니다. CSS 변수의 값은 Sass를 통해 설정되므로 Sass 사용자 정의도 계속 지원됩니다.
+As part of Bootstrap's evolving CSS variables approach, accordions now use local CSS variables on `.accordion` for enhanced real-time customization. Values for the CSS variables are set via Sass, so Sass customization is still supported, too.
 
 {{< scss-docs name="accordion-css-vars" file="scss/_accordion.scss" >}}
 
-### Sass 변수
+### Sass variables
 
 {{< scss-docs name="accordion-variables" file="scss/_variables.scss" >}}
