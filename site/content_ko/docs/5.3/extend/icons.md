@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 아이콘
-title_en: Icons
+title: Icons
 description: Bootstrap과 함께 외부 아이콘 라이브러리를 사용하기 위한 지침 및 제안입니다.
 group: extend
 ---
@@ -16,7 +15,7 @@ Bootstrap Icons는 [@mdo](https://github.com/mdo)가 디자인하고 [Bootstrap 
 
 아참, 우리가 완전한 오픈 소스라고 이미 말씀드렸나요? Bootstrap처럼 MIT 라이선스를 사용하기 때문에 모두가 아이콘 세트를 사용할 수 있습니다.
 
- Bootstrap Icons를 어떻게 설치하고 어떤 것이 권장되는 사용법인지 [자세히 알아보세요]({{< param icons >}}).
+Bootstrap Icons를 어떻게 설치하고 어떤 것이 권장되는 사용법인지 [자세히 알아보세요]({{< param icons >}}).
 
 ## 대체제
 
