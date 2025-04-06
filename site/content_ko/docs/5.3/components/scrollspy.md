@@ -6,7 +6,7 @@ group: components
 toc: true
 ---
 
-## 작동 원리
+## How it works
 
 스크롤스파이는 앵커의 `href`가 참조하는 `id`가 있는 요소가 보기로 스크롤될 때 앵커(`<a>`) 요소의 `.active` 클래스를 토글합니다. 스크롤스파이를 Bootstrap [내비게이션 컴포넌트]({{< docsref "/components/navs-tabs" >}}) 또는 [목록 그룹]({{< docsref "/components/list-group" >}})과 함께 사용하는 것이 가장 좋지만 현재 페이지의 모든 앵커 요소와도 작동합니다. 작동 방식은 다음과 같습니다.
 
@@ -18,9 +18,9 @@ toc: true
 
 - 표시되지 않는 대상 요소는 무시됩니다. 아래 [보이지 않는 요소](#non-visible-elements) 섹션을 참조하세요.
 
-## 예시
+## Examples
 
-### 내비게이션 바
+### Navbar
 
 내비게이션 바 아래 영역을 스크롤하여 활성화된 클래스의 변화를 살펴보세요. 드롭다운 메뉴를 열면 드롭다운 아이템도 같이 강조 표시됩니다.
 
@@ -375,31 +375,30 @@ const scrollSpy = new bootstrap.ScrollSpy(document.body, {
 {{< /markdown >}}
 
 {{< bs-table "table" >}}
-| 이름 | 유형 | 기본값 | 설명 |
-| --- | --- | --- | --- |
-| `rootMargin` | string | `0px 0px -25%` | 교차점 관찰자 [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin)의 스크롤 위치를 계산할 때 유효한 단위입니다. |
-| `smoothScroll` | boolean | `false` | 사용자가 스크롤스파이 옵저버를 참조하는 링크를 클릭할 때 부드럽게 스크롤할 수 있도록 합니다. |
-| `target` | string, DOM element | `null` | 스크롤스파이 플러그인을 적용할 요소를 지정합니다. |
-| `threshold` | array | `[0.1, 0.5, 1]` | `IntersectionObserver` [threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold)의 스크롤 위치를 계산할 때 유효한 단위입니다. |
+| 이름             | 유형                  | 기본값             | 설명                                                                                                                                                                 |
+| -------------- | ------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `rootMargin`   | string              | `0px 0px -25%`  | 교차점 관찰자 [rootMargin](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin)의 스크롤 위치를 계산할 때 유효한 단위입니다.                                   |
+| `smoothScroll` | boolean             | `false`         | 사용자가 스크롤스파이 옵저버를 참조하는 링크를 클릭할 때 부드럽게 스크롤할 수 있도록 합니다.                                                                                                               |
+| `target`       | string, DOM element | `null`          | 스크롤스파이 플러그인을 적용할 요소를 지정합니다.                                                                                                                                        |
+| `threshold`    | array               | `[0.1, 0.5, 1]` | `IntersectionObserver` [threshold](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold)의 스크롤 위치를 계산할 때 유효한 단위입니다. |
 
 {{< /bs-table >}}
 
 {{< callout warning >}}
-**지원 중단**
+**Deprecated Options**
 
-v5.1.3까지는 `offset` 및 `method` 옵션을 사용했지만, 이제 더 이상 사용되지 않고 `rootMargin`으로 대체되었습니다.
-이전 버전과의 호환성을 유지하기 위해 주어진 `offset`을 `rootMargin`으로 계속 파싱하지만, 이 기능은 **v6**에서 제거될 예정입니다.
+v5.1.3까지는 `offset` 및 `method` 옵션을 사용했지만, 이제 더 이상 사용되지 않고 `rootMargin`으로 대체되었습니다. 이전 버전과의 호환성을 유지하기 위해 주어진 `offset`을 `rootMargin`으로 계속 파싱하지만, 이 기능은 **v6**에서 제거될 예정입니다.
 {{< /callout >}}
 
 ### 메소드
 
 {{< bs-table "table" >}}
-| 메소드 | 설명 |
-| --- | --- |
-| `dispose` | 요소의 스크롤스파이를 제거합니다. (DOM 요소에 저장된 데이터 제거) |
-| `getInstance` | *정적* 메서드를 사용하여 DOM 요소와 연관된 스크롤스파이 인스턴스를 가져옵니다. |
+| 메소드                   | 설명                                                                            |
+| --------------------- | ----------------------------------------------------------------------------- |
+| `dispose`             | 요소의 스크롤스파이를 제거합니다. (DOM 요소에 저장된 데이터 제거)                                       |
+| `getInstance`         | *정적* 메서드를 사용하여 DOM 요소와 연관된 스크롤스파이 인스턴스를 가져옵니다.                                |
 | `getOrCreateInstance` | *정적* 메서드를 사용하여 DOM 요소와 연결된 스크롤스파이 인스턴스를 가져오거나 초기화되지 않은 경우 새 인스턴스를 생성할 수 있습니다. |
-| `refresh` | DOM에서 요소를 추가하거나 제거할 때는 새로고침 메서드를 호출해야 합니다. |
+| `refresh`             | DOM에서 요소를 추가하거나 제거할 때는 새로고침 메서드를 호출해야 합니다.                                    |
 {{< /bs-table >}}
 
 다음은 refresh 메소드를 사용한 예제입니다:
@@ -414,8 +413,8 @@ dataSpyList.forEach(dataSpyEl => {
 ### 이벤트
 
 {{< bs-table "table" >}}
-| 이벤트 | 설명 |
-| --- | --- |
+| 이벤트                     | 설명                                             |
+| ----------------------- | ---------------------------------------------- |
 | `activate.bs.scrollspy` | 이 이벤트는 스크롤스파이에 의해 앵커가 활성화될 때마다 스크롤 요소에서 발생합니다. |
 {{< /bs-table >}}
 
