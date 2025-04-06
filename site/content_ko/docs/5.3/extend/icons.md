@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: 아이콘
-description: Bootstrap과 함께 외부 아이콘 라이브러리를 사용하기 위한 지침 및 제안입니다.
+title: Icons
+description: Guidance and suggestions for using external icon libraries with Bootstrap.
 group: extend
 ---
 
-Bootstrap에는 기본적으로 아이콘 세트가 포함되어 있지는 않지만 Bootstrap Icons라는 자체적인 종합 아이콘 라이브러리가 있습니다. 자유롭게 사용하실 수 있으며 프로젝트에 있는 다른 아이콘 세트와도 함께 사용할 수 있습니다. 아래에서는 Bootstrap Icons 및 다른 선호되는 아이콘 세트에 대한 설명이 포함되어 있습니다
+While Bootstrap doesn't include an icon set by default, we do have our own comprehensive icon library called Bootstrap Icons. Feel free to use them or any other icon set in your project. We've included details for Bootstrap Icons and other preferred icon sets below.
 
-대부분의 아이콘 세트는 여러 유형의 확장자를 지원하지만 우리는 향상된 접근석 및 벡터 지원을 위해서 SVG로 구현하는 것을 선호합니다.
+While most icon sets include multiple file formats, we prefer SVG implementations for their improved accessibility and vector support.
 
 ## Bootstrap Icons
 
-Bootstrap Icons는 [@mdo](https://github.com/mdo)가 디자인하고 [Bootstrap Team](https://github.com/orgs/twbs/people)에서 관리하는 SVG 아이콘 라이브러리입니다. 이 아이콘 세트의 시작은 Bootstrap의 폼, 캐러셀 등의 자체 컴포넌트로부터 비롯되었습니다. Bootstrap에는 기본적으로 필요한 아이콘이 거의 없기 때문에 많이 필요하지 않았습니다. 하지만 일단 만들기 시작하니 멈출 수 없었습니다.
+Bootstrap Icons is a growing library of SVG icons that are designed by [@mdo](https://github.com/mdo) and maintained by [the Bootstrap Team](https://github.com/orgs/twbs/people). The beginnings of this icon set come from Bootstrap's very own components—our forms, carousels, and more. Bootstrap has very few icon needs out of the box, so we didn't need much. However, once we got going, we couldn't stop making more.
 
-아참, 우리가 완전한 오픈 소스라고 이미 말씀드렸나요? Bootstrap처럼 MIT 라이선스를 사용하기 때문에 모두가 아이콘 세트를 사용할 수 있습니다.
+Oh, and did we mention they're completely open source? Licensed under MIT, just like Bootstrap, our icon set is available to everyone.
 
-Bootstrap Icons를 어떻게 설치하고 어떤 것이 권장되는 사용법인지 [자세히 알아보세요]({{< param icons >}}).
+[Learn more about Bootstrap Icons]({{< param icons >}}), including how to install them and recommended usage.
 
-## 대체제
+## Alternatives
 
-우리는 이 아이콘 세트를 Bootstrap Icons에 대한 선호 대안으로 테스트하고 사용했습니다
+We've tested and used these icon sets ourselves as preferred alternatives to Bootstrap Icons.
 
 {{< markdown >}}
 {{< icons.inline >}}
@@ -31,9 +31,9 @@ Bootstrap Icons를 어떻게 설치하고 어떤 것이 권장되는 사용법�
 {{< /icons.inline >}}
 {{< /markdown >}}
 
-## 추가적인 대체제
+## More options
 
-아직 확인해보지는 않았지만 좋아보이며 SVG를 포함한 여러 형식을 제공합니다.
+While we haven't tried these out ourselves, they do look promising and provide multiple formats, including SVG.
 
 {{< markdown >}}
 {{< icons.inline type="more" />}}
