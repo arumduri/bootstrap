@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 플렉스
-title_en: Flex
+title: Flex
 description: 반응형 flexbox 유틸리티 세트를 사용해 그리드 열, 네비게이션 바, 컴포넌트, 레이아웃의 정렬 및 크기 조정을 신속하게 관리합니다. 더 복잡한 구현의 경우 사용자 정의 CSS가 필요할 수 있습니다.
 group: utilities
 toc: true
@@ -192,7 +191,7 @@ flexbox 컨테이너에서 `align-items` 유틸리티를 사용하여 교차 축
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 자체 정렬
+## Align self
 
 flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시작할 y 축, `flex-direction : column`인 경우 x축)에서 정렬을 개별적으로 변경합니다. `align-items` 와 동일한 옵션 인 `start` , `end` , `center` , `baseline` 또는 `stretch` (브라우저 기본값) 중에서 선택합니다.
 
@@ -268,7 +267,7 @@ flexbox 항목에서 `align-self` 유틸리티를 사용하여 교차 축 (시�
 {{< /flex.inline >}}
 {{< /markdown >}}
 
-## 팽창과 수축
+## Grow and shrink
 
 `.flex-grow- *` 유틸리티는 사용 가능한 공간을 꽉 채우기 위해 확장하는 플렉스 항목 입니다. 아래 예시에서 `.flex-grow-1` 요소는 가능한 모든 공간을 사용하고 나머지 두 개의 플렉스 항목은 필요한 공간만을 허용합니다.
 
@@ -342,7 +341,7 @@ Flexbox는 플렉스 정렬과 자동여백을 혼합할 때 꽤 멋진 일을 �
 </div>
 {{< /example >}}
 
-## 줄바꿈
+## Wrap
 
 flex 컨테이너에서 플렉스 항목이 줄바꿈되는 방식을 변경합니다. `.flex-nowrap`으로 줄바꿈을 없애거나 (브라우저 기본값), `.flex-wrap`으로 줄바꿈  또는 `.flex-wrap-reverse`로 역방향으로 줄바꿈 중에서 선택하십시오.
 
