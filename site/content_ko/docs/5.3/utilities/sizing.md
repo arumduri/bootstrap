@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 크기 조절
-title_en: Sizing
+title: Sizing
 description: 너비 및 높이 유틸리티를 사용하여 요소의 폭 또는 높이를 쉽게 조정 할 수 있습니다.
 group: utilities
 toc: true
