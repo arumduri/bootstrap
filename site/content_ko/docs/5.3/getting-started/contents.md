@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 구성 요소
-title_en: Contents
+title: Contents
 description: 컴파일 및 소스 코드 버전을 포함해서 Bootstrap에 무엇이 포함되어 있는지 알아보세요.
 group: getting-started
 toc: true
@@ -70,23 +69,23 @@ bootstrap/
 Bootstrap에는 컴파일된 CSS의 일부 또는 전체를 포함하기 위한 몇 가지 선택지가 포함되어 있습니다.
 
 {{< bs-table "table" >}}
-| CSS 파일 | 레이아웃 | 콘텐츠 | 컴포넌트 | 유틸리티 |
-| --- | --- | --- | --- | --- |
-| `bootstrap.css`<br> `bootstrap.min.css`<br> `bootstrap.rtl.css`<br> `bootstrap.rtl.min.css` | 포함 | 포함 | 포함 | 포함 |
-| `bootstrap-grid.css`<br> `bootstrap-grid.rtl.css`<br> `bootstrap-grid.min.css`<br> `bootstrap-grid.rtl.min.css` | [그리드 시스템만]({{< docsref "/layout/grid" >}}) | — | — | [플렉스 유틸리티만]({{< docsref "/utilities/flex" >}}) |
-| `bootstrap-utilities.css`<br> `bootstrap-utilities.rtl.css`<br> `bootstrap-utilities.min.css`<br> `bootstrap-utilities.rtl.min.css` | — | — | — | 포함 |
-| `bootstrap-reboot.css`<br> `bootstrap-reboot.rtl.css`<br> `bootstrap-reboot.min.css`<br> `bootstrap-reboot.rtl.min.css` | — | [Reboot만]({{< docsref "/content/reboot" >}}) | — | — |
+| CSS 파일                                                                                                                                                | 레이아웃                                       | 콘텐츠                                          | 컴포넌트 | 유틸리티                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | -------------------------------------------- | ---- | ---------------------------------------------- |
+| `bootstrap.css`<br> `bootstrap.min.css`<br> `bootstrap.rtl.css`<br> `bootstrap.rtl.min.css`                                         | 포함                                         | 포함                                           | 포함   | 포함                                             |
+| `bootstrap-grid.css`<br> `bootstrap-grid.rtl.css`<br> `bootstrap-grid.min.css`<br> `bootstrap-grid.rtl.min.css`                     | [그리드 시스템만]({{< docsref "/layout/grid" >}}) | —                                            | —    | [플렉스 유틸리티만]({{< docsref "/utilities/flex" >}}) |
+| `bootstrap-utilities.css`<br> `bootstrap-utilities.rtl.css`<br> `bootstrap-utilities.min.css`<br> `bootstrap-utilities.rtl.min.css` | —                                          | —                                            | —    | 포함                                             |
+| `bootstrap-reboot.css`<br> `bootstrap-reboot.rtl.css`<br> `bootstrap-reboot.min.css`<br> `bootstrap-reboot.rtl.min.css`             | —                                          | [Reboot만]({{< docsref "/content/reboot" >}}) | —    | —                                              |
 {{< /bs-table >}}
 
-## JS 파일
+### JS 파일
 
 마찬가지로 컴파일된 JavaScript의 일부 또는 전체를 포함할 수 있는 선택지가 있습니다.
 
 {{< bs-table "table" >}}
-| JS 파일 | Popper |
-| --- | --- |
-| `bootstrap.bundle.js`<br> `bootstrap.bundle.min.js`<br> | 포함 |
-| `bootstrap.js`<br> `bootstrap.min.js`<br> | – |
+| JS 파일                                                               | Popper |
+| ------------------------------------------------------------------- | ------ |
+| `bootstrap.bundle.js`<br> `bootstrap.bundle.min.js`<br> | 포함     |
+| `bootstrap.js`<br> `bootstrap.min.js`<br>               | –      |
 {{< /bs-table >}}
 
 ## Bootstrap 소스 코드
@@ -107,4 +106,6 @@ bootstrap/
 └── scss/
 ```
 
-`scss/` 및 `js/`는 우리 CSS 및 JavaScript의 소스 코드입니다. `dist/` 폴더에는 사전 컴파일 다운로드 부분에 나와있는 모든 것들이 포함되어 있습니다. `site/content/docs/` 폴더에는 호스팅되는 문서의 소스 코드가 포함되어 있으며, Bootstrap의 라이브 예제도 포함되어 있습니다. 그 밖의 다른 파일에는 패키지 지원, 라이선스 정보, 그리고 개발 관련을 제공합니다.
+`scss/` 및 `js/`는 우리 CSS 및 JavaScript의 소스 코드입니다. `dist/` 폴더에는 사전 컴파일 다운로드 부분에 나와있는 모든 것들이 포함되어 있습니다. `site/content/docs/` 폴더에는 호스팅되는 문서의 소스 코드가 포함되어 있으며, Bootstrap의 라이브 예제도 포함되어 있습니다.
+
+Beyond that, any other included file provides support for packages, license information, and development.
