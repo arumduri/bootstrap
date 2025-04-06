@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 브라우저 및 기기
-title_en: Browsers and devices
+title: Browsers and devices
 description: 각각의 알려진 특성과 버그를 포함하여 Bootstrap에서 지원하는 구버전부터 최신버전까지의 브라우저와 장치들에 대해 알아 봅시다.
 group: getting-started
 toc: true
@@ -28,10 +27,10 @@ Bootstrap은 모든 주요 브라우저 및 플랫폼의 **최신 및 안정 버
 대부분의 경우 Bootstrap은 각 주요 플랫폼 기본 브라우저의 최신 버전을 지원합니다. 단 프록시 브라우저 (Opera Mini, Opera Mobile의 터보 모드, UC Browser Mini, Amazon Silk 등)는 지원하지 않습니다.
 
 {{< bs-table "table" >}}
-| | Chrome | Firefox | Safari | Android Browser &amp; WebView |
-| --- | --- | --- | --- | --- |
-| **Android** | 지원 | 지원 | <span class="text-body-secondary">&mdash;</span> | v6.0+ |
-| **iOS** | 지원 | 지원 | 지원 | <span class="text-body-secondary">&mdash;</span> |
+|             | Chrome | Firefox | Safari                                           | Android Browser & WebView                        |
+| ----------- | ------ | ------- | ------------------------------------------------ | ------------------------------------------------ |
+| **Android** | 지원     | 지원      | <span class="text-body-secondary">&mdash;</span> | v6.0+                                            |
+| **iOS**     | 지원     | 지원      | 지원                                               | <span class="text-body-secondary">&mdash;</span> |
 {{< /bs-table >}}
 
 ### 데스크톱 브라우저
@@ -39,10 +38,10 @@ Bootstrap은 모든 주요 브라우저 및 플랫폼의 **최신 및 안정 버
 마찬가지로 대부분의 데스크톱 브라우저의 최신 버전을 지원합니다.
 
 {{< bs-table "table" >}}
-| | Chrome | Firefox | Microsoft Edge | Opera | Safari |
-| --- | --- | --- | --- | --- | --- |
-| **Mac** | 지원 | 지원 | 지원 | 지원 | 지원 |
-| **Windows** | 지원 | 지원 | 지원 | 지원 | <span class="text-body-secondary">&mdash;</span> |
+|             | Chrome | Firefox | Microsoft Edge | Opera | Safari                                           |
+| ----------- | ------ | ------- | -------------- | ----- | ------------------------------------------------ |
+| **Mac**     | 지원     | 지원      | 지원             | 지원    | 지원                                               |
+| **Windows** | 지원     | 지원      | 지원             | 지원    | <span class="text-body-secondary">&mdash;</span> |
 {{< /bs-table >}}
 
 Firefox의 경우 일반적인 최신 안정 버전과 더불어서 [Extended Support Release (ESR)](https://www.mozilla.org/en-US/firefox/enterprise/) 버전도 지원합니다.
