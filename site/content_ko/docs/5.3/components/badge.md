@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 배지
-title_en: Badges
 description: 배지에 대한 개요와 사용법 예시입니다.
 group: components
 toc: true

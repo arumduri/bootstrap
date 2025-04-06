@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 테두리
-title_en: Borders
 description: 테두리 유틸리티를 사용하여 요소의 테두리 및 테두리 반경 스타일을 빠르게 지정합니다. 이미지, 버튼 또는 기타 요소에 적합합니다.
 group: utilities
 toc: true

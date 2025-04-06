@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 페이지네이션
-title_en: Pagination
 description: 여러 페이지에 일련의 관련 내용이 있음을 나타내는 페이지네이션을 사용한 문서와 예시입니다.
 group: components
 toc: true

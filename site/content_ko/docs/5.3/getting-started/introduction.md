@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: Bootstrap 시작하기
-title_en: Get started with Bootstrap
 description: Bootstrap은 강력하고 기능이 풍부한 프론트엔드 툴킷입니다. 프로토타입부터 프로덕션까지 뭐든지 빠르게 빌드해보세요.
 group: getting-started
 aliases:

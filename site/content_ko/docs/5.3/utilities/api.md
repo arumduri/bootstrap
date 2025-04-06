@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 유틸리티 API
-title_en: Utility API
 description: 유틸리티 API는 유틸리티 클래스를 생성하기 위한 Sass 기반 도구입니다.
 group: utilities
 aliases: "/docs/5.3/utilities/"

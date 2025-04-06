@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 다운로드
-title_en: Download
 description: Bootstrap을 다운로드하여 컴파일된 CSS 및 JavaScript, 소스 코드를 얻거나 npm, RubyGems 등과 같은 즐겨쓰는 패키지 관리자를 사용해서 포함시키세요.
 group: getting-started
 toc: true

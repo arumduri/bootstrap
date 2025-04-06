@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 경고창
-title_en: Alerts
 description: 유연한 경고창으로, 일반적인 사용자 액션에 대해 상황에 맞는 피드백 메세지를 제공합니다.
 group: components
 toc: true

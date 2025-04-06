@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 스택
-title_en: Stacks
 description: 컴포넌트 레이아웃을 그 어느 때보다 빠르고 쉽게 만들기 위해 flexbox 유틸리티를 기반으로 하는 약칭 도우미입니다.
 group: helpers
 toc: true

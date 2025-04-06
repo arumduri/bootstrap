@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 색상
-title_en: Color
 description: Bootstrap은 우리의 스타일과 컴포넌트를 테마로 한 광범위한 컬러 시스템을 지원합니다. 어떤 프로젝트라도 보다 포괄적으로 재정의 및 확장이 가능합니다.
 group: customize
 toc: true

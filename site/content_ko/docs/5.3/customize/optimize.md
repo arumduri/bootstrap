@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 최적화
-title_en: Optimize
 description: 프로젝트를 단순하고, 대응력이 뛰어나며, 유지 관리할 수 있도록 하여 최고의 경험을 제공하고 보다 중요한 일에 집중할 수 있습니다.
 group: customize
 toc: true

@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 모달
-title_en: Modal
 description: Bootstrap JavaScript 모달 플러그인을 사용하여 라이트박스, 사용자 알림 또는 사용자 정의 콘텐츠를 만들 수 있습니다.
 group: components
 toc: true

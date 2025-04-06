@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 접근성
-title_en: Accessibility
 description: 접근성 콘텐츠 제작을 위한 Bootstrap의 기능과 제한사항에 대한 간략한 설명입니다.
 group: getting-started
 toc: true

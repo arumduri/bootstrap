@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 컬러 링크
-title_en: Colored links
 description: 호버상태가 있는 컬러 링크
 group: helpers
 toc: false

@@ -1,6 +1,5 @@
 ---
 title: 버전
-title_en: Versions
 description: v1에서 v5까지 거의 모든 Bootstrap 버전에 대한 사이트의 목록입니다.
 ---
 

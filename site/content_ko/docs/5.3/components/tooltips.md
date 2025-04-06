@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 툴팁
-title_en: Tooltips
 description: CSS3를 사용한 애니메이션이나 data-bs-attributes를 사용한 CSS와 JavaScript로 사용자 정의 Bootstrap의 툴팁을 추가하기 위한 문서와 예시입니다.
 group: components
 toc: true

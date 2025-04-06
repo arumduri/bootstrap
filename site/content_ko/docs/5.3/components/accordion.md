@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 아코디언
-title_en: Accordion
 description: Collapse(콜랩스) JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언을 만듭니다.
 group: components
 aliases:

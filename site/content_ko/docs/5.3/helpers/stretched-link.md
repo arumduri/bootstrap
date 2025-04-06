@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 확장형 링크
-title_en: Stretched link
 description: CSS를 통해 중첩 된 링크를 "확장"하여 HTML 요소 또는 Bootstrap 컴포넌트를 클릭할 수 있도록 만듭니다.
 group: helpers
 ---

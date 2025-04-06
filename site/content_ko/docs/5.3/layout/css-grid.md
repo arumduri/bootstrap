@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: CSS 그리드
-title_en: CSS Grid
 description: 예제와 코드 스니펫을 사용하여 CSS 그리드에 빌드된 대체 레이아웃 시스템을 활성화, 사용 및 사용자 지정하는 방법을 알아보세요.
 group: layout
 toc: true

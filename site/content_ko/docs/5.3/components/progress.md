@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 프로그레스
-title_en: Progress
 description: 스택형 막대, 애니메이션 배경 및 텍스트 레이블을 지원하는 Bootstrap 사용자 정의의 프로그레스 바를 위한 문서 및 예시입니다.
 group: components
 toc: true

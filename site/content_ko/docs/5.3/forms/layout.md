@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 레이아웃
-title_en: Layout
 description: 인라인, 수평, 사용자 그리드 등의 구현 방법까지 폼에 구조를 갖게 하는 폼 레이아웃 옵션을 준비하고 있습니다.
 group: forms
 toc: true

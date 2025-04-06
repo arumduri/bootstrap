@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 가시성
-title_en: Visibility
 description: 가시성 유틸리티를 사용하여 표시를 수정하지 않고 요소의 가시성을 제어합니다.
 group: utilities
 ---

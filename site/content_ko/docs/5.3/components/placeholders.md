@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 플레이스홀더
-title_en: Placeholders
 description: 컴포넌트나 페이지에 로딩 플레이스홀더를 사용하여 아직 로딩 중임을 나타냅니다.
 group: components
 toc: true

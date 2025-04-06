@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 디스플레이 속성
-title_en: Display property
 description: 디스플레이 유틸리티를 사용하여 컴포넌트의 표시여부 등을 빠르고 신속하게 전환 할 수 있습니다. 인쇄시 표시를 제어하기 위한 일부 추가 기능뿐만 아니라 더 일반적인 값에 대한 지원도 포함 됩니다.
 group: utilities
 toc: true

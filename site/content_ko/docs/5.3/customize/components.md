@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 컴포넌트
-title_en: Components
 description: 기본 클래스와 제어자 클래스를 가지고 거의 모든 컴포넌트를 반응하는 방식으로 빌드하는 방법과 이유를 소개합니다.
 group: customize
 toc: true

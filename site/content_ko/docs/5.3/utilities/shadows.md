@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 그림자
-title_en: Shadows
 description: box-shadow 유틸리티를 사용하여 요소에 그림자를 추가하거나 제거합니다.
 group: utilities
 toc: true

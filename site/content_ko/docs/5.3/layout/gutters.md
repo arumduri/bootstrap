@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 거터
-title_en: Gutters
 description: 거터는 열 사이의 패딩으로, Bootstrap 그리드 시스템에서 콘텐츠의 간격을 맞추고 정렬하는 데에 사용됩니다.
 group: layout
 toc: true

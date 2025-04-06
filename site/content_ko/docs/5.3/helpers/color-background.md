@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 색상 및 배경
-title_en: Color and background
 description: 전경색과 대비되는 배경색을 설정합니다.
 group: helpers
 toc: true

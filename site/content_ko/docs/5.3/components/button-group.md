@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 버튼 그룹
-title_en: Button group
 description: 여러 개의 버튼을 묶어 그룹화하거나, 세로로 겹쳐 놓을 수 있습니다.
 group: components
 toc: true

@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 위치
-title_en: Position
 description: 요소의 위치를 빠르게 구성하려면 이러한 단축 유틸리티를 사용하세요.
 group: utilities
 toc: true

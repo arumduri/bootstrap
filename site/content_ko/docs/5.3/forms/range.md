@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 범위
-title_en: Range
 description: 사용자 범위 컨트롤을 사용하여 크로스 브라우저에서 일관되게 표시할 수 있으며 맞춤 제작도 가능합니다.
 group: forms
 toc: true

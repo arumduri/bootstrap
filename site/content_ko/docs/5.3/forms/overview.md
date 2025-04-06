@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 폼
-title_en: Forms
 description: 다양한 폼 사용을 위한 폼 컨트롤 스타일, 레이아웃 옵션, 사용자 정의 컴포넌트의 예시와 사용 가이드입니다.
 group: forms
 toc: true

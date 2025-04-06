@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 그리드 시스템
-title_en: Grid system
 description: 강력한 모바일 우선 flexbox 그리드를 사용하여 12개의 열 시스템, 6개의 기본 반응형 계층, Sass 변수 및 믹스인, 수십 개의 사전 정의된 클래스 덕분에 모든 모양과 크기의 레이아웃을 빌드할 수 있습니다.
 group: layout
 toc: true

@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 기여
-title_en: Contribute
 description: 설명서 빌드 스크립트 및 테스트를 통해 Bootstrap 개발을 돕습니다.
 group: getting-started
 toc: true

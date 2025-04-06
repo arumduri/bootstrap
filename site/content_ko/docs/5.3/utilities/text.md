@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 텍스트
-title_en: Text
 description: 정렬, 줄바꿈, 굵기 등을 제어하는 ​​일반적인 텍스트 유틸리티에 대한 문서 및 예제입니다.
 group: utilities
 toc: true

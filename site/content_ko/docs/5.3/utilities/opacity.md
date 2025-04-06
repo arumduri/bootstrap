@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 불투명도
-title_en: Opacity
 description: 요소의 불투명도를 제어할 수 있습니다.
 group: utilities
 added: "5.1"

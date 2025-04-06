@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 콜랩스
-title_en: Collapse
 description: 몇 가지 클래스와 JavaScript 플러그인을 사용해, 프로젝트 전체 콘텐츠의 표시 방식을 전환합니다.
 group: components
 toc: true

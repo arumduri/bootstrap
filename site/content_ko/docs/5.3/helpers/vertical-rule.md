@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 세로줄
-title_en: Vertical rule
 description: 사용자 지정 세로줄 도우미를 사용하여 `<hr>` 요소와 같은 세로 구분선을 만드세요.
 group: helpers
 toc: true

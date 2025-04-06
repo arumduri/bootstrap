@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 중단점
-title_en: Breakpoints
 description: Breakpoints는 Bootstrap의 반응형 레이아웃이 뷰포트 크기 또는 기기에서 어떻게 작동 할지 결정하는 사용자가 정의 가능한 넓이입니다.
 group: layout
 aliases: "/docs/5.3/layout/"

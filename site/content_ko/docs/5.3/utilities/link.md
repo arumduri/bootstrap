@@ -1,7 +1,6 @@
 ---
 layout: docs
 title: 링크
-title_en: Link
 description: 링크 유틸리티는 앵커의 색상, 불투명도, 밑줄 오프셋, 밑줄 색상 등을 조정하여 앵커의 스타일을 지정하는 데 사용됩니다.
 group: utilities
 toc: true
