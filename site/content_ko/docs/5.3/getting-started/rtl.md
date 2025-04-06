@@ -80,6 +80,7 @@ RTL 지원을 Bootstrap에 빌드하는 방법에는 CSS를 작성하고 사용�
 Sass 소스 또는 컴파일된 CSS를 통한 RTL 작업은 기본 LTR과 크게 다르지 않습니다.
 
 ## 사용자 지정 소스
+
 [사용자 지정]({{< docsref "/customize/sass" >}})과 관련하여 선호되는 방법은 변수, 맵 및 믹스인을 활용하는 것입니다. 이 접근 방식은 [RTLCSS가 작동하는 방식](https://rtlcss.com/learn/getting-started/why-rtlcss/) 덕분에 컴파일된 파일에서 사후 처리 되더라도 RTL에 대해 동일하게 작동합니다.
 
 ### 사용자 지정 RTL 값
@@ -167,11 +168,11 @@ LTR과 RTL을 결합한 구현으로 작업할 때 고려해야 할 **경계 조
 3. 이런 식으로 스타일을 중첩하면 `form-validation-state()` 믹스인이 의도한 대로 작동하지 않음으로 어느정도 직접 조정이 필요합니다. [#31223을 참고](https://github.com/twbs/bootstrap/issues/31223)해주세요.
 {{< /callout >}}
 
-## 브레드크럼
+## The breadcrumb case
 
 브레드크럼 구분자는 `$breadcrumb-divider-flipped`라는 고유한 새로운 변수가 필요한 유일한 경우이며 기본값은 `$breadcrumb-divider`입니다.
 
 ## 추가 자료
 
 - [RTLCSS](https://rtlcss.com/)
-- [RTL 스타일링 기초 과정](https://rtlstyling.com/posts/rtl-styling)
+- [RTL Styling 101](https://rtlstyling.com/posts/rtl-styling)
