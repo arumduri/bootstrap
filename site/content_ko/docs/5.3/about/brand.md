@@ -1,22 +1,22 @@
 ---
 layout: docs
-title: 브랜드 가이드라인
-description: Bootstrap의 로고와 브랜드 사용 가이드라인에 관한 문서와 예시입니다.
+title: Brand guidelines
+description: Documentation and examples for Bootstrap's logo and brand usage guidelines.
 group: about
 toc: true
 ---
 
-Bootstrap의 브랜드 자료가 필요하신가요? 좋습니다! 우리는 몇 가지 지침만을 따르고 있으며, 여러분도 따라주셔야 합니다.
+Have a need for Bootstrap's brand resources? Great! We have only a few guidelines we follow, and in turn ask you to follow as well.
 
-## 로고
+## Logo
 
-Bootstrap을 언급할 때에는 우리의 로고 상표를 사용해주세요. 어떤 방식으로든 로고를 수정하지 마세요. Bootstrap의 브랜딩을 자신의 오픈 또는 클로즈드 소스 프로젝트에 사용하지 마세요.
+When referencing Bootstrap, use our logo mark. Do not modify our logos in any way. Do not use Bootstrap's branding for your own open or closed source projects.
 
 <div class="bd-brand-item px-2 py-5 mb-3 border rounded-3">
   <img class="d-block img-fluid mx-auto" src="/docs/{{< param docs_version >}}/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="256" height="204">
 </div>
 
-우리 로고 상표는 흑백 버전 모두 존재합니다. 기본 로고에 대한 모든 규칙이 여기에도 적용됩니다.
+Our logo mark is also available in black and white. All rules for our primary logo apply to these as well.
 
 <div class="bd-brand-logos d-sm-flex text-center bg-light rounded-3 overflow-hidden w-100 mb-3">
   <div class="bd-brand-item w-100 px-2 py-5">
@@ -27,9 +27,9 @@ Bootstrap을 언급할 때에는 우리의 로고 상표를 사용해주세요. 
   </div>
 </div>
 
-## 이름
+## Name
 
-Bootstrap은 그냥 **Bootstrap**으로만 언급되어야 합니다. _s_ 를 대문자로 바꾸지 마세요.
+Bootstrap should always be referred to as just **Bootstrap**. No capital _s_.
 
 <div class="bd-brand-logos d-sm-flex text-center border rounded-3 overflow-hidden w-100 mb-3">
   <div class="bd-brand-item w-100 px-2 py-5">
