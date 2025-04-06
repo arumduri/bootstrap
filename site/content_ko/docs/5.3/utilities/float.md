@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: 플로트
-description: 반응형 float 유틸리티를 사용하여 모든 중단점에서 모든 요소에서 float을 전환합니다.
+title: Float
+description: Toggle floats on any element, across any breakpoint, using our responsive float utilities.
 group: utilities
 toc: true
 ---
 
-## 개요
+## Overview
 
-이러한 유틸리티 클래스는 [CSS `float` 속성](https://developer.mozilla.org/en-US/docs/Web/CSS/float)을 사용하여 현재 뷰포트 크기에 따라 요소를 왼쪽 또는 오른쪽으로 플로팅하거나 플로팅을 비활성화합니다. 특이점 문제를 피하기 위해 `! <code>!important` is included to avoid specificity issues. 그리드 시스템과 동일한 뷰포트 중단점을 사용합니다. float 유틸리티는 플렉스 항목에 영향을 미치지 않습니다.
+These utility classes float an element to the left or right, or disable floating, based on the current viewport size using the [CSS `float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float). `!important` is included to avoid specificity issues. These use the same viewport breakpoints as our grid system. Please be aware float utilities have no effect on flex items.
 
 {{< example >}}
 <div class="float-start">Float start on all viewport sizes</div><br>
@@ -18,9 +18,9 @@ toc: true
 
 Use the [clearfix helper]({{< docsref "/helpers/clearfix" >}}) on a parent element to clear floats.
 
-## 반응형
+## Responsive
 
-또한 각 `float` 값에 대해 반응형 변형이 존재합니다.
+Responsive variations also exist for each `float` value.
 
 {{< example >}}
 <div class="float-sm-end">Float end on viewports sized SM (small) or wider</div><br>
@@ -30,7 +30,7 @@ Use the [clearfix helper]({{< docsref "/helpers/clearfix" >}}) on a parent eleme
 <div class="float-xxl-end">Float end on viewports sized XXL (extra extra large) or wider</div><br>
 {{< /example >}}
 
-지원하는 클래스는 다음과 같습니다.
+Here are all the support classes:
 
 {{< markdown >}}
 {{< float.inline >}}
@@ -44,8 +44,8 @@ Use the [clearfix helper]({{< docsref "/helpers/clearfix" >}}) on a parent eleme
 
 ## CSS
 
-### Sass 유틸리티 API
+### Sass utilities API
 
-플로트 유틸리티는 `scss/_utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+Float utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-float" file="scss/_utilities.scss" >}}
