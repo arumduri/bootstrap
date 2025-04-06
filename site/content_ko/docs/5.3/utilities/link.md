@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 링크
-title_en: Link
+title: Link
 description: 링크 유틸리티는 앵커의 색상, 불투명도, 밑줄 오프셋, 밑줄 색상 등을 조정하여 앵커의 스타일을 지정하는 데 사용됩니다.
 group: utilities
 toc: true
@@ -44,7 +43,7 @@ added: 5.3
 {{< /link-underline-colors.inline >}}
 {{< /example >}}
 
-### 밑줄 오프셋
+### Underline offset
 
 텍스트에서 밑줄의 여백 수준을 변경합니다. 오프셋은 요소의 현재 `font-size`에 따라 자동으로 크기가 조정되도록 `em` 단위로 설정됩니다.
 
@@ -55,7 +54,7 @@ added: 5.3
 <p><a class="link-offset-3" href="#">Offset 3 link</a></p>
 {{< /example >}}
 
-### 불투명도 밑줄
+### Underline opacity
 
 밑줄의 불투명도를 변경합니다. `.link-underline`을 추가하여 먼저 알파 불투명도를 수정하는 데 사용하는 `rgba()` 색상을 설정해야 합니다.
 
