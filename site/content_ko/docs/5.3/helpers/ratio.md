@@ -17,8 +17,9 @@ toc: true
 {{< /callout >}}
 
 ## 예시
+
 부모요소에 `.ratio`와 가로세로 비율 클래스를 사용해 `<iframe>` 같은 요소를 감싸보세요. 범용 선택기 `.ratio > *` 덕분에 직계 자식 요소는 크기가 자동으로 조정 됩니다.
-  
+
 {{< example >}}
 <div class="ratio ratio-16x9">
   <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
@@ -46,7 +47,7 @@ toc: true
 
 ## 사용자 지정 비율
 
-각 `.ratio-*` 클래스는 선택기에 CSS 사용자 정의 속성 (또는 CSS 변수)이 내장되어 있습니다. 이 CSS 변수를 재정의하여 사용자전용 가로세로 비율을 즉석에서 만들 수 있습니다. 
+각 `.ratio-*` 클래스는 선택기에 CSS 사용자 정의 속성 (또는 CSS 변수)이 내장되어 있습니다. 이 CSS 변수를 재정의하여 사용자전용 가로세로 비율을 즉석에서 만들 수 있습니다.
 
 예를 들어 2x1 가로세로 비율을 만들려면 `.ratio`에서 `--bs-aspect-ratio: 50%`를 설정합니다.
 
