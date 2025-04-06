@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 아이콘 링크
-title_en: Icon link
+title: Icon link
 description: Bootstrap 아이콘 또는 기타 아이콘을 사용하여 양식화된 하이퍼링크를 빠르게 만들 수 있습니다.
 group: helpers
 toc: true
