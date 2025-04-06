@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 위치
-title_en: Position
+title: Position
 description: 요소들의 위치를 신속하게 구성하기 위해 이 도우미를 사용해 보세요.
 group: helpers
 toc: true
@@ -53,7 +52,7 @@ toc: true
 
 ## 반응형 하단 고정
 
- `.sticky-bottom` 유틸리티의 반응형 변형도 있습니다.
+`.sticky-bottom` 유틸리티의 반응형 변형도 있습니다.
 
 ```html
 <div class="sticky-sm-bottom">Stick to the bottom on viewports sized SM (small) or wider</div>
