@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 모범 사례
-title_en: Best practices
+title: Best practices
 description: 수년간 Bootstrap을 사용하고 작업하면서 수집한 몇 가지 모범 사례에 대해 알아보세요.
 group: getting-started
 ---
