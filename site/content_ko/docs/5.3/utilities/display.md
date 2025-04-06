@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: 디스플레이 속성
-description: 디스플레이 유틸리티를 사용하여 컴포넌트의 표시여부 등을 빠르고 신속하게 전환 할 수 있습니다. 인쇄시 표시를 제어하기 위한 일부 추가 기능뿐만 아니라 더 일반적인 값에 대한 지원도 포함 됩니다.
+title: Display property
+description: Quickly and responsively toggle the display value of components and more with our display utilities. Includes support for some of the more common values, as well as some extras for controlling display when printing.
 group: utilities
 toc: true
 ---
 
 ## How it works
 
-반응형 디스플레이 유틸리티 클래스를 사용하여 [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)의 값을 변경합니다. 의도적으로 `디스플레이`에 대해 가능한 모든 값의 자식 집합만 지원합니다. 클래스는 다양한 효과를 위해 필요에 따라 결합 시킬 수 있습니다.
+Change the value of the [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display) with our responsive display utility classes. We purposely support only a subset of all possible values for `display`. Classes can be combined for various effects as you need.
 
-## 표기법
+## Notation
 
-`xs`에서 `xxl`까지 모든 [중단점]({{< docsref "/layout/breakpoints" >}})에 적용되는 디스플레이 유틸리티 클래스에는 중단점 축약어가 없습니다. 이는 해당 클래스가 `min-width: 0;`에서 적용되기 때문입니다. 따라서 미디어 쿼리에 의해 제한되지 않습니다. 그러나 나머지 중단점에는 중단점 축약어가 포함됩니다.
+Display utility classes that apply to all [breakpoints]({{< docsref "/layout/breakpoints" >}}), from `xs` to `xxl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0;` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
 
-따라서 클래스는 다음 형식을 사용하여 이름이 지정됩니다.
+As such, the classes are named using the format:
 
-- `xs`에서의 `.d-{value}`
-- `sm`, `md`, `lg`, `xl`, `xxl`에서의 `.d-{breakpoint}-{value}`
+- `.d-{value}` for `xs`
+- `.d-{breakpoint}-{value}` for `sm`, `md`, `lg`, `xl`, and `xxl`.
 
-다음 *값* 중 하나일 경우:
+Where *value* is one of:
 
 - `none`
 - `inline`
@@ -33,9 +33,9 @@ toc: true
 - `flex`
 - `inline-flex`
 
-디스플레이 값은 `$utilities`에 정의된 `displays` 값을 변경하고 SCSS를 다시 컴파일하여 변경할 수 있습니다.
+The display values can be altered by changing the `display` values defined in `$utilities` and recompiling the SCSS.
 
-미디어 쿼리는 **지정된 중단점보다 큰** 화면 너비에 영향을 줍니다. 예를 들어, `.d-lg-none` 설정은 `lg` 뿐만 아니라 `xl` 그리고 `xxl` 화면을 `display: none;` 처리합니다.
+The media queries affect screen widths with the given breakpoint *or larger*. For example, `.d-lg-none` sets `display: none;` on `lg`, `xl`, and `xxl` screens.
 
 ## Examples
 
@@ -49,31 +49,31 @@ toc: true
 <span class="d-block p-2 text-bg-dark">d-block</span>
 {{< /example >}}
 
-## 요소 숨기기
+## Hiding elements
 
-모바일 친화적으로 개발 속도를 높이려면 반응형 디스플레이 클래스를 사용하여 장치별로 요소를 표시하고 숨기세요. 동일한 사이트의 완전히 다른 버전을 만드는 것을 피하고, 대신 각 화면 크기에 대해 요소를 반응적으로 숨기세요.
+For faster mobile-friendly development, use responsive display classes for showing and hiding elements by device. Avoid creating entirely different versions of the same site, instead hide elements responsively for each screen size.
 
-반응형 화면에 요소를 숨기려면 `.d-none` 클래스 또는 `.d- {sm, md, lg, xl, xxl} -none` 클래스 중 하나를 사용하세요.
+To hide elements simply use the `.d-none` class or one of the `.d-{sm,md,lg,xl,xxl}-none` classes for any responsive screen variation.
 
-특정한 화면 크기 간격에서만 요소를 표시하려면 `.d-*-none` 클래스를 `.d-*-*` 클래스와 결합 하세요. (예: `.d-none .d-md-block .d-xl-none .d-xxl-none`). 이렇게하면 중형(md) 및 대형(lg) 장치를 제외한 모든 화면 크기의 요소를 숨길 수 있습니다.
+To show an element only on a given interval of screen sizes you can combine one `.d-*-none` class with a `.d-*-*` class, for example `.d-none .d-md-block .d-xl-none .d-xxl-none` will hide the element for all screen sizes except on medium and large devices.
 
 {{< bs-table >}}
-| 화면 크기      | 클래스                               |
-| ---------- | --------------------------------- |
-| 모두 숨기기     | `.d-none`                         |
-| xs에서만 숨기기  | `.d-none .d-sm-block`             |
-| sm에서만 숨기기  | `.d-sm-none .d-md-block`          |
-| md에서만 숨기기  | `.d-md-none .d-lg-block`          |
-| lg에서만 숨기기  | `.d-lg-none .d-xl-block`          |
-| xl에서만 숨기기  | `.d-xl-none`                      |
-| xxl에서만 숨기기 | `.d-xxl-none`                     |
-| 모두 보이기     | `.d-block`                        |
-| xs에서만 보이기  | `.d-block .d-sm-none`             |
-| sm에서만 보이기  | `.d-none .d-sm-block .d-md-none`  |
-| md에서만 보이기  | `.d-none .d-md-block .d-lg-none`  |
-| lg에서만 보이기  | `.d-none .d-lg-block .d-xl-none`  |
-| xl에서만 보이기  | `.d-none .d-xl-block .d-xxl-none` |
-| xxl에서만 보이기 | `.d-none .d-xxl-block`            |
+| Screen size         | Class                             |
+| ------------------- | --------------------------------- |
+| Hidden on all       | `.d-none`                         |
+| Hidden only on xs   | `.d-none .d-sm-block`             |
+| Hidden only on sm   | `.d-sm-none .d-md-block`          |
+| Hidden only on md   | `.d-md-none .d-lg-block`          |
+| Hidden only on lg   | `.d-lg-none .d-xl-block`          |
+| Hidden only on xl   | `.d-xl-none .d-xxl-block`         |
+| Hidden only on xxl  | `.d-xxl-none`                     |
+| Visible on all      | `.d-block`                        |
+| Visible only on xs  | `.d-block .d-sm-none`             |
+| Visible only on sm  | `.d-none .d-sm-block .d-md-none`  |
+| Visible only on md  | `.d-none .d-md-block .d-lg-none`  |
+| Visible only on lg  | `.d-none .d-lg-block .d-xl-none`  |
+| Visible only on xl  | `.d-none .d-xl-block .d-xxl-none` |
+| Visible only on xxl | `.d-none .d-xxl-block`            |
 {{< /bs-table >}}
 
 {{< example >}}
@@ -81,9 +81,9 @@ toc: true
 <div class="d-none d-lg-block">hide on screens smaller than lg</div>
 {{< /example >}}
 
-## 인쇄할 때의 표시
+## Display in print
 
-인쇄 디스플레이 유틸리티 클래스로 인쇄 할 때 요소의 `display` 값을 변경합니다. 반응형 `.d- *` 유틸리티와 동일한 `display` 값에 대한 지원을 포함합니다.
+Change the `display` value of elements when printing with our print display utility classes. Includes support for the same `display` values as our responsive `.d-*` utilities.
 
 - `.d-print-none`
 - `.d-print-inline`
@@ -97,7 +97,7 @@ toc: true
 - `.d-print-flex`
 - `.d-print-inline-flex`
 
-인쇄 및 표시 클래스를 결합할 수도 있습니다.
+The print and display classes can be combined.
 
 {{< example >}}
 <div class="d-print-none">Screen Only (Hide on print only)</div>
@@ -107,8 +107,8 @@ toc: true
 
 ## CSS
 
-### Sass 유틸리티 API
+### Sass utilities API
 
-디스플레이 유틸리티는 `scss / _utilities.scss`의 유틸리티 API에 선언되어 있습니다. [유틸리티 API 사용 방법에 대해 알아보세요.]({{< docsref "/utilities/api#using-the-api" >}})
+Display utilities are declared in our utilities API in `scss/_utilities.scss`. [Learn how to use the utilities API.]({{< docsref "/utilities/api#using-the-api" >}})
 
 {{< scss-docs name="utils-display" file="scss/_utilities.scss" >}}
