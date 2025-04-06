@@ -1,17 +1,16 @@
 ---
 layout: docs
-title: 배지
-title_en: Badges
-description: 배지에 대한 개요와 사용법 예시입니다.
+title: Badges
+description: Documentation and examples for badges, our small count and labeling component.
 group: components
 toc: true
 ---
 
-## 예시
+## Examples
 
 부모 요소의 크기에 일치하도록 상대적인 글꼴 크기 `em`을 사용하고 있습니다. v5 이후, 배지에는 더 이상 링크에 대한 포커스나 호버 스타일은 없습니다.
 
-### 제목
+### Headings
 
 {{< example >}}
 <h1>Example heading <span class="badge text-bg-secondary">New</span></h1>
@@ -78,7 +77,7 @@ toc: true
 {{< partial "callouts/warning-color-assistive-technologies.md" >}}
 {{< /callout >}}
 
-## 필 배지
+## Pill badges
 
 `.rounded-pill`을 사용하면 `border-radius` 보다 더 동그란 배지를 만들 수 있습니다.
 
