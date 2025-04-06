@@ -1,7 +1,6 @@
 ---
 layout: docs
-title: 페이지네이션
-title_en: Pagination
+title: Pagination
 description: 여러 페이지에 일련의 관련 내용이 있음을 나타내는 페이지네이션을 사용한 문서와 예시입니다.
 group: components
 toc: true
@@ -27,7 +26,7 @@ toc: true
 
 ## 아이콘 사용하기
 
-페이지네이션 링크에 텍스트 대신 아이콘이나 심벌을 사용하고 싶다면, `aria` 속성을 사용하여 스크린 리더를 적절히 지원하도록 하세요.
+Looking to use an icon or symbol in place of text for some pagination links? 페이지네이션 링크에 텍스트 대신 아이콘이나 심벌을 사용하고 싶다면, `aria` 속성을 사용하여 스크린 리더를 적절히 지원하도록 하세요.
 
 {{< example >}}
 <nav aria-label="Page navigation example">
@@ -95,7 +94,7 @@ toc: true
 
 ## 크기 조절
 
-크기 변경을 원할 경우 `.pagination-lg` 나 `.pagination-sm`를 추가해 주세요.
+Fancy larger or smaller pagination? 크기 변경을 원할 경우 `.pagination-lg` 나 `.pagination-sm`를 추가해 주세요.
 
 {{< example >}}
 <nav aria-label="...">
