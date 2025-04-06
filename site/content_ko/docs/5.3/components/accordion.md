@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: 아코디언
+title: Accordion
 description: Collapse(콜랩스) JavaScript 플러그인과 조합하여, 수직으로 접는 아코디언을 만듭니다.
 group: components
 aliases:
@@ -9,7 +9,7 @@ aliases:
 toc: true
 ---
 
-## 작동 원리
+## How it works
 
 아코디언은 내부적으로 [콜랩스]({{< docsref "/components/collapse" >}})를 사용하여 접기가 가능합니다.
 
@@ -19,9 +19,9 @@ toc: true
 
 ## 예시
 
-아래의 아코디언을 클릭하면, 아코디언의 내용을 접기/펼치기가 가능합니다.
+Click the accordions below to expand/collapse the accordion content.
 
-기본적으로 확장된 아코디언을 렌더링하려면 다음 단계를 확인해주세요:
+To render an accordion that's expanded by default:
 - `.accordion-collapse` 요소에 `.show` 클래스를 추가합니다.
 - `.accordion-button` 요소에서 `.collapsed` 클래스를 삭제하고 `aria-expanded` 속성을 `true`로 설정합니다.
 
