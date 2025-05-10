@@ -11,7 +11,7 @@ Bootstrap에서 card는 기본적으로 `position: relative` 상태를 갖고 �
 확장형 링크에 탭 대상 및 다중링크 사용은 권장하지 않습니다. 그럼에도 사용이 필요한 경우 `position` 및 `z-index` 스타일이 도움이 될 수 있습니다.
 
 <Example code={`<div class="card" style="width: 18rem;">
-  <Placeholder width="100%" height="180" class="card-img-top" text="false" title="Card image cap" />
+  <Placeholder width="100%" height="180" class="card-img-top" text={false} title="Card image cap" />
   <div class="card-body">
     <h5 class="card-title">Card with stretched link</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -22,7 +22,7 @@ Bootstrap에서 card는 기본적으로 `position: relative` 상태를 갖고 �
 대부분의 사용자 지정 컴포넌트는 `position: relative`를 기본적으로 포함하고 있지 않습니다. 따라서 링크가 부모요소 바깥으로 무한정 확장하는 것을 방지하려면 부모 요소에 `.position-relative` 클래스를 추가해야합니다.
 
 <Example code={`<div class="d-flex position-relative">
-  <Placeholder width="144" height="144" class="flex-shrink-0 me-3" text="false" title="Generic placeholder image" />
+  <Placeholder width="144" height="144" class="flex-shrink-0 me-3" text={false} title="Generic placeholder image" />
   <div>
     <h5 class="mt-0">Custom component with stretched link</h5>
     <p>This is some placeholder content for the custom component. It is intended to mimic what some real-world content would look like, and we're using it here to give the component a bit of body and size.</p>
@@ -32,7 +32,7 @@ Bootstrap에서 card는 기본적으로 `position: relative` 상태를 갖고 �
 
 <Example code={`<div class="row g-0 bg-body-secondary position-relative">
   <div class="col-md-6 mb-md-0 p-md-4">
-    <Placeholder width="100%" height="200" class="w-100" text="false" title="Generic placeholder image" />
+    <Placeholder width="100%" height="200" class="w-100" text={false} title="Generic placeholder image" />
   </div>
   <div class="col-md-6 p-4 ps-md-0">
     <h5 class="mt-0">Columns with stretched link</h5>
@@ -51,7 +51,7 @@ Bootstrap에서 card는 기본적으로 `position: relative` 상태를 갖고 �
 - `none` 이외의 `filter` 값 또는 `filter`의 `will-change` 값 (Firefox에서만 작동)
 
 <Example code={`<div class="card" style="width: 18rem;">
-  <Placeholder width="100%" height="180" class="card-img-top" text="false" title="Card image cap" />
+  <Placeholder width="100%" height="180" class="card-img-top" text={false} title="Card image cap" />
   <div class="card-body">
     <h5 class="card-title">Card with stretched links</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

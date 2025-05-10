@@ -20,6 +20,7 @@ const docsSchema = z.object({
   sections: z
     .object({
       description: z.string(),
+      link: z.string(),
       title: z.string()
     })
     .array()

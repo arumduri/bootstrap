@@ -5,6 +5,8 @@ description: Bootstrap의 강력하고 반응형적인 내비게이션 헤더, �
 toc: true
 ---
 
+import { getConfig } from '@libs/config'
+
 ## 작동 원리
 
 내비게이션 바를 시작하기 전에 알아야 할 것들을 설명하겠습니다:
@@ -101,7 +103,7 @@ toc: true
 <Example code={`<nav class="navbar bg-body-tertiary">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="/docs/[[config:docs_version]]/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+      <img src="/docs/${getConfig().docs_version}/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
     </a>
   </div>
 </nav>`} />
@@ -113,7 +115,7 @@ toc: true
 <Example code={`<nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="/docs/[[config:docs_version]]/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      <img src="/docs/${getConfig().docs_version}/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
       Bootstrap
     </a>
   </div>
