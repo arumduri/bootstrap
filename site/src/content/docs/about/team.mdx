@@ -1,0 +1,24 @@
+---
+title: 팀
+title_en: Team
+description: Bootstrap 초기 팀과 핵심 기여자들에 대한 요약입니다.
+---
+
+import { getData } from '@libs/data'
+
+Bootstrap은 초기 팀과 귀중한 핵심 기여자들에 의해 관리되며 우리 커뮤니티로부터 막대한 지원과 참여를 받고 있습니다.
+
+<div class="list-group mb-3">
+  {getData('core-team').map((member) => {
+    return (
+      <a class="list-group-item list-group-item-action d-flex align-items-center" href={`https://github.com/${member.user}`}>
+        <img src={`https://github.com/${member.user}.png`} alt={`@${member.user}`} width="32" height="32" class="rounded me-2" loading="lazy"/>
+        <span>
+          <strong>{member.name}</strong> @{member.user}
+        </span>
+      </a>
+    )
+  })}
+</div>
+
+Bootstrap 개발에 참여하려면 [이슈를 열거나]([[config:repo]]/issues/new/choose) 풀 리퀘스트를 제출해주세요. 우리가 어떻게 개발하는지에 대한 정보를 알고 싶으시다면 [기여 가이드라인]([[config:repo]]/blob/v[[config:current_version]]/.github/CONTRIBUTING.md)을 읽어보세요.

@@ -1,6 +1,6 @@
 - category: Starters
   external: true
-  description: "Webpack, Parcel, Vite 등과 같은 일반적인 JS 프레임워크에서 Bootstrap을 사용하는 기능적 예제는 StackBlitz에서 편집할 수 있습니다."
+  description: 'Webpack, Parcel, Vite 등과 같은 일반적인 JS 프레임워크에서 Bootstrap을 사용하는 기능적 예제는 StackBlitz에서 편집할 수 있습니다.'
   examples:
     - name: CDN starter
       description: "jsDelivr CDN을 통해 Bootstrap의 컴파일된 CSS와 JavaScript를 즉시 포함합니다."
@@ -37,105 +37,105 @@
       indexPath: src/index.html
 
 - category: 스니펫
-  description: "사용자 지정 CSS 등을 사용하여 기존 컴포넌트 및 유틸리티를 기반으로 하는 사이트 및 앱 구축을 위한 일반적인 패턴입니다."
+  description: '사용자 지정 CSS 등을 사용하여 기존 컴포넌트 및 유틸리티를 기반으로 하는 사이트 및 앱 구축을 위한 일반적인 패턴입니다.'
   examples:
     - name: Headers
-      description: "브랜드, 내비게이션, 검색 등을 헤더 컴포넌트로 표시합니다."
+      description: '브랜드, 내비게이션, 검색 등을 헤더 컴포넌트로 표시합니다.'
     - name: Heroes
-      description: "명확한 클릭 유도 버튼 (CTA)을 특징으로 하는 히어로로 홈페이지의 무대를 장식합니다."
+      description: '명확한 클릭 유도 버튼 (CTA)을 특징으로 하는 히어로로 홈페이지의 무대를 장식합니다.'
     - name: Features
-      description: "마케팅 콘텐츠의 기능, 이점 또는 다른 세부 정보를 설명합니다."
+      description: '마케팅 콘텐츠의 기능, 이점 또는 다른 세부 정보를 설명합니다.'
     - name: Sidebars
-      description: "오프캔버스 또는 다중 열 레이아웃에 이상적인 일반적인 내비게이션 패턴입니다."
+      description: '오프캔버스 또는 다중 열 레이아웃에 이상적인 일반적인 내비게이션 패턴입니다.'
     - name: Footers
-      description: "크든 작든 멋진 푸터로 모든 페이지를 강력하게 마무리합니다."
+      description: '크든 작든 멋진 푸터로 모든 페이지를 강력하게 마무리합니다.'
     - name: Dropdowns
-      description: "필터, 아이콘, 사용자 정의 스타일 등으로 드롭다운 경험을 향상시킵니다."
+      description: '필터, 아이콘, 사용자 정의 스타일 등으로 드롭다운 경험을 향상시킵니다.'
     - name: List groups
-      description: "모든 콘텐츠에 대한 유틸리티 및 사용자 정의 스타일로 목록 그룹을 확장합니다."
+      description: '모든 콘텐츠에 대한 유틸리티 및 사용자 정의 스타일로 목록 그룹을 확장합니다.'
     - name: Modals
-      description: "기능 둘러보기에서 대화 상자까지 모든 목적에 맞게 모달을 변환합니다."
+      description: '기능 둘러보기에서 대화 상자까지 모든 목적에 맞게 모달을 변환합니다.'
     - name: Badges
-      description: "사용자 정의 내부 HTML과 새로운 디자인으로 배지를 활성화합니다."
+      description: '사용자 정의 내부 HTML과 새로운 디자인으로 배지를 활성화합니다.'
     - name: Breadcrumbs
-      description: "사용자 정의 아이콘을 통합하고 단계적 구성 요소를 만듭니다."
+      description: '사용자 정의 아이콘을 통합하고 단계적 구성 요소를 만듭니다.'
     - name: Buttons
-      description: "유틸리티를 사용하여 모든 사용 사례에 맞는 사용자 정의 버튼을 만듭니다."
+      description: '유틸리티를 사용하여 모든 사용 사례에 맞는 사용자 정의 버튼을 만듭니다.'
     - name: Jumbotrons
-      description: "클래식 Bootstrap 컴포넌트의 현대화된 버전을 만듭니다."
+      description: '클래식 Bootstrap 컴포넌트의 현대화된 버전을 만듭니다.'
 
 - category: 사용자 지정 컴포넌트
-  description: "사람들이 Bootstrap을 빠르게 시작하고 프레임워크에 추가하기 위한 모범 사례를 시연하는 데에 도움이 되는 새로운 컴포넌트 및 템플릿입니다."
+  description: '사람들이 Bootstrap을 빠르게 시작하고 프레임워크에 추가하기 위한 모범 사례를 시연하는 데에 도움이 되는 새로운 컴포넌트 및 템플릿입니다.'
   examples:
     - name: Album
-      description: "사진 갤러리, 포트폴리오 등을 위한 단순한 단일 페이지 템플릿입니다."
+      description: '사진 갤러리, 포트폴리오 등을 위한 단순한 단일 페이지 템플릿입니다.'
     - name: Pricing
-      description: "카드로 만들어지고 맞춤 헤더와 푸터가 있는 가격 페이지 예시입니다."
+      description: '카드로 만들어지고 맞춤 헤더와 푸터가 있는 가격 페이지 예시입니다.'
     - name: Checkout
-      description: "폼 컴포넌트 및 유효성 검사 기능을 보여주는 사용자 정의 결제 페이지 양식입니다."
+      description: '폼 컴포넌트 및 유효성 검사 기능을 보여주는 사용자 정의 결제 페이지 양식입니다.'
     - name: Product
-      description: "확장 그리드 및 이미지 작업이 포함된 제품 중심의 깔끔한 마케팅 페이지입니다."
+      description: '확장 그리드 및 이미지 작업이 포함된 제품 중심의 깔끔한 마케팅 페이지입니다.'
     - name: Cover
-      description: "심플하고 아름다운 홈페이지 제작을 위한 단일 페이지 템플릿입니다."
+      description: '심플하고 아름다운 홈페이지 제작을 위한 단일 페이지 템플릿입니다.'
     - name: Carousel
-      description: "내비바와 캐러셀을 사용자 지정한 다음 몇 가지 새로운 컴포넌트를 추가했습니다."
+      description: '내비바와 캐러셀을 사용자 지정한 다음 몇 가지 새로운 컴포넌트를 추가했습니다.'
     - name: Blog
-      description: "헤더, 내비게이션, 추천 콘텐츠가 있는 매거진 형식의 블로그 템플릿입니다."
+      description: '헤더, 내비게이션, 추천 콘텐츠가 있는 매거진 형식의 블로그 템플릿입니다.'
     - name: Dashboard
-      description: "고정 사이드바 및 내비바가 있는 기본적인 관리자 대시보드 셸입니다."
+      description: '고정 사이드바 및 내비바가 있는 기본적인 관리자 대시보드 셸입니다.'
     - name: Sign-in
-      description: "간단한 로그인 폼을 위한 사용자 정의 폼 레이아웃 및 디자인입니다."
+      description: '간단한 로그인 폼을 위한 사용자 정의 폼 레이아웃 및 디자인입니다.'
     - name: Sticky footer
-      description: "페이지 내용이 짧은 경우 표시 영역 하단에 바닥글을 첨부합니다."
+      description: '페이지 내용이 짧은 경우 표시 영역 하단에 바닥글을 첨부합니다.'
     - name: Sticky footer navbar
-      description: "고정된 상단 내비바를 사용하여 뷰포트 하단에 바닥글을 첨부합니다."
+      description: '고정된 상단 내비바를 사용하여 뷰포트 하단에 바닥글을 첨부합니다.'
     - name: Jumbotron
       description: "유틸리티를 사용하여 Bootstrap 4의 점보트론을 다시 만들고 향상시켰습니다."
 
 - category: 프레임워크
-  description: "Bootstrap에서 제공하는 내장 구성 요소의 사용 구현에 중점을 둔 예시입니다."
+  description: 'Bootstrap에서 제공하는 내장 구성 요소의 사용 구현에 중점을 둔 예시입니다.'
   examples:
-    - name: "Starter template"
-      description: "컴파일된 CSS와 JavaScript가 있는 기본적인 템플릿입니다."
+    - name: 'Starter template'
+      description: '컴파일된 CSS와 JavaScript가 있는 기본적인 템플릿입니다.'
     - name: Grid
-      description: "4단계 계층, 중첩 등이 모두 포함된 다수의 그리드 레이아웃 예시입니다."
+      description: '4단계 계층, 중첩 등이 모두 포함된 다수의 그리드 레이아웃 예시입니다.'
     - name: Cheatsheet
-      description: "거의 모든 Bootstrap 컴포넌트가 포함되어 있습니다."
+      description: '거의 모든 Bootstrap 컴포넌트가 포함되어 있습니다.'
     - name: Cheatsheet RTL
-      description: "거의 모든 Bootstrap 컴포넌트가 포함되어 있습니다. (RTL)"
+      description: '거의 모든 Bootstrap 컴포넌트가 포함되어 있습니다. (RTL)'
 
 - category: 네비바
-  description: "기본 내비바 컴포넌트를 사용하여 이동, 배치 및 확장하는 방법을 보여줍니다."
+  description: '기본 내비바 컴포넌트를 사용하여 이동, 배치 및 확장하는 방법을 보여줍니다.'
   examples:
     - name: Navbars
-      description: "네비바에 대한 모든 반응형 및 컨테이너 옵션 예시입니다."
+      description: '네비바에 대한 모든 반응형 및 컨테이너 옵션 예시입니다.'
     - name: Navbars offcanvas
-      description: "Navbars 예제와 동일하지만 오프캔버스 구성 요소를 사용합니다."
+      description: 'Navbars 예제와 동일하지만 오프캔버스 구성 요소를 사용합니다.'
     - name: Navbar static
-      description: "추가 콘텐츠가 있는 정적인 상단 내비바의 단일 내비바 예시입니다."
+      description: '추가 콘텐츠가 있는 정적인 상단 내비바의 단일 내비바 예시입니다.'
     - name: Navbar fixed
-      description: "추가 콘텐츠가 있는 상단에 고정된 내비바의 단일 내비바 예시입니다."
+      description: '추가 콘텐츠가 있는 상단에 고정된 내비바의 단일 내비바 예시입니다.'
     - name: Navbar bottom
-      description: "추가 콘텐츠가 있는 하단에 고정된 내비바의 단일 내비바 예시입니다."
+      description: '추가 콘텐츠가 있는 하단에 고정된 내비바의 단일 내비바 예시입니다.'
     - name: Offcanvas navbar
       description: "펼칠 수 있는 내비바를 슬라이딩 오프캔버스 메뉴로 전환합니다 (오프캔버스 컴포넌트를 사용하지 않음)."
 
 - category: RTL
-  description: "수정된 사용자 지정 컴포넌드 예시와 함께 작동하는 Bootstrap의 RTL 버전을 확인해보세요."
+  description: '수정된 사용자 지정 컴포넌드 예시와 함께 작동하는 Bootstrap의 RTL 버전을 확인해보세요.'
   examples:
     - name: Album RTL
-      description: "사진 갤러리, 포트폴리오 등을 위한 단순한 단일 페이지 템플릿입니다."
+      description: '사진 갤러리, 포트폴리오 등을 위한 단순한 단일 페이지 템플릿입니다.'
     - name: Checkout RTL
-      description: "폼 컴포넌트 및 유효성 검사 기능을 보여주는 사용자 정의 결제 페이지 양식입니다."
+      description: '폼 컴포넌트 및 유효성 검사 기능을 보여주는 사용자 정의 결제 페이지 양식입니다.'
     - name: Carousel RTL
-      description: "내비바와 캐러셀을 사용자 지정한 다음 몇 가지 새로운 컴포넌트를 추가했습니다."
+      description: '내비바와 캐러셀을 사용자 지정한 다음 몇 가지 새로운 컴포넌트를 추가했습니다.'
     - name: Blog RTL
-      description: "헤더, 내비게이션, 추천 콘텐츠가 있는 매거진 형식의 블로그 템플릿입니다."
+      description: '헤더, 내비게이션, 추천 콘텐츠가 있는 매거진 형식의 블로그 템플릿입니다.'
     - name: Dashboard RTL
-      description: "고정 사이드바 및 내비바가 있는 기본적인 관리자 대시보드 셸입니다."
+      description: '고정 사이드바 및 내비바가 있는 기본적인 관리자 대시보드 셸입니다.'
 
 - category: 통합
-  description: "외부 라이브러리와의 통합 예시입니다."
+  description: '외부 라이브러리와의 통합 예시입니다.'
   examples:
-    - name: "Masonry"
-      description: "Bootstrap 그리드와 메이슨리 (Masonry) 레이아웃의 기능을 결합합니다."
+    - name: 'Masonry'
+      description: 'Bootstrap 그리드와 메이슨리 (Masonry) 레이아웃의 기능을 결합합니다.'

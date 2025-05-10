@@ -1,0 +1,2 @@
+**왜.02px를 빼나요?**
+현재 브라우저는 [범위 컨텍스트 쿼리](https://www.w3.org/TR/mediaqueries-4/#range-context)를 지원하지 않으므로 정밀한 값을 사용하여 [`min-` 및 `max- ` 접두어](https://www.w3.org/TR/mediaqueries-4/#mq-min-max) 및 분할폭 (예: 고밀도 DPI 장치의 특정 조건에서 발생할 수 있음)이 있는 뷰포트의 제한 사항을 해결합니다.
