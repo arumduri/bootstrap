@@ -43,6 +43,10 @@ const pageTitle = isHome
 
 <title>{pageTitle}</title>
 
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2578669051257137" crossorigin="anonymous"></script>
+
 {robots && <meta name="robots" content={robots} />}
 
 <script is:inline src={getVersionedDocsPath('assets/js/color-modes.js')}></script>
@@ -52,7 +56,3 @@ const pageTitle = isHome
 <Favicons />
 <Social description={description} layout={layout} thumbnail={thumbnail} title={title} />
 <Analytics />
-
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2578669051257137" crossorigin="anonymous"></script>
