@@ -24,7 +24,7 @@ arumduri:               "https://github.com/arumduri/bootstrap"
 
 analytics:
   fathom_site:          "ITUSEYJG"
-  ga_site:              ""
+  ga_site:              "UA-184192584-1"
 
 algolia:
   app_id:                "40ZRL3P9Q5"

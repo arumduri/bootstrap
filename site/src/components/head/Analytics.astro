@@ -2,5 +2,10 @@
 import { getConfig } from '@libs/config'
 ---
 
-<script is:inline defer src="https://cdn.usefathom.com/script.js" data-site={getConfig().analytics.fathom_site}
-></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', '{getConfig().analytics.ga_site}', 'getbootstrap.kr');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
