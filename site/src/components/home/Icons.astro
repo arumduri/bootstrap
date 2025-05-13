@@ -1,0 +1,29 @@
+---
+import { getConfig } from '@libs/config'
+import CircleSquareIcon from '@components/icons/CircleSquareIcon.astro'
+import ResponsiveImage from '@layouts/partials/ResponsiveImage.astro'
+---
+
+<section class="row g-3 g-md-5 pb-md-5 mb-5 align-items-center">
+  <div class="col-lg-6">
+    <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-teal-rgb);">
+      <CircleSquareIcon height={32} width={32} />
+    </div>
+    <h2 class="display-5 mb-3 fw-semibold lh-sm">Bootstrap Icons로 개인화하기</h2>
+    <p class="lead fw-normal">
+      <a href={getConfig().icons}>Bootstrap Icons</a>는 1,800개 이상의 글리프를 가지고 있는
+      오픈소스 SVG 아이콘 라이브러리이며, 아이콘은 매 버전마다 계속 추가되고 있습니다.
+      꼭 Bootstrap을 사용하는 프로젝트가 아니더라도 작동하도록 디자인되었습니다.
+      SVG 또는 아이콘 폰트로 사용 가능하며, 두 옵션 모두 벡터 스케일링과 CSS를 통한 쉬운 사용자 지정이 가능합니다.
+    </p>
+    <p class="d-flex lead fw-normal mb-md-0">
+      <a href={getConfig().icons} class="icon-link icon-link-hover fw-semibold">
+        Bootstrap Icons 사용해보기
+        <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+      </a>
+    </p>
+  </div>
+  <div class="col-lg-6">
+    <ResponsiveImage imgPath="/assets/img/bootstrap-icons.png" alt="Bootstrap Icons" classes="mx-auto d-block mt-3" />
+  </div>
+</section>

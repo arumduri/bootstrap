@@ -1,0 +1,5 @@
+As options can be passed via data attributes or JavaScript, you can append an option name to `data-bs-`, as in `data-bs-animation="{value}"`. Make sure to change the case type of the option name from “_camelCase_” to “_kebab-case_” when passing the options via data attributes. For example, use `data-bs-custom-class="beautifier"` instead of `data-bs-customClass="beautifier"`.
+
+Bootstrap 5.2.0부터 모든 컴포넌트는 간단한 컴포넌트 구성을 JSON 문자열로 저장할 수 있는 **experimental** 예약 데이터 속성 `data-bs-config`를 지원합니다. 요소에 `data-bs-config='{"delay":0,"title":123}'` 및 `data-bs-title="456"` 속성이 있는 경우 최종 `title` 값은 `456`이 되며 별도의 데이터 속성이 `data-bs-config`에 지정된 값을 재정의합니다. 또한 기존 데이터 속성에는 `data-bs-delay='{"show":0,"hide":150}'`와 같은 JSON 값을 저장할 수 있습니다.
+
+최종 구성 개체는 `data-bs-config`, `data-bs-`, `js object`의 병합된 결과로, 주어진 최신 key-value가 다른 key-value를 재정의합니다.

@@ -1,0 +1,35 @@
+---
+import { getConfig } from '@libs/config'
+import DropletFillIcon from '@components/icons/DropletFillIcon.astro'
+import ResponsiveImage from '@layouts/partials/ResponsiveImage.astro'
+---
+
+<section class="row g-3 g-md-5 pb-md-5 mb-5 align-items-center">
+  <div class="col-lg-6">
+    <div class="masthead-followup-icon d-inline-block mb-3" style="--bg-rgb: var(--bd-violet-rgb);">
+      <DropletFillIcon height={32} width={32} />
+    </div>
+    <h2 class="display-5 mb-3 fw-semibold lh-sm">공식 Bootstrap Themes을 사용해서 나만의 것으로 만들기</h2>
+    <p class="lead fw-normal">
+      <a href={getConfig().themes}
+        >Bootstrap 공식 테마 마켓플레이스</a
+      >의 프리미엄 테마를 통해서 Bootstrap를 다음 단계로 올려놓으세요. 테마는 Bootstrap을 기반으로 확장된
+      고유의 프레임워크, 풍부한 새로운 컴포넌트 및 플러그인, 문서, 강력한 빌드 도구로 만들어졌습니다.
+    </p>
+    <p class="d-flex lead fw-normal mb-md-0">
+      <a href={getConfig().themes} class="icon-link icon-link-hover fw-semibold">
+        Bootstrap Themes에 대해서 알아보기
+        <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+      </a>
+    </p>
+  </div>
+  <div class="col-lg-6">
+    <ResponsiveImage
+      imgPath="/assets/img/bootstrap-themes.png"
+      alt="Bootstrap Themes"
+      width={700}
+      height={500}
+      classes="d-block mt-3"
+    />
+  </div>
+</section>

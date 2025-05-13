@@ -1,0 +1,29 @@
+---
+import { getConfig } from '@libs/config'
+import { getVersionedDocsPath } from '@libs/path'
+import DropletFillIcon from '@components/icons/DropletFillIcon.astro'
+import ResponsiveImage from '@layouts/partials/ResponsiveImage.astro'
+---
+
+<hr class="my-5" />
+<div class="container">
+  <div class="text-center">
+    <div class="masthead-followup-icon d-inline-block mb-2 text-bg-danger">
+      <DropletFillIcon height={32} width={32} />
+    </div>
+    <h2 class="display-6 fw-normal">Bootstrap Themes로 나아가기</h2>
+    <p class="col-md-10 col-lg-8 mx-auto lead">
+      예시 이상이 필요하신가요? <a href={getConfig().themes}>공식 Bootstrap Themes 마켓플레이스</a>의
+      프리미엄 테마로 Bootstrap을 한 단계 업그레이드하세요. 이 테마는 자체 확장 프레임워크로 빌드되었으며,
+      새로운 구성 요소와 플러그인, 문서, 강력한 빌드 도구가 풍부합니다.
+    </p>
+    <a href={getConfig().themes} class="btn btn-lg btn-outline-primary mb-3">테마 탐색하기</a>
+  </div>
+  <ResponsiveImage
+    imgPath="/assets/img/bootstrap-themes-collage.png"
+    alt="Bootstrap Themes"
+    width={1150}
+    height={320}
+    classes="img-fluid mx-auto d-block mt-3"
+  />
+</div>

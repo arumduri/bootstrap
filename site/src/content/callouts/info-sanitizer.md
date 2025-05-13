@@ -1,0 +1,1 @@
+이 컴포넌트는 기본적으로 명시적으로 허용되지 않는 HTML 요소를 제거하는 내장 콘텐츠 새니타이저를 사용합니다. 자세한 내용은 [JavaScript 문서의 Sanitizer 문단](/docs/[[config:docs_version]]/getting-started/javascript/#sanitizer)을 참고하세요.
