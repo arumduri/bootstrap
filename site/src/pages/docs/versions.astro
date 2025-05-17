@@ -15,7 +15,7 @@ function getVersionsSortedDesc<TKey extends string, TVersions extends Record<TKe
 
 <SingleLayout
   title="Versions"
-  description="An appendix of hosted documentation for nearly every release of Bootstrap, from v1 through v5."
+  description="v1에서 v5까지 거의 모든 Bootstrap 버전에 대한 사이트의 목록입니다."
 >
   <div class="row">
     {
@@ -40,7 +40,7 @@ function getVersionsSortedDesc<TKey extends string, TVersions extends Record<TKe
                       href={`${docsVersion.baseurl}/${version}/`}
                     >
                       {version}
-                      {isCurrentVersion && <span class="badge text-bg-primary">Latest</span>}
+                      {isCurrentVersion && <span class="badge text-bg-primary">최신</span>}
                     </a>
                   )
                 })}
