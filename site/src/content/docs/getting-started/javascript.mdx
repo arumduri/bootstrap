@@ -221,13 +221,18 @@ bootstrap.Modal.Default.keyboard = false
 
 ## Sanitizer
 
-툴팁 및 팝오버는 내장된 보안 모듈 (sanitizer)을 사용하여 HTML을 허용하는 옵션을 보안 처리 (sanitize)합니다.
+Our tooltip and popover components are able to render arbitrary HTML to the page if configured to do so.
+To prevent cross-site scripting (XSS) attacks, these components use our built-in content sanitizer to sanitize any options which accept HTML before they are rendered to the page. Content sanitization is enabled by default.
 
-기본값 `allowList` 값은 다음과 같습니다:
+The tags and attributes allowed by default are as follows. Any tags or attributes not explicitly allowed will be removed during sanitization:
 
 <JsDocs name="allow-list" file="js/src/util/sanitizer.js" removeIndentation={false} />
 
-기본 `allowList`에 새 값을 추가하려면 다음과 같이 작성해야 합니다:
+<Callout type="warning">
+**Exercise caution when using these advanced options.** Refer to [OWASP’s Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) for more information. Vulnerabilities caused solely by disabling or modifying content sanitization are not considered within scope for Bootstrap’s security model.
+</Callout>
+
+You can add new values to this default `allowList`:
 
 ```js
 const myDefaultAllowList = bootstrap.Tooltip.Default.allowList
@@ -243,7 +248,8 @@ myDefaultAllowList.td = ['data-bs-option']
 const myCustomRegex = /^data-my-app-[\w-]+/
 myDefaultAllowList['*'].push(myCustomRegex)
 ```
-[DOMPurify](https://www.npmjs.com/package/dompurify)와 같은 전용 라이브러리를 사용해서 보안 모듈을 우회하려면 다음과 같이 작성해야 합니다:
+
+You can also replace our sanitizer with a dedicated library, for example [DOMPurify](https://www.npmjs.com/package/dompurify):
 
 ```js
 const yourTooltipEl = document.querySelector('#yourTooltip')
