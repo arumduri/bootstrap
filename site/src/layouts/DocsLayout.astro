@@ -78,6 +78,7 @@ if (frontmatter.toc) {
         <div class="bd-subtitle">
           {frontmatter.description && <Fragment set:html={processMarkdownToHtml(frontmatter.description)} />}
         </div>
+        <Ads />
       </div>
 
 
@@ -106,7 +107,6 @@ if (frontmatter.toc) {
             </div>
           )
         }
-        <Ads />
       </div>
 
       <div class="bd-content ps-lg-2">
