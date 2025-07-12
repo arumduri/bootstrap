@@ -10,7 +10,11 @@ import Icons from '@components/home/Icons.astro'
 import Themes from '@components/home/Themes.astro'
 ---
 
-<BaseLayout>
+<BaseLayout
+  overrides={{
+    main: { class: 'bd-wrap' }
+  }}
+>
   <MastHead />
   <div class="container-xxl bd-gutter masthead-followup">
     <GetStarted />
