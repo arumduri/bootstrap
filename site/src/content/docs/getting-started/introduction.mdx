@@ -69,6 +69,10 @@ toc: true
 
 CDN을 사용하여 [콘텐츠 페이지에 나열된 추가 빌드]([[docsref:/getting-started/contents]])를 가져올 수도 있습니다.
 
+When using CDN links, be sure to use the `integrity` attribute to verify the correct files and versions. These hashes are unique to each file and version of Bootstrap, so when you update to a new version, be sure the `integrity` attribute is also updated.
+
+We also include a `crossorigin="anonymous"` attribute to prevent [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors.
+
 ## 다음 단계
 
 - Bootstrap이 활용하는 몇 가지 [중요한 전역 환경 설정](#중요한-전역-속성)을 확인해주세요.

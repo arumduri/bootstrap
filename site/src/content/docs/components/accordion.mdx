@@ -159,3 +159,84 @@ Bootstrap의 진화하는 CSS 변수 접근 방식의 일환으로 아코디언�
 ### Sass 변수
 
 <ScssDocs name="accordion-variables" file="scss/_variables.scss" />
+
+## 사용법
+
+콜랩스 플러그인은 몇 가지 클래스를 활용하여 무거운 작업을 처리합니다:
+
+- 콘텐츠를 숨기는 `.collapse`
+- 콘텐츠를 표시하는 `.collapse.show`
+- 전환이 시작될 때 추가되고, 끝나면 제거되는 `.collapsing`
+
+이 클래스는 `_transitions.scss`에서 찾을 수 있습니다.
+
+### 데이터 속성 사용하기
+
+요소에 `data-bs-toggle="collapse"`와 `data-bs-target`을 추가하면 하나 이상의 접을 수 있는 요소에 대한 제어권이 자동으로 할당됩니다. `data-bs-target` 속성은 콜랩스를 적용할 CSS 선택자를 허용합니다. 접을 수 있는 요소에 `collapse` 클래스를 추가해야 합니다. 기본적으로 열려 있도록 설정하려면 `show` 클래스를 추가하세요.
+
+접을 수 있는 영역에 아코디언 그룹 관리 기능을 추가하려면 데이터 속성 `data-bs-parent="#selector"`를 추가하세요.
+
+### JavaScript 사용하기
+
+다음으로 수동으로 활성화할 수 있습니다:
+
+```js
+const accordionCollapseElementList = document.querySelectorAll('#myAccordion .collapse')
+const accordionCollapseList = [...accordionCollapseElementList].map(accordionCollapseEl => new bootstrap.Collapse(accordionCollapseEl))
+```
+
+### 옵션
+
+<JsDataAttributes />
+
+<BsTable>
+| 이름 | 유형 | 기본값 | 설명 |
+| --- | --- | --- | --- |
+`parent` | selector, DOM element | `null` | 상위 요소가 제공된 경우, 해당하는 접을 수 있는 항목이 표시될 때 지정된 상위 요소 내의 모든 접을 수 있는 요소가 닫힙니다. (기존 아코디언 동작과 유사하며, `card` 클래스에 따라 달라짐) 이 속성은 접을 수 있는 대상 영역에 설정해야 합니다. |
+`toggle` | boolean | `true` | 호출 시 접을 수 있는 요소를 전환합니다. |
+</BsTable>
+
+### 메소드
+
+<Callout name="danger-async-methods" type="danger" />
+
+콘텐츠를 접을 수 있는 요소로 활성화합니다. 선택적 옵션인 `object`를 허용합니다.
+
+생성자를 사용하여 콜랩스 인스턴스를 만들 수 있습니다. 다음과 같이 예시를 들 수 있습니다:
+
+```js
+const bsCollapse = new bootstrap.Collapse('#myCollapse', {
+  toggle: false
+})
+```
+
+<BsTable>
+| 메소드 | 설명 |
+| --- | --- |
+| `dispose` | 요소의 콜랩스를 제거합니다. (DOM 요소에 저장된 데이터를 삭제함) |
+| `getInstance` | 정적 메서드로, DOM 요소에 연결된 콜랩스 인스턴스를 반환합니다.<br />사용 예시: `bootstrap.Collapse.getInstance(element)` |
+| `getOrCreateInstance` | DOM 요소에 연결된 콜랩스 인스턴스를 반환하거나, 없으면 새로 생성합니다.<br />사용 예시: `bootstrap.Collapse.getOrCreateInstance(element)` |
+| `hide` | 접을 수 있는 요소를 숨깁니다. **요소가 실제로 숨겨지기 전에 호출자에게 반환됩니다.** (`hidden.bs.collapse` 이벤트 발생 전) |
+| `show` | 접을 수 있는 요소를 표시합니다. **요소가 실제로 표시되기 전에 호출자에게 반환됩니다.** (`shown.bs.collapse` 이벤트 발생 전) |
+| `toggle` | 접을 수 있는 요소의 표시/숨김 상태를 전환합니다. **요소가 실제로 표시되거나 숨겨지기 전에 호출자에게 반환됩니다.** (`shown.bs.collapse` 또는 `hidden.bs.collapse` 이벤트 발생 전) |
+</BsTable>
+
+### 이벤트
+
+Bootstrap의 콜랩스 클래스는 콜랩스 기능에 연결할 수 있는 몇 가지 이벤트를 제공합니다.
+
+<BsTable>
+| 이벤트 유형 | 설명 |
+| --- | --- |
+| `hide.bs.collapse` | 이 이벤트는 `hide` 메서드가 호출되는 즉시 발생합니다. |
+| `hidden.bs.collapse` | 이 이벤트는 콜랩스 요소가 사용자에게 숨겨졌을 때 발생합니다. (CSS 전환이 완료될 때까지 대기) |
+| `show.bs.collapse` | 이 이벤트는 `show` 인스턴스 메서드가 호출되는 즉시 발생합니다. |
+| `shown.bs.collapse` | 이 이벤트는 콜랩스 요소가 사용자에게 표시될 때 발생합니다. (CSS 전환이 완료될 때까지 대기) |
+</BsTable>
+
+```js
+const myCollapsible = document.getElementById('myCollapsible')
+myCollapsible.addEventListener('hidden.bs.collapse', event => {
+  // do something...
+})
+```

@@ -7,7 +7,11 @@ toc: true
 
 ## 예시
 
-`<input class="form-control">`과 `<label>` 요소를 함께 `.form-floating`으로 감싸면, Bootstrap의 텍스트 형식의 폼 필드에서 플로팅 라벨 사용이 가능합니다. CSS만으로 플로팅 라벨을 실현하는 방법은 `:placeholder-shown` 가상 요소를 사용하기 때문에 각 `<input>`에는 `placeholder`가 필요합니다. 또한 형제 셀렉터(예를 들어, `~`)를 사용하기 때문에 `<input>`이 처음에 와야 하는 순서에 주의해 주세요.
+Bootstrap의 텍스트 양식 필드에 플로팅 레이블을 사용하려면 `<input class="form-control">`과 `<label>` 요소 쌍을 `.form-floating`으로 감싸야 합니다.
+
+CSS 전용 플로팅 레이블 구현은 입력 필드가 비어 있는지 감지하기 위해 `:placeholder-shown` 가상 요소에 의존하므로 각 `<input>` 요소에 비어 있지 않은 `placeholder` 속성이 필요합니다. 플레이스홀더 텍스트 자체는 표시되지 않고 `<label>`만 사용자에게 표시됩니다.
+
+또한 형제 선택자(예: `~`)를 사용하려면 `<input>`이 먼저 와야 합니다.
 
 <Example code={`<div class="form-floating mb-3">
   <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
