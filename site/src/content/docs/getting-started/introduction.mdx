@@ -62,16 +62,18 @@ toc: true
 
 다음은 기본 CDN의 링크입니다.
 
+<BsTable>
 | 설명 | URL |
 | --- | --- |
 | CSS | `[[config:cdn.css]]` |
 | JS | `[[config:cdn.js_bundle]]` |
+</BsTable>
 
 CDN을 사용하여 [콘텐츠 페이지에 나열된 추가 빌드]([[docsref:/getting-started/contents]])를 가져올 수도 있습니다.
 
-When using CDN links, be sure to use the `integrity` attribute to verify the correct files and versions. These hashes are unique to each file and version of Bootstrap, so when you update to a new version, be sure the `integrity` attribute is also updated.
+CDN 링크를 사용할 때는 `integrity` 속성을 사용하여 올바른 파일과 버전을 확인하세요. 이 해시는 Bootstrap의 각 파일과 버전마다 고유하므로 새 버전으로 업데이트할 때 `integrity` 속성도 업데이트해야 합니다.
 
-We also include a `crossorigin="anonymous"` attribute to prevent [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) errors.
+또한 [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) 오류를 방지하기 위해 `crossorigin="anonymous"` 속성도 포함했습니다.
 
 ## 다음 단계
 
