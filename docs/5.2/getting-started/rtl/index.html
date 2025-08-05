@@ -590,7 +590,7 @@
 <p>예를 들어 <code>margin-left</code>에서 <code>.ml-3</code> 대신에 <code>.ms-3</code>을 사용할 수 있습니다.</p>
 <p>Sass 소스 또는 컴파일된 CSS를 통한 RTL 작업은 기본 LTR과 크게 다르지 않습니다.</p>
 <h2 id="사용자-지정-소스">사용자 지정 소스 <a class="anchor-link" href="#%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%a7%80%ec%a0%95-%ec%86%8c%ec%8a%a4" aria-label="Link to this section: 사용자 지정 소스"></a></h2>
-<p><a href="/docs/5.2/customize/sass/">사용자 지정</a>과 관련하여 선호되는 방법은 변수, 맵 및 믹스인을 활용하는 것입니다. 이 접근 방식은 <a href="(https://rtlcss.com/learn/getting-started/why-rtlcss/)">RTLCSS가 작동하는 방식</a> 덕분에 컴파일된 파일에서 사후 처리 되더라도 RTL에 대해 동일하게 작동합니다.</p>
+<p><a href="/docs/5.2/customize/sass/">사용자 지정</a>과 관련하여 선호되는 방법은 변수, 맵 및 믹스인을 활용하는 것입니다. 이 접근 방식은 <a href="https://rtlcss.com/learn/getting-started/why-rtlcss/">RTLCSS가 작동하는 방식</a> 덕분에 컴파일된 파일에서 사후 처리 되더라도 RTL에 대해 동일하게 작동합니다.</p>
 <h3 id="사용자-지정-rtl-값">사용자 지정 RTL 값 <a class="anchor-link" href="#%ec%82%ac%ec%9a%a9%ec%9e%90-%ec%a7%80%ec%a0%95-rtl-%ea%b0%92" aria-label="Link to this section: 사용자 지정 RTL 값"></a></h3>
 <p>RTLCSS 값 지시문을 사용하여 변수 출력을 RTL에 대해 다른 값으로 만들 수 있습니다. 예를 들어, 코드베이스 전체에서 <code>$font-weight-bold</code>의 가중치를 줄이려면 <code>/*rtl: {value}*/</code> 구문을 사용할 수 있습니다:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nv">$font-weight-bold</span><span class="o">:</span> <span class="mi">700</span> <span class="si">#{</span><span class="cm">/* rtl:600 </span><span class="c">*/</span><span class="si">}</span> <span class="k">!default</span><span class="p">;</span>
