@@ -33,7 +33,7 @@ const sidebar = getData('sidebar')
                   const docSlug = getSlug(page.title)
                   const unversionedPageSlug = `${groupSlug}/${docSlug}`
 
-                  const url = `/docs/${getConfig().docs_version}/${unversionedPageSlug}`
+                  const url = `/docs/${getConfig().docs_version}/${unversionedPageSlug}/`
                   const active = Astro.params.slug === unversionedPageSlug
 
                   const generatedPage = docsPages.find((page) => page.slug === unversionedPageSlug)
