@@ -147,17 +147,17 @@ v5.3.x부터 링크 `color`는 `rgba()`와 새로운 `-rgb` CSS 변수를 사용
 
 더 간단한 스타일, 명확한 계층 구조, 더 나은 간격을 위해 설명 목록에는 업데이트된 `margin`이 포함되어 있습니다. `<dd>`의 `margin-left`를 `0`으로 재설정하고 `margin-bottom: .5rem`을 추가합니다. `<dt>`는 **굵게 표시**됩니다.
 
-<div class="bd-example">
-  <dl>
-    <dt>Description lists</dt>
-    <dd>A description list is perfect for defining terms.</dd>
-    <dt>Term</dt>
-    <dd>Definition for the term.</dd>
-    <dd>A second definition for the same term.</dd>
-    <dt>Another term</dt>
-    <dd>Definition for this other term.</dd>
-  </dl>
-</div>
+<Example showMarkup={false} code={`
+<dl>
+  <dt>Description lists</dt>
+  <dd>A description list is perfect for defining terms.</dd>
+  <dt>Term</dt>
+  <dd>Definition for the term.</dd>
+  <dd>A second definition for the same term.</dd>
+  <dt>Another term</dt>
+  <dd>Definition for this other term.</dd>
+</dl>
+`} />
 
 ## 인라인 코드
 
@@ -408,25 +408,25 @@ Reboot에는 기본 커서를 `pointer`로 변경하는 `role="button"`의 개�
 
 `<abbr>` 요소는 단락 텍스트 사이에서 눈에 띄도록 기본 스타일링을 받습니다.
 
-<div class="bd-example">
-  The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.
-</div>
+<Example showMarkup={false} code={`
+The <abbr title="HyperText Markup Language">HTML</abbr> abbreviation element.
+`} />
 
 ### 요약
 
 요약의 기본 `cursor`는 `text`이므로 요소를 클릭하여 상호 작용할 수 있음을 전달하기 위해 이를 `pointer`로 재설정합니다.
 
-<div class="bd-example">
-  <details>
-    <summary>Some details</summary>
-    <p>More info about the details.</p>
-  </details>
+<Example showMarkup={false} code={`
+<details>
+  <summary>Some details</summary>
+  <p>More info about the details.</p>
+</details>
 
-  <details open>
-    <summary>Even more details</summary>
-    <p>Here are even more details about the details.</p>
-  </details>
-</div>
+<details open>
+  <summary>Even more details</summary>
+  <p>Here are even more details about the details.</p>
+</details>
+`} />
 
 ## HTML5 `[hidden]` 속성
 
